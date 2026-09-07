@@ -307,6 +307,7 @@ def generate_indexes(base_dir):
         shutil.rmtree(lists_dir)
         
     logging.info("Saving raw.json (minified)...")
+    base_dir.parent.mkdir(parents=True, exist_ok=True)
     with open(base_dir.parent / 'raw.json', 'w', encoding='utf-8') as f:
         json.dump(formatted_anime_list, f, ensure_ascii=False, separators=(',', ':'))
         
