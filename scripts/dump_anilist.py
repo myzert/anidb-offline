@@ -187,7 +187,6 @@ def generate_indexes(base_dir):
     logging.info("Generating index and feature files...")
     all_anime = {}
     
-    # Read all chunked JSON files
     for file in base_dir.glob("anime_*.json"):
         try:
             with open(file, 'r', encoding='utf-8') as f:
@@ -200,123 +199,118 @@ def generate_indexes(base_dir):
         logging.info("No data found to generate indexes.")
         return
 
-    # Create lists directory at data/raw/lists
+    # Fetch extra metadata
+    logging.info("Fetching Reanime data...")
+    reanime_map = {}
+    limit = 100
+    offset = 0
+    import requests, time
+    while True:
+        try:
+            req = requests.get(f"https://reanime.to/api/v1/search?limit={limit}&offset={offset}", timeout=10)
+            if req.status_code != 200: break
+            res = req.json()
+            results = res.get("results", [])
+            if not results: break
+            for r in results:
+                if r.get("anilist_id"):
+                    reanime_map[r["anilist_id"]] = r
+            if len(results) < limit: break
+            offset += limit
+            time.sleep(0.05)
+        except Exception as e:
+            logging.error(f"Reanime fetch error: {e}")
+            break
+            
+    logging.info("Fetching Anikoto data...")
+    anikoto_map = {}
+    page = 1
+    per_page = 100
+    while True:
+        try:
+            req = requests.get(f"https://anikotoapi.site/recent-anime?page={page}&per_page={per_page}", timeout=10)
+            if req.status_code != 200: break
+            res = req.json()
+            results = res.get("data", [])
+            if not results: break
+            for r in results:
+                if r.get("ani_id"):
+                    try:
+                        aid = int(r["ani_id"])
+                        anikoto_map[aid] = r
+                    except:
+                        pass
+            pagination = res.get("pagination", {})
+            if page >= pagination.get("total_pages", 0): break
+            page += 1
+            time.sleep(0.05)
+        except Exception as e:
+            logging.error(f"Anikoto fetch error: {e}")
+            break
+
+    formatted_anime_list = []
+    
+    for aid, anime in all_anime.items():
+        aid_int = int(aid)
+        re_data = reanime_map.get(aid_int, {})
+        ani_data = anikoto_map.get(aid_int, {})
+        
+        merged = {}
+        merged["anime_id"] = re_data.get("anime_id", "")
+        merged["anilist_id"] = aid_int
+        merged["title"] = anime.get("title", {})
+        merged["cover_image"] = {
+            "color": anime.get("coverImage", {}).get("color", ""),
+            "extra_large": anime.get("coverImage", {}).get("extraLarge", ""),
+            "large": anime.get("coverImage", {}).get("large", ""),
+            "medium": anime.get("coverImage", {}).get("medium", "")
+        }
+        merged["format"] = anime.get("format", "TV")
+        
+        # Format status
+        st = anime.get("status", "")
+        status_map = {"FINISHED": "Finished", "RELEASING": "Releasing", "NOT_YET_RELEASED": "Not Yet Released", "CANCELLED": "Cancelled"}
+        merged["status"] = status_map.get(st, st)
+        
+        merged["genres"] = anime.get("genres", [])
+        merged["season"] = anime.get("season", "")
+        merged["season_year"] = anime.get("seasonYear", 0)
+        merged["episodes"] = anime.get("episodes", 0)
+        
+        dur = anime.get("duration", 0)
+        merged["duration"] = f"{dur}m" if dur else ""
+        
+        merged["subbed"] = re_data.get("subbed") or ani_data.get("is_sub") or 0
+        merged["dubbed"] = re_data.get("dubbed") or ani_data.get("is_dub") or 0
+        
+        merged["average_score"] = anime.get("averageScore", 0)
+        merged["popularity"] = anime.get("popularity", 0)
+        merged["rating"] = re_data.get("rating", "")
+        
+        merged["can_watch"] = re_data.get("can_watch", False)
+        merged["can_request"] = re_data.get("can_request", False)
+        
+        merged["reanime_id"] = re_data.get("anime_id", "")
+        merged["anikoto_id"] = ani_data.get("id", "")
+        
+        for k, v in anime.items():
+            if k not in merged and k != "coverImage":
+                merged[k] = v
+                
+        formatted_anime_list.append(merged)
+        
+    import os
+    import shutil
+    
     lists_dir = base_dir.parent / "lists"
-    lists_dir.mkdir(parents=True, exist_ok=True)
-    
-    # 1. Full Raw Data (all_anime.json) - Minified to save space
-    logging.info("Saving all_anime.json (minified)...")
-    with open(lists_dir / 'all_anime.json', 'w', encoding='utf-8') as f:
-        # Using separators=(',', ':') removes whitespace to keep file size minimal (avoiding GitHub 100MB limit)
-        json.dump(all_anime, f, ensure_ascii=False, separators=(',', ':'))
+    if lists_dir.exists():
+        shutil.rmtree(lists_dir)
         
-    anime_list = list(all_anime.values())
-    
-    # 2. Top Anime by Score
-    logging.info("Generating top_anime.json...")
-    top_anime = sorted([a for a in anime_list if a.get('averageScore')], key=lambda x: x['averageScore'], reverse=True)[:500]
-    with open(lists_dir / 'top_anime.json', 'w', encoding='utf-8') as f:
-        json.dump(top_anime, f, ensure_ascii=False, indent=2)
+    logging.info("Saving raw.json (minified)...")
+    with open(base_dir.parent / 'raw.json', 'w', encoding='utf-8') as f:
+        json.dump(formatted_anime_list, f, ensure_ascii=False, separators=(',', ':'))
         
-    # 3. Most Popular Anime
-    logging.info("Generating popular_anime.json...")
-    popular = sorted([a for a in anime_list if a.get('popularity')], key=lambda x: x['popularity'], reverse=True)[:500]
-    with open(lists_dir / 'popular_anime.json', 'w', encoding='utf-8') as f:
-        json.dump(popular, f, ensure_ascii=False, indent=2)
-        
-    # 4. Ongoing / Releasing Anime
-    logging.info("Generating ongoing_anime.json...")
-    ongoing = [a for a in anime_list if a.get('status') == 'RELEASING']
-    with open(lists_dir / 'ongoing_anime.json', 'w', encoding='utf-8') as f:
-        json.dump(ongoing, f, ensure_ascii=False, indent=2)
-        
-    # 5. Current Season (Quick heuristic based on current month)
-    logging.info("Generating season_now.json...")
-    import datetime
-    now = datetime.datetime.now()
-    month = now.month
-    year = now.year
-    if month in (1, 2, 3): season = 'WINTER'
-    elif month in (4, 5, 6): season = 'SPRING'
-    elif month in (7, 8, 9): season = 'SUMMER'
-    else: season = 'FALL'
-    
-    season_anime = [a for a in anime_list if a.get('season') == season and a.get('seasonYear') == year]
-    with open(lists_dir / 'season_now.json', 'w', encoding='utf-8') as f:
-        json.dump(season_anime, f, ensure_ascii=False, indent=2)
-        
-    # 6. Upcoming Anime
-    logging.info("Generating upcoming_anime.json...")
-    upcoming = [a for a in anime_list if a.get('status') == 'NOT_YET_RELEASED']
-    with open(lists_dir / 'upcoming_anime.json', 'w', encoding='utf-8') as f:
-        json.dump(upcoming, f, ensure_ascii=False, indent=2)
-        
-    # 7. Top Movies
-    logging.info("Generating top_movies.json...")
-    movies = sorted([a for a in anime_list if a.get('format') == 'MOVIE' and a.get('averageScore')], key=lambda x: x['averageScore'], reverse=True)[:500]
-    with open(lists_dir / 'top_movies.json', 'w', encoding='utf-8') as f:
-        json.dump(movies, f, ensure_ascii=False, indent=2)
-
-    # 8. Metadata, Genres, Tags, and Studios Aggregation
-    logging.info("Generating metadata, genres, tags, and studios...")
-    all_genres = set()
-    all_tags = set()
-    all_studios = set()
-    all_seasons = set()
-    recent_episodes = []
-
-    for a in anime_list:
-        if a.get('genres'):
-            all_genres.update(a['genres'])
-        if a.get('tags'):
-            for t in a['tags']:
-                all_tags.add(t['name'])
-        if a.get('studios') and a['studios'].get('edges'):
-            for s in a['studios']['edges']:
-                if s.get('node'):
-                    all_studios.add(s['node']['name'])
-        
-        # Collect seasons
-        if a.get('season') and a.get('seasonYear'):
-            all_seasons.add(f"{a['season']} {a['seasonYear']}")
-        
-        # Recent/Upcoming episodes logic: 
-        if a.get('nextAiringEpisode'):
-            recent_episodes.append(a)
-
-    # Sort recent episodes by closest airing time (both past and future can exist if loosely fetched, but nextAiringEpisode is usually future)
-    recent_episodes.sort(key=lambda x: x['nextAiringEpisode']['airingAt'])
-
-    metadata = {
-        "total_anime": len(anime_list),
-        "total_genres": len(all_genres),
-        "total_tags": len(all_tags),
-        "total_studios": len(all_studios),
-        "last_updated": int(now.timestamp())
-    }
-
-    with open(lists_dir / 'metadata.json', 'w', encoding='utf-8') as f:
-        json.dump(metadata, f, ensure_ascii=False, indent=2)
-
-    with open(lists_dir / 'genres.json', 'w', encoding='utf-8') as f:
-        json.dump(sorted(list(all_genres)), f, ensure_ascii=False, indent=2)
-        
-    with open(lists_dir / 'tags.json', 'w', encoding='utf-8') as f:
-        json.dump(sorted(list(all_tags)), f, ensure_ascii=False, indent=2)
-        
-    with open(lists_dir / 'studios.json', 'w', encoding='utf-8') as f:
-        json.dump(sorted(list(all_studios)), f, ensure_ascii=False, indent=2)
-        
-    # Sort seasons chronologically (e.g. "WINTER 2024")
-    season_order = {'WINTER': 1, 'SPRING': 2, 'SUMMER': 3, 'FALL': 4}
-    sorted_seasons = sorted(list(all_seasons), key=lambda x: (int(x.split()[1]), season_order.get(x.split()[0], 0)), reverse=True)
-    with open(lists_dir / 'seasons.json', 'w', encoding='utf-8') as f:
-        json.dump(sorted_seasons, f, ensure_ascii=False, indent=2)
-        
-    with open(lists_dir / 'recent_episodes.json', 'w', encoding='utf-8') as f:
-        json.dump(recent_episodes[:500], f, ensure_ascii=False, indent=2) # top 500 recent/upcoming episodes
-
-    logging.info("Indexes successfully generated!")
+    logging.info("Index generated successfully!")
 
 def main():
     parser = argparse.ArgumentParser(description='Dump AniList Data')

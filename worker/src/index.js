@@ -1,4 +1,4 @@
-const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/ZertCihuyy/ANIDUMP/main/data/raw';
+const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/myzert/anidb-offline/main/data/raw';
 
 export default {
   async fetch(request, env, ctx) {
@@ -16,16 +16,13 @@ export default {
       return new Response(null, { headers: corsHeaders });
     }
 
-    // Redirect root to GitHub repository
     if (path === '/' || path === '') {
       return Response.redirect('https://github.com/ZertCihuyy/ANIDUMP/', 301);
     }
 
-    // Parse query params
     const limit = parseInt(url.searchParams.get('limit')) || 20;
     let offset = parseInt(url.searchParams.get('offset')) || 0;
     
-    // Support ?page=1 as an alternative to offset
     const pageParams = parseInt(url.searchParams.get('page'));
     if (pageParams && pageParams > 0) {
       offset = (pageParams - 1) * limit;
@@ -39,17 +36,14 @@ export default {
     const studioFilter = url.searchParams.get('studio');
     const seasonFilter = url.searchParams.get('season');
 
-    // Helper to fetch JSON from GitHub directly to stay perfectly in sync
     async function fetchGitHubJSON(subpath) {
       const ghResponse = await fetch(`${GITHUB_RAW_BASE}${subpath}`, {
         headers: { 'User-Agent': 'ANIDUMP-Worker/1.0' }
       });
-      
       if (!ghResponse.ok) return null;
       return await ghResponse.json();
     }
 
-    // Helper to filter, sort and paginate
     function processItems(items) {
       let filtered = items;
       
@@ -85,16 +79,16 @@ export default {
       
       if (statusFilter) {
         const st = statusFilter.toUpperCase();
-        filtered = filtered.filter(a => a.status === st);
+        filtered = filtered.filter(a => (a.status || "").toUpperCase() === st);
       }
       
       if (yearFilter) {
-        filtered = filtered.filter(a => a.seasonYear === yearFilter || (a.startDate && a.startDate.year === yearFilter));
+        filtered = filtered.filter(a => a.season_year === yearFilter || (a.startDate && a.startDate.year === yearFilter));
       }
 
       if (seasonFilter) {
         const sea = seasonFilter.toUpperCase();
-        filtered = filtered.filter(a => a.season === sea);
+        filtered = filtered.filter(a => (a.season || "").toUpperCase() === sea);
       }
 
       if (studioFilter) {
@@ -108,7 +102,7 @@ export default {
       if (sort) {
         const s = sort.toLowerCase();
         if (s === 'score') {
-          filtered.sort((a, b) => (b.averageScore || 0) - (a.averageScore || 0));
+          filtered.sort((a, b) => (b.average_score || 0) - (a.average_score || 0));
         } else if (s === 'popularity') {
           filtered.sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
         } else if (s === 'new' || s === 'newest') {
@@ -147,126 +141,109 @@ export default {
     }
 
     try {
-      if (path === '/anime') {
-        const data = await fetchGitHubJSON('/lists/all_anime.json');
-        if (!data) return jsonResponse({error: 'Data not found'}, 404);
-        
-        const items = Array.isArray(data) ? data : Object.values(data);
+      // Dynamic fetch everything from raw.json
+      if (['/anime', '/top', '/popular', '/ongoing', '/schedule', '/season-now', '/upcoming', '/movies', '/movie'].includes(path) || path.startsWith('/top-airing') || path.startsWith('/top-anime')) {
+        let items = await fetchGitHubJSON('/raw.json');
+        if (!items) return jsonResponse({error: 'Data not found'}, 404);
+
+        if (path === '/top') {
+          items.sort((a, b) => (b.average_score || 0) - (a.average_score || 0));
+        } else if (path === '/popular') {
+          items.sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
+        } else if (path === '/ongoing' || path === '/schedule') {
+          items = items.filter(a => (a.status || "").toUpperCase() === 'RELEASING');
+        } else if (path === '/season-now') {
+          const now = new Date();
+          const month = now.getMonth() + 1;
+          const year = now.getFullYear();
+          let season = 'FALL';
+          if (month >= 1 && month <= 3) season = 'WINTER';
+          else if (month >= 4 && month <= 6) season = 'SPRING';
+          else if (month >= 7 && month <= 9) season = 'SUMMER';
+          items = items.filter(a => (a.season || "").toUpperCase() === season && a.season_year === year);
+        } else if (path === '/upcoming') {
+          items = items.filter(a => (a.status || "").toUpperCase() === 'NOT YET RELEASED' || (a.status || "").toUpperCase() === 'NOT_YET_RELEASED');
+        } else if (path === '/movies' || path === '/movie') {
+          items = items.filter(a => (a.format || "").toUpperCase() === 'MOVIE');
+          items.sort((a, b) => (b.average_score || 0) - (a.average_score || 0));
+        } else if (path.startsWith('/top-airing') || path.startsWith('/top-anime')) {
+          const parts = path.split('/').filter(p => p);
+          let pSeason = null;
+          let pYear = null;
+          if (parts.length > 1) {
+            if (!isNaN(parseInt(parts[1]))) pYear = parseInt(parts[1]);
+            else pSeason = parts[1].toUpperCase();
+          }
+          if (parts.length > 2) pYear = parseInt(parts[2]);
+          if (pSeason) items = items.filter(a => (a.season || "").toUpperCase() === pSeason);
+          if (pYear) items = items.filter(a => a.season_year === pYear || (a.startDate && a.startDate.year === pYear));
+          if (!pSeason && !pYear) items = items.filter(a => (a.status || "").toUpperCase() === 'RELEASING');
+          items.sort((a, b) => (b.average_score || 0) - (a.average_score || 0));
+        }
+
         return jsonResponse(processItems(items));
       }
-      
-      if (path === '/top') {
-        const items = await fetchGitHubJSON('/lists/top_anime.json');
-        return jsonResponse(processItems(items || []));
-      }
-      
-      if (path === '/popular') {
-        const items = await fetchGitHubJSON('/lists/popular_anime.json');
-        return jsonResponse(processItems(items || []));
-      }
-      
-      if (path === '/ongoing' || path === '/schedule') {
-        const items = await fetchGitHubJSON('/lists/ongoing_anime.json');
-        return jsonResponse(processItems(items || []));
-      }
-      
-      if (path === '/season-now') {
-        const items = await fetchGitHubJSON('/lists/season_now.json');
-        return jsonResponse(processItems(items || []));
-      }
-      
-      if (path === '/upcoming') {
-        const items = await fetchGitHubJSON('/lists/upcoming_anime.json');
-        return jsonResponse(processItems(items || []));
-      }
-      
-      if (path === '/movies' || path === '/movie') {
-        const items = await fetchGitHubJSON('/lists/top_movies.json');
-        return jsonResponse(processItems(items || []));
-      }
-      
+
       if (path === '/recent-episodes') {
-        const items = await fetchGitHubJSON('/lists/recent_episodes.json');
-        return jsonResponse(processItems(items || []));
+         let items = await fetchGitHubJSON('/raw.json');
+         if (!items) return jsonResponse({error: 'Data not found'}, 404);
+         items = items.filter(a => a.nextAiringEpisode).sort((a, b) => a.nextAiringEpisode.airingAt - b.nextAiringEpisode.airingAt);
+         return jsonResponse(processItems(items));
       }
 
-      // Metadata Endpoints
       if (path === '/meta' || path === '/total-anime') {
-        const items = await fetchGitHubJSON('/lists/metadata.json');
-        return jsonResponse(items || {});
-      }
-      
-      if (path === '/genres') {
-        const items = await fetchGitHubJSON('/lists/genres.json');
-        return jsonResponse(items || []);
-      }
-      
-      if (path === '/tags') {
-        const items = await fetchGitHubJSON('/lists/tags.json');
-        return jsonResponse(items || []);
-      }
-      
-      if (path === '/studios') {
-        const items = await fetchGitHubJSON('/lists/studios.json');
-        return jsonResponse(items || []);
-      }
-      
-      if (path === '/seasons') {
-        const items = await fetchGitHubJSON('/lists/seasons.json');
-        return jsonResponse(items || []);
+        const items = await fetchGitHubJSON('/raw.json');
+        if (!items) return jsonResponse({error: 'Data not found'}, 404);
+        const genres = new Set();
+        const tags = new Set();
+        const studios = new Set();
+        items.forEach(a => {
+           (a.genres || []).forEach(g => genres.add(g));
+           (a.tags || []).forEach(t => tags.add(t.name));
+           if (a.studios && a.studios.edges) a.studios.edges.forEach(s => studios.add(s.node.name));
+        });
+        return jsonResponse({
+          total_anime: items.length,
+          total_genres: genres.size,
+          total_tags: tags.size,
+          total_studios: studios.size,
+          last_updated: Math.floor(Date.now() / 1000)
+        });
       }
 
-      // Top Airing endpoints (/top-airing, /top-airing/2026, /top-airing/fall, /top-airing/fall/2026)
-      if (path.startsWith('/top-airing') || path.startsWith('/top-anime')) {
-        const parts = path.split('/').filter(p => p);
-        
-        const data = await fetchGitHubJSON('/lists/all_anime.json');
-        if (!data) return jsonResponse({error: 'Data not found'}, 404);
-        let items = Array.isArray(data) ? data : Object.values(data);
-        
-        let pSeason = null;
-        let pYear = null;
-        
-        if (parts.length > 1) {
-           const p1 = parts[1];
-           if (!isNaN(parseInt(p1))) pYear = parseInt(p1);
-           else pSeason = p1.toUpperCase();
+      // Metadata endpoints
+      if (['/genres', '/tags', '/studios', '/seasons'].includes(path)) {
+        const items = await fetchGitHubJSON('/raw.json');
+        if (!items) return jsonResponse({error: 'Data not found'}, 404);
+        const set = new Set();
+        items.forEach(a => {
+           if (path === '/genres') (a.genres || []).forEach(g => set.add(g));
+           if (path === '/tags') (a.tags || []).forEach(t => set.add(t.name));
+           if (path === '/studios') {
+             if (a.studios && a.studios.edges) a.studios.edges.forEach(s => set.add(s.node.name));
+           }
+           if (path === '/seasons' && a.season && a.season_year) set.add(`${a.season} ${a.season_year}`);
+        });
+        let result = Array.from(set).sort();
+        if (path === '/seasons') {
+           const season_order = {'WINTER': 1, 'SPRING': 2, 'SUMMER': 3, 'FALL': 4};
+           result = result.sort((a, b) => {
+             const [sa, ya] = a.split(' ');
+             const [sb, yb] = b.split(' ');
+             if (ya !== yb) return parseInt(yb) - parseInt(ya);
+             return season_order[sb] - season_order[sa];
+           });
         }
-        if (parts.length > 2) {
-           pYear = parseInt(parts[2]);
-        }
-
-        if (pSeason) {
-          items = items.filter(a => a.season === pSeason);
-        }
-        if (pYear) {
-          items = items.filter(a => a.seasonYear === pYear || (a.startDate && a.startDate.year === pYear));
-        }
-        
-        // Default behavior for just /top-airing
-        if (!pSeason && !pYear) {
-          items = items.filter(a => a.status === 'RELEASING');
-        }
-
-        // Pre-sort by score. If user provides ?sort= in query, processItems will override this.
-        items.sort((a, b) => (b.averageScore || 0) - (a.averageScore || 0));
-
-        return jsonResponse(processItems(items));
+        return jsonResponse(result);
       }
 
-      // Get specific anime season/relations list by ID (e.g. /seasonlist/1)
       const matchSeasonList = path.match(/^\/seasonlist\/(\d+)$/);
       if (matchSeasonList) {
         const id = parseInt(matchSeasonList[1]);
-        const groupSize = 1000;
-        const groupId = Math.floor(id / groupSize) * groupSize;
-        const fileName = `/anime/anime_${groupId}-${groupId + groupSize - 1}.json`;
-        
-        const chunkData = await fetchGitHubJSON(fileName);
-        if (chunkData && chunkData[id]) {
-          const anime = chunkData[id];
+        const items = await fetchGitHubJSON('/raw.json');
+        const anime = items.find(a => a.anilist_id === id);
+        if (anime) {
           const relations = (anime.relations && anime.relations.edges) ? anime.relations.edges : [];
-          // Filter to only include Anime
           const seasonList = relations
             .filter(r => r.node && r.node.type === 'ANIME')
             .map(r => ({
@@ -278,25 +255,28 @@ export default {
         return jsonResponse({error: "Anime not found"}, 404);
       }
 
-      // Get specific anime by ID (e.g. /anime/123)
       const match = path.match(/^\/anime\/(\d+)$/);
       if (match) {
         const id = parseInt(match[1]);
-        const groupSize = 1000;
-        const groupId = Math.floor(id / groupSize) * groupSize;
-        const fileName = `/anime/anime_${groupId}-${groupId + groupSize - 1}.json`;
-        
-        const chunkData = await fetchGitHubJSON(fileName);
-        if (chunkData && chunkData[id]) {
-          return jsonResponse(chunkData[id]);
-        }
+        const items = await fetchGitHubJSON('/raw.json');
+        const anime = items.find(a => a.anilist_id === id);
+        if (anime) return jsonResponse(anime);
+        return jsonResponse({error: "Anime not found"}, 404);
+      }
+      
+      const matchReanime = path.match(/^\/anime\/id\/(.+)$/);
+      if (matchReanime) {
+        const aid = matchReanime[1];
+        const items = await fetchGitHubJSON('/raw.json');
+        const anime = items.find(a => a.anime_id === aid || a.reanime_id === aid);
+        if (anime) return jsonResponse(anime);
         return jsonResponse({error: "Anime not found"}, 404);
       }
       
       return jsonResponse({
         error: "Endpoint not found", 
         endpoints: [
-          "/anime", "/anime/:id", "/seasonlist/:id", "/top", "/popular", "/ongoing", 
+          "/anime", "/anime/:id", "/anime/id/:reanime_id", "/seasonlist/:id", "/top", "/popular", "/ongoing", 
           "/top-airing", "/top-airing/:season", "/top-airing/:year", "/top-airing/:season/:year",
           "/season-now", "/schedule", "/upcoming", "/movies", "/recent-episodes",
           "/meta", "/genres", "/tags", "/studios", "/seasons"
