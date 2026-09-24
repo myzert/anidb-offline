@@ -21,6 +21,13 @@ The Cloudflare worker exposes several endpoints:
 - `/anime` (List all anime)
 - `/anime/:anilist_id` (Get specific anime by AniList ID)
 - `/anime/id/:reanime_id` (Get specific anime by Reanime ID)
+- `/anime/anilist/:id` (Get specific anime by AniList ID)
+- `/anime/mal/:id` (Get specific anime by MyAnimeList ID)
+- `/anime/tvdb/:id` (Get specific anime by TVDB ID)
+- `/anime/imdb/:id` (Get specific anime by IMDB ID)
+- `/anime/tmdb/:id` (Get specific anime by TMDB ID)
+- `/anime/reanime/:id` (Get specific anime by Reanime ID)
+- `/anime/anikoto/:id` (Get specific anime by Anikoto ID)
 - `/top`, `/popular`, `/ongoing`, `/upcoming`, `/movies`, `/recent-episodes`
 - `/meta`, `/genres`, `/tags`, `/studios`, `/seasons`
 

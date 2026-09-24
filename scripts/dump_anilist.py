@@ -186,6 +186,9 @@ def generate_indexes(base_dir):
         
         merged["reanime_id"] = ""
         merged["anikoto_id"] = ""
+        merged["tvdb_id"] = ""
+        merged["imdb_id"] = ""
+        merged["tmdb_id"] = ""
         
         import re
         desc = anime.get("description") or ""

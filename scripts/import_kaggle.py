@@ -89,6 +89,9 @@ def main():
             anime["can_request"] = False
             anime["reanime_id"] = ""
             anime["anikoto_id"] = ""
+            anime["tvdb_id"] = ""
+            anime["imdb_id"] = ""
+            anime["tmdb_id"] = ""
             
             synonyms = parse_json_or_literal(row.get('synonyms', "[]"))
             anime["synonyms"] = synonyms if isinstance(synonyms, list) else []
