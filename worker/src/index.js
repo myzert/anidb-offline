@@ -72,7 +72,7 @@ export default {
         const tagsList = tagsParam.toLowerCase().split(',').map(t => t.trim());
         filtered = filtered.filter(a => {
           if (!a.tags) return false;
-          const animeTags = a.tags.map(t => t.name.toLowerCase());
+          const animeTags = a.tags.map(t => t.toLowerCase());
           return tagsList.every(t => animeTags.includes(t));
         });
       }
@@ -83,7 +83,7 @@ export default {
       }
       
       if (yearFilter) {
-        filtered = filtered.filter(a => a.season_year === yearFilter || (a.startDate && a.startDate.year === yearFilter));
+        filtered = filtered.filter(a => a.season_year === yearFilter || (a.start_date && a.start_date.startsWith(yearFilter.toString())));
       }
 
       if (seasonFilter) {
@@ -94,8 +94,8 @@ export default {
       if (studioFilter) {
         const stu = studioFilter.toLowerCase();
         filtered = filtered.filter(a => {
-          if (!a.studios || !a.studios.edges) return false;
-          return a.studios.edges.some(s => s.node && s.node.name.toLowerCase().includes(stu));
+          if (!a.studios) return false;
+          return a.studios.some(s => s.toLowerCase().includes(stu));
         });
       }
       
@@ -107,14 +107,14 @@ export default {
           filtered.sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
         } else if (s === 'new' || s === 'newest') {
           filtered.sort((a, b) => {
-            const dateA = a.startDate ? (a.startDate.year * 10000 + (a.startDate.month || 1) * 100 + (a.startDate.day || 1)) : 0;
-            const dateB = b.startDate ? (b.startDate.year * 10000 + (b.startDate.month || 1) * 100 + (b.startDate.day || 1)) : 0;
+            const dateA = a.start_date ? new Date(a.start_date).getTime() : 0;
+            const dateB = b.start_date ? new Date(b.start_date).getTime() : 0;
             return dateB - dateA;
           });
         } else if (s === 'old' || s === 'oldest') {
           filtered.sort((a, b) => {
-            const dateA = a.startDate ? (a.startDate.year * 10000 + (a.startDate.month || 1) * 100 + (a.startDate.day || 1)) : 99999999;
-            const dateB = b.startDate ? (b.startDate.year * 10000 + (b.startDate.month || 1) * 100 + (b.startDate.day || 1)) : 99999999;
+            const dateA = a.start_date ? new Date(a.start_date).getTime() : 9999999999999;
+            const dateB = b.start_date ? new Date(b.start_date).getTime() : 9999999999999;
             return dateA - dateB;
           });
         }
@@ -176,7 +176,7 @@ export default {
           }
           if (parts.length > 2) pYear = parseInt(parts[2]);
           if (pSeason) items = items.filter(a => (a.season || "").toUpperCase() === pSeason);
-          if (pYear) items = items.filter(a => a.season_year === pYear || (a.startDate && a.startDate.year === pYear));
+          if (pYear) items = items.filter(a => a.season_year === pYear || (a.start_date && a.start_date.startsWith(pYear.toString())));
           if (!pSeason && !pYear) items = items.filter(a => (a.status || "").toUpperCase() === 'RELEASING');
           items.sort((a, b) => (b.average_score || 0) - (a.average_score || 0));
         }
@@ -199,8 +199,8 @@ export default {
         const studios = new Set();
         items.forEach(a => {
            (a.genres || []).forEach(g => genres.add(g));
-           (a.tags || []).forEach(t => tags.add(t.name));
-           if (a.studios && a.studios.edges) a.studios.edges.forEach(s => studios.add(s.node.name));
+           (a.tags || []).forEach(t => tags.add(t));
+           if (a.studios) a.studios.forEach(s => studios.add(s));
         });
         return jsonResponse({
           total_anime: items.length,
@@ -218,9 +218,9 @@ export default {
         const set = new Set();
         items.forEach(a => {
            if (path === '/genres') (a.genres || []).forEach(g => set.add(g));
-           if (path === '/tags') (a.tags || []).forEach(t => set.add(t.name));
+           if (path === '/tags') (a.tags || []).forEach(t => set.add(t));
            if (path === '/studios') {
-             if (a.studios && a.studios.edges) a.studios.edges.forEach(s => set.add(s.node.name));
+             if (a.studios) a.studios.forEach(s => set.add(s));
            }
            if (path === '/seasons' && a.season && a.season_year) set.add(`${a.season} ${a.season_year}`);
         });
@@ -255,11 +255,36 @@ export default {
         return jsonResponse({error: "Anime not found"}, 404);
       }
 
+      const matchSource = path.match(/^\/anime\/(anilist|mal|tvdb|imdb|tmdb|reanime|anikoto)\/(.+)$/);
+      if (matchSource) {
+        const source = matchSource[1];
+        const id = matchSource[2];
+        const items = await fetchGitHubJSON('/raw.json');
+        let anime;
+        if (source === 'anilist') {
+          anime = items.find(a => a.anilist_id === parseInt(id) || a.id === parseInt(id));
+        } else if (source === 'mal') {
+          anime = items.find(a => a.idMal === parseInt(id));
+        } else if (source === 'tvdb') {
+          anime = items.find(a => a.tvdb_id === id || a.tvdb_id === parseInt(id));
+        } else if (source === 'imdb') {
+          anime = items.find(a => a.imdb_id === id);
+        } else if (source === 'tmdb') {
+          anime = items.find(a => a.tmdb_id === id || a.tmdb_id === parseInt(id));
+        } else if (source === 'reanime') {
+          anime = items.find(a => a.reanime_id === id || a.anime_id === id);
+        } else if (source === 'anikoto') {
+          anime = items.find(a => a.anikoto_id === id);
+        }
+        if (anime) return jsonResponse(anime);
+        return jsonResponse({error: "Anime not found"}, 404);
+      }
+
       const match = path.match(/^\/anime\/(\d+)$/);
       if (match) {
         const id = parseInt(match[1]);
         const items = await fetchGitHubJSON('/raw.json');
-        const anime = items.find(a => a.anilist_id === id);
+        const anime = items.find(a => a.anilist_id === id || a.id === id);
         if (anime) return jsonResponse(anime);
         return jsonResponse({error: "Anime not found"}, 404);
       }
@@ -276,7 +301,9 @@ export default {
       return jsonResponse({
         error: "Endpoint not found", 
         endpoints: [
-          "/anime", "/anime/:id", "/anime/id/:reanime_id", "/seasonlist/:id", "/top", "/popular", "/ongoing", 
+          "/anime", "/anime/:id", "/anime/id/:reanime_id", 
+          "/anime/anilist/:id", "/anime/mal/:id", "/anime/tvdb/:id", "/anime/imdb/:id", "/anime/tmdb/:id", "/anime/reanime/:id", "/anime/anikoto/:id",
+          "/seasonlist/:id", "/top", "/popular", "/ongoing", 
           "/top-airing", "/top-airing/:season", "/top-airing/:year", "/top-airing/:season/:year",
           "/season-now", "/schedule", "/upcoming", "/movies", "/recent-episodes",
           "/meta", "/genres", "/tags", "/studios", "/seasons"
