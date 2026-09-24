@@ -8,25 +8,101 @@ import logging
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def fetch_jikan_page(page):
-    url = f"https://api.jikan.moe/v4/anime?page={page}"
-    while True:
+def fetch_anilist_page(page, max_retries=5):
+    url = "https://graphql.anilist.co"
+    query = '''
+    query ($page: Int, $perPage: Int) {
+      Page(page: $page, perPage: $perPage) {
+        pageInfo {
+          hasNextPage
+        }
+        media(type: ANIME, sort: ID) {
+          id
+          idMal
+          title {
+            romaji
+            english
+            native
+          }
+          type
+          format
+          status
+          description(asHtml: false)
+          episodes
+          duration
+          season
+          seasonYear
+          startDate {
+            year
+            month
+            day
+          }
+          endDate {
+            year
+            month
+            day
+          }
+          coverImage {
+            extraLarge
+            large
+            medium
+            color
+          }
+          bannerImage
+          genres
+          synonyms
+          averageScore
+          popularity
+          tags {
+            name
+          }
+          studios(isMain: true) {
+            nodes {
+              name
+            }
+          }
+          trailer {
+            id
+            site
+          }
+          nextAiringEpisode {
+            airingAt
+            timeUntilAiring
+            episode
+          }
+        }
+      }
+    }
+    '''
+    variables = {
+        "page": page,
+        "perPage": 50
+    }
+    
+    retries = 0
+    while retries < max_retries:
         try:
-            response = requests.get(url, timeout=10)
+            response = requests.post(url, json={'query': query, 'variables': variables}, timeout=15)
             if response.status_code == 200:
                 return response.json()
             elif response.status_code == 429:
-                logging.warning("429 Too Many Requests. Sleeping for 2s...")
-                time.sleep(2)
+                retry_after = int(response.headers.get('Retry-After', 60))
+                logging.warning(f"429 Too Many Requests. Sleeping for {retry_after}s...")
+                time.sleep(retry_after)
+                retries += 1
             elif response.status_code >= 500:
                 logging.warning(f"Server error {response.status_code}. Sleeping for 5s...")
                 time.sleep(5)
+                retries += 1
             else:
                 logging.error(f"Error {response.status_code}: {response.text}")
                 return None
         except Exception as e:
             logging.error(f"Exception: {e}")
             time.sleep(5)
+            retries += 1
+    logging.error(f"Max retries reached for page {page}.")
+    return None
 
 def save_anime_data(anime_list, base_dir):
     group_size = 1000
@@ -111,8 +187,46 @@ def generate_indexes(base_dir):
         merged["reanime_id"] = ""
         merged["anikoto_id"] = ""
         
+        import re
+        desc = anime.get("description") or ""
+        desc = re.sub(r'<[^>]+>', '', desc)
+        merged["description"] = desc
+        merged["banner_image"] = anime.get("bannerImage", "")
+        
+        tags = anime.get("tags", [])
+        merged["tags"] = [t.get("name") for t in tags if isinstance(t, dict)]
+        
+        studios = anime.get("studios", {}).get("nodes", [])
+        merged["studios"] = [s.get("name") for s in studios if isinstance(s, dict)]
+        
+        trailer = anime.get("trailer")
+        if trailer and trailer.get("site") == "youtube":
+            merged["trailer_url"] = f"https://www.youtube.com/watch?v={trailer.get('id')}"
+        else:
+            merged["trailer_url"] = ""
+            
+        next_airing = anime.get("nextAiringEpisode")
+        if next_airing:
+            merged["next_airing_episode"] = {
+                "episode": next_airing.get("episode"),
+                "airing_at": next_airing.get("airingAt"),
+                "time_until_airing": next_airing.get("timeUntilAiring")
+            }
+        else:
+            merged["next_airing_episode"] = None
+            
+        def format_date(d):
+            if not d or not d.get("year"): return None
+            y = d.get("year")
+            m = d.get("month") or 1
+            day = d.get("day") or 1
+            return f"{y}-{m:02d}-{day:02d}"
+            
+        merged["start_date"] = format_date(anime.get("startDate"))
+        merged["end_date"] = format_date(anime.get("endDate"))
+        
         for k, v in anime.items():
-            if k not in merged and k != "coverImage":
+            if k not in merged and k not in ["coverImage", "tags", "studios", "trailer", "nextAiringEpisode", "startDate", "endDate", "description", "bannerImage"]:
                 merged[k] = v
                 
         formatted_anime_list.append(merged)
@@ -131,7 +245,7 @@ def generate_indexes(base_dir):
     logging.info("Index generated successfully!")
 
 def main():
-    parser = argparse.ArgumentParser(description='Dump Anime Data using Jikan API')
+    parser = argparse.ArgumentParser(description='Dump Anime Data using AniList API')
     parser.add_argument('--mode', choices=['full', 'incremental'], default='full', 
                         help='Mode of dumping: full (all data)')
     args = parser.parse_args()
@@ -143,89 +257,32 @@ def main():
     page = 1
     has_next_page = True
     
-    logging.info(f"Starting Jikan dump. Saving to {base_dir}")
+    logging.info(f"Starting AniList dump. Saving to {base_dir}")
     
     total_fetched = 0
     while has_next_page:
         logging.info(f"Fetching page {page}...")
         
-        data = fetch_jikan_page(page)
+        data = fetch_anilist_page(page)
         
-        if not data or 'data' not in data:
+        if not data or 'data' not in data or 'Page' not in data['data']:
             logging.error("Failed to fetch data or invalid format.")
             break
             
-        jikan_anime_list = data['data']
-        pagination = data.get('pagination', {})
+        page_data = data['data']['Page']
+        anilist_anime_list = page_data.get('media', [])
+        page_info = page_data.get('pageInfo', {})
         
-        if not jikan_anime_list:
+        if not anilist_anime_list:
             logging.info("No more anime found.")
             break
             
-        anime_list = []
-        for jikan_anime in jikan_anime_list:
-            anime = {}
-            anime['id'] = jikan_anime.get('mal_id')
-            anime['idMal'] = jikan_anime.get('mal_id')
-
-            anime['title'] = {
-                'romaji': jikan_anime.get('title'),
-                'english': jikan_anime.get('title_english'),
-                'native': jikan_anime.get('title_japanese')
-            }
-
-            anime['type'] = jikan_anime.get('type')
-            anime['format'] = jikan_anime.get('type')
-            
-            st = jikan_anime.get('status')
-            if st == 'Finished Airing':
-                anime['status'] = 'FINISHED'
-            elif st == 'Currently Airing':
-                anime['status'] = 'RELEASING'
-            elif st == 'Not yet aired':
-                anime['status'] = 'NOT_YET_RELEASED'
-            else:
-                anime['status'] = st.upper() if st else ''
-
-            anime['description'] = jikan_anime.get('synopsis')
-            anime['episodes'] = jikan_anime.get('episodes')
-            anime['duration'] = jikan_anime.get('duration')
-            anime['season'] = (jikan_anime.get('season') or '').upper()
-            anime['seasonYear'] = jikan_anime.get('year')
-
-            aired = jikan_anime.get('aired', {})
-            prop = aired.get('prop', {})
-            from_date = prop.get('from', {})
-            anime['startDate'] = {'year': from_date.get('year'), 'month': from_date.get('month'), 'day': from_date.get('day')}
-            to_date = prop.get('to', {})
-            anime['endDate'] = {'year': to_date.get('year'), 'month': to_date.get('month'), 'day': to_date.get('day')}
-
-            images = jikan_anime.get('images', {}).get('jpg', {})
-            anime['coverImage'] = {
-                'extraLarge': images.get('large_image_url'),
-                'large': images.get('large_image_url'),
-                'medium': images.get('image_url'),
-                'color': ''
-            }
-
-            anime['genres'] = [g.get('name') for g in jikan_anime.get('genres', [])]
-            anime['synonyms'] = jikan_anime.get('title_synonyms', [])
-            anime['averageScore'] = int(jikan_anime.get('score', 0) * 10) if jikan_anime.get('score') else 0
-            anime['popularity'] = jikan_anime.get('popularity')
-
-            anime['tags'] = [{'name': t.get('name')} for t in jikan_anime.get('themes', [])]
-
-            studios = jikan_anime.get('studios', [])
-            anime['studios'] = {'edges': [{'node': {'name': s.get('name')}} for s in studios]}
-            
-            anime_list.append(anime)
-
-        save_anime_data(anime_list, base_dir)
-        total_fetched += len(anime_list)
+        save_anime_data(anilist_anime_list, base_dir)
+        total_fetched += len(anilist_anime_list)
         
-        has_next_page = pagination.get('has_next_page', False)
+        has_next_page = page_info.get('hasNextPage', False)
         page += 1
-        time.sleep(1)  # Respect Jikan rate limit (3 req/s, but we'll do 1 req/s to be safe)
+        time.sleep(1)  # Respect AniList rate limit (90 req/min)
         
         # for testing we can limit pages, uncomment to limit to 2 pages
         if page > 2:
