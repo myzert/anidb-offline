@@ -156,7 +156,7 @@ def generate_indexes(base_dir):
         logging.error(f"Failed to fetch mapping: {e}")
 
 
-    tmdb_api_key = os.environ.get("TMDB_API_KEY", "")
+    tmdb_api_key = os.environ.get("TMDB") or os.environ.get("TMDB_API_KEY", "")
     
     # Simple TMDB cache to prevent duplicate requests if the same TMDB ID is shared
     tmdb_cache = {}

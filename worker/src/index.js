@@ -282,7 +282,7 @@ export default {
 
     async function fetchGitHubJSON(subpath) {
       const ghResponse = await fetch(`${GITHUB_RAW_BASE}${subpath}`, {
-        headers: { 'User-Agent': 'ANIDUMP-Worker/3.1' }
+        headers: { 'User-Agent': 'ANIDUMP-Worker/4.0' }
       });
       if (!ghResponse.ok) return null;
       return await ghResponse.json();
@@ -413,10 +413,9 @@ export default {
       const paginated = filtered.slice(offset, offset + limit);
       
       const mapFields = (a) => {
-         let tmdbPoster = a.tmdb_id ? (a.tmdb_poster_path ? `https://image.tmdb.org/t/p/original${a.tmdb_poster_path}` : (a.cover_image ? a.cover_image.extra_large : null)) : null;
-         let tmdbBackdrop = a.tmdb_id ? (a.tmdb_backdrop_path ? `https://image.tmdb.org/t/p/original${a.tmdb_backdrop_path}` : a.banner_image) : null;
+         let tmdbPoster = a.tmdb_poster_path ? `https://image.tmdb.org/t/p/original${a.tmdb_poster_path}` : (a.cover_image ? a.cover_image.extra_large : null);
+         let tmdbBackdrop = a.tmdb_backdrop_path ? `https://image.tmdb.org/t/p/original${a.tmdb_backdrop_path}` : a.banner_image;
          
-         // Generates fake episode list with cover images
          let epList = [];
          if (a.episodes > 0) {
            for (let i = 1; i <= a.episodes; i++) {
@@ -428,7 +427,6 @@ export default {
            }
          }
 
-         // Unofficial TMDB Logo placeholder (or other unofficial provider format)
          let logoUrl = a.tmdb_logo_path ? `https://image.tmdb.org/t/p/original${a.tmdb_logo_path}` : (a.cover_image ? a.cover_image.extra_large : null);
          
          let mapped = { 
@@ -489,6 +487,71 @@ export default {
     }
 
     try {
+      // Root / Home / API Dashboard
+      if (path === '/' || path === '/api' || path === '/api/home') {
+        let items = await fetchGitHubJSON('/raw.json');
+        if (!items) return jsonResponse({error: 'Data not found'}, 404);
+
+        const mapFieldsBasic = (a) => {
+           let tmdbPoster = a.tmdb_poster_path ? `https://image.tmdb.org/t/p/original${a.tmdb_poster_path}` : (a.cover_image ? a.cover_image.extra_large : null);
+           let tmdbBackdrop = a.tmdb_backdrop_path ? `https://image.tmdb.org/t/p/original${a.tmdb_backdrop_path}` : a.banner_image;
+           let logoUrl = a.tmdb_logo_path ? `https://image.tmdb.org/t/p/original${a.tmdb_logo_path}` : (a.cover_image ? a.cover_image.extra_large : null);
+           return {
+             id: a.id || a.anilist_id,
+             title: a.title,
+             cover_image: a.cover_image,
+             poster: tmdbPoster,
+             backdrop: tmdbBackdrop,
+             logo: logoUrl,
+             status: a.status,
+             format: a.format,
+             episodes: a.episodes,
+             score: a.average_score,
+             next_airing: a.next_airing_episode
+           };
+        };
+
+        const spotlight = items.filter(a => a.status === 'Releasing').sort((a,b) => (b.popularity || 0) - (a.popularity || 0)).slice(0, 10).map(mapFieldsBasic);
+        const trending = items.sort((a,b) => (b.popularity || 0) - (a.popularity || 0)).slice(0, 15).map(mapFieldsBasic);
+        const top_rated = items.sort((a,b) => (b.average_score || 0) - (a.average_score || 0)).slice(0, 10).map(mapFieldsBasic);
+        
+        // Next airing schedule logic
+        let jadwal = items.filter(a => a.next_airing_episode && a.next_airing_episode.time_until_airing > 0);
+        jadwal.sort((a,b) => a.next_airing_episode.time_until_airing - b.next_airing_episode.time_until_airing);
+        jadwal = jadwal.slice(0, 15).map(mapFieldsBasic);
+
+        return jsonResponse({
+          success: true,
+          message: "Welcome to AniDB Offline API",
+          data_source: "Official AniList GraphQL API",
+          data_enrichment: "TMDB (Posters, Backdrops, Logos)",
+          available_features: [
+            "id", "titles (romaji, english, native, synonyms)", "format", "status",
+            "episodes", "duration", "genres", "tags (with spoiler flag)", "studios", "score",
+            "popularity", "is_adult", "country_of_origin", "source",
+            "trailer", "airing_schedule", "relations (prequel/sequel)", "images (cover, banner, tmdb_poster, tmdb_backdrop, logo)",
+            "episode_list (auto-generated)"
+          ],
+          endpoints: [
+            "GET /api/anime", 
+            "GET /api/anime/random", 
+            "GET /api/anime/:id", 
+            "GET /api/anime/:id/info",
+            "GET /api/genres", 
+            "GET /api/tags", 
+            "GET /api/studios", 
+            "GET /api/seasons",
+            "GET /graphql"
+          ],
+          data: {
+            spotlight,
+            trending,
+            top_rated,
+            jadwal
+          }
+        });
+      }
+
       if (path === '/anime' || path === '/api/anime') {
         let items = await fetchGitHubJSON('/raw.json');
         if (!items) return jsonResponse({error: 'Data not found'}, 404);
@@ -565,15 +628,7 @@ export default {
          return jsonResponse(Array.from(set).sort());
       }
       
-      return jsonResponse({
-        error: "Endpoint not found", 
-        endpoints: [
-          "/api/anime", "/api/anime/random", "/api/anime/:id", "/api/anime/:id/info",
-          "/api/anime/mal/:id", "/api/anime/tvdb/:id", "/api/anime/imdb/:id", "/api/anime/tmdb/:id",
-          "/api/genres", "/api/tags", "/api/studios", "/api/seasons",
-          "/graphql"
-        ]
-      }, 404);
+      return jsonResponse({error: 'Endpoint not found'}, 404);
 
     } catch (err) {
       return jsonResponse({error: err.message}, 500);
