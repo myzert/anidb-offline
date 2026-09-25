@@ -145,21 +145,50 @@ def generate_indexes(base_dir):
         logging.info("No data found to generate indexes.")
         return
 
+    # Download mapping from nattadasu/animeApi
+    mapping_url = "https://raw.githubusercontent.com/nattadasu/animeApi/v3/database/animeapi.json"
+    logging.info(f"Downloading mapping from {mapping_url}...")
+    mapping_data = {}
+    try:
+        req = requests.get(mapping_url)
+        if req.status_code == 200:
+            raw_map = req.json()
+            for item in raw_map:
+                if 'anilist' in item and item['anilist']:
+                    mapping_data[str(item['anilist'])] = item
+        else:
+            logging.error("Failed to download mapping.")
+    except Exception as e:
+        logging.error(f"Failed to fetch mapping: {e}")
+
+    tmdb_api_key = os.environ.get("TMDB_API_KEY", "")
+
     formatted_anime_list = []
     
     for aid, anime in all_anime.items():
         aid_int = int(aid)
         
         merged = {}
-        merged["anilist_id"] = aid_int
-        merged["anime_id"] = ""
+        merged["id"] = aid_int # Use native anilist id as main id
+        merged["idMal"] = anime.get("idMal")
+        
+        # Mappings
+        m_item = mapping_data.get(str(aid_int), {})
+        merged["tmdb_id"] = m_item.get("themoviedb")
+        merged["tvdb_id"] = m_item.get("thetvdb")
+        merged["imdb_id"] = m_item.get("imdb")
+        
         merged["title"] = anime.get("title", {})
+        merged["synonyms"] = anime.get("synonyms", [])
+        
         merged["cover_image"] = {
             "color": anime.get("coverImage", {}).get("color", ""),
             "extra_large": anime.get("coverImage", {}).get("extraLarge", ""),
             "large": anime.get("coverImage", {}).get("large", ""),
             "medium": anime.get("coverImage", {}).get("medium", "")
         }
+        merged["banner_image"] = anime.get("bannerImage", "")
+        
         merged["format"] = anime.get("format", "TV")
         
         st = anime.get("status", "")
@@ -174,27 +203,13 @@ def generate_indexes(base_dir):
         dur = anime.get("duration", 0)
         merged["duration"] = f"{dur}m" if dur else ""
         
-        merged["subbed"] = 0
-        merged["dubbed"] = 0
-        
         merged["average_score"] = anime.get("averageScore", 0)
         merged["popularity"] = anime.get("popularity", 0)
-        merged["rating"] = ""
-        
-        merged["can_watch"] = False
-        merged["can_request"] = False
-        
-        merged["reanime_id"] = ""
-        merged["anikoto_id"] = ""
-        merged["tvdb_id"] = ""
-        merged["imdb_id"] = ""
-        merged["tmdb_id"] = ""
         
         import re
         desc = anime.get("description") or ""
         desc = re.sub(r'<[^>]+>', '', desc)
         merged["description"] = desc
-        merged["banner_image"] = anime.get("bannerImage", "")
         
         tags = anime.get("tags", [])
         merged["tags"] = [t.get("name") for t in tags if isinstance(t, dict)]
@@ -227,10 +242,6 @@ def generate_indexes(base_dir):
             
         merged["start_date"] = format_date(anime.get("startDate"))
         merged["end_date"] = format_date(anime.get("endDate"))
-        
-        for k, v in anime.items():
-            if k not in merged and k not in ["coverImage", "tags", "studios", "trailer", "nextAiringEpisode", "startDate", "endDate", "description", "bannerImage"]:
-                merged[k] = v
                 
         formatted_anime_list.append(merged)
         
@@ -249,49 +260,46 @@ def generate_indexes(base_dir):
 
 def main():
     parser = argparse.ArgumentParser(description='Dump Anime Data using AniList API')
-    parser.add_argument('--mode', choices=['full', 'incremental'], default='full', 
-                        help='Mode of dumping: full (all data)')
+    parser.add_argument('--mode', choices=['full', 'incremental', 'index_only'], default='full', 
+                        help='Mode of dumping: full (all data), incremental, or index_only')
     args = parser.parse_args()
 
     script_dir = Path(__file__).parent.resolve()
     base_dir = script_dir.parent / "data" / "raw" / "anime"
     base_dir.mkdir(parents=True, exist_ok=True)
     
-    page = 1
-    has_next_page = True
-    
-    logging.info(f"Starting AniList dump. Saving to {base_dir}")
-    
-    total_fetched = 0
-    while has_next_page:
-        logging.info(f"Fetching page {page}...")
+    if args.mode != 'index_only':
+        page = 1
+        has_next_page = True
         
-        data = fetch_anilist_page(page)
+        logging.info(f"Starting AniList dump. Saving to {base_dir}")
         
-        if not data or 'data' not in data or 'Page' not in data['data']:
-            logging.error("Failed to fetch data or invalid format.")
-            break
+        total_fetched = 0
+        while has_next_page:
+            logging.info(f"Fetching page {page}...")
             
-        page_data = data['data']['Page']
-        anilist_anime_list = page_data.get('media', [])
-        page_info = page_data.get('pageInfo', {})
-        
-        if not anilist_anime_list:
-            logging.info("No more anime found.")
-            break
+            data = fetch_anilist_page(page)
             
-        save_anime_data(anilist_anime_list, base_dir)
-        total_fetched += len(anilist_anime_list)
-        
-        has_next_page = page_info.get('hasNextPage', False)
-        page += 1
-        time.sleep(1)  # Respect AniList rate limit (90 req/min)
-        
-        # for testing we can limit pages, uncomment to limit to 2 pages
-        if page > 2:
-            break
-        
-    logging.info(f"Dump complete! Total anime fetched/updated: {total_fetched}")
+            if not data or 'data' not in data or 'Page' not in data['data']:
+                logging.error("Failed to fetch data or invalid format.")
+                break
+                
+            page_data = data['data']['Page']
+            anilist_anime_list = page_data.get('media', [])
+            page_info = page_data.get('pageInfo', {})
+            
+            if not anilist_anime_list:
+                logging.info("No more anime found.")
+                break
+                
+            save_anime_data(anilist_anime_list, base_dir)
+            total_fetched += len(anilist_anime_list)
+            
+            has_next_page = page_info.get('hasNextPage', False)
+            page += 1
+            time.sleep(1)  # Respect AniList rate limit (90 req/min)
+            
+        logging.info(f"Dump complete! Total anime fetched/updated: {total_fetched}")
     
     generate_indexes(base_dir)
 
