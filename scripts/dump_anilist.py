@@ -11,12 +11,12 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 def fetch_anilist_page(last_id=0, max_retries=5):
     url = "https://graphql.anilist.co"
     query = '''
-    query ($id_greater: Int, $perPage: Int) {
+    query ($id_in: [Int], $perPage: Int) {
       Page(page: 1, perPage: $perPage) {
         pageInfo {
           hasNextPage
         }
-        media(type: ANIME, sort: ID, id_greater: $id_greater) {
+        media(type: ANIME, sort: ID, id_in: $id_in) {
           id
           idMal
           title {
@@ -70,7 +70,7 @@ def fetch_anilist_page(last_id=0, max_retries=5):
     }
     '''
     variables = {
-        "id_greater": last_id,
+        "id_in": last_id, # Actually passing an array here
         "perPage": 50
     }
     
@@ -322,36 +322,31 @@ def main():
     base_dir.mkdir(parents=True, exist_ok=True)
     
     if args.mode != 'index_only':
-        last_id = 0
-        has_next_page = True
-        
         logging.info(f"Starting AniList dump. Saving to {base_dir}")
-        
         total_fetched = 0
-        while has_next_page:
-            logging.info(f"Fetching anime starting after id {last_id}...")
+        max_id = 200000  # AniList IDs are currently up to ~180k
+        chunk_size = 50
+        
+        for start_id in range(1, max_id, chunk_size):
+            id_in = list(range(start_id, start_id + chunk_size))
+            logging.info(f"Fetching anime IDs {start_id} to {start_id + chunk_size - 1}...")
             
-            data = fetch_anilist_page(last_id)
+            data = fetch_anilist_page(id_in)
             
             if not data or 'data' not in data or 'Page' not in data['data']:
                 logging.error("Failed to fetch data or invalid format.")
-                break
+                # We can just continue, maybe temporary error
+                time.sleep(2)
+                continue
                 
             page_data = data['data']['Page']
             anilist_anime_list = page_data.get('media', [])
-            page_info = page_data.get('pageInfo', {})
             
-            if not anilist_anime_list:
-                logging.info("No more anime found.")
-                break
-                
-            save_anime_data(anilist_anime_list, base_dir)
-            total_fetched += len(anilist_anime_list)
+            if anilist_anime_list:
+                save_anime_data(anilist_anime_list, base_dir)
+                total_fetched += len(anilist_anime_list)
             
-            last_id = anilist_anime_list[-1]['id']
-            
-            has_next_page = page_info.get('hasNextPage', False)
-            time.sleep(1)  # Respect AniList rate limit (90 req/min)
+            time.sleep(0.7)  # Respect AniList rate limit (90 req/min)
             
         logging.info(f"Dump complete! Total anime fetched/updated: {total_fetched}")
     
