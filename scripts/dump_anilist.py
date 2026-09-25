@@ -8,15 +8,15 @@ import logging
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def fetch_anilist_page(page, max_retries=5):
+def fetch_anilist_page(last_id=0, max_retries=5):
     url = "https://graphql.anilist.co"
     query = '''
-    query ($page: Int, $perPage: Int) {
-      Page(page: $page, perPage: $perPage) {
+    query ($id_greater: Int, $perPage: Int) {
+      Page(page: 1, perPage: $perPage) {
         pageInfo {
           hasNextPage
         }
-        media(type: ANIME, sort: ID) {
+        media(type: ANIME, sort: ID, id_greater: $id_greater) {
           id
           idMal
           title {
@@ -75,7 +75,7 @@ def fetch_anilist_page(page, max_retries=5):
     }
     '''
     variables = {
-        "page": page,
+        "id_greater": last_id,
         "perPage": 50
     }
     
@@ -101,7 +101,7 @@ def fetch_anilist_page(page, max_retries=5):
             logging.error(f"Exception: {e}")
             time.sleep(5)
             retries += 1
-    logging.error(f"Max retries reached for page {page}.")
+    logging.error(f"Max retries reached after id {last_id}.")
     return None
 
 def save_anime_data(anime_list, base_dir):
@@ -145,7 +145,6 @@ def generate_indexes(base_dir):
         logging.info("No data found to generate indexes.")
         return
 
-    # Download mapping from nattadasu/animeApi
     mapping_url = "https://raw.githubusercontent.com/nattadasu/animeApi/v3/database/animeapi.json"
     logging.info(f"Downloading mapping from {mapping_url}...")
     mapping_data = {}
@@ -169,10 +168,9 @@ def generate_indexes(base_dir):
         aid_int = int(aid)
         
         merged = {}
-        merged["id"] = aid_int # Use native anilist id as main id
+        merged["id"] = aid_int
         merged["idMal"] = anime.get("idMal")
         
-        # Mappings
         m_item = mapping_data.get(str(aid_int), {})
         merged["tmdb_id"] = m_item.get("themoviedb")
         merged["tvdb_id"] = m_item.get("thetvdb")
@@ -269,16 +267,16 @@ def main():
     base_dir.mkdir(parents=True, exist_ok=True)
     
     if args.mode != 'index_only':
-        page = 1
+        last_id = 0
         has_next_page = True
         
         logging.info(f"Starting AniList dump. Saving to {base_dir}")
         
         total_fetched = 0
         while has_next_page:
-            logging.info(f"Fetching page {page}...")
+            logging.info(f"Fetching anime starting after id {last_id}...")
             
-            data = fetch_anilist_page(page)
+            data = fetch_anilist_page(last_id)
             
             if not data or 'data' not in data or 'Page' not in data['data']:
                 logging.error("Failed to fetch data or invalid format.")
@@ -295,8 +293,9 @@ def main():
             save_anime_data(anilist_anime_list, base_dir)
             total_fetched += len(anilist_anime_list)
             
+            last_id = anilist_anime_list[-1]['id']
+            
             has_next_page = page_info.get('hasNextPage', False)
-            page += 1
             time.sleep(1)  # Respect AniList rate limit (90 req/min)
             
         logging.info(f"Dump complete! Total anime fetched/updated: {total_fetched}")
