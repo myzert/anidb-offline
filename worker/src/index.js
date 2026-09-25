@@ -149,7 +149,7 @@ const resolvers = {
           hasNextPage
         },
         media: paginated.map(a => ({
-           id: a.id,
+           id: a.id || a.anilist_id,
            idMal: a.idMal,
            tmdb_id: a.tmdb_id,
            tvdb_id: a.tvdb_id,
@@ -184,10 +184,10 @@ const resolvers = {
     anime: async (_, args, context) => {
       const items = await context.fetchData('/raw.json');
       if (!items) return null;
-      const anime = items.find(a => a.id === args.id);
+      const anime = items.find(a => a.id == args.id || a.anilist_id == args.id);
       if (!anime) return null;
       return {
-           id: anime.id,
+           id: anime.id || anime.anilist_id,
            idMal: anime.idMal,
            tmdb_id: anime.tmdb_id,
            tvdb_id: anime.tvdb_id,
@@ -236,7 +236,6 @@ export default {
     const path = url.pathname;
     const hostname = url.hostname;
 
-    // CORS Headers
     const corsHeaders = {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'GET,HEAD,POST,OPTIONS',
@@ -260,17 +259,25 @@ export default {
       return yoga.fetch(request, { fetchData: fetchGitHubJSON });
     }
 
-    // REST API Route
+    // Helper to get array from query params safely (handles ?genres=a,b and ?genres[]=a&genres[]=b)
+    const getArrayParam = (name) => {
+      let vals = url.searchParams.getAll(name);
+      if (vals.length === 0) vals = url.searchParams.getAll(name + '[]');
+      if (vals.length === 1 && vals[0].includes(',')) return vals[0].split(',').map(v => v.trim());
+      return vals.length > 0 ? vals : null;
+    };
+
     const limit = parseInt(url.searchParams.get('limit')) || 20;
     const offset = parseInt(url.searchParams.get('offset')) || 0;
     
     const search = url.searchParams.get('q') || url.searchParams.get('search') || url.searchParams.get('query');
-    const genres = url.searchParams.get('genres') || url.searchParams.get('genre_ids');
+    const genres = getArrayParam('genres') || getArrayParam('genre_ids') || getArrayParam('genre');
+    const tagsParam = getArrayParam('tags') || getArrayParam('tag');
+    
     const statusFilter = url.searchParams.get('status');
     const typeFilter = url.searchParams.get('type') || url.searchParams.get('format');
     const seasonFilter = url.searchParams.get('season');
     const yearFilter = parseInt(url.searchParams.get('year'));
-    const ratingFilter = url.searchParams.get('rating') || url.searchParams.get('age_rating');
     const studioFilter = url.searchParams.get('studio');
     const fieldsFilter = url.searchParams.get('fields');
     
@@ -292,11 +299,20 @@ export default {
       }
       
       if (genres) {
-        const genresList = genres.toLowerCase().split(',').map(g => g.trim());
+        const genresList = genres.map(g => g.toLowerCase().trim());
         filtered = filtered.filter(a => {
           if (!a.genres) return false;
           const animeGenres = a.genres.map(g => g.toLowerCase());
           return genresList.every(g => animeGenres.includes(g));
+        });
+      }
+
+      if (tagsParam) {
+        const tagsList = tagsParam.map(t => t.toLowerCase().trim());
+        filtered = filtered.filter(a => {
+          if (!a.tags) return false;
+          const animeTags = a.tags.map(t => t.toLowerCase());
+          return tagsList.every(t => animeTags.includes(t));
         });
       }
 
@@ -355,7 +371,13 @@ export default {
          let tmdbPoster = a.tmdb_id ? (a.tmdb_poster_path ? `https://image.tmdb.org/t/p/original${a.tmdb_poster_path}` : (a.cover_image ? a.cover_image.extra_large : null)) : null;
          let tmdbBackdrop = a.tmdb_id ? (a.tmdb_backdrop_path ? `https://image.tmdb.org/t/p/original${a.tmdb_backdrop_path}` : a.banner_image) : null;
          
-         let mapped = { ...a, tmdb_poster: tmdbPoster, tmdb_backdrop: tmdbBackdrop, logo: null };
+         let mapped = { 
+           ...a, 
+           id: a.id || a.anilist_id, // ensure ID is mapped
+           tmdb_poster: tmdbPoster, 
+           tmdb_backdrop: tmdbBackdrop, 
+           logo: null 
+         };
          
          if (fieldsFilter) {
            const requestedFields = fieldsFilter.split(',').map(f => f.trim());
@@ -367,7 +389,7 @@ export default {
          } else if (isList) {
            // Default list response
            return {
-             id: a.id,
+             id: mapped.id,
              title: a.title,
              cover_image: a.cover_image,
              logo: mapped.logo
@@ -404,11 +426,12 @@ export default {
         return jsonResponse(processItems(items, true));
       }
 
-      const matchId = path.match(/^\/(?:api\/)?anime\/(\d+)$/);
+      // Handle both /api/anime/:id and /api/anime/:id/info
+      const matchId = path.match(/^\/(?:api\/)?anime\/(\d+)(?:\/(info|details))?$/);
       if (matchId) {
-        const id = parseInt(matchId[1]);
+        const id = matchId[1];
         const items = await fetchGitHubJSON('/raw.json');
-        const anime = items.filter(a => a.id === id);
+        const anime = items.filter(a => a.id == id || a.anilist_id == id); // Use == for loose string matching just in case
         if (anime.length > 0) return jsonResponse(processItems(anime, false));
         return jsonResponse({error: "Anime not found"}, 404);
       }
@@ -419,7 +442,7 @@ export default {
         const id = matchSource[2];
         const items = await fetchGitHubJSON('/raw.json');
         let anime = [];
-        if (source === 'mal') anime = items.filter(a => a.idMal === parseInt(id));
+        if (source === 'mal') anime = items.filter(a => a.idMal == id);
         else if (source === 'tvdb') anime = items.filter(a => a.tvdb_id == id);
         else if (source === 'imdb') anime = items.filter(a => a.imdb_id == id);
         else if (source === 'tmdb') anime = items.filter(a => a.tmdb_id == id);
@@ -448,7 +471,7 @@ export default {
       return jsonResponse({
         error: "Endpoint not found", 
         endpoints: [
-          "/api/anime", "/api/anime/:id", 
+          "/api/anime", "/api/anime/:id", "/api/anime/:id/info",
           "/api/anime/mal/:id", "/api/anime/tvdb/:id", "/api/anime/imdb/:id", "/api/anime/tmdb/:id",
           "/api/genres", "/api/tags", "/api/studios", "/api/seasons",
           "/graphql"
