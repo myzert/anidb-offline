@@ -32,43 +32,38 @@ def fetch_anilist_page(last_id=0, max_retries=5):
           duration
           season
           seasonYear
-          startDate {
-            year
-            month
-            day
-          }
-          endDate {
-            year
-            month
-            day
-          }
-          coverImage {
-            extraLarge
-            large
-            medium
-            color
-          }
+          startDate { year month day }
+          endDate { year month day }
+          coverImage { extraLarge large medium color }
           bannerImage
           genres
           synonyms
           averageScore
           popularity
+          isAdult
+          source
+          countryOfOrigin
           tags {
             name
+            rank
+            isMediaSpoiler
           }
           studios(isMain: true) {
-            nodes {
-              name
+            nodes { name }
+          }
+          trailer { id site }
+          nextAiringEpisode { airingAt timeUntilAiring episode }
+          relations {
+            edges {
+              relationType(version: 2)
+              node {
+                id
+                type
+                format
+                status
+                title { romaji english native }
+              }
             }
-          }
-          trailer {
-            id
-            site
-          }
-          nextAiringEpisode {
-            airingAt
-            timeUntilAiring
-            episode
           }
         }
       }
@@ -160,8 +155,6 @@ def generate_indexes(base_dir):
     except Exception as e:
         logging.error(f"Failed to fetch mapping: {e}")
 
-    tmdb_api_key = os.environ.get("TMDB_API_KEY", "")
-
     formatted_anime_list = []
     
     for aid, anime in all_anime.items():
@@ -188,6 +181,9 @@ def generate_indexes(base_dir):
         merged["banner_image"] = anime.get("bannerImage", "")
         
         merged["format"] = anime.get("format", "TV")
+        merged["source"] = anime.get("source", "ORIGINAL")
+        merged["is_adult"] = anime.get("isAdult", False)
+        merged["country_of_origin"] = anime.get("countryOfOrigin", "JP")
         
         st = anime.get("status", "")
         status_map = {"FINISHED": "Finished", "RELEASING": "Releasing", "NOT_YET_RELEASED": "Not Yet Released", "CANCELLED": "Cancelled"}
@@ -209,8 +205,9 @@ def generate_indexes(base_dir):
         desc = re.sub(r'<[^>]+>', '', desc)
         merged["description"] = desc
         
+        # Include tag rank and spoiler info
         tags = anime.get("tags", [])
-        merged["tags"] = [t.get("name") for t in tags if isinstance(t, dict)]
+        merged["tags"] = [{"name": t.get("name"), "rank": t.get("rank", 0), "is_spoiler": t.get("isMediaSpoiler", False)} for t in tags if isinstance(t, dict)]
         
         studios = anime.get("studios", {}).get("nodes", [])
         merged["studios"] = [s.get("name") for s in studios if isinstance(s, dict)]
@@ -231,6 +228,22 @@ def generate_indexes(base_dir):
         else:
             merged["next_airing_episode"] = None
             
+        # Parse Relations cleanly
+        relations = anime.get("relations", {}).get("edges", [])
+        parsed_relations = []
+        for rel in relations:
+            node = rel.get("node", {})
+            if node:
+                parsed_relations.append({
+                    "id": node.get("id"),
+                    "type": node.get("type"),
+                    "format": node.get("format"),
+                    "status": node.get("status"),
+                    "relation_type": rel.get("relationType"),
+                    "title": node.get("title", {})
+                })
+        merged["relations"] = parsed_relations
+        
         def format_date(d):
             if not d or not d.get("year"): return None
             y = d.get("year")

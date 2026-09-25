@@ -52,10 +52,14 @@ const typeDefs = `
     genres: [String]
     averageScore: Int
     popularity: Int
-    tags: [String]
+    tags: [MediaTag]
     studios: [String]
     trailerUrl: String
     nextAiringEpisode: AiringSchedule
+    isAdult: Boolean
+    source: String
+    countryOfOrigin: String
+    relations: [MediaRelation]
   }
 
   type MediaTitle {
@@ -69,6 +73,21 @@ const typeDefs = `
     large: String
     medium: String
     color: String
+  }
+
+  type MediaTag {
+    name: String
+    rank: Int
+    is_spoiler: Boolean
+  }
+
+  type MediaRelation {
+    id: Int
+    type: String
+    format: String
+    status: String
+    relation_type: String
+    title: MediaTitle
   }
 
   type AiringSchedule {
@@ -177,7 +196,11 @@ const resolvers = {
            tags: a.tags,
            studios: a.studios,
            trailerUrl: a.trailer_url,
-           nextAiringEpisode: a.next_airing_episode
+           nextAiringEpisode: a.next_airing_episode,
+           isAdult: a.is_adult,
+           source: a.source,
+           countryOfOrigin: a.country_of_origin,
+           relations: a.relations
         }))
       };
     },
@@ -215,7 +238,11 @@ const resolvers = {
            tags: anime.tags,
            studios: anime.studios,
            trailerUrl: anime.trailer_url,
-           nextAiringEpisode: anime.next_airing_episode
+           nextAiringEpisode: anime.next_airing_episode,
+           isAdult: anime.is_adult,
+           source: anime.source,
+           countryOfOrigin: anime.country_of_origin,
+           relations: anime.relations
       };
     }
   }
@@ -248,18 +275,17 @@ export default {
 
     async function fetchGitHubJSON(subpath) {
       const ghResponse = await fetch(`${GITHUB_RAW_BASE}${subpath}`, {
-        headers: { 'User-Agent': 'ANIDUMP-Worker/2.0' }
+        headers: { 'User-Agent': 'ANIDUMP-Worker/3.0' }
       });
       if (!ghResponse.ok) return null;
       return await ghResponse.json();
     }
 
-    // GraphQL Route
     if (hostname === 'graphiql.anidb.my.id' || path.startsWith('/graphql')) {
       return yoga.fetch(request, { fetchData: fetchGitHubJSON });
     }
 
-    // Helper to get array from query params safely (handles ?genres=a,b and ?genres[]=a&genres[]=b)
+    // Helper to get array from query params safely
     const getArrayParam = (name) => {
       let vals = url.searchParams.getAll(name);
       if (vals.length === 0) vals = url.searchParams.getAll(name + '[]');
@@ -280,6 +306,9 @@ export default {
     const yearFilter = parseInt(url.searchParams.get('year'));
     const studioFilter = url.searchParams.get('studio');
     const fieldsFilter = url.searchParams.get('fields');
+    
+    const isAdultFilter = url.searchParams.get('isAdult') || url.searchParams.get('nsfw');
+    const sourceFilter = url.searchParams.get('source');
     
     const sortBy = url.searchParams.get('sort_by') || url.searchParams.get('order_by') || url.searchParams.get('sort');
     const sortOrder = url.searchParams.get('sort_order') || url.searchParams.get('order');
@@ -311,7 +340,7 @@ export default {
         const tagsList = tagsParam.map(t => t.toLowerCase().trim());
         filtered = filtered.filter(a => {
           if (!a.tags) return false;
-          const animeTags = a.tags.map(t => t.toLowerCase());
+          const animeTags = a.tags.map(t => typeof t === 'string' ? t.toLowerCase() : (t.name ? t.name.toLowerCase() : ''));
           return tagsList.every(t => animeTags.includes(t));
         });
       }
@@ -341,6 +370,16 @@ export default {
           if (!a.studios) return false;
           return a.studios.some(s => s.toLowerCase().includes(stu));
         });
+      }
+      
+      if (isAdultFilter !== null) {
+        const isAdult = isAdultFilter.toLowerCase() === 'true' || isAdultFilter === '1';
+        filtered = filtered.filter(a => (a.is_adult === true) === isAdult);
+      }
+      
+      if (sourceFilter) {
+        const src = sourceFilter.toUpperCase();
+        filtered = filtered.filter(a => (a.source || "").toUpperCase() === src);
       }
       
       if (sortBy) {
@@ -373,7 +412,7 @@ export default {
          
          let mapped = { 
            ...a, 
-           id: a.id || a.anilist_id, // ensure ID is mapped
+           id: a.id || a.anilist_id,
            tmdb_poster: tmdbPoster, 
            tmdb_backdrop: tmdbBackdrop, 
            logo: null 
@@ -387,7 +426,6 @@ export default {
            });
            return selected;
          } else if (isList) {
-           // Default list response
            return {
              id: mapped.id,
              title: a.title,
@@ -412,8 +450,18 @@ export default {
       };
     }
 
-    function jsonResponse(data, status = 200) {
-      return new Response(JSON.stringify(data), {
+    function jsonResponse(data, status = 200, message = "Success") {
+      // Improved response envelope for professional look on specific endpoints
+      const isEnvelope = url.searchParams.get('envelope') === 'true';
+      let payload = data;
+      if (isEnvelope || (status >= 400)) {
+         payload = {
+           success: status < 400,
+           message: status >= 400 ? (data.error || "Error") : message,
+           data: status < 400 ? data : null
+         };
+      }
+      return new Response(JSON.stringify(payload), {
         status,
         headers: { 'Content-Type': 'application/json', ...corsHeaders }
       });
@@ -426,12 +474,40 @@ export default {
         return jsonResponse(processItems(items, true));
       }
 
+      // Random anime endpoint
+      if (path === '/anime/random' || path === '/api/anime/random') {
+        let items = await fetchGitHubJSON('/raw.json');
+        if (!items || items.length === 0) return jsonResponse({error: 'Data not found'}, 404);
+        
+        let filtered = items;
+        // Optionally allow filtering for random
+        if (isAdultFilter !== null) {
+          const isAdult = isAdultFilter.toLowerCase() === 'true' || isAdultFilter === '1';
+          filtered = filtered.filter(a => (a.is_adult === true) === isAdult);
+        } else {
+          // Default to SFW for random
+          filtered = filtered.filter(a => a.is_adult !== true);
+        }
+        if (genres) {
+           const genresList = genres.map(g => g.toLowerCase().trim());
+           filtered = filtered.filter(a => {
+             if (!a.genres) return false;
+             const animeGenres = a.genres.map(g => g.toLowerCase());
+             return genresList.every(g => animeGenres.includes(g));
+           });
+        }
+        
+        if (filtered.length === 0) return jsonResponse({error: "No anime matched criteria"}, 404);
+        const randomItem = filtered[Math.floor(Math.random() * filtered.length)];
+        return jsonResponse(processItems([randomItem], false));
+      }
+
       // Handle both /api/anime/:id and /api/anime/:id/info
       const matchId = path.match(/^\/(?:api\/)?anime\/(\d+)(?:\/(info|details))?$/);
       if (matchId) {
         const id = matchId[1];
         const items = await fetchGitHubJSON('/raw.json');
-        const anime = items.filter(a => a.id == id || a.anilist_id == id); // Use == for loose string matching just in case
+        const anime = items.filter(a => a.id == id || a.anilist_id == id);
         if (anime.length > 0) return jsonResponse(processItems(anime, false));
         return jsonResponse({error: "Anime not found"}, 404);
       }
@@ -451,7 +527,6 @@ export default {
         return jsonResponse({error: "Anime not found"}, 404);
       }
 
-      // Metadata endpoints
       if (['/genres', '/tags', '/studios', '/seasons'].includes(path) || path.startsWith('/api/')) {
          let sub = path.replace('/api/', '/');
          const items = await fetchGitHubJSON('/raw.json');
@@ -459,7 +534,12 @@ export default {
          const set = new Set();
          items.forEach(a => {
             if (sub === '/genres') (a.genres || []).forEach(g => set.add(g));
-            if (sub === '/tags') (a.tags || []).forEach(t => set.add(t));
+            if (sub === '/tags') {
+              (a.tags || []).forEach(t => {
+                if (typeof t === 'string') set.add(t);
+                else if (t.name) set.add(t.name);
+              });
+            }
             if (sub === '/studios') {
               if (a.studios) a.studios.forEach(s => set.add(s));
             }
@@ -471,7 +551,7 @@ export default {
       return jsonResponse({
         error: "Endpoint not found", 
         endpoints: [
-          "/api/anime", "/api/anime/:id", "/api/anime/:id/info",
+          "/api/anime", "/api/anime/random", "/api/anime/:id", "/api/anime/:id/info",
           "/api/anime/mal/:id", "/api/anime/tvdb/:id", "/api/anime/imdb/:id", "/api/anime/tmdb/:id",
           "/api/genres", "/api/tags", "/api/studios", "/api/seasons",
           "/graphql"
