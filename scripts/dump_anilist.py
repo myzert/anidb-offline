@@ -155,19 +155,61 @@ def generate_indexes(base_dir):
     except Exception as e:
         logging.error(f"Failed to fetch mapping: {e}")
 
+
+    tmdb_api_key = os.environ.get("TMDB_API_KEY", "")
+    
+    # Simple TMDB cache to prevent duplicate requests if the same TMDB ID is shared
+    tmdb_cache = {}
+    def get_tmdb_images(tmdb_id):
+        if not tmdb_api_key or not tmdb_id:
+            return None, None, None
+        if str(tmdb_id) in tmdb_cache:
+            return tmdb_cache[str(tmdb_id)]
+        try:
+            url = f"https://api.themoviedb.org/3/tv/{tmdb_id}?api_key={tmdb_api_key}&append_to_response=images"
+            req = requests.get(url, timeout=5)
+            if req.status_code == 404:
+                url = f"https://api.themoviedb.org/3/movie/{tmdb_id}?api_key={tmdb_api_key}&append_to_response=images"
+                req = requests.get(url, timeout=5)
+            if req.status_code == 200:
+                data = req.json()
+                poster = data.get("poster_path")
+                backdrop = data.get("backdrop_path")
+                logos = data.get("images", {}).get("logos", [])
+                logo = None
+                if logos:
+                    en_logos = [l for l in logos if l.get("iso_639_1") == "en"]
+                    logo = en_logos[0].get("file_path") if en_logos else logos[0].get("file_path")
+                tmdb_cache[str(tmdb_id)] = (poster, backdrop, logo)
+                time.sleep(0.05) # Prevent aggressive rate limiting
+                return poster, backdrop, logo
+        except Exception as e:
+            pass
+        return None, None, None
+        
     formatted_anime_list = []
     
     for aid, anime in all_anime.items():
         aid_int = int(aid)
+
         
         merged = {}
         merged["id"] = aid_int
         merged["idMal"] = anime.get("idMal")
         
+
         m_item = mapping_data.get(str(aid_int), {})
-        merged["tmdb_id"] = m_item.get("themoviedb")
+        tmdb_id = m_item.get("themoviedb")
+        merged["tmdb_id"] = tmdb_id
         merged["tvdb_id"] = m_item.get("thetvdb")
         merged["imdb_id"] = m_item.get("imdb")
+        
+        # Fetch TMDB metadata dynamically if key is available
+        poster_path, backdrop_path, logo_path = get_tmdb_images(tmdb_id)
+        merged["tmdb_poster_path"] = poster_path
+        merged["tmdb_backdrop_path"] = backdrop_path
+        merged["tmdb_logo_path"] = logo_path
+
         
         merged["title"] = anime.get("title", {})
         merged["synonyms"] = anime.get("synonyms", [])

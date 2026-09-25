@@ -154,7 +154,7 @@ const resolvers = {
                });
              }
            }
-           let logoUrl = a.tmdb_id ? `https://tmdb.consumet.org/logo/${a.tmdb_id}` : null;
+           let logoUrl = a.tmdb_logo_path ? `https://image.tmdb.org/t/p/original${a.tmdb_logo_path}` : (a.cover_image ? a.cover_image.extra_large : null);
 
            return {
              id: a.id || a.anilist_id,
@@ -212,7 +212,7 @@ const resolvers = {
           });
         }
       }
-      let logoUrl = anime.tmdb_id ? `https://tmdb.consumet.org/logo/${anime.tmdb_id}` : null;
+      let logoUrl = anime.tmdb_logo_path ? `https://image.tmdb.org/t/p/original${anime.tmdb_logo_path}` : (anime.cover_image ? anime.cover_image.extra_large : null);
 
       return {
            id: anime.id || anime.anilist_id,
@@ -429,7 +429,7 @@ export default {
          }
 
          // Unofficial TMDB Logo placeholder (or other unofficial provider format)
-         let logoUrl = a.tmdb_id ? `https://tmdb.consumet.org/logo/${a.tmdb_id}` : (a.cover_image ? a.cover_image.extra_large : null);
+         let logoUrl = a.tmdb_logo_path ? `https://image.tmdb.org/t/p/original${a.tmdb_logo_path}` : (a.cover_image ? a.cover_image.extra_large : null);
          
          let mapped = { 
            ...a, 
