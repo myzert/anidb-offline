@@ -4,17 +4,7 @@ const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/myzert/anidb-offline/
 
 const typeDefs = `
   type Query {
-    animeList(
-      page: Int, 
-      perPage: Int, 
-      search: String, 
-      genres: [String], 
-      status: String, 
-      season: String, 
-      seasonYear: Int, 
-      format: String, 
-      sort: [String]
-    ): Page
+    animeList(page: Int, perPage: Int, search: String, genres: [String], status: String, season: String, seasonYear: Int, format: String, sort: [String]): Page
     anime(id: Int!): Media
   }
 
@@ -60,6 +50,8 @@ const typeDefs = `
     source: String
     countryOfOrigin: String
     relations: [MediaRelation]
+    episode_list: [Episode]
+    logo: String
   }
 
   type MediaTitle {
@@ -95,6 +87,12 @@ const typeDefs = `
     timeUntilAiring: Int
     episode: Int
   }
+
+  type Episode {
+    episode: Int
+    title: String
+    image: String
+  }
 `;
 
 const resolvers = {
@@ -103,7 +101,6 @@ const resolvers = {
       let items = await context.fetchData('/raw.json');
       if (!items) return null;
 
-      // Filter
       if (args.search) {
         const q = args.search.toLowerCase();
         items = items.filter(a => {
@@ -124,31 +121,16 @@ const resolvers = {
         });
       }
       
-      if (args.status) {
-        const st = args.status.toUpperCase();
-        items = items.filter(a => (a.status || "").toUpperCase() === st);
-      }
-      if (args.season) {
-        const sea = args.season.toUpperCase();
-        items = items.filter(a => (a.season || "").toUpperCase() === sea);
-      }
+      if (args.status) items = items.filter(a => (a.status || "").toUpperCase() === args.status.toUpperCase());
+      if (args.season) items = items.filter(a => (a.season || "").toUpperCase() === args.season.toUpperCase());
       if (args.seasonYear) items = items.filter(a => a.season_year === args.seasonYear);
       if (args.format) items = items.filter(a => (a.format || "").toUpperCase() === args.format.toUpperCase());
 
-      // Sort
       if (args.sort && args.sort.length > 0) {
         const s = args.sort[0].toLowerCase();
-        if (s.includes('score')) {
-          items.sort((a, b) => (b.average_score || 0) - (a.average_score || 0));
-        } else if (s.includes('popularity')) {
-          items.sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
-        } else if (s.includes('new')) {
-          items.sort((a, b) => {
-            const dateA = a.start_date ? new Date(a.start_date).getTime() : 0;
-            const dateB = b.start_date ? new Date(b.start_date).getTime() : 0;
-            return dateB - dateA;
-          });
-        }
+        if (s.includes('score')) items.sort((a, b) => (b.average_score || 0) - (a.average_score || 0));
+        else if (s.includes('popularity')) items.sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
+        else if (s.includes('new')) items.sort((a, b) => (b.start_date ? new Date(b.start_date).getTime() : 0) - (a.start_date ? new Date(a.start_date).getTime() : 0));
       }
 
       const total = items.length;
@@ -160,48 +142,58 @@ const resolvers = {
       const paginated = items.slice(offset, offset + perPage);
 
       return {
-        pageInfo: {
-          total,
-          perPage,
-          currentPage,
-          lastPage,
-          hasNextPage
-        },
-        media: paginated.map(a => ({
-           id: a.id || a.anilist_id,
-           idMal: a.idMal,
-           tmdb_id: a.tmdb_id,
-           tvdb_id: a.tvdb_id,
-           imdb_id: a.imdb_id,
-           title: a.title,
-           format: a.format,
-           status: a.status,
-           description: a.description,
-           startDate: a.start_date,
-           endDate: a.end_date,
-           season: a.season,
-           seasonYear: a.season_year,
-           episodes: a.episodes,
-           duration: a.duration,
-           coverImage: {
-             extraLarge: a.cover_image?.extra_large,
-             large: a.cover_image?.large,
-             medium: a.cover_image?.medium,
-             color: a.cover_image?.color
-           },
-           bannerImage: a.banner_image,
-           genres: a.genres,
-           averageScore: a.average_score,
-           popularity: a.popularity,
-           tags: a.tags,
-           studios: a.studios,
-           trailerUrl: a.trailer_url,
-           nextAiringEpisode: a.next_airing_episode,
-           isAdult: a.is_adult,
-           source: a.source,
-           countryOfOrigin: a.country_of_origin,
-           relations: a.relations
-        }))
+        pageInfo: { total, perPage, currentPage, lastPage, hasNextPage },
+        media: paginated.map(a => {
+           let epList = [];
+           if (a.episodes > 0) {
+             for (let i = 1; i <= a.episodes; i++) {
+               epList.push({
+                 episode: i,
+                 title: `Episode ${i}`,
+                 image: a.banner_image || (a.cover_image ? a.cover_image.extra_large : null)
+               });
+             }
+           }
+           let logoUrl = a.tmdb_id ? `https://tmdb.consumet.org/logo/${a.tmdb_id}` : null;
+
+           return {
+             id: a.id || a.anilist_id,
+             idMal: a.idMal,
+             tmdb_id: a.tmdb_id,
+             tvdb_id: a.tvdb_id,
+             imdb_id: a.imdb_id,
+             title: a.title,
+             format: a.format,
+             status: a.status,
+             description: a.description,
+             startDate: a.start_date,
+             endDate: a.end_date,
+             season: a.season,
+             seasonYear: a.season_year,
+             episodes: a.episodes,
+             duration: a.duration,
+             coverImage: {
+               extraLarge: a.cover_image?.extra_large,
+               large: a.cover_image?.large,
+               medium: a.cover_image?.medium,
+               color: a.cover_image?.color
+             },
+             bannerImage: a.banner_image,
+             genres: a.genres,
+             averageScore: a.average_score,
+             popularity: a.popularity,
+             tags: a.tags,
+             studios: a.studios,
+             trailerUrl: a.trailer_url,
+             nextAiringEpisode: a.next_airing_episode,
+             isAdult: a.is_adult,
+             source: a.source,
+             countryOfOrigin: a.country_of_origin,
+             relations: a.relations,
+             episode_list: epList,
+             logo: logoUrl
+           }
+        })
       };
     },
     anime: async (_, args, context) => {
@@ -209,6 +201,19 @@ const resolvers = {
       if (!items) return null;
       const anime = items.find(a => a.id == args.id || a.anilist_id == args.id);
       if (!anime) return null;
+      
+      let epList = [];
+      if (anime.episodes > 0) {
+        for (let i = 1; i <= anime.episodes; i++) {
+          epList.push({
+            episode: i,
+            title: `Episode ${i}`,
+            image: anime.banner_image || (anime.cover_image ? anime.cover_image.extra_large : null)
+          });
+        }
+      }
+      let logoUrl = anime.tmdb_id ? `https://tmdb.consumet.org/logo/${anime.tmdb_id}` : null;
+
       return {
            id: anime.id || anime.anilist_id,
            idMal: anime.idMal,
@@ -242,7 +247,9 @@ const resolvers = {
            isAdult: anime.is_adult,
            source: anime.source,
            countryOfOrigin: anime.country_of_origin,
-           relations: anime.relations
+           relations: anime.relations,
+           episode_list: epList,
+           logo: logoUrl
       };
     }
   }
@@ -275,7 +282,7 @@ export default {
 
     async function fetchGitHubJSON(subpath) {
       const ghResponse = await fetch(`${GITHUB_RAW_BASE}${subpath}`, {
-        headers: { 'User-Agent': 'ANIDUMP-Worker/3.0' }
+        headers: { 'User-Agent': 'ANIDUMP-Worker/3.1' }
       });
       if (!ghResponse.ok) return null;
       return await ghResponse.json();
@@ -285,7 +292,6 @@ export default {
       return yoga.fetch(request, { fetchData: fetchGitHubJSON });
     }
 
-    // Helper to get array from query params safely
     const getArrayParam = (name) => {
       let vals = url.searchParams.getAll(name);
       if (vals.length === 0) vals = url.searchParams.getAll(name + '[]');
@@ -410,12 +416,28 @@ export default {
          let tmdbPoster = a.tmdb_id ? (a.tmdb_poster_path ? `https://image.tmdb.org/t/p/original${a.tmdb_poster_path}` : (a.cover_image ? a.cover_image.extra_large : null)) : null;
          let tmdbBackdrop = a.tmdb_id ? (a.tmdb_backdrop_path ? `https://image.tmdb.org/t/p/original${a.tmdb_backdrop_path}` : a.banner_image) : null;
          
+         // Generates fake episode list with cover images
+         let epList = [];
+         if (a.episodes > 0) {
+           for (let i = 1; i <= a.episodes; i++) {
+             epList.push({
+               episode: i,
+               title: `Episode ${i}`,
+               image: a.banner_image || (a.cover_image ? a.cover_image.extra_large : null)
+             });
+           }
+         }
+
+         // Unofficial TMDB Logo placeholder (or other unofficial provider format)
+         let logoUrl = a.tmdb_id ? `https://tmdb.consumet.org/logo/${a.tmdb_id}` : (a.cover_image ? a.cover_image.extra_large : null);
+         
          let mapped = { 
            ...a, 
            id: a.id || a.anilist_id,
            tmdb_poster: tmdbPoster, 
            tmdb_backdrop: tmdbBackdrop, 
-           logo: null 
+           episode_list: epList,
+           logo: logoUrl 
          };
          
          if (fieldsFilter) {
@@ -451,7 +473,6 @@ export default {
     }
 
     function jsonResponse(data, status = 200, message = "Success") {
-      // Improved response envelope for professional look on specific endpoints
       const isEnvelope = url.searchParams.get('envelope') === 'true';
       let payload = data;
       if (isEnvelope || (status >= 400)) {
@@ -474,18 +495,15 @@ export default {
         return jsonResponse(processItems(items, true));
       }
 
-      // Random anime endpoint
       if (path === '/anime/random' || path === '/api/anime/random') {
         let items = await fetchGitHubJSON('/raw.json');
         if (!items || items.length === 0) return jsonResponse({error: 'Data not found'}, 404);
         
         let filtered = items;
-        // Optionally allow filtering for random
         if (isAdultFilter !== null) {
           const isAdult = isAdultFilter.toLowerCase() === 'true' || isAdultFilter === '1';
           filtered = filtered.filter(a => (a.is_adult === true) === isAdult);
         } else {
-          // Default to SFW for random
           filtered = filtered.filter(a => a.is_adult !== true);
         }
         if (genres) {
@@ -502,7 +520,6 @@ export default {
         return jsonResponse(processItems([randomItem], false));
       }
 
-      // Handle both /api/anime/:id and /api/anime/:id/info
       const matchId = path.match(/^\/(?:api\/)?anime\/(\d+)(?:\/(info|details))?$/);
       if (matchId) {
         const id = matchId[1];
