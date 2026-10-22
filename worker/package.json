@@ -1,6 +1,7 @@
 {
   "name": "anidb-worker",
   "version": "1.0.0",
+  "type": "module",
   "description": "Cloudflare worker for ANIDUMP API",
   "main": "src/index.js",
   "scripts": {

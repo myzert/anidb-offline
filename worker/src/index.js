@@ -24,18 +24,11 @@ const typeDefs = `
   type Media {
     id: Int
     anilist_id: Int
-    reanime_id: String
-    reanime_short_id: String
-    reanime_slug_id: String
-    anilist_slug_id: String
     idMal: Int
     mal_id: Int
     tmdb_id: Int
     tvdb_id: Int
     imdb_id: Int
-    kitsu_id: Int
-    anidb_id: Int
-    anime_planet_id: String
     title: MediaTitle
     format: String
     status: String
@@ -47,7 +40,6 @@ const typeDefs = `
     episodes: Int
     duration: String
     coverImage: MediaCoverImage
-    thumbnail_url: String
     cover_image_url: String
     theme_color: String
     bannerImage: String
@@ -63,10 +55,7 @@ const typeDefs = `
     countryOfOrigin: String
     relations: [MediaRelation]
     episode_list: [Episode]
-    subbed_episodes: Int
-    dubbed_episodes: Int
     total_episodes: Int
-    age_rating: String
     logo: String
   }
 
@@ -116,8 +105,6 @@ const resolvers = {
     animeList: async (_, args, context) => {
       let items = await context.fetchData('/raw.json');
       if (!items) return null;
-      const reanimeSnapshot = await context.fetchData('/reanime.json');
-      const reanimeIndex = reanimeSnapshot?.data || {};
 
       if (args.search) {
         const q = args.search.toLowerCase();
@@ -177,27 +164,16 @@ const resolvers = {
            return {
              id: a.id || a.anilist_id,
              anilist_id: a.id || a.anilist_id,
-             reanime_id: reanimeIndex[String(a.id || a.anilist_id)]?.reanime_id || null,
-             reanime_short_id: reanimeIndex[String(a.id || a.anilist_id)]?.reanime_id || null,
-             reanime_slug_id: reanimeIndex[String(a.id || a.anilist_id)]?.reanime_slug_id || null,
-             anilist_slug_id: reanimeIndex[String(a.id || a.anilist_id)]?.anilist_slug_id || null,
              idMal: a.idMal,
-             mal_id: a.idMal || reanimeIndex[String(a.id || a.anilist_id)]?.mal_id || null,
+             mal_id: a.idMal || null,
              tmdb_id: a.tmdb_id,
              tvdb_id: a.tvdb_id,
              imdb_id: a.imdb_id,
-             kitsu_id: reanimeIndex[String(a.id || a.anilist_id)]?.kitsu_id || null,
-             anidb_id: reanimeIndex[String(a.id || a.anilist_id)]?.anidb_id || null,
-             anime_planet_id: reanimeIndex[String(a.id || a.anilist_id)]?.anime_planet_id || null,
-             thumbnail_url: reanimeIndex[String(a.id || a.anilist_id)]?.thumbnail_url || a.cover_image?.extra_large || null,
              cover_image_url: a.cover_image?.extra_large || null,
              theme_color: a.cover_image?.color || null,
              title_english: a.title?.english || '',
              title_romaji: a.title?.romaji || '',
-             subbed_episodes: reanimeIndex[String(a.id || a.anilist_id)]?.subbed_episodes || 0,
-             dubbed_episodes: reanimeIndex[String(a.id || a.anilist_id)]?.dubbed_episodes || 0,
              total_episodes: a.episodes || 0,
-             age_rating: reanimeIndex[String(a.id || a.anilist_id)]?.age_rating || null,
              title: a.title,
              format: a.format,
              status: a.status,
@@ -237,8 +213,6 @@ const resolvers = {
       if (!items) return null;
       const anime = items.find(a => a.id == args.id || a.anilist_id == args.id);
       if (!anime) return null;
-      const reanimeSnapshot = await context.fetchData('/reanime.json');
-      const reanimeIndex = reanimeSnapshot?.data || {};
       
       let epList = [];
       if (anime.episodes > 0) {
@@ -255,27 +229,16 @@ const resolvers = {
       return {
            id: anime.id || anime.anilist_id,
            anilist_id: anime.id || anime.anilist_id,
-           reanime_id: reanimeIndex[String(anime.id || anime.anilist_id)]?.reanime_id || null,
-           reanime_short_id: reanimeIndex[String(anime.id || anime.anilist_id)]?.reanime_id || null,
-           reanime_slug_id: reanimeIndex[String(anime.id || anime.anilist_id)]?.reanime_slug_id || null,
-           anilist_slug_id: reanimeIndex[String(anime.id || anime.anilist_id)]?.anilist_slug_id || null,
            idMal: anime.idMal,
-           mal_id: anime.idMal || reanimeIndex[String(anime.id || anime.anilist_id)]?.mal_id || null,
+           mal_id: anime.idMal || null,
            tmdb_id: anime.tmdb_id,
            tvdb_id: anime.tvdb_id,
            imdb_id: anime.imdb_id,
-           kitsu_id: reanimeIndex[String(anime.id || anime.anilist_id)]?.kitsu_id || null,
-           anidb_id: reanimeIndex[String(anime.id || anime.anilist_id)]?.anidb_id || null,
-           anime_planet_id: reanimeIndex[String(anime.id || anime.anilist_id)]?.anime_planet_id || null,
-           thumbnail_url: reanimeIndex[String(anime.id || anime.anilist_id)]?.thumbnail_url || anime.cover_image?.extra_large || null,
            cover_image_url: anime.cover_image?.extra_large || null,
            theme_color: anime.cover_image?.color || null,
            title_english: anime.title?.english || '',
            title_romaji: anime.title?.romaji || '',
-           subbed_episodes: reanimeIndex[String(anime.id || anime.anilist_id)]?.subbed_episodes || 0,
-           dubbed_episodes: reanimeIndex[String(anime.id || anime.anilist_id)]?.dubbed_episodes || 0,
            total_episodes: anime.episodes || 0,
-           age_rating: reanimeIndex[String(anime.id || anime.anilist_id)]?.age_rating || null,
            title: anime.title,
            format: anime.format,
            status: anime.status,
@@ -348,18 +311,6 @@ export default {
       return await ghResponse.json();
     }
 
-    let reanimeIndexPromise;
-    async function getReanimeIndex() {
-      reanimeIndexPromise ??= fetchGitHubJSON('/reanime.json').then(snapshot => {
-        if (!snapshot) return {};
-        if (!snapshot.data || typeof snapshot.data !== 'object' || Array.isArray(snapshot.data)) {
-          throw new Error('Invalid ReAnime index data');
-        }
-        return snapshot.data;
-      });
-      return reanimeIndexPromise;
-    }
-
     if (hostname === 'graphiql.anidb.my.id' || path.startsWith('/graphql')) {
       return yoga.fetch(request, { fetchData: fetchGitHubJSON });
     }
@@ -423,8 +374,7 @@ export default {
     const isAdultFilter = url.searchParams.get('isAdult') ?? url.searchParams.get('nsfw');
     const sourceFilter = url.searchParams.get('source');
     const anilistFilter = url.searchParams.get('anilist_id');
-    const reanimeFilter = url.searchParams.get('reanime_id') || url.searchParams.get('reanime_short_id');
-    const externalIdFilters = ['mal_id', 'kitsu_id', 'tmdb_id', 'imdb_id', 'reanime_short_id', 'reanime_slug_id', 'anilist_slug_id']
+    const externalIdFilters = ['mal_id', 'tmdb_id', 'imdb_id', 'tvdb_id']
       .map(name => [name, url.searchParams.get(name)])
       .filter(([, value]) => value !== null);
     const sortBy = url.searchParams.get('sort_by') || url.searchParams.get('order_by') || url.searchParams.get('sort');
@@ -444,17 +394,13 @@ export default {
       season_year: 'season_year',
       average_score: 'average_score',
       start_date: 'start_date',
-      reanime_id: 'reanime_id',
-      reanime_short_id: 'reanime_short_id',
       mal_id: 'mal_id',
       status: 'status',
       format: 'format',
-      kitsu_id: 'kitsu_id',
       total_episodes: 'total_episodes',
       tmdb_id: 'tmdb_id',
       imdb_id: 'imdb_id',
-      tvdb_id: 'tvdb_id',
-      anidb_id: 'anidb_id'
+      tvdb_id: 'tvdb_id'
     };
     const invalidSort = sortFields.some(field => {
       const name = field.startsWith('-') ? field.slice(1) : field;
@@ -470,69 +416,7 @@ export default {
     const invalidAdultFilter = isAdultFilter !== null &&
       !['true', 'false', '1', '0'].includes(isAdultFilter.toLowerCase());
 
-    function getReanimeEntry(anime, index) {
-      const animeId = String(anime.id ?? anime.anilist_id ?? '');
-      return index[animeId] || null;
-    }
-
-    function matchesReanimeIdentifier(entry, identifier) {
-      if (!entry) return false;
-      return [
-        entry.reanime_id,
-        entry.reanime_short_id,
-        entry.reanime_slug_id,
-      ].includes(identifier) ||
-        entry.reanime_slug_id?.endsWith(`-${identifier}`) === true;
-    }
-
-    function findReanimeEntry(identifier, index, source) {
-      if (source === 'anilist' || (!source && /^\d+$/.test(identifier))) {
-        return index[identifier] || Object.values(index).find(entry =>
-          String(entry.anilist_id ?? '') === identifier
-        ) || null;
-      }
-      return Object.values(index).find(entry =>
-        source === 'short'
-          ? (entry.reanime_id === identifier || entry.reanime_short_id === identifier)
-          : matchesReanimeIdentifier(entry, identifier)
-      ) || null;
-    }
-
-    function createEpisodePage(anime, entry, offset, limit) {
-      const storedEpisodes = Array.isArray(entry?.episodes) ? entry.episodes : [];
-      const thumbnails = entry?.thumbnails && typeof entry.thumbnails === 'object'
-        ? entry.thumbnails
-        : {};
-      const count = Math.max(
-        storedEpisodes.length,
-        Number(entry?.episode_count) || 0,
-        Number(anime?.episodes) || 0
-      );
-      const end = Math.min(count, offset + limit);
-      const episodes = [];
-
-      for (let number = offset + 1; number <= end; number += 1) {
-        const stored = storedEpisodes.find(episode =>
-          Number(episode?.episode) === number
-        ) || storedEpisodes[number - 1];
-        episodes.push(stored
-          ? {
-              ...stored,
-              thumbnail: stored.thumbnail || thumbnails[String(number)] || null
-            }
-          : {
-              episode: number,
-              title: `Episode ${number}`,
-              aired: null,
-              duration: anime?.duration ?? null,
-              thumbnail: thumbnails[String(number)] || anime?.cover_image?.extra_large || null
-            });
-      }
-
-      return { count, episodes };
-    }
-
-    function processItems(items, isList = true, reanimeIndex = {}) {
+    function processItems(items, isList = true) {
       let filtered = items;
       
       if (search) {
@@ -626,22 +510,12 @@ export default {
         filtered = filtered.filter(a => String(a.id ?? a.anilist_id) === anilistFilter);
       }
 
-      if (reanimeFilter) {
-        filtered = filtered.filter(a => {
-          const entry = getReanimeEntry(a, reanimeIndex);
-          return matchesReanimeIdentifier(entry, reanimeFilter);
-        });
-      }
-
       for (const [field, value] of externalIdFilters) {
         filtered = filtered.filter(a => {
-          const entry = getReanimeEntry(a, reanimeIndex);
-          if (field === 'reanime_slug_id') return entry?.reanime_slug_id === value;
-          if (field === 'anilist_slug_id') return entry?.anilist_slug_id === value;
-          if (field === 'mal_id') return String(a.idMal ?? entry?.mal_id ?? '') === value;
-          if (field === 'kitsu_id') return String(entry?.kitsu_id ?? '') === value;
-          if (field === 'tmdb_id') return String(a.tmdb_id ?? entry?.tmdb_id ?? '') === value;
-          if (field === 'imdb_id') return String(a.imdb_id ?? entry?.imdb_id ?? '') === value;
+          if (field === 'mal_id') return String(a.idMal ?? '') === value;
+          if (field === 'tmdb_id') return String(a.tmdb_id ?? '') === value;
+          if (field === 'imdb_id') return String(a.imdb_id ?? '') === value;
+          if (field === 'tvdb_id') return String(a.tvdb_id ?? '') === value;
           return false;
         });
       }
@@ -657,13 +531,10 @@ export default {
               if (key === 'title') {
                 return anime.title?.english || anime.title?.romaji || anime.title?.native || '';
               }
-              if (key === 'reanime_id' || key === 'reanime_short_id') {
-                return getReanimeEntry(anime, reanimeIndex)?.reanime_id || '';
-              }
               if (key === 'total_episodes') return anime.episodes ?? 0;
               if (key === 'mal_id') return anime.idMal ?? 0;
-              if (['kitsu_id', 'tmdb_id', 'imdb_id', 'tvdb_id', 'anidb_id'].includes(key)) {
-                return anime[key] ?? getReanimeEntry(anime, reanimeIndex)?.[key] ?? 0;
+              if (['tmdb_id', 'imdb_id', 'tvdb_id'].includes(key)) {
+                return anime[key] ?? 0;
               }
               const value = anime[key];
               return key === 'start_date' && value ? Date.parse(value) : value;
@@ -685,12 +556,17 @@ export default {
          let tmdbBackdrop = a.tmdb_backdrop_path ? `https://image.tmdb.org/t/p/original${a.tmdb_backdrop_path}` : a.banner_image;
          
          const anilistId = a.id ?? a.anilist_id;
-         const reanimeEntry = getReanimeEntry(a, reanimeIndex);
-         const title = reanimeEntry?.title || a.title || {};
-         const coverImage = reanimeEntry?.cover_image || a.cover_image || {};
-         let epList = Array.isArray(reanimeEntry?.episodes) ? reanimeEntry.episodes : [];
-         if (epList.length === 0 && !isList) {
-           epList = createEpisodePage(a, reanimeEntry, 0, 2000).episodes;
+         const title = a.title || {};
+         const coverImage = a.cover_image || {};
+         let epList = [];
+         if (!isList && a.episodes > 0) {
+           for (let i = 1; i <= a.episodes; i++) {
+             epList.push({
+               episode: i,
+               title: `Episode ${i}`,
+               image: a.banner_image || (a.cover_image ? a.cover_image.extra_large : null)
+             });
+           }
          }
 
          let logoUrl = a.tmdb_logo_path ? `https://image.tmdb.org/t/p/original${a.tmdb_logo_path}` : (a.cover_image ? a.cover_image.extra_large : null);
@@ -699,33 +575,21 @@ export default {
            ...a, 
            id: anilistId,
            anilist_id: anilistId,
-           reanime_id: reanimeEntry?.reanime_id || null,
-           reanime_short_id: reanimeEntry?.reanime_id || null,
-           reanime_slug_id: reanimeEntry?.reanime_slug_id || null,
-           anilist_slug_id: reanimeEntry?.anilist_slug_id || null,
-           mal_id: a.idMal ?? reanimeEntry?.mal_id ?? null,
-           kitsu_id: reanimeEntry?.kitsu_id ?? null,
-           anidb_id: reanimeEntry?.anidb_id ?? null,
-           anime_planet_id: reanimeEntry?.anime_planet_id ?? null,
-           tmdb_id: a.tmdb_id ?? reanimeEntry?.tmdb_id ?? null,
-           imdb_id: a.imdb_id ?? reanimeEntry?.imdb_id ?? null,
-           tvdb_id: a.tvdb_id ?? reanimeEntry?.tvdb_id ?? null,
+           mal_id: a.idMal ?? null,
+           tmdb_id: a.tmdb_id ?? null,
+           imdb_id: a.imdb_id ?? null,
+           tvdb_id: a.tvdb_id ?? null,
            title,
-           title_english: reanimeEntry?.title_english || title.english || '',
-           title_romaji: reanimeEntry?.title_romaji || title.romaji || '',
-           genres: reanimeEntry?.genres || a.genres || [],
-           thumbnail_url: reanimeEntry?.thumbnail_url || a.cover_image?.extra_large || null,
-           cover_image_url: reanimeEntry?.cover_image_url || a.cover_image?.extra_large || null,
-           theme_color: reanimeEntry?.theme_color || a.cover_image?.color || null,
-           subbed_episodes: reanimeEntry?.subbed_episodes ?? 0,
-           dubbed_episodes: reanimeEntry?.dubbed_episodes ?? 0,
-           total_episodes: reanimeEntry?.episode_count ?? a.episodes ?? 0,
-           age_rating: reanimeEntry?.age_rating ?? null,
+           title_english: title.english || '',
+           title_romaji: title.romaji || '',
+           genres: a.genres || [],
+           cover_image: coverImage,
+           cover_image_url: a.cover_image?.extra_large || null,
+           theme_color: a.cover_image?.color || null,
+           total_episodes: a.episodes ?? 0,
            tmdb_poster: tmdbPoster, 
            tmdb_backdrop: tmdbBackdrop, 
            episode_list: epList,
-           episode_count: reanimeEntry?.episode_count ?? a.episodes ?? 0,
-           thumbnails: reanimeEntry?.thumbnails || {},
            logo: logoUrl 
          };
          
@@ -740,14 +604,7 @@ export default {
            return {
              id: mapped.id,
              anilist_id: mapped.anilist_id,
-             reanime_id: mapped.reanime_id,
-             reanime_short_id: mapped.reanime_short_id,
-             reanime_slug_id: mapped.reanime_slug_id,
-             anilist_slug_id: mapped.anilist_slug_id,
              mal_id: mapped.mal_id,
-             kitsu_id: mapped.kitsu_id,
-             anidb_id: mapped.anidb_id,
-             anime_planet_id: mapped.anime_planet_id,
              tmdb_id: mapped.tmdb_id,
              tvdb_id: mapped.tvdb_id,
              imdb_id: mapped.imdb_id,
@@ -758,17 +615,13 @@ export default {
              description: a.description,
              synonyms: a.synonyms,
              cover_image: coverImage,
-             thumbnail_url: mapped.thumbnail_url,
              cover_image_url: mapped.cover_image_url,
              theme_color: mapped.theme_color,
              banner_image: a.banner_image,
              tmdb_poster: tmdbPoster,
              tmdb_backdrop: tmdbBackdrop,
              logo: mapped.logo,
-             subbed_episodes: mapped.subbed_episodes,
-             dubbed_episodes: mapped.dubbed_episodes,
              total_episodes: mapped.total_episodes,
-             age_rating: mapped.age_rating,
              episodes: a.episodes,
              duration: a.duration,
              season: a.season,
@@ -837,7 +690,6 @@ export default {
       if (path === '/' || path === '/api' || path === '/api/home') {
         let items = await fetchGitHubJSON('/raw.json');
         if (!items) return jsonResponse({error: 'Data not found'}, 404);
-        const reanimeIndex = await getReanimeIndex();
 
         const mapFieldsBasic = (a) => {
            let tmdbPoster = a.tmdb_poster_path ? `https://image.tmdb.org/t/p/original${a.tmdb_poster_path}` : (a.cover_image ? a.cover_image.extra_large : null);
@@ -846,8 +698,6 @@ export default {
            return {
              id: a.id || a.anilist_id,
              anilist_id: a.id || a.anilist_id,
-             reanime_id: reanimeIndex[String(a.id || a.anilist_id)]?.reanime_id || null,
-             reanime_short_id: reanimeIndex[String(a.id || a.anilist_id)]?.reanime_id || null,
              title: a.title,
              cover_image: a.cover_image,
              poster: tmdbPoster,
@@ -880,7 +730,7 @@ export default {
             "episodes", "duration", "genres", "tags (with spoiler flag)", "studios", "score",
             "popularity", "is_adult", "country_of_origin", "source",
             "trailer", "airing_schedule", "relations (prequel/sequel)", "images (cover, banner, tmdb_poster, tmdb_backdrop, logo)",
-            "AniList and ReAnime IDs", "episode metadata and thumbnails"
+            "AniList IDs", "episode_list (auto-generated)"
           ],
           endpoints: [
             "GET /api/anime", 
@@ -889,13 +739,11 @@ export default {
             "GET /api/anime/:id/info",
             "GET /api/v1/search",
             "GET /api/v1/anime/:id",
-            "GET /api/v1/anime/short/:id",
-            "GET /api/v1/anime/:id/episodes",
             "GET /api/anime/anilist/:id",
-            "GET /api/anime/reanime/:id",
-            "GET /api/anime/:id/episodes",
-            "GET /api/anime/:id/thumbnails",
-            "GET /api/thumbnails/:anilist_id?mal=:mal_id",
+            "GET /api/anime/mal/:id",
+            "GET /api/anime/tvdb/:id",
+            "GET /api/anime/imdb/:id",
+            "GET /api/anime/tmdb/:id",
             "GET /api/genres", 
             "GET /api/tags", 
             "GET /api/studios", 
@@ -914,13 +762,12 @@ export default {
       if (['/anime', '/api/anime', '/v1/search', '/api/v1/search'].includes(path)) {
         let items = await fetchGitHubJSON('/raw.json');
         if (!items) return jsonResponse({error: 'Data not found'}, 404);
-        return jsonResponse(processItems(items, true, await getReanimeIndex()));
+        return jsonResponse(processItems(items, true));
       }
 
       if (path === '/anime/random' || path === '/api/anime/random') {
         let items = await fetchGitHubJSON('/raw.json');
         if (!items || items.length === 0) return jsonResponse({error: 'Data not found'}, 404);
-        const reanimeIndex = await getReanimeIndex();
         
         let filtered = items;
         if (isAdultFilter !== null) {
@@ -940,97 +787,18 @@ export default {
         
         if (filtered.length === 0) return jsonResponse({error: "No anime matched criteria"}, 404);
         const randomItem = filtered[Math.floor(Math.random() * filtered.length)];
-        return jsonResponse(processItems([randomItem], false, reanimeIndex));
+        return jsonResponse(processItems([randomItem], false));
       }
 
-      const matchEpisodes = path.match(/^\/(?:api\/)?(?:v1\/)?anime\/(?:(short|reanime|anilist)\/)?([^/]+)\/episodes$/);
-      if (matchEpisodes) {
+      const matchAnilistId = path.match(/^\/(?:api\/)?(?:v1\/)?anime\/anilist\/(\d+)$/);
+      if (matchAnilistId) {
         if (paginationError) return jsonResponse({error: paginationError}, 400);
+        const id = matchAnilistId[1];
         const items = await fetchGitHubJSON('/raw.json');
         if (!items) return jsonResponse({error: 'Data not found'}, 404);
-        const reanimeIndex = await getReanimeIndex();
-        const source = matchEpisodes[1];
-        const identifier = decodeURIComponent(matchEpisodes[2]);
-        const entry = findReanimeEntry(identifier, reanimeIndex, source);
-        const anilistId = entry?.anilist_id ?? (
-          source === 'anilist' || (!source && /^\d+$/.test(identifier)) ? identifier : null
-        );
-        const anime = anilistId === null
-          ? null
-          : items.find(item => String(item.id ?? item.anilist_id) === String(anilistId));
-        if (!anime) return jsonResponse({error: 'Anime not found'}, 404);
-        let episodeLimit;
-        let episodeOffset;
-        try {
-          episodeLimit = Math.min(
-            parseNonNegativeInteger(url.searchParams.get('limit'), 'limit', 100) || 100,
-            2000
-          );
-          episodeOffset = parseNonNegativeInteger(url.searchParams.get('offset'), 'offset', 0);
-        } catch (error) {
-          return jsonResponse({error: error.message}, 400);
-        }
-        const { count, episodes } = createEpisodePage(anime, entry, episodeOffset, episodeLimit);
-        return jsonResponse({
-          anilist_id: anilistId,
-          reanime_id: entry?.reanime_id || null,
-          total: count,
-          limit: episodeLimit,
-          offset: episodeOffset,
-          count: episodes.length,
-          has_next: episodeOffset + episodeLimit < count,
-          data: episodes
-        });
-      }
-
-      const matchAnimeThumbnails = path.match(/^\/(?:api\/)?(?:v1\/)?anime\/(?:(short|reanime|anilist)\/)?([^/]+)\/thumbnails$/);
-      if (matchAnimeThumbnails) {
-        const reanimeIndex = await getReanimeIndex();
-        const source = matchAnimeThumbnails[1];
-        const identifier = decodeURIComponent(matchAnimeThumbnails[2]);
-        const entry = findReanimeEntry(identifier, reanimeIndex, source);
-        if (!entry) return jsonResponse({error: 'Anime not found'}, 404);
-        return jsonResponse({
-          anilist_id: entry.anilist_id,
-          reanime_id: entry.reanime_id,
-          thumbnails: entry.thumbnails || {}
-        });
-      }
-
-      const matchThumbnailLookup = path.match(/^\/(?:api\/)?(?:v1\/)?thumbnails\/(\d+)$/);
-      if (matchThumbnailLookup) {
-        const reanimeIndex = await getReanimeIndex();
-        const identifier = matchThumbnailLookup[1];
-        const entry = findReanimeEntry(identifier, reanimeIndex) ||
-          Object.values(reanimeIndex).find(item =>
-            String(item.reanime_numeric_id ?? item.thumbnail_id ?? '') === identifier
-          );
-        const malId = url.searchParams.get('mal');
-        if (!entry || (malId && String(entry.mal_id) !== malId)) {
-          return jsonResponse({error: 'Anime thumbnails not found'}, 404);
-        }
-        return jsonResponse({
-          success: true,
-          thumbnails: entry.thumbnails || {},
-          episode_count: entry.episode_count || 0
-        });
-      }
-
-      const matchExternalId = path.match(/^\/(?:api\/)?(?:v1\/)?anime\/(anilist|reanime|short)\/(.+)$/);
-      if (matchExternalId) {
-        if (paginationError) return jsonResponse({error: paginationError}, 400);
-        const source = matchExternalId[1];
-        const identifier = decodeURIComponent(matchExternalId[2]);
-        const items = await fetchGitHubJSON('/raw.json');
-        if (!items) return jsonResponse({error: 'Data not found'}, 404);
-        const reanimeIndex = await getReanimeIndex();
-        const entry = findReanimeEntry(identifier, reanimeIndex, source);
-        const animeId = source === 'anilist' ? identifier : entry?.anilist_id;
-        const anime = animeId === undefined
-          ? []
-          : items.filter(item => String(item.id ?? item.anilist_id) === String(animeId));
-        if (anime.length > 0) return jsonResponse(processItems(anime, false, reanimeIndex));
-        return jsonResponse({error: 'Anime not found'}, 404);
+        const anime = items.filter(a => String(a.id ?? a.anilist_id) === id);
+        if (anime.length > 0) return jsonResponse(processItems(anime, false));
+        return jsonResponse({error: "Anime not found"}, 404);
       }
 
       const matchId = path.match(/^\/(?:api\/)?(?:v1\/)?anime\/(\d+)(?:\/(info|details))?$/);
@@ -1040,22 +808,8 @@ export default {
         const items = await fetchGitHubJSON('/raw.json');
         if (!items) return jsonResponse({error: 'Data not found'}, 404);
         const anime = items.filter(a => String(a.id ?? a.anilist_id) === id);
-        if (anime.length > 0) return jsonResponse(processItems(anime, false, await getReanimeIndex()));
+        if (anime.length > 0) return jsonResponse(processItems(anime, false));
         return jsonResponse({error: "Anime not found"}, 404);
-      }
-
-      const matchReanimeSlug = path.match(/^\/api\/v1\/anime\/([^/]+)$/);
-      if (matchReanimeSlug) {
-        const identifier = decodeURIComponent(matchReanimeSlug[1]);
-        const items = await fetchGitHubJSON('/raw.json');
-        if (!items) return jsonResponse({error: 'Data not found'}, 404);
-        const reanimeIndex = await getReanimeIndex();
-        const entry = Object.values(reanimeIndex).find(item => matchesReanimeIdentifier(item, identifier));
-        const anime = entry
-          ? items.filter(item => String(item.id ?? item.anilist_id) === String(entry.anilist_id))
-          : [];
-        if (anime.length > 0) return jsonResponse(processItems(anime, false, reanimeIndex));
-        return jsonResponse({error: 'Anime not found'}, 404);
       }
       
       const matchSource = path.match(/^\/(?:api\/)?(?:v1\/)?anime\/(mal|tvdb|imdb|tmdb)\/(.+)$/);
@@ -1065,12 +819,12 @@ export default {
         const items = await fetchGitHubJSON('/raw.json');
         if (!items) return jsonResponse({error: 'Data not found'}, 404);
         let anime = [];
-        if (source === 'mal') anime = items.filter(a => a.idMal == id);
-        else if (source === 'tvdb') anime = items.filter(a => a.tvdb_id == id);
-        else if (source === 'imdb') anime = items.filter(a => a.imdb_id == id);
-        else if (source === 'tmdb') anime = items.filter(a => a.tmdb_id == id);
+        if (source === 'mal') anime = items.filter(a => String(a.idMal ?? '') === id);
+        else if (source === 'tvdb') anime = items.filter(a => String(a.tvdb_id ?? '') === id);
+        else if (source === 'imdb') anime = items.filter(a => String(a.imdb_id ?? '') === id);
+        else if (source === 'tmdb') anime = items.filter(a => String(a.tmdb_id ?? '') === id);
         
-        if (anime.length > 0) return jsonResponse(processItems(anime, false, await getReanimeIndex()));
+        if (anime.length > 0) return jsonResponse(processItems(anime, false));
         return jsonResponse({error: "Anime not found"}, 404);
       }
 
