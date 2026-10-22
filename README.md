@@ -79,7 +79,7 @@ python3 -m pip install -r scripts/requirements.txt
 python3 scripts/dump_anilist.py --mode full
 python3 scripts/dump_reanime.py
 ```
-For regular refreshes, use `python3 scripts/dump_anilist.py --mode incremental --hours 26`. Incremental mode reads AniList pages sorted by `UPDATED_AT_DESC` and stops at the requested update-time cutoff. Full mode discovers the latest anime ID and queries bounded `id_in` ranges, avoiding AniList's 5,000-result page-depth limit. The GitHub Actions workflow runs the incremental update and ReAnime metadata sync daily; dispatch it manually with `full` to rebuild AniList data. The workflow commits changed JSON data to the repository.
+For regular refreshes, use `python3 scripts/dump_anilist.py --mode incremental --hours 26`. Both modes divide the AniList catalog into bounded `id_in` ranges, avoiding the 5,000-result page-depth limit. Incremental mode orders entries by `UPDATED_AT_DESC` within each ID range and stops at the requested cutoff. Full mode orders by ID and fetches each range completely. The GitHub Actions workflow runs the incremental update and ReAnime metadata sync daily; dispatch it manually with `full` to rebuild AniList data. The workflow commits changed JSON data to the repository.
 
 ## License
 
