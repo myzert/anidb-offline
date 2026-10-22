@@ -8,17 +8,18 @@ import logging
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def fetch_anilist_page(page=1, hours=None, max_retries=5):
+def fetch_anilist_page(page=1, max_retries=5):
     url = "https://graphql.anilist.co"
     query = '''
-    query ($page: Int, $perPage: Int, $updatedAtGreater: Int) {
+    query ($page: Int, $perPage: Int) {
       Page(page: $page, perPage: $perPage) {
         pageInfo {
           hasNextPage
         }
-        media(type: ANIME, sort: ID, updatedAt_greater: $updatedAtGreater) {
+        media(type: ANIME, sort: UPDATED_AT_DESC) {
           id
           idMal
+          updatedAt
           title {
             romaji
             english
@@ -70,8 +71,6 @@ def fetch_anilist_page(page=1, hours=None, max_retries=5):
     }
     '''
     variables = {"page": page, "perPage": 50}
-    if hours is not None:
-        variables["updatedAtGreater"] = int(time.time() - hours * 60 * 60)
     
     retries = 0
     while retries < max_retries:
@@ -327,18 +326,38 @@ def main():
         total_fetched = 0
         page = 1
         hours = args.hours if args.mode == 'incremental' else None
+        cutoff = int(time.time() - hours * 60 * 60) if hours is not None else None
 
         while True:
             logging.info(f"Fetching AniList page {page}...")
-            response = fetch_anilist_page(page, hours=hours)
+            response = fetch_anilist_page(page)
             if not response or 'data' not in response or 'Page' not in response['data']:
                 raise RuntimeError(f"Failed to fetch AniList page {page}; refusing to write an incomplete dump.")
 
             page_data = response['data']['Page']
             anilist_anime_list = page_data.get('media', [])
+            stop_incremental = False
+            if cutoff is not None:
+                recent_anime = []
+                for anime in anilist_anime_list:
+                    updated_at = anime.get('updatedAt')
+                    if updated_at is None:
+                        raise RuntimeError(
+                            f"AniList page {page} contained media without updatedAt; "
+                            "refusing to create an incomplete incremental dump."
+                        )
+                    if int(updated_at) <= cutoff:
+                        stop_incremental = True
+                        break
+                    recent_anime.append(anime)
+                anilist_anime_list = recent_anime
+
             if anilist_anime_list:
                 save_anime_data(anilist_anime_list, base_dir)
                 total_fetched += len(anilist_anime_list)
+
+            if stop_incremental:
+                break
 
             if not page_data.get('pageInfo', {}).get('hasNextPage'):
                 break
