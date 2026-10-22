@@ -169,7 +169,7 @@
   "119683": {
     "id": 119683,
     "idMal": 42192,
-    "updatedAt": 1792648896,
+    "updatedAt": 1792652526,
     "title": {
       "romaji": "EDENS ZERO",
       "english": "EDENS ZERO",
@@ -393,7 +393,7 @@
   "119484": {
     "id": 119484,
     "idMal": 42224,
-    "updatedAt": 1792648888,
+    "updatedAt": 1792652526,
     "title": {
       "romaji": "Shikiyoku INFINITE",
       "english": null,
@@ -523,7 +523,7 @@
   "119661": {
     "id": 119661,
     "idMal": 42203,
-    "updatedAt": 1792648819,
+    "updatedAt": 1792656013,
     "title": {
       "romaji": "Re:Zero kara Hajimeru Isekai Seikatsu 2nd Season Part 2",
       "english": "Re:ZERO -Starting Life in Another World- Season 2 Part 2",
@@ -838,7 +838,7 @@
   "119056": {
     "id": 119056,
     "idMal": 42072,
-    "updatedAt": 1792645339,
+    "updatedAt": 1792652488,
     "title": {
       "romaji": "Kenja no Deshi wo Nanoru Kenja",
       "english": "She Professed Herself Pupil of the Wise Man",
@@ -1352,7 +1352,7 @@
   "119675": {
     "id": 119675,
     "idMal": 42205,
-    "updatedAt": 1792587651,
+    "updatedAt": 1792656123,
     "title": {
       "romaji": "SHAMAN KING (2021)",
       "english": "SHAMAN KING (2021)",
@@ -2833,7 +2833,7 @@
   "119777": {
     "id": 119777,
     "idMal": 21099,
-    "updatedAt": 1792583902,
+    "updatedAt": 1792656123,
     "title": {
       "romaji": "Kenji no Trunk",
       "english": null,
@@ -3442,6 +3442,85 @@
           }
         }
       ]
+    }
+  },
+  "119592": {
+    "id": 119592,
+    "idMal": 41477,
+    "updatedAt": 1792656101,
+    "title": {
+      "romaji": "MAN WITH A MISSION THE ANIMATION",
+      "english": "MAN WITH A MISSION THE ANIMATION",
+      "native": "MAN WITH A MISSION THE ANIMATION"
+    },
+    "type": "ANIME",
+    "format": "ONA",
+    "status": "FINISHED",
+    "description": "A short 3DCG anime series for the Japanese rock band MAN WITH A MISSION.",
+    "episodes": 6,
+    "duration": 4,
+    "season": null,
+    "seasonYear": null,
+    "startDate": {
+      "year": 2020,
+      "month": 3,
+      "day": 16
+    },
+    "endDate": {
+      "year": 2020,
+      "month": 4,
+      "day": 15
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx119592-TpYSpOBVbX21.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx119592-TpYSpOBVbX21.png",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx119592-TpYSpOBVbX21.png",
+      "color": "#e48643"
+    },
+    "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/119592-Yu3gjCbJK2yn.jpg",
+    "genres": [
+      "Music"
+    ],
+    "synonyms": [
+      "MWAM - The Animation"
+    ],
+    "averageScore": 48,
+    "popularity": 514,
+    "isAdult": false,
+    "source": "ORIGINAL",
+    "countryOfOrigin": "JP",
+    "tags": [
+      {
+        "name": "Primarily Male Cast",
+        "rank": 80,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Full CGI",
+        "rank": 79,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Band",
+        "rank": 79,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Animals",
+        "rank": 79,
+        "isMediaSpoiler": false
+      }
+    ],
+    "studios": {
+      "nodes": []
+    },
+    "trailer": {
+      "id": "O4WjJxVtCVE",
+      "site": "youtube"
+    },
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": []
     }
   }
 }

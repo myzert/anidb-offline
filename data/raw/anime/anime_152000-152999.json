@@ -2,7 +2,7 @@
   "152184": {
     "id": 152184,
     "idMal": 57192,
-    "updatedAt": 1792648938,
+    "updatedAt": 1792656123,
     "title": {
       "romaji": "Yeosingangnim",
       "english": "True Beauty",
@@ -341,7 +341,7 @@
   "152137": {
     "id": 152137,
     "idMal": 52367,
-    "updatedAt": 1792648921,
+    "updatedAt": 1792656069,
     "title": {
       "romaji": "Isekai Shikkaku",
       "english": "No Longer Allowed in Another World",
@@ -524,7 +524,7 @@
   "152765": {
     "id": 152765,
     "idMal": 52461,
-    "updatedAt": 1792648897,
+    "updatedAt": 1792656057,
     "title": {
       "romaji": "Rougo ni Sonaete Isekai de 8-manmai no Kinka wo Tamemasu",
       "english": "Saving 80,000 Gold in Another World for My Retirement",
@@ -703,7 +703,7 @@
   "152802": {
     "id": 152802,
     "idMal": 52505,
-    "updatedAt": 1792648890,
+    "updatedAt": 1792656018,
     "title": {
       "romaji": "Dark Gathering",
       "english": "Dark Gathering",
@@ -987,7 +987,7 @@
   "152682": {
     "id": 152682,
     "idMal": 52482,
-    "updatedAt": 1792648849,
+    "updatedAt": 1792656028,
     "title": {
       "romaji": "Sasaki to Pii-chan",
       "english": "Sasaki and Peeps",
@@ -1219,7 +1219,7 @@
   "152681": {
     "id": 152681,
     "idMal": 52481,
-    "updatedAt": 1792648828,
+    "updatedAt": 1792656070,
     "title": {
       "romaji": "Gimai Seikatsu",
       "english": "Days with My Stepsister",
@@ -1377,7 +1377,7 @@
   "152677": {
     "id": 152677,
     "idMal": 52480,
-    "updatedAt": 1792648807,
+    "updatedAt": 1792656008,
     "title": {
       "romaji": "Tantei wa mou, Shindeiru. Season 2",
       "english": "The Detective Is Already Dead Season 2",
@@ -1482,7 +1482,7 @@
     },
     "nextAiringEpisode": {
       "airingAt": 1793190600,
-      "timeUntilAiring": 540132,
+      "timeUntilAiring": 527622,
       "episode": 4
     },
     "relations": {
@@ -1676,7 +1676,7 @@
   "152072": {
     "id": 152072,
     "idMal": 52359,
-    "updatedAt": 1792645303,
+    "updatedAt": 1792656011,
     "title": {
       "romaji": "Isekai de Mofumofu Nadenade Suru Tame ni Ganbattemasu.",
       "english": "Fluffy Paradise",
@@ -1854,7 +1854,7 @@
   "152523": {
     "id": 152523,
     "idMal": 52446,
-    "updatedAt": 1792645287,
+    "updatedAt": 1792656123,
     "title": {
       "romaji": "Kaiko sareta Ankoku Heishi (30-dai) no Slow na Second Life",
       "english": "Chillin’ in My 30s after Getting Fired from the Demon King’s Army",
@@ -3423,6 +3423,105 @@
               "romaji": "Bonyuu-chan wa Dashitai. Senpai to Imouto, Milk Harem",
               "english": null,
               "native": "母乳ちゃんは射(だ)したい。 先輩と妹、ミルクハーレム"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "152005": {
+    "id": 152005,
+    "idMal": 51542,
+    "updatedAt": 1792656100,
+    "title": {
+      "romaji": "Kyokou Suiri Mini Anime Season 2",
+      "english": null,
+      "native": "虚構推理 ミニアニメ Season2"
+    },
+    "type": "ANIME",
+    "format": "ONA",
+    "status": "FINISHED",
+    "description": "The second season of mini animations featuring characters from <i>Kyokou Suiri</i>, posted on the official Twitter account.",
+    "episodes": 16,
+    "duration": 2,
+    "season": "WINTER",
+    "seasonYear": 2022,
+    "startDate": {
+      "year": 2022,
+      "month": 2,
+      "day": 11
+    },
+    "endDate": {
+      "year": 2022,
+      "month": 9,
+      "day": 30
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx152005-OXFYKLw6vQHu.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx152005-OXFYKLw6vQHu.png",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx152005-OXFYKLw6vQHu.png",
+      "color": "#f1d65d"
+    },
+    "bannerImage": null,
+    "genres": [
+      "Comedy"
+    ],
+    "synonyms": [
+      "In/Spectre Mini Season 2"
+    ],
+    "averageScore": 53,
+    "popularity": 1021,
+    "isAdult": false,
+    "source": "ORIGINAL",
+    "countryOfOrigin": "JP",
+    "tags": [
+      {
+        "name": "Female Protagonist",
+        "rank": 79,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Chibi",
+        "rank": 60,
+        "isMediaSpoiler": false
+      }
+    ],
+    "studios": {
+      "nodes": [
+        {
+          "name": "AQUA ARIS"
+        }
+      ]
+    },
+    "trailer": null,
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": [
+        {
+          "relationType": "PREQUEL",
+          "node": {
+            "id": 113828,
+            "type": "ANIME",
+            "format": "ONA",
+            "status": "FINISHED",
+            "title": {
+              "romaji": "Kyokou Suiri Mini Anime",
+              "english": "In/Spectre Mini",
+              "native": "虚構推理 ミニアニメ"
+            }
+          }
+        },
+        {
+          "relationType": "PARENT",
+          "node": {
+            "id": 126529,
+            "type": "ANIME",
+            "format": "TV",
+            "status": "FINISHED",
+            "title": {
+              "romaji": "Kyokou Suiri Season 2",
+              "english": "In/Spectre 2",
+              "native": "虚構推理 Season2"
             }
           }
         }

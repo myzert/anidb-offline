@@ -2,7 +2,7 @@
   "122148": {
     "id": 122148,
     "idMal": 42568,
-    "updatedAt": 1792648938,
+    "updatedAt": 1792656123,
     "title": {
       "romaji": "Yakunara Mug Cup Mo",
       "english": "Let's Make a Mug Too",
@@ -160,7 +160,7 @@
   "122508": {
     "id": 122508,
     "idMal": 44388,
-    "updatedAt": 1792648938,
+    "updatedAt": 1792656123,
     "title": {
       "romaji": "Biaoren",
       "english": null,
@@ -304,7 +304,7 @@
   "122497": {
     "id": 122497,
     "idMal": 42640,
-    "updatedAt": 1792648882,
+    "updatedAt": 1792652526,
     "title": {
       "romaji": "Wan Sheng Jie 2",
       "english": "All Saints Street 2",
@@ -500,7 +500,7 @@
   "122954": {
     "id": 122954,
     "idMal": 43465,
-    "updatedAt": 1792648880,
+    "updatedAt": 1792652526,
     "title": {
       "romaji": "Ijirare: Fukushuu Sai○",
       "english": null,
@@ -869,7 +869,7 @@
   "122585": {
     "id": 122585,
     "idMal": 50407,
-    "updatedAt": 1792648858,
+    "updatedAt": 1792652526,
     "title": {
       "romaji": "Wu Shan Wu Xing: Xi Chuan Huan Zi Lin",
       "english": null,
@@ -990,7 +990,7 @@
   "122052": {
     "id": 122052,
     "idMal": 42544,
-    "updatedAt": 1792648857,
+    "updatedAt": 1792656117,
     "title": {
       "romaji": "Kaizoku Oujo",
       "english": "Fena: Pirate Princess",
@@ -1724,7 +1724,7 @@
   "122349": {
     "id": 122349,
     "idMal": 42603,
-    "updatedAt": 1792587651,
+    "updatedAt": 1792656046,
     "title": {
       "romaji": "Boku no Hero Academia: Ikinokore! Kesshi no Survival Kunren",
       "english": "My Hero Academia: Make It! Do-or-Die Survival Training",
@@ -4524,6 +4524,83 @@
               "romaji": "Mirai Harmony",
               "english": null,
               "native": "未来ハーモニー"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "122238": {
+    "id": 122238,
+    "idMal": 42562,
+    "updatedAt": 1792656101,
+    "title": {
+      "romaji": "Kyokou Uranai",
+      "english": null,
+      "native": "虚構占い"
+    },
+    "type": "ANIME",
+    "format": "ONA",
+    "status": "FINISHED",
+    "description": "Short episodes of Kotoko doing fortune telling posted on the official Twitter account.",
+    "episodes": 12,
+    "duration": 1,
+    "season": "WINTER",
+    "seasonYear": 2020,
+    "startDate": {
+      "year": 2020,
+      "month": 1,
+      "day": 17
+    },
+    "endDate": {
+      "year": 2020,
+      "month": 4,
+      "day": 3
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b122238-Q7GyN6067RH8.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b122238-Q7GyN6067RH8.jpg",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/b122238-Q7GyN6067RH8.jpg",
+      "color": "#bbe4f1"
+    },
+    "bannerImage": null,
+    "genres": [
+      "Fantasy",
+      "Supernatural"
+    ],
+    "synonyms": [
+      "Invented Divination"
+    ],
+    "averageScore": 56,
+    "popularity": 2878,
+    "isAdult": false,
+    "source": "LIGHT_NOVEL",
+    "countryOfOrigin": "JP",
+    "tags": [
+      {
+        "name": "Female Protagonist",
+        "rank": 60,
+        "isMediaSpoiler": false
+      }
+    ],
+    "studios": {
+      "nodes": []
+    },
+    "trailer": null,
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": [
+        {
+          "relationType": "PARENT",
+          "node": {
+            "id": 107201,
+            "type": "ANIME",
+            "format": "TV",
+            "status": "FINISHED",
+            "title": {
+              "romaji": "Kyokou Suiri",
+              "english": "In/Spectre",
+              "native": "虚構推理"
             }
           }
         }

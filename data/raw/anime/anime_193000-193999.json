@@ -2,7 +2,7 @@
   "193699": {
     "id": 193699,
     "idMal": 61758,
-    "updatedAt": 1792648938,
+    "updatedAt": 1792661344,
     "title": {
       "romaji": "Akuyaku Reijou no Naka no Hito",
       "english": null,
@@ -41,7 +41,7 @@
       "The One Within the Villainess"
     ],
     "averageScore": null,
-    "popularity": 6012,
+    "popularity": 6018,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -135,7 +135,7 @@
   "193968": {
     "id": 193968,
     "idMal": 61773,
-    "updatedAt": 1792648844,
+    "updatedAt": 1792661326,
     "title": {
       "romaji": "Let’s Play: Quest Darake no My Life",
       "english": "Let’s Play",
@@ -175,7 +175,7 @@
       "レップレ"
     ],
     "averageScore": 65,
-    "popularity": 15759,
+    "popularity": 15764,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -235,7 +235,7 @@
   "193348": {
     "id": 193348,
     "idMal": 61788,
-    "updatedAt": 1792641705,
+    "updatedAt": 1792661366,
     "title": {
       "romaji": "Netorareta Bakunyuu Tsuma-tachi",
       "english": null,
@@ -271,7 +271,7 @@
     ],
     "synonyms": [],
     "averageScore": 61,
-    "popularity": 1015,
+    "popularity": 1016,
     "isAdult": true,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -391,7 +391,7 @@
   "193923": {
     "id": 193923,
     "idMal": 61770,
-    "updatedAt": 1792584138,
+    "updatedAt": 1792661329,
     "title": {
       "romaji": "Kono Hon wo Nusumu Mono wa",
       "english": null,
@@ -431,7 +431,7 @@
       "Whoever Steals This Book"
     ],
     "averageScore": 55,
-    "popularity": 2661,
+    "popularity": 2662,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -491,7 +491,7 @@
   "193296": {
     "id": 193296,
     "idMal": 61461,
-    "updatedAt": 1792580492,
+    "updatedAt": 1792661370,
     "title": {
       "romaji": "Tenkaichi: Nihon Saikyou Bugeisha Ketteisen",
       "english": null,
@@ -528,7 +528,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 1367,
+    "popularity": 1368,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -903,7 +903,7 @@
   "193607": {
     "id": 193607,
     "idMal": 61742,
-    "updatedAt": 1792575450,
+    "updatedAt": 1792661350,
     "title": {
       "romaji": "Dekichau made Kon",
       "english": "Marry Me, Let's Have a Baby!",
@@ -943,7 +943,7 @@
       "Marry Me, I'll Fuck You Until You're Pregnant!"
     ],
     "averageScore": 52,
-    "popularity": 1488,
+    "popularity": 1489,
     "isAdult": true,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -1476,6 +1476,74 @@
           }
         }
       ]
+    }
+  },
+  "193240": {
+    "id": 193240,
+    "idMal": 61704,
+    "updatedAt": 1792661374,
+    "title": {
+      "romaji": "Tun Tian Ji",
+      "english": null,
+      "native": "吞天记"
+    },
+    "type": "ANIME",
+    "format": "ONA",
+    "status": "FINISHED",
+    "description": "Adapted from the novel of the same name by Feng Qingyang, it chronicles the legendary metamorphosis of Wu Yu - from an ordinary mortal to an immortal Buddha.",
+    "episodes": 40,
+    "duration": 10,
+    "season": null,
+    "seasonYear": null,
+    "startDate": {
+      "year": 2025,
+      "month": 5,
+      "day": 19
+    },
+    "endDate": {
+      "year": 2025,
+      "month": 9,
+      "day": 3
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx193240-x31vEsMSk5Ab.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx193240-x31vEsMSk5Ab.jpg",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx193240-x31vEsMSk5Ab.jpg",
+      "color": "#f1a143"
+    },
+    "bannerImage": null,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "synonyms": [
+      "Swallowing the Heavens",
+      "ศึกพิชิตสวรรค์"
+    ],
+    "averageScore": null,
+    "popularity": 195,
+    "isAdult": false,
+    "source": "OTHER",
+    "countryOfOrigin": "CN",
+    "tags": [
+      {
+        "name": "Full CGI",
+        "rank": 20,
+        "isMediaSpoiler": false
+      }
+    ],
+    "studios": {
+      "nodes": [
+        {
+          "name": "Soyep"
+        }
+      ]
+    },
+    "trailer": null,
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": []
     }
   }
 }
