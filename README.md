@@ -24,9 +24,10 @@ The Cloudflare worker exposes several endpoints on the REST domain:
 - `GET /api/v1/search` (Versioned, paginated anime search)
 - `GET /api/anime/:id` (Get specific anime by AniList ID)
 - `GET /api/v1/anime/:id` (Versioned detail by AniList ID)
-- `GET /api/anime/anilist/:id` (Look up by AniList ID)
+- `GET /api/anime/anilist/:id` (Look up by AniList ID or slug)
 - `GET /api/anime/random` (Get a random anime)
 - `GET /api/anime/mal/:id` (Get anime by MyAnimeList ID)
+- `GET /api/anime/kitsu/:id` (Get anime by Kitsu ID)
 - `GET /api/anime/tvdb/:id` (Get anime by TVDB ID)
 - `GET /api/anime/imdb/:id` (Get anime by IMDB ID)
 - `GET /api/anime/tmdb/:id` (Get anime by TMDB ID)
@@ -40,18 +41,41 @@ Use these parameters to narrow down search results dynamically.
 - `type` or `format`: Filter by format (e.g. `?type=TV`)
 - `season` and `year`: Filter by release season/year (e.g. `?season=FALL&year=2026`)
 - `studio`: Filter by animation studio (e.g. `?studio=mappa`)
-- `anilist_id`, `mal_id`, `tmdb_id`, `imdb_id`, `tvdb_id`: Filter by external ID.
+- `anilist_id`, `anilist_slug_id`, `mal_id`, `kitsu_id`, `tmdb_id`, `imdb_id`, `tvdb_id`: Filter by external ID or slug.
 - `exclude_genres` and `genre_mode=all|any`: Exclude genres or choose whether all/any requested genres must match.
 - `min_score`, `max_score`: Filter by AniList score (0-100).
 - `sort_by`, `order_by`, or `sort`: Sort by `score`, `popularity`, `release_date`, `title`, `episodes`, or ID; comma-separated fields are accepted (e.g. `?sort=-score,popularity`).
 - `sort_order` or `order`: Sort direction (`asc`, `desc`). Prefix a sort field with `-` for descending (e.g. `?sort_by=-score`)
-- `fields`: Field selection to retrieve only required fields (e.g. `?fields=id,title,cover_image`)
+- `fields`: Field selection to retrieve only required fields (e.g. `?fields=anilist_id,title_english,cover_image_url`)
 - `limit` and `offset`: Pagination controls (list limit is capped at 100).
 - `page`: Page-based pagination; `offset` takes precedence when both are supplied.
 
-Example: `GET /api/v1/search?limit=20&offset=40&sort=-score,popularity&genres=Action,Drama&genre_mode=any&fields=anilist_id,title_english,cover_image_url`
+Example: `GET /api/v1/search?limit=20&offset=40&sort=-score,popularity&genres=Action,Drama&genre_mode=any`
 
-List responses include `total`, `count`, `limit`, `offset`, `page`, `total_pages`, `has_next`, and `next_offset`. By default each result includes the normalized title, AniList and external IDs, genres, cover images, format, status, score, and popularity.
+List responses include `total`, `count`, `limit`, `offset`, `page`, `total_pages`, `has_next`, and `next_offset`. By default each result item in home (`spotlight`, `trending`, `top_rated`, `jadwal`) and search/list endpoints includes the unified format:
+```json
+{
+  "anilist_slug_id": "attack-on-titan-16498",
+  "thumbnail_url": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx16498-buvcRTBx4NSm.jpg",
+  "cover_image_url": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16498-buvcRTBx4NSm.jpg",
+  "backdrop_url": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/16498-8jpFCOcDmneX.jpg",
+  "banner_url": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/16498-8jpFCOcDmneX.jpg",
+  "logo_url": null,
+  "theme_color": "#f1a143",
+  "title_english": "Attack on Titan",
+  "title_romaji": "Shingeki no Kyojin",
+  "genres": ["Action", "Drama", "Fantasy", "Mystery"],
+  "mal_id": 16498,
+  "anilist_id": 16498,
+  "kitsu_id": 7442,
+  "tmdb_id": 1429,
+  "imdb_id": "tt2560140",
+  "subbed_episodes": 25,
+  "dubbed_episodes": 25,
+  "total_episodes": 25,
+  "age_rating": "TV-MA"
+}
+```
 
 ## GraphQL API
 

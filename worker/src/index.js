@@ -2,6 +2,86 @@ import { createYoga, createSchema } from 'graphql-yoga'
 
 const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/myzert/anidb-offline/main/data/raw';
 
+function slugify(text) {
+  if (!text) return 'anime';
+  return text
+    .toString()
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '') || 'anime';
+}
+
+function formatTrimmedAnime(a) {
+  const anilistId = a.id ?? a.anilist_id ?? null;
+  const titleEnglish = a.title?.english || a.title_english || '';
+  const titleRomaji = a.title?.romaji || a.title_romaji || '';
+  const rawTitle = titleEnglish || titleRomaji || a.title?.native || '';
+  const slugId = anilistId ? `${slugify(rawTitle)}-${anilistId}` : slugify(rawTitle);
+
+  const coverImage = a.cover_image && typeof a.cover_image === 'object' ? a.cover_image : {};
+  const coverImageUrl = coverImage.extra_large || coverImage.large || coverImage.medium || a.cover_image_url || (a.tmdb_poster_path ? `https://image.tmdb.org/t/p/original${a.tmdb_poster_path}` : null);
+  const thumbnailUrl = a.thumbnail_url || coverImage.large || coverImage.medium || coverImage.extra_large || coverImageUrl || null;
+
+  const backdropUrl = a.tmdb_backdrop_path
+    ? `https://image.tmdb.org/t/p/original${a.tmdb_backdrop_path}`
+    : (a.backdrop_url || a.banner_image || coverImage.extra_large || null);
+
+  const bannerUrl = a.banner_image || a.banner_url || (a.tmdb_backdrop_path ? `https://image.tmdb.org/t/p/original${a.tmdb_backdrop_path}` : null) || coverImage.extra_large || null;
+
+  const logoUrl = a.tmdb_logo_path
+    ? `https://image.tmdb.org/t/p/original${a.tmdb_logo_path}`
+    : (a.logo_url || a.logo || null);
+
+  const themeColor = coverImage.color || a.theme_color || '#000000';
+
+  const totalEpisodes = a.total_episodes ?? a.episodes ?? 0;
+  const subbedEpisodes = a.subbed_episodes ?? totalEpisodes;
+  const dubbedEpisodes = a.dubbed_episodes ?? totalEpisodes;
+
+  let ageRating = a.age_rating || null;
+  if (!ageRating) {
+    if (a.is_adult) {
+      ageRating = 'TV-MA';
+    } else {
+      const tags = Array.isArray(a.tags) ? a.tags.map(t => (typeof t === 'string' ? t : t?.name || '').toLowerCase()) : [];
+      if (tags.some(t => ['gore', 'violence', 'horror', 'psychological', 'erotica'].includes(t))) {
+        ageRating = 'TV-MA';
+      } else if (a.format === 'TV') {
+        ageRating = 'TV-14';
+      } else if (a.format === 'MOVIE') {
+        ageRating = 'PG-13';
+      } else {
+        ageRating = 'PG-13';
+      }
+    }
+  }
+
+  return {
+    anilist_slug_id: slugId,
+    thumbnail_url: thumbnailUrl,
+    cover_image_url: coverImageUrl,
+    backdrop_url: backdropUrl,
+    banner_url: bannerUrl,
+    logo_url: logoUrl,
+    theme_color: themeColor,
+    title_english: titleEnglish,
+    title_romaji: titleRomaji,
+    genres: Array.isArray(a.genres) ? a.genres : [],
+    mal_id: a.idMal ?? a.mal_id ?? null,
+    anilist_id: anilistId,
+    kitsu_id: a.kitsu_id ?? null,
+    tmdb_id: a.tmdb_id ?? null,
+    imdb_id: a.imdb_id ? String(a.imdb_id) : null,
+    subbed_episodes: subbedEpisodes,
+    dubbed_episodes: dubbedEpisodes,
+    total_episodes: totalEpisodes,
+    age_rating: ageRating
+  };
+}
+
 const typeDefs = `
   type Query {
     animeList(page: Int, perPage: Int, search: String, genres: [String], status: String, season: String, seasonYear: Int, format: String, sort: [String]): Page
@@ -24,12 +104,16 @@ const typeDefs = `
   type Media {
     id: Int
     anilist_id: Int
+    anilist_slug_id: String
     idMal: Int
     mal_id: Int
+    kitsu_id: Int
     tmdb_id: Int
     tvdb_id: Int
-    imdb_id: Int
+    imdb_id: String
     title: MediaTitle
+    title_english: String
+    title_romaji: String
     format: String
     status: String
     description: String
@@ -38,9 +122,17 @@ const typeDefs = `
     season: String
     seasonYear: Int
     episodes: Int
+    subbed_episodes: Int
+    dubbed_episodes: Int
+    total_episodes: Int
+    age_rating: String
     duration: String
     coverImage: MediaCoverImage
     cover_image_url: String
+    thumbnail_url: String
+    backdrop_url: String
+    banner_url: String
+    logo_url: String
     theme_color: String
     bannerImage: String
     genres: [String]
@@ -55,7 +147,6 @@ const typeDefs = `
     countryOfOrigin: String
     relations: [MediaRelation]
     episode_list: [Episode]
-    total_episodes: Int
     logo: String
   }
 
@@ -149,31 +240,40 @@ const resolvers = {
       return {
         pageInfo: { total, perPage, currentPage, lastPage, hasNextPage },
         media: paginated.map(a => {
+           const trimmed = formatTrimmedAnime(a);
            let epList = [];
            if (a.episodes > 0) {
              for (let i = 1; i <= a.episodes; i++) {
                epList.push({
                  episode: i,
                  title: `Episode ${i}`,
-                 image: a.banner_image || (a.cover_image ? a.cover_image.extra_large : null)
+                 image: trimmed.banner_url || trimmed.cover_image_url
                });
              }
            }
-           let logoUrl = a.tmdb_logo_path ? `https://image.tmdb.org/t/p/original${a.tmdb_logo_path}` : (a.cover_image ? a.cover_image.extra_large : null);
 
            return {
-             id: a.id || a.anilist_id,
-             anilist_id: a.id || a.anilist_id,
+             id: trimmed.anilist_id,
+             anilist_id: trimmed.anilist_id,
+             anilist_slug_id: trimmed.anilist_slug_id,
              idMal: a.idMal,
-             mal_id: a.idMal || null,
-             tmdb_id: a.tmdb_id,
+             mal_id: trimmed.mal_id,
+             kitsu_id: trimmed.kitsu_id,
+             tmdb_id: trimmed.tmdb_id,
              tvdb_id: a.tvdb_id,
-             imdb_id: a.imdb_id,
-             cover_image_url: a.cover_image?.extra_large || null,
-             theme_color: a.cover_image?.color || null,
-             title_english: a.title?.english || '',
-             title_romaji: a.title?.romaji || '',
-             total_episodes: a.episodes || 0,
+             imdb_id: trimmed.imdb_id,
+             title_english: trimmed.title_english,
+             title_romaji: trimmed.title_romaji,
+             thumbnail_url: trimmed.thumbnail_url,
+             cover_image_url: trimmed.cover_image_url,
+             backdrop_url: trimmed.backdrop_url,
+             banner_url: trimmed.banner_url,
+             logo_url: trimmed.logo_url,
+             theme_color: trimmed.theme_color,
+             subbed_episodes: trimmed.subbed_episodes,
+             dubbed_episodes: trimmed.dubbed_episodes,
+             total_episodes: trimmed.total_episodes,
+             age_rating: trimmed.age_rating,
              title: a.title,
              format: a.format,
              status: a.status,
@@ -203,8 +303,8 @@ const resolvers = {
              countryOfOrigin: a.country_of_origin,
              relations: a.relations,
              episode_list: epList,
-             logo: logoUrl
-           }
+             logo: trimmed.logo_url
+           };
         })
       };
     },
@@ -214,31 +314,40 @@ const resolvers = {
       const anime = items.find(a => a.id == args.id || a.anilist_id == args.id);
       if (!anime) return null;
       
+      const trimmed = formatTrimmedAnime(anime);
       let epList = [];
       if (anime.episodes > 0) {
         for (let i = 1; i <= anime.episodes; i++) {
           epList.push({
             episode: i,
             title: `Episode ${i}`,
-            image: anime.banner_image || (anime.cover_image ? anime.cover_image.extra_large : null)
+            image: trimmed.banner_url || trimmed.cover_image_url
           });
         }
       }
-      let logoUrl = anime.tmdb_logo_path ? `https://image.tmdb.org/t/p/original${anime.tmdb_logo_path}` : (anime.cover_image ? anime.cover_image.extra_large : null);
 
       return {
-           id: anime.id || anime.anilist_id,
-           anilist_id: anime.id || anime.anilist_id,
+           id: trimmed.anilist_id,
+           anilist_id: trimmed.anilist_id,
+           anilist_slug_id: trimmed.anilist_slug_id,
            idMal: anime.idMal,
-           mal_id: anime.idMal || null,
-           tmdb_id: anime.tmdb_id,
+           mal_id: trimmed.mal_id,
+           kitsu_id: trimmed.kitsu_id,
+           tmdb_id: trimmed.tmdb_id,
            tvdb_id: anime.tvdb_id,
-           imdb_id: anime.imdb_id,
-           cover_image_url: anime.cover_image?.extra_large || null,
-           theme_color: anime.cover_image?.color || null,
-           title_english: anime.title?.english || '',
-           title_romaji: anime.title?.romaji || '',
-           total_episodes: anime.episodes || 0,
+           imdb_id: trimmed.imdb_id,
+           title_english: trimmed.title_english,
+           title_romaji: trimmed.title_romaji,
+           thumbnail_url: trimmed.thumbnail_url,
+           cover_image_url: trimmed.cover_image_url,
+           backdrop_url: trimmed.backdrop_url,
+           banner_url: trimmed.banner_url,
+           logo_url: trimmed.logo_url,
+           theme_color: trimmed.theme_color,
+           subbed_episodes: trimmed.subbed_episodes,
+           dubbed_episodes: trimmed.dubbed_episodes,
+           total_episodes: trimmed.total_episodes,
+           age_rating: trimmed.age_rating,
            title: anime.title,
            format: anime.format,
            status: anime.status,
@@ -268,7 +377,7 @@ const resolvers = {
            countryOfOrigin: anime.country_of_origin,
            relations: anime.relations,
            episode_list: epList,
-           logo: logoUrl
+           logo: trimmed.logo_url
       };
     }
   }
@@ -374,7 +483,8 @@ export default {
     const isAdultFilter = url.searchParams.get('isAdult') ?? url.searchParams.get('nsfw');
     const sourceFilter = url.searchParams.get('source');
     const anilistFilter = url.searchParams.get('anilist_id');
-    const externalIdFilters = ['mal_id', 'tmdb_id', 'imdb_id', 'tvdb_id']
+    const anilistSlugFilter = url.searchParams.get('anilist_slug_id');
+    const externalIdFilters = ['mal_id', 'tmdb_id', 'imdb_id', 'tvdb_id', 'kitsu_id']
       .map(name => [name, url.searchParams.get(name)])
       .filter(([, value]) => value !== null);
     const sortBy = url.searchParams.get('sort_by') || url.searchParams.get('order_by') || url.searchParams.get('sort');
@@ -383,21 +493,27 @@ export default {
     const sortAliases = {
       score: 'average_score',
       averagescore: 'average_score',
+      average_score: 'average_score',
       release_date: 'start_date',
       releasedate: 'start_date',
+      start_date: 'start_date',
       year: 'season_year',
+      season_year: 'season_year',
       title: 'title',
+      title_english: 'title_english',
+      title_romaji: 'title_romaji',
       id: 'id',
       anilist_id: 'id',
+      anilist_slug_id: 'anilist_slug_id',
       popularity: 'popularity',
       episodes: 'episodes',
-      season_year: 'season_year',
-      average_score: 'average_score',
-      start_date: 'start_date',
+      total_episodes: 'total_episodes',
+      subbed_episodes: 'subbed_episodes',
+      dubbed_episodes: 'dubbed_episodes',
       mal_id: 'mal_id',
+      kitsu_id: 'kitsu_id',
       status: 'status',
       format: 'format',
-      total_episodes: 'total_episodes',
       tmdb_id: 'tmdb_id',
       imdb_id: 'imdb_id',
       tvdb_id: 'tvdb_id'
@@ -510,12 +626,19 @@ export default {
         filtered = filtered.filter(a => String(a.id ?? a.anilist_id) === anilistFilter);
       }
 
+      if (anilistSlugFilter) {
+        const m = anilistSlugFilter.match(/-(\d+)$/);
+        const targetId = m ? m[1] : anilistSlugFilter;
+        filtered = filtered.filter(a => String(a.id ?? a.anilist_id) === targetId);
+      }
+
       for (const [field, value] of externalIdFilters) {
         filtered = filtered.filter(a => {
-          if (field === 'mal_id') return String(a.idMal ?? '') === value;
+          if (field === 'mal_id') return String(a.idMal ?? a.mal_id ?? '') === value;
           if (field === 'tmdb_id') return String(a.tmdb_id ?? '') === value;
           if (field === 'imdb_id') return String(a.imdb_id ?? '') === value;
           if (field === 'tvdb_id') return String(a.tvdb_id ?? '') === value;
+          if (field === 'kitsu_id') return String(a.kitsu_id ?? '') === value;
           return false;
         });
       }
@@ -531,8 +654,11 @@ export default {
               if (key === 'title') {
                 return anime.title?.english || anime.title?.romaji || anime.title?.native || '';
               }
-              if (key === 'total_episodes') return anime.episodes ?? 0;
-              if (key === 'mal_id') return anime.idMal ?? 0;
+              if (key === 'title_english') return anime.title?.english || '';
+              if (key === 'title_romaji') return anime.title?.romaji || '';
+              if (key === 'total_episodes') return anime.total_episodes ?? anime.episodes ?? 0;
+              if (key === 'mal_id') return anime.idMal ?? anime.mal_id ?? 0;
+              if (key === 'kitsu_id') return anime.kitsu_id ?? 0;
               if (['tmdb_id', 'imdb_id', 'tvdb_id'].includes(key)) {
                 return anime[key] ?? 0;
               }
@@ -552,96 +678,45 @@ export default {
       const paginated = filtered.slice(offset, offset + limit);
       
       const mapFields = (a) => {
-         let tmdbPoster = a.tmdb_poster_path ? `https://image.tmdb.org/t/p/original${a.tmdb_poster_path}` : (a.cover_image ? a.cover_image.extra_large : null);
-         let tmdbBackdrop = a.tmdb_backdrop_path ? `https://image.tmdb.org/t/p/original${a.tmdb_backdrop_path}` : a.banner_image;
+         const trimmed = formatTrimmedAnime(a);
          
-         const anilistId = a.id ?? a.anilist_id;
-         const title = a.title || {};
-         const coverImage = a.cover_image || {};
+         if (isList && !fieldsFilter) {
+           return trimmed;
+         }
+
          let epList = [];
          if (!isList && a.episodes > 0) {
            for (let i = 1; i <= a.episodes; i++) {
              epList.push({
                episode: i,
                title: `Episode ${i}`,
-               image: a.banner_image || (a.cover_image ? a.cover_image.extra_large : null)
+               image: trimmed.banner_url || trimmed.cover_image_url
              });
            }
          }
 
-         let logoUrl = a.tmdb_logo_path ? `https://image.tmdb.org/t/p/original${a.tmdb_logo_path}` : (a.cover_image ? a.cover_image.extra_large : null);
-         
-         let mapped = { 
+         let fullMapped = { 
            ...a, 
-           id: anilistId,
-           anilist_id: anilistId,
-           mal_id: a.idMal ?? null,
-           tmdb_id: a.tmdb_id ?? null,
-           imdb_id: a.imdb_id ?? null,
-           tvdb_id: a.tvdb_id ?? null,
-           title,
-           title_english: title.english || '',
-           title_romaji: title.romaji || '',
-           genres: a.genres || [],
-           cover_image: coverImage,
-           cover_image_url: a.cover_image?.extra_large || null,
-           theme_color: a.cover_image?.color || null,
-           total_episodes: a.episodes ?? 0,
-           tmdb_poster: tmdbPoster, 
-           tmdb_backdrop: tmdbBackdrop, 
+           ...trimmed,
+           id: trimmed.anilist_id,
+           title: a.title || { english: trimmed.title_english, romaji: trimmed.title_romaji },
+           cover_image: a.cover_image || { extra_large: trimmed.cover_image_url, color: trimmed.theme_color },
+           tmdb_poster: a.tmdb_poster_path ? `https://image.tmdb.org/t/p/original${a.tmdb_poster_path}` : trimmed.cover_image_url,
+           tmdb_backdrop: trimmed.backdrop_url,
            episode_list: epList,
-           logo: logoUrl 
+           logo: trimmed.logo_url 
          };
          
          if (fieldsFilter) {
            const requestedFields = fieldsFilter.split(',').map(f => f.trim());
            const selected = {};
            requestedFields.forEach(f => {
-             if (mapped[f] !== undefined) selected[f] = mapped[f];
+             if (fullMapped[f] !== undefined) selected[f] = fullMapped[f];
            });
            return selected;
-         } else if (isList) {
-           return {
-             id: mapped.id,
-             anilist_id: mapped.anilist_id,
-             mal_id: mapped.mal_id,
-             tmdb_id: mapped.tmdb_id,
-             tvdb_id: mapped.tvdb_id,
-             imdb_id: mapped.imdb_id,
-             title: mapped.title,
-             title_english: mapped.title_english,
-             title_romaji: mapped.title_romaji,
-             genres: mapped.genres,
-             description: a.description,
-             synonyms: a.synonyms,
-             cover_image: coverImage,
-             cover_image_url: mapped.cover_image_url,
-             theme_color: mapped.theme_color,
-             banner_image: a.banner_image,
-             tmdb_poster: tmdbPoster,
-             tmdb_backdrop: tmdbBackdrop,
-             logo: mapped.logo,
-             total_episodes: mapped.total_episodes,
-             episodes: a.episodes,
-             duration: a.duration,
-             season: a.season,
-             season_year: a.season_year,
-             format: a.format,
-             status: a.status,
-             start_date: a.start_date,
-             end_date: a.end_date,
-             average_score: a.average_score,
-             popularity: a.popularity,
-             studios: a.studios,
-             tags: a.tags,
-             is_adult: a.is_adult,
-             source: a.source,
-             country_of_origin: a.country_of_origin,
-             trailer_url: a.trailer_url,
-             next_airing_episode: a.next_airing_episode
-           };
          }
-         return mapped;
+
+         return fullMapped;
       };
 
       if (!isList) {
@@ -691,34 +766,14 @@ export default {
         let items = await fetchGitHubJSON('/raw.json');
         if (!items) return jsonResponse({error: 'Data not found'}, 404);
 
-        const mapFieldsBasic = (a) => {
-           let tmdbPoster = a.tmdb_poster_path ? `https://image.tmdb.org/t/p/original${a.tmdb_poster_path}` : (a.cover_image ? a.cover_image.extra_large : null);
-           let tmdbBackdrop = a.tmdb_backdrop_path ? `https://image.tmdb.org/t/p/original${a.tmdb_backdrop_path}` : a.banner_image;
-           let logoUrl = a.tmdb_logo_path ? `https://image.tmdb.org/t/p/original${a.tmdb_logo_path}` : (a.cover_image ? a.cover_image.extra_large : null);
-           return {
-             id: a.id || a.anilist_id,
-             anilist_id: a.id || a.anilist_id,
-             title: a.title,
-             cover_image: a.cover_image,
-             poster: tmdbPoster,
-             backdrop: tmdbBackdrop,
-             logo: logoUrl,
-             status: a.status,
-             format: a.format,
-             episodes: a.episodes,
-             score: a.average_score,
-             next_airing: a.next_airing_episode
-           };
-        };
-
-        const spotlight = items.filter(a => a.status === 'Releasing').sort((a,b) => (b.popularity || 0) - (a.popularity || 0)).slice(0, 10).map(mapFieldsBasic);
-        const trending = items.sort((a,b) => (b.popularity || 0) - (a.popularity || 0)).slice(0, 15).map(mapFieldsBasic);
-        const top_rated = items.sort((a,b) => (b.average_score || 0) - (a.average_score || 0)).slice(0, 10).map(mapFieldsBasic);
+        const spotlight = items.filter(a => a.status === 'Releasing').sort((a,b) => (b.popularity || 0) - (a.popularity || 0)).slice(0, 10).map(formatTrimmedAnime);
+        const trending = items.sort((a,b) => (b.popularity || 0) - (a.popularity || 0)).slice(0, 15).map(formatTrimmedAnime);
+        const top_rated = items.sort((a,b) => (b.average_score || 0) - (a.average_score || 0)).slice(0, 10).map(formatTrimmedAnime);
         
         // Next airing schedule logic
         let jadwal = items.filter(a => a.next_airing_episode && a.next_airing_episode.time_until_airing > 0);
         jadwal.sort((a,b) => a.next_airing_episode.time_until_airing - b.next_airing_episode.time_until_airing);
-        jadwal = jadwal.slice(0, 15).map(mapFieldsBasic);
+        jadwal = jadwal.slice(0, 15).map(formatTrimmedAnime);
 
         return jsonResponse({
           success: true,
@@ -726,11 +781,9 @@ export default {
           data_source: "Official AniList GraphQL API",
           data_enrichment: "TMDB (Posters, Backdrops, Logos)",
           available_features: [
-            "id", "titles (romaji, english, native, synonyms)", "format", "status",
-            "episodes", "duration", "genres", "tags (with spoiler flag)", "studios", "score",
-            "popularity", "is_adult", "country_of_origin", "source",
-            "trailer", "airing_schedule", "relations (prequel/sequel)", "images (cover, banner, tmdb_poster, tmdb_backdrop, logo)",
-            "AniList IDs", "episode_list (auto-generated)"
+            "anilist_slug_id", "titles (romaji, english)", "images (cover, thumbnail, backdrop, banner, logo)",
+            "external_ids (anilist, mal, kitsu, tmdb, imdb)", "episodes (subbed, dubbed, total)",
+            "genres", "theme_color", "age_rating"
           ],
           endpoints: [
             "GET /api/anime", 
@@ -741,6 +794,7 @@ export default {
             "GET /api/v1/anime/:id",
             "GET /api/anime/anilist/:id",
             "GET /api/anime/mal/:id",
+            "GET /api/anime/kitsu/:id",
             "GET /api/anime/tvdb/:id",
             "GET /api/anime/imdb/:id",
             "GET /api/anime/tmdb/:id",
@@ -790,10 +844,12 @@ export default {
         return jsonResponse(processItems([randomItem], false));
       }
 
-      const matchAnilistId = path.match(/^\/(?:api\/)?(?:v1\/)?anime\/anilist\/(\d+)$/);
+      const matchAnilistId = path.match(/^\/(?:api\/)?(?:v1\/)?anime\/anilist\/([a-zA-Z0-9_-]+)$/);
       if (matchAnilistId) {
         if (paginationError) return jsonResponse({error: paginationError}, 400);
-        const id = matchAnilistId[1];
+        let id = matchAnilistId[1];
+        const slugMatch = id.match(/-(\d+)$/);
+        if (slugMatch) id = slugMatch[1];
         const items = await fetchGitHubJSON('/raw.json');
         if (!items) return jsonResponse({error: 'Data not found'}, 404);
         const anime = items.filter(a => String(a.id ?? a.anilist_id) === id);
@@ -801,10 +857,12 @@ export default {
         return jsonResponse({error: "Anime not found"}, 404);
       }
 
-      const matchId = path.match(/^\/(?:api\/)?(?:v1\/)?anime\/(\d+)(?:\/(info|details))?$/);
+      const matchId = path.match(/^\/(?:api\/)?(?:v1\/)?anime\/([a-zA-Z0-9_-]+)(?:\/(info|details))?$/);
       if (matchId) {
         if (paginationError) return jsonResponse({error: paginationError}, 400);
-        const id = matchId[1];
+        let id = matchId[1];
+        const slugMatch = id.match(/-(\d+)$/);
+        if (slugMatch) id = slugMatch[1];
         const items = await fetchGitHubJSON('/raw.json');
         if (!items) return jsonResponse({error: 'Data not found'}, 404);
         const anime = items.filter(a => String(a.id ?? a.anilist_id) === id);
@@ -812,17 +870,18 @@ export default {
         return jsonResponse({error: "Anime not found"}, 404);
       }
       
-      const matchSource = path.match(/^\/(?:api\/)?(?:v1\/)?anime\/(mal|tvdb|imdb|tmdb)\/(.+)$/);
+      const matchSource = path.match(/^\/(?:api\/)?(?:v1\/)?anime\/(mal|tvdb|imdb|tmdb|kitsu)\/(.+)$/);
       if (matchSource) {
         const source = matchSource[1];
         const id = matchSource[2];
         const items = await fetchGitHubJSON('/raw.json');
         if (!items) return jsonResponse({error: 'Data not found'}, 404);
         let anime = [];
-        if (source === 'mal') anime = items.filter(a => String(a.idMal ?? '') === id);
+        if (source === 'mal') anime = items.filter(a => String(a.idMal ?? a.mal_id ?? '') === id);
         else if (source === 'tvdb') anime = items.filter(a => String(a.tvdb_id ?? '') === id);
         else if (source === 'imdb') anime = items.filter(a => String(a.imdb_id ?? '') === id);
         else if (source === 'tmdb') anime = items.filter(a => String(a.tmdb_id ?? '') === id);
+        else if (source === 'kitsu') anime = items.filter(a => String(a.kitsu_id ?? '') === id);
         
         if (anime.length > 0) return jsonResponse(processItems(anime, false));
         return jsonResponse({error: "Anime not found"}, 404);

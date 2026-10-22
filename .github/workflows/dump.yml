@@ -40,10 +40,16 @@ jobs:
       - name: Update AniList data
         if: github.event_name == 'schedule'
         run: python scripts/dump_anilist.py --mode incremental --hours 26
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          TMDB: ${{ secrets.TMDB }}
 
       - name: Update AniList data (manual)
         if: github.event_name == 'workflow_dispatch'
         run: python scripts/dump_anilist.py --mode "${{ inputs.mode }}"
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          TMDB: ${{ secrets.TMDB }}
 
       - name: Commit data changes
         run: |

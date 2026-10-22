@@ -220,6 +220,7 @@ def generate_indexes(base_dir):
         merged["tmdb_id"] = tmdb_id
         merged["tvdb_id"] = m_item.get("thetvdb")
         merged["imdb_id"] = m_item.get("imdb")
+        merged["kitsu_id"] = m_item.get("kitsu")
         
         # Fetch TMDB metadata dynamically if key is available
         poster_path, backdrop_path, logo_path = get_tmdb_images(tmdb_id)
