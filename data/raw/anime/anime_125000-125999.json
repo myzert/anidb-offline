@@ -280,7 +280,7 @@
   "125038": {
     "id": 125038,
     "idMal": 43439,
-    "updatedAt": 1792648934,
+    "updatedAt": 1792663329,
     "title": {
       "romaji": "Shadows House",
       "english": "SHADOWS HOUSE",
@@ -781,7 +781,7 @@
   "125367": {
     "id": 125367,
     "idMal": 43608,
-    "updatedAt": 1792652414,
+    "updatedAt": 1792663210,
     "title": {
       "romaji": "Kaguya-sama wa Kokurasetai: Ultra Romantic",
       "english": "Kaguya-sama: Love is War -Ultra Romantic-",
@@ -1582,7 +1582,7 @@
   "125426": {
     "id": 125426,
     "idMal": 43692,
-    "updatedAt": 1792645304,
+    "updatedAt": 1792663329,
     "title": {
       "romaji": "Gokushufudou",
       "english": "The Way of the Househusband",
@@ -1771,7 +1771,7 @@
   "125206": {
     "id": 125206,
     "idMal": 43523,
-    "updatedAt": 1792656107,
+    "updatedAt": 1792663265,
     "title": {
       "romaji": "Tsuki ga Michibiku Isekai Douchuu",
       "english": "TSUKIMICHI -Moonlit Fantasy-",
@@ -4496,6 +4496,73 @@
           }
         }
       ]
+    }
+  },
+  "125330": {
+    "id": 125330,
+    "idMal": 50040,
+    "updatedAt": 1792663328,
+    "title": {
+      "romaji": "Jouyatou",
+      "english": "Joyato",
+      "native": "常夜燈"
+    },
+    "type": "ANIME",
+    "format": "MUSIC",
+    "status": "FINISHED",
+    "description": "Music video animated by coalowl for the song <i>Jouyatou</i> by PEOPLE 1.",
+    "episodes": 1,
+    "duration": 4,
+    "season": null,
+    "seasonYear": null,
+    "startDate": {
+      "year": 2020,
+      "month": 7,
+      "day": 27
+    },
+    "endDate": {
+      "year": 2020,
+      "month": 7,
+      "day": 27
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx125330-Jb037QNifxqV.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx125330-Jb037QNifxqV.png",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx125330-Jb037QNifxqV.png",
+      "color": "#e4785d"
+    },
+    "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/125330-B3nnkrV5O5as.jpg",
+    "genres": [],
+    "synonyms": [
+      "Night Light"
+    ],
+    "averageScore": 52,
+    "popularity": 291,
+    "isAdult": false,
+    "source": "ORIGINAL",
+    "countryOfOrigin": "JP",
+    "tags": [
+      {
+        "name": "Rotoscoping",
+        "rank": 79,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Vertical Video",
+        "rank": 20,
+        "isMediaSpoiler": false
+      }
+    ],
+    "studios": {
+      "nodes": []
+    },
+    "trailer": {
+      "id": "OZpv_AcPCKg",
+      "site": "youtube"
+    },
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": []
     }
   }
 }
