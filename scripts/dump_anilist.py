@@ -421,5 +421,12 @@ def main():
     
     generate_indexes(base_dir)
 
+    try:
+        from export_dumps import export_all
+    except ImportError:
+        from scripts.export_dumps import export_all
+    logging.info("Generating database release dumps (CSV, XLSX, TAR.GZ, ZIP, JSON)...")
+    export_all()
+
 if __name__ == "__main__":
     main()

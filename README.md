@@ -1,94 +1,200 @@
 # AniDB Offline (ANIDUMP)
 
-This repository contains a comprehensive dump of anime metadata from AniList. It features advanced mapping (using `nattadasu/animeApi`) to TMDB, TVDB, IMDB, and MAL IDs. It provides a full backend served via Cloudflare Workers, exposing a GraphQL endpoint and a comprehensive REST API.
+[![Anime Metadata Sync](https://github.com/myzert/anidb-offline/actions/workflows/dump.yml/badge.svg)](https://github.com/myzert/anidb-offline/actions/workflows/dump.yml)
+[![Website](https://img.shields.io/badge/Website-anidb.my.id-blue)](https://anidb.my.id)
+[![API](https://img.shields.io/badge/API-api.anidb.my.id-green)](https://api.anidb.my.id/api)
+[![GraphQL](https://img.shields.io/badge/GraphQL-graphiql.anidb.my.id-purple)](https://graphiql.anidb.my.id)
 
-## Project Structure
+AniDB Offline is a high-performance, community-driven anime metadata repository and multi-format API powered by Cloudflare Workers. It merges the complete AniList anime database with accurate ID mappings to MyAnimeList, Kitsu, TheMovieDB (TMDB), TVDB, and IMDB.
 
-- `data/raw/raw.json`: The complete merged database of all anime, containing comprehensive metadata (English, Romaji, Native, and Alternative titles, formatting, schedules, genres, images, and external ID mappings).
-- `data/raw/anime/`: Contains raw chunks of data from AniList used for updates.
-- `scripts/dump_anilist.py`: The main script to fetch data from AniList, map IDs using animeApi, and generate the final `raw.json`.
-- `worker/`: A Cloudflare Worker built with `graphql-yoga` that serves both GraphQL and REST endpoints dynamically based on the domain.
+Visiting the root domain automatically points to [anidb.my.id](https://anidb.my.id), while API consumers access structured JSON endpoints at `api.anidb.my.id` and GraphQL at `graphiql.anidb.my.id`.
 
-## Features
+---
 
-- **Comprehensive Data**: Complete metadata including English, Japanese (Romaji/Native), and alternative titles, descriptions, genres, start/end dates, TMDB backdrops and posters.
-- **ID Mappings**: Maps AniList IDs directly to MyAnimeList, TheMovieDB, TheTVDB, and IMDB.
-- **GraphQL API**: Access data using GraphQL queries at `graphiql.anidb.my.id`. The schema closely reflects AniList's schema structure (`Page` and `Media`).
-- **REST API**: Robust REST API at `api.anidb.my.id` with sorting, filtering, searching, and precise field selections to minimize bandwidth.
-- **TMDB Image Integration**: Mapped TMDB IDs are utilized to provide structured TMDB poster and backdrop image paths (`tmdb_poster`, `tmdb_backdrop`, `logo`).
+## Standard Anime Data Format
 
-## REST API Endpoints
+All search, listing, and dashboard endpoints return records adhering to this standardized schema:
 
-The Cloudflare worker exposes several endpoints on the REST domain:
-- `GET /api/anime` (List all anime)
-- `GET /api/v1/search` (Versioned, paginated anime search)
-- `GET /api/anime/:id` (Get specific anime by AniList ID)
-- `GET /api/v1/anime/:id` (Versioned detail by AniList ID)
-- `GET /api/anime/anilist/:id` (Look up by AniList ID or slug)
-- `GET /api/anime/random` (Get a random anime)
-- `GET /api/anime/mal/:id` (Get anime by MyAnimeList ID)
-- `GET /api/anime/kitsu/:id` (Get anime by Kitsu ID)
-- `GET /api/anime/tvdb/:id` (Get anime by TVDB ID)
-- `GET /api/anime/imdb/:id` (Get anime by IMDB ID)
-- `GET /api/anime/tmdb/:id` (Get anime by TMDB ID)
-- `GET /api/genres`, `/api/tags`, `/api/studios`, `/api/seasons` (Metadata endpoints)
-
-### Query Parameters for `/api/v1/search` (also available on `/api/anime`)
-Use these parameters to narrow down search results dynamically.
-- `q`, `search`, or `query`: Full-text search across titles, synopsis, and synonyms (e.g. `?q=naruto`)
-- `genres` or `genre_ids`: Filter by genres (e.g. `?genres=action,romance`)
-- `status`: Filter by broadcast status (e.g. `?status=RELEASING`)
-- `type` or `format`: Filter by format (e.g. `?type=TV`)
-- `season` and `year`: Filter by release season/year (e.g. `?season=FALL&year=2026`)
-- `studio`: Filter by animation studio (e.g. `?studio=mappa`)
-- `anilist_id`, `anilist_slug_id`, `mal_id`, `kitsu_id`, `tmdb_id`, `imdb_id`, `tvdb_id`: Filter by external ID or slug.
-- `exclude_genres` and `genre_mode=all|any`: Exclude genres or choose whether all/any requested genres must match.
-- `min_score`, `max_score`: Filter by AniList score (0-100).
-- `sort_by`, `order_by`, or `sort`: Sort by `score`, `popularity`, `release_date`, `title`, `episodes`, or ID; comma-separated fields are accepted (e.g. `?sort=-score,popularity`).
-- `sort_order` or `order`: Sort direction (`asc`, `desc`). Prefix a sort field with `-` for descending (e.g. `?sort_by=-score`)
-- `fields`: Field selection to retrieve only required fields (e.g. `?fields=anilist_id,title_english,cover_image_url`)
-- `limit` and `offset`: Pagination controls (list limit is capped at 100).
-- `page`: Page-based pagination; `offset` takes precedence when both are supplied.
-
-Example: `GET /api/v1/search?limit=20&offset=40&sort=-score,popularity&genres=Action,Drama&genre_mode=any`
-
-List responses include `total`, `count`, `limit`, `offset`, `page`, `total_pages`, `has_next`, and `next_offset`. By default each result item in home (`spotlight`, `trending`, `top_rated`, `jadwal`) and search/list endpoints includes the unified format:
 ```json
 {
-  "anilist_slug_id": "attack-on-titan-16498",
-  "thumbnail_url": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx16498-buvcRTBx4NSm.jpg",
-  "cover_image_url": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16498-buvcRTBx4NSm.jpg",
-  "backdrop_url": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/16498-8jpFCOcDmneX.jpg",
-  "banner_url": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/16498-8jpFCOcDmneX.jpg",
-  "logo_url": null,
-  "theme_color": "#f1a143",
-  "title_english": "Attack on Titan",
-  "title_romaji": "Shingeki no Kyojin",
-  "genres": ["Action", "Drama", "Fantasy", "Mystery"],
-  "mal_id": 16498,
+  "anime_id": "attack-on-titan-86tu7o",
   "anilist_id": 16498,
-  "kitsu_id": 7442,
-  "tmdb_id": 1429,
-  "imdb_id": "tt2560140",
-  "subbed_episodes": 25,
-  "dubbed_episodes": 25,
-  "total_episodes": 25,
-  "age_rating": "TV-MA"
+  "title": {
+    "english": "Attack on Titan",
+    "native": "進撃の巨人",
+    "romaji": "Shingeki no Kyojin"
+  },
+  "cover_image": {
+    "color": "#f1a143",
+    "extra_large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16498-buvcRTBx4NSm.jpg",
+    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx16498-buvcRTBx4NSm.jpg",
+    "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx16498-buvcRTBx4NSm.jpg"
+  },
+  "images": {
+    "backdrop": "https://image.tmdb.org/t/p/original/hT9123456789.jpg",
+    "banner": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/16498.jpg",
+    "logo": "https://image.tmdb.org/t/p/original/y6L8P2yA11O21w3z41z60.png"
+  },
+  "format": "TV",
+  "status": "FINISHED",
+  "genres": [
+    "Action",
+    "Drama",
+    "Fantasy",
+    "Mystery"
+  ],
+  "season": "SPRING",
+  "season_year": 2013,
+  "episodes": 25,
+  "duration": "24m",
+  "average_score": 85,
+  "popularity": 980340,
+  "rating": "R - 17+ (violence & profanity)",
+  "external_ids": {
+    "mal": 16498,
+    "kitsu": 7442,
+    "tmdb": 1429,
+    "imdb": "tt2560140"
+  }
 }
 ```
 
+---
+
+## REST API Endpoints
+
+### Core & Search Endpoints
+| Endpoint | Description |
+|---|---|
+| `GET /api` or `GET /api/home` | Welcome dashboard with live spotlight, trending, top rated, and airing schedules |
+| `GET /api/v1/search` | Paginated full-text search with dynamic filters & sorting |
+| `GET /api/v1/anime` | Paginated listing of all anime records |
+| `GET /api/v1/anime/:id` | Full detail by `anime_id` (e.g. `attack-on-titan-86tu7o`) or AniList ID (`16498`) |
+| `GET /api/v1/anime/:id/episodes` | Auto-generated episode listing with images and titles |
+| `GET /api/v1/anime/:id/relations` | Related media (prequels, sequels, spinoffs, side stories) |
+
+### Jikan-Style Discovery Endpoints
+| Endpoint | Description |
+|---|---|
+| `GET /api/v1/top/anime` | Top anime ranking (`?filter=score\|bypopularity\|airing\|upcoming`) |
+| `GET /api/v1/seasons/now` | Current season anime chart (dynamically computed from UTC date) |
+| `GET /api/v1/seasons/:year/:season` | Specific seasonal chart (e.g. `/api/v1/seasons/2026/fall`) |
+| `GET /api/v1/schedules` | Live airing schedule ordered by next episode release |
+| `GET /api/v1/random/anime` | Returns a random anime with optional filter parameters |
+| `GET /api/v1/genres` | All anime genres ranked with total anime count |
+| `GET /api/v1/studios` | All animation studios ranked with total anime count |
+| `GET /api/v1/dumps` | Direct download links and metadata for CSV, XLSX, TAR.GZ, ZIP releases |
+
+### Direct External ID Lookup Endpoints
+| Endpoint | Description |
+|---|---|
+| `GET /api/v1/anime/mal/:id` | Lookup anime by MyAnimeList ID |
+| `GET /api/v1/anime/kitsu/:id` | Lookup anime by Kitsu ID |
+| `GET /api/v1/anime/tmdb/:id` | Lookup anime by TheMovieDB ID |
+| `GET /api/v1/anime/imdb/:id` | Lookup anime by IMDB ID |
+| `GET /api/v1/anime/anilist/:id` | Lookup anime by AniList ID or slug |
+
+---
+
+## Query Parameters for `/api/v1/search`
+
+- `q`, `search`, `query`: Full-text search across titles (English, Romaji, Native), synopsis, and synonyms (e.g. `?q=titan`).
+- `genres`: Comma-separated genre list (e.g. `?genres=action,fantasy`).
+- `exclude_genres`: Exclude unwanted genres (e.g. `?exclude_genres=ecchi`).
+- `genre_mode`: Set to `all` (default) or `any`.
+- `status`: Filter by broadcast status (`FINISHED`, `RELEASING`, `NOT_YET_RELEASED`, `CANCELLED`).
+- `type` or `format`: Filter by media format (`TV`, `MOVIE`, `OVA`, `ONA`, `SPECIAL`).
+- `season`: Release season (`WINTER`, `SPRING`, `SUMMER`, `FALL`).
+- `year`: Filter by release year (e.g. `?year=2024`).
+- `rating`: Filter by age rating (e.g. `?rating=17+` or `?rating=PG-13`).
+- `studio`: Filter by studio name (e.g. `?studio=mappa`).
+- `min_score`, `max_score`: Filter by average score (0 to 100).
+- `anilist_id`, `anime_id`, `mal_id`, `kitsu_id`, `tmdb_id`, `imdb_id`: Filter directly by an ID.
+- `sort`: Order by `score`, `popularity`, `release_date`, `title`, `episodes`. Prefix with `-` for descending (e.g. `?sort=-score,popularity`).
+- `fields`: Comma-separated list to project only required fields.
+- `limit`, `offset`, `page`: Standard pagination parameters (`limit` up to 100).
+
+---
+
+## Database Releases (CSV / XLSX / TAR.GZ / ZIP)
+
+The repository provides automated 24-hour database exports in multiple formats located under `data/releases/` and exposed via the `/api/v1/dumps` endpoint.
+
+All dumps follow the standardized naming convention in UTC+7 (Western Indonesia Time / WIB):
+```text
+Anidb_YYYY-MM-DD_HH-mm-ss_UTC+7.csv
+Anidb_YYYY-MM-DD_HH-mm-ss_UTC+7.xlsx
+Anidb_YYYY-MM-DD_HH-mm-ss_UTC+7.tar.gz
+Anidb_YYYY-MM-DD_HH-mm-ss_UTC+7.zip
+Anidb_YYYY-MM-DD_HH-mm-ss_UTC+7.json
+```
+
+Example Release Files:
+- `Anidb_2026-10-22_16-31-02_UTC+7.csv`: Complete database table for spreadsheet & data science use.
+- `Anidb_2026-10-22_16-31-02_UTC+7.xlsx`: Native Microsoft Excel workbook with styled headers and frozen panes.
+- `Anidb_2026-10-22_16-31-02_UTC+7.tar.gz`: Compressed archive containing JSON, CSV, and XLSX files.
+- `Anidb_2026-10-22_16-31-02_UTC+7.zip`: Standard ZIP archive containing JSON, CSV, and XLSX files.
+
+---
+
 ## GraphQL API
 
-To access the GraphQL interface, visit the GraphQL host. It supports querying multiple nodes using `animeList` and detailed nodes using `anime(id: Int!)`.
+Access the interactive GraphQL IDE at `graphiql.anidb.my.id` or send `POST` requests to `/graphql`:
+
+```graphql
+query {
+  animeList(page: 1, perPage: 10, search: "Titan", sort: ["score"]) {
+    pageInfo {
+      total
+      hasNextPage
+    }
+    media {
+      anime_id
+      anilist_id
+      title {
+        english
+        romaji
+      }
+      images {
+        backdrop
+        banner
+        logo
+      }
+      average_score
+      rating
+      external_ids {
+        mal
+        kitsu
+        tmdb
+        imdb
+      }
+    }
+  }
+}
+```
+
+---
 
 ## Updating the Data
 
-You can rebuild the database and mappings using the provided Python script. Run the script locally:
+To run the data sync and generate database releases locally:
+
 ```bash
 python3 -m pip install -r scripts/requirements.txt
+
+# Run full AniList dump and export releases
 python3 scripts/dump_anilist.py --mode full
+
+# Run incremental refresh (last 26 hours)
+python3 scripts/dump_anilist.py --mode incremental --hours 26
+
+# Export release packages only
+python3 scripts/export_dumps.py
 ```
-For regular refreshes, use `python3 scripts/dump_anilist.py --mode incremental --hours 26`. Both modes divide the AniList catalog into bounded `id_in` ranges, avoiding the 5,000-result page-depth limit. Incremental mode orders entries by `UPDATED_AT_DESC` within each ID range and stops at the requested cutoff. Full mode orders by ID and fetches each range completely. The GitHub Actions workflow runs the incremental update daily; dispatch it manually with `full` to rebuild AniList data. The workflow commits changed JSON data to the repository.
+
+The GitHub Actions workflow runs every 24 hours to sync changes, populate TMDB imagery if `TMDB_API_KEY` is provided, and generate clean release packages.
+
+---
 
 ## License
 
