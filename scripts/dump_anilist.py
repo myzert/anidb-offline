@@ -8,15 +8,15 @@ import logging
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def fetch_anilist_page(page=1, max_retries=5):
+def fetch_anilist_page(page=1, max_retries=5, ids=None, sort="UPDATED_AT_DESC", per_page=50):
     url = "https://graphql.anilist.co"
     query = '''
-    query ($page: Int, $perPage: Int) {
+    query ($page: Int, $perPage: Int, $idIn: [Int], $sort: [MediaSort]) {
       Page(page: $page, perPage: $perPage) {
         pageInfo {
           hasNextPage
         }
-        media(type: ANIME, sort: UPDATED_AT_DESC) {
+        media(type: ANIME, sort: $sort, id_in: $idIn) {
           id
           idMal
           updatedAt
@@ -70,7 +70,9 @@ def fetch_anilist_page(page=1, max_retries=5):
       }
     }
     '''
-    variables = {"page": page, "perPage": 50}
+    variables = {"page": page, "perPage": per_page, "sort": [sort]}
+    if ids is not None:
+        variables["idIn"] = ids
     
     retries = 0
     while retries < max_retries:
@@ -88,14 +90,31 @@ def fetch_anilist_page(page=1, max_retries=5):
                 time.sleep(5)
                 retries += 1
             else:
-                logging.error(f"Error {response.status_code}: {response.text}")
-                return None
-        except Exception as e:
+                try:
+                    error_response = response.json()
+                except ValueError:
+                    error_response = {"errors": [{"message": response.text}]}
+                logging.error(
+                    f"AniList returned HTTP {response.status_code} on page {page}: {response.text}"
+                )
+                return error_response
+        except (requests.RequestException, ValueError) as e:
             logging.error(f"Exception: {e}")
             time.sleep(5)
             retries += 1
     logging.error(f"Max retries reached on AniList page {page}.")
     return None
+
+
+def get_page_data(response):
+    if not isinstance(response, dict):
+        return None
+    data = response.get('data')
+    if not isinstance(data, dict):
+        return None
+    page_data = data.get('Page')
+    return page_data if isinstance(page_data, dict) else None
+
 
 def save_anime_data(anime_list, base_dir):
     group_size = 1000
@@ -324,20 +343,64 @@ def main():
     if args.mode != 'index_only':
         logging.info(f"Starting AniList dump. Saving to {base_dir}")
         total_fetched = 0
-        page = 1
         hours = args.hours if args.mode == 'incremental' else None
         cutoff = int(time.time() - hours * 60 * 60) if hours is not None else None
+        if cutoff is None:
+            logging.info("Finding highest AniList ID...")
+            latest_response = fetch_anilist_page(page=1, sort="ID_DESC", per_page=1)
+            latest_page_data = get_page_data(latest_response)
+            if latest_page_data is None:
+                errors = latest_response.get('errors') if isinstance(latest_response, dict) else None
+                raise RuntimeError(f"Failed to find highest AniList ID: {errors or 'invalid response'}")
+            latest_media = latest_page_data.get('media', [])
+            if not latest_media:
+                raise RuntimeError("AniList returned no anime while determining the highest ID.")
+            max_id = latest_media[0]['id']
+            chunk_size = 5000
 
-        while True:
-            logging.info(f"Fetching AniList page {page}...")
-            response = fetch_anilist_page(page)
-            if not response or 'data' not in response or 'Page' not in response['data']:
-                raise RuntimeError(f"Failed to fetch AniList page {page}; refusing to write an incomplete dump.")
+            for start_id in range(1, max_id + 1, chunk_size):
+                end_id = min(start_id + chunk_size - 1, max_id)
+                ids = list(range(start_id, end_id + 1))
+                page = 1
+                logging.info(f"Fetching AniList ID range {start_id}-{end_id}...")
 
-            page_data = response['data']['Page']
-            anilist_anime_list = page_data.get('media', [])
-            stop_incremental = False
-            if cutoff is not None:
+                while True:
+                    response = fetch_anilist_page(page=page, ids=ids, sort="ID")
+                    page_data = get_page_data(response)
+                    if page_data is None:
+                        errors = response.get('errors') if isinstance(response, dict) else None
+                        raise RuntimeError(
+                            f"Failed to fetch AniList ID range {start_id}-{end_id}, page {page}; "
+                            f"refusing to write an incomplete dump. GraphQL errors: "
+                            f"{errors or 'response missing data.Page'}"
+                        )
+
+                    anime_list = page_data.get('media', [])
+                    if not anime_list:
+                        break
+                    save_anime_data(anime_list, base_dir)
+                    total_fetched += len(anime_list)
+
+                    if len(anime_list) < 50 or page >= 100:
+                        break
+                    page += 1
+                    time.sleep(0.7)
+
+                time.sleep(0.7)
+        else:
+            page = 1
+            while True:
+                logging.info(f"Fetching AniList updated page {page}...")
+                response = fetch_anilist_page(page=page)
+                page_data = get_page_data(response)
+                if page_data is None:
+                    errors = response.get('errors') if isinstance(response, dict) else None
+                    raise RuntimeError(
+                        f"Failed to fetch AniList page {page}; refusing to write an incomplete dump. "
+                        f"GraphQL errors: {errors or 'response missing data.Page'}"
+                    )
+
+                anilist_anime_list = page_data.get('media', [])
                 recent_anime = []
                 for anime in anilist_anime_list:
                     updated_at = anime.get('updatedAt')
@@ -347,23 +410,24 @@ def main():
                             "refusing to create an incomplete incremental dump."
                         )
                     if int(updated_at) <= cutoff:
-                        stop_incremental = True
                         break
                     recent_anime.append(anime)
-                anilist_anime_list = recent_anime
+                stop_incremental = len(recent_anime) != len(anilist_anime_list)
 
-            if anilist_anime_list:
-                save_anime_data(anilist_anime_list, base_dir)
-                total_fetched += len(anilist_anime_list)
+                if recent_anime:
+                    save_anime_data(recent_anime, base_dir)
+                    total_fetched += len(recent_anime)
 
-            if stop_incremental:
-                break
+                if stop_incremental or not page_data.get('pageInfo', {}).get('hasNextPage'):
+                    break
 
-            if not page_data.get('pageInfo', {}).get('hasNextPage'):
-                break
-
-            page += 1
-            time.sleep(0.7)
+                if page >= 100:
+                    raise RuntimeError(
+                        "Incremental dump reached AniList's 5,000-entry pagination limit "
+                        "before reaching the update cutoff; run a full dump."
+                    )
+                page += 1
+                time.sleep(0.7)
             
         logging.info(f"Dump complete! Total anime fetched/updated: {total_fetched}")
     
