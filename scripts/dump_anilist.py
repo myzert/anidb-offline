@@ -8,15 +8,15 @@ import logging
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def fetch_anilist_page(last_id=0, max_retries=5):
+def fetch_anilist_page(page=1, hours=None, max_retries=5):
     url = "https://graphql.anilist.co"
     query = '''
-    query ($id_in: [Int], $perPage: Int) {
-      Page(page: 1, perPage: $perPage) {
+    query ($page: Int, $perPage: Int, $updatedAtGreater: Int) {
+      Page(page: $page, perPage: $perPage) {
         pageInfo {
           hasNextPage
         }
-        media(type: ANIME, sort: ID, id_in: $id_in) {
+        media(type: ANIME, sort: ID, updatedAt_greater: $updatedAtGreater) {
           id
           idMal
           title {
@@ -69,10 +69,9 @@ def fetch_anilist_page(last_id=0, max_retries=5):
       }
     }
     '''
-    variables = {
-        "id_in": last_id, # Actually passing an array here
-        "perPage": 50
-    }
+    variables = {"page": page, "perPage": 50}
+    if hours is not None:
+        variables["updatedAtGreater"] = int(time.time() - hours * 60 * 60)
     
     retries = 0
     while retries < max_retries:
@@ -96,7 +95,7 @@ def fetch_anilist_page(last_id=0, max_retries=5):
             logging.error(f"Exception: {e}")
             time.sleep(5)
             retries += 1
-    logging.error(f"Max retries reached after id {last_id}.")
+    logging.error(f"Max retries reached on AniList page {page}.")
     return None
 
 def save_anime_data(anime_list, base_dir):
@@ -315,6 +314,8 @@ def main():
     parser = argparse.ArgumentParser(description='Dump Anime Data using AniList API')
     parser.add_argument('--mode', choices=['full', 'incremental', 'index_only'], default='full', 
                         help='Mode of dumping: full (all data), incremental, or index_only')
+    parser.add_argument('--hours', type=float, default=24,
+                        help='For incremental mode, fetch entries updated in the last N hours')
     args = parser.parse_args()
 
     script_dir = Path(__file__).parent.resolve()
@@ -324,29 +325,26 @@ def main():
     if args.mode != 'index_only':
         logging.info(f"Starting AniList dump. Saving to {base_dir}")
         total_fetched = 0
-        max_id = 200000  # AniList IDs are currently up to ~180k
-        chunk_size = 50
-        
-        for start_id in range(1, max_id, chunk_size):
-            id_in = list(range(start_id, start_id + chunk_size))
-            logging.info(f"Fetching anime IDs {start_id} to {start_id + chunk_size - 1}...")
-            
-            data = fetch_anilist_page(id_in)
-            
-            if not data or 'data' not in data or 'Page' not in data['data']:
-                logging.error("Failed to fetch data or invalid format.")
-                # We can just continue, maybe temporary error
-                time.sleep(2)
-                continue
-                
-            page_data = data['data']['Page']
+        page = 1
+        hours = args.hours if args.mode == 'incremental' else None
+
+        while True:
+            logging.info(f"Fetching AniList page {page}...")
+            response = fetch_anilist_page(page, hours=hours)
+            if not response or 'data' not in response or 'Page' not in response['data']:
+                raise RuntimeError(f"Failed to fetch AniList page {page}; refusing to write an incomplete dump.")
+
+            page_data = response['data']['Page']
             anilist_anime_list = page_data.get('media', [])
-            
             if anilist_anime_list:
                 save_anime_data(anilist_anime_list, base_dir)
                 total_fetched += len(anilist_anime_list)
-            
-            time.sleep(0.7)  # Respect AniList rate limit (90 req/min)
+
+            if not page_data.get('pageInfo', {}).get('hasNextPage'):
+                break
+
+            page += 1
+            time.sleep(0.7)
             
         logging.info(f"Dump complete! Total anime fetched/updated: {total_fetched}")
     
