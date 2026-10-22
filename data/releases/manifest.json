@@ -1,27 +1,910 @@
 {
-  "latest_release": "Anidb_2026-10-22_16-31-02_UTC+7",
-  "timestamp_utc7": "2026-10-22_16-31-02_UTC+7",
+  "latest_release": "Anidb_2026-10-22_16-29-11_UTC+7",
+  "timestamp_utc7": "2026-10-22_16-29-11_UTC+7",
   "total_anime": 6974,
+  "status": {
+    "sync_frequency": "24-hour dynamic incremental sync",
+    "timestamp_utc7": "2026-10-22_16-29-11_UTC+7",
+    "timestamp_utc": "2026-10-22 09:45:38 UTC",
+    "formats": {
+      "TV": 3246,
+      "ONA": 956,
+      "OVA": 949,
+      "MOVIE": 942,
+      "SPECIAL": 363,
+      "TV_SHORT": 288,
+      "MUSIC": 175,
+      "UNKNOWN": 55
+    },
+    "statuses": {
+      "FINISHED": 6371,
+      "NOT YET RELEASED": 371,
+      "RELEASING": 229,
+      "CANCELLED": 3
+    },
+    "top_genres": {
+      "Comedy": 2773,
+      "Action": 2635,
+      "Fantasy": 2131,
+      "Drama": 1847,
+      "Adventure": 1625,
+      "Romance": 1561,
+      "Slice of Life": 1364,
+      "Sci-Fi": 1287,
+      "Supernatural": 1057,
+      "Ecchi": 610
+    },
+    "external_mappings": {
+      "mal": {
+        "count": 6763,
+        "percentage": "97.0%"
+      },
+      "kitsu": {
+        "count": 6184,
+        "percentage": "88.7%"
+      },
+      "tmdb": {
+        "count": 4906,
+        "percentage": "70.3%"
+      },
+      "imdb": {
+        "count": 4438,
+        "percentage": "63.6%"
+      }
+    }
+  },
+  "top_anime": [
+    {
+      "anime_id": "frieren-beyond-journeys-end-ev9os0",
+      "anilist_id": 154587,
+      "title": {
+        "english": "Frieren: Beyond Journey’s End",
+        "native": "葬送のフリーレン",
+        "romaji": "Sousou no Frieren"
+      },
+      "cover_image": {
+        "color": "#bbf1a1",
+        "extra_large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx154587-qQTzQnEJJ3oB.jpg",
+        "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx154587-qQTzQnEJJ3oB.jpg",
+        "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx154587-qQTzQnEJJ3oB.jpg"
+      },
+      "images": {
+        "backdrop": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/154587-ivXNJ23SM1xB.jpg",
+        "banner": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/154587-ivXNJ23SM1xB.jpg",
+        "logo": null
+      },
+      "format": "TV",
+      "status": "FINISHED",
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Fantasy"
+      ],
+      "season": "FALL",
+      "season_year": 2023,
+      "episodes": 28,
+      "duration": "24m",
+      "average_score": 91,
+      "popularity": 492022,
+      "rating": "PG-13 - Teens 13 or older",
+      "external_ids": {
+        "mal": 52991,
+        "kitsu": 46474,
+        "tmdb": 209867,
+        "imdb": "tt22248376"
+      }
+    },
+    {
+      "anime_id": "fullmetal-alchemist-brotherhood-wu3j0x",
+      "anilist_id": 5114,
+      "title": {
+        "english": "Fullmetal Alchemist: Brotherhood",
+        "native": "鋼の錬金術師 FULLMETAL ALCHEMIST",
+        "romaji": "Hagane no Renkinjutsushi: FULLMETAL ALCHEMIST"
+      },
+      "cover_image": {
+        "color": "#e4c993",
+        "extra_large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx5114-nSWCgQlmOMtj.jpg",
+        "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx5114-nSWCgQlmOMtj.jpg",
+        "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx5114-nSWCgQlmOMtj.jpg"
+      },
+      "images": {
+        "backdrop": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/5114-q0V5URebphSG.jpg",
+        "banner": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/5114-q0V5URebphSG.jpg",
+        "logo": null
+      },
+      "format": "TV",
+      "status": "FINISHED",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Drama",
+        "Fantasy"
+      ],
+      "season": "SPRING",
+      "season_year": 2009,
+      "episodes": 64,
+      "duration": "25m",
+      "average_score": 90,
+      "popularity": 738285,
+      "rating": "R - 17+ (violence & profanity)",
+      "external_ids": {
+        "mal": 5114,
+        "kitsu": 3936,
+        "tmdb": 31911,
+        "imdb": "tt1355642"
+      }
+    },
+    {
+      "anime_id": "chainsaw-man-the-movie-reze-arc-5lmuxe",
+      "anilist_id": 171627,
+      "title": {
+        "english": "Chainsaw Man – The Movie: Reze Arc",
+        "native": "チェンソーマン レゼ篇",
+        "romaji": "Chainsaw Man: Reze-hen"
+      },
+      "cover_image": {
+        "color": "#e43550",
+        "extra_large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx171627-ZN9D7P46yHnw.png",
+        "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx171627-ZN9D7P46yHnw.png",
+        "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx171627-ZN9D7P46yHnw.png"
+      },
+      "images": {
+        "backdrop": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/171627-7esVHhgw69rn.jpg",
+        "banner": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/171627-7esVHhgw69rn.jpg",
+        "logo": null
+      },
+      "format": "MOVIE",
+      "status": "FINISHED",
+      "genres": [
+        "Action",
+        "Drama",
+        "Horror",
+        "Romance",
+        "Supernatural"
+      ],
+      "season": "SUMMER",
+      "season_year": 2025,
+      "episodes": 1,
+      "duration": "100m",
+      "average_score": 90,
+      "popularity": 247536,
+      "rating": "R - 17+ (violence & profanity)",
+      "external_ids": {
+        "mal": 57555,
+        "kitsu": 48323,
+        "tmdb": 1218925,
+        "imdb": "tt30472557"
+      }
+    },
+    {
+      "anime_id": "re-zero-starting-life-in-another-world-season-4-18wefr",
+      "anilist_id": 189046,
+      "title": {
+        "english": "Re:ZERO -Starting Life in Another World- Season 4",
+        "native": "Re:ゼロから始める異世界生活 4th season",
+        "romaji": "Re:Zero kara Hajimeru Isekai Seikatsu 4th Season"
+      },
+      "cover_image": {
+        "color": "#e49350",
+        "extra_large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx189046-yaHWtS5FII46.jpg",
+        "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx189046-yaHWtS5FII46.jpg",
+        "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx189046-yaHWtS5FII46.jpg"
+      },
+      "images": {
+        "backdrop": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/189046-MDk2CaVuRWpb.jpg",
+        "banner": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/189046-MDk2CaVuRWpb.jpg",
+        "logo": null
+      },
+      "format": "TV",
+      "status": "FINISHED",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Drama",
+        "Fantasy",
+        "Psychological",
+        "Romance",
+        "Thriller"
+      ],
+      "season": "SPRING",
+      "season_year": 2026,
+      "episodes": 19,
+      "duration": "24m",
+      "average_score": 90,
+      "popularity": 152464,
+      "rating": "R - 17+ (violence & profanity)",
+      "external_ids": {
+        "mal": 61316,
+        "kitsu": 49746,
+        "tmdb": 65942,
+        "imdb": "tt5607616"
+      }
+    },
+    {
+      "anime_id": "gintama-season-3-idmmop",
+      "anilist_id": 20996,
+      "title": {
+        "english": "Gintama Season 3",
+        "native": "銀魂゜",
+        "romaji": "Gintama°"
+      },
+      "cover_image": {
+        "color": "#e45d86",
+        "extra_large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20996-kBEGEGdeK1r7.jpg",
+        "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20996-kBEGEGdeK1r7.jpg",
+        "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx20996-kBEGEGdeK1r7.jpg"
+      },
+      "images": {
+        "backdrop": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20996-gaNJKtjmy3Pf.jpg",
+        "banner": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20996-gaNJKtjmy3Pf.jpg",
+        "logo": null
+      },
+      "format": "TV",
+      "status": "FINISHED",
+      "genres": [
+        "Action",
+        "Comedy",
+        "Drama",
+        "Sci-Fi"
+      ],
+      "season": "SPRING",
+      "season_year": 2015,
+      "episodes": 51,
+      "duration": "24m",
+      "average_score": 90,
+      "popularity": 120760,
+      "rating": "R - 17+ (violence & profanity)",
+      "external_ids": {
+        "mal": 28977,
+        "kitsu": 10083,
+        "tmdb": 57041,
+        "imdb": "tt0988818"
+      }
+    },
+    {
+      "anime_id": "gintama-the-very-final-8c5oxm",
+      "anilist_id": 114129,
+      "title": {
+        "english": "Gintama: THE VERY FINAL",
+        "native": "銀魂 THE FINAL",
+        "romaji": "Gintama: THE FINAL"
+      },
+      "cover_image": {
+        "color": "#e48643",
+        "extra_large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx114129-RLgSuh6YbeYx.jpg",
+        "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx114129-RLgSuh6YbeYx.jpg",
+        "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx114129-RLgSuh6YbeYx.jpg"
+      },
+      "images": {
+        "backdrop": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/114129-ZsLDkdwaYeJY.jpg",
+        "banner": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/114129-ZsLDkdwaYeJY.jpg",
+        "logo": null
+      },
+      "format": "MOVIE",
+      "status": "FINISHED",
+      "genres": [
+        "Action",
+        "Comedy",
+        "Drama",
+        "Sci-Fi"
+      ],
+      "season": "WINTER",
+      "season_year": 2021,
+      "episodes": 1,
+      "duration": "104m",
+      "average_score": 90,
+      "popularity": 56476,
+      "rating": "R - 17+ (violence & profanity)",
+      "external_ids": {
+        "mal": 39486,
+        "kitsu": 43683,
+        "tmdb": 732203,
+        "imdb": "tt10766468"
+      }
+    },
+    {
+      "anime_id": "hunter-x-hunter-2011-1i8b4f",
+      "anilist_id": 11061,
+      "title": {
+        "english": "Hunter x Hunter (2011)",
+        "native": "HUNTER×HUNTER (2011)",
+        "romaji": "HUNTER×HUNTER (2011)"
+      },
+      "cover_image": {
+        "color": "#f1d65d",
+        "extra_large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11061-y5gsT1hoHuHw.png",
+        "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx11061-y5gsT1hoHuHw.png",
+        "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx11061-y5gsT1hoHuHw.png"
+      },
+      "images": {
+        "backdrop": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/11061-8WkkTZ6duKpq.jpg",
+        "banner": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/11061-8WkkTZ6duKpq.jpg",
+        "logo": null
+      },
+      "format": "TV",
+      "status": "FINISHED",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "season": "FALL",
+      "season_year": 2011,
+      "episodes": 148,
+      "duration": "24m",
+      "average_score": 89,
+      "popularity": 850994,
+      "rating": "R - 17+ (violence & profanity)",
+      "external_ids": {
+        "mal": 11061,
+        "kitsu": 6448,
+        "tmdb": 46298,
+        "imdb": "tt2098220"
+      }
+    },
+    {
+      "anime_id": "attack-on-titan-season-3-part-2-wdyymu",
+      "anilist_id": 104578,
+      "title": {
+        "english": "Attack on Titan Season 3 Part 2",
+        "native": "進撃の巨人 Season３ Part.2",
+        "romaji": "Shingeki no Kyojin Season 3 Part 2"
+      },
+      "cover_image": {
+        "color": "#e49350",
+        "extra_large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx104578-k61nx3LPjvgd.jpg",
+        "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx104578-k61nx3LPjvgd.jpg",
+        "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx104578-k61nx3LPjvgd.jpg"
+      },
+      "images": {
+        "backdrop": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/104578-z7SadpYEuAsy.jpg",
+        "banner": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/104578-z7SadpYEuAsy.jpg",
+        "logo": null
+      },
+      "format": "TV",
+      "status": "FINISHED",
+      "genres": [
+        "Action",
+        "Drama",
+        "Fantasy",
+        "Mystery"
+      ],
+      "season": "SPRING",
+      "season_year": 2019,
+      "episodes": 10,
+      "duration": "24m",
+      "average_score": 89,
+      "popularity": 618753,
+      "rating": "R - 17+ (violence & profanity)",
+      "external_ids": {
+        "mal": 38524,
+        "kitsu": 41982,
+        "tmdb": 1429,
+        "imdb": "tt2560140"
+      }
+    },
+    {
+      "anime_id": "steins-gate-64v20a",
+      "anilist_id": 9253,
+      "title": {
+        "english": "Steins;Gate",
+        "native": "シュタインズ・ゲート",
+        "romaji": "Steins;Gate"
+      },
+      "cover_image": {
+        "color": "#ffd6ae",
+        "extra_large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx9253-tIUXF2gfU8Sg.jpg",
+        "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx9253-tIUXF2gfU8Sg.jpg",
+        "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx9253-tIUXF2gfU8Sg.jpg"
+      },
+      "images": {
+        "backdrop": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n9253-JIhmKgBKsWUN.jpg",
+        "banner": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n9253-JIhmKgBKsWUN.jpg",
+        "logo": null
+      },
+      "format": "TV",
+      "status": "FINISHED",
+      "genres": [
+        "Drama",
+        "Psychological",
+        "Sci-Fi",
+        "Thriller"
+      ],
+      "season": "SPRING",
+      "season_year": 2011,
+      "episodes": 24,
+      "duration": "24m",
+      "average_score": 89,
+      "popularity": 602354,
+      "rating": "R - 17+ (violence & profanity)",
+      "external_ids": {
+        "mal": 9253,
+        "kitsu": 5646,
+        "tmdb": 42509,
+        "imdb": "tt1910272"
+      }
+    },
+    {
+      "anime_id": "kaguya-sama-love-is-war-ultra-romantic-u7foy9",
+      "anilist_id": 125367,
+      "title": {
+        "english": "Kaguya-sama: Love is War -Ultra Romantic-",
+        "native": "かぐや様は告らせたい-ウルトラロマンティック-",
+        "romaji": "Kaguya-sama wa Kokurasetai: Ultra Romantic"
+      },
+      "cover_image": {
+        "color": "#d6f1a1",
+        "extra_large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx125367-1yuq9NFcQuLI.png",
+        "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx125367-1yuq9NFcQuLI.png",
+        "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx125367-1yuq9NFcQuLI.png"
+      },
+      "images": {
+        "backdrop": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/125367-hGPJLSNfprO3.jpg",
+        "banner": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/125367-hGPJLSNfprO3.jpg",
+        "logo": null
+      },
+      "format": "TV",
+      "status": "FINISHED",
+      "genres": [
+        "Comedy",
+        "Psychological",
+        "Romance",
+        "Slice of Life"
+      ],
+      "season": "SPRING",
+      "season_year": 2022,
+      "episodes": 13,
+      "duration": "24m",
+      "average_score": 89,
+      "popularity": 296388,
+      "rating": "PG-13 - Teens 13 or older",
+      "external_ids": {
+        "mal": 43608,
+        "kitsu": 43691,
+        "tmdb": 83121,
+        "imdb": "tt9522300"
+      }
+    }
+  ],
+  "most_popular": [
+    {
+      "anime_id": "attack-on-titan-86tu7o",
+      "anilist_id": 16498,
+      "title": {
+        "english": "Attack on Titan",
+        "native": "進撃の巨人",
+        "romaji": "Shingeki no Kyojin"
+      },
+      "cover_image": {
+        "color": "#f1a143",
+        "extra_large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16498-buvcRTBx4NSm.jpg",
+        "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx16498-buvcRTBx4NSm.jpg",
+        "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx16498-buvcRTBx4NSm.jpg"
+      },
+      "images": {
+        "backdrop": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/16498-8jpFCOcDmneX.jpg",
+        "banner": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/16498-8jpFCOcDmneX.jpg",
+        "logo": null
+      },
+      "format": "TV",
+      "status": "FINISHED",
+      "genres": [
+        "Action",
+        "Drama",
+        "Fantasy",
+        "Mystery"
+      ],
+      "season": "SPRING",
+      "season_year": 2013,
+      "episodes": 25,
+      "duration": "24m",
+      "average_score": 85,
+      "popularity": 1068869,
+      "rating": "R - 17+ (violence & profanity)",
+      "external_ids": {
+        "mal": 16498,
+        "kitsu": 7442,
+        "tmdb": 1429,
+        "imdb": "tt2560140"
+      }
+    },
+    {
+      "anime_id": "demon-slayer-kimetsu-no-yaiba-4ftnpj",
+      "anilist_id": 101922,
+      "title": {
+        "english": "Demon Slayer: Kimetsu no Yaiba",
+        "native": "鬼滅の刃",
+        "romaji": "Kimetsu no Yaiba"
+      },
+      "cover_image": {
+        "color": "#f1c9ae",
+        "extra_large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101922-WBsBl0ClmgYL.jpg",
+        "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101922-WBsBl0ClmgYL.jpg",
+        "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx101922-WBsBl0ClmgYL.jpg"
+      },
+      "images": {
+        "backdrop": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/101922-33MtJGsUSxga.jpg",
+        "banner": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/101922-33MtJGsUSxga.jpg",
+        "logo": null
+      },
+      "format": "TV",
+      "status": "FINISHED",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Drama",
+        "Fantasy",
+        "Supernatural"
+      ],
+      "season": "SPRING",
+      "season_year": 2019,
+      "episodes": 26,
+      "duration": "24m",
+      "average_score": 82,
+      "popularity": 1006592,
+      "rating": "R - 17+ (violence & profanity)",
+      "external_ids": {
+        "mal": 38000,
+        "kitsu": 41370,
+        "tmdb": 85937,
+        "imdb": "tt9335498"
+      }
+    },
+    {
+      "anime_id": "jujutsu-kaisen-8abl25",
+      "anilist_id": 113415,
+      "title": {
+        "english": "JUJUTSU KAISEN",
+        "native": "呪術廻戦",
+        "romaji": "Jujutsu Kaisen"
+      },
+      "cover_image": {
+        "color": "#e45d5d",
+        "extra_large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx113415-LHBAeoZDIsnF.jpg",
+        "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx113415-LHBAeoZDIsnF.jpg",
+        "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx113415-LHBAeoZDIsnF.jpg"
+      },
+      "images": {
+        "backdrop": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/113415-jQBSkxWAAk83.jpg",
+        "banner": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/113415-jQBSkxWAAk83.jpg",
+        "logo": null
+      },
+      "format": "TV",
+      "status": "FINISHED",
+      "genres": [
+        "Action",
+        "Drama",
+        "Supernatural"
+      ],
+      "season": "FALL",
+      "season_year": 2020,
+      "episodes": 24,
+      "duration": "24m",
+      "average_score": 84,
+      "popularity": 986701,
+      "rating": "R - 17+ (violence & profanity)",
+      "external_ids": {
+        "mal": 40748,
+        "kitsu": 42765,
+        "tmdb": 95479,
+        "imdb": "tt12343534"
+      }
+    },
+    {
+      "anime_id": "death-note-izczen",
+      "anilist_id": 1535,
+      "title": {
+        "english": "Death Note",
+        "native": "DEATH NOTE",
+        "romaji": "DEATH NOTE"
+      },
+      "cover_image": {
+        "color": null,
+        "extra_large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1535-kUgkcrfOrkUM.jpg",
+        "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1535-kUgkcrfOrkUM.jpg",
+        "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx1535-kUgkcrfOrkUM.jpg"
+      },
+      "images": {
+        "backdrop": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1535.jpg",
+        "banner": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1535.jpg",
+        "logo": null
+      },
+      "format": "TV",
+      "status": "FINISHED",
+      "genres": [
+        "Mystery",
+        "Psychological",
+        "Supernatural",
+        "Thriller"
+      ],
+      "season": "FALL",
+      "season_year": 2006,
+      "episodes": 37,
+      "duration": "23m",
+      "average_score": 84,
+      "popularity": 974352,
+      "rating": "R - 17+ (violence & profanity)",
+      "external_ids": {
+        "mal": 1535,
+        "kitsu": 1376,
+        "tmdb": 13916,
+        "imdb": "tt0877057"
+      }
+    },
+    {
+      "anime_id": "my-hero-academia-lk0yx3",
+      "anilist_id": 21459,
+      "title": {
+        "english": "My Hero Academia",
+        "native": "僕のヒーローアカデミア",
+        "romaji": "Boku no Hero Academia"
+      },
+      "cover_image": {
+        "color": "#f1d643",
+        "extra_large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21459-nYh85uj2Fuwr.jpg",
+        "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21459-nYh85uj2Fuwr.jpg",
+        "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx21459-nYh85uj2Fuwr.jpg"
+      },
+      "images": {
+        "backdrop": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21459-yeVkolGKdGUV.jpg",
+        "banner": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21459-yeVkolGKdGUV.jpg",
+        "logo": null
+      },
+      "format": "TV",
+      "status": "FINISHED",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Comedy"
+      ],
+      "season": "SPRING",
+      "season_year": 2016,
+      "episodes": 13,
+      "duration": "24m",
+      "average_score": 76,
+      "popularity": 883916,
+      "rating": "PG-13 - Teens 13 or older",
+      "external_ids": {
+        "mal": 31964,
+        "kitsu": 11469,
+        "tmdb": 65930,
+        "imdb": "tt5626028"
+      }
+    },
+    {
+      "anime_id": "hunter-x-hunter-2011-1i8b4f",
+      "anilist_id": 11061,
+      "title": {
+        "english": "Hunter x Hunter (2011)",
+        "native": "HUNTER×HUNTER (2011)",
+        "romaji": "HUNTER×HUNTER (2011)"
+      },
+      "cover_image": {
+        "color": "#f1d65d",
+        "extra_large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11061-y5gsT1hoHuHw.png",
+        "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx11061-y5gsT1hoHuHw.png",
+        "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx11061-y5gsT1hoHuHw.png"
+      },
+      "images": {
+        "backdrop": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/11061-8WkkTZ6duKpq.jpg",
+        "banner": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/11061-8WkkTZ6duKpq.jpg",
+        "logo": null
+      },
+      "format": "TV",
+      "status": "FINISHED",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "season": "FALL",
+      "season_year": 2011,
+      "episodes": 148,
+      "duration": "24m",
+      "average_score": 89,
+      "popularity": 850994,
+      "rating": "R - 17+ (violence & profanity)",
+      "external_ids": {
+        "mal": 11061,
+        "kitsu": 6448,
+        "tmdb": 46298,
+        "imdb": "tt2098220"
+      }
+    },
+    {
+      "anime_id": "one-punch-man-3cboay",
+      "anilist_id": 21087,
+      "title": {
+        "english": "One-Punch Man",
+        "native": "ワンパンマン",
+        "romaji": "One Punch Man"
+      },
+      "cover_image": {
+        "color": "#e4ae5d",
+        "extra_large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21087-B5DHjqZ3kW4b.jpg",
+        "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21087-B5DHjqZ3kW4b.jpg",
+        "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx21087-B5DHjqZ3kW4b.jpg"
+      },
+      "images": {
+        "backdrop": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21087-sHb9zUZFsHe1.jpg",
+        "banner": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21087-sHb9zUZFsHe1.jpg",
+        "logo": null
+      },
+      "format": "TV",
+      "status": "FINISHED",
+      "genres": [
+        "Action",
+        "Comedy",
+        "Sci-Fi",
+        "Supernatural"
+      ],
+      "season": "FALL",
+      "season_year": 2015,
+      "episodes": 12,
+      "duration": "24m",
+      "average_score": 82,
+      "popularity": 775266,
+      "rating": "PG-13 - Teens 13 or older",
+      "external_ids": {
+        "mal": 30276,
+        "kitsu": 10740,
+        "tmdb": 63926,
+        "imdb": "tt4508902"
+      }
+    },
+    {
+      "anime_id": "one-piece-50txg0",
+      "anilist_id": 21,
+      "title": {
+        "english": "ONE PIECE",
+        "native": "ONE PIECE",
+        "romaji": "ONE PIECE"
+      },
+      "cover_image": {
+        "color": "#e49335",
+        "extra_large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21-ELSYx3yMPcKM.jpg",
+        "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21-ELSYx3yMPcKM.jpg",
+        "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx21-ELSYx3yMPcKM.jpg"
+      },
+      "images": {
+        "backdrop": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+        "banner": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+        "logo": null
+      },
+      "format": "TV",
+      "status": "RELEASING",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Drama",
+        "Fantasy"
+      ],
+      "season": "FALL",
+      "season_year": 1999,
+      "episodes": 0,
+      "duration": "24m",
+      "average_score": 87,
+      "popularity": 761731,
+      "rating": "PG-13 - Teens 13 or older",
+      "external_ids": {
+        "mal": 21,
+        "kitsu": 12,
+        "tmdb": 37854,
+        "imdb": "tt0388629"
+      }
+    },
+    {
+      "anime_id": "tokyo-ghoul-odumpd",
+      "anilist_id": 20605,
+      "title": {
+        "english": "Tokyo Ghoul",
+        "native": "東京喰種 トーキョーグール",
+        "romaji": "Tokyo Ghoul"
+      },
+      "cover_image": {
+        "color": "#ff6b35",
+        "extra_large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b20605-k665mVkSug8D.jpg",
+        "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b20605-k665mVkSug8D.jpg",
+        "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/b20605-k665mVkSug8D.jpg"
+      },
+      "images": {
+        "backdrop": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20605-RCJ7M71zLmrh.jpg",
+        "banner": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20605-RCJ7M71zLmrh.jpg",
+        "logo": null
+      },
+      "format": "TV",
+      "status": "FINISHED",
+      "genres": [
+        "Action",
+        "Drama",
+        "Horror",
+        "Mystery",
+        "Psychological",
+        "Supernatural"
+      ],
+      "season": "SUMMER",
+      "season_year": 2014,
+      "episodes": 12,
+      "duration": "24m",
+      "average_score": 76,
+      "popularity": 748816,
+      "rating": "R - 17+ (violence & profanity)",
+      "external_ids": {
+        "mal": 22319,
+        "kitsu": 8271,
+        "tmdb": 61374,
+        "imdb": "tt3741634"
+      }
+    },
+    {
+      "anime_id": "attack-on-titan-season-2-9hzoey",
+      "anilist_id": 20958,
+      "title": {
+        "english": "Attack on Titan Season 2",
+        "native": "進撃の巨人 Season２",
+        "romaji": "Shingeki no Kyojin Season 2"
+      },
+      "cover_image": {
+        "color": "#e47850",
+        "extra_large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20958-HuFJyr54Mmir.jpg",
+        "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20958-HuFJyr54Mmir.jpg",
+        "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx20958-HuFJyr54Mmir.jpg"
+      },
+      "images": {
+        "backdrop": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20958-Y7eQdz9VENBD.jpg",
+        "banner": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20958-Y7eQdz9VENBD.jpg",
+        "logo": null
+      },
+      "format": "TV",
+      "status": "FINISHED",
+      "genres": [
+        "Action",
+        "Drama",
+        "Fantasy",
+        "Mystery"
+      ],
+      "season": "SPRING",
+      "season_year": 2017,
+      "episodes": 12,
+      "duration": "25m",
+      "average_score": 85,
+      "popularity": 742644,
+      "rating": "R - 17+ (violence & profanity)",
+      "external_ids": {
+        "mal": 25777,
+        "kitsu": 8671,
+        "tmdb": 1429,
+        "imdb": "tt2560140"
+      }
+    }
+  ],
   "files": {
     "csv": {
-      "filename": "Anidb_2026-10-22_16-31-02_UTC+7.csv",
-      "size_bytes": 4659787
+      "filename": "Anidb_2026-10-22_16-29-11_UTC+7.csv",
+      "size_bytes": 4659787,
+      "human_size": "4.44 MB"
     },
     "xlsx": {
-      "filename": "Anidb_2026-10-22_16-31-02_UTC+7.xlsx",
-      "size_bytes": 1759510
+      "filename": "Anidb_2026-10-22_16-29-11_UTC+7.xlsx",
+      "size_bytes": 1759511,
+      "human_size": "1.68 MB"
     },
     "tar_gz": {
-      "filename": "Anidb_2026-10-22_16-31-02_UTC+7.tar.gz",
-      "size_bytes": 3933443
+      "filename": "Anidb_2026-10-22_16-29-11_UTC+7.tar.gz",
+      "size_bytes": 3933452,
+      "human_size": "3.75 MB"
     },
     "zip": {
-      "filename": "Anidb_2026-10-22_16-31-02_UTC+7.zip",
-      "size_bytes": 3976393
+      "filename": "Anidb_2026-10-22_16-29-11_UTC+7.zip",
+      "size_bytes": 3976392,
+      "human_size": "3.79 MB"
     },
     "json": {
-      "filename": "Anidb_2026-10-22_16-31-02_UTC+7.json",
-      "size_bytes": 8942555
+      "filename": "Anidb_2026-10-22_16-29-11_UTC+7.json",
+      "size_bytes": 8942555,
+      "human_size": "8.53 MB"
     }
   }
 }

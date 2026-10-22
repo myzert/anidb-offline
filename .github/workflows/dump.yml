@@ -70,7 +70,11 @@ jobs:
         run: |
           if [ -f data/releases/manifest.json ]; then
             TAG_NAME=$(python -c "import json; print(json.load(open('data/releases/manifest.json'))['latest_release'])")
-            gh release create "${TAG_NAME}" data/releases/Anidb_*.{csv,xlsx,tar.gz,zip} \
+            NOTES_FLAG="--notes-file data/releases/release_notes.md"
+            if [ ! -f data/releases/release_notes.md ]; then
+              NOTES_FLAG="--notes 'Automated 24h AniDB Offline database release (UTC+7).'"
+            fi
+            gh release create "${TAG_NAME}" data/releases/Anidb_*.{csv,xlsx,tar.gz,zip,json} \
               --title "AniDB Offline Database Release (${TAG_NAME})" \
-              --notes "Automated 24h AniDB Offline database release in CSV, XLSX, TAR.GZ, and ZIP formats (UTC+7)." || true
+              ${NOTES_FLAG} || true
           fi

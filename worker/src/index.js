@@ -842,6 +842,9 @@ export default {
             timestamp_utc7: manifest.timestamp_utc7,
             total_anime: manifest.total_anime,
             naming_convention: "Anidb_YYYY-MM-DD_HH-mm-ss_UTC+7.<ext>",
+            status: manifest.status || null,
+            top_anime: manifest.top_anime || [],
+            most_popular: manifest.most_popular || [],
             files: enrichedFiles
           });
         }
