@@ -46,7 +46,15 @@ jobs:
         run: python scripts/dump_anilist.py --mode "${{ inputs.mode }}"
 
       - name: Sync ReAnime IDs, episodes, and thumbnails
+        id: reanime
+        continue-on-error: true
         run: python scripts/dump_reanime.py
+
+      - name: Report ReAnime sync status
+        if: steps.reanime.outcome == 'failure'
+        run: |
+          echo "::warning::ReAnime sync was blocked or unavailable. The AniList dump will still be committed; retry ReAnime sync when its API is reachable."
+          echo "⚠️ ReAnime sync failed or was blocked; AniList data sync continues. Re-run this workflow later to retry." >> "$GITHUB_STEP_SUMMARY"
 
       - name: Commit data changes
         run: |

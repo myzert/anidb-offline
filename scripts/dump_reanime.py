@@ -22,13 +22,25 @@ def fetch_json(session, url, params=None, max_retries=5, allow_not_found=False):
             response = session.get(url, params=params, timeout=30)
             if response.status_code == 404 and allow_not_found:
                 return None
+            if 400 <= response.status_code < 500 and response.status_code != 429:
+                raise RuntimeError(
+                    f"ReAnime rejected {url} with HTTP {response.status_code}. "
+                    "This is not a transient error; no retries were made. "
+                    "The sync will work when ReAnime allows requests from this runner."
+                )
             if response.status_code == 429 or response.status_code >= 500:
-                delay = int(response.headers.get("Retry-After", 2 ** attempt))
+                retry_after = response.headers.get("Retry-After")
+                try:
+                    delay = max(1, int(retry_after)) if retry_after else 2 ** attempt
+                except ValueError:
+                    delay = 2 ** attempt
                 logging.warning("ReAnime returned %s; retrying in %ss", response.status_code, delay)
                 time.sleep(delay)
                 continue
             response.raise_for_status()
             return response.json()
+        except RuntimeError:
+            raise
         except (requests.RequestException, ValueError) as error:
             if attempt == max_retries - 1:
                 raise RuntimeError(f"Failed to fetch ReAnime endpoint {url}: {error}") from error

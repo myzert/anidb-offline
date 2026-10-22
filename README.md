@@ -81,6 +81,8 @@ python3 scripts/dump_reanime.py
 ```
 For regular refreshes, use `python3 scripts/dump_anilist.py --mode incremental --hours 26`. Both modes divide the AniList catalog into bounded `id_in` ranges, avoiding the 5,000-result page-depth limit. Incremental mode orders entries by `UPDATED_AT_DESC` within each ID range and stops at the requested cutoff. Full mode orders by ID and fetches each range completely. The GitHub Actions workflow runs the incremental update and ReAnime metadata sync daily; dispatch it manually with `full` to rebuild AniList data. The workflow commits changed JSON data to the repository.
 
+ReAnime HTTP 4xx responses (including `403 Forbidden`) stop immediately instead of wasting time on retries. The GitHub Actions workflow treats ReAnime sync as optional: it reports the issue, then still commits the AniList dump. ReAnime sync can be retried by rerunning the workflow after the API is reachable.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
