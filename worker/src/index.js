@@ -329,6 +329,7 @@ export default {
     const corsHeaders = {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'GET,HEAD,POST,OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type',
       'Access-Control-Max-Age': '86400',
     };
 
@@ -361,6 +362,17 @@ export default {
 
     if (hostname === 'graphiql.anidb.my.id' || path.startsWith('/graphql')) {
       return yoga.fetch(request, { fetchData: fetchGitHubJSON });
+    }
+
+    if (!['GET', 'HEAD'].includes(request.method)) {
+      return new Response(JSON.stringify({ error: 'Method not allowed' }), {
+        status: 405,
+        headers: {
+          'Content-Type': 'application/json',
+          'Allow': 'GET, HEAD, OPTIONS',
+          ...corsHeaders
+        }
+      });
     }
 
     const getArrayParam = (name) => {
@@ -411,7 +423,7 @@ export default {
     const isAdultFilter = url.searchParams.get('isAdult') ?? url.searchParams.get('nsfw');
     const sourceFilter = url.searchParams.get('source');
     const anilistFilter = url.searchParams.get('anilist_id');
-    const reanimeFilter = url.searchParams.get('reanime_id');
+    const reanimeFilter = url.searchParams.get('reanime_id') || url.searchParams.get('reanime_short_id');
     const externalIdFilters = ['mal_id', 'kitsu_id', 'tmdb_id', 'imdb_id', 'reanime_short_id', 'reanime_slug_id', 'anilist_slug_id']
       .map(name => [name, url.searchParams.get(name)])
       .filter(([, value]) => value !== null);
@@ -467,9 +479,57 @@ export default {
       if (!entry) return false;
       return [
         entry.reanime_id,
+        entry.reanime_short_id,
         entry.reanime_slug_id,
       ].includes(identifier) ||
         entry.reanime_slug_id?.endsWith(`-${identifier}`) === true;
+    }
+
+    function findReanimeEntry(identifier, index, source) {
+      if (source === 'anilist' || (!source && /^\d+$/.test(identifier))) {
+        return index[identifier] || Object.values(index).find(entry =>
+          String(entry.anilist_id ?? '') === identifier
+        ) || null;
+      }
+      return Object.values(index).find(entry =>
+        source === 'short'
+          ? (entry.reanime_id === identifier || entry.reanime_short_id === identifier)
+          : matchesReanimeIdentifier(entry, identifier)
+      ) || null;
+    }
+
+    function createEpisodePage(anime, entry, offset, limit) {
+      const storedEpisodes = Array.isArray(entry?.episodes) ? entry.episodes : [];
+      const thumbnails = entry?.thumbnails && typeof entry.thumbnails === 'object'
+        ? entry.thumbnails
+        : {};
+      const count = Math.max(
+        storedEpisodes.length,
+        Number(entry?.episode_count) || 0,
+        Number(anime?.episodes) || 0
+      );
+      const end = Math.min(count, offset + limit);
+      const episodes = [];
+
+      for (let number = offset + 1; number <= end; number += 1) {
+        const stored = storedEpisodes.find(episode =>
+          Number(episode?.episode) === number
+        ) || storedEpisodes[number - 1];
+        episodes.push(stored
+          ? {
+              ...stored,
+              thumbnail: stored.thumbnail || thumbnails[String(number)] || null
+            }
+          : {
+              episode: number,
+              title: `Episode ${number}`,
+              aired: null,
+              duration: anime?.duration ?? null,
+              thumbnail: thumbnails[String(number)] || anime?.cover_image?.extra_large || null
+            });
+      }
+
+      return { count, episodes };
     }
 
     function processItems(items, isList = true, reanimeIndex = {}) {
@@ -628,15 +688,9 @@ export default {
          const reanimeEntry = getReanimeEntry(a, reanimeIndex);
          const title = reanimeEntry?.title || a.title || {};
          const coverImage = reanimeEntry?.cover_image || a.cover_image || {};
-         let epList = reanimeEntry?.episodes || [];
-         if (epList.length === 0 && !isList && a.episodes > 0) {
-           for (let i = 1; i <= a.episodes; i++) {
-             epList.push({
-               episode: i,
-               title: `Episode ${i}`,
-               image: a.banner_image || (a.cover_image ? a.cover_image.extra_large : null)
-             });
-           }
+         let epList = Array.isArray(reanimeEntry?.episodes) ? reanimeEntry.episodes : [];
+         if (epList.length === 0 && !isList) {
+           epList = createEpisodePage(a, reanimeEntry, 0, 2000).episodes;
          }
 
          let logoUrl = a.tmdb_logo_path ? `https://image.tmdb.org/t/p/original${a.tmdb_logo_path}` : (a.cover_image ? a.cover_image.extra_large : null);
@@ -765,7 +819,7 @@ export default {
            data: status < 400 ? data : null
          };
       }
-      return new Response(JSON.stringify(payload), {
+      return new Response(request.method === 'HEAD' ? null : JSON.stringify(payload), {
         status,
         headers: { 'Content-Type': 'application/json', ...corsHeaders }
       });
@@ -897,16 +951,13 @@ export default {
         const reanimeIndex = await getReanimeIndex();
         const source = matchEpisodes[1];
         const identifier = decodeURIComponent(matchEpisodes[2]);
-        const entry = source === 'anilist' || (!source && /^\d+$/.test(identifier))
-          ? reanimeIndex[identifier]
-          : Object.values(reanimeIndex).find(item =>
-            source === 'short'
-              ? item.reanime_id === identifier
-              : matchesReanimeIdentifier(item, identifier)
-          );
-        if (!entry) return jsonResponse({error: 'Anime not found'}, 404);
-
-        const anime = items.find(item => String(item.id ?? item.anilist_id) === String(entry.anilist_id));
+        const entry = findReanimeEntry(identifier, reanimeIndex, source);
+        const anilistId = entry?.anilist_id ?? (
+          source === 'anilist' || (!source && /^\d+$/.test(identifier)) ? identifier : null
+        );
+        const anime = anilistId === null
+          ? null
+          : items.find(item => String(item.id ?? item.anilist_id) === String(anilistId));
         if (!anime) return jsonResponse({error: 'Anime not found'}, 404);
         let episodeLimit;
         let episodeOffset;
@@ -919,17 +970,16 @@ export default {
         } catch (error) {
           return jsonResponse({error: error.message}, 400);
         }
-        const episodes = entry.episodes || [];
-        const page = episodes.slice(episodeOffset, episodeOffset + episodeLimit);
+        const { count, episodes } = createEpisodePage(anime, entry, episodeOffset, episodeLimit);
         return jsonResponse({
-          anilist_id: entry.anilist_id,
-          reanime_id: entry.reanime_id,
-          total: episodes.length,
+          anilist_id: anilistId,
+          reanime_id: entry?.reanime_id || null,
+          total: count,
           limit: episodeLimit,
           offset: episodeOffset,
-          count: page.length,
-          has_next: episodeOffset + episodeLimit < episodes.length,
-          data: page
+          count: episodes.length,
+          has_next: episodeOffset + episodeLimit < count,
+          data: episodes
         });
       }
 
@@ -938,13 +988,7 @@ export default {
         const reanimeIndex = await getReanimeIndex();
         const source = matchAnimeThumbnails[1];
         const identifier = decodeURIComponent(matchAnimeThumbnails[2]);
-        const entry = source === 'anilist' || (!source && /^\d+$/.test(identifier))
-          ? reanimeIndex[identifier]
-          : Object.values(reanimeIndex).find(item =>
-            source === 'short'
-              ? item.reanime_id === identifier
-              : matchesReanimeIdentifier(item, identifier)
-          );
+        const entry = findReanimeEntry(identifier, reanimeIndex, source);
         if (!entry) return jsonResponse({error: 'Anime not found'}, 404);
         return jsonResponse({
           anilist_id: entry.anilist_id,
@@ -956,7 +1000,11 @@ export default {
       const matchThumbnailLookup = path.match(/^\/(?:api\/)?(?:v1\/)?thumbnails\/(\d+)$/);
       if (matchThumbnailLookup) {
         const reanimeIndex = await getReanimeIndex();
-        const entry = reanimeIndex[matchThumbnailLookup[1]];
+        const identifier = matchThumbnailLookup[1];
+        const entry = findReanimeEntry(identifier, reanimeIndex) ||
+          Object.values(reanimeIndex).find(item =>
+            String(item.reanime_numeric_id ?? item.thumbnail_id ?? '') === identifier
+          );
         const malId = url.searchParams.get('mal');
         if (!entry || (malId && String(entry.mal_id) !== malId)) {
           return jsonResponse({error: 'Anime thumbnails not found'}, 404);
@@ -976,18 +1024,11 @@ export default {
         const items = await fetchGitHubJSON('/raw.json');
         if (!items) return jsonResponse({error: 'Data not found'}, 404);
         const reanimeIndex = await getReanimeIndex();
-        const entry = source === 'anilist'
-          ? reanimeIndex[identifier]
-          : Object.values(reanimeIndex).find(item =>
-            source === 'short'
-              ? item.reanime_id === identifier
-              : matchesReanimeIdentifier(item, identifier)
-          );
-        const anime = source === 'anilist'
-          ? items.filter(item => String(item.id ?? item.anilist_id) === identifier)
-          : entry
-            ? items.filter(item => String(item.id ?? item.anilist_id) === String(entry.anilist_id))
-            : [];
+        const entry = findReanimeEntry(identifier, reanimeIndex, source);
+        const animeId = source === 'anilist' ? identifier : entry?.anilist_id;
+        const anime = animeId === undefined
+          ? []
+          : items.filter(item => String(item.id ?? item.anilist_id) === String(animeId));
         if (anime.length > 0) return jsonResponse(processItems(anime, false, reanimeIndex));
         return jsonResponse({error: 'Anime not found'}, 404);
       }
