@@ -245,7 +245,29 @@ async function getAnimeCharactersAndStreaming(anime, allowFetchFallback = true) 
   let streamingEpisodes = Array.isArray(anime.streaming_episodes) ? anime.streaming_episodes : [];
 
   if (characters.length > 0 && streamingEpisodes.length > 0) {
-    return { characters, streamingEpisodes };
+    const normalizedChars = characters.map(c => ({
+      ...c,
+      name: {
+        full: c.name?.full || null,
+        native: c.name?.native || null,
+        user_preferred: c.name?.user_preferred || c.name?.full || null
+      },
+      image: {
+        large: c.image?.large || null,
+        medium: c.image?.medium || c.image?.large || null
+      },
+      voice_actor: c.voice_actor ? {
+        ...c.voice_actor,
+        image: {
+          large: c.voice_actor.image?.large || null,
+          medium: c.voice_actor.image?.medium || c.voice_actor.image?.large || null
+        }
+      } : null,
+      voice_actors: Array.isArray(c.voice_actors) && c.voice_actors.length > 0
+        ? c.voice_actors
+        : (c.voice_actor ? [c.voice_actor] : [])
+    }));
+    return { characters: normalizedChars, streamingEpisodes };
   }
 
   if (anime.characters?.edges && Array.isArray(anime.characters.edges) && anime.characters.edges.length > 0) {

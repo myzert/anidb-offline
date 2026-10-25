@@ -351,8 +351,7 @@ def generate_indexes(base_dir):
                         "title": ep.get("name") or f"Episode {ep.get('episode_number')}",
                         "image": f"https://image.tmdb.org/t/p/w500{still}" if still else None,
                         "still_path": still,
-                        "air_date": ep.get("air_date"),
-                        "overview": ep.get("overview")
+                        "air_date": ep.get("air_date")
                     })
                 tmdb_episodes_cache[cache_key] = eps
                 time.sleep(0.05)
@@ -471,11 +470,11 @@ def generate_indexes(base_dir):
         merged["start_date"] = format_date(anime.get("startDate"))
         merged["end_date"] = format_date(anime.get("endDate"))
 
-        # Parse Characters & Voice Actors cleanly
+        # Parse Characters & Voice Actors cleanly (compact top 8 characters for raw.json to stay < 100MB)
         characters_raw = anime.get("characters", {})
         characters_edges = characters_raw.get("edges", []) if isinstance(characters_raw, dict) else []
         parsed_characters = []
-        for edge in characters_edges:
+        for edge in characters_edges[:8]:
             if not isinstance(edge, dict):
                 continue
             char_node = edge.get("node") or {}
@@ -487,11 +486,9 @@ def generate_indexes(base_dir):
                 "name": {
                     "full": char_node.get("name", {}).get("full") if isinstance(char_node.get("name"), dict) else None,
                     "native": char_node.get("name", {}).get("native") if isinstance(char_node.get("name"), dict) else None,
-                    "user_preferred": char_node.get("name", {}).get("userPreferred") if isinstance(char_node.get("name"), dict) else None,
                 },
                 "image": {
                     "large": char_node.get("image", {}).get("large") if isinstance(char_node.get("image"), dict) else None,
-                    "medium": char_node.get("image", {}).get("medium") if isinstance(char_node.get("image"), dict) else None,
                 },
                 "voice_actor": {
                     "id": primary_va.get("id"),
@@ -502,37 +499,20 @@ def generate_indexes(base_dir):
                     "language": primary_va.get("language", "JAPANESE"),
                     "image": {
                         "large": primary_va.get("image", {}).get("large") if isinstance(primary_va.get("image"), dict) else None,
-                        "medium": primary_va.get("image", {}).get("medium") if isinstance(primary_va.get("image"), dict) else None,
                     }
-                } if primary_va else None,
-                "voice_actors": [
-                    {
-                        "id": va.get("id"),
-                        "name": {
-                            "full": va.get("name", {}).get("full") if isinstance(va.get("name"), dict) else None,
-                            "native": va.get("name", {}).get("native") if isinstance(va.get("name"), dict) else None,
-                        },
-                        "language": va.get("language"),
-                        "image": {
-                            "large": va.get("image", {}).get("large") if isinstance(va.get("image"), dict) else None,
-                            "medium": va.get("image", {}).get("medium") if isinstance(va.get("image"), dict) else None,
-                        }
-                    }
-                    for va in vas if isinstance(va, dict)
-                ]
+                } if primary_va else None
             })
         merged["characters"] = parsed_characters
 
-        # Streaming episodes
+        # Streaming episodes (compact top 12 thumbnails for raw.json)
         streaming_eps = anime.get("streamingEpisodes") or []
         merged["streaming_episodes"] = [
             {
                 "title": ep.get("title"),
                 "thumbnail": ep.get("thumbnail"),
-                "url": ep.get("url"),
-                "site": ep.get("site")
+                "url": ep.get("url")
             }
-            for ep in streaming_eps if isinstance(ep, dict)
+            for ep in streaming_eps[:12] if isinstance(ep, dict)
         ]
 
         # Detect season and part

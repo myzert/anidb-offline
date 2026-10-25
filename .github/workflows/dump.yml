@@ -47,7 +47,14 @@ jobs:
 
       - name: Update AniList data (manual)
         if: github.event_name == 'workflow_dispatch'
-        run: python scripts/dump_anilist.py --mode "${{ inputs.mode }}"
+        run: |
+          if [ "${{ inputs.mode }}" = "schedule_only" ]; then
+            python scripts/dump_anilist.py --mode schedule_only
+          elif [ "${{ inputs.mode }}" = "incremental" ]; then
+            python scripts/dump_anilist.py --mode incremental --hours 8
+          else
+            python scripts/dump_anilist.py --mode "${{ inputs.mode }}"
+          fi
         env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
           TMDB: ${{ secrets.TMDB }}
