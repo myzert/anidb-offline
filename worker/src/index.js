@@ -114,10 +114,208 @@ function formatAnimeStandard(a) {
   };
 }
 
+function buildEpisodeList(anime) {
+  const standard = formatAnimeStandard(anime);
+  const rawEpisodesCount = anime.episodes || 0;
+  const tmdbEps = Array.isArray(anime.tmdb_episodes) ? anime.tmdb_episodes : [];
+  const streamingEps = Array.isArray(anime.streaming_episodes) ? anime.streaming_episodes : [];
+  
+  const totalCount = Math.max(rawEpisodesCount, tmdbEps.length, streamingEps.length, 1);
+  const count = (rawEpisodesCount > 0) ? rawEpisodesCount : totalCount;
+
+  // TMDB backdrop / poster fallback guaranteed from TMDB
+  const tmdbBackdrop = anime.tmdb_backdrop_path 
+    ? `https://image.tmdb.org/t/p/w500${anime.tmdb_backdrop_path}` 
+    : (standard.images.backdrop || standard.images.banner || standard.cover_image.extra_large);
+  const tmdbPoster = anime.tmdb_poster_path 
+    ? `https://image.tmdb.org/t/p/w500${anime.tmdb_poster_path}` 
+    : standard.cover_image.large;
+
+  const episodeList = [];
+  for (let i = 1; i <= count; i++) {
+    const tmdbEp = tmdbEps.find(e => e.episode === i) || tmdbEps[i - 1] || null;
+    const streamEp = streamingEps[i - 1] || null;
+
+    let title = `Episode ${i}`;
+    if (tmdbEp?.title && !tmdbEp.title.startsWith('Episode ')) {
+      title = tmdbEp.title;
+    } else if (streamEp?.title) {
+      title = streamEp.title;
+    } else if (tmdbEp?.title) {
+      title = tmdbEp.title;
+    }
+
+    // Every episode has an image from TMDB:
+    // 1. Direct TMDB episode still image
+    // 2. TMDB backdrop path
+    // 3. TMDB poster path
+    // 4. Streaming thumbnail or banner
+    let image = tmdbBackdrop;
+    let stillPath = null;
+    if (tmdbEp?.image) {
+      image = tmdbEp.image;
+      stillPath = tmdbEp.still_path || null;
+    } else if (tmdbEp?.still_path) {
+      image = `https://image.tmdb.org/t/p/w500${tmdbEp.still_path}`;
+      stillPath = tmdbEp.still_path;
+    } else if (anime.tmdb_backdrop_path) {
+      image = `https://image.tmdb.org/t/p/w500${anime.tmdb_backdrop_path}`;
+    } else if (anime.tmdb_poster_path) {
+      image = tmdbPoster;
+    } else if (streamEp?.thumbnail) {
+      image = streamEp.thumbnail;
+    }
+
+    episodeList.push({
+      episode: i,
+      title,
+      image,
+      tmdb_still_path: stillPath,
+      air_date: tmdbEp?.air_date || null,
+      overview: tmdbEp?.overview || null
+    });
+  }
+
+  return episodeList;
+}
+
+const charactersMemoryCache = new Map();
+
+async function getAnimeCharacters(anime, allowFetchFallback = true) {
+  if (Array.isArray(anime.characters) && anime.characters.length > 0) {
+    return anime.characters;
+  }
+
+  if (anime.characters?.edges && Array.isArray(anime.characters.edges) && anime.characters.edges.length > 0) {
+    return anime.characters.edges.map(edge => {
+      const node = edge.node || {};
+      const vas = edge.voiceActors || [];
+      const primaryVa = vas[0] || null;
+      return {
+        id: node.id,
+        role: edge.role || "SUPPORTING",
+        name: {
+          full: node.name?.full || null,
+          native: node.name?.native || null,
+          user_preferred: node.name?.userPreferred || null
+        },
+        image: {
+          large: node.image?.large || null,
+          medium: node.image?.medium || null
+        },
+        voice_actor: primaryVa ? {
+          id: primaryVa.id,
+          name: {
+            full: primaryVa.name?.full || null,
+            native: primaryVa.name?.native || null
+          },
+          language: primaryVa.language || "JAPANESE",
+          image: {
+            large: primaryVa.image?.large || null,
+            medium: primaryVa.image?.medium || null
+          }
+        } : null,
+        voice_actors: vas.map(va => ({
+          id: va.id,
+          name: { full: va.name?.full || null, native: va.name?.native || null },
+          language: va.language || null,
+          image: { large: va.image?.large || null, medium: va.image?.medium || null }
+        }))
+      };
+    });
+  }
+
+  const anilistId = anime.id ?? anime.anilist_id;
+  if (!anilistId || !allowFetchFallback) return [];
+
+  const cacheKey = String(anilistId);
+  if (charactersMemoryCache.has(cacheKey)) {
+    return charactersMemoryCache.get(cacheKey);
+  }
+
+  try {
+    const query = `
+      query ($id: Int) {
+        Media(id: $id, type: ANIME) {
+          characters(page: 1, perPage: 25, sort: [ROLE, RELEVANCE, ID]) {
+            edges {
+              role
+              node {
+                id
+                name { full native userPreferred }
+                image { large medium }
+              }
+              voiceActors(language: JAPANESE, sort: [RELEVANCE, ID]) {
+                id
+                name { full native userPreferred }
+                language
+                image { large medium }
+              }
+            }
+          }
+        }
+      }
+    `;
+    const resp = await fetch('https://graphql.anilist.co', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'User-Agent': 'AniDB-Offline-API/5.0' },
+      body: JSON.stringify({ query, variables: { id: anilistId } })
+    });
+    if (resp.ok) {
+      const result = await resp.json();
+      const edges = result.data?.Media?.characters?.edges || [];
+      const parsed = edges.map(edge => {
+        const node = edge.node || {};
+        const vas = edge.voiceActors || [];
+        const primaryVa = vas[0] || null;
+        return {
+          id: node.id,
+          role: edge.role || "SUPPORTING",
+          name: {
+            full: node.name?.full || null,
+            native: node.name?.native || null,
+            user_preferred: node.name?.userPreferred || null
+          },
+          image: {
+            large: node.image?.large || null,
+            medium: node.image?.medium || null
+          },
+          voice_actor: primaryVa ? {
+            id: primaryVa.id,
+            name: {
+              full: primaryVa.name?.full || null,
+              native: primaryVa.name?.native || null
+            },
+            language: primaryVa.language || "JAPANESE",
+            image: {
+              large: primaryVa.image?.large || null,
+              medium: primaryVa.image?.medium || null
+            }
+          } : null,
+          voice_actors: vas.map(va => ({
+            id: va.id,
+            name: { full: va.name?.full || null, native: va.name?.native || null },
+            language: va.language || null,
+            image: { large: va.image?.large || null, medium: va.image?.medium || null }
+          }))
+        };
+      });
+      charactersMemoryCache.set(cacheKey, parsed);
+      anime.characters = parsed;
+      return parsed;
+    }
+  } catch (e) {
+    // Return empty on network issues
+  }
+
+  return [];
+}
+
 const typeDefs = `
   type Query {
-    animeList(page: Int, perPage: Int, search: String, genres: [String], status: String, season: String, seasonYear: Int, format: String, sort: [String]): Page
+    animeList(page: Int, perPage: Int, search: String, genres: [String], status: String, season: String, seasonYear: Int, format: String, sort: [String], letter: String): Page
     anime(id: Int!): Media
+    schedules(date: String, day: String, status: String, letter: String, search: String, sort: String, page: Int, perPage: Int): SchedulePage
   }
 
   type Page {
@@ -163,8 +361,44 @@ const typeDefs = `
     source: String
     countryOfOrigin: String
     relations: [MediaRelation]
+    characters: [Character]
     episode_list: [Episode]
+    streaming_episodes: [StreamingEpisode]
     external_ids: ExternalIds
+  }
+
+  type Character {
+    id: Int
+    role: String
+    name: CharacterName
+    image: CharacterImage
+    voice_actor: VoiceActor
+    voice_actors: [VoiceActor]
+  }
+
+  type CharacterName {
+    full: String
+    native: String
+    user_preferred: String
+  }
+
+  type CharacterImage {
+    large: String
+    medium: String
+  }
+
+  type VoiceActor {
+    id: Int
+    name: CharacterName
+    language: String
+    image: CharacterImage
+  }
+
+  type StreamingEpisode {
+    title: String
+    thumbnail: String
+    url: String
+    site: String
   }
 
   type MediaTitle {
@@ -218,6 +452,39 @@ const typeDefs = `
     episode: Int
     title: String
     image: String
+    tmdb_still_path: String
+    air_date: String
+    overview: String
+  }
+
+  type SchedulePage {
+    timezone: String
+    tmz: String
+    total: Int
+    page: Int
+    perPage: Int
+    items: [ScheduleItem]
+  }
+
+  type ScheduleItem {
+    id: Int
+    anime_id: String
+    anilist_id: Int
+    episode: Int
+    airing_at: Int
+    airing_date: String
+    airing_time: String
+    airing_day: String
+    time_until_airing: Int
+    is_aired: Boolean
+    title: MediaTitle
+    cover_image: MediaCoverImage
+    images: MediaImages
+    format: String
+    status: String
+    genres: [String]
+    average_score: Int
+    popularity: Int
   }
 `;
 
@@ -235,6 +502,18 @@ const resolvers = {
                  (t.english && t.english.toLowerCase().includes(q)) ||
                  (t.native && t.native.toLowerCase().includes(q)) ||
                  (a.synonyms && a.synonyms.some(s => s.toLowerCase().includes(q)));
+        });
+      }
+
+      if (args.letter) {
+        const lf = args.letter.toUpperCase().trim();
+        items = items.filter(a => {
+          const t = a.title || {};
+          const titles = [t.english, t.romaji, t.native].filter(Boolean);
+          if (lf === '#' || lf === '0-9') {
+            return titles.some(str => /^[^a-zA-Z]/.test(str.trim()));
+          }
+          return titles.some(str => str.trim().toUpperCase().startsWith(lf));
         });
       }
       
@@ -255,8 +534,15 @@ const resolvers = {
       if (args.sort && args.sort.length > 0) {
         const s = args.sort[0].toLowerCase();
         if (s.includes('score')) items.sort((a, b) => (b.average_score || 0) - (a.average_score || 0));
-        else if (s.includes('popularity')) items.sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
-        else if (s.includes('new')) items.sort((a, b) => (b.start_date ? new Date(b.start_date).getTime() : 0) - (a.start_date ? new Date(a.start_date).getTime() : 0));
+        else if (s.includes('popul') || s.includes('trend')) items.sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
+        else if (s.includes('new') || s.includes('start_date')) items.sort((a, b) => (b.start_date ? new Date(b.start_date).getTime() : 0) - (a.start_date ? new Date(a.start_date).getTime() : 0));
+        else if (s.includes('letter') || s.includes('title') || s.includes('a-z')) {
+          items.sort((a, b) => {
+            const ta = (a.title?.english || a.title?.romaji || a.title?.native || '').toLowerCase();
+            const tb = (b.title?.english || b.title?.romaji || b.title?.native || '').toLowerCase();
+            return ta.localeCompare(tb);
+          });
+        }
       }
 
       const total = items.length;
@@ -267,55 +553,51 @@ const resolvers = {
       const offset = (currentPage - 1) * perPage;
       const paginated = items.slice(offset, offset + perPage);
 
+      const mappedMedia = await Promise.all(paginated.map(async a => {
+         const standard = formatAnimeStandard(a);
+         const epList = buildEpisodeList(a);
+         const charactersList = await getAnimeCharacters(a, false);
+
+         return {
+           anime_id: standard.anime_id,
+           id: standard.anilist_id,
+           anilist_id: standard.anilist_id,
+           idMal: standard.external_ids.mal,
+           title: standard.title,
+           cover_image: standard.cover_image,
+           images: standard.images,
+           format: standard.format,
+           status: standard.status,
+           description: a.description,
+           startDate: a.start_date,
+           endDate: a.end_date,
+           season: standard.season,
+           seasonYear: standard.season_year,
+           episodes: standard.episodes,
+           duration: standard.duration,
+           averageScore: standard.average_score,
+           average_score: standard.average_score,
+           popularity: standard.popularity,
+           rating: standard.rating,
+           genres: standard.genres,
+           tags: a.tags,
+           studios: a.studios,
+           trailerUrl: a.trailer_url,
+           nextAiringEpisode: a.next_airing_episode,
+           isAdult: a.is_adult,
+           source: a.source,
+           countryOfOrigin: a.country_of_origin,
+           relations: a.relations,
+           characters: charactersList,
+           episode_list: epList,
+           streaming_episodes: a.streaming_episodes || [],
+           external_ids: standard.external_ids
+         };
+      }));
+
       return {
         pageInfo: { total, perPage, currentPage, lastPage, hasNextPage },
-        media: paginated.map(a => {
-           const standard = formatAnimeStandard(a);
-           let epList = [];
-           if (a.episodes > 0) {
-             for (let i = 1; i <= a.episodes; i++) {
-               epList.push({
-                 episode: i,
-                 title: `Episode ${i}`,
-                 image: standard.images.banner || standard.cover_image.extra_large
-               });
-             }
-           }
-
-           return {
-             anime_id: standard.anime_id,
-             id: standard.anilist_id,
-             anilist_id: standard.anilist_id,
-             idMal: standard.external_ids.mal,
-             title: standard.title,
-             cover_image: standard.cover_image,
-             images: standard.images,
-             format: standard.format,
-             status: standard.status,
-             description: a.description,
-             startDate: a.start_date,
-             endDate: a.end_date,
-             season: standard.season,
-             seasonYear: standard.season_year,
-             episodes: standard.episodes,
-             duration: standard.duration,
-             averageScore: standard.average_score,
-             average_score: standard.average_score,
-             popularity: standard.popularity,
-             rating: standard.rating,
-             genres: standard.genres,
-             tags: a.tags,
-             studios: a.studios,
-             trailerUrl: a.trailer_url,
-             nextAiringEpisode: a.next_airing_episode,
-             isAdult: a.is_adult,
-             source: a.source,
-             countryOfOrigin: a.country_of_origin,
-             relations: a.relations,
-             episode_list: epList,
-             external_ids: standard.external_ids
-           };
-        })
+        media: mappedMedia
       };
     },
     anime: async (_, args, context) => {
@@ -325,16 +607,8 @@ const resolvers = {
       if (!anime) return null;
       
       const standard = formatAnimeStandard(anime);
-      let epList = [];
-      if (anime.episodes > 0) {
-        for (let i = 1; i <= anime.episodes; i++) {
-          epList.push({
-            episode: i,
-            title: `Episode ${i}`,
-            image: standard.images.banner || standard.cover_image.extra_large
-          });
-        }
-      }
+      const epList = buildEpisodeList(anime);
+      const charactersList = await getAnimeCharacters(anime, true);
 
       return {
            anime_id: standard.anime_id,
@@ -366,8 +640,41 @@ const resolvers = {
            source: anime.source,
            countryOfOrigin: anime.country_of_origin,
            relations: anime.relations,
+           characters: charactersList,
            episode_list: epList,
+           streaming_episodes: anime.streaming_episodes || [],
            external_ids: standard.external_ids
+      };
+    },
+    schedules: async (_, args, context) => {
+      let data = await context.fetchData('/schedules.json');
+      let items = (data && data.schedules) ? data.schedules : (Array.isArray(data) ? data : []);
+      if (args.date) items = items.filter(s => s.airing_date === args.date);
+      if (args.day) items = items.filter(s => (s.airing_day || '').toLowerCase() === args.day.toLowerCase());
+      if (args.status === 'upcoming') items = items.filter(s => !s.is_aired);
+      if (args.status === 'aired') items = items.filter(s => s.is_aired);
+      if (args.letter) {
+        const lf = args.letter.toUpperCase().trim();
+        items = items.filter(s => {
+          const t = s.title || {};
+          const titles = [t.english, t.romaji, t.native].filter(Boolean);
+          return titles.some(str => str.trim().toUpperCase().startsWith(lf));
+        });
+      }
+
+      const total = items.length;
+      const perPage = args.perPage || 20;
+      const currentPage = args.page || 1;
+      const offset = (currentPage - 1) * perPage;
+      const paginated = items.slice(offset, offset + perPage);
+
+      return {
+        timezone: data?.timezone || "UTC+00:00",
+        tmz: data?.tmz || "00:00",
+        total,
+        page: currentPage,
+        perPage,
+        items: paginated
       };
     }
   }
@@ -465,6 +772,7 @@ export default {
     }
     
     const search = url.searchParams.get('q') || url.searchParams.get('search') || url.searchParams.get('query');
+    const letterParam = url.searchParams.get('letter') || url.searchParams.get('huruf');
     const genres = getArrayParam('genres') || getArrayParam('genre_ids') || getArrayParam('genre');
     const tagsParam = getArrayParam('tags') || getArrayParam('tag');
     
@@ -487,6 +795,7 @@ export default {
     const externalIdFilters = ['mal_id', 'tmdb_id', 'imdb_id', 'tvdb_id', 'kitsu_id']
       .map(name => [name, url.searchParams.get(name)])
       .filter(([, value]) => value !== null);
+      
     const sortBy = url.searchParams.get('sort_by') || url.searchParams.get('order_by') || url.searchParams.get('sort');
     const sortOrder = url.searchParams.get('sort_order') || url.searchParams.get('order');
     const sortFields = sortBy ? sortBy.split(',').map(value => value.trim()).filter(Boolean) : [];
@@ -494,17 +803,35 @@ export default {
       score: 'average_score',
       averagescore: 'average_score',
       average_score: 'average_score',
+      rating: 'average_score',
+      top: 'average_score',
+      top_rated: 'average_score',
       release_date: 'start_date',
       releasedate: 'start_date',
       start_date: 'start_date',
+      newest: 'start_date',
+      latest: 'start_date',
+      oldest: 'start_date',
       year: 'season_year',
       season_year: 'season_year',
       title: 'title',
+      letter: 'title',
+      huruf: 'title',
+      name: 'title',
+      alphabetical: 'title',
+      'a-z': 'title',
+      'z-a': 'title',
       id: 'id',
       anilist_id: 'id',
       anime_id: 'anime_id',
       popularity: 'popularity',
+      popular: 'popularity',
+      bypopularity: 'popularity',
+      trending: 'popularity',
+      most_popular: 'popularity',
       episodes: 'episodes',
+      episodes_desc: 'episodes',
+      episodes_asc: 'episodes',
       mal_id: 'mal_id',
       kitsu_id: 'kitsu_id',
       status: 'status',
@@ -514,7 +841,7 @@ export default {
       tvdb_id: 'tvdb_id'
     };
     const invalidSort = sortFields.some(field => {
-      const name = field.startsWith('-') ? field.slice(1) : field;
+      const name = field.startsWith('-') ? field.slice(1) : (field.startsWith('+') ? field.slice(1) : field);
       return !sortAliases[name.toLowerCase()];
     });
     const scoreBoundsInvalid = [minScoreFilter, maxScoreFilter].some(value =>
@@ -527,7 +854,7 @@ export default {
     const invalidAdultFilter = isAdultFilter !== null &&
       !['true', 'false', '1', '0'].includes(isAdultFilter.toLowerCase());
 
-    function processItems(items, isList = true) {
+    async function processItems(items, isList = true) {
       let filtered = items;
       
       if (search) {
@@ -539,6 +866,18 @@ export default {
                  (t.native && t.native.toLowerCase().includes(q)) ||
                  (a.description && a.description.toLowerCase().includes(q)) ||
                  (a.synonyms && a.synonyms.some(s => s.toLowerCase().includes(q)));
+        });
+      }
+
+      if (letterParam) {
+        const lf = letterParam.toUpperCase().trim();
+        filtered = filtered.filter(a => {
+          const t = a.title || {};
+          const titles = [t.english, t.romaji, t.native].filter(Boolean);
+          if (lf === '#' || lf === '0-9') {
+            return titles.some(str => /^[^a-zA-Z]/.test(str.trim()));
+          }
+          return titles.some(str => str.trim().toUpperCase().startsWith(lf));
         });
       }
       
@@ -647,13 +986,25 @@ export default {
       if (sortFields.length > 0 && !invalidSort) {
         filtered.sort((a, b) => {
           for (const field of sortFields) {
-            const descending = field.startsWith('-') ||
-              ['desc', 'descending'].includes((sortOrder || '').toLowerCase());
-            const requestedName = (descending ? field.slice(1) : field).toLowerCase();
+            const rawField = field.startsWith('-') ? field.slice(1) : (field.startsWith('+') ? field.slice(1) : field);
+            const requestedName = rawField.toLowerCase();
             const key = sortAliases[requestedName];
+            
+            let defaultDescending = ['average_score', 'popularity', 'start_date', 'episodes'].includes(key);
+            if (requestedName === 'oldest' || requestedName === 'episodes_asc') defaultDescending = false;
+            if (requestedName === 'z-a') defaultDescending = true;
+            if (requestedName === 'a-z' || requestedName === 'title' || requestedName === 'letter' || requestedName === 'huruf') defaultDescending = false;
+
+            let descending = defaultDescending;
+            if (field.startsWith('-')) descending = true;
+            else if (field.startsWith('+')) descending = false;
+            else if (sortOrder) {
+              descending = ['desc', 'descending'].includes(sortOrder.toLowerCase());
+            }
+
             const valueFor = anime => {
               if (key === 'title') {
-                return anime.title?.english || anime.title?.romaji || anime.title?.native || '';
+                return (anime.title?.english || anime.title?.romaji || anime.title?.native || '').toLowerCase();
               }
               if (key === 'episodes') return anime.episodes ?? 0;
               if (key === 'mal_id') return anime.idMal ?? anime.mal_id ?? 0;
@@ -676,23 +1027,15 @@ export default {
       const total = filtered.length;
       const paginated = filtered.slice(offset, offset + limit);
       
-      const mapFields = (a) => {
+      const mapFields = async (a) => {
          const standard = formatAnimeStandard(a);
          
          if (isList && !fieldsFilter) {
            return standard;
          }
 
-         let epList = [];
-         if (!isList && a.episodes > 0) {
-           for (let i = 1; i <= a.episodes; i++) {
-             epList.push({
-               episode: i,
-               title: `Episode ${i}`,
-               image: standard.images.banner || standard.cover_image.extra_large
-             });
-           }
-         }
+         const epList = buildEpisodeList(a);
+         const charactersList = await getAnimeCharacters(a, !isList);
 
          let fullMapped = { 
            ...standard,
@@ -706,7 +1049,9 @@ export default {
            source: a.source || null,
            country_of_origin: a.country_of_origin || 'JP',
            relations: a.relations || [],
-           episode_list: epList
+           characters: charactersList,
+           episode_list: epList,
+           streaming_episodes: a.streaming_episodes || []
          };
          
          if (fieldsFilter) {
@@ -722,12 +1067,14 @@ export default {
       };
 
       if (!isList) {
-         return filtered.length > 0 ? mapFields(filtered[0]) : null;
+         return filtered.length > 0 ? await mapFields(filtered[0]) : null;
       }
+
+      const mappedData = await Promise.all(paginated.map(mapFields));
 
       return {
         total,
-        count: paginated.length,
+        count: mappedData.length,
         limit,
         offset,
         page: Math.floor(offset / limit) + 1,
@@ -735,7 +1082,7 @@ export default {
         has_next: offset + limit < total,
         next_offset: offset + limit < total ? offset + limit : null,
         previous_offset: offset > 0 ? Math.max(0, offset - limit) : null,
-        data: paginated.map(mapFields)
+        data: mappedData
       };
     }
 
@@ -772,35 +1119,55 @@ export default {
         const trending = items.sort((a,b) => (b.popularity || 0) - (a.popularity || 0)).slice(0, 15).map(formatAnimeStandard);
         const top_rated = items.sort((a,b) => (b.average_score || 0) - (a.average_score || 0)).slice(0, 10).map(formatAnimeStandard);
         
-        let jadwal = items.filter(a => a.next_airing_episode && a.next_airing_episode.time_until_airing > 0);
-        jadwal.sort((a,b) => a.next_airing_episode.time_until_airing - b.next_airing_episode.time_until_airing);
-        jadwal = jadwal.slice(0, 15).map(formatAnimeStandard);
+        let schedulesData = await fetchGitHubJSON('/schedules.json');
+        let jadwalItems = [];
+        let totalStacked = 0;
+        let todayUtc = new Date().toISOString().split('T')[0];
+        if (schedulesData) {
+          jadwalItems = Array.isArray(schedulesData) ? schedulesData : (schedulesData.schedules || []);
+          totalStacked = schedulesData.total_stacked || jadwalItems.length;
+        } else {
+          jadwalItems = items.filter(a => a.next_airing_episode && a.next_airing_episode.time_until_airing > 0);
+          jadwalItems.sort((a,b) => a.next_airing_episode.time_until_airing - b.next_airing_episode.time_until_airing);
+          jadwalItems = jadwalItems.slice(0, 15).map(formatAnimeStandard);
+        }
+
+        const nowTs = Math.floor(Date.now() / 1000);
+        const upcomingJadwal = jadwalItems
+          .filter(j => (j.airing_at ? j.airing_at > nowTs : true))
+          .slice(0, 15);
 
         return jsonResponse({
           success: true,
           message: "Welcome to AniDB Offline API",
           website: "https://anidb.my.id",
           documentation: "https://github.com/myzert/anidb-offline",
-          version: "5.0.0",
+          version: "5.1.0",
           database_releases: "/api/v1/dumps",
           data_source: "Official AniList GraphQL API enriched with TMDB & Kitsu",
           available_features: [
             "Standardized anime schema (anime_id, anilist_id, title, cover_image, images, external_ids, rating)",
-            "Dynamic 24h incremental syncing with AniList",
-            "TMDB posters, backdrops, and official vector logos",
-            "Jikan-style top anime, seasonal charts, and live airing schedules",
+            "Anime characters with voice actors (VA) and TMDB episode imagery",
+            "Fast 6-hour automated synchronization schedule (00:00, 06:00, 12:00, 18:00 UTC)",
+            "Airing schedules covering -7 days past to +7 days future stacked with TMZ 00 (UTC 00:00:00) synchronization",
+            "Advanced multi-field sorting (popular, score, title/huruf/alphabetical A-Z, newest, episodes)",
+            "Filter by starting letter (?letter=A or ?huruf=A)",
             "Database export archives (CSV, XLSX, TAR.GZ, ZIP, JSON) in UTC+7"
           ],
           endpoints: [
             "GET /api/v1/anime", 
             "GET /api/v1/search", 
             "GET /api/v1/anime/:id", 
+            "GET /api/v1/anime/:id/characters",
             "GET /api/v1/anime/:id/episodes",
             "GET /api/v1/anime/:id/relations",
             "GET /api/v1/top/anime",
             "GET /api/v1/seasons/now",
             "GET /api/v1/seasons/:year/:season",
             "GET /api/v1/schedules",
+            "GET /api/v1/schedules/today",
+            "GET /api/v1/schedules/week",
+            "GET /api/v1/schedules/:day",
             "GET /api/v1/random/anime", 
             "GET /api/v1/genres", 
             "GET /api/v1/studios", 
@@ -816,7 +1183,13 @@ export default {
             spotlight,
             trending,
             top_rated,
-            jadwal
+            jadwal: {
+              timezone: "UTC+00:00",
+              tmz: "00:00",
+              today_utc: todayUtc,
+              total_stacked: totalStacked,
+              items: upcomingJadwal
+            }
           }
         });
       }
@@ -850,7 +1223,7 @@ export default {
         }
         return jsonResponse({
           success: true,
-          message: "Database releases generated after 24h sync schedule",
+          message: "Database releases generated after sync schedule",
           available_formats: ["CSV", "XLSX", "TAR.GZ", "ZIP", "JSON"],
           naming_convention: "Anidb_YYYY-MM-DD_HH-mm-ss_UTC+7.<ext>"
         });
@@ -871,7 +1244,7 @@ export default {
         } else {
           items.sort((a,b) => (b.popularity || 0) - (a.popularity || 0));
         }
-        return jsonResponse(processItems(items, true));
+        return jsonResponse(await processItems(items, true));
       }
 
       // Seasons now (Jikan style)
@@ -890,7 +1263,7 @@ export default {
           (a.season || '').toUpperCase() === currentSeason &&
           Number(a.season_year || 0) === currentYear
         );
-        return jsonResponse(processItems(seasonalItems.length > 0 ? seasonalItems : items, true));
+        return jsonResponse(await processItems(seasonalItems.length > 0 ? seasonalItems : items, true));
       }
 
       // Specific season chart (e.g. /api/v1/seasons/2026/fall)
@@ -904,23 +1277,253 @@ export default {
           Number(a.season_year || 0) === reqYear &&
           (a.season || '').toUpperCase() === reqSeason
         );
-        return jsonResponse(processItems(seasonalItems, true));
+        return jsonResponse(await processItems(seasonalItems, true));
       }
 
-      // Schedules (Jikan style)
-      if (['/schedules', '/api/schedules', '/api/v1/schedules', '/api/anime/schedules'].includes(path)) {
-        let items = await fetchGitHubJSON('/raw.json');
-        if (!items) return jsonResponse({error: 'Data not found'}, 404);
-        let scheduled = items.filter(a => a.next_airing_episode && a.next_airing_episode.time_until_airing > 0);
-        scheduled.sort((a,b) => a.next_airing_episode.time_until_airing - b.next_airing_episode.time_until_airing);
-        return jsonResponse(processItems(scheduled, true));
+      // Schedules (7 days back to 7 days forward, stacked history, TMZ 00)
+      const isSchedulePath = ['/schedules', '/api/schedules', '/api/v1/schedules', '/api/anime/schedules'].includes(path) ||
+                             path.startsWith('/api/v1/schedules/') || path.startsWith('/schedules/');
+      if (isSchedulePath) {
+        if (paginationError) return jsonResponse({error: paginationError}, 400);
+
+        let schedulesData = await fetchGitHubJSON('/schedules.json');
+        let scheduleItems = [];
+        let scheduleMeta = {
+          timezone: "UTC+00:00",
+          tmz: "00:00",
+          total_stacked: 0
+        };
+
+        if (schedulesData) {
+          scheduleItems = (schedulesData && schedulesData.schedules) ? schedulesData.schedules : (Array.isArray(schedulesData) ? schedulesData : []);
+          if (schedulesData.timezone) scheduleMeta.timezone = schedulesData.timezone;
+          if (schedulesData.tmz) scheduleMeta.tmz = schedulesData.tmz;
+          if (schedulesData.total_stacked) scheduleMeta.total_stacked = schedulesData.total_stacked;
+          if (schedulesData.last_updated) scheduleMeta.last_updated = schedulesData.last_updated;
+          if (schedulesData.date_range) scheduleMeta.date_range = schedulesData.date_range;
+        } else {
+          // Dynamic fallback to raw.json
+          const rawItems = await fetchGitHubJSON('/raw.json');
+          if (rawItems) {
+            scheduleItems = rawItems
+              .filter(a => a.next_airing_episode && a.next_airing_episode.airing_at)
+              .map(a => {
+                const standard = formatAnimeStandard(a);
+                const dt = new Date(a.next_airing_episode.airing_at * 1000);
+                const airingDate = dt.toISOString().split('T')[0];
+                const days = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday'];
+                return {
+                  id: a.next_airing_episode.airing_at + (standard.anilist_id || 0),
+                  anime_id: standard.anime_id,
+                  anilist_id: standard.anilist_id,
+                  mal_id: standard.external_ids.mal,
+                  episode: a.next_airing_episode.episode,
+                  airing_at: a.next_airing_episode.airing_at,
+                  airing_date: airingDate,
+                  airing_time: dt.toISOString().split('T')[1].slice(0, 8),
+                  airing_day: days[dt.getUTCDay()],
+                  timezone: "UTC+00:00",
+                  tmz: "00:00",
+                  time_until_airing: a.next_airing_episode.time_until_airing,
+                  is_aired: a.next_airing_episode.time_until_airing <= 0,
+                  title: standard.title,
+                  cover_image: standard.cover_image,
+                  images: standard.images,
+                  format: standard.format,
+                  status: standard.status,
+                  genres: standard.genres,
+                  average_score: standard.average_score,
+                  popularity: standard.popularity
+                };
+              });
+          }
+        }
+
+        const now = new Date();
+        const nowTs = Math.floor(now.getTime() / 1000);
+        const todayUtcStr = now.toISOString().split('T')[0];
+        const daysOfWeek = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday'];
+        const currentDayName = daysOfWeek[now.getUTCDay()];
+
+        // Live recalculation of airing state
+        scheduleItems = scheduleItems.map(item => ({
+          ...item,
+          time_until_airing: item.airing_at - nowTs,
+          is_aired: item.airing_at <= nowTs
+        }));
+
+        let filteredSchedules = scheduleItems;
+
+        // Routing subpaths
+        const subScheduleMatch = path.match(/^\/(?:api\/)?(?:v1\/)?schedules\/(today|week|monday|tuesday|wednesday|thursday|friday|saturday|sunday)$/i);
+        let forceGrouped = false;
+        if (subScheduleMatch) {
+          const sub = subScheduleMatch[1].toLowerCase();
+          if (sub === 'today') {
+            filteredSchedules = filteredSchedules.filter(s => s.airing_date === todayUtcStr);
+          } else if (sub === 'week') {
+            forceGrouped = true;
+            const minTs = nowTs - 7 * 86400;
+            const maxTs = nowTs + 7 * 86400;
+            filteredSchedules = filteredSchedules.filter(s => s.airing_at >= minTs && s.airing_at <= maxTs);
+          } else {
+            filteredSchedules = filteredSchedules.filter(s => (s.airing_day || '').toLowerCase() === sub);
+          }
+        }
+
+        // Query param filters
+        const dateFilter = url.searchParams.get('date');
+        if (dateFilter) {
+          filteredSchedules = filteredSchedules.filter(s => s.airing_date === dateFilter);
+        }
+
+        const dayFilter = url.searchParams.get('day');
+        if (dayFilter) {
+          const df = dayFilter.toLowerCase();
+          if (df === 'today') filteredSchedules = filteredSchedules.filter(s => s.airing_date === todayUtcStr);
+          else if (df === 'tomorrow') {
+            const tmrw = new Date(now.getTime() + 86400000).toISOString().split('T')[0];
+            filteredSchedules = filteredSchedules.filter(s => s.airing_date === tmrw);
+          } else if (df === 'yesterday') {
+            const yday = new Date(now.getTime() - 86400000).toISOString().split('T')[0];
+            filteredSchedules = filteredSchedules.filter(s => s.airing_date === yday);
+          } else {
+            filteredSchedules = filteredSchedules.filter(s => (s.airing_day || '').toLowerCase() === df);
+          }
+        }
+
+        const schedStatus = url.searchParams.get('status');
+        if (schedStatus === 'upcoming') {
+          filteredSchedules = filteredSchedules.filter(s => !s.is_aired);
+        } else if (schedStatus === 'aired') {
+          filteredSchedules = filteredSchedules.filter(s => s.is_aired);
+        }
+
+        const daysBack = url.searchParams.get('days_back');
+        const daysForward = url.searchParams.get('days_forward');
+        if (daysBack !== null || daysForward !== null) {
+          const b = daysBack !== null ? parseInt(daysBack, 10) : 7;
+          const f = daysForward !== null ? parseInt(daysForward, 10) : 7;
+          const minTs = nowTs - b * 86400;
+          const maxTs = nowTs + f * 86400;
+          filteredSchedules = filteredSchedules.filter(s => s.airing_at >= minTs && s.airing_at <= maxTs);
+        }
+
+        if (letterParam) {
+          const lf = letterParam.toUpperCase().trim();
+          filteredSchedules = filteredSchedules.filter(s => {
+            const t = s.title || {};
+            const titles = [t.english, t.romaji, t.native].filter(Boolean);
+            if (lf === '#' || lf === '0-9') {
+              return titles.some(str => /^[^a-zA-Z]/.test(str.trim()));
+            }
+            return titles.some(str => str.trim().toUpperCase().startsWith(lf));
+          });
+        }
+
+        if (search) {
+          const q = search.toLowerCase();
+          filteredSchedules = filteredSchedules.filter(s => {
+            const t = s.title || {};
+            return (t.romaji && t.romaji.toLowerCase().includes(q)) ||
+                   (t.english && t.english.toLowerCase().includes(q)) ||
+                   (t.native && t.native.toLowerCase().includes(q));
+          });
+        }
+
+        if (genres) {
+          const genresList = genres.map(g => g.toLowerCase().trim());
+          filteredSchedules = filteredSchedules.filter(s => {
+            if (!s.genres) return false;
+            const itemGenres = s.genres.map(g => g.toLowerCase());
+            return genresList.every(g => itemGenres.includes(g));
+          });
+        }
+
+        // Sorting
+        const schedSort = (sortBy || 'time').toLowerCase();
+        if (schedSort === '-time' || schedSort === 'time_desc') {
+          filteredSchedules.sort((a,b) => (b.airing_at || 0) - (a.airing_at || 0));
+        } else if (schedSort === 'popularity' || schedSort === 'popular') {
+          filteredSchedules.sort((a,b) => (b.popularity || 0) - (a.popularity || 0));
+        } else if (schedSort === 'score' || schedSort === 'rating') {
+          filteredSchedules.sort((a,b) => (b.average_score || 0) - (a.average_score || 0));
+        } else if (schedSort === 'title' || schedSort === 'letter' || schedSort === 'huruf' || schedSort === 'a-z') {
+          filteredSchedules.sort((a,b) => {
+            const ta = (a.title?.english || a.title?.romaji || a.title?.native || '').toLowerCase();
+            const tb = (b.title?.english || b.title?.romaji || b.title?.native || '').toLowerCase();
+            return ta.localeCompare(tb);
+          });
+        } else if (schedSort === 'z-a' || schedSort === '-title') {
+          filteredSchedules.sort((a,b) => {
+            const ta = (a.title?.english || a.title?.romaji || a.title?.native || '').toLowerCase();
+            const tb = (b.title?.english || b.title?.romaji || b.title?.native || '').toLowerCase();
+            return tb.localeCompare(ta);
+          });
+        } else {
+          // Default: chronological ascending
+          filteredSchedules.sort((a,b) => (a.airing_at || 0) - (b.airing_at || 0));
+        }
+
+        const viewMode = (url.searchParams.get('view') || (forceGrouped ? 'grouped' : 'flat')).toLowerCase();
+        if (viewMode === 'grouped' || viewMode === 'week') {
+          const groupedByDate = {};
+          filteredSchedules.forEach(item => {
+            const d = item.airing_date;
+            if (!groupedByDate[d]) {
+              groupedByDate[d] = {
+                date: d,
+                day: item.airing_day,
+                timezone: "UTC+00:00",
+                tmz: "00:00",
+                count: 0,
+                items: []
+              };
+            }
+            groupedByDate[d].count++;
+            groupedByDate[d].items.push(item);
+          });
+
+          return jsonResponse({
+            timezone: "UTC+00:00",
+            tmz: "00:00",
+            today_utc: todayUtcStr,
+            current_day: currentDayName,
+            total_stacked: scheduleMeta.total_stacked || scheduleItems.length,
+            total_matching: filteredSchedules.length,
+            days_count: Object.keys(groupedByDate).length,
+            dates: Object.keys(groupedByDate).sort(),
+            data: groupedByDate
+          });
+        }
+
+        const total = filteredSchedules.length;
+        const paginatedSchedules = filteredSchedules.slice(offset, offset + limit);
+
+        return jsonResponse({
+          timezone: "UTC+00:00",
+          tmz: "00:00",
+          today_utc: todayUtcStr,
+          current_day: currentDayName,
+          total_stacked: scheduleMeta.total_stacked || scheduleItems.length,
+          total,
+          count: paginatedSchedules.length,
+          limit,
+          offset,
+          page: Math.floor(offset / limit) + 1,
+          total_pages: Math.ceil(total / limit),
+          has_next: offset + limit < total,
+          next_offset: offset + limit < total ? offset + limit : null,
+          previous_offset: offset > 0 ? Math.max(0, offset - limit) : null,
+          data: paginatedSchedules
+        });
       }
 
       // Search / List anime
       if (['/anime', '/api/anime', '/v1/anime', '/api/v1/anime', '/v1/search', '/api/v1/search'].includes(path)) {
         let items = await fetchGitHubJSON('/raw.json');
         if (!items) return jsonResponse({error: 'Data not found'}, 404);
-        return jsonResponse(processItems(items, true));
+        return jsonResponse(await processItems(items, true));
       }
 
       // Random anime
@@ -952,6 +1555,59 @@ export default {
         return jsonResponse(formatAnimeStandard(randomItem));
       }
 
+      // Anime characters sub-endpoint
+      const matchCharacters = path.match(/^\/(?:api\/)?(?:v1\/)?anime\/([^/]+)\/characters$/);
+      if (matchCharacters) {
+        if (paginationError) return jsonResponse({error: paginationError}, 400);
+        const identifier = matchCharacters[1];
+        const items = await fetchGitHubJSON('/raw.json');
+        if (!items) return jsonResponse({error: 'Data not found'}, 404);
+        
+        const anime = items.find(a => {
+          const standard = formatAnimeStandard(a);
+          return standard.anime_id === identifier ||
+                 String(standard.anilist_id) === identifier ||
+                 identifier.endsWith(`-${standard.anilist_id}`);
+        });
+        if (!anime) return jsonResponse({error: 'Anime not found'}, 404);
+        
+        const standard = formatAnimeStandard(anime);
+        let charList = await getAnimeCharacters(anime, true);
+        
+        const roleFilter = url.searchParams.get('role');
+        if (roleFilter) {
+          charList = charList.filter(c => (c.role || '').toUpperCase() === roleFilter.toUpperCase());
+        }
+        
+        const charSearch = url.searchParams.get('q') || url.searchParams.get('query');
+        if (charSearch) {
+          const cq = charSearch.toLowerCase();
+          charList = charList.filter(c => {
+            const n = c.name || {};
+            const va = c.voice_actor?.name || {};
+            return (n.full && n.full.toLowerCase().includes(cq)) ||
+                   (n.native && n.native.toLowerCase().includes(cq)) ||
+                   (va.full && va.full.toLowerCase().includes(cq)) ||
+                   (va.native && va.native.toLowerCase().includes(cq));
+          });
+        }
+        
+        const total = charList.length;
+        const charLimit = Math.min(limit, 100);
+        const paginatedChars = charList.slice(offset, offset + charLimit);
+        
+        return jsonResponse({
+          anime_id: standard.anime_id,
+          anilist_id: standard.anilist_id,
+          total,
+          limit: charLimit,
+          offset,
+          count: paginatedChars.length,
+          has_next: offset + charLimit < total,
+          data: paginatedChars
+        });
+      }
+
       // Anime episodes sub-endpoint
       const matchEpisodes = path.match(/^\/(?:api\/)?(?:v1\/)?anime\/([^/]+)\/episodes$/);
       if (matchEpisodes) {
@@ -969,25 +1625,19 @@ export default {
         if (!anime) return jsonResponse({error: 'Anime not found'}, 404);
         
         const standard = formatAnimeStandard(anime);
-        const count = standard.episodes || 0;
-        const episodeList = [];
-        for (let i = 1; i <= count; i++) {
-          episodeList.push({
-            episode: i,
-            title: `Episode ${i}`,
-            image: standard.images.banner || standard.cover_image.extra_large
-          });
-        }
+        const episodeList = buildEpisodeList(anime);
+        const total = episodeList.length;
         const epLimit = Math.min(limit, 100);
         const epPage = episodeList.slice(offset, offset + epLimit);
+        
         return jsonResponse({
           anime_id: standard.anime_id,
           anilist_id: standard.anilist_id,
-          total: count,
+          total,
           limit: epLimit,
           offset,
           count: epPage.length,
-          has_next: offset + epLimit < count,
+          has_next: offset + epLimit < total,
           data: epPage
         });
       }
@@ -1027,7 +1677,7 @@ export default {
                  String(standard.anilist_id) === identifier ||
                  identifier.endsWith(`-${standard.anilist_id}`);
         });
-        if (anime.length > 0) return jsonResponse(processItems(anime, false));
+        if (anime.length > 0) return jsonResponse(await processItems(anime, false));
         return jsonResponse({error: "Anime not found"}, 404);
       }
       
@@ -1046,7 +1696,7 @@ export default {
         else if (source === 'kitsu') anime = items.filter(a => String(a.kitsu_id ?? '') === id);
         else if (source === 'anilist') anime = items.filter(a => String(a.id ?? a.anilist_id ?? '') === id || id.endsWith(`-${a.id ?? a.anilist_id}`));
         
-        if (anime.length > 0) return jsonResponse(processItems(anime, false));
+        if (anime.length > 0) return jsonResponse(await processItems(anime, false));
         return jsonResponse({error: "Anime not found"}, 404);
       }
 

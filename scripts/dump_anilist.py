@@ -3,10 +3,40 @@ import json
 import time
 import os
 import argparse
+import re
+import unicodedata
 from pathlib import Path
 import logging
+from datetime import datetime, timezone, timedelta
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+def slugify(text: str) -> str:
+    if not text:
+        return "anime"
+    normalized = unicodedata.normalize("NFKD", str(text)).encode("ascii", "ignore").decode("ascii")
+    slug = re.sub(r"[^a-z0-9]+", "-", normalized.lower()).strip("-")
+    return slug or "anime"
+
+def generate_anime_id(anime: dict) -> str:
+    anilist_id = anime.get("id") or anime.get("anilist_id")
+    title_obj = anime.get("title") or {}
+    raw_title = title_obj.get("english") or title_obj.get("romaji") or title_obj.get("native") or ""
+    slug = slugify(raw_title)
+
+    h = 0x811C9DC5
+    s = f"{anilist_id}:{slug}"
+    for ch in s:
+        h ^= ord(ch)
+        h = (h * 0x01000193) & 0xFFFFFFFF
+
+    chars = "0123456789abcdefghijklmnopqrstuvwxyz"
+    code = ""
+    val = h
+    for _ in range(6):
+        code += chars[val % 36]
+        val //= 36
+    return f"{slug}-{code}"
 
 def fetch_anilist_page(page=1, max_retries=5, ids=None, sort="UPDATED_AT_DESC", per_page=50):
     url = "https://graphql.anilist.co"
@@ -65,6 +95,42 @@ def fetch_anilist_page(page=1, max_retries=5, ids=None, sort="UPDATED_AT_DESC", 
                 title { romaji english native }
               }
             }
+          }
+          characters(page: 1, perPage: 25, sort: [ROLE, RELEVANCE, ID]) {
+            edges {
+              role
+              node {
+                id
+                name {
+                  full
+                  native
+                  userPreferred
+                }
+                image {
+                  large
+                  medium
+                }
+              }
+              voiceActors(language: JAPANESE, sort: [RELEVANCE, ID]) {
+                id
+                name {
+                  full
+                  native
+                  userPreferred
+                }
+                language
+                image {
+                  large
+                  medium
+                }
+              }
+            }
+          }
+          streamingEpisodes {
+            title
+            thumbnail
+            url
+            site
           }
         }
       }
@@ -203,6 +269,36 @@ def generate_indexes(base_dir):
         except Exception as e:
             pass
         return None, None, None
+
+    tmdb_episodes_cache = {}
+    def get_tmdb_episodes(tmdb_id):
+        if not tmdb_api_key or not tmdb_id:
+            return []
+        cache_key = str(tmdb_id)
+        if cache_key in tmdb_episodes_cache:
+            return tmdb_episodes_cache[cache_key]
+        try:
+            url = f"https://api.themoviedb.org/3/tv/{tmdb_id}/season/1?api_key={tmdb_api_key}"
+            req = requests.get(url, timeout=5)
+            if req.status_code == 200:
+                data = req.json()
+                eps = []
+                for ep in data.get("episodes", []):
+                    still = ep.get("still_path")
+                    eps.append({
+                        "episode": ep.get("episode_number"),
+                        "title": ep.get("name") or f"Episode {ep.get('episode_number')}",
+                        "image": f"https://image.tmdb.org/t/p/w500{still}" if still else None,
+                        "still_path": still,
+                        "air_date": ep.get("air_date"),
+                        "overview": ep.get("overview")
+                    })
+                tmdb_episodes_cache[cache_key] = eps
+                time.sleep(0.05)
+                return eps
+        except Exception:
+            pass
+        return []
         
     formatted_anime_list = []
     
@@ -313,6 +409,73 @@ def generate_indexes(base_dir):
             
         merged["start_date"] = format_date(anime.get("startDate"))
         merged["end_date"] = format_date(anime.get("endDate"))
+
+        # Parse Characters & Voice Actors cleanly
+        characters_raw = anime.get("characters", {})
+        characters_edges = characters_raw.get("edges", []) if isinstance(characters_raw, dict) else []
+        parsed_characters = []
+        for edge in characters_edges:
+            if not isinstance(edge, dict):
+                continue
+            char_node = edge.get("node") or {}
+            vas = edge.get("voiceActors") or []
+            primary_va = vas[0] if vas else None
+            parsed_characters.append({
+                "id": char_node.get("id"),
+                "role": edge.get("role", "SUPPORTING"),
+                "name": {
+                    "full": char_node.get("name", {}).get("full") if isinstance(char_node.get("name"), dict) else None,
+                    "native": char_node.get("name", {}).get("native") if isinstance(char_node.get("name"), dict) else None,
+                    "user_preferred": char_node.get("name", {}).get("userPreferred") if isinstance(char_node.get("name"), dict) else None,
+                },
+                "image": {
+                    "large": char_node.get("image", {}).get("large") if isinstance(char_node.get("image"), dict) else None,
+                    "medium": char_node.get("image", {}).get("medium") if isinstance(char_node.get("image"), dict) else None,
+                },
+                "voice_actor": {
+                    "id": primary_va.get("id"),
+                    "name": {
+                        "full": primary_va.get("name", {}).get("full") if isinstance(primary_va.get("name"), dict) else None,
+                        "native": primary_va.get("name", {}).get("native") if isinstance(primary_va.get("name"), dict) else None,
+                    },
+                    "language": primary_va.get("language", "JAPANESE"),
+                    "image": {
+                        "large": primary_va.get("image", {}).get("large") if isinstance(primary_va.get("image"), dict) else None,
+                        "medium": primary_va.get("image", {}).get("medium") if isinstance(primary_va.get("image"), dict) else None,
+                    }
+                } if primary_va else None,
+                "voice_actors": [
+                    {
+                        "id": va.get("id"),
+                        "name": {
+                            "full": va.get("name", {}).get("full") if isinstance(va.get("name"), dict) else None,
+                            "native": va.get("name", {}).get("native") if isinstance(va.get("name"), dict) else None,
+                        },
+                        "language": va.get("language"),
+                        "image": {
+                            "large": va.get("image", {}).get("large") if isinstance(va.get("image"), dict) else None,
+                            "medium": va.get("image", {}).get("medium") if isinstance(va.get("image"), dict) else None,
+                        }
+                    }
+                    for va in vas if isinstance(va, dict)
+                ]
+            })
+        merged["characters"] = parsed_characters
+
+        # Streaming episodes
+        streaming_eps = anime.get("streamingEpisodes") or []
+        merged["streaming_episodes"] = [
+            {
+                "title": ep.get("title"),
+                "thumbnail": ep.get("thumbnail"),
+                "url": ep.get("url"),
+                "site": ep.get("site")
+            }
+            for ep in streaming_eps if isinstance(ep, dict)
+        ]
+
+        # TMDB episodes with TMDB images
+        merged["tmdb_episodes"] = get_tmdb_episodes(tmdb_id)
                 
         formatted_anime_list.append(merged)
         
@@ -329,17 +492,190 @@ def generate_indexes(base_dir):
         
     logging.info("Index generated successfully!")
 
+def sync_schedules(raw_dir, days_back=7, days_forward=7):
+    """
+    Fetch airing schedules from AniList for [-days_back, +days_forward].
+    Merges them into data/raw/schedules.json while preserving all past dates
+    (stacked history). Timezone is standardized to TMZ 00 (UTC 00:00:00).
+    """
+    logging.info(f"Syncing airing schedules (-{days_back}d to +{days_forward}d) at TMZ 00 (UTC)...")
+    now_utc = datetime.now(timezone.utc)
+    start_dt = (now_utc - timedelta(days=days_back)).replace(hour=0, minute=0, second=0, microsecond=0)
+    end_dt = (now_utc + timedelta(days=days_forward)).replace(hour=23, minute=59, second=59, microsecond=999999)
+
+    query = '''
+    query ($page: Int, $perPage: Int, $airingAt_greater: Int, $airingAt_lesser: Int) {
+      Page(page: $page, perPage: $perPage) {
+        pageInfo { hasNextPage }
+        airingSchedules(airingAt_greater: $airingAt_greater, airingAt_lesser: $airingAt_lesser, sort: TIME) {
+          id
+          airingAt
+          timeUntilAiring
+          episode
+          mediaId
+          media {
+            id
+            idMal
+            title { romaji english native }
+            coverImage { extraLarge large medium color }
+            bannerImage
+            format
+            status
+            genres
+            duration
+            averageScore
+            popularity
+            isAdult
+            countryOfOrigin
+            studios(isMain: true) { nodes { name } }
+          }
+        }
+      }
+    }
+    '''
+
+    all_fetched = []
+    page = 1
+    max_pages = 25
+    while page <= max_pages:
+        try:
+            resp = requests.post(
+                "https://graphql.anilist.co",
+                json={
+                    "query": query,
+                    "variables": {
+                        "page": page,
+                        "perPage": 50,
+                        "airingAt_greater": int(start_dt.timestamp()),
+                        "airingAt_lesser": int(end_dt.timestamp())
+                    }
+                },
+                timeout=15
+            )
+            if resp.status_code == 429:
+                retry_after = int(resp.headers.get('Retry-After', 10))
+                time.sleep(retry_after)
+                continue
+            if resp.status_code != 200:
+                logging.error(f"Airing schedule request failed with status {resp.status_code}")
+                break
+            d = resp.json()
+            items = d.get("data", {}).get("Page", {}).get("airingSchedules", [])
+            if not items:
+                break
+            all_fetched.extend(items)
+            if not d.get("data", {}).get("Page", {}).get("pageInfo", {}).get("hasNextPage"):
+                break
+            page += 1
+            time.sleep(0.4)
+        except Exception as e:
+            logging.error(f"Error fetching schedules on page {page}: {e}")
+            break
+
+    logging.info(f"Fetched {len(all_fetched)} schedule entries from AniList.")
+
+    schedules_file = raw_dir / "schedules.json"
+    stacked = {}
+    if schedules_file.exists():
+        try:
+            with open(schedules_file, "r", encoding="utf-8") as f:
+                existing = json.load(f)
+                items_list = existing.get("schedules", []) if isinstance(existing, dict) else (existing if isinstance(existing, list) else [])
+                for item in items_list:
+                    if isinstance(item, dict) and "id" in item:
+                        stacked[str(item["id"])] = item
+        except Exception as e:
+            logging.warning(f"Could not read existing schedules.json: {e}")
+
+    now_ts = int(now_utc.timestamp())
+    for item in all_fetched:
+        airing_at = item.get("airingAt")
+        if not airing_at:
+            continue
+        dt = datetime.fromtimestamp(airing_at, tz=timezone.utc)
+        media = item.get("media") or {}
+        anilist_id = media.get("id") or item.get("mediaId")
+        cover = media.get("coverImage") or {}
+        banner = media.get("bannerImage") or ""
+        dur = media.get("duration")
+
+        entry = {
+            "id": item.get("id"),
+            "anime_id": generate_anime_id({"id": anilist_id, "title": media.get("title")}),
+            "anilist_id": anilist_id,
+            "mal_id": media.get("idMal"),
+            "episode": item.get("episode"),
+            "airing_at": airing_at,
+            "airing_date": dt.strftime("%Y-%m-%d"),
+            "airing_time": dt.strftime("%H:%M:%S"),
+            "airing_day": dt.strftime("%A").lower(),
+            "timezone": "UTC+00:00",
+            "tmz": "00:00",
+            "time_until_airing": airing_at - now_ts,
+            "is_aired": airing_at <= now_ts,
+            "title": media.get("title") or {},
+            "cover_image": {
+                "color": cover.get("color") or "",
+                "extra_large": cover.get("extraLarge") or "",
+                "large": cover.get("large") or "",
+                "medium": cover.get("medium") or ""
+            },
+            "images": {
+                "backdrop": banner or cover.get("extraLarge") or "",
+                "banner": banner or cover.get("extraLarge") or "",
+                "logo": None
+            },
+            "format": media.get("format") or "TV",
+            "status": media.get("status") or "RELEASING",
+            "genres": media.get("genres") or [],
+            "duration": f"{dur}m" if dur else "",
+            "average_score": media.get("averageScore") or 0,
+            "popularity": media.get("popularity") or 0,
+            "studios": [s.get("name") for s in media.get("studios", {}).get("nodes", []) if s and s.get("name")]
+        }
+        stacked[str(item.get("id"))] = entry
+
+    # Recalculate is_aired and time_until_airing for all stacked entries
+    for entry in stacked.values():
+        airing_at = entry.get("airing_at", 0)
+        entry["time_until_airing"] = airing_at - now_ts
+        entry["is_aired"] = airing_at <= now_ts
+
+    sorted_schedules = sorted(stacked.values(), key=lambda x: (x.get("airing_at", 0), x.get("id", 0)))
+    payload = {
+        "timezone": "UTC+00:00",
+        "tmz": "00:00",
+        "last_updated": now_utc.strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "total_stacked": len(sorted_schedules),
+        "date_range": {
+            "min_date": sorted_schedules[0]["airing_date"] if sorted_schedules else "",
+            "max_date": sorted_schedules[-1]["airing_date"] if sorted_schedules else ""
+        },
+        "schedules": sorted_schedules
+    }
+
+    raw_dir.mkdir(parents=True, exist_ok=True)
+    with open(schedules_file, "w", encoding="utf-8") as f:
+        json.dump(payload, f, ensure_ascii=False, indent=2)
+
+    logging.info(f"Schedules successfully synchronized and stacked ({len(sorted_schedules)} total) at {schedules_file}")
+
 def main():
     parser = argparse.ArgumentParser(description='Dump Anime Data using AniList API')
-    parser.add_argument('--mode', choices=['full', 'incremental', 'index_only'], default='full', 
-                        help='Mode of dumping: full (all data), incremental, or index_only')
-    parser.add_argument('--hours', type=float, default=24,
-                        help='For incremental mode, fetch entries updated in the last N hours')
+    parser.add_argument('--mode', choices=['full', 'incremental', 'index_only', 'schedule_only'], default='full', 
+                        help='Mode of dumping: full (all data), incremental, index_only, or schedule_only')
+    parser.add_argument('--hours', type=float, default=8,
+                        help='For incremental mode, fetch entries updated in the last N hours (default 8h for fast 6h scenario)')
     args = parser.parse_args()
 
     script_dir = Path(__file__).parent.resolve()
-    base_dir = script_dir.parent / "data" / "raw" / "anime"
+    raw_dir = script_dir.parent / "data" / "raw"
+    base_dir = raw_dir / "anime"
     base_dir.mkdir(parents=True, exist_ok=True)
+    
+    if args.mode == 'schedule_only':
+        sync_schedules(raw_dir)
+        return
     
     if args.mode != 'index_only':
         logging.info(f"Starting AniList dump. Saving to {base_dir}")
@@ -427,6 +763,9 @@ def main():
         from scripts.export_dumps import export_all
     logging.info("Generating database release dumps (CSV, XLSX, TAR.GZ, ZIP, JSON)...")
     export_all()
+
+    logging.info("Synchronizing airing schedules (-7d to +7d) at TMZ 00 (UTC)...")
+    sync_schedules(raw_dir)
 
 if __name__ == "__main__":
     main()

@@ -9,6 +9,7 @@
     "dev": "wrangler dev"
   },
   "dependencies": {
+    "@fastify/busboy": "^3.2.4",
     "graphql": "^17.0.2",
     "graphql-yoga": "^5.24.1"
   },

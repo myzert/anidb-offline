@@ -141,6 +141,8 @@ def transform_item(item: dict) -> dict:
         "average_score": item.get("average_score") or 0,
         "popularity": item.get("popularity") or 0,
         "rating": get_rating(item),
+        "characters": item.get("characters") or [],
+        "streaming_episodes": item.get("streaming_episodes") or [],
         "external_ids": {
             "mal": item.get("idMal") or item.get("mal_id"),
             "kitsu": item.get("kitsu_id"),

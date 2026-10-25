@@ -69,17 +69,21 @@ All search, listing, and dashboard endpoints return records adhering to this sta
 | `GET /api` or `GET /api/home` | Welcome dashboard with live spotlight, trending, top rated, and airing schedules |
 | `GET /api/v1/search` | Paginated full-text search with dynamic filters & sorting |
 | `GET /api/v1/anime` | Paginated listing of all anime records |
-| `GET /api/v1/anime/:id` | Full detail by `anime_id` (e.g. `attack-on-titan-86tu7o`) or AniList ID (`16498`) |
-| `GET /api/v1/anime/:id/episodes` | Auto-generated episode listing with images and titles |
+| `GET /api/v1/anime/:id` | Full detail by `anime_id` (e.g. `attack-on-titan-86tu7o`) or AniList ID (`16498`) including characters and episode list |
+| `GET /api/v1/anime/:id/characters` | Character listing with voice actors (VA) and role filter (`?role=main\|supporting`) |
+| `GET /api/v1/anime/:id/episodes` | Auto-generated episode listing with TMDB images and titles |
 | `GET /api/v1/anime/:id/relations` | Related media (prequels, sequels, spinoffs, side stories) |
 
-### Jikan-Style Discovery Endpoints
+### Jikan-Style Discovery & Schedule Endpoints
 | Endpoint | Description |
 |---|---|
 | `GET /api/v1/top/anime` | Top anime ranking (`?filter=score\|bypopularity\|airing\|upcoming`) |
 | `GET /api/v1/seasons/now` | Current season anime chart (dynamically computed from UTC date) |
 | `GET /api/v1/seasons/:year/:season` | Specific seasonal chart (e.g. `/api/v1/seasons/2026/fall`) |
-| `GET /api/v1/schedules` | Live airing schedule ordered by next episode release |
+| `GET /api/v1/schedules` | Airing schedule covering -7 days to +7 days, synchronized at TMZ 00 (UTC 00:00:00) with stacked history |
+| `GET /api/v1/schedules/today` | Schedules for today (UTC 00:00) |
+| `GET /api/v1/schedules/week` | 7-day past to 7-day future schedule grouped by UTC date |
+| `GET /api/v1/schedules/:day` | Filter schedule by day of week (e.g. `/api/v1/schedules/monday`) |
 | `GET /api/v1/random/anime` | Returns a random anime with optional filter parameters |
 | `GET /api/v1/genres` | All anime genres ranked with total anime count |
 | `GET /api/v1/studios` | All animation studios ranked with total anime count |
@@ -96,9 +100,10 @@ All search, listing, and dashboard endpoints return records adhering to this sta
 
 ---
 
-## Query Parameters for `/api/v1/search`
+## Query Parameters for `/api/v1/search` and `/api/v1/anime`
 
 - `q`, `search`, `query`: Full-text search across titles (English, Romaji, Native), synopsis, and synonyms (e.g. `?q=titan`).
+- `letter`, `huruf`: Filter titles starting with a specific letter (e.g. `?letter=A` or `?letter=#` for numbers/symbols).
 - `genres`: Comma-separated genre list (e.g. `?genres=action,fantasy`).
 - `exclude_genres`: Exclude unwanted genres (e.g. `?exclude_genres=ecchi`).
 - `genre_mode`: Set to `all` (default) or `any`.
@@ -110,9 +115,30 @@ All search, listing, and dashboard endpoints return records adhering to this sta
 - `studio`: Filter by studio name (e.g. `?studio=mappa`).
 - `min_score`, `max_score`: Filter by average score (0 to 100).
 - `anilist_id`, `anime_id`, `mal_id`, `kitsu_id`, `tmdb_id`, `imdb_id`: Filter directly by an ID.
-- `sort`: Order by `score`, `popularity`, `release_date`, `title`, `episodes`. Prefix with `-` for descending (e.g. `?sort=-score,popularity`).
+- `sort`: Order by:
+  - `popular` / `popularity` (most popular first)
+  - `score` / `rating` / `top` (highest score first)
+  - `title` / `letter` / `huruf` / `a-z` (alphabetical A-Z)
+  - `z-a` or `-title` (reverse alphabetical Z-A)
+  - `newest` / `start_date` / `latest` (most recent release)
+  - `oldest` (earliest release)
+  - `episodes` / `episodes_desc` / `episodes_asc`
 - `fields`: Comma-separated list to project only required fields.
 - `limit`, `offset`, `page`: Standard pagination parameters (`limit` up to 100).
+
+---
+
+## Query Parameters for `/api/v1/schedules`
+
+- `date`: Filter by specific UTC date in format `YYYY-MM-DD` (e.g. `?date=2026-10-25`).
+- `day`: Filter by weekday name (`monday`, `tuesday`, `wednesday`, `thursday`, `friday`, `saturday`, `sunday`, or `today`, `tomorrow`, `yesterday`).
+- `status`: Broadcast status: `upcoming` (future episodes), `aired` (past aired episodes), or `all` (default).
+- `days_back`, `days_forward`: Custom relative day window around today (defaults to 7 days back and 7 days forward).
+- `view`: `flat` (default paginated array) or `grouped` (grouped by UTC `YYYY-MM-DD` dates).
+- `tz`: Standard timezone reference (`00:00` for UTC 00:00:00 synchronization).
+- `sort`: `time` (chronological), `-time` (reverse), `popular`, `score`, `title` / `letter` / `a-z`, `z-a`.
+- `letter`, `huruf`: Filter anime titles starting with a specific letter.
+- `q`, `search`: Search anime title within the schedule.
 
 ---
 
@@ -175,24 +201,27 @@ query {
 
 ---
 
-## Updating the Data
+## Updating the Data & 6-Hour Fast Scenario
 
 To run the data sync and generate database releases locally:
 
 ```bash
 python3 -m pip install -r scripts/requirements.txt
 
+# Run fast incremental refresh & schedule sync (last 8 hours)
+python3 scripts/dump_anilist.py --mode incremental --hours 8
+
+# Run schedule sync only (-7 days to +7 days stacked at TMZ 00)
+python3 scripts/dump_anilist.py --mode schedule_only
+
 # Run full AniList dump and export releases
 python3 scripts/dump_anilist.py --mode full
-
-# Run incremental refresh (last 26 hours)
-python3 scripts/dump_anilist.py --mode incremental --hours 26
 
 # Export release packages only
 python3 scripts/export_dumps.py
 ```
 
-The GitHub Actions workflow runs every 24 hours to sync changes, populate TMDB imagery if `TMDB_API_KEY` is provided, and generate clean release packages.
+The GitHub Actions workflow operates on a **Fast 6-Hour Automated Scenario** (`0 */6 * * *`, running at 00:00, 06:00, 12:00, 18:00 UTC) to sync updated anime metadata, maintain continuous TMDB episode stills, preserve and stack airing schedules across -7 to +7 days at TMZ 00 (UTC 00:00:00), and release fresh database packages.
 
 ---
 
