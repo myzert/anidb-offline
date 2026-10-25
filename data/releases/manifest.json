@@ -1,55 +1,55 @@
 {
-  "latest_release": "Anidb_2026-10-24_15-33-52_UTC+7",
-  "timestamp_utc7": "2026-10-24_15-33-52_UTC+7",
-  "total_anime": 14525,
+  "latest_release": "Anidb_2026-10-25_18-12-34_UTC+7",
+  "timestamp_utc7": "2026-10-25_18-12-34_UTC+7",
+  "total_anime": 15037,
   "status": {
     "sync_frequency": "24-hour dynamic incremental sync",
-    "timestamp_utc7": "2026-10-24_15-33-52_UTC+7",
-    "timestamp_utc": "2026-10-24 08:33:52 UTC",
+    "timestamp_utc7": "2026-10-25_18-12-34_UTC+7",
+    "timestamp_utc": "2026-10-25 11:12:34 UTC",
     "formats": {
-      "TV": 4382,
-      "OVA": 3096,
-      "MOVIE": 2313,
-      "ONA": 1896,
-      "SPECIAL": 1249,
-      "MUSIC": 848,
-      "TV_SHORT": 677,
-      "UNKNOWN": 64
+      "TV": 4411,
+      "OVA": 3134,
+      "MOVIE": 2374,
+      "ONA": 2022,
+      "SPECIAL": 1284,
+      "MUSIC": 1042,
+      "TV_SHORT": 703,
+      "UNKNOWN": 67
     },
     "statuses": {
-      "FINISHED": 13766,
-      "NOT YET RELEASED": 482,
-      "RELEASING": 262,
+      "FINISHED": 14258,
+      "NOT YET RELEASED": 497,
+      "RELEASING": 267,
       "CANCELLED": 15
     },
     "top_genres": {
-      "Comedy": 5161,
-      "Action": 4469,
-      "Fantasy": 3702,
-      "Adventure": 2999,
-      "Drama": 2917,
-      "Romance": 2536,
-      "Sci-Fi": 2516,
-      "Slice of Life": 2201,
-      "Supernatural": 1675,
-      "Hentai": 1404
+      "Comedy": 5280,
+      "Action": 4565,
+      "Fantasy": 3820,
+      "Adventure": 3069,
+      "Drama": 2958,
+      "Romance": 2573,
+      "Sci-Fi": 2564,
+      "Slice of Life": 2268,
+      "Supernatural": 1703,
+      "Hentai": 1416
     },
     "external_mappings": {
       "mal": {
-        "count": 14050,
-        "percentage": "96.7%"
+        "count": 14482,
+        "percentage": "96.3%"
       },
       "kitsu": {
-        "count": 12252,
-        "percentage": "84.4%"
+        "count": 12603,
+        "percentage": "83.8%"
       },
       "tmdb": {
-        "count": 8118,
-        "percentage": "55.9%"
+        "count": 8173,
+        "percentage": "54.4%"
       },
       "imdb": {
-        "count": 7002,
-        "percentage": "48.2%"
+        "count": 7034,
+        "percentage": "46.8%"
       }
     }
   },
@@ -82,11 +82,255 @@
       ],
       "season": "FALL",
       "season_year": 2023,
+      "season_number": 1,
+      "part_number": null,
+      "detected_season": 1,
+      "detected_part": null,
       "episodes": 28,
       "duration": "24m",
       "average_score": 91,
-      "popularity": 492453,
+      "popularity": 492741,
       "rating": "PG-13 - Teens 13 or older",
+      "characters": [
+        {
+          "id": 176754,
+          "role": "MAIN",
+          "name": {
+            "full": "Frieren",
+            "native": "フリーレン"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b176754-PCnpqIOkjhFk.png"
+          },
+          "voice_actor": {
+            "id": 112215,
+            "name": {
+              "full": "Atsumi Tanezaki",
+              "native": "種﨑敦美"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n112215-kfABGD8W2YSJ.jpg"
+            }
+          }
+        },
+        {
+          "id": 183965,
+          "role": "MAIN",
+          "name": {
+            "full": "Fern",
+            "native": "フェルン"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b183965-uGFohBjlFoTp.png"
+          },
+          "voice_actor": {
+            "id": 124390,
+            "name": {
+              "full": "Kana Ichinose",
+              "native": "市ノ瀬加那"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n124390-03LHel2XSFel.png"
+            }
+          }
+        },
+        {
+          "id": 184313,
+          "role": "MAIN",
+          "name": {
+            "full": "Stark",
+            "native": "シュタルク"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b184313-CQl6GSt4RSny.jpg"
+          },
+          "voice_actor": {
+            "id": 133507,
+            "name": {
+              "full": "Chiaki Kobayashi",
+              "native": "小林千晃"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n133507-oT1bd4Gax1Qg.jpg"
+            }
+          }
+        },
+        {
+          "id": 184311,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Himmel",
+            "native": "ヒンメル"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b184311-wQFySqYXEqf1.png"
+          },
+          "voice_actor": {
+            "id": 95270,
+            "name": {
+              "full": "Nobuhiko Okamoto",
+              "native": "岡本信彦"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95270-LqNIF238L59u.png"
+            }
+          }
+        },
+        {
+          "id": 184310,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Heiter",
+            "native": "ハイター"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b184310-tiXvrq4FINXP.jpg"
+          },
+          "voice_actor": {
+            "id": 95236,
+            "name": {
+              "full": "Hiroki Touchi",
+              "native": "東地宏樹"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95236-nlMo4dnjdT8p.png"
+            }
+          }
+        },
+        {
+          "id": 184312,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Eisen",
+            "native": "アイゼン"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b184312-kxd5H6iOHIq4.png"
+          },
+          "voice_actor": {
+            "id": 95926,
+            "name": {
+              "full": "Youji Ueda",
+              "native": "上田燿司"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95926-00Pd2b8WZwQS.png"
+            }
+          }
+        },
+        {
+          "id": 219733,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Flamme",
+            "native": "フランメ"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b219733-FgXseEhMdDE9.png"
+          },
+          "voice_actor": {
+            "id": 95100,
+            "name": {
+              "full": "Atsuko Tanaka",
+              "native": "田中敦子"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95100-v07xvA8V2Yeh.png"
+            }
+          }
+        },
+        {
+          "id": 315278,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Qual",
+            "native": "クヴァール"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b315278-PKRDf4IJJ1GK.png"
+          },
+          "voice_actor": {
+            "id": 95025,
+            "name": {
+              "full": "Hiroki Yasumoto",
+              "native": "安元洋貴"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95025-LGHr4VufmfCc.jpg"
+            }
+          }
+        }
+      ],
+      "streaming_episodes": [
+        {
+          "title": "Episode 1 - The Journey's End",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/0a540e01e5d00a998a241d1ea23181ad1695991424_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G2XU04E88/the-journeys-end"
+        },
+        {
+          "title": "Episode 2 - It Didn't Have to Be Magic...",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/747ed837208f39c176f3bf2b21e619cf1695997330_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G8WUNGZ48/it-didnt-have-to-be-magic"
+        },
+        {
+          "title": "Episode 3 - Killing Magic",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/f5297f95ee0122d9fa2338bc02e2f0841695997426_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GZ7UV2Z0K/killing-magic"
+        },
+        {
+          "title": "Episode 4 - The Land Where Souls Rest",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/be41aa39b17e6af8505008be17704fc21695997457_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GD9UVQ5P5/the-land-where-souls-rest"
+        },
+        {
+          "title": "Episode 5 - Phantoms of the Dead",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/5511652dd902e2c68713a059d79524681696586792_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G14U49MDV/phantoms-of-the-dead"
+        },
+        {
+          "title": "Episode 6 - The Hero of the Village",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/8f58dbe3742e24df5cfcb34e966343cb1697192129_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G0DUNDJ79/the-hero-of-the-village"
+        },
+        {
+          "title": "Episode 7 - Like a Fairy Tale",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/7415f048b9950f447fe53daf052b83511697807940_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GEVUZXXN8/like-a-fairy-tale"
+        },
+        {
+          "title": "Episode 8 - Frieren the Slayer",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/b4c1b2828197930c28e7222c8674f7db1698398711_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GK9U3MK1G/frieren-the-slayer"
+        },
+        {
+          "title": "Episode 9 - Aura the Guillotine",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/011eed937d57541a48b41654aa7196f41699023505_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GMKUXQ1QV/aura-the-guillotine"
+        },
+        {
+          "title": "Episode 10 - A Powerful Mage",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/71a64490900288c051509d5ead8078c81699629921_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GVWU07N79/a-powerful-mage"
+        },
+        {
+          "title": "Episode 11 - Winter in the Northern Lands",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/1d362c34b136f3d7dae0f8e2483d292c1700200761_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G50UZVDZP/winter-in-the-northern-lands"
+        },
+        {
+          "title": "Episode 12 - A Real Hero",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/a4fb43dd94ffef24c89c737cb582d9d71700837484_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G7PU414Z2/a-real-hero"
+        }
+      ],
       "external_ids": {
         "mal": 52991,
         "kitsu": 46474,
@@ -123,11 +367,255 @@
       ],
       "season": "SPRING",
       "season_year": 2009,
+      "season_number": 1,
+      "part_number": null,
+      "detected_season": 1,
+      "detected_part": null,
       "episodes": 64,
       "duration": "25m",
       "average_score": 90,
-      "popularity": 738779,
+      "popularity": 739027,
       "rating": "R - 17+ (violence & profanity)",
+      "characters": [
+        {
+          "id": 11,
+          "role": "MAIN",
+          "name": {
+            "full": "Edward Elric",
+            "native": "エドワード・エルリック"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b11-TA5Nuk7EDUZG.jpg"
+          },
+          "voice_actor": {
+            "id": 95082,
+            "name": {
+              "full": "Romi Park",
+              "native": "朴璐美"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95082-pNGbnYv4cHAK.png"
+            }
+          }
+        },
+        {
+          "id": 12,
+          "role": "MAIN",
+          "name": {
+            "full": "Alphonse Elric",
+            "native": "アルフォンス・エルリック"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b12-tCKu8yK5kFL5.jpg"
+          },
+          "voice_actor": {
+            "id": 95008,
+            "name": {
+              "full": "Rie Kugimiya",
+              "native": "釘宮理恵"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95008-2y0EeuSTHIri.png"
+            }
+          }
+        },
+        {
+          "id": 63,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Winry Rockbell",
+            "native": "ウィンリィ・ロックベル"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/63-xloedtYxiJ2E.jpg"
+          },
+          "voice_actor": {
+            "id": 95046,
+            "name": {
+              "full": "Megumi Takamoto",
+              "native": "高本めぐみ"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95046-3vW0I3zKOpfW.jpg"
+            }
+          }
+        },
+        {
+          "id": 65,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Pinako Rockbell",
+            "native": "ピナコ・ロックベル"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b65-Yw7j20Y9uewh.png"
+          },
+          "voice_actor": {
+            "id": 95571,
+            "name": {
+              "full": "Mami Koyama",
+              "native": "小山茉美"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95571-QuL7zlRwRcxa.png"
+            }
+          }
+        },
+        {
+          "id": 66,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Scar",
+            "native": "スカー"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b66-bLbGWXrmDqfV.png"
+          },
+          "voice_actor": {
+            "id": 95720,
+            "name": {
+              "full": "Kenta Miyake",
+              "native": "三宅健太"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95720-enxx6kZKuwGi.jpg"
+            }
+          }
+        },
+        {
+          "id": 67,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Izumi Curtis",
+            "native": "イズミ・カーティス"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b67-ggB3aC6DzQqB.png"
+          },
+          "voice_actor": {
+            "id": 96664,
+            "name": {
+              "full": "Shouko Tsuda",
+              "native": "津田匠子"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n96664-ct3IoFBmnyoJ.jpg"
+            }
+          }
+        },
+        {
+          "id": 68,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Roy Mustang",
+            "native": "ロイ・マスタング"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b68-moBLY2WO2am3.png"
+          },
+          "voice_actor": {
+            "id": 95022,
+            "name": {
+              "full": "Shinichirou Miki",
+              "native": "三木眞一郎"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95022-BXggjIr4KHqd.png"
+            }
+          }
+        },
+        {
+          "id": 69,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Maes Hughes",
+            "native": "マース･ヒューズ"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b69-MRetSG8Qevvu.png"
+          },
+          "voice_actor": {
+            "id": 95063,
+            "name": {
+              "full": "Keiji Fujiwara",
+              "native": "藤原啓治"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95063-xAsEUzspuLMG.jpg"
+            }
+          }
+        }
+      ],
+      "streaming_episodes": [
+        {
+          "title": "Episode 1 - Fullmetal Alchemist",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/bba713cd933d6eadd690fcf477cfb2c21471054462_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GRE5P5PV6/fullmetal-alchemist"
+        },
+        {
+          "title": "Episode 2 - The First Day",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/ddf59534e12f0ce000c42b163132071f1471781407_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G69PJPJVY/the-first-day"
+        },
+        {
+          "title": "Episode 3 - City of Heresy",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/f132b5b37031a79cb9dad9c6826a14ad1471053084_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G6490901Y/city-of-heresy"
+        },
+        {
+          "title": "Episode 4 - An Alchemist’s Anguish",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/3f276f5812009f0eceb394917a4d28041471054353_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G6JQ2Q22R/an-alchemists-anguish"
+        },
+        {
+          "title": "Episode 5 - Rain of Sorrows",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/6837dd1a4853c5d8a556dd40301260f51471049493_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G6K5P5PMY/rain-of-sorrows"
+        },
+        {
+          "title": "Episode 6 - Road of Hope",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/44815092fbd3d76f6980e9e408af7e9f1471054997_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GRVNXNX4Y/road-of-hope"
+        },
+        {
+          "title": "Episode 7 - Hidden Truths",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/353b4791800e453713e426ab440f5e201471784450_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G6P818196/hidden-truths"
+        },
+        {
+          "title": "Episode 8 - The Fifth Laboratory",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/32620e41b79eb560488b05c36975b3291471054426_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GY8VJVJ7Y/the-fifth-laboratory"
+        },
+        {
+          "title": "Episode 9 - Created Feelings",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/b5fe2a53343b221a4c06dbb7294a17b11471054510_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GRDQ4Q43Y/created-feelings"
+        },
+        {
+          "title": "Episode 10 - Separate Destinations",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/cca64a13f77b6a96ff818a48bb72dbb31471049386_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G65VEVE76/separate-destinations"
+        },
+        {
+          "title": "Episode 11 - Miracle at Rush Valley",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/7f237db5ebf586198a69fca41d845bb11471782253_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GYGGPGP3Y/miracle-at-rush-valley"
+        },
+        {
+          "title": "Episode 12 - One is All, All is One",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/f535a96df93fcdd8f70dda121aca4a3b1471055029_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GYE5P5WVR/one-is-all-all-is-one"
+        }
+      ],
       "external_ids": {
         "mal": 5114,
         "kitsu": 3936,
@@ -165,11 +653,194 @@
       ],
       "season": "SUMMER",
       "season_year": 2025,
+      "season_number": 1,
+      "part_number": null,
+      "detected_season": 1,
+      "detected_part": null,
       "episodes": 1,
       "duration": "100m",
       "average_score": 90,
-      "popularity": 247915,
+      "popularity": 248455,
       "rating": "R - 17+ (violence & profanity)",
+      "characters": [
+        {
+          "id": 130102,
+          "role": "MAIN",
+          "name": {
+            "full": "Denji",
+            "native": "デンジ"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b130102-FO1VHNnEnLlB.png"
+          },
+          "voice_actor": {
+            "id": 284463,
+            "name": {
+              "full": "Kikunosuke Toya",
+              "native": "戸谷菊之介"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n284463-w0qcBQXvlz3Z.png"
+            }
+          }
+        },
+        {
+          "id": 148740,
+          "role": "MAIN",
+          "name": {
+            "full": "Reze",
+            "native": "レゼ"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b148740-ceAibPxLW8rR.png"
+          },
+          "voice_actor": {
+            "id": 118602,
+            "name": {
+              "full": "Reina Ueda",
+              "native": "上田麗奈"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n118602-C4bNcnyEhDTu.jpg"
+            }
+          }
+        },
+        {
+          "id": 137080,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Makima",
+            "native": "マキマ"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b137080-UHcynYNjb5ZU.png"
+          },
+          "voice_actor": {
+            "id": 124923,
+            "name": {
+              "full": "Tomori Kusunoki",
+              "native": "楠木ともり"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n124923-SQtqIQeicb7f.png"
+            }
+          }
+        },
+        {
+          "id": 157232,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Beam",
+            "native": "ビーム"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b157232-5GuWeqoFN9Kq.jpg"
+          },
+          "voice_actor": {
+            "id": 111635,
+            "name": {
+              "full": "Natsuki Hanae",
+              "native": "花江夏樹"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n111635-L385UcjTKCBq.png"
+            }
+          }
+        },
+        {
+          "id": 137081,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Aki Hayakawa",
+            "native": "早川アキ"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b137081-TSrUR3mUJL6r.png"
+          },
+          "voice_actor": {
+            "id": 158510,
+            "name": {
+              "full": "Shougo Sakata",
+              "native": "坂田将吾"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n158510-QDmd7dD9Rg89.jpg"
+            }
+          }
+        },
+        {
+          "id": 152231,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Tenshi no Akuma",
+            "native": "天使の悪魔"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b152231-xNV2YsTRzEcS.png"
+          },
+          "voice_actor": {
+            "id": 108639,
+            "name": {
+              "full": "Maaya Uchida",
+              "native": "内田真礼"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n108639-LLrR4WptCh5s.png"
+            }
+          }
+        },
+        {
+          "id": 157231,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Bouryoku no Majin",
+            "native": "暴力の魔人"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b157231-hV81SwGqxl2R.jpg"
+          },
+          "voice_actor": {
+            "id": 96637,
+            "name": {
+              "full": "Yuuya Uchida",
+              "native": "内田夕夜"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n96637-GOQaib9J8Mu6.png"
+            }
+          }
+        },
+        {
+          "id": 137079,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Power",
+            "native": "パワー"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b137079-6yLEUYR3bmpr.png"
+          },
+          "voice_actor": {
+            "id": 133625,
+            "name": {
+              "full": "Fairouz Ai",
+              "native": "ファイルーズあい"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n133625-YpEgKD7flV2S.jpg"
+            }
+          }
+        }
+      ],
+      "streaming_episodes": [],
       "external_ids": {
         "mal": 57555,
         "kitsu": 48323,
@@ -209,11 +880,194 @@
       ],
       "season": "SPRING",
       "season_year": 2026,
+      "season_number": 4,
+      "part_number": null,
+      "detected_season": 4,
+      "detected_part": null,
       "episodes": 19,
       "duration": "24m",
       "average_score": 90,
-      "popularity": 152847,
+      "popularity": 153307,
       "rating": "R - 17+ (violence & profanity)",
+      "characters": [
+        {
+          "id": 88572,
+          "role": "MAIN",
+          "name": {
+            "full": "Emilia",
+            "native": "エミリア"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b88572-IzTwXEHSobRs.jpg"
+          },
+          "voice_actor": {
+            "id": 119331,
+            "name": {
+              "full": "Rie Takahashi",
+              "native": "高橋李依"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n119331-5dPuMCxu4RWf.jpg"
+            }
+          }
+        },
+        {
+          "id": 88573,
+          "role": "MAIN",
+          "name": {
+            "full": "Subaru Natsuki",
+            "native": "ナツキ・スバル"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b88573-F8yMTK9GhnTA.png"
+          },
+          "voice_actor": {
+            "id": 118407,
+            "name": {
+              "full": "Yuusuke Kobayashi",
+              "native": "小林裕介"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n118407-DMPcKY2AUSHV.png"
+            }
+          }
+        },
+        {
+          "id": 90181,
+          "role": "MAIN",
+          "name": {
+            "full": "Beatrice",
+            "native": "ベアトリス"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b90181-wRPm0OEaucmw.png"
+          },
+          "voice_actor": {
+            "id": 95124,
+            "name": {
+              "full": "Satomi Arai",
+              "native": "新井里美"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95124-8C0BORTX7Bfd.jpg"
+            }
+          }
+        },
+        {
+          "id": 90177,
+          "role": "MAIN",
+          "name": {
+            "full": "Anastasia Hoshin",
+            "native": "アナスタシア・ホーシン"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b90177-K1XztcZqHl3c.png"
+          },
+          "voice_actor": {
+            "id": 95116,
+            "name": {
+              "full": "Kana Ueda",
+              "native": "植田佳奈"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95116-NvhEn6vNMiAq.png"
+            }
+          }
+        },
+        {
+          "id": 88576,
+          "role": "MAIN",
+          "name": {
+            "full": "Ram",
+            "native": "ラム"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b88576-NWkotUiJ3mK3.png"
+          },
+          "voice_actor": {
+            "id": 107212,
+            "name": {
+              "full": "Rie Murakawa",
+              "native": "村川梨衣"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n107212-4OHHrSs8srTU.png"
+            }
+          }
+        },
+        {
+          "id": 90183,
+          "role": "MAIN",
+          "name": {
+            "full": "Julius Euclius",
+            "native": "ユリウス・ユークリウス"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b90183-LWx59kSa5Vjl.png"
+          },
+          "voice_actor": {
+            "id": 102695,
+            "name": {
+              "full": "Takuya Eguchi",
+              "native": "江口拓也"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n102695-dGzsJkor0KMj.jpg"
+            }
+          }
+        },
+        {
+          "id": 175577,
+          "role": "MAIN",
+          "name": {
+            "full": "Meili Portroute",
+            "native": "メィリィ・ポートルート"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b175577-lUNPAV3Gujl3.jpg"
+          },
+          "voice_actor": {
+            "id": 118688,
+            "name": {
+              "full": "Eri Suzuki",
+              "native": "鈴木絵理"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n118688-nOPqS5KJrhjr.jpg"
+            }
+          }
+        },
+        {
+          "id": 184458,
+          "role": "MAIN",
+          "name": {
+            "full": "Shaula",
+            "native": "シャウラ"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b184458-wchLacBSRg3L.png"
+          },
+          "voice_actor": {
+            "id": 133625,
+            "name": {
+              "full": "Fairouz Ai",
+              "native": "ファイルーズあい"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n133625-YpEgKD7flV2S.jpg"
+            }
+          }
+        }
+      ],
+      "streaming_episodes": [],
       "external_ids": {
         "mal": 61316,
         "kitsu": 49746,
@@ -250,11 +1104,255 @@
       ],
       "season": "SPRING",
       "season_year": 2015,
+      "season_number": 3,
+      "part_number": null,
+      "detected_season": 3,
+      "detected_part": null,
       "episodes": 51,
       "duration": "24m",
       "average_score": 90,
-      "popularity": 120818,
+      "popularity": 120844,
       "rating": "R - 17+ (violence & profanity)",
+      "characters": [
+        {
+          "id": 672,
+          "role": "MAIN",
+          "name": {
+            "full": "Gintoki Sakata",
+            "native": "坂田銀時"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b672-cP5VPriN67xJ.png"
+          },
+          "voice_actor": {
+            "id": 95002,
+            "name": {
+              "full": "Tomokazu Sugita",
+              "native": "杉田智和"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95002-nDIvHaynicEg.png"
+            }
+          }
+        },
+        {
+          "id": 673,
+          "role": "MAIN",
+          "name": {
+            "full": "Shinpachi Shimura",
+            "native": "志村新八"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b673-nScArSMt85kd.jpg"
+          },
+          "voice_actor": {
+            "id": 95278,
+            "name": {
+              "full": "Daisuke Sakaguchi",
+              "native": "阪口大助"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95278-IrUPhIvJCsF9.png"
+            }
+          }
+        },
+        {
+          "id": 674,
+          "role": "MAIN",
+          "name": {
+            "full": "Kagura",
+            "native": "神楽"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b674-w8wCh0A5Qa8R.png"
+          },
+          "voice_actor": {
+            "id": 95008,
+            "name": {
+              "full": "Rie Kugimiya",
+              "native": "釘宮理恵"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95008-2y0EeuSTHIri.png"
+            }
+          }
+        },
+        {
+          "id": 1533,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Kotarou Katsura",
+            "native": "桂小太郎"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b1533-tSqUrj2DOK5p.png"
+          },
+          "voice_actor": {
+            "id": 95017,
+            "name": {
+              "full": "Akira Ishida",
+              "native": "石田彰"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95017-GSRcmQ97a8ZT.png"
+            }
+          }
+        },
+        {
+          "id": 1759,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Ayame Sarutobi",
+            "native": "猿飛あやめ"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/n1759-hbviRHbxGNmx.jpg"
+          },
+          "voice_actor": {
+            "id": 95034,
+            "name": {
+              "full": "Yuu Kobayashi",
+              "native": "小林ゆう"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95034-AwobjrcmkMi9.png"
+            }
+          }
+        },
+        {
+          "id": 2282,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Sougo Okita",
+            "native": "沖田総悟"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b2282-X0uYqwmwxiPo.png"
+          },
+          "voice_actor": {
+            "id": 95005,
+            "name": {
+              "full": "Kenichi Suzumura",
+              "native": "鈴村健一"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95005-SkoVN02iOglr.png"
+            }
+          }
+        },
+        {
+          "id": 2650,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Toushirou Hijikata",
+            "native": "土方十四郎"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b2650-zgkj5l8mIOnn.png"
+          },
+          "voice_actor": {
+            "id": 95123,
+            "name": {
+              "full": "Kazuya Nakai",
+              "native": "中井和哉"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95123-54LrTiD9kGwY.jpg"
+            }
+          }
+        },
+        {
+          "id": 2651,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Sadaharu",
+            "native": "定春"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/n2651-e8BTqVZl8lK2.jpg"
+          },
+          "voice_actor": {
+            "id": 95132,
+            "name": {
+              "full": "Mikako Takahashi",
+              "native": "高橋美佳子"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95132-TpIFKL0tJg84.jpg"
+            }
+          }
+        }
+      ],
+      "streaming_episodes": [
+        {
+          "title": "Episode 1 - You Guys!! Do You Even Have a Gintama? (Part 1)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/76257e029e2e01911e289b117e164ec31230030171_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GRWEXZWJR/you-guys-do-you-even-have-a-gintama-part-1"
+        },
+        {
+          "title": "Episode 2 - You Guys!! Do You Even Have a Gintama? (Part 2)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/f72f497a51757117af359c86c1fd86431230032181_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G609Q1546/you-guys-do-you-even-have-a-gintama-part-2"
+        },
+        {
+          "title": "Episode 3 - Nobody with Naturally Wavy Hair Can Be That Bad",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/bee3fd0fc9cbaaeeb77ebe276afef11d1230035153_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G67527X0R/nobody-with-naturally-wavy-hair-can-be-that-bad"
+        },
+        {
+          "title": "Episode 4 - Watch Out! Weekly Shonen Jump Sometimes Comes Out on Saturdays!",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/31507f291feca0f25adfd4637af1ba371230037351_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GYX041P7R/watch-out-weekly-shonen-jump-sometimes-comes-out-on-saturdays"
+        },
+        {
+          "title": "Episode 5 - Make Friends You Can Call by Their Nicknames, Even When You're an Old Fart",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/4df7258360bda52ae01941cfc55064721230038204_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GR195N296/make-friends-you-can-call-by-their-nicknames-even-when-youre-an-old-fart"
+        },
+        {
+          "title": "Episode 6 - Keep Your Promise Even If It Kills You",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/e4c92ce04e7cd56d266aabbbf2cc4daf1230037818_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GYNQ1P9JY/keep-your-promise-even-if-it-kills-you"
+        },
+        {
+          "title": "Episode 7 - Responsible Owners Should Clean Up After Their Pets",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/054609762035e488622ceba02950fc351230038226_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G6MG1D7P6/responsible-owners-should-clean-up-after-their-pets"
+        },
+        {
+          "title": "Episode 8 - There Is Butt a Fine Line Between Persistence and Stubbornness",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/7f642e1bbfab57913b2d83d817591dc11230038449_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G63VG7QDY/there-is-butt-a-fine-line-between-persistence-and-stubbornness"
+        },
+        {
+          "title": "Episode 9 - Fighting Should Be Done with Fists",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/16ba1073e34eed5574c795fcc66284da1230038721_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GR2PW180R/fighting-should-be-done-with-fists"
+        },
+        {
+          "title": "Episode 10 - Eat Something Sour When You’re Tired",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/5943c491334e4696f205fa6c819517f71230025739_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GRZXQ28GY/eat-something-sour-when-youre-tired"
+        },
+        {
+          "title": "Episode 11 - Look, Overly Sticky Sweet Dumplings Are Not Real Dumplings, You Idiot!",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/38af0de505030d13126f6d93f87ac3c21230028473_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G6Q4MK1ZR/look-overly-sticky-sweet-dumplings-are-not-real-dumplings-you-idiot"
+        },
+        {
+          "title": "Episode 12 - People Who Make Good First Impressions Usually Suck",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/b6abecc325e99df18476236b008b7ca11230028013_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GYWEXZ3JY/people-who-make-good-first-impressions-usually-suck"
+        }
+      ],
       "external_ids": {
         "mal": 28977,
         "kitsu": 10083,
@@ -291,11 +1389,205 @@
       ],
       "season": "WINTER",
       "season_year": 2021,
+      "season_number": 1,
+      "part_number": null,
+      "detected_season": 1,
+      "detected_part": null,
       "episodes": 1,
       "duration": "104m",
       "average_score": 90,
-      "popularity": 56522,
+      "popularity": 56540,
       "rating": "R - 17+ (violence & profanity)",
+      "characters": [
+        {
+          "id": 672,
+          "role": "MAIN",
+          "name": {
+            "full": "Gintoki Sakata",
+            "native": "坂田銀時"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b672-cP5VPriN67xJ.png"
+          },
+          "voice_actor": {
+            "id": 95002,
+            "name": {
+              "full": "Tomokazu Sugita",
+              "native": "杉田智和"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95002-nDIvHaynicEg.png"
+            }
+          }
+        },
+        {
+          "id": 673,
+          "role": "MAIN",
+          "name": {
+            "full": "Shinpachi Shimura",
+            "native": "志村新八"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b673-nScArSMt85kd.jpg"
+          },
+          "voice_actor": {
+            "id": 95278,
+            "name": {
+              "full": "Daisuke Sakaguchi",
+              "native": "阪口大助"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95278-IrUPhIvJCsF9.png"
+            }
+          }
+        },
+        {
+          "id": 674,
+          "role": "MAIN",
+          "name": {
+            "full": "Kagura",
+            "native": "神楽"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b674-w8wCh0A5Qa8R.png"
+          },
+          "voice_actor": {
+            "id": 95008,
+            "name": {
+              "full": "Rie Kugimiya",
+              "native": "釘宮理恵"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95008-2y0EeuSTHIri.png"
+            }
+          }
+        },
+        {
+          "id": 2948,
+          "role": "MAIN",
+          "name": {
+            "full": "Shinsuke Takasugi",
+            "native": "高杉晋助"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b2948-Er1xnL05k1oU.png"
+          },
+          "voice_actor": {
+            "id": 95160,
+            "name": {
+              "full": "Takehito Koyasu",
+              "native": "子安武人"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95160-jWevcH7BmfE1.jpg"
+            }
+          }
+        },
+        {
+          "id": 1533,
+          "role": "MAIN",
+          "name": {
+            "full": "Kotarou Katsura",
+            "native": "桂小太郎"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b1533-tSqUrj2DOK5p.png"
+          },
+          "voice_actor": {
+            "id": 95017,
+            "name": {
+              "full": "Akira Ishida",
+              "native": "石田彰"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95017-GSRcmQ97a8ZT.png"
+            }
+          }
+        },
+        {
+          "id": 28144,
+          "role": "MAIN",
+          "name": {
+            "full": "Shouyou Yoshida",
+            "native": "吉田松陽"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b28144-QsZ8pBkqo4rj.jpg"
+          },
+          "voice_actor": {
+            "id": 95011,
+            "name": {
+              "full": "Kouichi Yamadera",
+              "native": "山寺宏一"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95011-2RfLzncNyvbR.png"
+            }
+          }
+        },
+        {
+          "id": 2944,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Tae Shimura",
+            "native": "志村妙"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/n2944-XzeaielhUwAV.jpg"
+          },
+          "voice_actor": {
+            "id": 95003,
+            "name": {
+              "full": "Satsuki Yukino",
+              "native": "ゆきのさつき"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95003-Du7wb5JJzb8P.png"
+            }
+          }
+        },
+        {
+          "id": 2651,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Sadaharu",
+            "native": "定春"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/n2651-e8BTqVZl8lK2.jpg"
+          },
+          "voice_actor": {
+            "id": 95132,
+            "name": {
+              "full": "Mikako Takahashi",
+              "native": "高橋美佳子"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95132-TpIFKL0tJg84.jpg"
+            }
+          }
+        }
+      ],
+      "streaming_episodes": [
+        {
+          "title": "Gintama: The Very Final",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/4fbde9c51406565270a6fd11f7b966481677195249_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GD9UVX5DZ/gintama-the-very-final"
+        },
+        {
+          "title": "Gintama: The Very Final (English Dub)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/c82e3ecf29393c9b881c3e11f187dc0c1677196030_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G50UZ5QWZ/gintama-the-very-final-english-dub"
+        }
+      ],
       "external_ids": {
         "mal": 39486,
         "kitsu": 43683,
@@ -331,11 +1623,255 @@
       ],
       "season": "FALL",
       "season_year": 2011,
+      "season_number": 1,
+      "part_number": null,
+      "detected_season": 1,
+      "detected_part": null,
       "episodes": 148,
       "duration": "24m",
       "average_score": 89,
-      "popularity": 851565,
+      "popularity": 851838,
       "rating": "R - 17+ (violence & profanity)",
+      "characters": [
+        {
+          "id": 30,
+          "role": "MAIN",
+          "name": {
+            "full": "Gon Freecss",
+            "native": "ゴン＝フリークス"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b30-lyFExKyDhefc.jpg"
+          },
+          "voice_actor": {
+            "id": 107961,
+            "name": {
+              "full": "Megumi Han",
+              "native": "潘めぐみ"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n107961-aMetTdEFTi2W.jpg"
+            }
+          }
+        },
+        {
+          "id": 27,
+          "role": "MAIN",
+          "name": {
+            "full": "Killua Zoldyck",
+            "native": "キルア=ゾルディック"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b27-Z5O02kQUydpT.jpg"
+          },
+          "voice_actor": {
+            "id": 95655,
+            "name": {
+              "full": "Mariya Ise",
+              "native": "伊瀬茉莉也"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95655-cR519BXmteKA.png"
+            }
+          }
+        },
+        {
+          "id": 28,
+          "role": "MAIN",
+          "name": {
+            "full": "Kurapika",
+            "native": "クラピカ"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b28-ivA7UGnfE40a.png"
+          },
+          "voice_actor": {
+            "id": 95099,
+            "name": {
+              "full": "Miyuki Sawashiro",
+              "native": "沢城みゆき"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95099-jKP4LfPWqetk.jpg"
+            }
+          }
+        },
+        {
+          "id": 29,
+          "role": "MAIN",
+          "name": {
+            "full": "Leorio Paradinight",
+            "native": "レオリオ・パラディナイト"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b29-RgzoSeKmDYzl.jpg"
+          },
+          "voice_actor": {
+            "id": 95063,
+            "name": {
+              "full": "Keiji Fujiwara",
+              "native": "藤原啓治"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95063-xAsEUzspuLMG.jpg"
+            }
+          }
+        },
+        {
+          "id": 31,
+          "role": "MAIN",
+          "name": {
+            "full": "Hisoka Morow",
+            "native": "ヒソカ・モロウ"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b31-FZckOuu7L1un.png"
+          },
+          "voice_actor": {
+            "id": 95087,
+            "name": {
+              "full": "Daisuke Namikawa",
+              "native": "浪川大輔"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95087-6dlBBbejsPyg.png"
+            }
+          }
+        },
+        {
+          "id": 26,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Ging Freecss",
+            "native": "ジン・フリークス"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/26-VpZXIwOdcz8p.jpg"
+          },
+          "voice_actor": {
+            "id": 95113,
+            "name": {
+              "full": "Rikiya Koyama",
+              "native": "小山力也"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95113-z9eyYjTKSTX4.png"
+            }
+          }
+        },
+        {
+          "id": 57,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Illumi Zoldyck",
+            "native": "イルミ＝ゾルディック"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b57-pTFguojSOQZW.png"
+          },
+          "voice_actor": {
+            "id": 95042,
+            "name": {
+              "full": "Masaya Matsukaze",
+              "native": "松風雅也"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95042-gEcEYD7iDXnF.png"
+            }
+          }
+        },
+        {
+          "id": 58,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Chrollo Lucilfer",
+            "native": "クロロ・ルシルフル"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b58-USOmsz3nursi.jpg"
+          },
+          "voice_actor": {
+            "id": 95065,
+            "name": {
+              "full": "Mamoru Miyano",
+              "native": "宮野真守"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95065-eyynywrhombR.png"
+            }
+          }
+        }
+      ],
+      "streaming_episodes": [
+        {
+          "title": "Episode 1 - Departure x And x Friends",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/337eb80fe71c9e580908d08278e4e89d1317068418_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G7PU3DJ97/departure-x-and-x-friends"
+        },
+        {
+          "title": "Episode 2 - Test x Of x Tests",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/f89ea9d5b9d5a1d4c263f1cb57e9c6011317346148_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G9DU92GGZ/test-x-of-x-tests"
+        },
+        {
+          "title": "Episode 3 - Rivals x In x Survival",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/e4ccb5a62ebb8ccda1e2c113b785919a1317929321_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GX9U34ZZM/rivals-x-in-x-survival"
+        },
+        {
+          "title": "Episode 4 - Hope x And x Ambition",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/d2ecd700adab356914e0b1115a79b21a1318970940_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G4VUW7887/hope-x-and-x-ambition"
+        },
+        {
+          "title": "Episode 5 - Hisoka x Is So x Sneaky",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/987b531aaed516b8d043b127580cbd711319132525_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G14UVPGG4/hisoka-x-is-so-x-sneaky"
+        },
+        {
+          "title": "Episode 6 - A x Surprising x Challenge!",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/ee70e7ee65c4030224f476bc0e61a5731319736733_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GN7UNJVV0/a-x-surprising-x-challenge"
+        },
+        {
+          "title": "Episode 7 - Showdown x On The x Airship",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/00bff5d305de5d66a070df8b9d6daeb81320691973_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GK9UGNDDP/showdown-x-on-the-x-airship"
+        },
+        {
+          "title": "Episode 8 - Decision X By X Majority?",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/1eab69ea577ead7c015f7590b44e48951320951864_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GMKUE3GGN/decision-x-by-x-majority"
+        },
+        {
+          "title": "Episode 9 - Beware X Of X Prisoners",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/e613a67fc199fa00bd43e4ad17c474211321560627_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GVWU8244D/beware-x-of-x-prisoners"
+        },
+        {
+          "title": "Episode 10 - Trick X To The X Trick",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/b3ad13c092e97fed6456500f177ddd191322506260_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GPWU8XDD0/trick-x-to-the-x-trick"
+        },
+        {
+          "title": "Episode 11 - Trouble X With The X Gamble!",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/e5fb20b31257aa406de829c1b5831cfd1322774241_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G2XUNVDD3/trouble-x-with-the-x-gamble"
+        },
+        {
+          "title": "Episode 12 - Last X Test Of X Resolve",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/a09cefd55c3c3ed76ca8623bd2ed15581323370719_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G8WU7P00E/last-x-test-of-x-resolve"
+        }
+      ],
       "external_ids": {
         "mal": 11061,
         "kitsu": 6448,
@@ -372,11 +1908,255 @@
       ],
       "season": "SPRING",
       "season_year": 2019,
+      "season_number": 3,
+      "part_number": 2,
+      "detected_season": 3,
+      "detected_part": 2,
       "episodes": 10,
       "duration": "24m",
       "average_score": 89,
-      "popularity": 619285,
+      "popularity": 619511,
       "rating": "R - 17+ (violence & profanity)",
+      "characters": [
+        {
+          "id": 40882,
+          "role": "MAIN",
+          "name": {
+            "full": "Eren Yeager",
+            "native": "エレン・イェーガー"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b40882-dsj7IP943WFF.jpg"
+          },
+          "voice_actor": {
+            "id": 95672,
+            "name": {
+              "full": "Yuuki Kaji",
+              "native": "梶裕貴"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95672-T33YV7yCDKnL.png"
+            }
+          }
+        },
+        {
+          "id": 40881,
+          "role": "MAIN",
+          "name": {
+            "full": "Mikasa Ackerman",
+            "native": "ミカサ・アッカーマン"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b40881-F3gr1PkreDvj.png"
+          },
+          "voice_actor": {
+            "id": 100142,
+            "name": {
+              "full": "Yui Ishikawa",
+              "native": "石川由依"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n100142-k6RP0HzXffUG.png"
+            }
+          }
+        },
+        {
+          "id": 46494,
+          "role": "MAIN",
+          "name": {
+            "full": "Armin Arlert",
+            "native": "アルミン・アルレルト"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b46494-g7xYYuBtYPnO.png"
+          },
+          "voice_actor": {
+            "id": 95158,
+            "name": {
+              "full": "Marina Inoue",
+              "native": "井上麻里奈"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95158-OLhgs8zv5xsp.jpg"
+            }
+          }
+        },
+        {
+          "id": 45627,
+          "role": "MAIN",
+          "name": {
+            "full": "Levi",
+            "native": "リヴァイ"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b45627-CR68RyZmddGG.png"
+          },
+          "voice_actor": {
+            "id": 95118,
+            "name": {
+              "full": "Hiroshi Kamiya",
+              "native": "神谷浩史"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95118-oOElrn1aSaiC.png"
+            }
+          }
+        },
+        {
+          "id": 46496,
+          "role": "MAIN",
+          "name": {
+            "full": "Erwin Smith",
+            "native": "エルヴィン・スミス"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b46496-Mu86MENd5wNB.png"
+          },
+          "voice_actor": {
+            "id": 95212,
+            "name": {
+              "full": "Daisuke Ono",
+              "native": "小野大輔"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95212-wX1M4LJN96q2.png"
+            }
+          }
+        },
+        {
+          "id": 46484,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Reiner Braun",
+            "native": "ライナー・ブラウン"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b46484-P6A2GjNQn49F.png"
+          },
+          "voice_actor": {
+            "id": 100626,
+            "name": {
+              "full": "Yoshimasa Hosoya",
+              "native": "細谷佳正"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n100626-bH8eZ0wv3HYX.jpg"
+            }
+          }
+        },
+        {
+          "id": 36309,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Narrator",
+            "native": "ナレーター"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b36309-6KM0riV4lqfN.jpg"
+          },
+          "voice_actor": {
+            "id": 95158,
+            "name": {
+              "full": "Marina Inoue",
+              "native": "井上麻里奈"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95158-OLhgs8zv5xsp.jpg"
+            }
+          }
+        },
+        {
+          "id": 45887,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Sasha Blouse",
+            "native": "サシャ・ブラウス"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b45887-QPtJH0KwqthW.jpg"
+          },
+          "voice_actor": {
+            "id": 95034,
+            "name": {
+              "full": "Yuu Kobayashi",
+              "native": "小林ゆう"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95034-AwobjrcmkMi9.png"
+            }
+          }
+        }
+      ],
+      "streaming_episodes": [
+        {
+          "title": "Episode 1 - To You, 2,000 Years in the Future -The Fall of Zhiganshina (1)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/b199406edeebc19a7f4e4412d6e1dfcc1365964779_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GG1U2M0V9/to-you-2000-years-in-the-future-the-fall-of-zhiganshina-1"
+        },
+        {
+          "title": "Episode 2 - That Day - The Fall of Zhiganshina (2)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/b9fbee83c6c9a6353383a36b81d861211365965650_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G0DUN34X7/that-day-the-fall-of-zhiganshina-2"
+        },
+        {
+          "title": "Episode 3 - A Dim Light in the Darkness of Despair - Humanity Rises Again (1)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/c7b6627f8880562f34268096f9c55c051366564160_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G7PU450DJ/a-dim-light-in-the-darkness-of-despair-humanity-rises-again-1"
+        },
+        {
+          "title": "Episode 4 - Night of the Graduation Ceremony - Humanity Rises Again (2)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/941f10ee007bd7a2704d00dfb460c8fa1367145015_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GX9UQD94W/night-of-the-graduation-ceremony-humanity-rises-again-2"
+        },
+        {
+          "title": "Episode 5 - First Battle - Battle of Trost (1)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/cc56e86eb68f3afde55d62e008fddb441367805554_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G14U4324Q/first-battle-battle-of-trost-1"
+        },
+        {
+          "title": "Episode 6 - The World the Girl Saw - Battle for Trost (2)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/0b9d827f813bd0f5b934721b7cce37d31368457914_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GJWU2M827/the-world-the-girl-saw-battle-for-trost-2"
+        },
+        {
+          "title": "Episode 7 - The Small Blade - The Battle for Trost (3)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/adea712fbf73a3096ace5c4bcfb94ab71368954327_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GMKUXZWXE/the-small-blade-the-battle-for-trost-3"
+        },
+        {
+          "title": "Episode 8 - Hearing the Heartbeat - The Battle for Trost (4)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/35c4c2b8bb74d8ee888aeff5a90e911c1369526858_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G31UXPQXJ/hearing-the-heartbeat-the-battle-for-trost-4"
+        },
+        {
+          "title": "Episode 9 - Where the Left Arm Went  - The Battle for Trost (5)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/dbe188f8378a1fbeb6bd75dca5f4833d1370123553_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GPWUKQEK3/where-the-left-arm-went-the-battle-for-trost-5"
+        },
+        {
+          "title": "Episode 10 - Response - The Battle for Trost (6)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/d817405dd8bb881c6cbea6bfaff591c21370729401_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G8WUNDEND/response-the-battle-for-trost-6"
+        },
+        {
+          "title": "Episode 11 - Icon - The Battle for Trost (7)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/d178c066f3340c55c1f77f777f9082fd1371318103_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GQJUGD7G7/icon-the-battle-for-trost-7"
+        },
+        {
+          "title": "Episode 12 - Wound - The Battle for Trost (8)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/6401b828d7db85669e185d115fa102a41371935223_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G50UZ2WZ7/wound-the-battle-for-trost-8"
+        }
+      ],
       "external_ids": {
         "mal": 38524,
         "kitsu": 41982,
@@ -413,11 +2193,255 @@
       ],
       "season": "SPRING",
       "season_year": 2011,
+      "season_number": 1,
+      "part_number": null,
+      "detected_season": 1,
+      "detected_part": null,
       "episodes": 24,
       "duration": "24m",
       "average_score": 89,
-      "popularity": 602790,
+      "popularity": 602988,
       "rating": "R - 17+ (violence & profanity)",
+      "characters": [
+        {
+          "id": 35252,
+          "role": "MAIN",
+          "name": {
+            "full": "Rintarou Okabe",
+            "native": "岡部倫太郎"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b35252-DY9TW6pusqeh.png"
+          },
+          "voice_actor": {
+            "id": 95065,
+            "name": {
+              "full": "Mamoru Miyano",
+              "native": "宮野真守"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95065-eyynywrhombR.png"
+            }
+          }
+        },
+        {
+          "id": 34470,
+          "role": "MAIN",
+          "name": {
+            "full": "Kurisu Makise",
+            "native": "牧瀬紅莉栖"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b34470-Jw2LXZBL5R8i.png"
+          },
+          "voice_actor": {
+            "id": 103662,
+            "name": {
+              "full": "Asami Imai",
+              "native": "今井麻美"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n103662-1gAPfy3TvPK8.png"
+            }
+          }
+        },
+        {
+          "id": 35253,
+          "role": "MAIN",
+          "name": {
+            "full": "Mayuri Shiina",
+            "native": "椎名まゆり"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b35253-u6QVgLLyHq2W.png"
+          },
+          "voice_actor": {
+            "id": 95185,
+            "name": {
+              "full": "Kana Hanazawa",
+              "native": "花澤香菜"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95185-x8ZYvtN7SegC.png"
+            }
+          }
+        },
+        {
+          "id": 35258,
+          "role": "MAIN",
+          "name": {
+            "full": "Itaru Hashida",
+            "native": "橋田至"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b35258-FeTGR4LEUNvt.png"
+          },
+          "voice_actor": {
+            "id": 95001,
+            "name": {
+              "full": "Tomokazu Seki",
+              "native": "関智一"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95001-vm0RtZhmlzhK.png"
+            }
+          }
+        },
+        {
+          "id": 35255,
+          "role": "MAIN",
+          "name": {
+            "full": "Suzuha Amane",
+            "native": "阿万音鈴羽"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b35255-Ra9Aq5Kn9lYq.png"
+          },
+          "voice_actor": {
+            "id": 95027,
+            "name": {
+              "full": "Yukari Tamura",
+              "native": "田村ゆかり"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95027-Zm9onZDUN7ih.jpg"
+            }
+          }
+        },
+        {
+          "id": 30919,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Luka Urushibara",
+            "native": "漆原るか"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b30919-5PjiA4ucfuuJ.png"
+          },
+          "voice_actor": {
+            "id": 95034,
+            "name": {
+              "full": "Yuu Kobayashi",
+              "native": "小林ゆう"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95034-AwobjrcmkMi9.png"
+            }
+          }
+        },
+        {
+          "id": 35256,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Rumiho Akiha",
+            "native": "秋葉留美穂"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b35256-A729dmHEgSYQ.png"
+          },
+          "voice_actor": {
+            "id": 95258,
+            "name": {
+              "full": "Haruko Momoi",
+              "native": "桃井はるこ"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95258-cTKT3ONucnZU.jpg"
+            }
+          }
+        },
+        {
+          "id": 35257,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Moeka Kiryuu",
+            "native": "桐生萌郁"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b35257-uepVZyOvuqhi.png"
+          },
+          "voice_actor": {
+            "id": 95211,
+            "name": {
+              "full": "Saori Gotou",
+              "native": "後藤沙緒里"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95211-d04fFmOyVpfz.png"
+            }
+          }
+        }
+      ],
+      "streaming_episodes": [
+        {
+          "title": "Episode 1 - Prologue to the Beginning and End",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/5b45600ea630f84863be018ed4f441681301790416_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GR09N5K9R/prologue-to-the-beginning-and-end"
+        },
+        {
+          "title": "Episode 2 - Time Travel Paranoia",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/10e9c80b4198f1a929960ca7f0a217b61302629556_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GR75EXG1Y/time-travel-paranoia"
+        },
+        {
+          "title": "Episode 3 - Parallel Process Paranoia",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/77905f6d15c138a40287b53762a3c1241303159026_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G6X0XGW3Y/parallel-process-paranoia"
+        },
+        {
+          "title": "Episode 4 - Interpreter Rendezvous...",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/0bf71acbf6c9391ad608ac83c8c75cb81303525699_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GY19MWDVR/interpreter-rendezvous"
+        },
+        {
+          "title": "Episode 5 - Starmine Rendezvous",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/a03f7f1e881e475a71ebb89514e3dd491303761175_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GYQ4VDN36/starmine-rendezvous"
+        },
+        {
+          "title": "Episode 6 - Butterfly Effect's Divergence",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/70c3c674999395bb60049fa2847a4f211304026414_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GRWE7W5QR/butterfly-effects-divergence"
+        },
+        {
+          "title": "Episode 7 - Divergence Singularity",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/209f3e5ab4ee58e5abded9d61c0af5021305220347_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G609N5KE6/divergence-singularity"
+        },
+        {
+          "title": "Episode 8 - Chaos Theory Homeostatis",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/398d30c4a3614e6b85239439553f04cc1305570938_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G675EXGJR/chaos-theory-homeostatis"
+        },
+        {
+          "title": "Episode 9 - Chaos Theory Homeostasis",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/770cc18806278a0022684c909b6173571306172520_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GYX0XGWKR/chaos-theory-homeostasis"
+        },
+        {
+          "title": "Episode 10 - Chaos Theory Homeostatis",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/61269263cd2f9c8ef8026e2e3332f21c1306950518_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GR19MWD26/chaos-theory-homeostatis"
+        },
+        {
+          "title": "Episode 11 - Dogma in Event Horizon",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/2013a5775aef6afdb0ecea5c41898a221307384725_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GYNQ4NG0Y/dogma-in-event-horizon"
+        },
+        {
+          "title": "Episode 12 - Dogma in Ergosphere",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/645ade0c1dfa4cb0b6dae8fdb43f0f481308078170_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G6MG9JWG6/dogma-in-ergosphere"
+        }
+      ],
       "external_ids": {
         "mal": 9253,
         "kitsu": 5646,
@@ -454,11 +2478,255 @@
       ],
       "season": "SPRING",
       "season_year": 2022,
+      "season_number": 3,
+      "part_number": null,
+      "detected_season": 3,
+      "detected_part": null,
       "episodes": 13,
       "duration": "24m",
       "average_score": 89,
-      "popularity": 296527,
+      "popularity": 296641,
       "rating": "PG-13 - Teens 13 or older",
+      "characters": [
+        {
+          "id": 120649,
+          "role": "MAIN",
+          "name": {
+            "full": "Kaguya Shinomiya",
+            "native": "四宮かぐや"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b120649-NPaWaIpWy60E.png"
+          },
+          "voice_actor": {
+            "id": 123268,
+            "name": {
+              "full": "Aoi Koga",
+              "native": "古賀葵"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n123268-zIZLjZ5Xfbk4.png"
+            }
+          }
+        },
+        {
+          "id": 121101,
+          "role": "MAIN",
+          "name": {
+            "full": "Miyuki Shirogane",
+            "native": "白銀御行"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b121101-Q8HzKP15At2d.png"
+          },
+          "voice_actor": {
+            "id": 112635,
+            "name": {
+              "full": "Makoto Furukawa",
+              "native": "古川慎"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n112635-ORlGvRvgf5Nq.png"
+            }
+          }
+        },
+        {
+          "id": 121102,
+          "role": "MAIN",
+          "name": {
+            "full": "Yuu Ishigami",
+            "native": "石上優"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b121102-tiQFxnSEIAwm.png"
+          },
+          "voice_actor": {
+            "id": 123450,
+            "name": {
+              "full": "Ryouta Suzuki",
+              "native": "鈴木崚汰"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n123450-Hmi5iu3KDHwc.png"
+            }
+          }
+        },
+        {
+          "id": 121103,
+          "role": "MAIN",
+          "name": {
+            "full": "Chika Fujiwara",
+            "native": "藤原千花"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b121103-UGLxT8utLPnq.png"
+          },
+          "voice_actor": {
+            "id": 121961,
+            "name": {
+              "full": "Konomi Kohara",
+              "native": "小原好美"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n121961-TaMewK1taQm6.png"
+            }
+          }
+        },
+        {
+          "id": 125886,
+          "role": "MAIN",
+          "name": {
+            "full": "Miko Iino",
+            "native": "伊井野ミコ"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b125886-TQbmqAaSgBLS.png"
+          },
+          "voice_actor": {
+            "id": 119518,
+            "name": {
+              "full": "Miyu Tomita",
+              "native": "富田美憂"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n119518-vZN7TPy12iuu.png"
+            }
+          }
+        },
+        {
+          "id": 36309,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Narrator",
+            "native": "ナレーター"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b36309-6KM0riV4lqfN.jpg"
+          },
+          "voice_actor": {
+            "id": 96538,
+            "name": {
+              "full": "Yutaka Aoyama",
+              "native": "青山穣"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n96538-mM7J8gp87gut.jpg"
+            }
+          }
+        },
+        {
+          "id": 121104,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Ai Hayasaka",
+            "native": "早坂愛"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b121104-7TYRl3EEsDYU.png"
+          },
+          "voice_actor": {
+            "id": 116543,
+            "name": {
+              "full": "Yumiri Hanamori",
+              "native": "花守ゆみり"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n116543-ugu1HZWiQkqi.jpg"
+            }
+          }
+        },
+        {
+          "id": 126144,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Kei Shirogane",
+            "native": "白銀圭"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b126144-4fc2sYUVFKOJ.png"
+          },
+          "voice_actor": {
+            "id": 126963,
+            "name": {
+              "full": "Sayumi Suzushiro",
+              "native": "鈴代紗弓"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n126963-GnhNcLWFeKmy.png"
+            }
+          }
+        }
+      ],
+      "streaming_episodes": [
+        {
+          "title": "Episode 1 - I Will Make You Invite Me to a Movie / Kaguya Wants to Be Stopped / Kaguya Wants It",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/f3178517627e7c3bc07e5e2d9629e3551547303791_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GD9UVWXGX/i-will-make-you-invite-me-to-a-movie-kaguya-wants-to-be-stopped-kaguya-wants-it"
+        },
+        {
+          "title": "Episode 2 - Kaguya Wants to Trade / Chika Wants to Go Somewhere / Miyuki Wants to Hide His Ignorance",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/83a6a11ce7ffea4af4792326a035c4c71547911382_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G0DUN08NG/kaguya-wants-to-trade-chika-wants-to-go-somewhere-miyuki-wants-to-hide-his-ignorance"
+        },
+        {
+          "title": "Episode 3 - Miyuki Shirogane Still Hasn't Done It / Kaguya Wants to Be Figured Out / Kaguya Wants to Walk",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/deb541047d5119172fb6bee72d8eab9a1548495969_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G14U4EM4Z/miyuki-shirogane-still-hasnt-done-it-kaguya-wants-to-be-figured-out-kaguya-wants-to-walk"
+        },
+        {
+          "title": "Episode 4 - Kaguya Wants Affection / The Student Council Wants It to Be Said / Kaguya Wants Him to Send It / Miyuki Shirogane Wants to Talk",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/7137f5b28d75ca064a81a3581d37991c1549100829_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G50UZ45ZE/kaguya-wants-affection-the-student-council-wants-it-to-be-said-kaguya-wants-him-to-send-it-miyuki-shirogane-wants-to-talk"
+        },
+        {
+          "title": "Episode 5 - Kaguya Wants to Handle It / Miyuki Shirogane Wants to Show Off / Kaguya Wants to Be Covered",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/24485a07e6c2e8a1e090b4f97193b5a11549725493_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G7PU4V94E/kaguya-wants-to-handle-it-miyuki-shirogane-wants-to-show-off-kaguya-wants-to-be-covered"
+        },
+        {
+          "title": "Episode 6 - Yu Ishigami Wants to Live / Chika Fujiwara Wants to Test You / Kaguya Wants to Be Noticed",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/9c0eeea2814cedb6a684cfa5eb8d9acc1550324947_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G4VUQX2Q8/yu-ishigami-wants-to-live-chika-fujiwara-wants-to-test-you-kaguya-wants-to-be-noticed"
+        },
+        {
+          "title": "Episode 7 - Miyuki Shirogane Wants to Work / Kaguya Wants Him to Join In / Kaguya Wants to Control It",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/e303e9211046cee485023d28382c8c7f1550916918_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GK9U34XGV/miyuki-shirogane-wants-to-work-kaguya-wants-him-to-join-in-kaguya-wants-to-control-it"
+        },
+        {
+          "title": "Episode 8 - Kaguya Wants Her to Say It / Miyuki Shirogane Can't Lose / Yu Ishigami Closes His Eyes",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/068a47032ad07efb2436831bebfcfc7e1551522792_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GVWU0Z982/kaguya-wants-her-to-say-it-miyuki-shirogane-cant-lose-yu-ishigami-closes-his-eyes"
+        },
+        {
+          "title": "Episode 9 - Kaguya Wants to Give a Gift / Chika Fujiwara Wants to Pay a Visit / About Kaguya Shinomiya, Part 1",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/53f2ecc4fd462750cd989dbde81eea861552140158_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G2XU03QN9/kaguya-wants-to-give-a-gift-chika-fujiwara-wants-to-pay-a-visit-about-kaguya-shinomiya-part-1"
+        },
+        {
+          "title": "Episode 10 - Kaguya Won't Forgive / Kaguya Wants to Forgive / Miyuki Shirogane Wants to Go Somewhere",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/8812d09c20d672ee9448a6e417b030081552729197_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GD9UVWXE4/kaguya-wont-forgive-kaguya-wants-to-forgive-miyuki-shirogane-wants-to-go-somewhere"
+        },
+        {
+          "title": "Episode 11 - Ai Hayasaka Wants to Get Soaked / Chika Fujiwara Really Wants to Eat It / Miyuki Shirogane Wants to See You / I Can't Hear the Fireworks, Part 1",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/0cfb2557d5878a6d20a3438d041c2d291553340005_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GG1U2EGX0/ai-hayasaka-wants-to-get-soaked-chika-fujiwara-really-wants-to-eat-it-miyuki-shirogane-wants-to-see-you-i-cant-hear-the-fireworks-part-1"
+        },
+        {
+          "title": "Episode 12 - I Can't Hear the Fireworks, Part 2 / Kaguya Doesn't Want to Avoid Him",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/932019e8ba0f2ce3ca69cdf853bd5d751553958319_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G9DUEP398/i-cant-hear-the-fireworks-part-2-kaguya-doesnt-want-to-avoid-him"
+        }
+      ],
       "external_ids": {
         "mal": 43608,
         "kitsu": 43691,
@@ -497,11 +2765,255 @@
       ],
       "season": "SPRING",
       "season_year": 2013,
+      "season_number": 1,
+      "part_number": null,
+      "detected_season": 1,
+      "detected_part": null,
       "episodes": 25,
       "duration": "24m",
       "average_score": 85,
-      "popularity": 1069717,
+      "popularity": 1070101,
       "rating": "R - 17+ (violence & profanity)",
+      "characters": [
+        {
+          "id": 40882,
+          "role": "MAIN",
+          "name": {
+            "full": "Eren Yeager",
+            "native": "エレン・イェーガー"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b40882-dsj7IP943WFF.jpg"
+          },
+          "voice_actor": {
+            "id": 95672,
+            "name": {
+              "full": "Yuuki Kaji",
+              "native": "梶裕貴"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95672-T33YV7yCDKnL.png"
+            }
+          }
+        },
+        {
+          "id": 40881,
+          "role": "MAIN",
+          "name": {
+            "full": "Mikasa Ackerman",
+            "native": "ミカサ・アッカーマン"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b40881-F3gr1PkreDvj.png"
+          },
+          "voice_actor": {
+            "id": 100142,
+            "name": {
+              "full": "Yui Ishikawa",
+              "native": "石川由依"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n100142-k6RP0HzXffUG.png"
+            }
+          }
+        },
+        {
+          "id": 46494,
+          "role": "MAIN",
+          "name": {
+            "full": "Armin Arlert",
+            "native": "アルミン・アルレルト"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b46494-g7xYYuBtYPnO.png"
+          },
+          "voice_actor": {
+            "id": 95158,
+            "name": {
+              "full": "Marina Inoue",
+              "native": "井上麻里奈"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95158-OLhgs8zv5xsp.jpg"
+            }
+          }
+        },
+        {
+          "id": 45627,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Levi",
+            "native": "リヴァイ"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b45627-CR68RyZmddGG.png"
+          },
+          "voice_actor": {
+            "id": 95118,
+            "name": {
+              "full": "Hiroshi Kamiya",
+              "native": "神谷浩史"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95118-oOElrn1aSaiC.png"
+            }
+          }
+        },
+        {
+          "id": 45887,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Sasha Blouse",
+            "native": "サシャ・ブラウス"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b45887-QPtJH0KwqthW.jpg"
+          },
+          "voice_actor": {
+            "id": 95034,
+            "name": {
+              "full": "Yuu Kobayashi",
+              "native": "小林ゆう"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95034-AwobjrcmkMi9.png"
+            }
+          }
+        },
+        {
+          "id": 46484,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Reiner Braun",
+            "native": "ライナー・ブラウン"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b46484-P6A2GjNQn49F.png"
+          },
+          "voice_actor": {
+            "id": 100626,
+            "name": {
+              "full": "Yoshimasa Hosoya",
+              "native": "細谷佳正"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n100626-bH8eZ0wv3HYX.jpg"
+            }
+          }
+        },
+        {
+          "id": 46486,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Connie Springer",
+            "native": "コニー・スプリンガー"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/n46486-izhPjzut6WCZ.png"
+          },
+          "voice_actor": {
+            "id": 95356,
+            "name": {
+              "full": "Hiro Shimono",
+              "native": "下野紘"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95356-PFaZRlI9oJ56.png"
+            }
+          }
+        },
+        {
+          "id": 46488,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Bertolt Hoover",
+            "native": "ベルトルト・フーバー"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b46488-wm6HvkdkHoZu.jpg"
+          },
+          "voice_actor": {
+            "id": 110005,
+            "name": {
+              "full": "Tomohisa Hashizume",
+              "native": "橋詰知久"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n110005-65qAMtTf7qOb.png"
+            }
+          }
+        }
+      ],
+      "streaming_episodes": [
+        {
+          "title": "Episode 1 - To You, 2,000 Years in the Future -The Fall of Zhiganshina (1)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/b199406edeebc19a7f4e4412d6e1dfcc1365964779_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GG1U2M0V9/to-you-2000-years-in-the-future-the-fall-of-zhiganshina-1"
+        },
+        {
+          "title": "Episode 2 - That Day - The Fall of Zhiganshina (2)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/b9fbee83c6c9a6353383a36b81d861211365965650_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G0DUN34X7/that-day-the-fall-of-zhiganshina-2"
+        },
+        {
+          "title": "Episode 3 - A Dim Light in the Darkness of Despair - Humanity Rises Again (1)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/c7b6627f8880562f34268096f9c55c051366564160_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G7PU450DJ/a-dim-light-in-the-darkness-of-despair-humanity-rises-again-1"
+        },
+        {
+          "title": "Episode 4 - Night of the Graduation Ceremony - Humanity Rises Again (2)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/941f10ee007bd7a2704d00dfb460c8fa1367145015_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GX9UQD94W/night-of-the-graduation-ceremony-humanity-rises-again-2"
+        },
+        {
+          "title": "Episode 5 - First Battle - Battle of Trost (1)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/cc56e86eb68f3afde55d62e008fddb441367805554_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G14U4324Q/first-battle-battle-of-trost-1"
+        },
+        {
+          "title": "Episode 6 - The World the Girl Saw - Battle for Trost (2)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/0b9d827f813bd0f5b934721b7cce37d31368457914_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GJWU2M827/the-world-the-girl-saw-battle-for-trost-2"
+        },
+        {
+          "title": "Episode 7 - The Small Blade - The Battle for Trost (3)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/adea712fbf73a3096ace5c4bcfb94ab71368954327_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GMKUXZWXE/the-small-blade-the-battle-for-trost-3"
+        },
+        {
+          "title": "Episode 8 - Hearing the Heartbeat - The Battle for Trost (4)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/35c4c2b8bb74d8ee888aeff5a90e911c1369526858_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G31UXPQXJ/hearing-the-heartbeat-the-battle-for-trost-4"
+        },
+        {
+          "title": "Episode 9 - Where the Left Arm Went  - The Battle for Trost (5)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/dbe188f8378a1fbeb6bd75dca5f4833d1370123553_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GPWUKQEK3/where-the-left-arm-went-the-battle-for-trost-5"
+        },
+        {
+          "title": "Episode 10 - Response - The Battle for Trost (6)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/d817405dd8bb881c6cbea6bfaff591c21370729401_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G8WUNDEND/response-the-battle-for-trost-6"
+        },
+        {
+          "title": "Episode 11 - Icon - The Battle for Trost (7)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/d178c066f3340c55c1f77f777f9082fd1371318103_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GQJUGD7G7/icon-the-battle-for-trost-7"
+        },
+        {
+          "title": "Episode 12 - Wound - The Battle for Trost (8)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/6401b828d7db85669e185d115fa102a41371935223_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G50UZ2WZ7/wound-the-battle-for-trost-8"
+        }
+      ],
       "external_ids": {
         "mal": 16498,
         "kitsu": 7442,
@@ -539,11 +3051,255 @@
       ],
       "season": "SPRING",
       "season_year": 2019,
+      "season_number": 1,
+      "part_number": null,
+      "detected_season": 1,
+      "detected_part": null,
       "episodes": 26,
       "duration": "24m",
       "average_score": 82,
-      "popularity": 1007342,
+      "popularity": 1007658,
       "rating": "R - 17+ (violence & profanity)",
+      "characters": [
+        {
+          "id": 126071,
+          "role": "MAIN",
+          "name": {
+            "full": "Tanjirou Kamado",
+            "native": "竈門炭治郎"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b126071-BTNEc1nRIv68.png"
+          },
+          "voice_actor": {
+            "id": 111635,
+            "name": {
+              "full": "Natsuki Hanae",
+              "native": "花江夏樹"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n111635-L385UcjTKCBq.png"
+            }
+          }
+        },
+        {
+          "id": 127518,
+          "role": "MAIN",
+          "name": {
+            "full": "Nezuko Kamado",
+            "native": "竈門禰豆子"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b127518-NRlq1CQ1v1ro.png"
+          },
+          "voice_actor": {
+            "id": 119722,
+            "name": {
+              "full": "Akari Kitou",
+              "native": "鬼頭明里"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n119722-Ls7ORfBejJEP.jpg"
+            }
+          }
+        },
+        {
+          "id": 129130,
+          "role": "MAIN",
+          "name": {
+            "full": "Inosuke Hashibira",
+            "native": "嘴平伊之助"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/n129130-SJC0Kn1DU39E.jpg"
+          },
+          "voice_actor": {
+            "id": 106817,
+            "name": {
+              "full": "Yoshitsugu Matsuoka",
+              "native": "松岡禎丞"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n106817-mioGQjbTWWQ6.png"
+            }
+          }
+        },
+        {
+          "id": 129131,
+          "role": "MAIN",
+          "name": {
+            "full": "Zenitsu Agatsuma",
+            "native": "我妻善逸"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b129131-FZrQ7lSlxmEr.png"
+          },
+          "voice_actor": {
+            "id": 95356,
+            "name": {
+              "full": "Hiro Shimono",
+              "native": "下野紘"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95356-PFaZRlI9oJ56.png"
+            }
+          }
+        },
+        {
+          "id": 129132,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Muzan Kibutsuji",
+            "native": "鬼舞辻無惨"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b129132-4nIZakUZ1o8W.jpg"
+          },
+          "voice_actor": {
+            "id": 95129,
+            "name": {
+              "full": "Toshihiko Seki",
+              "native": "関俊彦"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95129-AAL7kfwAPpgR.jpg"
+            }
+          }
+        },
+        {
+          "id": 129133,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Kyoujurou Rengoku",
+            "native": "煉獄杏寿郎"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b129133-VlTPowwt68rJ.png"
+          },
+          "voice_actor": {
+            "id": 95245,
+            "name": {
+              "full": "Satoshi Hino",
+              "native": "日野聡"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95245-prBoWpg0HaGX.jpg"
+            }
+          }
+        },
+        {
+          "id": 130050,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Giyuu Tomioka",
+            "native": "冨岡義勇"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b130050-qsLThJs5VIbz.png"
+          },
+          "voice_actor": {
+            "id": 95079,
+            "name": {
+              "full": "Takahiro Sakurai",
+              "native": "櫻井孝宏"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95079-MdbWTLxPUvFf.jpg"
+            }
+          }
+        },
+        {
+          "id": 136069,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Muichirou Tokitou",
+            "native": "時透無一郎"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b136069-6PLglx4tETUX.png"
+          },
+          "voice_actor": {
+            "id": 110877,
+            "name": {
+              "full": "Kengo Kawanishi",
+              "native": "河西健吾"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n110877-8mqVadVTaFl4.png"
+            }
+          }
+        }
+      ],
+      "streaming_episodes": [
+        {
+          "title": "Episode 1 - Cruelty",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/db617c3bb6a6097394baf707239ff1091554542829_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G9DUEDM08/cruelty"
+        },
+        {
+          "title": "Episode 2 - Trainer Sakonji Urokodaki",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/086240450f344f53dbc50765c0ba80cc1555138178_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GX9UQKWE0/trainer-sakonji-urokodaki"
+        },
+        {
+          "title": "Episode 3 - Sabito and Makomo",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/249734bc86fa3b6c96697b4c0fb623671555745937_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G4VUQMV58/sabito-and-makomo"
+        },
+        {
+          "title": "Episode 4 - Final Selection",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/4558b0fe17cec9f89c4e49142be8841a1556355701_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GJWU2J0W0/final-selection"
+        },
+        {
+          "title": "Episode 5 - My Own Steel",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/ef38749be1f8c847f6cf3c543f731d861556965651_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GK9U38EVV/my-own-steel"
+        },
+        {
+          "title": "Episode 6 - Swordsman Accompanying a Demon",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/130e542a4c0e9b2a641f415b307c061c1557582919_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G50UZE0KN/swordsman-accompanying-a-demon"
+        },
+        {
+          "title": "Episode 7 - Muzan Kibutsuji",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/e37f49ef0692223e459b05861a988bd71558163856_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G0DUN92GM/muzan-kibutsuji"
+        },
+        {
+          "title": "Episode 8 - The Smell of Enchanting Blood",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/fcedf99908b2ac57874878fb01dbeaf31558769599_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G9DUED0ZK/the-smell-of-enchanting-blood"
+        },
+        {
+          "title": "Episode 9 - Temari Demon and Arrow Demon",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/d28b6a5b34e7a0655ecd215c27762ec91559369980_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GX9UQKE1N/temari-demon-and-arrow-demon"
+        },
+        {
+          "title": "Episode 10 - Together Forever",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/64a13c0d70d63e7c138a618ed2312d861559984760_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G14U4X7QX/together-forever"
+        },
+        {
+          "title": "Episode 11 - Tsuzumi Mansion",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/f514e4165a990f016f5459d92c5b0ef81560592929_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GJWU2JWNX/tsuzumi-mansion"
+        },
+        {
+          "title": "Episode 12 - The Boar Bares Its Fangs, Zenitsu Sleeps",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/6070dc5bcb56020bbcb0c1981378ac261561190278_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GK9U38EV5/the-boar-bares-its-fangs-zenitsu-sleeps"
+        }
+      ],
       "external_ids": {
         "mal": 38000,
         "kitsu": 41370,
@@ -579,11 +3335,255 @@
       ],
       "season": "FALL",
       "season_year": 2020,
+      "season_number": 1,
+      "part_number": null,
+      "detected_season": 1,
+      "detected_part": null,
       "episodes": 24,
       "duration": "24m",
       "average_score": 84,
-      "popularity": 987604,
+      "popularity": 987994,
       "rating": "R - 17+ (violence & profanity)",
+      "characters": [
+        {
+          "id": 126635,
+          "role": "MAIN",
+          "name": {
+            "full": "Megumi Fushiguro",
+            "native": "伏黒恵"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b126635-L0y3I92JSUkN.png"
+          },
+          "voice_actor": {
+            "id": 119617,
+            "name": {
+              "full": "Yuuma Uchida",
+              "native": "内田雄馬"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n119617-icFDk96OdV5k.png"
+            }
+          }
+        },
+        {
+          "id": 127212,
+          "role": "MAIN",
+          "name": {
+            "full": "Yuuji Itadori",
+            "native": "虎杖悠仁"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b127212-FVm2tD0erQ5B.png"
+          },
+          "voice_actor": {
+            "id": 119319,
+            "name": {
+              "full": "Junya Enoki",
+              "native": "榎木淳弥"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n119319-yIrrUOUaJuSm.png"
+            }
+          }
+        },
+        {
+          "id": 127691,
+          "role": "MAIN",
+          "name": {
+            "full": "Satoru Gojou",
+            "native": "五条悟"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b127691-9zqh1xpIubn7.png"
+          },
+          "voice_actor": {
+            "id": 95513,
+            "name": {
+              "full": "Yuuichi Nakamura",
+              "native": "中村悠一"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95513-up9ZDuocHgRs.png"
+            }
+          }
+        },
+        {
+          "id": 133700,
+          "role": "MAIN",
+          "name": {
+            "full": "Nobara Kugisaki",
+            "native": "釘崎野薔薇"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b133700-f6sOO3TcgLV6.png"
+          },
+          "voice_actor": {
+            "id": 106787,
+            "name": {
+              "full": "Asami Seto",
+              "native": "瀬戸麻沙美"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n106787-ojpoY7XEGYgc.jpg"
+            }
+          }
+        },
+        {
+          "id": 133699,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Suguru Getou",
+            "native": "夏油傑"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b133699-FCnXaISgazAi.png"
+          },
+          "voice_actor": {
+            "id": 95079,
+            "name": {
+              "full": "Takahiro Sakurai",
+              "native": "櫻井孝宏"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95079-MdbWTLxPUvFf.jpg"
+            }
+          }
+        },
+        {
+          "id": 133701,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Sukuna",
+            "native": "宿儺"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b133701-rCQuDpHr3UZL.png"
+          },
+          "voice_actor": {
+            "id": 95095,
+            "name": {
+              "full": "Junichi Suwabe",
+              "native": "諏訪部順一"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95095-DvSjTQnqcgXP.png"
+            }
+          }
+        },
+        {
+          "id": 133702,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Mahito",
+            "native": "真人"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b133702-Y7JRG5vAvjIL.png"
+          },
+          "voice_actor": {
+            "id": 105989,
+            "name": {
+              "full": "Nobunaga Shimazaki",
+              "native": "島﨑信長"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n105989-96etzH1dLNug.jpg"
+            }
+          }
+        },
+        {
+          "id": 133704,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Kento Nanami",
+            "native": "七海建人"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b133704-8wLTGjc234q2.png"
+          },
+          "voice_actor": {
+            "id": 95591,
+            "name": {
+              "full": "Kenjirou Tsuda",
+              "native": "津田健次郎"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95591-WQGdD3ubbeoq.jpg"
+            }
+          }
+        }
+      ],
+      "streaming_episodes": [
+        {
+          "title": "Episode 1 - Ryomen Sukuna",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/1ef057fb7fd088de798cc4a6571cc4a21605858787_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G8WUND3JW/ryomen-sukuna"
+        },
+        {
+          "title": "Episode 2 - For Myself",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/4d53a19f3832834b5eeb58494362672f1606459212_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GWDU893ZZ/for-myself"
+        },
+        {
+          "title": "Episode 3 - Girl of Steel",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/16220c7eddb784fbaace05b1e570e3f41607083878_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GK9U3ZN47/girl-of-steel"
+        },
+        {
+          "title": "Episode 4 - Curse Womb Must Die",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/dbce9a0bc0e84830bad8048ba7f7f0d11607697009_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GN7UDZDZ3/curse-womb-must-die"
+        },
+        {
+          "title": "Episode 5 - Curse Womb Must Die -II-",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/fc26d630619ec4865f1cc481e7452de31608308347_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GQJUGDG1X/curse-womb-must-die-ii-"
+        },
+        {
+          "title": "Episode 6 - After Rain",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/df185fffe015701d652f0a22f46d27491608908958_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GQJUGDM28/after-rain"
+        },
+        {
+          "title": "Episode 7 - Assault",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/627c45766c8bb8722b251296d8b41e0e1609491366_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G14U4350D/assault"
+        },
+        {
+          "title": "Episode 8 - Boredom",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/567fd3dd5850cf764721530b01231d851610114584_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G9DUEXVE8/boredom"
+        },
+        {
+          "title": "Episode 9 - Small Fry and Reverse Retribution",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/90fa2e82e1326a94e7779b9978b74d661610710694_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GEVUZP13J/small-fry-and-reverse-retribution"
+        },
+        {
+          "title": "Episode 10 - Idle Transfiguration",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/3f993b2f34efbcfe01a6d70edd94040d1611324307_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G0DUN33DZ/idle-transfiguration"
+        },
+        {
+          "title": "Episode 11 - Narrow-minded",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/a3415f0086b16c500c36ead2f8a6115a1611915565_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GQJUGD77K/narrow-minded"
+        },
+        {
+          "title": "Episode 12 - To You, Someday",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/f01e526b6246b4e39f20d3e66026291f1612528699_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GJWU2MZ0G/to-you-someday"
+        }
+      ],
       "external_ids": {
         "mal": 40748,
         "kitsu": 42765,
@@ -620,11 +3620,255 @@
       ],
       "season": "FALL",
       "season_year": 2006,
+      "season_number": 1,
+      "part_number": null,
+      "detected_season": 1,
+      "detected_part": null,
       "episodes": 37,
       "duration": "23m",
       "average_score": 84,
-      "popularity": 975035,
+      "popularity": 975365,
       "rating": "R - 17+ (violence & profanity)",
+      "characters": [
+        {
+          "id": 71,
+          "role": "MAIN",
+          "name": {
+            "full": "L Lawliet",
+            "native": "エル・ローライト"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b71-1W4panC53vfs.png"
+          },
+          "voice_actor": {
+            "id": 95067,
+            "name": {
+              "full": "Kappei Yamaguchi",
+              "native": "山口勝平"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95067-hqIpNxMfAuN2.png"
+            }
+          }
+        },
+        {
+          "id": 75,
+          "role": "MAIN",
+          "name": {
+            "full": "Ryuk",
+            "native": "リューク"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b75-IkEpzO21LgFy.jpg"
+          },
+          "voice_actor": {
+            "id": 95292,
+            "name": {
+              "full": "Shidou Nakamura",
+              "native": "中村獅童"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95292-Pp6Qcwd8zQUr.jpg"
+            }
+          }
+        },
+        {
+          "id": 80,
+          "role": "MAIN",
+          "name": {
+            "full": "Light Yagami",
+            "native": "夜神月"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b80-26EhwSsSqQ50.png"
+          },
+          "voice_actor": {
+            "id": 95065,
+            "name": {
+              "full": "Mamoru Miyano",
+              "native": "宮野真守"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95065-eyynywrhombR.png"
+            }
+          }
+        },
+        {
+          "id": 463,
+          "role": "MAIN",
+          "name": {
+            "full": "Mihael Keehl",
+            "native": "ミハエル・ケール"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b463-QBLeLf6XxVg6.png"
+          },
+          "voice_actor": {
+            "id": 95286,
+            "name": {
+              "full": "Nozomu Sasaki",
+              "native": "佐々木望"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95286-1RlrFeFKx3jn.png"
+            }
+          }
+        },
+        {
+          "id": 464,
+          "role": "MAIN",
+          "name": {
+            "full": "Nate River",
+            "native": "ネイト・リバー"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/n464-6KeJpU6g7Hwj.jpg"
+          },
+          "voice_actor": {
+            "id": 95181,
+            "name": {
+              "full": "Noriko Hidaka",
+              "native": "日高のり子"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95181-VZKOK4WN0UuO.png"
+            }
+          }
+        },
+        {
+          "id": 835,
+          "role": "MAIN",
+          "name": {
+            "full": "Misa Amane",
+            "native": "弥海砂"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b835-CiZa8y2z2gCz.png"
+          },
+          "voice_actor": {
+            "id": 95004,
+            "name": {
+              "full": "Aya Hirano",
+              "native": "平野綾"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95004-qWQQHGzY3wqr.png"
+            }
+          }
+        },
+        {
+          "id": 1904,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Teru Mikami",
+            "native": "魅上照"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/n1904-xKw2NgiE6VbU.jpg"
+          },
+          "voice_actor": {
+            "id": 95042,
+            "name": {
+              "full": "Masaya Matsukaze",
+              "native": "松風雅也"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95042-gEcEYD7iDXnF.png"
+            }
+          }
+        },
+        {
+          "id": 1905,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Rem",
+            "native": "レム"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/n1905-9GfCvLFKNRLR.png"
+          },
+          "voice_actor": {
+            "id": 95294,
+            "name": {
+              "full": "Kimiko Saitou",
+              "native": "斉藤貴美子"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95294-AN7KQALYLR9w.jpg"
+            }
+          }
+        }
+      ],
+      "streaming_episodes": [
+        {
+          "title": "Episode 1 - Rebirth",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/01cd4172aee96c4add1272b59923f3c71576113307_full.jpg",
+          "url": "http://www.crunchyroll.com/death-note/episode-1-rebirth-791651"
+        },
+        {
+          "title": "Episode 2 - Confrontation",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/cc1a91dec6f3da04d5a98db6ce9450561576113252_full.jpg",
+          "url": "http://www.crunchyroll.com/death-note/episode-2-confrontation-791652"
+        },
+        {
+          "title": "Episode 3 - Dealings",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/7f74ab1a7365e7c5f4a25221fd3740da1576113447_full.jpg",
+          "url": "http://www.crunchyroll.com/death-note/episode-3-dealings-791653"
+        },
+        {
+          "title": "Episode 4 - Pursuit",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/d0a45fd9884a86ca9ecc6254e54ed5af1576113673_full.jpg",
+          "url": "http://www.crunchyroll.com/death-note/episode-4-pursuit-791654"
+        },
+        {
+          "title": "Episode 5 - Tactics",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/8bd8cb42853da5926af07a92f8c25e931576113789_full.jpg",
+          "url": "http://www.crunchyroll.com/death-note/episode-5-tactics-791655"
+        },
+        {
+          "title": "Episode 6 - Unraveling",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/c2611605af19aae8f2851d4795df3b0b1576113688_full.jpg",
+          "url": "http://www.crunchyroll.com/death-note/episode-6-unraveling-791656"
+        },
+        {
+          "title": "Episode 7 - Overcast",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/dcdc9fd72ac688b5aad8c10caf787a561576113850_full.jpg",
+          "url": "http://www.crunchyroll.com/death-note/episode-7-overcast-791658"
+        },
+        {
+          "title": "Episode 8 - Glare",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/a5f67920269a98c696dde27b99991f641576114152_full.jpg",
+          "url": "http://www.crunchyroll.com/death-note/episode-8-glare-791660"
+        },
+        {
+          "title": "Episode 9 - Encounter",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/df7c730c724444124e9996a6bb3d6d741576114176_full.jpg",
+          "url": "http://www.crunchyroll.com/death-note/episode-9-encounter-791662"
+        },
+        {
+          "title": "Episode 10 - Doubt",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/fd8531b08db6fc2403d273ea16f585411576114748_full.jpg",
+          "url": "http://www.crunchyroll.com/death-note/episode-10-doubt-791669"
+        },
+        {
+          "title": "Episode 11 - Assault",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/c9f650ff3a706136e8bae67e6f135abe1576114817_full.jpg",
+          "url": "http://www.crunchyroll.com/death-note/episode-11-assault-791670"
+        },
+        {
+          "title": "Episode 12 - Love",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/e424604fbe8ebe9e28bc514a1c47620e1576115010_full.jpg",
+          "url": "http://www.crunchyroll.com/death-note/episode-12-love-791671"
+        }
+      ],
       "external_ids": {
         "mal": 1535,
         "kitsu": 1376,
@@ -660,11 +3904,255 @@
       ],
       "season": "SPRING",
       "season_year": 2016,
+      "season_number": 1,
+      "part_number": null,
+      "detected_season": 1,
+      "detected_part": null,
       "episodes": 13,
       "duration": "24m",
       "average_score": 76,
-      "popularity": 884502,
+      "popularity": 884771,
       "rating": "PG-13 - Teens 13 or older",
+      "characters": [
+        {
+          "id": 89028,
+          "role": "MAIN",
+          "name": {
+            "full": "Izuku Midoriya",
+            "native": "緑谷出久"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b89028-8w1I9o1ISHMg.png"
+          },
+          "voice_actor": {
+            "id": 116971,
+            "name": {
+              "full": "Daiki Yamashita",
+              "native": "山下大輝"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n116971-KDHjlYPO4HrS.png"
+            }
+          }
+        },
+        {
+          "id": 88892,
+          "role": "MAIN",
+          "name": {
+            "full": "Katsuki Bakugou",
+            "native": "爆豪勝己"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b88892-bdOha3lNcaN6.png"
+          },
+          "voice_actor": {
+            "id": 95270,
+            "name": {
+              "full": "Nobuhiko Okamoto",
+              "native": "岡本信彦"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95270-LqNIF238L59u.png"
+            }
+          }
+        },
+        {
+          "id": 89221,
+          "role": "MAIN",
+          "name": {
+            "full": "Ochako Uraraka",
+            "native": "麗日お茶子"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b89221-gSF2a4gPbG4m.png"
+          },
+          "voice_actor": {
+            "id": 106622,
+            "name": {
+              "full": "Ayane Sakura",
+              "native": "佐倉綾音"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n106622-yemj6ymLz4lY.png"
+            }
+          }
+        },
+        {
+          "id": 89224,
+          "role": "MAIN",
+          "name": {
+            "full": "Toshinori Yagi",
+            "native": "八木俊典"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b89224-K6KEuQAuYKzq.jpg"
+          },
+          "voice_actor": {
+            "id": 95720,
+            "name": {
+              "full": "Kenta Miyake",
+              "native": "三宅健太"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95720-enxx6kZKuwGi.jpg"
+            }
+          }
+        },
+        {
+          "id": 89220,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Shouto Todoroki",
+            "native": "轟焦凍"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b89220-KNBwaVFAR8FD.png"
+          },
+          "voice_actor": {
+            "id": 95672,
+            "name": {
+              "full": "Yuuki Kaji",
+              "native": "梶裕貴"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95672-T33YV7yCDKnL.png"
+            }
+          }
+        },
+        {
+          "id": 89222,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Tenya Iida",
+            "native": "飯田天哉"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b89222-TL8MQM3wJgEB.png"
+          },
+          "voice_actor": {
+            "id": 115156,
+            "name": {
+              "full": "Kaito Ishikawa",
+              "native": "石川界人"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n115156-ngYfqBazlxYQ.png"
+            }
+          }
+        },
+        {
+          "id": 89223,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Tsuyu Asui",
+            "native": "蛙吹梅雨"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b89223-5762vburxnlz.png"
+          },
+          "voice_actor": {
+            "id": 101686,
+            "name": {
+              "full": "Aoi Yuuki",
+              "native": "悠木碧"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n101686-PTd0lQZMsmcv.png"
+            }
+          }
+        },
+        {
+          "id": 89225,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Shouta Aizawa",
+            "native": "相澤消太"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b89225-XBgvUhI9naVI.png"
+          },
+          "voice_actor": {
+            "id": 95095,
+            "name": {
+              "full": "Junichi Suwabe",
+              "native": "諏訪部順一"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95095-DvSjTQnqcgXP.png"
+            }
+          }
+        }
+      ],
+      "streaming_episodes": [
+        {
+          "title": "Episode 159 - Battle Without a Quirk",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/6e3a2f0dc647baf6e2e8c1ef09e0d8e31728710159_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GD9UVMQWK/battle-without-a-quirk"
+        },
+        {
+          "title": "Episode 158 - A Girl's Ego",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/994f86bfc94acd6e787095bc2fbe098a1728108402_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GZ7UVG2X8/a-girls-ego"
+        },
+        {
+          "title": "Episode 157 - I Am Here",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/460041070a2508747fa15c0830d8475f1727510005_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G8WUNJGW4/i-am-here"
+        },
+        {
+          "title": "Episode 156 - It's a Small World",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/d75be54b3feba7246243b202d9989ece1726905127_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G2XU0743J/its-a-small-world"
+        },
+        {
+          "title": "Episode 155 - Hopes",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/45a70fd2c3849d4bcaba9b6d425e21691726299457_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GPWUK9Z55/hopes"
+        },
+        {
+          "title": "Episode 154 - The Chain Thus Far",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/1a17527b4f245297ebd24745a28315081725696729_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G31UXNW37/the-chain-thus-far"
+        },
+        {
+          "title": "Episode 153 - Butterfly Effect",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/fb284ef83b86ad05a309815344fc899f1725089306_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GVWU0MWZV/butterfly-effect"
+        },
+        {
+          "title": "Episode 152 - Together with Shoji",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/50c04ba74cc11556b7515921c4e0f53f1724485737_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GMKUX1Q4J/together-with-shoji"
+        },
+        {
+          "title": "Episode 151 - A Chain of Events, Across the Ages",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/265ee80f95475920d949c51bce8ab5c81723879189_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GK9U3EM49/a-chain-of-events-across-the-ages"
+        },
+        {
+          "title": "Episode 150 - Those Who Defend, Those Who Violate",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/65ad614940fb037c58a3ff0b8b33e0831722671283_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GN7UDM273/those-who-defend-those-who-violate"
+        },
+        {
+          "title": "Episode 149 - Light Fades to Rain",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/8250f2a458b3184b2875b567504c84b71721465198_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G0DUN28DM/light-fades-to-rain"
+        },
+        {
+          "title": "Episode 148 - Wounded Hero, Burning Bright and True!!",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/e919fb518287b54a2fb5d9c2e025c82f1720853935_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G0DUN2NJ5/wounded-hero-burning-bright-and-true"
+        }
+      ],
       "external_ids": {
         "mal": 31964,
         "kitsu": 11469,
@@ -700,11 +4188,255 @@
       ],
       "season": "FALL",
       "season_year": 2011,
+      "season_number": 1,
+      "part_number": null,
+      "detected_season": 1,
+      "detected_part": null,
       "episodes": 148,
       "duration": "24m",
       "average_score": 89,
-      "popularity": 851565,
+      "popularity": 851838,
       "rating": "R - 17+ (violence & profanity)",
+      "characters": [
+        {
+          "id": 30,
+          "role": "MAIN",
+          "name": {
+            "full": "Gon Freecss",
+            "native": "ゴン＝フリークス"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b30-lyFExKyDhefc.jpg"
+          },
+          "voice_actor": {
+            "id": 107961,
+            "name": {
+              "full": "Megumi Han",
+              "native": "潘めぐみ"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n107961-aMetTdEFTi2W.jpg"
+            }
+          }
+        },
+        {
+          "id": 27,
+          "role": "MAIN",
+          "name": {
+            "full": "Killua Zoldyck",
+            "native": "キルア=ゾルディック"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b27-Z5O02kQUydpT.jpg"
+          },
+          "voice_actor": {
+            "id": 95655,
+            "name": {
+              "full": "Mariya Ise",
+              "native": "伊瀬茉莉也"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95655-cR519BXmteKA.png"
+            }
+          }
+        },
+        {
+          "id": 28,
+          "role": "MAIN",
+          "name": {
+            "full": "Kurapika",
+            "native": "クラピカ"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b28-ivA7UGnfE40a.png"
+          },
+          "voice_actor": {
+            "id": 95099,
+            "name": {
+              "full": "Miyuki Sawashiro",
+              "native": "沢城みゆき"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95099-jKP4LfPWqetk.jpg"
+            }
+          }
+        },
+        {
+          "id": 29,
+          "role": "MAIN",
+          "name": {
+            "full": "Leorio Paradinight",
+            "native": "レオリオ・パラディナイト"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b29-RgzoSeKmDYzl.jpg"
+          },
+          "voice_actor": {
+            "id": 95063,
+            "name": {
+              "full": "Keiji Fujiwara",
+              "native": "藤原啓治"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95063-xAsEUzspuLMG.jpg"
+            }
+          }
+        },
+        {
+          "id": 31,
+          "role": "MAIN",
+          "name": {
+            "full": "Hisoka Morow",
+            "native": "ヒソカ・モロウ"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b31-FZckOuu7L1un.png"
+          },
+          "voice_actor": {
+            "id": 95087,
+            "name": {
+              "full": "Daisuke Namikawa",
+              "native": "浪川大輔"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95087-6dlBBbejsPyg.png"
+            }
+          }
+        },
+        {
+          "id": 26,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Ging Freecss",
+            "native": "ジン・フリークス"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/26-VpZXIwOdcz8p.jpg"
+          },
+          "voice_actor": {
+            "id": 95113,
+            "name": {
+              "full": "Rikiya Koyama",
+              "native": "小山力也"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95113-z9eyYjTKSTX4.png"
+            }
+          }
+        },
+        {
+          "id": 57,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Illumi Zoldyck",
+            "native": "イルミ＝ゾルディック"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b57-pTFguojSOQZW.png"
+          },
+          "voice_actor": {
+            "id": 95042,
+            "name": {
+              "full": "Masaya Matsukaze",
+              "native": "松風雅也"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95042-gEcEYD7iDXnF.png"
+            }
+          }
+        },
+        {
+          "id": 58,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Chrollo Lucilfer",
+            "native": "クロロ・ルシルフル"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b58-USOmsz3nursi.jpg"
+          },
+          "voice_actor": {
+            "id": 95065,
+            "name": {
+              "full": "Mamoru Miyano",
+              "native": "宮野真守"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95065-eyynywrhombR.png"
+            }
+          }
+        }
+      ],
+      "streaming_episodes": [
+        {
+          "title": "Episode 1 - Departure x And x Friends",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/337eb80fe71c9e580908d08278e4e89d1317068418_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G7PU3DJ97/departure-x-and-x-friends"
+        },
+        {
+          "title": "Episode 2 - Test x Of x Tests",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/f89ea9d5b9d5a1d4c263f1cb57e9c6011317346148_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G9DU92GGZ/test-x-of-x-tests"
+        },
+        {
+          "title": "Episode 3 - Rivals x In x Survival",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/e4ccb5a62ebb8ccda1e2c113b785919a1317929321_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GX9U34ZZM/rivals-x-in-x-survival"
+        },
+        {
+          "title": "Episode 4 - Hope x And x Ambition",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/d2ecd700adab356914e0b1115a79b21a1318970940_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G4VUW7887/hope-x-and-x-ambition"
+        },
+        {
+          "title": "Episode 5 - Hisoka x Is So x Sneaky",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/987b531aaed516b8d043b127580cbd711319132525_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G14UVPGG4/hisoka-x-is-so-x-sneaky"
+        },
+        {
+          "title": "Episode 6 - A x Surprising x Challenge!",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/ee70e7ee65c4030224f476bc0e61a5731319736733_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GN7UNJVV0/a-x-surprising-x-challenge"
+        },
+        {
+          "title": "Episode 7 - Showdown x On The x Airship",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/00bff5d305de5d66a070df8b9d6daeb81320691973_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GK9UGNDDP/showdown-x-on-the-x-airship"
+        },
+        {
+          "title": "Episode 8 - Decision X By X Majority?",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/1eab69ea577ead7c015f7590b44e48951320951864_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GMKUE3GGN/decision-x-by-x-majority"
+        },
+        {
+          "title": "Episode 9 - Beware X Of X Prisoners",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/e613a67fc199fa00bd43e4ad17c474211321560627_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GVWU8244D/beware-x-of-x-prisoners"
+        },
+        {
+          "title": "Episode 10 - Trick X To The X Trick",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/b3ad13c092e97fed6456500f177ddd191322506260_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GPWU8XDD0/trick-x-to-the-x-trick"
+        },
+        {
+          "title": "Episode 11 - Trouble X With The X Gamble!",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/e5fb20b31257aa406de829c1b5831cfd1322774241_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G2XUNVDD3/trouble-x-with-the-x-gamble"
+        },
+        {
+          "title": "Episode 12 - Last X Test Of X Resolve",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/a09cefd55c3c3ed76ca8623bd2ed15581323370719_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G8WU7P00E/last-x-test-of-x-resolve"
+        }
+      ],
       "external_ids": {
         "mal": 11061,
         "kitsu": 6448,
@@ -741,11 +4473,255 @@
       ],
       "season": "FALL",
       "season_year": 2015,
+      "season_number": 1,
+      "part_number": null,
+      "detected_season": 1,
+      "detected_part": null,
       "episodes": 12,
       "duration": "24m",
       "average_score": 82,
-      "popularity": 775749,
+      "popularity": 775985,
       "rating": "PG-13 - Teens 13 or older",
+      "characters": [
+        {
+          "id": 73935,
+          "role": "MAIN",
+          "name": {
+            "full": "Saitama",
+            "native": "サイタマ"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b73935-ON5d0mAcrItd.jpg"
+          },
+          "voice_actor": {
+            "id": 112635,
+            "name": {
+              "full": "Makoto Furukawa",
+              "native": "古川慎"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n112635-ORlGvRvgf5Nq.png"
+            }
+          }
+        },
+        {
+          "id": 73979,
+          "role": "MAIN",
+          "name": {
+            "full": "Genos",
+            "native": "ジェノス"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b73979-tVi9maPID881.jpg"
+          },
+          "voice_actor": {
+            "id": 115156,
+            "name": {
+              "full": "Kaito Ishikawa",
+              "native": "石川界人"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n115156-ngYfqBazlxYQ.png"
+            }
+          }
+        },
+        {
+          "id": 74167,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Onsoku no Sonic",
+            "native": "音速のソニック"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b74167-FE8EtGtHUM77.png"
+          },
+          "voice_actor": {
+            "id": 95672,
+            "name": {
+              "full": "Yuuki Kaji",
+              "native": "梶裕貴"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95672-T33YV7yCDKnL.png"
+            }
+          }
+        },
+        {
+          "id": 81141,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Bang ",
+            "native": "バング"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/n81141-1ml7Q6X2B508.png"
+          },
+          "voice_actor": {
+            "id": 101755,
+            "name": {
+              "full": "Kazuhiro Yamaji",
+              "native": "山路和弘"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n101755-LsVbHCwg6Pel.png"
+            }
+          }
+        },
+        {
+          "id": 81929,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Tatsumaki",
+            "native": "タツマキ"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b81929-WPVp2LQoWgkc.png"
+          },
+          "voice_actor": {
+            "id": 101686,
+            "name": {
+              "full": "Aoi Yuuki",
+              "native": "悠木碧"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n101686-PTd0lQZMsmcv.png"
+            }
+          }
+        },
+        {
+          "id": 75460,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Sneck",
+            "native": "スネック"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b75460-ytg6vTtJNGOw.png"
+          },
+          "voice_actor": {
+            "id": 95022,
+            "name": {
+              "full": "Shinichirou Miki",
+              "native": "三木眞一郎"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95022-BXggjIr4KHqd.png"
+            }
+          }
+        },
+        {
+          "id": 8060,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Genus Hakase",
+            "native": "ジーナス博士"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b8060-iDyX1I8DLArA.jpg"
+          },
+          "voice_actor": {
+            "id": 95087,
+            "name": {
+              "full": "Daisuke Namikawa",
+              "native": "浪川大輔"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95087-6dlBBbejsPyg.png"
+            }
+          }
+        },
+        {
+          "id": 8061,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Juu Ou",
+            "native": "獣王"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b8061-ltzWf7jD25OV.jpg"
+          },
+          "voice_actor": {
+            "id": 102914,
+            "name": {
+              "full": "Jirou Saitou",
+              "native": "斉藤次郎"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n102914-7ygW5ZSwODbF.jpg"
+            }
+          }
+        }
+      ],
+      "streaming_episodes": [
+        {
+          "title": "Episode 1 - The Strongest Man",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/f6e652a05c944ef5a4df2f343868b6211558480512_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G9DUEXZGW/the-strongest-man"
+        },
+        {
+          "title": "Episode 2 - The Lone Cyborg",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/bc8a832dc242d852af39a6d7bf87786f1558480870_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G4VUQ3K8M/the-lone-cyborg"
+        },
+        {
+          "title": "Episode 3 - The Obsessive Scientist",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/d1e3243500923d6dc3b5e6c65c2ae8171558480999_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GJWU2MNE8/the-obsessive-scientist"
+        },
+        {
+          "title": "Episode 4 - The Modern Ninja",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/d011fbf6561f12e1dde8e87a1ffa3da11558481287_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GN7UDZXVP/the-modern-ninja"
+        },
+        {
+          "title": "Episode 5 - The Ultimate Master",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/c1ed29b536d5ee93654d09f66ba01e4c1558481480_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G50UZ2K1P/the-ultimate-master"
+        },
+        {
+          "title": "Episode 6 - The Terrifying City",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/cc035176d4594a16d00c9bfde8bba10e1558481407_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G0DUN3GJJ/the-terrifying-city"
+        },
+        {
+          "title": "Episode 7 - The Ultimate Disciple",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/2448e4a1ca6cd2d0b1ec883bf134819e1558481595_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G7PU45PJ1/the-ultimate-disciple"
+        },
+        {
+          "title": "Episode 8 - The Deep Sea King",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/e532c08bb279537952e96c5c3d6500341558481713_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GX9UQD1J1/the-deep-sea-king"
+        },
+        {
+          "title": "Episode 9 - Unyielding Justice",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/01e397959003ebd523ceb8b339f1dd5e1558482014_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G4VUQ3K10/unyielding-justice"
+        },
+        {
+          "title": "Episode 10 - Unparalleled Peril",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/e81f9f62258b244517e0b1d32a8e6c881558482027_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GJWU2MN92/unparalleled-peril"
+        },
+        {
+          "title": "Episode 11 - The Dominator of the Universe",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/d93be75155b98aca898fef7714e421721558482190_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GMKUXZ9QD/the-dominator-of-the-universe"
+        },
+        {
+          "title": "Episode 12 - The Strongest Hero",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/682ceb64923048680e5d827539995a821558482389_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G31UXPKWM/the-strongest-hero"
+        }
+      ],
       "external_ids": {
         "mal": 30276,
         "kitsu": 10740,
@@ -783,11 +4759,255 @@
       ],
       "season": "FALL",
       "season_year": 1999,
+      "season_number": 1,
+      "part_number": null,
+      "detected_season": 1,
+      "detected_part": null,
       "episodes": 0,
       "duration": "24m",
       "average_score": 87,
-      "popularity": 762319,
+      "popularity": 762578,
       "rating": "PG-13 - Teens 13 or older",
+      "characters": [
+        {
+          "id": 40,
+          "role": "MAIN",
+          "name": {
+            "full": "Luffy Monkey",
+            "native": "モンキー・D・ルフィ"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b40-MNypXsxSRb1R.png"
+          },
+          "voice_actor": {
+            "id": 95075,
+            "name": {
+              "full": "Mayumi Tanaka",
+              "native": "田中真弓"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95075-1qD4TeW1ON92.png"
+            }
+          }
+        },
+        {
+          "id": 61,
+          "role": "MAIN",
+          "name": {
+            "full": "Robin Nico",
+            "native": "ニコロビン"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b61-ywXUyyocEEqt.png"
+          },
+          "voice_actor": {
+            "id": 95130,
+            "name": {
+              "full": "Yuriko Yamaguchi",
+              "native": "山口由里子"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95130-GoO41ve3YWQw.png"
+            }
+          }
+        },
+        {
+          "id": 62,
+          "role": "MAIN",
+          "name": {
+            "full": "Zoro Roronoa",
+            "native": "ロロノア・ゾロ"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b62-S7oAeA9WInjV.png"
+          },
+          "voice_actor": {
+            "id": 95123,
+            "name": {
+              "full": "Kazuya Nakai",
+              "native": "中井和哉"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95123-54LrTiD9kGwY.jpg"
+            }
+          }
+        },
+        {
+          "id": 64,
+          "role": "MAIN",
+          "name": {
+            "full": "Franky",
+            "native": "フランキー"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/n64-ChX6ZzHHjXqA.png"
+          },
+          "voice_actor": {
+            "id": 95131,
+            "name": {
+              "full": "Kazuki Yao",
+              "native": "矢尾一樹"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95131-TCVTgxb08tfE.png"
+            }
+          }
+        },
+        {
+          "id": 305,
+          "role": "MAIN",
+          "name": {
+            "full": "Sanji",
+            "native": "サンジ"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b305-6lisPmHtCnLT.png"
+          },
+          "voice_actor": {
+            "id": 95125,
+            "name": {
+              "full": "Hiroaki Hirata",
+              "native": "平田広明"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95125-NeFFiJupoDVj.png"
+            }
+          }
+        },
+        {
+          "id": 309,
+          "role": "MAIN",
+          "name": {
+            "full": "Chopper Tony Tony",
+            "native": "トニートニー・チョッパー"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b309-H64NhbJ2ywIQ.jpg"
+          },
+          "voice_actor": {
+            "id": 95128,
+            "name": {
+              "full": "Ikue Ootani",
+              "native": "大谷育江"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95128-9YWpE1d2U8Sj.png"
+            }
+          }
+        },
+        {
+          "id": 723,
+          "role": "MAIN",
+          "name": {
+            "full": "Nami",
+            "native": "ナミ"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b723-vp5hPptgnNEC.png"
+          },
+          "voice_actor": {
+            "id": 95076,
+            "name": {
+              "full": "Akemi Okamura",
+              "native": "岡村明美"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95076-itRGy8F3x5Em.png"
+            }
+          }
+        },
+        {
+          "id": 724,
+          "role": "MAIN",
+          "name": {
+            "full": "Usopp",
+            "native": "ウソップ"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b724-GFGgI9AJQkfy.jpg"
+          },
+          "voice_actor": {
+            "id": 95067,
+            "name": {
+              "full": "Kappei Yamaguchi",
+              "native": "山口勝平"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95067-hqIpNxMfAuN2.png"
+            }
+          }
+        }
+      ],
+      "streaming_episodes": [
+        {
+          "title": "Episode 130 - Scent of Danger! the Seventh Member Is Nico Robin!",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/d80b3fbce742e6deb4d2caf37d08ca6e1395451246_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G8WUNGWKG/scent-of-danger-the-seventh-member-is-nico-robin"
+        },
+        {
+          "title": "Episode 129 - It All Started On That Day! Vivi Tells the Story of Her Adventure!",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/7952451fa68d1dabaac8ad83488c4eaf1395451132_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GPWUKZ53G/it-all-started-on-that-day-vivi-tells-the-story-of-her-adventure"
+        },
+        {
+          "title": "Episode 128 - The Pirates' Banquet and Operation Escape from Alabasta!",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/c4e3a81d230bf89f3e88dd654978d83c1395451834_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G31UXW35G/the-pirates-banquet-and-operation-escape-from-alabasta"
+        },
+        {
+          "title": "Episode 127 - A Farewell to Arms! Pirates and Different Ideas of Justice!",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/e589e3221145a17bacdcc102e8181efc1395451652_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GK9U3M495/a-farewell-to-arms-pirates-and-different-ideas-of-justice"
+        },
+        {
+          "title": "Episode 126 - I Will Surpass You! Rain Falls in Alabasta!",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/3796f820fc47a1042253a73bee0fcd381395450881_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GN7UD278G/i-will-surpass-you-rain-falls-in-alabasta"
+        },
+        {
+          "title": "Episode 125 - Magnificent Wings! My Name Is Pell, Guardian Deity of the Country!",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/6410233fd30b326746e6a397367aa70d1395451607_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G14U49EKX/magnificent-wings-my-name-is-pell-guardian-deity-of-the-country"
+        },
+        {
+          "title": "Episode 124 - The Nightmare Draws Near! This Is the Sand-Sand Clan's Secret Base!",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/f37c688368d79ad91fce89f59f283da31395450861_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GX9UQJ7VN/the-nightmare-draws-near-this-is-the-sand-sand-clans-secret-base"
+        },
+        {
+          "title": "Episode 123 - That Looks Croc-ish! Luffy, Run to the Royal Tomb!",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/32d07c1c15b42a9a6cbb178d96bf4de01395451444_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G7PU4MVGN/that-looks-croc-ish-luffy-run-to-the-royal-tomb"
+        },
+        {
+          "title": "Episode 122 - Sand Croc and Water Luffy! the Second Round of the Duel!",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/612860faccd7ffecbfac9a41129034481395450747_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GG1U24EK2/sand-croc-and-water-luffy-the-second-round-of-the-duel"
+        },
+        {
+          "title": "Episode 121 - Where Vivi's Voice Gets Heard! the Hero Descends!",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/063736e62a3deb2031bb32c4d883d1951395452272_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G7PU4MVEW/where-vivis-voice-gets-heard-the-hero-descends"
+        },
+        {
+          "title": "Episode 120 - The Battle Is Over! Koza Raises the White Flag!",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/f486bf9d01a1af98b5d5c27c85b4b9781395451606_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GWDU8EK43/the-battle-is-over-koza-raises-the-white-flag"
+        },
+        {
+          "title": "Episode 119 - Secret of Powerful Swordplay! Ability to Cut Steel and the Rhythm Things Have!",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/554423a0e3c8e19f86de5d674199fc9c1395450686_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GQJUGV9XN/secret-of-powerful-swordplay-ability-to-cut-steel-and-the-rhythm-things-have"
+        }
+      ],
       "external_ids": {
         "mal": 21,
         "kitsu": 12,
@@ -826,11 +5046,255 @@
       ],
       "season": "SUMMER",
       "season_year": 2014,
+      "season_number": 1,
+      "part_number": null,
+      "detected_season": 1,
+      "detected_part": null,
       "episodes": 12,
       "duration": "24m",
       "average_score": 76,
-      "popularity": 749317,
+      "popularity": 749576,
       "rating": "R - 17+ (violence & profanity)",
+      "characters": [
+        {
+          "id": 87275,
+          "role": "MAIN",
+          "name": {
+            "full": "Ken Kaneki",
+            "native": "金木研"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b87275-mb13EWZBdbh3.png"
+          },
+          "voice_actor": {
+            "id": 111635,
+            "name": {
+              "full": "Natsuki Hanae",
+              "native": "花江夏樹"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n111635-L385UcjTKCBq.png"
+            }
+          }
+        },
+        {
+          "id": 87277,
+          "role": "MAIN",
+          "name": {
+            "full": "Touka Kirishima",
+            "native": "霧嶋董香"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b87277-oUaqrI1iBzu6.png"
+          },
+          "voice_actor": {
+            "id": 116517,
+            "name": {
+              "full": "Sora Amamiya",
+              "native": "雨宮天"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n116517-xjN5V1jMc443.jpg"
+            }
+          }
+        },
+        {
+          "id": 88293,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Hinami Fueguchi",
+            "native": "笛口雛実"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b88293-4J36uyflNWvb.png"
+          },
+          "voice_actor": {
+            "id": 106404,
+            "name": {
+              "full": "Sumire Morohoshi",
+              "native": "諸星すみれ"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n106404-uodatsBbsnJh.png"
+            }
+          }
+        },
+        {
+          "id": 88407,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Koutarou Amon",
+            "native": "亜門鋼太朗"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b88407-YwE6D75Xskxl.png"
+          },
+          "voice_actor": {
+            "id": 95020,
+            "name": {
+              "full": "Katsuyuki Konishi",
+              "native": "小西克幸"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95020-uOJO2IlwpcX0.png"
+            }
+          }
+        },
+        {
+          "id": 88408,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Yukinori Shinohara",
+            "native": "篠原幸紀"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b88408-zezMB3WoVXd3.png"
+          },
+          "voice_actor": {
+            "id": 102260,
+            "name": {
+              "full": "Yutaka Nakano",
+              "native": "仲野裕"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n102260-OSLwIM0iBKFa.jpg"
+            }
+          }
+        },
+        {
+          "id": 88409,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Nishiki Nishio",
+            "native": "西尾錦"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b88409-rOaEex2Ml2ah.png"
+          },
+          "voice_actor": {
+            "id": 95186,
+            "name": {
+              "full": "Shintarou Asanuma",
+              "native": "浅沼晋太郎"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95186-XMdPPqYhMrwN.jpg"
+            }
+          }
+        },
+        {
+          "id": 88410,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Kimi Nishino",
+            "native": "西野貴未"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/88410.jpg"
+          },
+          "voice_actor": {
+            "id": 109321,
+            "name": {
+              "full": "Yurie Kobori",
+              "native": "小堀友里絵"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n109321-n3GJGoYqp8qi.jpg"
+            }
+          }
+        },
+        {
+          "id": 88411,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Ayato Kirishima",
+            "native": "霧嶋絢都"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b88411-dI6vqLy4pvHK.png"
+          },
+          "voice_actor": {
+            "id": 95672,
+            "name": {
+              "full": "Yuuki Kaji",
+              "native": "梶裕貴"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95672-T33YV7yCDKnL.png"
+            }
+          }
+        }
+      ],
+      "streaming_episodes": [
+        {
+          "title": "Episode 1 - Tragedy",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/04fce0b6f8885e85cb78a65d22ba0ea91644482778_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G7PU4VME9/tragedy"
+        },
+        {
+          "title": "Episode 2 - Incubation",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/4c17647e9271ed6386dff371673b46841644482770_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G4VUQX19V/incubation"
+        },
+        {
+          "title": "Episode 3 - Dove",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/b80742e07649090dab8a9cf77913390c1644482790_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GK9U34M1N/dove"
+        },
+        {
+          "title": "Episode 4 - Supper",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/cb12c395032e4ac6e5cf8e9245d21b9e1644482818_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G31UX3WG8/supper"
+        },
+        {
+          "title": "Episode 5 - Scars",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/983d63d94ff02c4bd9738e14a6011d401644482892_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G8WUNWGZ9/scars"
+        },
+        {
+          "title": "Episode 6 - Cloudburst",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/b2a4e8fd1d308bbaf4ba71794db5d54d1644482907_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GD9UVWQ52/cloudburst"
+        },
+        {
+          "title": "Episode 7 - Captivity",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/55f5f0ba326807a9d505021a3fd3d1e91644482928_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GWDU8KE15/captivity"
+        },
+        {
+          "title": "Episode 8 - Circular",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/bed482c7468dc5d4ea5d1eaa73f20dae1644483025_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GEVUZGX99/circular"
+        },
+        {
+          "title": "Episode 9 - Birdcage",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/3c107e3a6cc7e9549dd4fd0bae6836321644483072_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G9DUEP58G/birdcage"
+        },
+        {
+          "title": "Episode 10 - Aogiri",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/987c641658b9821cbbcf118875f898c41644483314_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G4VUQX1NV/aogiri"
+        },
+        {
+          "title": "Episode 11 - High Spirits",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/c79ddb4ae7dac414b036f3dfcf10baee1644483308_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G14U4E9N7/high-spirits"
+        },
+        {
+          "title": "Episode 12 - Ghoul",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/c20c13193a178dbcae58b1203521a3a61644483379_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GK9U34MXN/ghoul"
+        }
+      ],
       "external_ids": {
         "mal": 22319,
         "kitsu": 8271,
@@ -867,11 +5331,255 @@
       ],
       "season": "SPRING",
       "season_year": 2017,
+      "season_number": 2,
+      "part_number": null,
+      "detected_season": 2,
+      "detected_part": null,
       "episodes": 12,
       "duration": "25m",
       "average_score": 85,
-      "popularity": 743148,
+      "popularity": 743410,
       "rating": "R - 17+ (violence & profanity)",
+      "characters": [
+        {
+          "id": 40882,
+          "role": "MAIN",
+          "name": {
+            "full": "Eren Yeager",
+            "native": "エレン・イェーガー"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b40882-dsj7IP943WFF.jpg"
+          },
+          "voice_actor": {
+            "id": 95672,
+            "name": {
+              "full": "Yuuki Kaji",
+              "native": "梶裕貴"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95672-T33YV7yCDKnL.png"
+            }
+          }
+        },
+        {
+          "id": 40881,
+          "role": "MAIN",
+          "name": {
+            "full": "Mikasa Ackerman",
+            "native": "ミカサ・アッカーマン"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b40881-F3gr1PkreDvj.png"
+          },
+          "voice_actor": {
+            "id": 100142,
+            "name": {
+              "full": "Yui Ishikawa",
+              "native": "石川由依"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n100142-k6RP0HzXffUG.png"
+            }
+          }
+        },
+        {
+          "id": 46494,
+          "role": "MAIN",
+          "name": {
+            "full": "Armin Arlert",
+            "native": "アルミン・アルレルト"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b46494-g7xYYuBtYPnO.png"
+          },
+          "voice_actor": {
+            "id": 95158,
+            "name": {
+              "full": "Marina Inoue",
+              "native": "井上麻里奈"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95158-OLhgs8zv5xsp.jpg"
+            }
+          }
+        },
+        {
+          "id": 46484,
+          "role": "MAIN",
+          "name": {
+            "full": "Reiner Braun",
+            "native": "ライナー・ブラウン"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b46484-P6A2GjNQn49F.png"
+          },
+          "voice_actor": {
+            "id": 100626,
+            "name": {
+              "full": "Yoshimasa Hosoya",
+              "native": "細谷佳正"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n100626-bH8eZ0wv3HYX.jpg"
+            }
+          }
+        },
+        {
+          "id": 71479,
+          "role": "MAIN",
+          "name": {
+            "full": "Ymir",
+            "native": "ユミル"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b71479-huCD908XIdqv.png"
+          },
+          "voice_actor": {
+            "id": 95504,
+            "name": {
+              "full": "Saki Fujita",
+              "native": "藤田咲"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95504-pDIKpd8t2EYU.png"
+            }
+          }
+        },
+        {
+          "id": 45627,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Levi",
+            "native": "リヴァイ"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b45627-CR68RyZmddGG.png"
+          },
+          "voice_actor": {
+            "id": 95118,
+            "name": {
+              "full": "Hiroshi Kamiya",
+              "native": "神谷浩史"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95118-oOElrn1aSaiC.png"
+            }
+          }
+        },
+        {
+          "id": 45887,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Sasha Blouse",
+            "native": "サシャ・ブラウス"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/b45887-QPtJH0KwqthW.jpg"
+          },
+          "voice_actor": {
+            "id": 95034,
+            "name": {
+              "full": "Yuu Kobayashi",
+              "native": "小林ゆう"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95034-AwobjrcmkMi9.png"
+            }
+          }
+        },
+        {
+          "id": 46486,
+          "role": "SUPPORTING",
+          "name": {
+            "full": "Connie Springer",
+            "native": "コニー・スプリンガー"
+          },
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/n46486-izhPjzut6WCZ.png"
+          },
+          "voice_actor": {
+            "id": 95356,
+            "name": {
+              "full": "Hiro Shimono",
+              "native": "下野紘"
+            },
+            "language": "JAPANESE",
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95356-PFaZRlI9oJ56.png"
+            }
+          }
+        }
+      ],
+      "streaming_episodes": [
+        {
+          "title": "Episode 1 - To You, 2,000 Years in the Future -The Fall of Zhiganshina (1)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/b199406edeebc19a7f4e4412d6e1dfcc1365964779_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GG1U2M0V9/to-you-2000-years-in-the-future-the-fall-of-zhiganshina-1"
+        },
+        {
+          "title": "Episode 2 - That Day - The Fall of Zhiganshina (2)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/b9fbee83c6c9a6353383a36b81d861211365965650_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G0DUN34X7/that-day-the-fall-of-zhiganshina-2"
+        },
+        {
+          "title": "Episode 3 - A Dim Light in the Darkness of Despair - Humanity Rises Again (1)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/c7b6627f8880562f34268096f9c55c051366564160_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G7PU450DJ/a-dim-light-in-the-darkness-of-despair-humanity-rises-again-1"
+        },
+        {
+          "title": "Episode 4 - Night of the Graduation Ceremony - Humanity Rises Again (2)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/941f10ee007bd7a2704d00dfb460c8fa1367145015_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GX9UQD94W/night-of-the-graduation-ceremony-humanity-rises-again-2"
+        },
+        {
+          "title": "Episode 5 - First Battle - Battle of Trost (1)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/cc56e86eb68f3afde55d62e008fddb441367805554_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G14U4324Q/first-battle-battle-of-trost-1"
+        },
+        {
+          "title": "Episode 6 - The World the Girl Saw - Battle for Trost (2)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/0b9d827f813bd0f5b934721b7cce37d31368457914_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GJWU2M827/the-world-the-girl-saw-battle-for-trost-2"
+        },
+        {
+          "title": "Episode 7 - The Small Blade - The Battle for Trost (3)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/adea712fbf73a3096ace5c4bcfb94ab71368954327_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GMKUXZWXE/the-small-blade-the-battle-for-trost-3"
+        },
+        {
+          "title": "Episode 8 - Hearing the Heartbeat - The Battle for Trost (4)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/35c4c2b8bb74d8ee888aeff5a90e911c1369526858_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G31UXPQXJ/hearing-the-heartbeat-the-battle-for-trost-4"
+        },
+        {
+          "title": "Episode 9 - Where the Left Arm Went  - The Battle for Trost (5)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/dbe188f8378a1fbeb6bd75dca5f4833d1370123553_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GPWUKQEK3/where-the-left-arm-went-the-battle-for-trost-5"
+        },
+        {
+          "title": "Episode 10 - Response - The Battle for Trost (6)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/d817405dd8bb881c6cbea6bfaff591c21370729401_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G8WUNDEND/response-the-battle-for-trost-6"
+        },
+        {
+          "title": "Episode 11 - Icon - The Battle for Trost (7)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/d178c066f3340c55c1f77f777f9082fd1371318103_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/GQJUGD7G7/icon-the-battle-for-trost-7"
+        },
+        {
+          "title": "Episode 12 - Wound - The Battle for Trost (8)",
+          "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/6401b828d7db85669e185d115fa102a41371935223_full.jpg",
+          "url": "http://www.crunchyroll.com/watch/G50UZ2WZ7/wound-the-battle-for-trost-8"
+        }
+      ],
       "external_ids": {
         "mal": 25777,
         "kitsu": 8671,
@@ -882,29 +5590,29 @@
   ],
   "files": {
     "csv": {
-      "filename": "Anidb_2026-10-24_15-33-52_UTC+7.csv",
-      "size_bytes": 9609106,
-      "human_size": "9.16 MB"
+      "filename": "Anidb_2026-10-25_18-12-34_UTC+7.csv",
+      "size_bytes": 9923033,
+      "human_size": "9.46 MB"
     },
     "xlsx": {
-      "filename": "Anidb_2026-10-24_15-33-52_UTC+7.xlsx",
-      "size_bytes": 3802181,
-      "human_size": "3.63 MB"
+      "filename": "Anidb_2026-10-25_18-12-34_UTC+7.xlsx",
+      "size_bytes": 3915711,
+      "human_size": "3.73 MB"
     },
     "tar_gz": {
-      "filename": "Anidb_2026-10-24_15-33-52_UTC+7.tar.gz",
-      "size_bytes": 8673208,
-      "human_size": "8.27 MB"
+      "filename": "Anidb_2026-10-25_18-12-34_UTC+7.tar.gz",
+      "size_bytes": 13923904,
+      "human_size": "13.28 MB"
     },
     "zip": {
-      "filename": "Anidb_2026-10-24_15-33-52_UTC+7.zip",
-      "size_bytes": 8772795,
-      "human_size": "8.37 MB"
+      "filename": "Anidb_2026-10-25_18-12-34_UTC+7.zip",
+      "size_bytes": 14207103,
+      "human_size": "13.55 MB"
     },
     "json": {
-      "filename": "Anidb_2026-10-24_15-33-52_UTC+7.json",
-      "size_bytes": 18492606,
-      "human_size": "17.64 MB"
+      "filename": "Anidb_2026-10-25_18-12-34_UTC+7.json",
+      "size_bytes": 51704139,
+      "human_size": "49.31 MB"
     }
   }
 }
