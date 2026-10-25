@@ -225,6 +225,89 @@ The GitHub Actions workflow operates on a **Fast 6-Hour Automated Scenario** (`0
 
 ---
 
+## Data Sources & Synchronization Architecture
+
+AniDB Offline merges multiple premier anime metadata platforms into a unified, high-speed dataset. The synchronization pipeline operates through the following stages:
+
+```
+┌─────────────────────────┐     ┌─────────────────────────────────────────────────────────┐
+│   AniList GraphQL API   │     │        nattadasu/animeApi Relation Database             │
+│  (Core Anime Metadata,  │     │  (Universal ID Bridge: AniList <-> TMDB/TVDB/MAL/Kitsu) │
+│ Characters, VAs, Airing)│     └──────────────────────────┬──────────────────────────────┘
+└───────────┬─────────────┘                                │
+            │                                              ▼
+            │               Cross-Referenced TMDB ID (The Movie Database)
+            │               ┌─────────────────────────────────────────────────────────────┐
+            │               │  TMDB API (Images & Season Still Screenshots)               │
+            │               │  - High-res Posters & Series Backdrops                      │
+            │               │  - Official Clear Logos                                     │
+            │               │  - Season-specific Episode Stills (/season/{season_number}) │
+            │               └──────────────────────────────┬──────────────────────────────┘
+            ▼                                              ▼
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│                             AniDB Offline Merge & Enrichment                            │
+│  - Season & Part detection (Season 1-8, Cour 1-3, Final Season)                         │
+│  - Genuine episode stills (TMDB still_path + Crunchyroll video frame thumbnails)        │
+│  - Airing schedules stacked at TMZ 00 (-7 to +7 days preserved)                         │
+│  - Japanese Voice Actors (VAs) mapped to character entries                              │
+└───────────────────────────────────────────┬─────────────────────────────────────────────┘
+                                            │
+                                            ▼
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│                                  Delivery & Access Layer                                │
+│  - Edge Cloudflare Worker (REST API at api.anidb.my.id & GraphQL at graphiql.anidb.my.id)│
+│  - Static Raw Data & Manifest (data/raw/raw.json, schedules.json)                       │
+│  - Automated multi-format database dumps (CSV, XLSX, TAR.GZ, ZIP, JSON in UTC+7)        │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+### Detailed Provider Breakdown
+
+1. **[AniList GraphQL API](https://anilist.co)** (*Primary Core Provider*)
+   - **Role:** Extracts the complete anime catalog including official titles (English, Romaji, Native, synonyms), broadcast status, release formats (TV, Movie, OVA, ONA, Special), seasons and broadcast years, episode counts, running durations, popularity ratings, weighted genre and spoiler tags, production studios, official YouTube trailers, and prequel/sequel media relationships.
+   - **Enriched Cast & Media:** Supplies detailed character rosters with roles (`MAIN`, `SUPPORTING`), original Japanese voice actors (Seiyuu / VAs) with photos, and Crunchyroll streaming episode video frame thumbnails.
+   - **Live Airing Feeds:** Powers the airing schedule pipeline with upcoming broadcast timestamps.
+
+2. **[nattadasu/animeApi](https://github.com/nattadasu/animeApi)** (*Relation Mapping Bridge*)
+   - **Role:** Serves as the authoritative cross-referencing index connecting independent anime databases.
+   - **Source:** [`https://raw.githubusercontent.com/nattadasu/animeApi/v3/database/animeapi.json`](https://raw.githubusercontent.com/nattadasu/animeApi/v3/database/animeapi.json)
+   - **Mapping Identifiers:** Links each AniList ID (`anilist`) to:
+     - `themoviedb`: TMDB series/movie ID.
+     - `thetvdb`: TheTVDB show ID.
+     - `imdb`: IMDb title code (`tt...`).
+     - `kitsu`: Kitsu anime identifier.
+     - `myanimelist`: MyAnimeList ID.
+   - **Historical Foundation:** Built on top of pioneering open-source relation systems, including the Manami Project (`anime-offline-database`) and KawaiiOverflow (`arm`).
+
+3. **[The Movie Database (TMDB)](https://www.themoviedb.org)** (*Media Assets & Episode Stills Provider*)
+   - **Role:** Enriches each entry with high-resolution visual artwork and authentic episode screenshots.
+   - **Assets Ingested:**
+     - Official full-resolution key art posters (`poster_path`).
+     - Official backdrops for series overview pages (`backdrop_path`).
+     - Official transparent PNG title logos (`logo_path`).
+     - Genuine episode still screenshots via `/tv/{tmdb_id}/season/{season_number}` matched to the anime's detected season and part number.
+
+4. **[Crunchyroll](https://www.crunchyroll.com) via AniList Streaming Feeds**
+   - **Role:** Supplies episode-level video thumbnails and official streaming links for anime licensed globally.
+
+5. **[Kitsu](https://kitsu.io) & [MyAnimeList](https://myanimelist.net)**
+   - **Role:** Enables direct multi-platform ID queries (`/api/v1/anime/mal/:id`, `/api/v1/anime/kitsu/:id`), facilitating integration for client apps migrating between services.
+
+---
+
+## Credits & Acknowledgements
+
+We express our deepest gratitude and appreciation to the open-source creators and data platforms whose dedicated work makes AniDB Offline possible:
+
+- **[Nattadasu (nattadasu/animeApi)](https://github.com/nattadasu/animeApi)**: Sincere thanks to **Nattadasu** for creating and actively maintaining `animeApi`. The compiled relation database (`animeapi.json`) forms the vital bridge connecting AniList entries to TMDB, TheTVDB, IMDb, Kitsu, and MyAnimeList across our entire pipeline.
+- **[Manami Project (anime-offline-database)](https://github.com/manami-project/anime-offline-database)**: Tremendous appreciation to the Manami Project for pioneering offline anime database schemas and cross-platform relation tracking.
+- **[KawaiiOverflow (arm)](https://github.com/kawaiioverflow/arm)**: For developing foundational anime relation mapping algorithms and dataset structures.
+- **[AniList](https://anilist.co)**: For providing an exceptional, modern, and open GraphQL API that empowers the anime developer ecosystem.
+- **[The Movie Database (TMDB)](https://www.themoviedb.org)**: For hosting an expansive, community-curated collection of high-resolution anime artwork, clear logos, and episode still screenshots.
+- **[MyAnimeList](https://myanimelist.net) & [Kitsu](https://kitsu.io)**: For their enduring contribution to global anime cataloging and tracking.
+
+---
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
