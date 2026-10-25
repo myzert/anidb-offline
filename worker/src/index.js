@@ -37,6 +37,69 @@ function generateAnimeId(anime) {
   return `${slug}-${code}`;
 }
 
+function detectSeasonAndPart(titleObj = {}, synonyms = []) {
+  const titles = [
+    titleObj.english || '',
+    titleObj.romaji || '',
+    titleObj.native || '',
+    ...(Array.isArray(synonyms) ? synonyms : [])
+  ].join(' ');
+
+  let season = 1;
+  let part = null;
+
+  // 1. Detect Part / Cour
+  const partMatch = titles.match(/\b(?:part|cour|kousen)\s*(\d+)\b/i) || titles.match(/\b(?:part|cour)\s*(I{1,3}|IV|V)\b/i);
+  if (partMatch) {
+    const rawP = partMatch[1];
+    if (/^\d+$/.test(rawP)) {
+      part = parseInt(rawP, 10);
+    } else {
+      const romanMap = { 'I': 1, 'II': 2, 'III': 3, 'IV': 4, 'V': 5 };
+      part = romanMap[rawP.toUpperCase()] || 1;
+    }
+  } else if (/\b2nd\s+(?:part|cour)\b/i.test(titles)) {
+    part = 2;
+  } else if (/\b3rd\s+(?:part|cour)\b/i.test(titles)) {
+    part = 3;
+  }
+
+  // 2. Detect Season
+  const sMatch = titles.match(/\bseason\s*(\d+)\b/i);
+  const nthMatch = titles.match(/\b(\d+)(?:st|nd|rd|th)\s+season\b/i);
+  const finalSeason = /\b(?:the\s+)?final\s+season\b/i.test(titles);
+  const jpMatch = titles.match(/[第\s]?([0-9０-９]+)期/);
+
+  if (sMatch) {
+    season = parseInt(sMatch[1], 10);
+  } else if (nthMatch) {
+    season = parseInt(nthMatch[1], 10);
+  } else if (jpMatch) {
+    season = parseInt(jpMatch[1], 10);
+  } else if (finalSeason) {
+    season = 4;
+  } else {
+    // Check roman numerals not preceded by Part
+    const stripped = titles.replace(/\b(?:part|cour)\s*[^\s]+\b/gi, '');
+    if (/\bVIII\b/.test(stripped)) season = 8;
+    else if (/\bVII\b/.test(stripped)) season = 7;
+    else if (/\bVI\b/.test(stripped)) season = 6;
+    else if (/\bV\b/.test(stripped)) season = 5;
+    else if (/\bIV\b/.test(stripped)) season = 4;
+    else if (/\bIII\b/.test(stripped)) season = 3;
+    else if (/\bII\b/.test(stripped)) season = 2;
+    else {
+      const endNumMatch = (titleObj.english || titleObj.romaji || '').match(/\s(\d+)$/);
+      if (endNumMatch) {
+        const val = parseInt(endNumMatch[1], 10);
+        if (val >= 2 && val <= 10) season = val;
+      }
+    }
+  }
+
+  return { season, part };
+}
+
 function getRating(anime) {
   if (anime.is_adult) return 'Rx - Hentai';
   const tags = Array.isArray(anime.tags)
@@ -65,6 +128,7 @@ function formatAnimeStandard(a) {
   const anilistId = a.id ?? a.anilist_id ?? null;
   const animeId = generateAnimeId(a);
   const coverImage = a.cover_image && typeof a.cover_image === 'object' ? a.cover_image : {};
+  const { season: detectedSeason, part: detectedPart } = detectSeasonAndPart(a.title, a.synonyms);
   
   const backdrop = a.tmdb_backdrop_path
     ? `https://image.tmdb.org/t/p/original${a.tmdb_backdrop_path}`
@@ -100,6 +164,10 @@ function formatAnimeStandard(a) {
     genres: Array.isArray(a.genres) ? a.genres : [],
     season: a.season ? a.season.toUpperCase() : null,
     season_year: a.season_year || null,
+    season_number: a.season_number || a.detected_season || detectedSeason,
+    part_number: a.part_number || a.detected_part || detectedPart,
+    detected_season: a.detected_season || a.season_number || detectedSeason,
+    detected_part: a.detected_part || a.part_number || detectedPart,
     episodes: a.episodes || 0,
     duration: a.duration || null,
     average_score: a.average_score || 0,
@@ -114,7 +182,7 @@ function formatAnimeStandard(a) {
   };
 }
 
-function buildEpisodeList(anime) {
+function buildEpisodeList(anime, detectedSeason = 1) {
   const standard = formatAnimeStandard(anime);
   const rawEpisodesCount = anime.episodes || 0;
   const tmdbEps = Array.isArray(anime.tmdb_episodes) ? anime.tmdb_episodes : [];
@@ -122,14 +190,6 @@ function buildEpisodeList(anime) {
   
   const totalCount = Math.max(rawEpisodesCount, tmdbEps.length, streamingEps.length, 1);
   const count = (rawEpisodesCount > 0) ? rawEpisodesCount : totalCount;
-
-  // TMDB backdrop / poster fallback guaranteed from TMDB
-  const tmdbBackdrop = anime.tmdb_backdrop_path 
-    ? `https://image.tmdb.org/t/p/w500${anime.tmdb_backdrop_path}` 
-    : (standard.images.backdrop || standard.images.banner || standard.cover_image.extra_large);
-  const tmdbPoster = anime.tmdb_poster_path 
-    ? `https://image.tmdb.org/t/p/w500${anime.tmdb_poster_path}` 
-    : standard.cover_image.large;
 
   const episodeList = [];
   for (let i = 1; i <= count; i++) {
@@ -145,12 +205,12 @@ function buildEpisodeList(anime) {
       title = tmdbEp.title;
     }
 
-    // Every episode has an image from TMDB:
-    // 1. Direct TMDB episode still image
-    // 2. TMDB backdrop path
-    // 3. TMDB poster path
-    // 4. Streaming thumbnail or banner
-    let image = tmdbBackdrop;
+    // Real episode image logic:
+    // 1. Direct TMDB episode still image (actual frame of this episode)
+    // 2. Streaming episode screenshot thumbnail (Crunchyroll frame of this episode)
+    // "jangan pake bekdrop bednearn epiade logo":
+    // NEVER use the anime backdrop (which has the series logo on it) as the episode image!
+    let image = null;
     let stillPath = null;
     if (tmdbEp?.image) {
       image = tmdbEp.image;
@@ -158,12 +218,11 @@ function buildEpisodeList(anime) {
     } else if (tmdbEp?.still_path) {
       image = `https://image.tmdb.org/t/p/w500${tmdbEp.still_path}`;
       stillPath = tmdbEp.still_path;
-    } else if (anime.tmdb_backdrop_path) {
-      image = `https://image.tmdb.org/t/p/w500${anime.tmdb_backdrop_path}`;
-    } else if (anime.tmdb_poster_path) {
-      image = tmdbPoster;
     } else if (streamEp?.thumbnail) {
       image = streamEp.thumbnail;
+    } else if (anime.cover_image?.large || anime.cover_image?.extra_large) {
+      // Clean fallback poster without show backdrop logo
+      image = anime.cover_image?.large || anime.cover_image?.extra_large;
     }
 
     episodeList.push({
@@ -179,15 +238,18 @@ function buildEpisodeList(anime) {
   return episodeList;
 }
 
-const charactersMemoryCache = new Map();
+const animeMetadataCache = new Map();
 
-async function getAnimeCharacters(anime, allowFetchFallback = true) {
-  if (Array.isArray(anime.characters) && anime.characters.length > 0) {
-    return anime.characters;
+async function getAnimeCharactersAndStreaming(anime, allowFetchFallback = true) {
+  let characters = Array.isArray(anime.characters) ? anime.characters : [];
+  let streamingEpisodes = Array.isArray(anime.streaming_episodes) ? anime.streaming_episodes : [];
+
+  if (characters.length > 0 && streamingEpisodes.length > 0) {
+    return { characters, streamingEpisodes };
   }
 
   if (anime.characters?.edges && Array.isArray(anime.characters.edges) && anime.characters.edges.length > 0) {
-    return anime.characters.edges.map(edge => {
+    characters = anime.characters.edges.map(edge => {
       const node = edge.node || {};
       const vas = edge.voiceActors || [];
       const primaryVa = vas[0] || null;
@@ -226,11 +288,13 @@ async function getAnimeCharacters(anime, allowFetchFallback = true) {
   }
 
   const anilistId = anime.id ?? anime.anilist_id;
-  if (!anilistId || !allowFetchFallback) return [];
+  if (!anilistId || !allowFetchFallback) {
+    return { characters, streamingEpisodes };
+  }
 
   const cacheKey = String(anilistId);
-  if (charactersMemoryCache.has(cacheKey)) {
-    return charactersMemoryCache.get(cacheKey);
+  if (animeMetadataCache.has(cacheKey)) {
+    return animeMetadataCache.get(cacheKey);
   }
 
   try {
@@ -253,6 +317,12 @@ async function getAnimeCharacters(anime, allowFetchFallback = true) {
               }
             }
           }
+          streamingEpisodes {
+            title
+            thumbnail
+            url
+            site
+          }
         }
       }
     `;
@@ -263,8 +333,9 @@ async function getAnimeCharacters(anime, allowFetchFallback = true) {
     });
     if (resp.ok) {
       const result = await resp.json();
-      const edges = result.data?.Media?.characters?.edges || [];
-      const parsed = edges.map(edge => {
+      const media = result.data?.Media;
+      const edges = media?.characters?.edges || [];
+      const parsedChars = edges.map(edge => {
         const node = edge.node || {};
         const vas = edge.voiceActors || [];
         const primaryVa = vas[0] || null;
@@ -300,15 +371,27 @@ async function getAnimeCharacters(anime, allowFetchFallback = true) {
           }))
         };
       });
-      charactersMemoryCache.set(cacheKey, parsed);
-      anime.characters = parsed;
-      return parsed;
+      const parsedStreams = (media?.streamingEpisodes || []).map(ep => ({
+        title: ep.title || null,
+        thumbnail: ep.thumbnail || null,
+        url: ep.url || null,
+        site: ep.site || null
+      }));
+
+      characters = parsedChars;
+      streamingEpisodes = parsedStreams;
+      anime.characters = parsedChars;
+      anime.streaming_episodes = parsedStreams;
+
+      const resObj = { characters, streamingEpisodes };
+      animeMetadataCache.set(cacheKey, resObj);
+      return resObj;
     }
   } catch (e) {
-    // Return empty on network issues
+    // Graceful fallback
   }
 
-  return [];
+  return { characters, streamingEpisodes };
 }
 
 const typeDefs = `
@@ -346,6 +429,10 @@ const typeDefs = `
     endDate: String
     season: String
     seasonYear: Int
+    season_number: Int
+    part_number: Int
+    detected_season: Int
+    detected_part: Int
     episodes: Int
     duration: String
     averageScore: Int
@@ -555,8 +642,9 @@ const resolvers = {
 
       const mappedMedia = await Promise.all(paginated.map(async a => {
          const standard = formatAnimeStandard(a);
-         const epList = buildEpisodeList(a);
-         const charactersList = await getAnimeCharacters(a, false);
+         const { characters: charactersList, streamingEpisodes: streamEps } = await getAnimeCharactersAndStreaming(a, true);
+         if (!a.streaming_episodes || a.streaming_episodes.length === 0) a.streaming_episodes = streamEps;
+         const epList = buildEpisodeList(a, standard.detected_season);
 
          return {
            anime_id: standard.anime_id,
@@ -573,6 +661,10 @@ const resolvers = {
            endDate: a.end_date,
            season: standard.season,
            seasonYear: standard.season_year,
+           season_number: standard.season_number,
+           part_number: standard.part_number,
+           detected_season: standard.detected_season,
+           detected_part: standard.detected_part,
            episodes: standard.episodes,
            duration: standard.duration,
            averageScore: standard.average_score,
@@ -590,7 +682,7 @@ const resolvers = {
            relations: a.relations,
            characters: charactersList,
            episode_list: epList,
-           streaming_episodes: a.streaming_episodes || [],
+           streaming_episodes: streamEps,
            external_ids: standard.external_ids
          };
       }));
@@ -607,8 +699,9 @@ const resolvers = {
       if (!anime) return null;
       
       const standard = formatAnimeStandard(anime);
-      const epList = buildEpisodeList(anime);
-      const charactersList = await getAnimeCharacters(anime, true);
+      const { characters: charactersList, streamingEpisodes: streamEps } = await getAnimeCharactersAndStreaming(anime, true);
+      if (!anime.streaming_episodes || anime.streaming_episodes.length === 0) anime.streaming_episodes = streamEps;
+      const epList = buildEpisodeList(anime, standard.detected_season);
 
       return {
            anime_id: standard.anime_id,
@@ -625,6 +718,10 @@ const resolvers = {
            endDate: anime.end_date,
            season: standard.season,
            seasonYear: standard.season_year,
+           season_number: standard.season_number,
+           part_number: standard.part_number,
+           detected_season: standard.detected_season,
+           detected_part: standard.detected_part,
            episodes: standard.episodes,
            duration: standard.duration,
            averageScore: standard.average_score,
@@ -642,7 +739,7 @@ const resolvers = {
            relations: anime.relations,
            characters: charactersList,
            episode_list: epList,
-           streaming_episodes: anime.streaming_episodes || [],
+           streaming_episodes: streamEps,
            external_ids: standard.external_ids
       };
     },
@@ -692,7 +789,8 @@ const yoga = createYoga({
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
-    const path = url.pathname;
+    const rawPath = url.pathname;
+    const path = (rawPath.length > 1 && rawPath.endsWith('/')) ? rawPath.replace(/\/+$/, '') : rawPath;
     const hostname = url.hostname;
 
     const corsHeaders = {
@@ -1029,13 +1127,9 @@ export default {
       
       const mapFields = async (a) => {
          const standard = formatAnimeStandard(a);
-         
-         if (isList && !fieldsFilter) {
-           return standard;
-         }
-
-         const epList = buildEpisodeList(a);
-         const charactersList = await getAnimeCharacters(a, !isList);
+         const { characters: charactersList, streamingEpisodes: streamEps } = await getAnimeCharactersAndStreaming(a, true);
+         if (!a.streaming_episodes || a.streaming_episodes.length === 0) a.streaming_episodes = streamEps;
+         const epList = buildEpisodeList(a, standard.detected_season);
 
          let fullMapped = { 
            ...standard,
@@ -1048,10 +1142,13 @@ export default {
            is_adult: a.is_adult || false,
            source: a.source || null,
            country_of_origin: a.country_of_origin || 'JP',
+           start_date: a.start_date || null,
+           end_date: a.end_date || null,
            relations: a.relations || [],
            characters: charactersList,
            episode_list: epList,
-           streaming_episodes: a.streaming_episodes || []
+           episodes_list: epList,
+           streaming_episodes: streamEps
          };
          
          if (fieldsFilter) {
@@ -1142,14 +1239,15 @@ export default {
           message: "Welcome to AniDB Offline API",
           website: "https://anidb.my.id",
           documentation: "https://github.com/myzert/anidb-offline",
-          version: "5.1.0",
+          version: "5.2.0",
           database_releases: "/api/v1/dumps",
           data_source: "Official AniList GraphQL API enriched with TMDB & Kitsu",
           available_features: [
-            "Standardized anime schema (anime_id, anilist_id, title, cover_image, images, external_ids, rating)",
-            "Anime characters with voice actors (VA) and TMDB episode imagery",
-            "Fast 6-hour automated synchronization schedule (00:00, 06:00, 12:00, 18:00 UTC)",
+            "Full anime data (characters, voice actors, detected season & part, episode list, description, tags, studios)",
+            "Genuine episode screenshots (TMDB stills and streaming screenshots, no logo backdrop duplicates)",
+            "Season and Part detection (e.g. Season 2, Season 3, Part 2, Cour 2)",
             "Airing schedules covering -7 days past to +7 days future stacked with TMZ 00 (UTC 00:00:00) synchronization",
+            "Fast 6-hour automated synchronization schedule (00:00, 06:00, 12:00, 18:00 UTC)",
             "Advanced multi-field sorting (popular, score, title/huruf/alphabetical A-Z, newest, episodes)",
             "Filter by starting letter (?letter=A or ?huruf=A)",
             "Database export archives (CSV, XLSX, TAR.GZ, ZIP, JSON) in UTC+7"
@@ -1302,7 +1400,6 @@ export default {
           if (schedulesData.last_updated) scheduleMeta.last_updated = schedulesData.last_updated;
           if (schedulesData.date_range) scheduleMeta.date_range = schedulesData.date_range;
         } else {
-          // Dynamic fallback to raw.json
           const rawItems = await fetchGitHubJSON('/raw.json');
           if (rawItems) {
             scheduleItems = rawItems
@@ -1345,7 +1442,6 @@ export default {
         const daysOfWeek = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday'];
         const currentDayName = daysOfWeek[now.getUTCDay()];
 
-        // Live recalculation of airing state
         scheduleItems = scheduleItems.map(item => ({
           ...item,
           time_until_airing: item.airing_at - nowTs,
@@ -1354,7 +1450,6 @@ export default {
 
         let filteredSchedules = scheduleItems;
 
-        // Routing subpaths
         const subScheduleMatch = path.match(/^\/(?:api\/)?(?:v1\/)?schedules\/(today|week|monday|tuesday|wednesday|thursday|friday|saturday|sunday)$/i);
         let forceGrouped = false;
         if (subScheduleMatch) {
@@ -1371,7 +1466,6 @@ export default {
           }
         }
 
-        // Query param filters
         const dateFilter = url.searchParams.get('date');
         if (dateFilter) {
           filteredSchedules = filteredSchedules.filter(s => s.airing_date === dateFilter);
@@ -1440,7 +1534,6 @@ export default {
           });
         }
 
-        // Sorting
         const schedSort = (sortBy || 'time').toLowerCase();
         if (schedSort === '-time' || schedSort === 'time_desc') {
           filteredSchedules.sort((a,b) => (b.airing_at || 0) - (a.airing_at || 0));
@@ -1461,7 +1554,6 @@ export default {
             return tb.localeCompare(ta);
           });
         } else {
-          // Default: chronological ascending
           filteredSchedules.sort((a,b) => (a.airing_at || 0) - (b.airing_at || 0));
         }
 
@@ -1572,17 +1664,18 @@ export default {
         if (!anime) return jsonResponse({error: 'Anime not found'}, 404);
         
         const standard = formatAnimeStandard(anime);
-        let charList = await getAnimeCharacters(anime, true);
+        const { characters: charList } = await getAnimeCharactersAndStreaming(anime, true);
         
+        let filteredChars = charList;
         const roleFilter = url.searchParams.get('role');
         if (roleFilter) {
-          charList = charList.filter(c => (c.role || '').toUpperCase() === roleFilter.toUpperCase());
+          filteredChars = filteredChars.filter(c => (c.role || '').toUpperCase() === roleFilter.toUpperCase());
         }
         
         const charSearch = url.searchParams.get('q') || url.searchParams.get('query');
         if (charSearch) {
           const cq = charSearch.toLowerCase();
-          charList = charList.filter(c => {
+          filteredChars = filteredChars.filter(c => {
             const n = c.name || {};
             const va = c.voice_actor?.name || {};
             return (n.full && n.full.toLowerCase().includes(cq)) ||
@@ -1592,9 +1685,9 @@ export default {
           });
         }
         
-        const total = charList.length;
+        const total = filteredChars.length;
         const charLimit = Math.min(limit, 100);
-        const paginatedChars = charList.slice(offset, offset + charLimit);
+        const paginatedChars = filteredChars.slice(offset, offset + charLimit);
         
         return jsonResponse({
           anime_id: standard.anime_id,
@@ -1625,7 +1718,9 @@ export default {
         if (!anime) return jsonResponse({error: 'Anime not found'}, 404);
         
         const standard = formatAnimeStandard(anime);
-        const episodeList = buildEpisodeList(anime);
+        const { streamingEpisodes: streamEps } = await getAnimeCharactersAndStreaming(anime, true);
+        if (!anime.streaming_episodes || anime.streaming_episodes.length === 0) anime.streaming_episodes = streamEps;
+        const episodeList = buildEpisodeList(anime, standard.detected_season);
         const total = episodeList.length;
         const epLimit = Math.min(limit, 100);
         const epPage = episodeList.slice(offset, offset + epLimit);
@@ -1633,6 +1728,10 @@ export default {
         return jsonResponse({
           anime_id: standard.anime_id,
           anilist_id: standard.anilist_id,
+          season_number: standard.season_number,
+          part_number: standard.part_number,
+          detected_season: standard.detected_season,
+          detected_part: standard.detected_part,
           total,
           limit: epLimit,
           offset,

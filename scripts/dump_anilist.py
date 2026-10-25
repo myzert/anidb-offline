@@ -38,6 +38,67 @@ def generate_anime_id(anime: dict) -> str:
         val //= 36
     return f"{slug}-{code}"
 
+def detect_season_and_part(title_dict: dict = None, synonyms: list = None):
+    if not title_dict:
+        title_dict = {}
+    titles = [
+        title_dict.get('english') or '',
+        title_dict.get('romaji') or '',
+        title_dict.get('native') or ''
+    ]
+    if synonyms:
+        titles.extend([s for s in synonyms if isinstance(s, str)])
+    text = ' '.join(titles)
+
+    season = 1
+    part = None
+
+    # 1. Detect Part / Cour
+    part_match = re.search(r'\b(?:part|cour|kousen)\s*(\d+)\b', text, re.I)
+    if part_match:
+        part = int(part_match.group(1))
+    else:
+        part_roman = re.search(r'\b(?:part|cour)\s*(I{1,3}|IV|V)\b', text, re.I)
+        if part_roman:
+            roman_map = {'I': 1, 'II': 2, 'III': 3, 'IV': 4, 'V': 5}
+            part = roman_map.get(part_roman.group(1).upper(), 1)
+        elif re.search(r'\b2nd\s+(?:part|cour)\b', text, re.I):
+            part = 2
+        elif re.search(r'\b3rd\s+(?:part|cour)\b', text, re.I):
+            part = 3
+
+    # 2. Detect Season
+    s_match = re.search(r'\bseason\s*(\d+)\b', text, re.I)
+    nth_match = re.search(r'\b(\d+)(?:st|nd|rd|th)\s+season\b', text, re.I)
+    final_season = bool(re.search(r'\b(?:the\s+)?final\s+season\b', text, re.I))
+    jp_match = re.search(r'[第\s]?([0-9０-９]+)期', text)
+
+    if s_match:
+        season = int(s_match.group(1))
+    elif nth_match:
+        season = int(nth_match.group(1))
+    elif jp_match:
+        season = int(jp_match.group(1))
+    elif final_season:
+        season = 4
+    else:
+        stripped = re.sub(r'\b(?:part|cour)\s*[^\s]+\b', '', text, flags=re.I)
+        if re.search(r'\bVIII\b', stripped): season = 8
+        elif re.search(r'\bVII\b', stripped): season = 7
+        elif re.search(r'\bVI\b', stripped): season = 6
+        elif re.search(r'\bV\b', stripped): season = 5
+        elif re.search(r'\bIV\b', stripped): season = 4
+        elif re.search(r'\bIII\b', stripped): season = 3
+        elif re.search(r'\bII\b', stripped): season = 2
+        else:
+            end_num = re.search(r'\s(\d+)$', (title_dict.get('english') or title_dict.get('romaji') or ''))
+            if end_num:
+                val = int(end_num.group(1))
+                if 2 <= val <= 10:
+                    season = val
+
+    return season, part
+
 def fetch_anilist_page(page=1, max_retries=5, ids=None, sort="UPDATED_AT_DESC", per_page=50):
     url = "https://graphql.anilist.co"
     query = '''
@@ -271,14 +332,14 @@ def generate_indexes(base_dir):
         return None, None, None
 
     tmdb_episodes_cache = {}
-    def get_tmdb_episodes(tmdb_id):
+    def get_tmdb_episodes(tmdb_id, season_number=1):
         if not tmdb_api_key or not tmdb_id:
             return []
-        cache_key = str(tmdb_id)
+        cache_key = f"{tmdb_id}_{season_number}"
         if cache_key in tmdb_episodes_cache:
             return tmdb_episodes_cache[cache_key]
         try:
-            url = f"https://api.themoviedb.org/3/tv/{tmdb_id}/season/1?api_key={tmdb_api_key}"
+            url = f"https://api.themoviedb.org/3/tv/{tmdb_id}/season/{season_number}?api_key={tmdb_api_key}"
             req = requests.get(url, timeout=5)
             if req.status_code == 200:
                 data = req.json()
@@ -474,8 +535,15 @@ def generate_indexes(base_dir):
             for ep in streaming_eps if isinstance(ep, dict)
         ]
 
-        # TMDB episodes with TMDB images
-        merged["tmdb_episodes"] = get_tmdb_episodes(tmdb_id)
+        # Detect season and part
+        season_num, part_num = detect_season_and_part(anime.get("title", {}), anime.get("synonyms", []))
+        merged["detected_season"] = season_num
+        merged["detected_part"] = part_num
+        merged["season_number"] = season_num
+        merged["part_number"] = part_num
+
+        # TMDB episodes with TMDB images for the specific detected season!
+        merged["tmdb_episodes"] = get_tmdb_episodes(tmdb_id, season_number=season_num)
                 
         formatted_anime_list.append(merged)
         
