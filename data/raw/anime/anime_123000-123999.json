@@ -2,7 +2,7 @@
   "123899": {
     "id": 123899,
     "idMal": 42847,
-    "updatedAt": 1792911720,
+    "updatedAt": 1792980143,
     "title": {
       "romaji": "Ai no Utagoe wo Kikasete",
       "english": "Sing a Bit of Harmony",
@@ -41,7 +41,7 @@
       "Canta con una chispa de armonía"
     ],
     "averageScore": 75,
-    "popularity": 45125,
+    "popularity": 45136,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -499,7 +499,7 @@
   "123802": {
     "id": 123802,
     "idMal": 42826,
-    "updatedAt": 1792915254,
+    "updatedAt": 1792978725,
     "title": {
       "romaji": "Seijo no Maryoku wa Bannou desu",
       "english": "The Saint's Magic Power is Omnipotent",
@@ -542,7 +542,7 @@
       "Kekuatan Sihir Santa Sungguh Mahaguna"
     ],
     "averageScore": 71,
-    "popularity": 80719,
+    "popularity": 80758,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -1596,7 +1596,7 @@
   "123330": {
     "id": 123330,
     "idMal": 42745,
-    "updatedAt": 1792915338,
+    "updatedAt": 1792980146,
     "title": {
       "romaji": "Machikado Mazoku: 2-Choume",
       "english": "The Demon Girl Next Door Season 2",
@@ -1640,7 +1640,7 @@
       "Machikado Mazoku 2nd Season"
     ],
     "averageScore": 78,
-    "popularity": 28836,
+    "popularity": 28844,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -2417,7 +2417,7 @@
   "123779": {
     "id": 123779,
     "idMal": 42822,
-    "updatedAt": 1792911720,
+    "updatedAt": 1792973039,
     "title": {
       "romaji": "Kai Byoui Ramune",
       "english": "Dr. Ramune -Mysterious Disease Specialist-",
@@ -2457,7 +2457,7 @@
       " รามูเนะ หมอโรคพิสดาร"
     ],
     "averageScore": 69,
-    "popularity": 28922,
+    "popularity": 28930,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -3256,7 +3256,7 @@
   "123360": {
     "id": 123360,
     "idMal": 42756,
-    "updatedAt": 1792825326,
+    "updatedAt": 1792973039,
     "title": {
       "romaji": "One → Shota ← One THE ANIMATION",
       "english": null,
@@ -3294,7 +3294,7 @@
       "Oneshota The Animation"
     ],
     "averageScore": 65,
-    "popularity": 4352,
+    "popularity": 4354,
     "isAdult": true,
     "source": "VISUAL_NOVEL",
     "countryOfOrigin": "JP",
@@ -3366,7 +3366,102 @@
     "nextAiringEpisode": null,
     "relations": {
       "edges": []
-    }
+    },
+    "characters": {
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 186681,
+            "name": {
+              "full": "Aria",
+              "native": "アリア",
+              "userPreferred": "Aria"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b186681-luG4uFUUCdz9.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b186681-luG4uFUUCdz9.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 112007,
+              "name": {
+                "full": "Mami Ozaki",
+                "native": "尾崎真実",
+                "userPreferred": "Mami Ozaki"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n112007-xfp8mQB0IeXe.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n112007-xfp8mQB0IeXe.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 186682,
+            "name": {
+              "full": "Lulu",
+              "native": "ルル",
+              "userPreferred": "Lulu"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b186682-3dvZ1oANMefw.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b186682-3dvZ1oANMefw.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 100938,
+              "name": {
+                "full": "Ayuru Oohashi",
+                "native": "大橋歩夕",
+                "userPreferred": "Ayuru Oohashi"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n100938-x3bE04fTFlmh.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n100938-x3bE04fTFlmh.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 242451,
+            "name": {
+              "full": "Mahiro",
+              "native": "まひろ",
+              "userPreferred": "Mahiro"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b242451-T5W2P7UIFyHQ.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b242451-T5W2P7UIFyHQ.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 242452,
+              "name": {
+                "full": "Suiko Kouyou",
+                "native": "江葉翠子",
+                "userPreferred": "Suiko Kouyou"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n242452-f1PffOrcpq0u.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n242452-f1PffOrcpq0u.jpg"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "streamingEpisodes": []
   },
   "123494": {
     "id": 123494,
@@ -3521,7 +3616,7 @@
   "123074": {
     "id": 123074,
     "idMal": null,
-    "updatedAt": 1792900961,
+    "updatedAt": 1792955001,
     "title": {
       "romaji": "Yu☆Gi☆Oh! Duel Monsters ALEX",
       "english": "Yu-Gi-Oh! Capsule Monsters",
@@ -3556,8 +3651,8 @@
       "Adventure"
     ],
     "synonyms": [],
-    "averageScore": 57,
-    "popularity": 2258,
+    "averageScore": 58,
+    "popularity": 2260,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -4392,7 +4487,7 @@
   "123785": {
     "id": 123785,
     "idMal": 42825,
-    "updatedAt": 1792915338,
+    "updatedAt": 1792980146,
     "title": {
       "romaji": "Praeter no Kizu",
       "english": "Scar on the Praeter",
@@ -4433,7 +4528,7 @@
       "บาดแผลแห่งอดีตกาล"
     ],
     "averageScore": 52,
-    "popularity": 11466,
+    "popularity": 11469,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -5126,7 +5221,7 @@
   "123901": {
     "id": 123901,
     "idMal": 42867,
-    "updatedAt": 1792900961,
+    "updatedAt": 1792965771,
     "title": {
       "romaji": "Kanojo, Okarishimasu Petit",
       "english": null,
@@ -5165,7 +5260,7 @@
       "Kanojo, Okarishimasu Mini Anime"
     ],
     "averageScore": 58,
-    "popularity": 7354,
+    "popularity": 7357,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -5620,7 +5715,7 @@
   "123803": {
     "id": 123803,
     "idMal": 42831,
-    "updatedAt": 1792908122,
+    "updatedAt": 1792978723,
     "title": {
       "romaji": "Munou na Nana: Mini Anime",
       "english": null,
@@ -5657,8 +5752,8 @@
     "synonyms": [
       "Talentless Nana Mini Anime"
     ],
-    "averageScore": 56,
-    "popularity": 2270,
+    "averageScore": 57,
+    "popularity": 2273,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -6797,7 +6892,7 @@
   "123408": {
     "id": 123408,
     "idMal": null,
-    "updatedAt": 1792753813,
+    "updatedAt": 1792973039,
     "title": {
       "romaji": "Gomi",
       "english": null,
@@ -6850,7 +6945,11 @@
     "nextAiringEpisode": null,
     "relations": {
       "edges": []
-    }
+    },
+    "characters": {
+      "edges": []
+    },
+    "streamingEpisodes": []
   },
   "123612": {
     "id": 123612,
@@ -7086,5 +7185,609 @@
       "edges": []
     },
     "streamingEpisodes": []
+  },
+  "123474": {
+    "id": 123474,
+    "idMal": 41688,
+    "updatedAt": 1792969387,
+    "title": {
+      "romaji": "Toutotsu ni Egypt Shin",
+      "english": "Oh, Suddenly Egyptian God",
+      "native": "とーとつにエジプト神"
+    },
+    "type": "ANIME",
+    "format": "ONA",
+    "status": "FINISHED",
+    "description": "Welcome to the world of the Egyptian gods.<br>\n<br>\nThis is where the famous gods of Ancient Egypt, from Anubis to Thoth, live their lives freely.<br>\n<br>\nHow freely, you ask? Bastet appears out of nowhere, singing and dancing. Medjed is always stone-faced. Horus works a part-time job. Set is devoted to pulling pranks. Ra's off traveling and rarely comes home... All the Gods basically just do whatever they want!<br><br>(Source: Crunchyroll)",
+    "episodes": 10,
+    "duration": 5,
+    "season": "WINTER",
+    "seasonYear": 2021,
+    "startDate": {
+      "year": 2020,
+      "month": 12,
+      "day": 7
+    },
+    "endDate": {
+      "year": 2021,
+      "month": 2,
+      "day": 8
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx123474-goJkeXu38bhV.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx123474-goJkeXu38bhV.png",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx123474-goJkeXu38bhV.png",
+      "color": null
+    },
+    "bannerImage": null,
+    "genres": [
+      "Comedy",
+      "Fantasy",
+      "Slice of Life",
+      "Supernatural"
+    ],
+    "synonyms": [
+      "Suddenly, Egyptian Gods"
+    ],
+    "averageScore": 63,
+    "popularity": 3832,
+    "isAdult": false,
+    "source": "OTHER",
+    "countryOfOrigin": "JP",
+    "tags": [
+      {
+        "name": "Chibi",
+        "rank": 95,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Gods",
+        "rank": 92,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Mythology",
+        "rank": 90,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Foreign",
+        "rank": 90,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Surreal Comedy",
+        "rank": 85,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Ensemble Cast",
+        "rank": 79,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Episodic",
+        "rank": 79,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Historical",
+        "rank": 65,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Slapstick",
+        "rank": 62,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Desert",
+        "rank": 45,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Primarily Animal Cast",
+        "rank": 40,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Anthropomorphism",
+        "rank": 40,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Religion",
+        "rank": 20,
+        "isMediaSpoiler": false
+      }
+    ],
+    "studios": {
+      "nodes": [
+        {
+          "name": "TYPHOON GRAPHICS"
+        }
+      ]
+    },
+    "trailer": {
+      "id": "PflNzbgLx_c",
+      "site": "youtube"
+    },
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": [
+        {
+          "relationType": "SEQUEL",
+          "node": {
+            "id": 137308,
+            "type": "ANIME",
+            "format": "TV_SHORT",
+            "status": "FINISHED",
+            "title": {
+              "romaji": "Toutotsu ni Egypt Shin 2",
+              "english": "Oh, Suddenly Egyptian God Season 2",
+              "native": "とーとつにエジプト神２"
+            }
+          }
+        }
+      ]
+    },
+    "characters": {
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 187015,
+            "name": {
+              "full": "Medjed",
+              "native": "メジェド",
+              "userPreferred": "Medjed"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b187015-ZIQA0CIYKzZw.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b187015-ZIQA0CIYKzZw.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95112,
+              "name": {
+                "full": "Hikaru Midorikawa",
+                "native": "緑川光",
+                "userPreferred": "Hikaru Midorikawa"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95112-c275OLptkSYO.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95112-c275OLptkSYO.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 187017,
+            "name": {
+              "full": "Anubis",
+              "native": "アヌビス",
+              "userPreferred": "Anubis"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b187017-4lnI2zwidbb2.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b187017-4lnI2zwidbb2.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95356,
+              "name": {
+                "full": "Hiro Shimono",
+                "native": "下野紘",
+                "userPreferred": "Hiro Shimono"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95356-PFaZRlI9oJ56.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95356-PFaZRlI9oJ56.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 187018,
+            "name": {
+              "full": "Thoth",
+              "native": "トト",
+              "userPreferred": "Thoth"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b187018-amftzDN2jkxp.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b187018-amftzDN2jkxp.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95672,
+              "name": {
+                "full": "Yuuki Kaji",
+                "native": "梶裕貴",
+                "userPreferred": "Yuuki Kaji"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95672-T33YV7yCDKnL.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95672-T33YV7yCDKnL.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 187014,
+            "name": {
+              "full": "Bastet",
+              "native": "バステト",
+              "userPreferred": "Bastet"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b187014-RqTCvD2eVTTj.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b187014-RqTCvD2eVTTj.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95034,
+              "name": {
+                "full": "Yuu Kobayashi",
+                "native": "小林ゆう",
+                "userPreferred": "Yuu Kobayashi"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95034-AwobjrcmkMi9.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95034-AwobjrcmkMi9.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 187016,
+            "name": {
+              "full": "Khnum",
+              "native": "クヌム",
+              "userPreferred": "Khnum"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b187016-IdHEicEN8Njq.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b187016-IdHEicEN8Njq.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95087,
+              "name": {
+                "full": "Daisuke Namikawa",
+                "native": "浪川大輔",
+                "userPreferred": "Daisuke Namikawa"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95087-6dlBBbejsPyg.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95087-6dlBBbejsPyg.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 187019,
+            "name": {
+              "full": "Horus",
+              "native": "ホルス",
+              "userPreferred": "Horus"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b187019-63BBYZGfMeBe.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b187019-63BBYZGfMeBe.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 105989,
+              "name": {
+                "full": "Nobunaga Shimazaki",
+                "native": "島﨑信長",
+                "userPreferred": "Nobunaga Shimazaki"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n105989-96etzH1dLNug.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n105989-96etzH1dLNug.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 187020,
+            "name": {
+              "full": "Apep",
+              "native": "アペプ",
+              "userPreferred": "Apep"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b187020-cJELe8RNHAVs.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b187020-cJELe8RNHAVs.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95068,
+              "name": {
+                "full": "Kouji Yusa",
+                "native": "遊佐浩二",
+                "userPreferred": "Kouji Yusa"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95068-AbL4cVGlYaM8.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95068-AbL4cVGlYaM8.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 187021,
+            "name": {
+              "full": "Sa-ta",
+              "native": "サ・タ",
+              "userPreferred": "Sa-ta"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b187021-Bj5NxWAutolF.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b187021-Bj5NxWAutolF.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95027,
+              "name": {
+                "full": "Yukari Tamura",
+                "native": "田村ゆかり",
+                "userPreferred": "Yukari Tamura"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95027-Zm9onZDUN7ih.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95027-Zm9onZDUN7ih.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 187022,
+            "name": {
+              "full": "Otter",
+              "native": "オッター",
+              "userPreferred": "Otter"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b187022-6PoarUmDSuW0.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b187022-6PoarUmDSuW0.png"
+            }
+          },
+          "voiceActors": []
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 187023,
+            "name": {
+              "full": "Sobek",
+              "native": "セベク",
+              "userPreferred": "Sobek"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b187023-aUfvptlYlK06.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b187023-aUfvptlYlK06.png"
+            }
+          },
+          "voiceActors": []
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 187024,
+            "name": {
+              "full": "Wenet",
+              "native": "ウェネト",
+              "userPreferred": "Wenet"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b187024-nZD9m19xNzmn.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b187024-nZD9m19xNzmn.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 109879,
+              "name": {
+                "full": "Shouta Aoi",
+                "native": "蒼井翔太",
+                "userPreferred": "Shouta Aoi"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n109879-iF5a0vTZxj9T.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n109879-iF5a0vTZxj9T.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 187025,
+            "name": {
+              "full": "Ra",
+              "native": "ラー",
+              "userPreferred": "Ra"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b187025-gAubLpCraULY.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b187025-gAubLpCraULY.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95591,
+              "name": {
+                "full": "Kenjirou Tsuda",
+                "native": "津田健次郎",
+                "userPreferred": "Kenjirou Tsuda"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95591-WQGdD3ubbeoq.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95591-WQGdD3ubbeoq.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 187026,
+            "name": {
+              "full": "Set",
+              "native": "セト",
+              "userPreferred": "Set"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b187026-pDvQANkMvs46.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b187026-pDvQANkMvs46.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95283,
+              "name": {
+                "full": "Hiroyuki Yoshino",
+                "native": "吉野裕行",
+                "userPreferred": "Hiroyuki Yoshino"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95283-g76zV4YacFfm.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95283-g76zV4YacFfm.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "BACKGROUND",
+          "node": {
+            "id": 36309,
+            "name": {
+              "full": "Narrator",
+              "native": "ナレーター",
+              "userPreferred": "Narrator"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b36309-6KM0riV4lqfN.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b36309-6KM0riV4lqfN.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 214096,
+              "name": {
+                "full": "Tomoya Nakamura",
+                "native": "中村倫也",
+                "userPreferred": "Tomoya Nakamura"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n214096-qzyXs8b6g9at.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n214096-qzyXs8b6g9at.png"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "streamingEpisodes": [
+      {
+        "title": "Episode 1 - Suddenly, Egyptian Gods / Suddenly, Anubis",
+        "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/1fb642ba4a779068d02ad80284852f821607298993_full.jpg",
+        "url": "http://www.crunchyroll.com/watch/GMKUXZ3G8/suddenly-egyptian-gods-suddenly-anubis",
+        "site": "Crunchyroll"
+      },
+      {
+        "title": "Episode 2 - Suddenly, Arriving / Suddenly Bastet",
+        "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/98ccab9a5ebe94bf59985c744dd155341607869613_full.jpg",
+        "url": "http://www.crunchyroll.com/watch/G8WUNDP00/suddenly-arriving-suddenly-bastet",
+        "site": "Crunchyroll"
+      },
+      {
+        "title": "Episode 3 - Suddenly, a Day Off / Suddenly, Thoth",
+        "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/937c355ae41987434bde48630c48278d1608487633_full.jpg",
+        "url": "http://www.crunchyroll.com/watch/GZ7UV7M12/suddenly-a-day-off-suddenly-thoth",
+        "site": "Crunchyroll"
+      },
+      {
+        "title": "Episode 4 - Suddenly, Horus and Set / Suddenly, Bad Blood",
+        "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/baa68c739d3453adba3a3335b16f47de1609097721_full.jpg",
+        "url": "http://www.crunchyroll.com/watch/GD9UVNG83/suddenly-horus-and-set-suddenly-bad-blood",
+        "site": "Crunchyroll"
+      },
+      {
+        "title": "Episode 5 - Suddenly, Ra and Apep / Suddenly, Presents",
+        "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/770983af39a8b6bc89b2931fc98874461609717590_full.jpg",
+        "url": "http://www.crunchyroll.com/watch/GQJUGDZQ5/suddenly-ra-and-apep-suddenly-presents",
+        "site": "Crunchyroll"
+      },
+      {
+        "title": "Episode 6 - Suddenly, Magical Thoth and Phantom Thief Set",
+        "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/262fd58217c8390c07c48111c3d3e6261610316132_full.jpg",
+        "url": "http://www.crunchyroll.com/watch/G50UZ2DXK/suddenly-magical-thoth-and-phantom-thief-set",
+        "site": "Crunchyroll"
+      },
+      {
+        "title": "Episode 7 - Suddenly, Kotatsu / Suddenly, Medjed",
+        "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/e0c4a218fdc9dadc9e8a862eeaca160b1610897549_full.jpg",
+        "url": "http://www.crunchyroll.com/watch/GWDU893EM/suddenly-kotatsu-suddenly-medjed",
+        "site": "Crunchyroll"
+      },
+      {
+        "title": "Episode 8 - Suddenly, An Idol / Suddenly, Pottery",
+        "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/6c83bc33215e99b0dbeb25aebc55d1571611505399_full.jpg",
+        "url": "http://www.crunchyroll.com/watch/GG1U2MV4V/suddenly-an-idol-suddenly-pottery",
+        "site": "Crunchyroll"
+      },
+      {
+        "title": "Episode 9 - Suddenly, Rice Paddies / Suddenly, Swinging",
+        "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/4465b8bacf335b67c2b1de879cb53e4f1612065796_full.jpg",
+        "url": "http://www.crunchyroll.com/watch/G0DUN3XDN/suddenly-rice-paddies-suddenly-swinging",
+        "site": "Crunchyroll"
+      },
+      {
+        "title": "Episode 10 - Suddenly, A Banquet",
+        "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/9853ebb729ab23658f48a20eea280e4d1612729874_full.jpg",
+        "url": "http://www.crunchyroll.com/watch/GEVUZPQXW/suddenly-a-banquet",
+        "site": "Crunchyroll"
+      }
+    ]
   }
 }

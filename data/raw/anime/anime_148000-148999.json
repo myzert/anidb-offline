@@ -2,7 +2,7 @@
   "148109": {
     "id": 148109,
     "idMal": 51706,
-    "updatedAt": 1792922457,
+    "updatedAt": 1792980022,
     "title": {
       "romaji": "Yuusha ga Shinda!",
       "english": "The Legendary Hero is Dead!",
@@ -45,8 +45,8 @@
       "เมื่อผู้กล้าลาโลกแล้ว!",
       "Герой мёртв!"
     ],
-    "averageScore": 63,
-    "popularity": 59744,
+    "averageScore": 64,
+    "popularity": 59782,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -804,7 +804,7 @@
   "148370": {
     "id": 148370,
     "idMal": 51761,
-    "updatedAt": 1792915313,
+    "updatedAt": 1792976406,
     "title": {
       "romaji": "Uma Musume: Pretty Derby - ROAD TO THE TOP",
       "english": "Umamusume: Pretty Derby - Road to the Top",
@@ -846,7 +846,7 @@
       "Uma Musume: Pretty Derby RTTT"
     ],
     "averageScore": 80,
-    "popularity": 25058,
+    "popularity": 25080,
     "isAdult": false,
     "source": "VIDEO_GAME",
     "countryOfOrigin": "JP",
@@ -1435,7 +1435,7 @@
   "148098": {
     "id": 148098,
     "idMal": 51705,
-    "updatedAt": 1792922519,
+    "updatedAt": 1792980121,
     "title": {
       "romaji": "Otonari ni Ginga",
       "english": "A Galaxy Next Door",
@@ -1475,7 +1475,7 @@
       "鄰人似銀河"
     ],
     "averageScore": 70,
-    "popularity": 70615,
+    "popularity": 70652,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -2020,7 +2020,7 @@
   "148584": {
     "id": 148584,
     "idMal": 51097,
-    "updatedAt": 1792922466,
+    "updatedAt": 1792976553,
     "title": {
       "romaji": "Mahoyome Specials",
       "english": null,
@@ -2060,8 +2060,8 @@
       "Magic Bride",
       "Maho Yome"
     ],
-    "averageScore": 58,
-    "popularity": 1162,
+    "averageScore": 60,
+    "popularity": 1163,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -2236,7 +2236,7 @@
   "148970": {
     "id": 148970,
     "idMal": 51805,
-    "updatedAt": 1792828933,
+    "updatedAt": 1792973079,
     "title": {
       "romaji": "Ginga Eiyuu Densetsu: Die Neue These - Sakubou",
       "english": "Legend of the Galactic Heroes: Die Neue These - Intrigue",
@@ -2277,7 +2277,7 @@
       "Легенда о героях галактики: Новый тезис. Интрига"
     ],
     "averageScore": 81,
-    "popularity": 6098,
+    "popularity": 6101,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -2390,12 +2390,77 @@
           }
         }
       ]
-    }
+    },
+    "characters": {
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 2780,
+            "name": {
+              "full": "Wenli Yang",
+              "native": "ヤン・ウェンリー",
+              "userPreferred": "Wenli Yang"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b2780-4S84iiE9LyIY.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b2780-4S84iiE9LyIY.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95005,
+              "name": {
+                "full": "Kenichi Suzumura",
+                "native": "鈴村健一",
+                "userPreferred": "Kenichi Suzumura"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95005-SkoVN02iOglr.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95005-SkoVN02iOglr.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 3066,
+            "name": {
+              "full": "Reinhard von Lohengramm",
+              "native": "ラインハルト・フォン・ローエングラム",
+              "userPreferred": "Reinhard von Lohengramm"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b3066-bq8s1DooZyTJ.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b3066-bq8s1DooZyTJ.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95065,
+              "name": {
+                "full": "Mamoru Miyano",
+                "native": "宮野真守",
+                "userPreferred": "Mamoru Miyano"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95065-eyynywrhombR.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95065-eyynywrhombR.png"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "streamingEpisodes": []
   },
   "148048": {
     "id": 148048,
     "idMal": 51693,
-    "updatedAt": 1792922466,
+    "updatedAt": 1792976472,
     "title": {
       "romaji": "Kaminaki Sekai no Kamisama Katsudou",
       "english": "KamiKatsu: Working for God in a Godless World",
@@ -2444,7 +2509,7 @@
       "無神世界的神明活動"
     ],
     "averageScore": 65,
-    "popularity": 87844,
+    "popularity": 87893,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -3495,7 +3560,7 @@
   "148969": {
     "id": 148969,
     "idMal": 51815,
-    "updatedAt": 1792922440,
+    "updatedAt": 1792980114,
     "title": {
       "romaji": "Kubo-san wa Mob wo Yurusanai",
       "english": "Kubo Won't Let Me Be Invisible",
@@ -3537,7 +3602,7 @@
       "Kubo Không Để Tôi Hết Cứu"
     ],
     "averageScore": 74,
-    "popularity": 97773,
+    "popularity": 97815,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -3952,7 +4017,7 @@
   "148080": {
     "id": 148080,
     "idMal": 58449,
-    "updatedAt": 1792922536,
+    "updatedAt": 1792976541,
     "title": {
       "romaji": "Suki demo Kirai na Amanojaku",
       "english": "My Oni Girl",
@@ -3997,7 +4062,7 @@
       "فتاتي العفريتة"
     ],
     "averageScore": 68,
-    "popularity": 19369,
+    "popularity": 19377,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -4516,7 +4581,7 @@
   "148465": {
     "id": 148465,
     "idMal": 51764,
-    "updatedAt": 1792915252,
+    "updatedAt": 1792978685,
     "title": {
       "romaji": "Level 1 dakedo Unique Skill de Saikyou desu",
       "english": "My Unique Skill Makes Me OP even at Level 1",
@@ -4557,7 +4622,7 @@
       "Aku Level 1 Tapi Jadi Orang Terkuat Karena Skill Unik"
     ],
     "averageScore": 61,
-    "popularity": 58013,
+    "popularity": 58055,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -5254,7 +5319,7 @@
   "148116": {
     "id": 148116,
     "idMal": 51711,
-    "updatedAt": 1792922409,
+    "updatedAt": 1792976418,
     "title": {
       "romaji": "Hyouken no Majutsushi ga Sekai wo Suberu",
       "english": "The Iceblade Sorcerer Shall Rule the World",
@@ -5292,7 +5357,7 @@
     ],
     "synonyms": [],
     "averageScore": 63,
-    "popularity": 83919,
+    "popularity": 84060,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -6198,7 +6263,7 @@
   "148862": {
     "id": 148862,
     "idMal": 51794,
-    "updatedAt": 1792915301,
+    "updatedAt": 1792980062,
     "title": {
       "romaji": "Nanatsu no Taizai: Mokushiroku no Yonkishi",
       "english": "The Seven Deadly Sins: Four Knights of the Apocalypse",
@@ -6241,7 +6306,7 @@
       "Семь смертных грехов: Четыре всадника Апокалипсиса"
     ],
     "averageScore": 71,
-    "popularity": 34040,
+    "popularity": 34054,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -7307,7 +7372,7 @@
   "148042": {
     "id": 148042,
     "idMal": 51692,
-    "updatedAt": 1792771351,
+    "updatedAt": 1792978726,
     "title": {
       "romaji": "Yoru wa Neko to Issho",
       "english": "Nights with a Cat",
@@ -7343,8 +7408,8 @@
       "Slice of Life"
     ],
     "synonyms": [],
-    "averageScore": 70,
-    "popularity": 6496,
+    "averageScore": 71,
+    "popularity": 6497,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -7423,12 +7488,107 @@
           }
         }
       ]
-    }
+    },
+    "characters": {
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 277150,
+            "name": {
+              "full": "Kyuruga",
+              "native": "キュルガ",
+              "userPreferred": "Kyuruga"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b277150-27C7nLk328vS.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b277150-27C7nLk328vS.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95823,
+              "name": {
+                "full": "Ayahi Takagaki",
+                "native": "高垣彩陽",
+                "userPreferred": "Ayahi Takagaki"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95823-gJC6Tr9HDOqy.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95823-gJC6Tr9HDOqy.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 277151,
+            "name": {
+              "full": "Fuuta-kun",
+              "native": "フータくん",
+              "userPreferred": "Fuuta-kun"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b277151-mq5rwSxPj2EB.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b277151-mq5rwSxPj2EB.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95245,
+              "name": {
+                "full": "Satoshi Hino",
+                "native": "日野聡",
+                "userPreferred": "Satoshi Hino"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95245-prBoWpg0HaGX.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95245-prBoWpg0HaGX.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 277149,
+            "name": {
+              "full": "Pii-chan",
+              "native": "ピーちゃん",
+              "userPreferred": "Pii-chan"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b277149-MwfIwQknGyRO.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b277149-MwfIwQknGyRO.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 112215,
+              "name": {
+                "full": "Atsumi Tanezaki",
+                "native": "種﨑敦美",
+                "userPreferred": "Atsumi Tanezaki"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n112215-kfABGD8W2YSJ.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n112215-kfABGD8W2YSJ.jpg"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "streamingEpisodes": []
   },
   "148401": {
     "id": 148401,
     "idMal": 51772,
-    "updatedAt": 1792915338,
+    "updatedAt": 1792980138,
     "title": {
       "romaji": "Umayuru",
       "english": "Umayuru",
@@ -7465,7 +7625,7 @@
     ],
     "synonyms": [],
     "averageScore": 71,
-    "popularity": 5051,
+    "popularity": 5057,
     "isAdult": false,
     "source": "VIDEO_GAME",
     "countryOfOrigin": "JP",
@@ -8354,7 +8514,7 @@
   "148148": {
     "id": 148148,
     "idMal": 51721,
-    "updatedAt": 1792751511,
+    "updatedAt": 1792965771,
     "title": {
       "romaji": "SUMMER: Inaka No Seikatsu",
       "english": null,
@@ -8391,8 +8551,8 @@
     "synonyms": [
       "SUMMER - Countryside Sex Life"
     ],
-    "averageScore": 60,
-    "popularity": 1800,
+    "averageScore": 61,
+    "popularity": 1799,
     "isAdult": true,
     "source": "VIDEO_GAME",
     "countryOfOrigin": "JP",
@@ -8459,7 +8619,42 @@
     "nextAiringEpisode": null,
     "relations": {
       "edges": []
-    }
+    },
+    "characters": {
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 272579,
+            "name": {
+              "full": "Hazuki Natsuhara",
+              "native": "夏原葉月",
+              "userPreferred": "Hazuki Natsuhara"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b272579-Jj2WwWe32FU8.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b272579-Jj2WwWe32FU8.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 279379,
+              "name": {
+                "full": "Yua Inoue",
+                "native": "井上ゆあ",
+                "userPreferred": "Yua Inoue"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/default.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/default.jpg"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "streamingEpisodes": []
   },
   "148149": {
     "id": 148149,
@@ -9790,7 +9985,7 @@
   "148316": {
     "id": 148316,
     "idMal": null,
-    "updatedAt": 1792915338,
+    "updatedAt": 1792955001,
     "title": {
       "romaji": "Hi-DRIVERS",
       "english": null,
@@ -9827,7 +10022,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 6613,
+    "popularity": 6614,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",

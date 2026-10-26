@@ -2,7 +2,7 @@
   "121176": {
     "id": 121176,
     "idMal": 42429,
-    "updatedAt": 1792922441,
+    "updatedAt": 1792978726,
     "title": {
       "romaji": "Honzuki no Gekokujou: Shisho ni Naru Tame ni wa Shudan wo Erandeiraremasen 3rd Season",
       "english": "Ascendance of a Bookworm Season 3",
@@ -46,7 +46,7 @@
       "Власть книжного червя"
     ],
     "averageScore": 79,
-    "popularity": 61492,
+    "popularity": 61518,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -1234,7 +1234,7 @@
   "121467": {
     "id": 121467,
     "idMal": 40434,
-    "updatedAt": 1792911720,
+    "updatedAt": 1792978697,
     "title": {
       "romaji": "Modao Zushi 3",
       "english": "The Founder of Diabolism: Final Season",
@@ -1282,7 +1282,7 @@
       "The Master of Diabolism 3"
     ],
     "averageScore": 86,
-    "popularity": 25593,
+    "popularity": 25601,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "CN",
@@ -3132,7 +3132,7 @@
   "121034": {
     "id": 121034,
     "idMal": 42423,
-    "updatedAt": 1792922501,
+    "updatedAt": 1792978726,
     "title": {
       "romaji": "Date A Bullet: Nightmare or Queen",
       "english": "Date A Bullet: Dead or Bullet & Nightmare or Queen",
@@ -3171,7 +3171,7 @@
       "Рандеву с пулей: Кошмар или королева"
     ],
     "averageScore": 75,
-    "popularity": 28512,
+    "popularity": 28525,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -4514,7 +4514,7 @@
   "121797": {
     "id": 121797,
     "idMal": 42517,
-    "updatedAt": 1792753949,
+    "updatedAt": 1792958581,
     "title": {
       "romaji": "Ookami-san wa Taberaretai",
       "english": "I Want to be His Prey",
@@ -4635,7 +4635,102 @@
           }
         }
       ]
-    }
+    },
+    "characters": {
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 182132,
+            "name": {
+              "full": "Tatsumi Akazu",
+              "native": "赤頭辰美",
+              "userPreferred": "Tatsumi Akazu"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b182132-34HzrNUJ6rTX.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b182132-34HzrNUJ6rTX.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 134194,
+              "name": {
+                "full": "You Suzuki",
+                "native": "鈴城葉",
+                "userPreferred": "You Suzuki"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/default.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/default.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 182133,
+            "name": {
+              "full": "Hinako Ookami",
+              "native": "大神ひな子",
+              "userPreferred": "Hinako Ookami"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b182133-ArcYdevrTZiC.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b182133-ArcYdevrTZiC.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 107588,
+              "name": {
+                "full": "Marie Miyake",
+                "native": "三宅麻理恵",
+                "userPreferred": "Marie Miyake"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n107588-ZjivMTtcK1Qx.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n107588-ZjivMTtcK1Qx.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 182134,
+            "name": {
+              "full": "Rei Obayama",
+              "native": "小葉山令",
+              "userPreferred": "Rei Obayama"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b182134-N31PxNV537nm.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b182134-N31PxNV537nm.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 182135,
+              "name": {
+                "full": "Kazuma Hoshino",
+                "native": "星野カズマ",
+                "userPreferred": "Kazuma Hoshino"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/default.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/default.jpg"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "streamingEpisodes": []
   },
   "121799": {
     "id": 121799,
@@ -5706,7 +5801,7 @@
   "121062": {
     "id": 121062,
     "idMal": 37742,
-    "updatedAt": 1792754007,
+    "updatedAt": 1792962175,
     "title": {
       "romaji": "Chainsaw Maid Episode 0",
       "english": "Chainsaw Maid Episode Zero",
@@ -5746,7 +5841,7 @@
     "synonyms": [
       "Chainsaw Maid Gaiden Episode 0"
     ],
-    "averageScore": 47,
+    "averageScore": 48,
     "popularity": 1361,
     "isAdult": false,
     "source": "ORIGINAL",
@@ -5823,7 +5918,28 @@
           }
         }
       ]
-    }
+    },
+    "characters": {
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 50049,
+            "name": {
+              "full": "Maid",
+              "native": null,
+              "userPreferred": "Maid"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/50049.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/50049.jpg"
+            }
+          },
+          "voiceActors": []
+        }
+      ]
+    },
+    "streamingEpisodes": []
   },
   "121299": {
     "id": 121299,
@@ -8454,5 +8570,330 @@
         }
       ]
     }
+  },
+  "121039": {
+    "id": 121039,
+    "idMal": 42246,
+    "updatedAt": 1792973036,
+    "title": {
+      "romaji": "S＝13",
+      "english": null,
+      "native": "S＝13"
+    },
+    "type": "ANIME",
+    "format": "MOVIE",
+    "status": "FINISHED",
+    "description": "An animation that combines the motion of abstract lines and the motif of an apple.",
+    "episodes": 1,
+    "duration": 5,
+    "season": null,
+    "seasonYear": null,
+    "startDate": {
+      "year": 1984,
+      "month": null,
+      "day": null
+    },
+    "endDate": {
+      "year": 1984,
+      "month": null,
+      "day": null
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx121039-mELVhGgmMT6r.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx121039-mELVhGgmMT6r.png",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx121039-mELVhGgmMT6r.png",
+      "color": null
+    },
+    "bannerImage": null,
+    "genres": [],
+    "synonyms": [],
+    "averageScore": 39,
+    "popularity": 272,
+    "isAdult": false,
+    "source": "ORIGINAL",
+    "countryOfOrigin": "JP",
+    "tags": [],
+    "studios": {
+      "nodes": []
+    },
+    "trailer": null,
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": []
+    },
+    "characters": {
+      "edges": []
+    },
+    "streamingEpisodes": []
+  },
+  "121182": {
+    "id": 121182,
+    "idMal": 34511,
+    "updatedAt": 1792973036,
+    "title": {
+      "romaji": "Hei Mao Jingzhang (1992)",
+      "english": null,
+      "native": "黑貓警長"
+    },
+    "type": "ANIME",
+    "format": "TV_SHORT",
+    "status": "FINISHED",
+    "description": null,
+    "episodes": 7,
+    "duration": 12,
+    "season": null,
+    "seasonYear": null,
+    "startDate": {
+      "year": 1992,
+      "month": null,
+      "day": null
+    },
+    "endDate": {
+      "year": 1992,
+      "month": null,
+      "day": null
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b121182-Db5Wb5Ma3sR2.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b121182-Db5Wb5Ma3sR2.png",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/b121182-Db5Wb5Ma3sR2.png",
+      "color": "#e4c95d"
+    },
+    "bannerImage": null,
+    "genres": [
+      "Action"
+    ],
+    "synonyms": [],
+    "averageScore": null,
+    "popularity": 133,
+    "isAdult": false,
+    "source": "OTHER",
+    "countryOfOrigin": "CN",
+    "tags": [
+      {
+        "name": "Kids",
+        "rank": 20,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Police",
+        "rank": 20,
+        "isMediaSpoiler": false
+      }
+    ],
+    "studios": {
+      "nodes": [
+        {
+          "name": "Shanghai Animation Film Studio"
+        }
+      ]
+    },
+    "trailer": null,
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": [
+        {
+          "relationType": "ALTERNATIVE",
+          "node": {
+            "id": 121181,
+            "type": "ANIME",
+            "format": "TV",
+            "status": "FINISHED",
+            "title": {
+              "romaji": "Hei Mao Jingzhang",
+              "english": "Black Cat Detective",
+              "native": "黑猫警长"
+            }
+          }
+        }
+      ]
+    },
+    "characters": {
+      "edges": []
+    },
+    "streamingEpisodes": []
+  },
+  "121011": {
+    "id": 121011,
+    "idMal": 42258,
+    "updatedAt": 1792965771,
+    "title": {
+      "romaji": "SPIN",
+      "english": null,
+      "native": "SPIN"
+    },
+    "type": "ANIME",
+    "format": "MOVIE",
+    "status": "FINISHED",
+    "description": "Tense abstract animation with delicate line drawings. The music used in the film is by contemporary musician Nakamura Shigenobu.",
+    "episodes": 1,
+    "duration": 4,
+    "season": null,
+    "seasonYear": null,
+    "startDate": {
+      "year": 1993,
+      "month": null,
+      "day": null
+    },
+    "endDate": {
+      "year": 1993,
+      "month": null,
+      "day": null
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx121011-7n8s7kEnMie1.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx121011-7n8s7kEnMie1.jpg",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx121011-7n8s7kEnMie1.jpg",
+      "color": null
+    },
+    "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/121011-oafU7K9YzSUw.jpg",
+    "genres": [
+      "Psychological"
+    ],
+    "synonyms": [],
+    "averageScore": null,
+    "popularity": 161,
+    "isAdult": false,
+    "source": "ORIGINAL",
+    "countryOfOrigin": "JP",
+    "tags": [],
+    "studios": {
+      "nodes": []
+    },
+    "trailer": null,
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": []
+    },
+    "characters": {
+      "edges": []
+    },
+    "streamingEpisodes": []
+  },
+  "121047": {
+    "id": 121047,
+    "idMal": 42274,
+    "updatedAt": 1792965771,
+    "title": {
+      "romaji": "Kidou",
+      "english": null,
+      "native": "気動"
+    },
+    "type": "ANIME",
+    "format": "MOVIE",
+    "status": "FINISHED",
+    "description": "As with \"SPIN\", an abstract animation with delicate line drawings. There are single color and color versions. Nakamura Shigenobu is in charge of the music used in the work like the previous one.",
+    "episodes": 1,
+    "duration": 4,
+    "season": null,
+    "seasonYear": null,
+    "startDate": {
+      "year": 1994,
+      "month": null,
+      "day": null
+    },
+    "endDate": {
+      "year": 1994,
+      "month": null,
+      "day": null
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx121047-yn4viKhfnr0K.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx121047-yn4viKhfnr0K.jpg",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx121047-yn4viKhfnr0K.jpg",
+      "color": "#285093"
+    },
+    "bannerImage": null,
+    "genres": [],
+    "synonyms": [],
+    "averageScore": 42,
+    "popularity": 157,
+    "isAdult": false,
+    "source": "ORIGINAL",
+    "countryOfOrigin": "JP",
+    "tags": [],
+    "studios": {
+      "nodes": []
+    },
+    "trailer": null,
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": []
+    },
+    "characters": {
+      "edges": []
+    },
+    "streamingEpisodes": []
+  },
+  "121431": {
+    "id": 121431,
+    "idMal": null,
+    "updatedAt": 1792962175,
+    "title": {
+      "romaji": "Yurayura Ki",
+      "english": "yurayura ki",
+      "native": "ゆらゆら記"
+    },
+    "type": "ANIME",
+    "format": "MOVIE",
+    "status": "FINISHED",
+    "description": "2019 first-year graduation work by Asami Tatsumoto at Tama Art University.",
+    "episodes": 1,
+    "duration": 3,
+    "season": null,
+    "seasonYear": null,
+    "startDate": {
+      "year": 2019,
+      "month": null,
+      "day": null
+    },
+    "endDate": {
+      "year": 2019,
+      "month": null,
+      "day": null
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx121431-Ebh46jRSZXRh.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx121431-Ebh46jRSZXRh.png",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx121431-Ebh46jRSZXRh.png",
+      "color": "#f1ae43"
+    },
+    "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/121431-mMbs2dkC2Y1a.jpg",
+    "genres": [
+      "Psychological"
+    ],
+    "synonyms": [],
+    "averageScore": null,
+    "popularity": 159,
+    "isAdult": false,
+    "source": "ORIGINAL",
+    "countryOfOrigin": "JP",
+    "tags": [
+      {
+        "name": "No Dialogue",
+        "rank": 20,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Graduation Project",
+        "rank": 20,
+        "isMediaSpoiler": false
+      }
+    ],
+    "studios": {
+      "nodes": []
+    },
+    "trailer": {
+      "id": "REZA1_QXVcg",
+      "site": "youtube"
+    },
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": []
+    },
+    "characters": {
+      "edges": []
+    },
+    "streamingEpisodes": []
   }
 }

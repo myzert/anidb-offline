@@ -2,7 +2,7 @@
   "193699": {
     "id": 193699,
     "idMal": 61758,
-    "updatedAt": 1792920834,
+    "updatedAt": 1792978700,
     "title": {
       "romaji": "Akuyaku Reijou no Naka no Hito",
       "english": null,
@@ -230,7 +230,7 @@
   "193968": {
     "id": 193968,
     "idMal": 61773,
-    "updatedAt": 1792920813,
+    "updatedAt": 1792969387,
     "title": {
       "romaji": "Let’s Play: Quest Darake no My Life",
       "english": "Let’s Play",
@@ -815,7 +815,7 @@
   "193348": {
     "id": 193348,
     "idMal": 61788,
-    "updatedAt": 1792920859,
+    "updatedAt": 1792958581,
     "title": {
       "romaji": "Netorareta Bakunyuu Tsuma-tachi",
       "english": null,
@@ -1290,7 +1290,7 @@
   "193296": {
     "id": 193296,
     "idMal": 61461,
-    "updatedAt": 1792922536,
+    "updatedAt": 1792958581,
     "title": {
       "romaji": "Tenkaichi: Nihon Saikyou Bugeisha Ketteisen",
       "english": null,
@@ -3673,7 +3673,7 @@
   "193676": {
     "id": 193676,
     "idMal": 61754,
-    "updatedAt": 1792920835,
+    "updatedAt": 1792969387,
     "title": {
       "romaji": "S-Rank Party Kara Kaikosareta [Jugushi]",
       "english": null,
@@ -4230,7 +4230,7 @@
   "193617": {
     "id": 193617,
     "idMal": 59930,
-    "updatedAt": 1792920840,
+    "updatedAt": 1792976553,
     "title": {
       "romaji": "Kaguya-hime",
       "english": null,
@@ -4319,6 +4319,91 @@
               "romaji": "Kaguya-hime (1961)",
               "english": null,
               "native": "かぐや姫"
+            }
+          }
+        }
+      ]
+    },
+    "characters": {
+      "edges": []
+    },
+    "streamingEpisodes": []
+  },
+  "193907": {
+    "id": 193907,
+    "idMal": null,
+    "updatedAt": 1792978726,
+    "title": {
+      "romaji": "Azur Lane: 3 Shuunen Kinen Anime PV",
+      "english": null,
+      "native": "アズールレーン 3周年記念アニメPV"
+    },
+    "type": "ANIME",
+    "format": "SPECIAL",
+    "status": "FINISHED",
+    "description": "Animated trailer celebrating Azur Lane's 3rd Anniversary.",
+    "episodes": 1,
+    "duration": 2,
+    "season": null,
+    "seasonYear": null,
+    "startDate": {
+      "year": 2020,
+      "month": 9,
+      "day": 15
+    },
+    "endDate": {
+      "year": 2020,
+      "month": 9,
+      "day": 15
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx193907-NP7JxXP7W1gM.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx193907-NP7JxXP7W1gM.png",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx193907-NP7JxXP7W1gM.png",
+      "color": "#f1bb86"
+    },
+    "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/193907-ZWzj50I1zJlX.jpg",
+    "genres": [],
+    "synonyms": [
+      "Azur Lane: 3rd Anniversary Anime PV"
+    ],
+    "averageScore": null,
+    "popularity": 199,
+    "isAdult": false,
+    "source": "VIDEO_GAME",
+    "countryOfOrigin": "JP",
+    "tags": [
+      {
+        "name": "Primarily Female Cast",
+        "rank": 79,
+        "isMediaSpoiler": false
+      }
+    ],
+    "studios": {
+      "nodes": [
+        {
+          "name": "MADHOUSE"
+        }
+      ]
+    },
+    "trailer": {
+      "id": "9hn3kWDafiQ",
+      "site": "youtube"
+    },
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": [
+        {
+          "relationType": "CHARACTER",
+          "node": {
+            "id": 124082,
+            "type": "ANIME",
+            "format": "SPECIAL",
+            "status": "RELEASING",
+            "title": {
+              "romaji": "Azur Lane Anime PVs",
+              "english": null,
+              "native": "アズールレーン アニメPVs"
             }
           }
         }
