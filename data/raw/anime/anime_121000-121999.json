@@ -2,7 +2,7 @@
   "121176": {
     "id": 121176,
     "idMal": 42429,
-    "updatedAt": 1793016027,
+    "updatedAt": 1793052060,
     "title": {
       "romaji": "Honzuki no Gekokujou: Shisho ni Naru Tame ni wa Shudan wo Erandeiraremasen 3rd Season",
       "english": "Ascendance of a Bookworm Season 3",
@@ -1234,7 +1234,7 @@
   "121467": {
     "id": 121467,
     "idMal": 40434,
-    "updatedAt": 1793016082,
+    "updatedAt": 1793044966,
     "title": {
       "romaji": "Modao Zushi 3",
       "english": "The Founder of Diabolism: Final Season",
@@ -2109,7 +2109,7 @@
   "121681": {
     "id": 121681,
     "idMal": 42506,
-    "updatedAt": 1793012948,
+    "updatedAt": 1793052161,
     "title": {
       "romaji": "World Witches Hasshin Shimasu!",
       "english": "World Witches Take Off!",
@@ -3831,7 +3831,7 @@
   "121034": {
     "id": 121034,
     "idMal": 42423,
-    "updatedAt": 1793016053,
+    "updatedAt": 1793052161,
     "title": {
       "romaji": "Date A Bullet: Nightmare or Queen",
       "english": "Date A Bullet: Dead or Bullet & Nightmare or Queen",
@@ -4373,7 +4373,7 @@
   "121061": {
     "id": 121061,
     "idMal": 42279,
-    "updatedAt": 1792583705,
+    "updatedAt": 1793048573,
     "title": {
       "romaji": "Wind",
       "english": null,
@@ -4406,7 +4406,7 @@
     "bannerImage": null,
     "genres": [],
     "synonyms": [],
-    "averageScore": 43,
+    "averageScore": 46,
     "popularity": 169,
     "isAdult": false,
     "source": "ORIGINAL",
@@ -4419,7 +4419,11 @@
     "nextAiringEpisode": null,
     "relations": {
       "edges": []
-    }
+    },
+    "characters": {
+      "edges": []
+    },
+    "streamingEpisodes": []
   },
   "121119": {
     "id": 121119,
@@ -4634,7 +4638,7 @@
   "121514": {
     "id": 121514,
     "idMal": 50240,
-    "updatedAt": 1793012960,
+    "updatedAt": 1793052122,
     "title": {
       "romaji": "Dali Si Rizhi 2",
       "english": null,
@@ -7630,7 +7634,7 @@
   "121664": {
     "id": 121664,
     "idMal": null,
-    "updatedAt": 1792800224,
+    "updatedAt": 1793052148,
     "title": {
       "romaji": "DAICON IV Opening Animation",
       "english": null,
@@ -7676,7 +7680,7 @@
       "ダイコン"
     ],
     "averageScore": 78,
-    "popularity": 4058,
+    "popularity": 4057,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -7752,7 +7756,28 @@
           }
         }
       ]
-    }
+    },
+    "characters": {
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 18517,
+            "name": {
+              "full": "DAICON no Onnanoko",
+              "native": "DAICONの女の子",
+              "userPreferred": "DAICON no Onnanoko"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b18517-XJhEVRW4sxQI.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b18517-XJhEVRW4sxQI.png"
+            }
+          },
+          "voiceActors": []
+        }
+      ]
+    },
+    "streamingEpisodes": []
   },
   "121043": {
     "id": 121043,
@@ -11085,7 +11110,7 @@
   "121532": {
     "id": 121532,
     "idMal": 42383,
-    "updatedAt": 1792753970,
+    "updatedAt": 1793044966,
     "title": {
       "romaji": "Konbini ○○ Z",
       "english": null,
@@ -11125,7 +11150,7 @@
       "The Convenience Store Girl Z"
     ],
     "averageScore": 57,
-    "popularity": 1558,
+    "popularity": 1560,
     "isAdult": true,
     "source": "VISUAL_NOVEL",
     "countryOfOrigin": "JP",
@@ -11187,7 +11212,11 @@
     "nextAiringEpisode": null,
     "relations": {
       "edges": []
-    }
+    },
+    "characters": {
+      "edges": []
+    },
+    "streamingEpisodes": []
   },
   "121593": {
     "id": 121593,
@@ -11349,7 +11378,7 @@
   "121755": {
     "id": 121755,
     "idMal": 31073,
-    "updatedAt": 1793012943,
+    "updatedAt": 1793048573,
     "title": {
       "romaji": "SHOW BY ROCK!!: Plasmagica na Gogo",
       "english": null,
@@ -12533,7 +12562,7 @@
   "121754": {
     "id": 121754,
     "idMal": 31072,
-    "updatedAt": 1793012943,
+    "updatedAt": 1793048573,
     "title": {
       "romaji": "Show by Rock!!: Legend of Shingan Crimsonz",
       "english": null,
@@ -12709,6 +12738,61 @@
           }
         }
       ]
+    },
+    "characters": {
+      "edges": []
+    },
+    "streamingEpisodes": []
+  },
+  "121044": {
+    "id": 121044,
+    "idMal": 42277,
+    "updatedAt": 1793048573,
+    "title": {
+      "romaji": "YELLOW FISH",
+      "english": null,
+      "native": "YELLOW FISH"
+    },
+    "type": "ANIME",
+    "format": "MOVIE",
+    "status": "FINISHED",
+    "description": "Images of the sea and clouds seen from the top of the mountain, the candles of the Tibetan temple, etc., and a chaotic psychedelic animation are juxtaposed.",
+    "episodes": 1,
+    "duration": 4,
+    "season": null,
+    "seasonYear": null,
+    "startDate": {
+      "year": 1998,
+      "month": null,
+      "day": null
+    },
+    "endDate": {
+      "year": 1998,
+      "month": null,
+      "day": null
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx121044-YQAimME3VXFM.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx121044-YQAimME3VXFM.jpg",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx121044-YQAimME3VXFM.jpg",
+      "color": null
+    },
+    "bannerImage": null,
+    "genres": [],
+    "synonyms": [],
+    "averageScore": 42,
+    "popularity": 141,
+    "isAdult": false,
+    "source": "ORIGINAL",
+    "countryOfOrigin": "JP",
+    "tags": [],
+    "studios": {
+      "nodes": []
+    },
+    "trailer": null,
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": []
     },
     "characters": {
       "edges": []

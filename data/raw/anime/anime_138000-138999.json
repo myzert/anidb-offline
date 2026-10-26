@@ -2,7 +2,7 @@
   "138056": {
     "id": 138056,
     "idMal": 49618,
-    "updatedAt": 1793012469,
+    "updatedAt": 1793048510,
     "title": {
       "romaji": "Shuumatsu no Valkyrie II",
       "english": "Record of Ragnarok II",
@@ -995,7 +995,7 @@
   "138424": {
     "id": 138424,
     "idMal": 49721,
-    "updatedAt": 1793011482,
+    "updatedAt": 1793052111,
     "title": {
       "romaji": "Karakai Jouzu no Takagi-san 3",
       "english": "Teasing Master Takagi-san Season 3",
@@ -2734,7 +2734,7 @@
   "138882": {
     "id": 138882,
     "idMal": 49776,
-    "updatedAt": 1793016146,
+    "updatedAt": 1793052092,
     "title": {
       "romaji": "Kumichou Musume to Sewagakari",
       "english": "The Yakuza's Guide to Babysitting",
@@ -3681,7 +3681,7 @@
   "138425": {
     "id": 138425,
     "idMal": 49722,
-    "updatedAt": 1793016076,
+    "updatedAt": 1793052161,
     "title": {
       "romaji": "Karakai Jouzu no Takagi-san Movie",
       "english": "Teasing Master Takagi-san: The Movie",
@@ -4905,7 +4905,7 @@
   "138714": {
     "id": 138714,
     "idMal": 49738,
-    "updatedAt": 1793011456,
+    "updatedAt": 1793052087,
     "title": {
       "romaji": "Heike Monogatari",
       "english": "The Heike Story",
@@ -5904,7 +5904,7 @@
   "138565": {
     "id": 138565,
     "idMal": 49709,
-    "updatedAt": 1793016051,
+    "updatedAt": 1793052035,
     "title": {
       "romaji": "Fumetsu no Anata e Season 2",
       "english": "To Your Eternity Season 2",
@@ -6844,7 +6844,7 @@
   "138450": {
     "id": 138450,
     "idMal": 41880,
-    "updatedAt": 1792800249,
+    "updatedAt": 1793052115,
     "title": {
       "romaji": "Crayon Shin-chan Specials",
       "english": null,
@@ -6936,12 +6936,16 @@
           }
         }
       ]
-    }
+    },
+    "characters": {
+      "edges": []
+    },
+    "streamingEpisodes": []
   },
   "138511": {
     "id": 138511,
     "idMal": 49703,
-    "updatedAt": 1793011474,
+    "updatedAt": 1793048573,
     "title": {
       "romaji": "Fate/kaleid liner Prisma☆Illya: FINALE",
       "english": null,
@@ -7230,7 +7234,7 @@
   "138700": {
     "id": 138700,
     "idMal": 49733,
-    "updatedAt": 1793011458,
+    "updatedAt": 1793052161,
     "title": {
       "romaji": "Yuukoku no Moriarty OVA",
       "english": "Moriarty the Patriot OVA",
@@ -7727,7 +7731,7 @@
   "138060": {
     "id": 138060,
     "idMal": 49357,
-    "updatedAt": 1793016011,
+    "updatedAt": 1793044966,
     "title": {
       "romaji": "Star Wars: Visions",
       "english": "Star Wars: Visions",
@@ -8753,7 +8757,7 @@
   "138360": {
     "id": 138360,
     "idMal": 50161,
-    "updatedAt": 1793011487,
+    "updatedAt": 1793052161,
     "title": {
       "romaji": "Anehame: Ore no Hatsukoi ga Jisshi na wake ga nai",
       "english": null,
@@ -9832,7 +9836,7 @@
   "138119": {
     "id": 138119,
     "idMal": 49633,
-    "updatedAt": 1792581121,
+    "updatedAt": 1793052115,
     "title": {
       "romaji": "Fate/kaleid liner Prisma☆Illya: Licht - Namae no Nai Shoujo Special Mini Anime",
       "english": null,
@@ -9869,8 +9873,8 @@
     "synonyms": [
       "Судьба/Девочка-волшебница Иллия: Мини-аниме"
     ],
-    "averageScore": 46,
-    "popularity": 1049,
+    "averageScore": 47,
+    "popularity": 1050,
     "isAdult": false,
     "source": null,
     "countryOfOrigin": "JP",
@@ -9966,12 +9970,197 @@
           }
         }
       ]
-    }
+    },
+    "characters": {
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 503,
+            "name": {
+              "full": "Illyasviel von Einzbern",
+              "native": "イリヤスフィール・フォン・アインツベルン",
+              "userPreferred": "Illyasviel von Einzbern"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b503-SmS87yq6l2tD.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b503-SmS87yq6l2tD.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95117,
+              "name": {
+                "full": "Mai Kadowaki",
+                "native": "門脇舞以",
+                "userPreferred": "Mai Kadowaki"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95117-TpLo1AeJRfVJ.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95117-TpLo1AeJRfVJ.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 21728,
+            "name": {
+              "full": "Miyu Edelfelt",
+              "native": "美遊・エーデルフェルト",
+              "userPreferred": "Miyu Edelfelt"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b21728-CmrlcSHNEAW9.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b21728-CmrlcSHNEAW9.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95078,
+              "name": {
+                "full": "Kaori Nazuka",
+                "native": "名塚佳織",
+                "userPreferred": "Kaori Nazuka"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95078-tMm7zdlRNZ3P.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95078-tMm7zdlRNZ3P.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 40624,
+            "name": {
+              "full": "Chloe von Einzbern",
+              "native": "クロエ・フォン・アインツベルン",
+              "userPreferred": "Chloe von Einzbern"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b40624-dTNIROLQXlkb.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b40624-dTNIROLQXlkb.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95061,
+              "name": {
+                "full": "Chiwa Saitou",
+                "native": "斎藤千和",
+                "userPreferred": "Chiwa Saitou"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95061-ncYFfzPJDoQV.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95061-ncYFfzPJDoQV.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 89878,
+            "name": {
+              "full": "Beatrice Flowerchild",
+              "native": "ベアトリス・フラワーチャイルド",
+              "userPreferred": "Beatrice Flowerchild"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b89878-ydND14UIgKbT.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b89878-ydND14UIgKbT.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95008,
+              "name": {
+                "full": "Rie Kugimiya",
+                "native": "釘宮理恵",
+                "userPreferred": "Rie Kugimiya"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95008-2y0EeuSTHIri.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95008-2y0EeuSTHIri.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 89879,
+            "name": {
+              "full": "Erika Ainsworth",
+              "native": "エリカ・エインズワース",
+              "userPreferred": "Erika Ainsworth"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/89879-PjteJjwY3zsZ.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/89879-PjteJjwY3zsZ.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 106404,
+              "name": {
+                "full": "Sumire Morohoshi",
+                "native": "諸星すみれ",
+                "userPreferred": "Sumire Morohoshi"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n106404-uodatsBbsnJh.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n106404-uodatsBbsnJh.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 142168,
+            "name": {
+              "full": "Julian Ainsworth",
+              "native": "ジュリアン・エインズワース",
+              "userPreferred": "Julian Ainsworth"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b142168-QnZeM2FqvZ28.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b142168-QnZeM2FqvZ28.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 111635,
+              "name": {
+                "full": "Natsuki Hanae",
+                "native": "花江夏樹",
+                "userPreferred": "Natsuki Hanae"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n111635-L385UcjTKCBq.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n111635-L385UcjTKCBq.png"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "streamingEpisodes": []
   },
   "138260": {
     "id": 138260,
     "idMal": 49652,
-    "updatedAt": 1793011494,
+    "updatedAt": 1793034165,
     "title": {
       "romaji": "Shiguang Dailiren: Xiaoyao Sanren De Weituo",
       "english": "Link Click: Troubles of Ordinary People",
@@ -12955,7 +13144,7 @@
   "138459": {
     "id": 138459,
     "idMal": 49692,
-    "updatedAt": 1793011478,
+    "updatedAt": 1793037760,
     "title": {
       "romaji": "Heroine Tarumono!: Kiraware Heroine to Naisho no Oshigoto",
       "english": "Heroines Run the Show",
@@ -13864,7 +14053,7 @@
   "138554": {
     "id": 138554,
     "idMal": 48994,
-    "updatedAt": 1793011471,
+    "updatedAt": 1793048573,
     "title": {
       "romaji": "Closure no Kimitsu File",
       "english": "Closure's Secret Files",
@@ -14637,7 +14826,7 @@
   "138675": {
     "id": 138675,
     "idMal": 40076,
-    "updatedAt": 1793011460,
+    "updatedAt": 1793052161,
     "title": {
       "romaji": "Pocari Sweat web movie: Hataraku Saibou Dai 11.5-wa Necchuushou - Moshimo Pocari Sweat ga Attara",
       "english": null,
@@ -15139,7 +15328,7 @@
   "138788": {
     "id": 138788,
     "idMal": 49766,
-    "updatedAt": 1793016146,
+    "updatedAt": 1793044966,
     "title": {
       "romaji": "Under Ninja",
       "english": "UNDER NINJA",
@@ -16728,7 +16917,7 @@
   "138063": {
     "id": 138063,
     "idMal": 49637,
-    "updatedAt": 1793011510,
+    "updatedAt": 1793044966,
     "title": {
       "romaji": "Showtime!: Uta no Onee-san datte Shitai",
       "english": "Show Time!",
@@ -18243,7 +18432,7 @@
   "138351": {
     "id": 138351,
     "idMal": null,
-    "updatedAt": 1792800249,
+    "updatedAt": 1793041375,
     "title": {
       "romaji": "Liang Bu Yi Part 2",
       "english": "No Doubt in Us Part 2",
@@ -18380,7 +18569,44 @@
           }
         }
       ]
-    }
+    },
+    "characters": {
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 218530,
+            "name": {
+              "full": "Yu Xu",
+              "native": "徐钰",
+              "userPreferred": "Yu Xu"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b218530-WGpsFVbpm9TQ.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b218530-WGpsFVbpm9TQ.png"
+            }
+          },
+          "voiceActors": []
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 218531,
+            "name": {
+              "full": "Jinyun Xiao",
+              "native": "萧锦昀",
+              "userPreferred": "Jinyun Xiao"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b218531-MRGIhk11roD9.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b218531-MRGIhk11roD9.png"
+            }
+          },
+          "voiceActors": []
+        }
+      ]
+    },
+    "streamingEpisodes": []
   },
   "138778": {
     "id": 138778,
@@ -20010,7 +20236,7 @@
   "138833": {
     "id": 138833,
     "idMal": 50051,
-    "updatedAt": 1793011444,
+    "updatedAt": 1793044966,
     "title": {
       "romaji": "Abandon: 100 Nukishinai to Derarenai Fushigi na Kyoushitsu",
       "english": null,
