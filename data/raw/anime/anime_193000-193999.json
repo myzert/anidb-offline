@@ -2,7 +2,7 @@
   "193699": {
     "id": 193699,
     "idMal": 61758,
-    "updatedAt": 1793055764,
+    "updatedAt": 1793093345,
     "title": {
       "romaji": "Akuyaku Reijou no Naka no Hito",
       "english": null,
@@ -41,7 +41,7 @@
       "The One Within the Villainess"
     ],
     "averageScore": null,
-    "popularity": 6074,
+    "popularity": 6080,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -230,7 +230,7 @@
   "193968": {
     "id": 193968,
     "idMal": 61773,
-    "updatedAt": 1793066542,
+    "updatedAt": 1793098983,
     "title": {
       "romaji": "Let’s Play: Quest Darake no My Life",
       "english": "Let’s Play",
@@ -270,7 +270,7 @@
       "レップレ"
     ],
     "averageScore": 65,
-    "popularity": 15800,
+    "popularity": 15807,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -815,7 +815,7 @@
   "193348": {
     "id": 193348,
     "idMal": 61788,
-    "updatedAt": 1793062956,
+    "updatedAt": 1793093368,
     "title": {
       "romaji": "Netorareta Bakunyuu Tsuma-tachi",
       "english": null,
@@ -851,7 +851,7 @@
     ],
     "synonyms": [],
     "averageScore": 63,
-    "popularity": 1025,
+    "popularity": 1027,
     "isAdult": true,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -975,7 +975,7 @@
   "193923": {
     "id": 193923,
     "idMal": 61770,
-    "updatedAt": 1792920817,
+    "updatedAt": 1793093331,
     "title": {
       "romaji": "Kono Hon wo Nusumu Mono wa",
       "english": null,
@@ -1015,7 +1015,7 @@
       "Whoever Steals This Book"
     ],
     "averageScore": 59,
-    "popularity": 2667,
+    "popularity": 2668,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -1290,7 +1290,7 @@
   "193296": {
     "id": 193296,
     "idMal": 61461,
-    "updatedAt": 1793048573,
+    "updatedAt": 1793093371,
     "title": {
       "romaji": "Tenkaichi: Nihon Saikyou Bugeisha Ketteisen",
       "english": null,
@@ -1327,7 +1327,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 1396,
+    "popularity": 1397,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -1558,7 +1558,7 @@
   "193242": {
     "id": 193242,
     "idMal": 61491,
-    "updatedAt": 1792575476,
+    "updatedAt": 1793093375,
     "title": {
       "romaji": "Chibizenji-sensei Inokori Kougiroku",
       "english": null,
@@ -1632,7 +1632,178 @@
           }
         }
       ]
-    }
+    },
+    "characters": {
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 19393,
+            "name": {
+              "full": "Akihiko Chuuzenji",
+              "native": "中禅寺秋彦",
+              "userPreferred": "Akihiko Chuuzenji"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b19393-IrjpQXFHkPZk.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b19393-IrjpQXFHkPZk.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95020,
+              "name": {
+                "full": "Katsuyuki Konishi",
+                "native": "小西克幸",
+                "userPreferred": "Katsuyuki Konishi"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95020-uOJO2IlwpcX0.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95020-uOJO2IlwpcX0.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 346656,
+            "name": {
+              "full": "Kanna Kusakabe",
+              "native": "日下部栞奈",
+              "userPreferred": "Kanna Kusakabe"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b346656-tHgAuu4KOxA2.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b346656-tHgAuu4KOxA2.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 126863,
+              "name": {
+                "full": "Kaori Maeda",
+                "native": "前田佳織里",
+                "userPreferred": "Kaori Maeda"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n126863-UhefvoqVWVbB.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n126863-UhefvoqVWVbB.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 16903,
+            "name": {
+              "full": "Tatsumi Sekiguchi",
+              "native": "関口巽",
+              "userPreferred": "Tatsumi Sekiguchi"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b16903-ZR19mBldnhWw.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b16903-ZR19mBldnhWw.png"
+            }
+          },
+          "voiceActors": []
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 16912,
+            "name": {
+              "full": "Shutarou Kiba",
+              "native": "木場修太郎",
+              "userPreferred": "Shutarou Kiba"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b16912-vnF9iwl1YeAM.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b16912-vnF9iwl1YeAM.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 96052,
+              "name": {
+                "full": "Takanori Hoshino",
+                "native": "星野貴紀",
+                "userPreferred": "Takanori Hoshino"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/1052.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/1052.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 17495,
+            "name": {
+              "full": "Reijirou Enokizu",
+              "native": "榎木津礼二郎",
+              "userPreferred": "Reijirou Enokizu"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b17495-jjwgGeymnLyt.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b17495-jjwgGeymnLyt.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95792,
+              "name": {
+                "full": "Shinnosuke Tachibana",
+                "native": "立花慎之介",
+                "userPreferred": "Shinnosuke Tachibana"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95792-5413Ip70mSdV.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95792-5413Ip70mSdV.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 28380,
+            "name": {
+              "full": "Atsuko Chuuzenji",
+              "native": "中禅寺敦子",
+              "userPreferred": "Atsuko Chuuzenji"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b28380-HBPfR8REEZBl.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b28380-HBPfR8REEZBl.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 119906,
+              "name": {
+                "full": "Ai Furihata",
+                "native": "降幡愛",
+                "userPreferred": "Ai Furihata"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/24906-y1JymV8sNeYX.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/24906-y1JymV8sNeYX.jpg"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "streamingEpisodes": []
   },
   "193347": {
     "id": 193347,
@@ -1698,7 +1869,7 @@
   "193413": {
     "id": 193413,
     "idMal": 61273,
-    "updatedAt": 1793006976,
+    "updatedAt": 1793093364,
     "title": {
       "romaji": "Tsurezure PoPiPa",
       "english": null,
@@ -1737,7 +1908,7 @@
       "Poppin'Party's Ordinary Days"
     ],
     "averageScore": 58,
-    "popularity": 546,
+    "popularity": 548,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -1972,7 +2143,7 @@
   "193607": {
     "id": 193607,
     "idMal": 61742,
-    "updatedAt": 1793044966,
+    "updatedAt": 1793093351,
     "title": {
       "romaji": "Dekichau made Kon",
       "english": "Marry Me, Let's Have a Baby!",
@@ -2248,7 +2419,7 @@
   "193623": {
     "id": 193623,
     "idMal": 61367,
-    "updatedAt": 1792920839,
+    "updatedAt": 1793093350,
     "title": {
       "romaji": "Tooi-san wa Seishun Shitai! \"Baka to SmaPho to Romance to\"",
       "english": null,
@@ -2287,7 +2458,7 @@
       "Tooi-san"
     ],
     "averageScore": null,
-    "popularity": 1810,
+    "popularity": 1811,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -2397,7 +2568,7 @@
   "193707": {
     "id": 193707,
     "idMal": 61910,
-    "updatedAt": 1793064998,
+    "updatedAt": 1793093345,
     "title": {
       "romaji": "Mujin Eki The Animation",
       "english": null,
@@ -2492,7 +2663,7 @@
   "193730": {
     "id": 193730,
     "idMal": 61768,
-    "updatedAt": 1793006956,
+    "updatedAt": 1793093343,
     "title": {
       "romaji": "Uikousen",
       "english": null,
@@ -2526,7 +2697,7 @@
     "genres": [],
     "synonyms": [],
     "averageScore": 63,
-    "popularity": 313,
+    "popularity": 312,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -2630,7 +2801,7 @@
   "193883": {
     "id": 193883,
     "idMal": 61765,
-    "updatedAt": 1792920820,
+    "updatedAt": 1793093334,
     "title": {
       "romaji": "Chibi Godzilla no Gyakushuu Season 3",
       "english": "Chibi Godzilla Raids Again Season 3",
@@ -2671,7 +2842,7 @@
       "ちびゴジラの逆襲 第3シーズ"
     ],
     "averageScore": null,
-    "popularity": 261,
+    "popularity": 262,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -3317,7 +3488,7 @@
   "193705": {
     "id": 193705,
     "idMal": 61745,
-    "updatedAt": 1792920833,
+    "updatedAt": 1793093345,
     "title": {
       "romaji": "Ai♡Scream!",
       "english": null,
@@ -3351,7 +3522,7 @@
     "genres": [],
     "synonyms": [],
     "averageScore": 73,
-    "popularity": 1045,
+    "popularity": 1044,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -3530,7 +3701,7 @@
   "193294": {
     "id": 193294,
     "idMal": 61736,
-    "updatedAt": 1793044966,
+    "updatedAt": 1793093372,
     "title": {
       "romaji": "Toritsukare Otoko",
       "english": null,
@@ -3568,7 +3739,7 @@
       "The Obsessed"
     ],
     "averageScore": null,
-    "popularity": 880,
+    "popularity": 881,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -3673,7 +3844,7 @@
   "193676": {
     "id": 193676,
     "idMal": 61754,
-    "updatedAt": 1793064998,
+    "updatedAt": 1793095373,
     "title": {
       "romaji": "S-Rank Party Kara Kaikosareta [Jugushi]",
       "english": null,
@@ -3714,7 +3885,7 @@
       "I'm a Curse Crafter, and I Don't Need an S-Rank Party!"
     ],
     "averageScore": null,
-    "popularity": 1272,
+    "popularity": 1277,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -3807,7 +3978,7 @@
   "193414": {
     "id": 193414,
     "idMal": 56903,
-    "updatedAt": 1793006976,
+    "updatedAt": 1793093364,
     "title": {
       "romaji": "MyGO!!!!! Member no Nichijou",
       "english": null,
@@ -3846,7 +4017,7 @@
       "MyGO!!!!! Members' Daily Life"
     ],
     "averageScore": 65,
-    "popularity": 623,
+    "popularity": 625,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -4071,7 +4242,7 @@
   "193372": {
     "id": 193372,
     "idMal": 61737,
-    "updatedAt": 1792920857,
+    "updatedAt": 1793093366,
     "title": {
       "romaji": "feel like",
       "english": null,
@@ -4105,7 +4276,7 @@
     "genres": [],
     "synonyms": [],
     "averageScore": 64,
-    "popularity": 339,
+    "popularity": 338,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -4154,7 +4325,7 @@
   "193374": {
     "id": 193374,
     "idMal": null,
-    "updatedAt": 1792920857,
+    "updatedAt": 1793093366,
     "title": {
       "romaji": "Cream de Ai ni Ikemasu ka",
       "english": "CREAM",
@@ -4590,7 +4761,7 @@
   "193906": {
     "id": 193906,
     "idMal": null,
-    "updatedAt": 1793064966,
+    "updatedAt": 1793093332,
     "title": {
       "romaji": "Azur Lane: 4 Shuunen Kinen Anime PV",
       "english": null,
@@ -4626,7 +4797,7 @@
       "Azur Lane: 4th Anniversary Anime PV"
     ],
     "averageScore": null,
-    "popularity": 184,
+    "popularity": 185,
     "isAdult": false,
     "source": "VIDEO_GAME",
     "countryOfOrigin": "JP",
