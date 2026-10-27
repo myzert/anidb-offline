@@ -2,7 +2,7 @@
   "105074": {
     "id": 105074,
     "idMal": 38610,
-    "updatedAt": 1793052161,
+    "updatedAt": 1793064998,
     "title": {
       "romaji": "Tejina Senpai",
       "english": "Magical Sempai",
@@ -565,7 +565,7 @@
   "105928": {
     "id": 105928,
     "idMal": 38707,
-    "updatedAt": 1792755696,
+    "updatedAt": 1793064998,
     "title": {
       "romaji": "RobiHachi",
       "english": "RobiHachi",
@@ -604,7 +604,7 @@
     ],
     "synonyms": [],
     "averageScore": 61,
-    "popularity": 11722,
+    "popularity": 11725,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -659,12 +659,286 @@
     "nextAiringEpisode": null,
     "relations": {
       "edges": []
-    }
+    },
+    "characters": {
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 138013,
+            "name": {
+              "full": "Robby Yarge",
+              "native": "ロビー・ヤージ",
+              "userPreferred": "Robby Yarge"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b138013-9S5i0cBuZrds.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b138013-9S5i0cBuZrds.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95123,
+              "name": {
+                "full": "Kazuya Nakai",
+                "native": "中井和哉",
+                "userPreferred": "Kazuya Nakai"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95123-54LrTiD9kGwY.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95123-54LrTiD9kGwY.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 138016,
+            "name": {
+              "full": "Hatchi Kita",
+              "native": "ハッチ・キタ",
+              "userPreferred": "Hatchi Kita"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b138016-T7N6cDzsNtw9.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b138016-T7N6cDzsNtw9.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 112915,
+              "name": {
+                "full": "Keisuke Koumoto",
+                "native": "河本啓佑",
+                "userPreferred": "Keisuke Koumoto"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n112915-t6QiS4ax1wkO.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n112915-t6QiS4ax1wkO.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 138014,
+            "name": {
+              "full": "Allo",
+              "native": "アロ",
+              "userPreferred": "Allo"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b138014-jyxwc86OjERI.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b138014-jyxwc86OjERI.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 107480,
+              "name": {
+                "full": "Subaru Kimura",
+                "native": "木村昴",
+                "userPreferred": "Subaru Kimura"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n107480-h2RgLXNP7hcj.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n107480-h2RgLXNP7hcj.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 138015,
+            "name": {
+              "full": "Yang",
+              "native": "ヤン",
+              "userPreferred": "Yang"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b138015-isI2kSbfp8vN.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b138015-isI2kSbfp8vN.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95002,
+              "name": {
+                "full": "Tomokazu Sugita",
+                "native": "杉田智和",
+                "userPreferred": "Tomokazu Sugita"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95002-nDIvHaynicEg.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95002-nDIvHaynicEg.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 138017,
+            "name": {
+              "full": "Gras",
+              "native": "グラ",
+              "userPreferred": "Gras"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b138017-7R8YY2tEWT3w.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b138017-7R8YY2tEWT3w.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 138019,
+              "name": {
+                "full": "Shinnosuke Tokudome",
+                "native": "徳留慎乃佑",
+                "userPreferred": "Shinnosuke Tokudome"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n138019-ThPPMU8dqpnH.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n138019-ThPPMU8dqpnH.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 138018,
+            "name": {
+              "full": "JPS-19",
+              "native": null,
+              "userPreferred": "JPS-19"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b138018-0mkPf2ArY5Qp.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b138018-0mkPf2ArY5Qp.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95278,
+              "name": {
+                "full": "Daisuke Sakaguchi",
+                "native": "阪口大助",
+                "userPreferred": "Daisuke Sakaguchi"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95278-IrUPhIvJCsF9.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95278-IrUPhIvJCsF9.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 138911,
+            "name": {
+              "full": "Wombat",
+              "native": "ウォンバット",
+              "userPreferred": "Wombat"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b138911-ygLX4GLQdz9A.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b138911-ygLX4GLQdz9A.png"
+            }
+          },
+          "voiceActors": []
+        }
+      ]
+    },
+    "streamingEpisodes": [
+      {
+        "title": "Episode 1 - Traveling Companions; Journey to the Star",
+        "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/d3a06dfa949f88bc5995d7246d3a835c1668929361_full.jpg",
+        "url": "http://www.crunchyroll.com/watch/GPWUKP1MW/traveling-companions-journey-to-the-star",
+        "site": "Crunchyroll"
+      },
+      {
+        "title": "Episode 2 - Truth Found from an Octopus",
+        "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/0bd9573c9a16ab7b802163f3808323ab1668929409_full.jpg",
+        "url": "http://www.crunchyroll.com/watch/G2XU0E892/truth-found-from-an-octopus",
+        "site": "Crunchyroll"
+      },
+      {
+        "title": "Episode 3 - Pique on Planet Pluto",
+        "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/d4d381c4cf020d3748ab7dbae5b9e6cb1668929527_full.jpg",
+        "url": "http://www.crunchyroll.com/watch/G8WUNZ452/pique-on-planet-pluto",
+        "site": "Crunchyroll"
+      },
+      {
+        "title": "Episode 4 - Merfolk on the End of the Pole",
+        "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/770e4f94533d9cc20e777f824e8169151668929970_full.jpg",
+        "url": "http://www.crunchyroll.com/watch/GZ7UVZ09X/merfolk-on-the-end-of-the-pole",
+        "site": "Crunchyroll"
+      },
+      {
+        "title": "Episode 5 - The Don Opens All Doors",
+        "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/0cdfd54b639b9b254a9d002bcac3651e1668929962_full.jpg",
+        "url": "http://www.crunchyroll.com/watch/GQJUGKPWP/the-don-opens-all-doors",
+        "site": "Crunchyroll"
+      },
+      {
+        "title": "Episode 6 - Qu-eel-le Surprise",
+        "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/c1208c90e3bc84213d080e4f109620061668930069_full.jpg",
+        "url": "http://www.crunchyroll.com/watch/GWDU8150X/qu-eel-le-surprise",
+        "site": "Crunchyroll"
+      },
+      {
+        "title": "Episode 7 - Land of Dreams Just Ahead",
+        "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/97d1c8988d4a61a92e5e42b38304507f1668930081_full.jpg",
+        "url": "http://www.crunchyroll.com/watch/G0DUN75Z8/land-of-dreams-just-ahead",
+        "site": "Crunchyroll"
+      },
+      {
+        "title": "Episode 8 - Heads I'm Tin, Tails You Lose",
+        "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/c124a855ae2544e1453368cb14d144b61668931087_full.jpg",
+        "url": "http://www.crunchyroll.com/watch/GEVUZ940N/heads-im-tin-tails-you-lose",
+        "site": "Crunchyroll"
+      },
+      {
+        "title": "Episode 9 - The Family That Stays Together, Hizakuriger",
+        "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/598c47f71cafedd169bee90f1c545e961668931156_full.jpg",
+        "url": "http://www.crunchyroll.com/watch/G7PU4QX8M/the-family-that-stays-together-hizakuriger",
+        "site": "Crunchyroll"
+      },
+      {
+        "title": "Episode 10 - Never Get Involved in a Buddies’ Quarrel",
+        "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/3cc52f622e410945444460042501cb821668931208_full.jpg",
+        "url": "http://www.crunchyroll.com/watch/G9DUE814M/never-get-involved-in-a-buddies-quarrel",
+        "site": "Crunchyroll"
+      },
+      {
+        "title": "Episode 11 - Common Fame Is a Common Isekandar",
+        "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/7a75a2a99123588dde6375f006e8f3b41668931268_full.jpg",
+        "url": "http://www.crunchyroll.com/watch/GX9UQ5P2E/common-fame-is-a-common-isekandar",
+        "site": "Crunchyroll"
+      },
+      {
+        "title": "Episode 12 - Dream of the Moon, Dream of the Earth",
+        "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/eb4f1fedd2e9110c907ae453f261c49c1668931330_full.jpg",
+        "url": "http://www.crunchyroll.com/watch/GJWU2Z5D1/dream-of-the-moon-dream-of-the-earth",
+        "site": "Crunchyroll"
+      }
+    ]
   },
   "105143": {
     "id": 105143,
     "idMal": 38234,
-    "updatedAt": 1793041375,
+    "updatedAt": 1793064998,
     "title": {
       "romaji": "ONE PIECE STAMPEDE",
       "english": "One Piece: Stampede",
@@ -1587,7 +1861,7 @@
   "105914": {
     "id": 105914,
     "idMal": 38759,
-    "updatedAt": 1793052055,
+    "updatedAt": 1793066502,
     "title": {
       "romaji": "Sewayaki Kitsune no Senko-san",
       "english": "The Helpful Fox Senko-san",
@@ -2915,7 +3189,7 @@
   "105749": {
     "id": 105749,
     "idMal": 38731,
-    "updatedAt": 1793052125,
+    "updatedAt": 1793066543,
     "title": {
       "romaji": "Diamond no Ace act II",
       "english": "Ace of the Diamond act II",
@@ -4266,7 +4540,7 @@
   "105334": {
     "id": 105334,
     "idMal": 38680,
-    "updatedAt": 1793052025,
+    "updatedAt": 1793064872,
     "title": {
       "romaji": "Fruits Basket: 1st Season",
       "english": "Fruits Basket (2019)",
@@ -5544,7 +5818,7 @@
   "105989": {
     "id": 105989,
     "idMal": 38778,
-    "updatedAt": 1793052151,
+    "updatedAt": 1793066512,
     "title": {
       "romaji": "Midara na Ao-chan wa Benkyou ga Dekinai",
       "english": "Ao-chan Can't Study!",
@@ -5965,7 +6239,7 @@
   "105333": {
     "id": 105333,
     "idMal": 38691,
-    "updatedAt": 1793052013,
+    "updatedAt": 1793066446,
     "title": {
       "romaji": "Dr. STONE",
       "english": "Dr. STONE",
@@ -7055,7 +7329,7 @@
   "105156": {
     "id": 105156,
     "idMal": 38659,
-    "updatedAt": 1793052054,
+    "updatedAt": 1793066438,
     "title": {
       "romaji": "Shinchou Yuusha: Kono Yuusha ga Ore TUEEE Kuse ni Shinchou Sugiru",
       "english": "Cautious Hero: The Hero Is Overpowered but Overly Cautious",
@@ -7974,7 +8248,7 @@
   "105595": {
     "id": 105595,
     "idMal": 37765,
-    "updatedAt": 1793052132,
+    "updatedAt": 1793066543,
     "title": {
       "romaji": "Kidou Senshi Gundam: Senkou no Hathaway",
       "english": "Mobile Suit Gundam Hathaway",
@@ -8844,7 +9118,7 @@
   "105310": {
     "id": 105310,
     "idMal": 38671,
-    "updatedAt": 1793048439,
+    "updatedAt": 1793066459,
     "title": {
       "romaji": "Enen no Shouboutai",
       "english": "Fire Force",
@@ -10571,7 +10845,7 @@
   "105228": {
     "id": 105228,
     "idMal": 38668,
-    "updatedAt": 1793048446,
+    "updatedAt": 1793066427,
     "title": {
       "romaji": "Dorohedoro",
       "english": "Dorohedoro",
@@ -11632,7 +11906,7 @@
   "105190": {
     "id": 105190,
     "idMal": 38656,
-    "updatedAt": 1793048451,
+    "updatedAt": 1793066412,
     "title": {
       "romaji": "Darwin's Game",
       "english": "Darwin's Game",
@@ -12617,7 +12891,7 @@
   "105018": {
     "id": 105018,
     "idMal": 38594,
-    "updatedAt": 1793052053,
+    "updatedAt": 1793066542,
     "title": {
       "romaji": "Kimi to, Nami ni Noretara",
       "english": "Ride Your Wave",
@@ -12938,7 +13212,7 @@
   "105857": {
     "id": 105857,
     "idMal": 38578,
-    "updatedAt": 1793044965,
+    "updatedAt": 1793064950,
     "title": {
       "romaji": "Star☆Twinkle Precure",
       "english": null,
@@ -14344,7 +14618,7 @@
   "105932": {
     "id": 105932,
     "idMal": 38753,
-    "updatedAt": 1793052033,
+    "updatedAt": 1793064998,
     "title": {
       "romaji": "Araburu Kisetsu no Otome-domo yo.",
       "english": "O Maidens in Your Savage Season",
@@ -15731,7 +16005,7 @@
   "105081": {
     "id": 105081,
     "idMal": 38619,
-    "updatedAt": 1793052085,
+    "updatedAt": 1793066426,
     "title": {
       "romaji": "Joshikousei no Mudazukai",
       "english": "Wasteful Days of High School Girls",
@@ -17109,7 +17383,7 @@
   "105893": {
     "id": 105893,
     "idMal": 38699,
-    "updatedAt": 1793052161,
+    "updatedAt": 1793064948,
     "title": {
       "romaji": "Boku no Hero Academia THE MOVIE: Futari no Hero Specials",
       "english": "My Hero Academia the Movie: Two Heroes Specials",
@@ -17726,7 +18000,7 @@
   "105200": {
     "id": 105200,
     "idMal": 37985,
-    "updatedAt": 1793034165,
+    "updatedAt": 1793066517,
     "title": {
       "romaji": "Aggressive Retsuko Season 2",
       "english": "Aggretsuko: Season 2",
@@ -18803,7 +19077,7 @@
   "105391": {
     "id": 105391,
     "idMal": 38425,
-    "updatedAt": 1793016146,
+    "updatedAt": 1793062956,
     "title": {
       "romaji": "Ikkitousen: Western Wolves",
       "english": "Ikki Tousen: Western Wolves",
@@ -19982,7 +20256,7 @@
   "105606": {
     "id": 105606,
     "idMal": 35926,
-    "updatedAt": 1793041375,
+    "updatedAt": 1793064961,
     "title": {
       "romaji": "Shishunki Sex",
       "english": null,
@@ -20325,7 +20599,7 @@
   "105662": {
     "id": 105662,
     "idMal": 38733,
-    "updatedAt": 1793052161,
+    "updatedAt": 1793064947,
     "title": {
       "romaji": "Hataraku Saibou: Kaze Shoukougun",
       "english": "Cells at Work!: The Common Cold",
@@ -21622,7 +21896,7 @@
   "105901": {
     "id": 105901,
     "idMal": 38732,
-    "updatedAt": 1793048573,
+    "updatedAt": 1793064998,
     "title": {
       "romaji": "Chikan Shita Joshikousei to Sonogo, Musabori Au you na Doero Junai",
       "english": "The Molestation That Became Avid Hyper-Erotic Love",
@@ -22182,7 +22456,7 @@
   "105119": {
     "id": 105119,
     "idMal": 38440,
-    "updatedAt": 1792904533,
+    "updatedAt": 1793062890,
     "title": {
       "romaji": "Shikizakura",
       "english": "Shikizakura",
@@ -22218,7 +22492,7 @@
     ],
     "synonyms": [],
     "averageScore": 54,
-    "popularity": 6258,
+    "popularity": 6261,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -23723,7 +23997,7 @@
   "105444": {
     "id": 105444,
     "idMal": 35749,
-    "updatedAt": 1793014658,
+    "updatedAt": 1793062956,
     "title": {
       "romaji": "Goichi Jisan",
       "english": "Old Man Goichi",
@@ -27897,6 +28171,90 @@
           ]
         }
       ]
+    },
+    "streamingEpisodes": []
+  },
+  "105906": {
+    "id": 105906,
+    "idMal": 33106,
+    "updatedAt": 1793059402,
+    "title": {
+      "romaji": "Love Live! μ's Final Love Live! Opening Animation",
+      "english": null,
+      "native": "ラブライブ! μ's Final LoveLive! オープニングアニメーション"
+    },
+    "type": "ANIME",
+    "format": "SPECIAL",
+    "status": "FINISHED",
+    "description": "An anime special shown prior to the \"μ's Final Love Live! ~µ'sic Forever~\" live concert that took place in the Tokyo Dome on March 31st and April 1st 2016. In the episode, the members of μ's visit the school's new baby alpaca, and muse about their current selves.",
+    "episodes": 1,
+    "duration": 5,
+    "season": null,
+    "seasonYear": null,
+    "startDate": {
+      "year": 2016,
+      "month": 3,
+      "day": 31
+    },
+    "endDate": {
+      "year": 2016,
+      "month": 3,
+      "day": 31
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/n105906-WELwe50YILK4.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/n105906-WELwe50YILK4.jpg",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/n105906-WELwe50YILK4.jpg",
+      "color": "#f15d86"
+    },
+    "bannerImage": null,
+    "genres": [
+      "Music",
+      "Slice of Life"
+    ],
+    "synonyms": [],
+    "averageScore": 71,
+    "popularity": 3758,
+    "isAdult": false,
+    "source": "OTHER",
+    "countryOfOrigin": "JP",
+    "tags": [
+      {
+        "name": "Idol",
+        "rank": 60,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Primarily Female Cast",
+        "rank": 20,
+        "isMediaSpoiler": false
+      }
+    ],
+    "studios": {
+      "nodes": []
+    },
+    "trailer": null,
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": [
+        {
+          "relationType": "CHARACTER",
+          "node": {
+            "id": 15051,
+            "type": "ANIME",
+            "format": "TV",
+            "status": "FINISHED",
+            "title": {
+              "romaji": "Love Live! School idol project",
+              "english": "Love Live! School Idol Project",
+              "native": "ラブライブ! School idol project"
+            }
+          }
+        }
+      ]
+    },
+    "characters": {
+      "edges": []
     },
     "streamingEpisodes": []
   }
