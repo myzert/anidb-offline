@@ -470,11 +470,11 @@ def generate_indexes(base_dir):
         merged["start_date"] = format_date(anime.get("startDate"))
         merged["end_date"] = format_date(anime.get("endDate"))
 
-        # Parse Characters & Voice Actors cleanly (compact top 8 characters for raw.json to stay < 100MB)
+        # Parse Characters & Voice Actors cleanly (compact top 5 characters for raw.json to stay well < 100MB)
         characters_raw = anime.get("characters", {})
         characters_edges = characters_raw.get("edges", []) if isinstance(characters_raw, dict) else []
         parsed_characters = []
-        for edge in characters_edges[:8]:
+        for edge in characters_edges[:5]:
             if not isinstance(edge, dict):
                 continue
             char_node = edge.get("node") or {}
@@ -504,7 +504,7 @@ def generate_indexes(base_dir):
             })
         merged["characters"] = parsed_characters
 
-        # Streaming episodes (compact top 12 thumbnails for raw.json)
+        # Streaming episodes (compact top 6 thumbnails for raw.json)
         streaming_eps = anime.get("streamingEpisodes") or []
         merged["streaming_episodes"] = [
             {
@@ -512,7 +512,7 @@ def generate_indexes(base_dir):
                 "thumbnail": ep.get("thumbnail"),
                 "url": ep.get("url")
             }
-            for ep in streaming_eps[:12] if isinstance(ep, dict)
+            for ep in streaming_eps[:6] if isinstance(ep, dict)
         ]
 
         # Detect season and part
@@ -523,7 +523,16 @@ def generate_indexes(base_dir):
         merged["part_number"] = part_num
 
         # TMDB episodes with TMDB images for the specific detected season!
-        merged["tmdb_episodes"] = get_tmdb_episodes(tmdb_id, season_number=season_num)
+        tmdb_eps = get_tmdb_episodes(tmdb_id, season_number=season_num)
+        fmt = (anime.get("format") or "").upper()
+        ep_count = anime.get("episodes") or 0
+        if fmt in ("MOVIE", "SPECIAL", "OVA", "MUSIC") and ep_count <= 1:
+            tmdb_eps = tmdb_eps[:1]
+        elif ep_count > 0:
+            tmdb_eps = tmdb_eps[:ep_count]
+        elif len(tmdb_eps) > 25:
+            tmdb_eps = tmdb_eps[:25]
+        merged["tmdb_episodes"] = tmdb_eps
                 
         formatted_anime_list.append(merged)
         
@@ -535,9 +544,26 @@ def generate_indexes(base_dir):
         
     logging.info("Saving raw.json (minified)...")
     base_dir.parent.mkdir(parents=True, exist_ok=True)
-    with open(base_dir.parent / 'raw.json', 'w', encoding='utf-8') as f:
+    raw_path = base_dir.parent / 'raw.json'
+    with open(raw_path, 'w', encoding='utf-8') as f:
         json.dump(formatted_anime_list, f, ensure_ascii=False, separators=(',', ':'))
         
+    raw_size_mb = raw_path.stat().st_size / (1024 * 1024)
+    logging.info(f"raw.json saved: {raw_size_mb:.2f} MB")
+
+    # Safety guard: ensure raw.json strictly stays under GitHub's 100MB limit
+    if raw_size_mb > 95:
+        logging.warning(f"raw.json ({raw_size_mb:.2f} MB) approaching 100MB! Applying secondary compression pass...")
+        for item in formatted_anime_list:
+            if len(item.get("characters", [])) > 3:
+                item["characters"] = item["characters"][:3]
+            if len(item.get("streaming_episodes", [])) > 3:
+                item["streaming_episodes"] = item["streaming_episodes"][:3]
+        with open(raw_path, 'w', encoding='utf-8') as f:
+            json.dump(formatted_anime_list, f, ensure_ascii=False, separators=(',', ':'))
+        raw_size_mb = raw_path.stat().st_size / (1024 * 1024)
+        logging.info(f"Secondary compression pass raw.json size: {raw_size_mb:.2f} MB")
+
     logging.info("Index generated successfully!")
 
 def sync_schedules(raw_dir, days_back=7, days_forward=7):

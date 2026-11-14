@@ -346,10 +346,10 @@ def export_all(base_name_override: str = None):
     tar_file = releases_dir / f"{base_name}.tar.gz"
     zip_file = releases_dir / f"{base_name}.zip"
 
-    # 1. Export JSON
+    # 1. Export JSON (minified to keep file under GitHub's 50MB warning threshold)
     logging.info(f"Writing JSON release to {json_file}...")
     with open(json_file, "w", encoding="utf-8") as f:
-        json.dump(transformed_items, f, ensure_ascii=False, indent=2)
+        json.dump(transformed_items, f, ensure_ascii=False, separators=(',', ':'))
 
     # 2. Export CSV
     logging.info(f"Writing CSV release to {csv_file}...")
