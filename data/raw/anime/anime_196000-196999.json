@@ -2,10 +2,10 @@
   "196333": {
     "id": 196333,
     "idMal": 62100,
-    "updatedAt": 1793095328,
+    "updatedAt": 1794690143,
     "title": {
       "romaji": "Hirayasumi",
-      "english": null,
+      "english": "Hirayasumi",
       "native": "ひらやすみ"
     },
     "type": "ANIME",
@@ -40,7 +40,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 6811,
+    "popularity": 7789,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -66,13 +66,13 @@
         "isMediaSpoiler": false
       },
       {
-        "name": "LGBTQ+ Themes",
+        "name": "Male Protagonist",
         "rank": 20,
         "isMediaSpoiler": false
       },
       {
-        "name": "Male Protagonist",
-        "rank": 20,
+        "name": "LGBTQ+ Themes",
+        "rank": 13,
         "isMediaSpoiler": false
       }
     ],
@@ -182,7 +182,21 @@
               "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b259185-jfYtKNt5pOnB.jpg"
             }
           },
-          "voiceActors": []
+          "voiceActors": [
+            {
+              "id": 104510,
+              "name": {
+                "full": "Yume Miyamoto",
+                "native": "宮本侑芽",
+                "userPreferred": "Yume Miyamoto"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n104510-hB8YLsPRLNKq.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n104510-hB8YLsPRLNKq.png"
+              }
+            }
+          ]
         },
         {
           "role": "SUPPORTING",
@@ -198,7 +212,21 @@
               "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b259186-WWIURibtnrZm.jpg"
             }
           },
-          "voiceActors": []
+          "voiceActors": [
+            {
+              "id": 102263,
+              "name": {
+                "full": "Youko Hikasa",
+                "native": "日笠陽子",
+                "userPreferred": "Youko Hikasa"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n102263-aaPZtNXVUljW.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n102263-aaPZtNXVUljW.jpg"
+              }
+            }
+          ]
         },
         {
           "role": "SUPPORTING",
@@ -244,7 +272,81 @@
               "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b259188-Ke2y3MeSFiEu.png"
             }
           },
-          "voiceActors": []
+          "voiceActors": [
+            {
+              "id": 95087,
+              "name": {
+                "full": "Daisuke Namikawa",
+                "native": "浪川大輔",
+                "userPreferred": "Daisuke Namikawa"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95087-6dlBBbejsPyg.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95087-6dlBBbejsPyg.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 412364,
+            "name": {
+              "full": "Ryou Ishikawa",
+              "native": "石川リョウ",
+              "userPreferred": "Ryou Ishikawa"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b412364-BrVwBtzwGkcR.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b412364-BrVwBtzwGkcR.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 118908,
+              "name": {
+                "full": "Yuuichirou Umehara",
+                "native": "梅原裕一郎",
+                "userPreferred": "Yuuichirou Umehara"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n118908-a6LPeZI87Pf9.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n118908-a6LPeZI87Pf9.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "BACKGROUND",
+          "node": {
+            "id": 36309,
+            "name": {
+              "full": "Narrator",
+              "native": "ナレーター",
+              "userPreferred": "Narrator"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b36309-6KM0riV4lqfN.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b36309-6KM0riV4lqfN.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 412365,
+              "name": {
+                "full": "Yuuko Naitou",
+                "native": "内藤裕子",
+                "userPreferred": "Yuuko Naitou"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n412365-xt6wEY75vrwJ.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n412365-xt6wEY75vrwJ.jpg"
+              }
+            }
+          ]
         }
       ]
     },
@@ -253,7 +355,7 @@
   "196613": {
     "id": 196613,
     "idMal": 51039,
-    "updatedAt": 1793098885,
+    "updatedAt": 1794690069,
     "title": {
       "romaji": "Dou Po Cangqiong: Nian Fan 4",
       "english": null,
@@ -273,9 +375,9 @@
       "day": 3
     },
     "endDate": {
-      "year": null,
-      "month": null,
-      "day": null
+      "year": 2026,
+      "month": 11,
+      "day": 15
     },
     "coverImage": {
       "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx196613-20kz65bVsHl7.jpg",
@@ -297,7 +399,7 @@
       "Dou Po Cangqiong 8"
     ],
     "averageScore": 77,
-    "popularity": 919,
+    "popularity": 939,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "CN",
@@ -337,9 +439,9 @@
     },
     "trailer": null,
     "nextAiringEpisode": {
-      "airingAt": 1793498400,
-      "timeUntilAiring": 397278,
-      "episode": 59
+      "airingAt": 1794708000,
+      "timeUntilAiring": 14312,
+      "episode": 62
     },
     "relations": {
       "edges": [
@@ -384,7 +486,7 @@
   "196750": {
     "id": 196750,
     "idMal": 62328,
-    "updatedAt": 1793098850,
+    "updatedAt": 1794693658,
     "title": {
       "romaji": "Sister Breeder",
       "english": null,
@@ -420,7 +522,7 @@
     ],
     "synonyms": [],
     "averageScore": 72,
-    "popularity": 2116,
+    "popularity": 2223,
     "isAdult": true,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -479,11 +581,7 @@
       ]
     },
     "trailer": null,
-    "nextAiringEpisode": {
-      "airingAt": 1793286000,
-      "timeUntilAiring": 184878,
-      "episode": 5
-    },
+    "nextAiringEpisode": null,
     "relations": {
       "edges": [
         {
@@ -657,7 +755,7 @@
   "196029": {
     "id": 196029,
     "idMal": 62050,
-    "updatedAt": 1793098876,
+    "updatedAt": 1794693652,
     "title": {
       "romaji": "Kami no Niwatsuki Kusunoki-tei",
       "english": "Kusunoki's Garden of Gods",
@@ -698,7 +796,7 @@
       "Божественный сад у поместья Кусуноки"
     ],
     "averageScore": 71,
-    "popularity": 19839,
+    "popularity": 20128,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -715,7 +813,7 @@
       },
       {
         "name": "Iyashikei",
-        "rank": 83,
+        "rank": 80,
         "isMediaSpoiler": false
       },
       {
@@ -791,7 +889,7 @@
             "status": "RELEASING",
             "title": {
               "romaji": "Kami no Niwatsuki Kusunoki-tei",
-              "english": null,
+              "english": "Kusunoki's Garden of Gods",
               "native": "神の庭付き楠木邸"
             }
           }
@@ -1583,7 +1681,7 @@
   "196356": {
     "id": 196356,
     "idMal": 62102,
-    "updatedAt": 1793095209,
+    "updatedAt": 1794690122,
     "title": {
       "romaji": "Ibitte Konai Gibo to Gishi",
       "english": "My Stepmother and Stepsisters Aren’t Wicked",
@@ -1625,8 +1723,8 @@
       "Keluarga Tiriku Manis dan Memanja",
       "IbiKona: Mi Madrastra y Mis Hermanastras No Son Malvadas"
     ],
-    "averageScore": 69,
-    "popularity": 13727,
+    "averageScore": 70,
+    "popularity": 13964,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -2386,7 +2484,7 @@
   "196974": {
     "id": 196974,
     "idMal": 62171,
-    "updatedAt": 1793098853,
+    "updatedAt": 1794693643,
     "title": {
       "romaji": "Kuroneko to Majo no Kyoushitsu",
       "english": "The Classroom of the Black Cat and a Witch",
@@ -2426,8 +2524,8 @@
       "The Classroom of a Black Cat and a Witch",
       "Чёрная кошка и класс ведьм"
     ],
-    "averageScore": 68,
-    "popularity": 25827,
+    "averageScore": 69,
+    "popularity": 26407,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -3181,6 +3279,36 @@
               }
             }
           ]
+        },
+        {
+          "role": "BACKGROUND",
+          "node": {
+            "id": 412517,
+            "name": {
+              "full": "Maid B",
+              "native": "メイドB",
+              "userPreferred": "Maid B"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 199742,
+              "name": {
+                "full": "Nagisa Aoyama",
+                "native": "青山なぎさ",
+                "userPreferred": "Nagisa Aoyama"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n199742-GpILVcaXZ3Jk.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n199742-GpILVcaXZ3Jk.png"
+              }
+            }
+          ]
         }
       ]
     },
@@ -3189,7 +3317,7 @@
   "196935": {
     "id": 196935,
     "idMal": 62164,
-    "updatedAt": 1793095283,
+    "updatedAt": 1794693679,
     "title": {
       "romaji": "Akane-banashi",
       "english": "Akane-banashi",
@@ -3230,7 +3358,7 @@
       "朱音落語"
     ],
     "averageScore": 79,
-    "popularity": 41189,
+    "popularity": 41675,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -4127,7 +4255,7 @@
   "196219": {
     "id": 196219,
     "idMal": 62080,
-    "updatedAt": 1793098847,
+    "updatedAt": 1794693637,
     "title": {
       "romaji": "Mujikaku Seijo wa Kyou mo Muishiki ni Chikara wo Tare Nagasu",
       "english": "The Oblivious Saint Can't Contain Her Power",
@@ -4167,7 +4295,7 @@
       "The Oblivious Saint Can't Contain Her Power Glossary"
     ],
     "averageScore": 63,
-    "popularity": 22521,
+    "popularity": 22981,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -4639,7 +4767,7 @@
   "196017": {
     "id": 196017,
     "idMal": 62051,
-    "updatedAt": 1793098983,
+    "updatedAt": 1794690195,
     "title": {
       "romaji": "Grow Up Show: Himawari no Circus-dan",
       "english": "Grow Up Show",
@@ -4680,7 +4808,7 @@
       "GROW UP SHOW ~Sunflower Circus~"
     ],
     "averageScore": 73,
-    "popularity": 10746,
+    "popularity": 10957,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -4732,7 +4860,7 @@
       },
       {
         "name": "Yuri",
-        "rank": 38,
+        "rank": 47,
         "isMediaSpoiler": false
       },
       {
@@ -4786,8 +4914,8 @@
               "userPreferred": "Mizuka Tsurumaki"
             },
             "image": {
-              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b396508-9R8yeHkKSJ41.png",
-              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b396508-9R8yeHkKSJ41.png"
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b396508-5sLB5dwgI5dz.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b396508-5sLB5dwgI5dz.png"
             }
           },
           "voiceActors": [
@@ -4816,8 +4944,8 @@
               "userPreferred": "Ouka Kawasumi"
             },
             "image": {
-              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b396509-uGvLm5WAkNZY.png",
-              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b396509-uGvLm5WAkNZY.png"
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b396509-8qtwtTmR7wYJ.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b396509-8qtwtTmR7wYJ.png"
             }
           },
           "voiceActors": [
@@ -4846,8 +4974,8 @@
               "userPreferred": "Imari Agano"
             },
             "image": {
-              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b396510-lWldOZwgoXqs.png",
-              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b396510-lWldOZwgoXqs.png"
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b396510-ahj4JKU5UCbd.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b396510-ahj4JKU5UCbd.png"
             }
           },
           "voiceActors": [
@@ -4876,8 +5004,8 @@
               "userPreferred": "Isuzu Ikazuchi"
             },
             "image": {
-              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b396511-iOrWtdn4zWhz.png",
-              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b396511-iOrWtdn4zWhz.png"
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b396511-sex4lrT2z2jF.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b396511-sex4lrT2z2jF.png"
             }
           },
           "voiceActors": [
@@ -4906,8 +5034,8 @@
               "userPreferred": "Aoi Yura"
             },
             "image": {
-              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b396512-hujovgf1txww.png",
-              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b396512-hujovgf1txww.png"
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b396512-u2MwNNa0kF94.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b396512-u2MwNNa0kF94.png"
             }
           },
           "voiceActors": [
@@ -4936,8 +5064,8 @@
               "userPreferred": "Akane Yura"
             },
             "image": {
-              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b396513-Azczc5xexBEY.png",
-              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b396513-Azczc5xexBEY.png"
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b396513-3jNXC4yWoHKg.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b396513-3jNXC4yWoHKg.png"
             }
           },
           "voiceActors": [
@@ -4966,8 +5094,8 @@
               "userPreferred": "Shizuku Sakawa"
             },
             "image": {
-              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b396514-i1iY7cEMivHM.png",
-              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b396514-i1iY7cEMivHM.png"
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b396514-x5MoShFZKNxW.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b396514-x5MoShFZKNxW.png"
             }
           },
           "voiceActors": [
@@ -4996,8 +5124,8 @@
               "userPreferred": "Svetlana"
             },
             "image": {
-              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b396515-y2cowBgs03B5.png",
-              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b396515-y2cowBgs03B5.png"
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b396515-ou4FHh6puSpU.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b396515-ou4FHh6puSpU.png"
             }
           },
           "voiceActors": [
@@ -5026,8 +5154,8 @@
               "userPreferred": "Rin Mamiya"
             },
             "image": {
-              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b396517-U6Igw2kjLbjo.png",
-              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b396517-U6Igw2kjLbjo.png"
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b396517-blCQR0zKVzZr.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b396517-blCQR0zKVzZr.png"
             }
           },
           "voiceActors": [
@@ -5056,8 +5184,8 @@
               "userPreferred": "Maria"
             },
             "image": {
-              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b396516-TQ36zIPtw533.png",
-              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b396516-TQ36zIPtw533.png"
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b396516-Y3uDDlIqCWys.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b396516-Y3uDDlIqCWys.png"
             }
           },
           "voiceActors": [
@@ -5086,8 +5214,8 @@
               "userPreferred": "Nanami Sumeragi"
             },
             "image": {
-              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b403442-6UiGnHlFNhcb.png",
-              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b403442-6UiGnHlFNhcb.png"
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b403442-0rXZ9JcBDmkU.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b403442-0rXZ9JcBDmkU.png"
             }
           },
           "voiceActors": [
@@ -5533,7 +5661,7 @@
   "196012": {
     "id": 196012,
     "idMal": 62048,
-    "updatedAt": 1793098886,
+    "updatedAt": 1794693625,
     "title": {
       "romaji": "MAO",
       "english": "MAO",
@@ -5575,7 +5703,7 @@
       "MAO หาญสู้พลิกชะตาอาถรรพณ์"
     ],
     "averageScore": 66,
-    "popularity": 20511,
+    "popularity": 20780,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -6448,7 +6576,7 @@
   "196187": {
     "id": 196187,
     "idMal": 62076,
-    "updatedAt": 1793098805,
+    "updatedAt": 1794693619,
     "title": {
       "romaji": "Super no Ura de Yani Suu Futari",
       "english": "Smoking Behind the Supermarket with You",
@@ -6492,7 +6620,7 @@
       "สองสิงห์อมควันหลังซูเปอร์มาร์เก็ต"
     ],
     "averageScore": 81,
-    "popularity": 135326,
+    "popularity": 138634,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -6519,7 +6647,7 @@
       },
       {
         "name": "Age Gap",
-        "rank": 85,
+        "rank": 86,
         "isMediaSpoiler": false
       },
       {
@@ -6534,12 +6662,12 @@
       },
       {
         "name": "Episodic",
-        "rank": 75,
+        "rank": 76,
         "isMediaSpoiler": false
       },
       {
         "name": "Male Protagonist",
-        "rank": 73,
+        "rank": 74,
         "isMediaSpoiler": false
       },
       {
@@ -6821,7 +6949,7 @@
   "196218": {
     "id": 196218,
     "idMal": 62078,
-    "updatedAt": 1793098821,
+    "updatedAt": 1794690088,
     "title": {
       "romaji": "Ryoumin 0-Nin Start no Henkyou Ryoushu-sama",
       "english": "The Frontier Lord Begins with Zero Subjects",
@@ -6867,14 +6995,14 @@
       "ได้เป็นถึงท่านเจ้าครอบครองดินแดน แต่ดันมีพลเมืองเริ่มต้นจากศูนย์ซะงั้น"
     ],
     "averageScore": 68,
-    "popularity": 35599,
+    "popularity": 36288,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
     "tags": [
       {
         "name": "Kingdom Management",
-        "rank": 85,
+        "rank": 86,
         "isMediaSpoiler": false
       },
       {
@@ -6889,7 +7017,7 @@
       },
       {
         "name": "Age Gap",
-        "rank": 69,
+        "rank": 70,
         "isMediaSpoiler": false
       },
       {
@@ -6933,18 +7061,18 @@
         "isMediaSpoiler": false
       },
       {
-        "name": "Gender Bending",
-        "rank": 33,
-        "isMediaSpoiler": false
-      },
-      {
         "name": "Parenthood",
-        "rank": 20,
+        "rank": 40,
         "isMediaSpoiler": false
       },
       {
         "name": "CGI",
-        "rank": 20,
+        "rank": 40,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Gender Bending",
+        "rank": 37,
         "isMediaSpoiler": false
       }
     ],
@@ -7751,7 +7879,7 @@
   "196144": {
     "id": 196144,
     "idMal": 62068,
-    "updatedAt": 1793098900,
+    "updatedAt": 1794690114,
     "title": {
       "romaji": "Snowball Earth",
       "english": "SNOWBALL EARTH",
@@ -7792,7 +7920,7 @@
       "Земля-снежок"
     ],
     "averageScore": 67,
-    "popularity": 15356,
+    "popularity": 15775,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -9571,7 +9699,7 @@
   "196840": {
     "id": 196840,
     "idMal": 62155,
-    "updatedAt": 1793093113,
+    "updatedAt": 1794690195,
     "title": {
       "romaji": "Iya na Kao sare nagara Opantsu Misete Moraitai Returns",
       "english": "I Want You To Show Me Your Panties With a Disgusted Face Returns",
@@ -9610,7 +9738,7 @@
       "Iyapan 4"
     ],
     "averageScore": 56,
-    "popularity": 9216,
+    "popularity": 9368,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -10753,7 +10881,7 @@
   "196222": {
     "id": 196222,
     "idMal": 62081,
-    "updatedAt": 1793098983,
+    "updatedAt": 1794686543,
     "title": {
       "romaji": "Ore wa Subete wo [Parry] Suru: Gyaku Kanchigai no Sekai Saikyou wa Boukensha ni Naritai 2nd Season",
       "english": null,
@@ -10793,7 +10921,7 @@
       "I Parry Everything Season 2"
     ],
     "averageScore": null,
-    "popularity": 9688,
+    "popularity": 9873,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -10994,7 +11122,7 @@
   "196223": {
     "id": 196223,
     "idMal": 62079,
-    "updatedAt": 1793093154,
+    "updatedAt": 1794675761,
     "title": {
       "romaji": "Cyborg 009: Nemesis",
       "english": null,
@@ -11032,7 +11160,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 970,
+    "popularity": 984,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -13911,7 +14039,7 @@
   "196893": {
     "id": 196893,
     "idMal": 62206,
-    "updatedAt": 1793006725,
+    "updatedAt": 1794690176,
     "title": {
       "romaji": "Kinnikuman: Kanpeki Choujin Shiso-hen Season 3",
       "english": null,
@@ -13949,7 +14077,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 284,
+    "popularity": 288,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",

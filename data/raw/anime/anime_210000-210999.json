@@ -2,7 +2,7 @@
   "210945": {
     "id": 210945,
     "idMal": 63958,
-    "updatedAt": 1793092143,
+    "updatedAt": 1794679304,
     "title": {
       "romaji": "Majo to Youhei",
       "english": null,
@@ -41,7 +41,7 @@
       "Witch and Mercenary"
     ],
     "averageScore": null,
-    "popularity": 4575,
+    "popularity": 4805,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -265,7 +265,7 @@
   "210073": {
     "id": 210073,
     "idMal": 63850,
-    "updatedAt": 1793092197,
+    "updatedAt": 1794686516,
     "title": {
       "romaji": "Golden Kamuy: Saishuushou - Bousou Ressha-hen",
       "english": null,
@@ -305,7 +305,7 @@
       "Golden Kamuy Final Season - Runaway Train Arc"
     ],
     "averageScore": null,
-    "popularity": 5422,
+    "popularity": 5625,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -429,7 +429,7 @@
   "210687": {
     "id": 210687,
     "idMal": 63830,
-    "updatedAt": 1793092159,
+    "updatedAt": 1794668462,
     "title": {
       "romaji": "Re:Zero kara Hajimeru Kyuukei Jikan (Break Time) 4th Season",
       "english": null,
@@ -469,7 +469,7 @@
       "Re:ZERO ~Starting Break Time From Zero~ Season 4"
     ],
     "averageScore": 73,
-    "popularity": 3168,
+    "popularity": 3294,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -956,7 +956,7 @@
   "210482": {
     "id": 210482,
     "idMal": 61469,
-    "updatedAt": 1793098810,
+    "updatedAt": 1794693607,
     "title": {
       "romaji": "JoJo no Kimyou na Bouken: Steel Ball Run - 2nd & 3rd STAGE",
       "english": "STEEL BALL RUN JoJo's Bizarre Adventure 2nd - 3rd STAGE",
@@ -967,7 +967,7 @@
     "status": "RELEASING",
     "description": "In the 2nd STAGE, a desert crossing spanning roughly 750 miles- the land that Johnny Joestar and Gyro Zeppeli must challenge, is home to the area that is feared as the \"Devil's Palm.\" In 1875, a threat lurking in said desert wiped out a cavalry of 26 people, eliciting fear from the local native people. As ominous incidents begin to unfold, they are forced to realize that this race is far more than a mere competition. The two press forward, where countless hidden motives collide..<br><br>\n\n(Source: Warner Bros. Japan Anime, Netflix Anime, edited)",
     "episodes": 11,
-    "duration": null,
+    "duration": 23,
     "season": "FALL",
     "seasonYear": 2026,
     "startDate": {
@@ -999,29 +999,29 @@
       "SBR"
     ],
     "averageScore": 86,
-    "popularity": 46803,
+    "popularity": 51814,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
     "tags": [
       {
         "name": "Desert",
-        "rank": 100,
-        "isMediaSpoiler": false
-      },
-      {
-        "name": "Super Power",
-        "rank": 97,
-        "isMediaSpoiler": false
-      },
-      {
-        "name": "Cowboys",
         "rank": 93,
         "isMediaSpoiler": false
       },
       {
+        "name": "Cowboys",
+        "rank": 92,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Super Power",
+        "rank": 91,
+        "isMediaSpoiler": false
+      },
+      {
         "name": "Travel",
-        "rank": 89,
+        "rank": 87,
         "isMediaSpoiler": false
       },
       {
@@ -1030,33 +1030,38 @@
         "isMediaSpoiler": false
       },
       {
+        "name": "Primarily Male Cast",
+        "rank": 83,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Male Protagonist",
+        "rank": 81,
+        "isMediaSpoiler": false
+      },
+      {
         "name": "Foreign",
         "rank": 80,
         "isMediaSpoiler": false
       },
       {
-        "name": "Male Protagonist",
+        "name": "Primarily Adult Cast",
         "rank": 80,
         "isMediaSpoiler": false
       },
       {
-        "name": "Primarily Adult Cast",
-        "rank": 76,
+        "name": "Wilderness",
+        "rank": 79,
         "isMediaSpoiler": false
       },
       {
-        "name": "Primarily Male Cast",
-        "rank": 76,
-        "isMediaSpoiler": false
-      },
-      {
-        "name": "Crime",
+        "name": "Religion",
         "rank": 66,
-        "isMediaSpoiler": false
+        "isMediaSpoiler": true
       },
       {
         "name": "Seinen",
-        "rank": 60,
+        "rank": 64,
         "isMediaSpoiler": false
       },
       {
@@ -1065,8 +1070,13 @@
         "isMediaSpoiler": true
       },
       {
+        "name": "Crime",
+        "rank": 50,
+        "isMediaSpoiler": false
+      },
+      {
         "name": "Gore",
-        "rank": 48,
+        "rank": 37,
         "isMediaSpoiler": false
       }
     ],
@@ -1082,9 +1092,9 @@
       "site": "youtube"
     },
     "nextAiringEpisode": {
-      "airingAt": 1793347200,
-      "timeUntilAiring": 246057,
-      "episode": 6
+      "airingAt": 1795161600,
+      "timeUntilAiring": 467900,
+      "episode": 9
     },
     "relations": {
       "edges": [
@@ -1423,6 +1433,66 @@
         {
           "role": "SUPPORTING",
           "node": {
+            "id": 36309,
+            "name": {
+              "full": "Narrator",
+              "native": "ナレーター",
+              "userPreferred": "Narrator"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b36309-6KM0riV4lqfN.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b36309-6KM0riV4lqfN.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95926,
+              "name": {
+                "full": "Youji Ueda",
+                "native": "上田燿司",
+                "userPreferred": "Youji Ueda"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95926-00Pd2b8WZwQS.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95926-00Pd2b8WZwQS.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 139789,
+            "name": {
+              "full": "Gregorio Zeppeli",
+              "native": "グレゴリオ・ツェペリ",
+              "userPreferred": "Gregorio Zeppeli"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b139789-3SrJmZJr8WZ1.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b139789-3SrJmZJr8WZ1.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95157,
+              "name": {
+                "full": "Nobuo Tobita",
+                "native": "飛田展男",
+                "userPreferred": "Nobuo Tobita"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95157-td6WhlGehuDJ.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95157-td6WhlGehuDJ.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
             "id": 157251,
             "name": {
               "full": "Oyecomova",
@@ -1446,6 +1516,36 @@
               "image": {
                 "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95016-03m7lAUZBMDv.png",
                 "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95016-03m7lAUZBMDv.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 167880,
+            "name": {
+              "full": "Pork Pie Hat Kozou",
+              "native": "ポーク・パイ・ハット小僧",
+              "userPreferred": "Pork Pie Hat Kozou"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b167880-1G3lfIGYYLIF.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b167880-1G3lfIGYYLIF.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 105094,
+              "name": {
+                "full": "Jun Fukushima",
+                "native": "福島潤",
+                "userPreferred": "Jun Fukushima"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n105094-Udz3lBFTZa5W.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n105094-Udz3lBFTZa5W.png"
               }
             }
           ]
@@ -1513,6 +1613,36 @@
         {
           "role": "SUPPORTING",
           "node": {
+            "id": 172172,
+            "name": {
+              "full": "Zeppeli Fujin",
+              "native": "ゼッペリ夫人",
+              "userPreferred": "Zeppeli Fujin"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b172172-HVoI9GyvCvNS.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b172172-HVoI9GyvCvNS.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95170,
+              "name": {
+                "full": "Yuuko Minaguchi",
+                "native": "皆口裕子",
+                "userPreferred": "Yuuko Minaguchi"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95170-oAiTh7t2T1J0.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95170-oAiTh7t2T1J0.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
             "id": 172175,
             "name": {
               "full": "L. A. Boom Boom",
@@ -1536,6 +1666,66 @@
               "image": {
                 "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n154355-SvMWyXnG6NY9.png",
                 "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n154355-SvMWyXnG6NY9.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 172178,
+            "name": {
+              "full": "Fritz von Stroheim",
+              "native": "フリッツ フォン・シュトロハイム",
+              "userPreferred": "Fritz von Stroheim"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b172178-KHr0pPmeYxrf.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b172178-KHr0pPmeYxrf.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95229,
+              "name": {
+                "full": "Atsushi Imaruoka",
+                "native": "伊丸岡篤",
+                "userPreferred": "Atsushi Imaruoka"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95229-EwEEkYYY6bCf.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95229-EwEEkYYY6bCf.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 172180,
+            "name": {
+              "full": "Neapolitan no Kizoku",
+              "native": "ナポリの貴族",
+              "userPreferred": "Neapolitan no Kizoku"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b172180-IjVBocYuAMc3.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b172180-IjVBocYuAMc3.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95945,
+              "name": {
+                "full": "Mitsuaki Hoshino",
+                "native": "星野充昭",
+                "userPreferred": "Mitsuaki Hoshino"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95945-SnY7HVDqchdI.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95945-SnY7HVDqchdI.jpg"
               }
             }
           ]
@@ -1569,6 +1759,68 @@
               }
             }
           ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 411817,
+            "name": {
+              "full": "Marco",
+              "native": "マルコ",
+              "userPreferred": "Marco"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 121821,
+              "name": {
+                "full": "Manaka Iwami",
+                "native": "石見舞菜香",
+                "userPreferred": "Manaka Iwami"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n121821-tQSkHZEuB3XH.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n121821-tQSkHZEuB3XH.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "BACKGROUND",
+          "node": {
+            "id": 87201,
+            "name": {
+              "full": "Jesus Christ",
+              "native": "イエス",
+              "userPreferred": "Jesus Christ"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/n87201-D5g2n9pL6uqW.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/n87201-D5g2n9pL6uqW.png"
+            }
+          },
+          "voiceActors": []
+        },
+        {
+          "role": "BACKGROUND",
+          "node": {
+            "id": 172177,
+            "name": {
+              "full": "Joseph of Arimathea",
+              "native": null,
+              "userPreferred": "Joseph of Arimathea"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b172177-RSHUeJhBMnYR.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b172177-RSHUeJhBMnYR.png"
+            }
+          },
+          "voiceActors": []
         }
       ]
     },
@@ -1577,7 +1829,7 @@
   "210031": {
     "id": 210031,
     "idMal": 63832,
-    "updatedAt": 1793098803,
+    "updatedAt": 1794693653,
     "title": {
       "romaji": "Seihantai na Kimi to Boku 2nd Season",
       "english": "You and I Are Polar Opposites Season 2",
@@ -1618,7 +1870,7 @@
       "ลุ้นรักฉบับคู่ต่างขั้ว ซีซัน 2"
     ],
     "averageScore": 84,
-    "popularity": 69640,
+    "popularity": 72021,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -1654,13 +1906,13 @@
         "isMediaSpoiler": false
       },
       {
-        "name": "Male Protagonist",
-        "rank": 72,
+        "name": "Female Protagonist",
+        "rank": 73,
         "isMediaSpoiler": false
       },
       {
-        "name": "Female Protagonist",
-        "rank": 71,
+        "name": "Male Protagonist",
+        "rank": 72,
         "isMediaSpoiler": false
       },
       {
@@ -1670,23 +1922,23 @@
       },
       {
         "name": "Tsundere",
-        "rank": 40,
+        "rank": 60,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Gyaru",
+        "rank": 60,
         "isMediaSpoiler": false
       },
       {
         "name": "Trains",
-        "rank": 30,
+        "rank": 53,
         "isMediaSpoiler": false
       },
       {
         "name": "Time Skip",
         "rank": 20,
         "isMediaSpoiler": true
-      },
-      {
-        "name": "Gyaru",
-        "rank": 20,
-        "isMediaSpoiler": false
       }
     ],
     "studios": {
@@ -2492,7 +2744,7 @@
   "210483": {
     "id": 210483,
     "idMal": 63912,
-    "updatedAt": 1793092172,
+    "updatedAt": 1794690054,
     "title": {
       "romaji": "Isekai Maou to Shoukan Shoujo no Dorei Majutsu ULT",
       "english": null,
@@ -2534,7 +2786,7 @@
       "How NOT To Summon A Demon Lord 3"
     ],
     "averageScore": null,
-    "popularity": 8983,
+    "popularity": 9152,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -2734,7 +2986,7 @@
   "210234": {
     "id": 210234,
     "idMal": 63304,
-    "updatedAt": 1793092187,
+    "updatedAt": 1794693654,
     "title": {
       "romaji": "Mamonogurai no Boukensha: Ore Dake Mamono wo Kuratte Tsuyoku Naru",
       "english": "Monster Eater",
@@ -2772,7 +3024,7 @@
     ],
     "synonyms": [],
     "averageScore": 49,
-    "popularity": 9478,
+    "popularity": 9616,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -2789,7 +3041,7 @@
       },
       {
         "name": "Flash",
-        "rank": 20,
+        "rank": 40,
         "isMediaSpoiler": false
       },
       {
@@ -3190,7 +3442,7 @@
   "210032": {
     "id": 210032,
     "idMal": 63833,
-    "updatedAt": 1793095295,
+    "updatedAt": 1794690180,
     "title": {
       "romaji": "BAKI-DOU Part 2",
       "english": "BAKI-DOU: The Invincible Samurai Part 2",
@@ -3230,7 +3482,7 @@
       "BAKI-DOU: O Samurai Invencível Parte 2"
     ],
     "averageScore": 74,
-    "popularity": 8639,
+    "popularity": 8995,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -3650,7 +3902,7 @@
   "210199": {
     "id": 210199,
     "idMal": 63885,
-    "updatedAt": 1793098832,
+    "updatedAt": 1794686539,
     "title": {
       "romaji": "The Fable 2nd Season",
       "english": null,
@@ -3692,7 +3944,7 @@
       "The Fable Season 2"
     ],
     "averageScore": null,
-    "popularity": 4539,
+    "popularity": 4821,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -3758,7 +4010,7 @@
     "trailer": null,
     "nextAiringEpisode": {
       "airingAt": 1799510160,
-      "timeUntilAiring": 6409017,
+      "timeUntilAiring": 4816459,
       "episode": 1
     },
     "relations": {
@@ -3818,7 +4070,7 @@
   "210932": {
     "id": 210932,
     "idMal": 63957,
-    "updatedAt": 1793092144,
+    "updatedAt": 1794690100,
     "title": {
       "romaji": "Shiguang Dailiren: Xiao Juchang 2",
       "english": null,
@@ -3864,8 +4116,8 @@
       "时光代理人2",
       "Shiguang Xiao Juchang 2"
     ],
-    "averageScore": 69,
-    "popularity": 1116,
+    "averageScore": 70,
+    "popularity": 1170,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "CN",
@@ -4200,7 +4452,7 @@
   "210375": {
     "id": 210375,
     "idMal": 63433,
-    "updatedAt": 1793092179,
+    "updatedAt": 1794686438,
     "title": {
       "romaji": "Daikenja Riddle no Jikan Gyakko",
       "english": null,
@@ -4240,7 +4492,7 @@
       "การย้อนเวลาของมหาปราชญ์ริดเดิล"
     ],
     "averageScore": 45,
-    "popularity": 4650,
+    "popularity": 4718,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -4561,7 +4813,7 @@
   "210157": {
     "id": 210157,
     "idMal": 63851,
-    "updatedAt": 1793092192,
+    "updatedAt": 1794690101,
     "title": {
       "romaji": "Love Live! Hasunosora Jogakuin School Idol Club",
       "english": null,
@@ -4598,7 +4850,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 1244,
+    "popularity": 1329,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -4634,7 +4886,7 @@
     "trailer": null,
     "nextAiringEpisode": {
       "airingAt": 1799587800,
-      "timeUntilAiring": 6486656,
+      "timeUntilAiring": 4894099,
       "episode": 1
     },
     "relations": {
@@ -5747,7 +5999,7 @@
   "210347": {
     "id": 210347,
     "idMal": 63758,
-    "updatedAt": 1793092181,
+    "updatedAt": 1794672134,
     "title": {
       "romaji": "Wildest Flower",
       "english": null,
@@ -5786,7 +6038,7 @@
       "初星学園"
     ],
     "averageScore": 61,
-    "popularity": 192,
+    "popularity": 198,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",

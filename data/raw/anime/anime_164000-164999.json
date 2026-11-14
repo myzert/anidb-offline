@@ -2,7 +2,7 @@
   "164440": {
     "id": 164440,
     "idMal": 55194,
-    "updatedAt": 1793095663,
+    "updatedAt": 1794675761,
     "title": {
       "romaji": "Ooi! Tonbo",
       "english": "Tonbo!",
@@ -44,7 +44,7 @@
       "Томбо!"
     ],
     "averageScore": 68,
-    "popularity": 6250,
+    "popularity": 6277,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -898,7 +898,7 @@
   "164212": {
     "id": 164212,
     "idMal": 55102,
-    "updatedAt": 1793098897,
+    "updatedAt": 1794690102,
     "title": {
       "romaji": "GIRLS BAND CRY",
       "english": "Girls Band Cry",
@@ -942,7 +942,7 @@
       "걸즈 밴드 크라이"
     ],
     "averageScore": 83,
-    "popularity": 68215,
+    "popularity": 68844,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -988,18 +988,18 @@
         "isMediaSpoiler": false
       },
       {
+        "name": "Yuri",
+        "rank": 65,
+        "isMediaSpoiler": true
+      },
+      {
         "name": "Found Family",
         "rank": 64,
         "isMediaSpoiler": false
       },
       {
-        "name": "Yuri",
-        "rank": 62,
-        "isMediaSpoiler": true
-      },
-      {
         "name": "LGBTQ+ Themes",
-        "rank": 61,
+        "rank": 62,
         "isMediaSpoiler": true
       },
       {
@@ -1095,20 +1095,6 @@
           }
         },
         {
-          "relationType": "OTHER",
-          "node": {
-            "id": 199152,
-            "type": "ANIME",
-            "format": "MOVIE",
-            "status": "NOT_YET_RELEASED",
-            "title": {
-              "romaji": "GIRLS BAND CRY (Shinsaku Eiga)",
-              "english": null,
-              "native": "ガールズバンドクライ (新作映画)"
-            }
-          }
-        },
-        {
           "relationType": "SUMMARY",
           "node": {
             "id": 199154,
@@ -1147,6 +1133,20 @@
               "romaji": "GIRLS BAND CRY",
               "english": null,
               "native": "ガールズバンドクライ"
+            }
+          }
+        },
+        {
+          "relationType": "SEQUEL",
+          "node": {
+            "id": 199152,
+            "type": "ANIME",
+            "format": "MOVIE",
+            "status": "NOT_YET_RELEASED",
+            "title": {
+              "romaji": "GIRLS BAND CRY THE MOVIE",
+              "english": null,
+              "native": "ガールズバンドクライ THE MOVIE"
             }
           }
         }
@@ -2003,7 +2003,7 @@
   "164172": {
     "id": 164172,
     "idMal": 55071,
-    "updatedAt": 1793098906,
+    "updatedAt": 1794690051,
     "title": {
       "romaji": "Amagami-san Chi no Enmusubi",
       "english": "Tying the Knot with an Amagami Sister",
@@ -2049,7 +2049,7 @@
       "ربط العقد مع أخوات أماغامي"
     ],
     "averageScore": 73,
-    "popularity": 53482,
+    "popularity": 54097,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -2893,7 +2893,7 @@
   "164244": {
     "id": 164244,
     "idMal": 55129,
-    "updatedAt": 1793095679,
+    "updatedAt": 1794690195,
     "title": {
       "romaji": "Oroka na Tenshi wa Akuma to Odoru",
       "english": "The Foolish Angel Dances with the Devil",
@@ -2938,7 +2938,7 @@
       "KanaTen"
     ],
     "averageScore": 67,
-    "popularity": 61031,
+    "popularity": 61559,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -3441,7 +3441,7 @@
   "164299": {
     "id": 164299,
     "idMal": 55150,
-    "updatedAt": 1793098908,
+    "updatedAt": 1794690195,
     "title": {
       "romaji": "Yarinaoshi Reijou wa Ryuutei Heika wo Kouryaku-chuu",
       "english": "The Do-Over Damsel Conquers the Dragon Emperor",
@@ -3478,7 +3478,7 @@
     ],
     "synonyms": [],
     "averageScore": 68,
-    "popularity": 39842,
+    "popularity": 40224,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -4020,7 +4020,7 @@
   "164702": {
     "id": 164702,
     "idMal": 55265,
-    "updatedAt": 1793098812,
+    "updatedAt": 1794693619,
     "title": {
       "romaji": "Tensei Kizoku, Kantei Skill de Nariagaru",
       "english": "As a Reincarnated Aristocrat, I'll Use My Appraisal Skill to Rise in the World",
@@ -4059,7 +4059,7 @@
       "KanteiSkill"
     ],
     "averageScore": 71,
-    "popularity": 80293,
+    "popularity": 82238,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -4076,11 +4076,6 @@
       },
       {
         "name": "Royal Affairs",
-        "rank": 79,
-        "isMediaSpoiler": false
-      },
-      {
-        "name": "Shoujo",
         "rank": 79,
         "isMediaSpoiler": false
       },
@@ -4122,6 +4117,11 @@
       {
         "name": "Swordplay",
         "rank": 51,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Shoujo",
+        "rank": 50,
         "isMediaSpoiler": false
       },
       {
@@ -4684,6 +4684,22 @@
               }
             }
           ]
+        },
+        {
+          "role": "BACKGROUND",
+          "node": {
+            "id": 36309,
+            "name": {
+              "full": "Narrator",
+              "native": "ナレーター",
+              "userPreferred": "Narrator"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b36309-6KM0riV4lqfN.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b36309-6KM0riV4lqfN.jpg"
+            }
+          },
+          "voiceActors": []
         }
       ]
     },
@@ -5765,7 +5781,7 @@
   "164117": {
     "id": 164117,
     "idMal": 55016,
-    "updatedAt": 1793095691,
+    "updatedAt": 1794668462,
     "title": {
       "romaji": "Idol",
       "english": "Idol",
@@ -5801,7 +5817,7 @@
     ],
     "synonyms": [],
     "averageScore": 86,
-    "popularity": 25251,
+    "popularity": 25350,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -6750,7 +6766,7 @@
   "164226": {
     "id": 164226,
     "idMal": 55115,
-    "updatedAt": 1793095680,
+    "updatedAt": 1794682986,
     "title": {
       "romaji": "Hokkyoku Hyakkaten no Concierge-san",
       "english": "The Concierge",
@@ -6792,7 +6808,7 @@
       "Dom towarowy Hokkyoku"
     ],
     "averageScore": 75,
-    "popularity": 7867,
+    "popularity": 7920,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -8087,7 +8103,7 @@
   "164292": {
     "id": 164292,
     "idMal": 55145,
-    "updatedAt": 1793095675,
+    "updatedAt": 1794686583,
     "title": {
       "romaji": "Oku-sama no Kaifuku Jutsu The Animation",
       "english": null,
@@ -8126,7 +8142,7 @@
       "A Housewife's Healing Touch"
     ],
     "averageScore": 64,
-    "popularity": 1525,
+    "popularity": 1542,
     "isAdult": true,
     "source": "VISUAL_NOVEL",
     "countryOfOrigin": "JP",
@@ -8807,7 +8823,7 @@
   "164298": {
     "id": 164298,
     "idMal": 55162,
-    "updatedAt": 1793095674,
+    "updatedAt": 1794682986,
     "title": {
       "romaji": "Tanetsuke Oji-san to Papakko JD Saimin Seikatsu The Animation",
       "english": null,
@@ -8846,7 +8862,7 @@
       "種付おじさんとパパっ子JD○○生活 The Animation"
     ],
     "averageScore": 58,
-    "popularity": 1682,
+    "popularity": 1697,
     "isAdult": true,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -10469,7 +10485,7 @@
   "164240": {
     "id": 164240,
     "idMal": 55146,
-    "updatedAt": 1793095679,
+    "updatedAt": 1794665070,
     "title": {
       "romaji": "Kunoichi ○○den Ajisai",
       "english": null,
@@ -10510,7 +10526,7 @@
       "The Ninja R*pe Legend - Ajisai"
     ],
     "averageScore": 55,
-    "popularity": 1158,
+    "popularity": 1178,
     "isAdult": true,
     "source": "OTHER",
     "countryOfOrigin": "JP",

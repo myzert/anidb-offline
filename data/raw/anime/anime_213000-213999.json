@@ -2,7 +2,7 @@
   "213052": {
     "id": 213052,
     "idMal": 64374,
-    "updatedAt": 1793095303,
+    "updatedAt": 1794690077,
     "title": {
       "romaji": "Dengeki Daisy",
       "english": null,
@@ -40,7 +40,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 3590,
+    "popularity": 3901,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -315,7 +315,7 @@
   "213298": {
     "id": 213298,
     "idMal": 64430,
-    "updatedAt": 1793091982,
+    "updatedAt": 1794675761,
     "title": {
       "romaji": "Yuruyuru Zukan",
       "english": null,
@@ -349,7 +349,7 @@
     "genres": [],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 185,
+    "popularity": 193,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -390,9 +390,9 @@
       "site": "youtube"
     },
     "nextAiringEpisode": {
-      "airingAt": 1793484000,
-      "timeUntilAiring": 382854,
-      "episode": 5
+      "airingAt": 1795298400,
+      "timeUntilAiring": 604697,
+      "episode": 8
     },
     "relations": {
       "edges": []
@@ -436,7 +436,7 @@
   "213457": {
     "id": 213457,
     "idMal": 64459,
-    "updatedAt": 1793098910,
+    "updatedAt": 1794693610,
     "title": {
       "romaji": "Fool Night",
       "english": "Fool Night",
@@ -456,9 +456,9 @@
       "day": 26
     },
     "endDate": {
-      "year": null,
-      "month": null,
-      "day": null
+      "year": 2026,
+      "month": 11,
+      "day": 26
     },
     "coverImage": {
       "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx213457-gN5p1GZjK3zi.jpg",
@@ -466,7 +466,7 @@
       "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx213457-gN5p1GZjK3zi.jpg",
       "color": "#93281a"
     },
-    "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/213457-4m8VEkWwzJEq.jpg",
+    "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/213457-xUUdWSFdK8At.jpg",
     "genres": [
       "Drama",
       "Psychological",
@@ -475,11 +475,16 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 24391,
+    "popularity": 26662,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
     "tags": [
+      {
+        "name": "Eco-Horror",
+        "rank": 100,
+        "isMediaSpoiler": false
+      },
       {
         "name": "Class Struggle",
         "rank": 84,
@@ -491,8 +496,8 @@
         "isMediaSpoiler": false
       },
       {
-        "name": "Eco-Horror",
-        "rank": 79,
+        "name": "Urban Fantasy",
+        "rank": 60,
         "isMediaSpoiler": false
       },
       {
@@ -508,11 +513,6 @@
       {
         "name": "Body Horror",
         "rank": 50,
-        "isMediaSpoiler": false
-      },
-      {
-        "name": "Urban Fantasy",
-        "rank": 20,
         "isMediaSpoiler": false
       },
       {
@@ -547,12 +547,12 @@
       ]
     },
     "trailer": {
-      "id": "8E_SDmeOtVw",
+      "id": "p15JWZsi3Ao",
       "site": "youtube"
     },
     "nextAiringEpisode": {
-      "airingAt": 1795676400,
-      "timeUntilAiring": 2575258,
+      "airingAt": 1795680000,
+      "timeUntilAiring": 986301,
       "episode": 1
     },
     "relations": {
@@ -721,6 +721,156 @@
               "image": {
                 "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n119319-yIrrUOUaJuSm.png",
                 "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n119319-yIrrUOUaJuSm.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 402253,
+            "name": {
+              "full": "Ivy",
+              "native": "アイヴィー",
+              "userPreferred": "Ivy"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b402253-2NnWI9ho0XDJ.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b402253-2NnWI9ho0XDJ.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95539,
+              "name": {
+                "full": "Yumiko Kobayashi",
+                "native": "小林由美子",
+                "userPreferred": "Yumiko Kobayashi"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95539-vFLypMio70hC.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95539-vFLypMio70hC.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 402254,
+            "name": {
+              "full": "Nishi",
+              "native": "西",
+              "userPreferred": "Nishi"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b402254-n1DAk0WbbTjO.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b402254-n1DAk0WbbTjO.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95270,
+              "name": {
+                "full": "Nobuhiko Okamoto",
+                "native": "岡本信彦",
+                "userPreferred": "Nobuhiko Okamoto"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95270-LqNIF238L59u.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95270-LqNIF238L59u.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 402255,
+            "name": {
+              "full": "Ken Hikasa",
+              "native": "日笠健",
+              "userPreferred": "Ken Hikasa"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b402255-3Lz506Qz2wQY.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b402255-3Lz506Qz2wQY.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 101214,
+              "name": {
+                "full": "Hiroshi Tsuchida",
+                "native": "土田大",
+                "userPreferred": "Hiroshi Tsuchida"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n101214-kvHCKwu88FcF.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n101214-kvHCKwu88FcF.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 402334,
+            "name": {
+              "full": "Mei Okumura",
+              "native": "奥村メイ",
+              "userPreferred": "Mei Okumura"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b402334-3bBtbnFmn1W4.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b402334-3bBtbnFmn1W4.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 119616,
+              "name": {
+                "full": "Sayaka Senbongi",
+                "native": "千本木彩花",
+                "userPreferred": "Sayaka Senbongi"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n119616-Dakq7gsUo2ja.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n119616-Dakq7gsUo2ja.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 412191,
+            "name": {
+              "full": "Sumi Matsuno",
+              "native": "松野スミ",
+              "userPreferred": "Sumi Matsuno"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 148220,
+              "name": {
+                "full": "Shion Wakayama",
+                "native": "若山詩音",
+                "userPreferred": "Shion Wakayama"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n148220-Tj3U7jdXZehG.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n148220-Tj3U7jdXZehG.png"
               }
             }
           ]
@@ -909,7 +1059,7 @@
   "213656": {
     "id": 213656,
     "idMal": 64500,
-    "updatedAt": 1793098915,
+    "updatedAt": 1794690079,
     "title": {
       "romaji": "Tsue to Tsurugi no Wistoria Season 3",
       "english": null,
@@ -950,7 +1100,7 @@
       "Wistoria: Wand and Sword Season 3"
     ],
     "averageScore": null,
-    "popularity": 22768,
+    "popularity": 23314,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -1036,7 +1186,7 @@
   "213666": {
     "id": 213666,
     "idMal": 63514,
-    "updatedAt": 1793095373,
+    "updatedAt": 1794682981,
     "title": {
       "romaji": "Perfect Addiction",
       "english": "Perfect Addiction",
@@ -1075,7 +1225,7 @@
       "อ้อนรักหนุ่มหน้าหวาน"
     ],
     "averageScore": 59,
-    "popularity": 3215,
+    "popularity": 3283,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -1241,7 +1391,7 @@
   "213702": {
     "id": 213702,
     "idMal": 64516,
-    "updatedAt": 1793098841,
+    "updatedAt": 1794693676,
     "title": {
       "romaji": "Tongari Boushi no Atelier 2nd Season",
       "english": "Witch Hat Atelier Season 2",
@@ -1279,7 +1429,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 37484,
+    "popularity": 38511,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -1675,7 +1825,7 @@
   "213740": {
     "id": 213740,
     "idMal": 64520,
-    "updatedAt": 1793095341,
+    "updatedAt": 1794686547,
     "title": {
       "romaji": "Sensou Kyoushitsu",
       "english": "The Bugle Call: Song of War",
@@ -1713,7 +1863,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 3788,
+    "popularity": 3924,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -1820,7 +1970,7 @@
   "213782": {
     "id": 213782,
     "idMal": 64527,
-    "updatedAt": 1793091943,
+    "updatedAt": 1794679370,
     "title": {
       "romaji": "Soara to Mamono no Ie",
       "english": null,
@@ -1860,7 +2010,7 @@
       "Soara and the Monster's House"
     ],
     "averageScore": null,
-    "popularity": 1928,
+    "popularity": 2013,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -1990,7 +2140,7 @@
   "213847": {
     "id": 213847,
     "idMal": 61546,
-    "updatedAt": 1793098969,
+    "updatedAt": 1794693683,
     "title": {
       "romaji": "Star Wars: Visions - Kyuuninme no Jedi",
       "english": "Star Wars: Visions Presents - The Ninth Jedi",
@@ -2031,7 +2181,7 @@
       "Star Wars: Visions Apresenta - A Nona Jedi"
     ],
     "averageScore": 69,
-    "popularity": 4797,
+    "popularity": 4920,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -2446,7 +2596,7 @@
   "213878": {
     "id": 213878,
     "idMal": null,
-    "updatedAt": 1793091934,
+    "updatedAt": 1794682986,
     "title": {
       "romaji": "4th Project (Provisional Title)",
       "english": null,
@@ -2480,7 +2630,7 @@
     "genres": [],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 1025,
+    "popularity": 1051,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -2508,7 +2658,7 @@
   "213987": {
     "id": 213987,
     "idMal": 64584,
-    "updatedAt": 1793091927,
+    "updatedAt": 1794690183,
     "title": {
       "romaji": "Hei Bai",
       "english": null,
@@ -2547,7 +2697,7 @@
       "Black and White Twin Dragons"
     ],
     "averageScore": null,
-    "popularity": 1130,
+    "popularity": 1164,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "CN",
@@ -2633,7 +2783,7 @@
   "213477": {
     "id": 213477,
     "idMal": 64463,
-    "updatedAt": 1793091968,
+    "updatedAt": 1794690056,
     "title": {
       "romaji": "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e 5th Season",
       "english": null,
@@ -2672,7 +2822,7 @@
       "Classroom of the Elite 5th Season"
     ],
     "averageScore": null,
-    "popularity": 18287,
+    "popularity": 18775,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -2689,6 +2839,11 @@
       },
       {
         "name": "Anti-Hero",
+        "rank": 79,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Philosophy",
         "rank": 79,
         "isMediaSpoiler": false
       },
@@ -2726,6 +2881,11 @@
         "name": "Aromantic",
         "rank": 20,
         "isMediaSpoiler": false
+      },
+      {
+        "name": "Conspiracy",
+        "rank": 20,
+        "isMediaSpoiler": true
       }
     ],
     "studios": {
@@ -2804,7 +2964,7 @@
   "213581": {
     "id": 213581,
     "idMal": 64484,
-    "updatedAt": 1793091961,
+    "updatedAt": 1794690195,
     "title": {
       "romaji": "Kanojo, Okarishimasu 6th Season",
       "english": null,
@@ -2845,7 +3005,7 @@
       "KanoKari 6"
     ],
     "averageScore": null,
-    "popularity": 4613,
+    "popularity": 4731,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -3007,7 +3167,7 @@
   "213655": {
     "id": 213655,
     "idMal": 64501,
-    "updatedAt": 1793091955,
+    "updatedAt": 1794686583,
     "title": {
       "romaji": "LONA",
       "english": null,
@@ -3045,13 +3205,18 @@
       "Laboratory of Optics and Neural Analysis"
     ],
     "averageScore": null,
-    "popularity": 4655,
+    "popularity": 4864,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
     "tags": [
       {
         "name": "Female Protagonist",
+        "rank": 60,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Virtual World",
         "rank": 60,
         "isMediaSpoiler": false
       }
@@ -3170,7 +3335,7 @@
   "213796": {
     "id": 213796,
     "idMal": 64528,
-    "updatedAt": 1793095316,
+    "updatedAt": 1794690195,
     "title": {
       "romaji": "Majo to Ryouken",
       "english": null,
@@ -3209,7 +3374,7 @@
       "Witch and Hound"
     ],
     "averageScore": null,
-    "popularity": 6331,
+    "popularity": 6598,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -3310,7 +3475,7 @@
   "213872": {
     "id": 213872,
     "idMal": 64551,
-    "updatedAt": 1793098983,
+    "updatedAt": 1794686583,
     "title": {
       "romaji": "Hitoribocchi no Isekai Kouryaku 2nd Season",
       "english": null,
@@ -3348,14 +3513,14 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 6526,
+    "popularity": 6760,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
     "tags": [
       {
         "name": "Isekai",
-        "rank": 66,
+        "rank": 75,
         "isMediaSpoiler": false
       },
       {
@@ -3536,7 +3701,7 @@
   "213877": {
     "id": 213877,
     "idMal": 64555,
-    "updatedAt": 1793098983,
+    "updatedAt": 1794682986,
     "title": {
       "romaji": "MURCIÉLAGO",
       "english": null,
@@ -3570,18 +3735,18 @@
     "genres": [],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 3980,
+    "popularity": 4468,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
     "tags": [
       {
-        "name": "Anti-Hero",
-        "rank": 80,
+        "name": "Female Protagonist",
+        "rank": 83,
         "isMediaSpoiler": false
       },
       {
-        "name": "Female Protagonist",
+        "name": "Anti-Hero",
         "rank": 80,
         "isMediaSpoiler": false
       },
@@ -3602,7 +3767,7 @@
       },
       {
         "name": "Yuri",
-        "rank": 73,
+        "rank": 76,
         "isMediaSpoiler": false
       },
       {
@@ -3632,7 +3797,7 @@
       },
       {
         "name": "Seinen",
-        "rank": 20,
+        "rank": 60,
         "isMediaSpoiler": false
       }
     ],
@@ -3768,7 +3933,7 @@
   "213484": {
     "id": 213484,
     "idMal": 62957,
-    "updatedAt": 1793091967,
+    "updatedAt": 1794690078,
     "title": {
       "romaji": "Bai Ri Cheng Wang",
       "english": "Crowned in a Hundred Days",
@@ -3806,7 +3971,7 @@
     ],
     "synonyms": [],
     "averageScore": 68,
-    "popularity": 4363,
+    "popularity": 4711,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "CN",
@@ -4203,7 +4368,7 @@
   "213657": {
     "id": 213657,
     "idMal": 64503,
-    "updatedAt": 1793098832,
+    "updatedAt": 1794690058,
     "title": {
       "romaji": "Yozakura-san Chi no Daisakusen 2nd Season Part 2",
       "english": "Mission: Yozakura Family Season 2 Part 2",
@@ -4240,8 +4405,8 @@
       "Romance"
     ],
     "synonyms": [],
-    "averageScore": 72,
-    "popularity": 9766,
+    "averageScore": 73,
+    "popularity": 10770,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -4289,9 +4454,9 @@
       "site": "youtube"
     },
     "nextAiringEpisode": {
-      "airingAt": 1793520000,
-      "timeUntilAiring": 418857,
-      "episode": 4
+      "airingAt": 1794729600,
+      "timeUntilAiring": 35899,
+      "episode": 6
     },
     "relations": {
       "edges": [
@@ -4626,6 +4791,36 @@
               }
             }
           ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 285582,
+            "name": {
+              "full": "Kai Izumo",
+              "native": "出雲灰",
+              "userPreferred": "Kai Izumo"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b285582-teRncUUvba29.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b285582-teRncUUvba29.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95118,
+              "name": {
+                "full": "Hiroshi Kamiya",
+                "native": "神谷浩史",
+                "userPreferred": "Hiroshi Kamiya"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95118-oOElrn1aSaiC.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95118-oOElrn1aSaiC.png"
+              }
+            }
+          ]
         }
       ]
     },
@@ -4634,7 +4829,7 @@
   "213316": {
     "id": 213316,
     "idMal": 64419,
-    "updatedAt": 1793098983,
+    "updatedAt": 1794690195,
     "title": {
       "romaji": "Nisemono no Renkinjutsushi",
       "english": null,
@@ -4680,7 +4875,7 @@
       "The Fake Alchemist"
     ],
     "averageScore": null,
-    "popularity": 5798,
+    "popularity": 6166,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -4693,6 +4888,11 @@
       {
         "name": "Nudity",
         "rank": 46,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Slavery",
+        "rank": 20,
         "isMediaSpoiler": false
       }
     ],
@@ -4795,7 +4995,7 @@
   "213846": {
     "id": 213846,
     "idMal": 64546,
-    "updatedAt": 1793095310,
+    "updatedAt": 1794693687,
     "title": {
       "romaji": "Ore dake Level Up na Ken: Beyond the System",
       "english": "Solo Leveling: Beyond the System",
@@ -4832,7 +5032,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 25235,
+    "popularity": 26084,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -4926,7 +5126,7 @@
   "213805": {
     "id": 213805,
     "idMal": 64534,
-    "updatedAt": 1793098810,
+    "updatedAt": 1794693609,
     "title": {
       "romaji": "Koori no Jouheki 2nd Season",
       "english": "The Ramparts of Ice Season 2",
@@ -4956,7 +5156,7 @@
       "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx213805-Nokui3uWlIlw.png",
       "color": "#e4a143"
     },
-    "bannerImage": null,
+    "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/213805-DKKoBepaY2bj.jpg",
     "genres": [
       "Comedy",
       "Drama",
@@ -4965,7 +5165,7 @@
     ],
     "synonyms": [],
     "averageScore": 81,
-    "popularity": 36948,
+    "popularity": 40716,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -4977,7 +5177,12 @@
       },
       {
         "name": "Shoujo",
-        "rank": 79,
+        "rank": 95,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Love Triangle",
+        "rank": 83,
         "isMediaSpoiler": false
       },
       {
@@ -4986,18 +5191,13 @@
         "isMediaSpoiler": false
       },
       {
+        "name": "Heterosexual",
+        "rank": 77,
+        "isMediaSpoiler": false
+      },
+      {
         "name": "Primarily Teen Cast",
         "rank": 76,
-        "isMediaSpoiler": false
-      },
-      {
-        "name": "Love Triangle",
-        "rank": 75,
-        "isMediaSpoiler": false
-      },
-      {
-        "name": "Heterosexual",
-        "rank": 73,
         "isMediaSpoiler": false
       },
       {
@@ -5006,12 +5206,12 @@
         "isMediaSpoiler": false
       },
       {
-        "name": "Ensemble Cast",
-        "rank": 60,
+        "name": "Male Protagonist",
+        "rank": 70,
         "isMediaSpoiler": false
       },
       {
-        "name": "Male Protagonist",
+        "name": "Ensemble Cast",
         "rank": 60,
         "isMediaSpoiler": false
       },
@@ -5033,9 +5233,9 @@
       "site": "youtube"
     },
     "nextAiringEpisode": {
-      "airingAt": 1793285760,
-      "timeUntilAiring": 184617,
-      "episode": 5
+      "airingAt": 1795100160,
+      "timeUntilAiring": 406461,
+      "episode": 8
     },
     "relations": {
       "edges": [
@@ -5224,6 +5424,22 @@
         {
           "role": "SUPPORTING",
           "node": {
+            "id": 390628,
+            "name": {
+              "full": "Ponta",
+              "native": "ぽん太",
+              "userPreferred": "Ponta"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b390628-2uloY2olL3is.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b390628-2uloY2olL3is.jpg"
+            }
+          },
+          "voiceActors": []
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
             "id": 393702,
             "name": {
               "full": "Tsukiko Shimojima",
@@ -5344,6 +5560,36 @@
         {
           "role": "SUPPORTING",
           "node": {
+            "id": 396044,
+            "name": {
+              "full": "Manatsu Atagawa",
+              "native": "熱川真夏",
+              "userPreferred": "Manatsu Atagawa"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b396044-TRpLmEsz2VjD.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b396044-TRpLmEsz2VjD.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 168158,
+              "name": {
+                "full": "Hazuki Ogino",
+                "native": "荻野葉月",
+                "userPreferred": "Hazuki Ogino"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n168158-PZPIDlARok4L.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n168158-PZPIDlARok4L.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
             "id": 396244,
             "name": {
               "full": "Daichi Midorikawa",
@@ -5372,6 +5618,36 @@
             }
           },
           "voiceActors": []
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 396247,
+            "name": {
+              "full": "Nagisa Amamiya",
+              "native": "雨宮渚",
+              "userPreferred": "Nagisa Amamiya"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b396247-j24nATc4x3Ri.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b396247-j24nATc4x3Ri.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 107750,
+              "name": {
+                "full": "Hibiku Yamamura",
+                "native": "山村響",
+                "userPreferred": "Hibiku Yamamura"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n107750-ncaOycwTveFP.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n107750-ncaOycwTveFP.png"
+              }
+            }
+          ]
         }
       ]
     },
@@ -5380,7 +5656,7 @@
   "213658": {
     "id": 213658,
     "idMal": 64505,
-    "updatedAt": 1793098824,
+    "updatedAt": 1794690007,
     "title": {
       "romaji": "Diamond no Ace act II: Second Season Part 2",
       "english": "Ace of the Diamond act II -Second Season-",
@@ -5415,8 +5691,8 @@
       "Sports"
     ],
     "synonyms": [],
-    "averageScore": 79,
-    "popularity": 4199,
+    "averageScore": 82,
+    "popularity": 4752,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -5464,9 +5740,9 @@
       "site": "youtube"
     },
     "nextAiringEpisode": {
-      "airingAt": 1793521800,
-      "timeUntilAiring": 420657,
-      "episode": 4
+      "airingAt": 1794731400,
+      "timeUntilAiring": 37699,
+      "episode": 6
     },
     "relations": {
       "edges": [
@@ -5563,7 +5839,7 @@
           ]
         },
         {
-          "role": "SUPPORTING",
+          "role": "MAIN",
           "node": {
             "id": 89310,
             "name": {
@@ -5593,7 +5869,7 @@
           ]
         },
         {
-          "role": "SUPPORTING",
+          "role": "MAIN",
           "node": {
             "id": 30266,
             "name": {
@@ -5618,6 +5894,36 @@
               "image": {
                 "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n105989-96etzH1dLNug.jpg",
                 "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n105989-96etzH1dLNug.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 408407,
+            "name": {
+              "full": "Shinichirou Saotome",
+              "native": "早乙女慎一郎",
+              "userPreferred": "Shinichirou Saotome"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b408407-rp2a6VceMxle.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b408407-rp2a6VceMxle.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 272715,
+              "name": {
+                "full": "Daisuke Sakuma",
+                "native": "佐久間大介",
+                "userPreferred": "Daisuke Sakuma"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n272715-S1sEtc8iY78H.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n272715-S1sEtc8iY78H.png"
               }
             }
           ]
@@ -5685,36 +5991,6 @@
         {
           "role": "SUPPORTING",
           "node": {
-            "id": 408407,
-            "name": {
-              "full": "Shinichirou Saotome",
-              "native": "早乙女慎一郎",
-              "userPreferred": "Shinichirou Saotome"
-            },
-            "image": {
-              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b408407-rp2a6VceMxle.png",
-              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b408407-rp2a6VceMxle.png"
-            }
-          },
-          "voiceActors": [
-            {
-              "id": 272715,
-              "name": {
-                "full": "Daisuke Sakuma",
-                "native": "佐久間大介",
-                "userPreferred": "Daisuke Sakuma"
-              },
-              "language": "JAPANESE",
-              "image": {
-                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n272715-S1sEtc8iY78H.png",
-                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n272715-S1sEtc8iY78H.png"
-              }
-            }
-          ]
-        },
-        {
-          "role": "SUPPORTING",
-          "node": {
             "id": 89390,
             "name": {
               "full": "Shunpei Sanada",
@@ -5749,7 +6025,7 @@
   "213068": {
     "id": 213068,
     "idMal": 64344,
-    "updatedAt": 1793098949,
+    "updatedAt": 1794690040,
     "title": {
       "romaji": "Juuоu Mujin Dandivine",
       "english": "Dandivine",
@@ -5790,8 +6066,8 @@
       "DANDIVINE",
       "Beast King War God Dandivine"
     ],
-    "averageScore": 51,
-    "popularity": 2889,
+    "averageScore": 50,
+    "popularity": 3496,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -5808,6 +6084,11 @@
       },
       {
         "name": "Kaiju",
+        "rank": 79,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Love Triangle",
         "rank": 79,
         "isMediaSpoiler": false
       },
@@ -5830,6 +6111,16 @@
         "name": "Guns",
         "rank": 60,
         "isMediaSpoiler": false
+      },
+      {
+        "name": "School",
+        "rank": 40,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Food",
+        "rank": 20,
+        "isMediaSpoiler": false
       }
     ],
     "studios": {
@@ -5847,9 +6138,9 @@
       "site": "youtube"
     },
     "nextAiringEpisode": {
-      "airingAt": 1793201400,
-      "timeUntilAiring": 100258,
-      "episode": 4
+      "airingAt": 1795015800,
+      "timeUntilAiring": 322099,
+      "episode": 7
     },
     "relations": {
       "edges": [
@@ -6200,6 +6491,36 @@
               }
             }
           ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 411754,
+            "name": {
+              "full": "Uekara Suruga",
+              "native": "上唐駿河",
+              "userPreferred": "Uekara Suruga"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b411754-LZiGDhWUrMS3.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b411754-LZiGDhWUrMS3.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95167,
+              "name": {
+                "full": "Tetsuya Kakihara",
+                "native": "柿原徹也",
+                "userPreferred": "Tetsuya Kakihara"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95167-wjIShzThRTlS.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95167-wjIShzThRTlS.png"
+              }
+            }
+          ]
         }
       ]
     },
@@ -6208,7 +6529,7 @@
   "213356": {
     "id": 213356,
     "idMal": 64398,
-    "updatedAt": 1793095318,
+    "updatedAt": 1794693660,
     "title": {
       "romaji": "Guangyin Zhi Wai 2",
       "english": "Beyond Time's Gaze 2",
@@ -6245,8 +6566,8 @@
       "Fantasy"
     ],
     "synonyms": [],
-    "averageScore": 72,
-    "popularity": 508,
+    "averageScore": 73,
+    "popularity": 549,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "CN",
@@ -6316,9 +6637,9 @@
     },
     "trailer": null,
     "nextAiringEpisode": {
-      "airingAt": 1793440800,
-      "timeUntilAiring": 339656,
-      "episode": 20
+      "airingAt": 1795255200,
+      "timeUntilAiring": 561501,
+      "episode": 23
     },
     "relations": {
       "edges": [
@@ -6363,7 +6684,7 @@
   "213845": {
     "id": 213845,
     "idMal": null,
-    "updatedAt": 1793091939,
+    "updatedAt": 1794693611,
     "title": {
       "romaji": "Here U Are",
       "english": null,
@@ -6401,7 +6722,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 3329,
+    "popularity": 3401,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -6536,7 +6857,7 @@
   "213752": {
     "id": 213752,
     "idMal": 64524,
-    "updatedAt": 1793098933,
+    "updatedAt": 1794693668,
     "title": {
       "romaji": "MARRIAGETOXIN 2nd Season",
       "english": null,
@@ -6575,7 +6896,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 14669,
+    "popularity": 15682,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -6729,7 +7050,7 @@
   "213497": {
     "id": 213497,
     "idMal": 64467,
-    "updatedAt": 1793098983,
+    "updatedAt": 1794690117,
     "title": {
       "romaji": "Sudachi no Maoujou",
       "english": null,
@@ -6770,7 +7091,7 @@
       "The Fledgling Demon Lord's Starter Shop"
     ],
     "averageScore": null,
-    "popularity": 3288,
+    "popularity": 3564,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -6910,7 +7231,7 @@
   "213860": {
     "id": 213860,
     "idMal": 64553,
-    "updatedAt": 1793098893,
+    "updatedAt": 1794686419,
     "title": {
       "romaji": "Lv2 Kara Cheat datta Moto Yuusha Kouho no Mattari Isekai Life 2nd Season",
       "english": null,
@@ -6950,7 +7271,7 @@
       "Chillin' in Another World with Level 2 Super Cheat Powers Season 2"
     ],
     "averageScore": null,
-    "popularity": 11108,
+    "popularity": 11440,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -7060,7 +7381,7 @@
   "213067": {
     "id": 213067,
     "idMal": 64405,
-    "updatedAt": 1793091998,
+    "updatedAt": 1794665070,
     "title": {
       "romaji": "Netorareta Bakunyuu Tsuma-tachi 2",
       "english": null,
@@ -7095,8 +7416,8 @@
       "Hentai"
     ],
     "synonyms": [],
-    "averageScore": 58,
-    "popularity": 464,
+    "averageScore": 61,
+    "popularity": 521,
     "isAdult": true,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -7201,7 +7522,7 @@
   "213131": {
     "id": 213131,
     "idMal": 64380,
-    "updatedAt": 1793091993,
+    "updatedAt": 1794690019,
     "title": {
       "romaji": "Koiseyo Mayakashi Tenshi-domo",
       "english": null,
@@ -7242,7 +7563,7 @@
       "恋ども"
     ],
     "averageScore": null,
-    "popularity": 8764,
+    "popularity": 9149,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -7372,7 +7693,7 @@
   "213665": {
     "id": 213665,
     "idMal": 63878,
-    "updatedAt": 1793091953,
+    "updatedAt": 1794686583,
     "title": {
       "romaji": "Migawari Reijou wo Sukutta no wa Reikoku Mujihi na Koori no Ouji no Ai deshita",
       "english": "Saved By the Ice Cold Prince's Embrace",
@@ -7411,8 +7732,8 @@
       "Saved By the Ice Cold Prince's Embrace",
       "คุณหนูตัวแทนผู้ถูกช่วยไว้ด้วยรักของเจ้าชายน้ำแข็งผู้ไร้ความปราณี"
     ],
-    "averageScore": 55,
-    "popularity": 3350,
+    "averageScore": 56,
+    "popularity": 3413,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -7675,7 +7996,7 @@
   "213106": {
     "id": 213106,
     "idMal": 64379,
-    "updatedAt": 1793098941,
+    "updatedAt": 1794690177,
     "title": {
       "romaji": "Saikyou Mahoushi no Inton Keikaku",
       "english": null,
@@ -7715,7 +8036,7 @@
       "The Greatest Magicmaster's Retirement Plan"
     ],
     "averageScore": null,
-    "popularity": 2106,
+    "popularity": 2296,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -7830,7 +8151,21 @@
               "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b182868-eioZ5lN0XF7S.png"
             }
           },
-          "voiceActors": []
+          "voiceActors": [
+            {
+              "id": 130279,
+              "name": {
+                "full": "Eri Yukimura",
+                "native": "幸村恵理",
+                "userPreferred": "Eri Yukimura"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n130279-GEfikpdWucji.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n130279-GEfikpdWucji.png"
+              }
+            }
+          ]
         },
         {
           "role": "MAIN",
@@ -7869,7 +8204,7 @@
   "213338": {
     "id": 213338,
     "idMal": 64428,
-    "updatedAt": 1793098983,
+    "updatedAt": 1794686583,
     "title": {
       "romaji": "Jimoto Saikou!",
       "english": null,
@@ -7907,7 +8242,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 9628,
+    "popularity": 9758,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -8046,7 +8381,7 @@
   "213353": {
     "id": 213353,
     "idMal": 62634,
-    "updatedAt": 1793095373,
+    "updatedAt": 1794693687,
     "title": {
       "romaji": "Given: 10th Mix",
       "english": "Given: Moments in Life",
@@ -8087,7 +8422,7 @@
       "given: glimpses of life"
     ],
     "averageScore": 75,
-    "popularity": 2772,
+    "popularity": 2884,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -8458,7 +8793,7 @@
   "213360": {
     "id": 213360,
     "idMal": 64439,
-    "updatedAt": 1793098983,
+    "updatedAt": 1794686571,
     "title": {
       "romaji": "Akane-banashi 2nd Season",
       "english": null,
@@ -8496,7 +8831,7 @@
       "Akane-banashi Season 2"
     ],
     "averageScore": null,
-    "popularity": 7496,
+    "popularity": 7828,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -9045,7 +9380,7 @@
   "213396": {
     "id": 213396,
     "idMal": 64449,
-    "updatedAt": 1793091975,
+    "updatedAt": 1794690158,
     "title": {
       "romaji": "Higurashi no Naku Koro ni (Shin Anime)",
       "english": null,
@@ -9085,7 +9420,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 5882,
+    "popularity": 5991,
     "isAdult": false,
     "source": "VISUAL_NOVEL",
     "countryOfOrigin": "JP",
@@ -9419,7 +9754,7 @@
   "213961": {
     "id": 213961,
     "idMal": 64577,
-    "updatedAt": 1793091929,
+    "updatedAt": 1794690195,
     "title": {
       "romaji": "Youjo Shenki 2",
       "english": null,
@@ -9456,7 +9791,7 @@
     ],
     "synonyms": [],
     "averageScore": 61,
-    "popularity": 1026,
+    "popularity": 1063,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -9782,7 +10117,7 @@
   "213066": {
     "id": 213066,
     "idMal": 64404,
-    "updatedAt": 1793091998,
+    "updatedAt": 1794690045,
     "title": {
       "romaji": "Muramata-san no Aijou",
       "english": null,
@@ -9790,7 +10125,7 @@
     },
     "type": "ANIME",
     "format": "OVA",
-    "status": "RELEASING",
+    "status": "FINISHED",
     "description": "Murakami-san, a boss beloved by everyone, and his subordinate Kaji-kun, have a secret. Murakami-san is clingy and easily moved to tears, and she and her subordinate Kaji-kun are lovers. And she has a split tongue.\n<br><br>\n(Source: Getchu, translated)",
     "episodes": 3,
     "duration": 20,
@@ -9817,8 +10152,8 @@
       "Hentai"
     ],
     "synonyms": [],
-    "averageScore": null,
-    "popularity": 588,
+    "averageScore": 62,
+    "popularity": 681,
     "isAdult": true,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -9873,11 +10208,7 @@
       "nodes": []
     },
     "trailer": null,
-    "nextAiringEpisode": {
-      "airingAt": 1794495600,
-      "timeUntilAiring": 1394454,
-      "episode": 3
-    },
+    "nextAiringEpisode": null,
     "relations": {
       "edges": [
         {
@@ -10324,7 +10655,7 @@
   "213363": {
     "id": 213363,
     "idMal": 64441,
-    "updatedAt": 1793095373,
+    "updatedAt": 1794686583,
     "title": {
       "romaji": "Kanan-sama wa Akumade Choroi 2nd Season",
       "english": null,
@@ -10367,7 +10698,7 @@
       "Mistress Kanan is Devilishly Easy Season 2"
     ],
     "averageScore": null,
-    "popularity": 5931,
+    "popularity": 6080,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -10657,7 +10988,7 @@
   "213020": {
     "id": 213020,
     "idMal": 64354,
-    "updatedAt": 1793092001,
+    "updatedAt": 1794668462,
     "title": {
       "romaji": "Juuheisou-gata Joshikousei",
       "english": null,
@@ -10690,10 +11021,11 @@
     "bannerImage": null,
     "genres": [],
     "synonyms": [
-      "Heavily Armed High School Girls"
+      "Heavily Armed High School Girls",
+      "JJK"
     ],
     "averageScore": null,
-    "popularity": 861,
+    "popularity": 894,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -11041,7 +11373,7 @@
   "213422": {
     "id": 213422,
     "idMal": 64452,
-    "updatedAt": 1793098841,
+    "updatedAt": 1794690005,
     "title": {
       "romaji": "Koisuru (Otome) no Tsukurikata",
       "english": null,
@@ -11081,24 +11413,24 @@
       "I Turned My Childhood Friend (♂) Into a Girl"
     ],
     "averageScore": null,
-    "popularity": 2409,
+    "popularity": 2465,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
     "tags": [
       {
         "name": "Femboy",
-        "rank": 94,
+        "rank": 95,
         "isMediaSpoiler": false
       },
       {
         "name": "Crossdressing",
-        "rank": 94,
+        "rank": 95,
         "isMediaSpoiler": false
       },
       {
         "name": "Boys' Love",
-        "rank": 91,
+        "rank": 92,
         "isMediaSpoiler": false
       },
       {
@@ -11670,7 +12002,7 @@
   "213469": {
     "id": 213469,
     "idMal": null,
-    "updatedAt": 1793091969,
+    "updatedAt": 1794668462,
     "title": {
       "romaji": "RE:BEL ROBOTICA",
       "english": null,
@@ -11708,7 +12040,7 @@
       "REBEL ROBOTICA"
     ],
     "averageScore": null,
-    "popularity": 978,
+    "popularity": 1012,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -12286,23 +12618,23 @@
   "213498": {
     "id": 213498,
     "idMal": 64466,
-    "updatedAt": 1793091966,
+    "updatedAt": 1794693643,
     "title": {
-      "romaji": "Nabe ni Dangan wo Uke Nagara",
+      "romaji": "Nabe ni Dangan wo Ukenagara",
       "english": null,
       "native": "鍋に弾丸を受けながら"
     },
     "type": "ANIME",
     "format": "TV",
     "status": "NOT_YET_RELEASED",
-    "description": "Meet Juntaro. A Japanese fishing addict who was born and raised in what is perceived to be one of the roughest parts of Japan. It is through his lens where you can experience various parts of the world, their culture, and of course their food. He particularly loves to visit countries and cities that are also believed to be highly dangerous due to his personal belief that they will absolutely have delicious food. Because this was intended for a Japanese audience, you will also get to witness various worldviews unique to Japan alongside it all. There's just one problem:<br><br>\n\nHe has extreme brainrot and views the world through a cute anime girl filter.",
+    "description": "Meet Juntarou. A Japanese fishing addict who was born and raised in what is perceived to be one of the roughest parts of Japan. It is through his lens where you can experience various parts of the world, their culture, and of course their food. He particularly loves to visit countries and cities that are also believed to be highly dangerous due to his personal belief that they will absolutely have delicious food. Because this was intended for a Japanese audience, you will also get to witness various worldviews unique to Japan alongside it all. There's just one problem:<br><br>\n\nHe has extreme brainrot and views the world through a cute anime girl filter.",
     "episodes": null,
     "duration": null,
-    "season": null,
-    "seasonYear": null,
+    "season": "WINTER",
+    "seasonYear": 2027,
     "startDate": {
       "year": 2027,
-      "month": null,
+      "month": 1,
       "day": null
     },
     "endDate": {
@@ -12322,7 +12654,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 492,
+    "popularity": 569,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -12360,7 +12692,10 @@
         }
       ]
     },
-    "trailer": null,
+    "trailer": {
+      "id": "fmafMZNXeHw",
+      "site": "youtube"
+    },
     "nextAiringEpisode": null,
     "relations": {
       "edges": [
@@ -12372,7 +12707,7 @@
             "format": "MANGA",
             "status": "RELEASING",
             "title": {
-              "romaji": "Nabe ni Dangan wo Uke Nagara",
+              "romaji": "Nabe ni Dangan wo Ukenagara",
               "english": null,
               "native": "鍋に弾丸を受けながら"
             }
@@ -12387,16 +12722,43 @@
           "node": {
             "id": 316804,
             "name": {
-              "full": "Juntaro Aoki",
+              "full": "Juntarou Aoki",
               "native": "青木潤太朗",
-              "userPreferred": "Juntaro Aoki"
+              "userPreferred": "Juntarou Aoki"
             },
             "image": {
               "large": "https://s4.anilist.co/file/anilistcdn/character/large/b316804-je4MME09E8Au.jpg",
               "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b316804-je4MME09E8Au.jpg"
             }
           },
-          "voiceActors": []
+          "voiceActors": [
+            {
+              "id": 121417,
+              "name": {
+                "full": "Shuu Uchida",
+                "native": "内田秀",
+                "userPreferred": "Shuu Uchida"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n121417-bWX0wlubfjEI.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n121417-bWX0wlubfjEI.jpg"
+              }
+            },
+            {
+              "id": 126794,
+              "name": {
+                "full": "Masaaki Mizunaka",
+                "native": "水中雅章",
+                "userPreferred": "Masaaki Mizunaka"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n126794-tZzYeLEQbsrj.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n126794-tZzYeLEQbsrj.png"
+              }
+            }
+          ]
         }
       ]
     },
@@ -12889,7 +13251,7 @@
   "213518": {
     "id": 213518,
     "idMal": 62729,
-    "updatedAt": 1792746368,
+    "updatedAt": 1794690195,
     "title": {
       "romaji": "Jian Lai Movie: Shisan Zhi Zheng",
       "english": null,
@@ -12929,7 +13291,7 @@
       "The Swords: The 13th Sword"
     ],
     "averageScore": null,
-    "popularity": 115,
+    "popularity": 118,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "CN",
@@ -12963,7 +13325,11 @@
           }
         }
       ]
-    }
+    },
+    "characters": {
+      "edges": []
+    },
+    "streamingEpisodes": []
   },
   "213523": {
     "id": 213523,
@@ -13162,7 +13528,7 @@
   "213580": {
     "id": 213580,
     "idMal": 64481,
-    "updatedAt": 1793098876,
+    "updatedAt": 1794679370,
     "title": {
       "romaji": "Shuumatsu no Valkyrie IV",
       "english": null,
@@ -13203,7 +13569,7 @@
       "Record of Ragnarok Season 4"
     ],
     "averageScore": null,
-    "popularity": 3586,
+    "popularity": 3695,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -13893,7 +14259,7 @@
   "213667": {
     "id": 213667,
     "idMal": 63414,
-    "updatedAt": 1793095373,
+    "updatedAt": 1794679370,
     "title": {
       "romaji": "LUCA",
       "english": "LUCA",
@@ -13930,7 +14296,7 @@
     ],
     "synonyms": [],
     "averageScore": 63,
-    "popularity": 337,
+    "popularity": 367,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -14075,7 +14441,7 @@
   "213686": {
     "id": 213686,
     "idMal": 64529,
-    "updatedAt": 1793095373,
+    "updatedAt": 1794679370,
     "title": {
       "romaji": "NTR Kishi",
       "english": null,
@@ -14112,8 +14478,8 @@
     "synonyms": [
       "the fallen knight"
     ],
-    "averageScore": null,
-    "popularity": 325,
+    "averageScore": 52,
+    "popularity": 400,
     "isAdult": true,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -14169,7 +14535,7 @@
     "trailer": null,
     "nextAiringEpisode": {
       "airingAt": 1795705200,
-      "timeUntilAiring": 2604056,
+      "timeUntilAiring": 1011497,
       "episode": 2
     },
     "relations": {
@@ -14183,7 +14549,7 @@
   "213732": {
     "id": 213732,
     "idMal": 64530,
-    "updatedAt": 1793098813,
+    "updatedAt": 1794690195,
     "title": {
       "romaji": "Mujikaku na Osananajimi to Kyoumi Honi de Yatte Mitara THE ANIMATION",
       "english": null,
@@ -14218,8 +14584,8 @@
       "Hentai"
     ],
     "synonyms": [],
-    "averageScore": 64,
-    "popularity": 527,
+    "averageScore": 69,
+    "popularity": 647,
     "isAdult": true,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -14232,11 +14598,7 @@
       ]
     },
     "trailer": null,
-    "nextAiringEpisode": {
-      "airingAt": 1793286000,
-      "timeUntilAiring": 184857,
-      "episode": 3
-    },
+    "nextAiringEpisode": null,
     "relations": {
       "edges": [
         {
@@ -15011,7 +15373,7 @@
   "213814": {
     "id": 213814,
     "idMal": 64541,
-    "updatedAt": 1793100030,
+    "updatedAt": 1794690035,
     "title": {
       "romaji": "Aikatsu Stars!: Hoshiboshi no Progress",
       "english": null,
@@ -15047,7 +15409,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 377,
+    "popularity": 397,
     "isAdult": false,
     "source": "VIDEO_GAME",
     "countryOfOrigin": "JP",
@@ -15081,7 +15443,7 @@
     },
     "nextAiringEpisode": {
       "airingAt": 1800543600,
-      "timeUntilAiring": 7442458,
+      "timeUntilAiring": 5849899,
       "episode": 1
     },
     "relations": {
@@ -15174,8 +15536,8 @@
               "userPreferred": "Mahiru Kasumi"
             },
             "image": {
-              "large": "https://s4.anilist.co/file/anilistcdn/character/large/126163-nkcd1M6QY6hp.jpg",
-              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/126163-nkcd1M6QY6hp.jpg"
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b126163-im54iBODpCKJ.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b126163-im54iBODpCKJ.png"
             }
           },
           "voiceActors": []
@@ -15315,7 +15677,7 @@
   "213831": {
     "id": 213831,
     "idMal": 64543,
-    "updatedAt": 1793091939,
+    "updatedAt": 1794690137,
     "title": {
       "romaji": "Snack HAZAMA",
       "english": "Snack Hazama",
@@ -15356,7 +15718,7 @@
       "Ushiro no Shoumen Kamui-san Mini Anime"
     ],
     "averageScore": 54,
-    "popularity": 1331,
+    "popularity": 1361,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -16125,7 +16487,7 @@
   "213879": {
     "id": 213879,
     "idMal": 64556,
-    "updatedAt": 1793091934,
+    "updatedAt": 1794679370,
     "title": {
       "romaji": "Ryuugeshou no Shinobi",
       "english": "Jurassic Shadows",
@@ -16161,7 +16523,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 1871,
+    "popularity": 1910,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -16306,7 +16668,7 @@
   "213929": {
     "id": 213929,
     "idMal": 64569,
-    "updatedAt": 1793091931,
+    "updatedAt": 1794668462,
     "title": {
       "romaji": "7-nin no Nemuri Hime",
       "english": null,
@@ -16346,7 +16708,7 @@
       "Seven Sleeping Beauties"
     ],
     "averageScore": null,
-    "popularity": 1319,
+    "popularity": 1389,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -16637,7 +16999,7 @@
   "213952": {
     "id": 213952,
     "idMal": 64573,
-    "updatedAt": 1793091929,
+    "updatedAt": 1794690195,
     "title": {
       "romaji": "Watashi wo Center ni Suru to Chikaimasuka?",
       "english": null,
@@ -16662,10 +17024,10 @@
       "day": null
     },
     "coverImage": {
-      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx213952-1DegwC5aES0U.jpg",
-      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx213952-1DegwC5aES0U.jpg",
-      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx213952-1DegwC5aES0U.jpg",
-      "color": "#aec9f1"
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx213952-7rcYvY0Zr8VG.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx213952-7rcYvY0Zr8VG.png",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx213952-7rcYvY0Zr8VG.png",
+      "color": "#e43578"
     },
     "bannerImage": null,
     "genres": [
@@ -16676,7 +17038,7 @@
       "Watacen"
     ],
     "averageScore": null,
-    "popularity": 1051,
+    "popularity": 1241,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -16685,12 +17047,29 @@
         "name": "Heterosexual",
         "rank": 79,
         "isMediaSpoiler": false
+      },
+      {
+        "name": "CGI",
+        "rank": 20,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Idol",
+        "rank": 20,
+        "isMediaSpoiler": false
       }
     ],
     "studios": {
-      "nodes": []
+      "nodes": [
+        {
+          "name": "Team TillDawn"
+        }
+      ]
     },
-    "trailer": null,
+    "trailer": {
+      "id": "rzDyLoSReNU",
+      "site": "youtube"
+    },
     "nextAiringEpisode": null,
     "relations": {
       "edges": [
@@ -16711,7 +17090,224 @@
       ]
     },
     "characters": {
-      "edges": []
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 412147,
+            "name": {
+              "full": "Kouichi Okuta",
+              "native": "奥田幸一",
+              "userPreferred": "Kouichi Okuta"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 335875,
+              "name": {
+                "full": "Taihi Kimura",
+                "native": "木村太飛",
+                "userPreferred": "Taihi Kimura"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n335875-Ou8lHIAZYnBH.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n335875-Ou8lHIAZYnBH.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 412150,
+            "name": {
+              "full": "Mizuki Natsuno",
+              "native": "夏野瑞希",
+              "userPreferred": "Mizuki Natsuno"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 259588,
+              "name": {
+                "full": "Haruna Mikawa",
+                "native": "三川華月",
+                "userPreferred": "Haruna Mikawa"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n259588-AFAnR0lUIX0S.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n259588-AFAnR0lUIX0S.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 412148,
+            "name": {
+              "full": "Mio Shiomi",
+              "native": "潮見美緒",
+              "userPreferred": "Mio Shiomi"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": []
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 412149,
+            "name": {
+              "full": "Saku Kageyama",
+              "native": "影山咲",
+              "userPreferred": "Saku Kageyama"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": []
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 412151,
+            "name": {
+              "full": "Hatsune Fukuba",
+              "native": "福羽初音",
+              "userPreferred": "Hatsune Fukuba"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 128650,
+              "name": {
+                "full": "Yukari Anzai",
+                "native": "安齋由香里",
+                "userPreferred": "Yukari Anzai"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n128650-2BnCvrwg0Hrh.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n128650-2BnCvrwg0Hrh.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 412152,
+            "name": {
+              "full": "Awayuki Shiroi",
+              "native": "白井淡雪",
+              "userPreferred": "Awayuki Shiroi"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 153576,
+              "name": {
+                "full": "Mai Kanno",
+                "native": "菅野真衣",
+                "userPreferred": "Mai Kanno"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n153576-YENM7J8rgjY1.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n153576-YENM7J8rgjY1.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 412153,
+            "name": {
+              "full": "Minori Mochizuki",
+              "native": "望月実",
+              "userPreferred": "Minori Mochizuki"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": []
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 412154,
+            "name": {
+              "full": "Rara Hoshino",
+              "native": "星野ララ",
+              "userPreferred": "Rara Hoshino"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": []
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 412155,
+            "name": {
+              "full": "Niko Okamoto",
+              "native": "岡本笑心",
+              "userPreferred": "Niko Okamoto"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": []
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 412156,
+            "name": {
+              "full": "Mirin Satou",
+              "native": "佐藤美鈴",
+              "userPreferred": "Mirin Satou"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": []
+        }
+      ]
     },
     "streamingEpisodes": []
   },
@@ -17773,7 +18369,7 @@
   "213815": {
     "id": 213815,
     "idMal": 64540,
-    "updatedAt": 1793098842,
+    "updatedAt": 1794672134,
     "title": {
       "romaji": "Mamono Tsukai no Musume",
       "english": null,
@@ -17816,7 +18412,7 @@
       "Heir to a Monstermancer"
     ],
     "averageScore": null,
-    "popularity": 828,
+    "popularity": 850,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -18698,7 +19294,7 @@
   "213506": {
     "id": 213506,
     "idMal": 64378,
-    "updatedAt": 1793005565,
+    "updatedAt": 1794672134,
     "title": {
       "romaji": "Hokuto no Ken: Kenou-gun Zako-tachi no Banka Part 2",
       "english": null,
@@ -18734,7 +19330,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 354,
+    "popularity": 359,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -19936,7 +20532,7 @@
   "213664": {
     "id": 213664,
     "idMal": 63606,
-    "updatedAt": 1793091953,
+    "updatedAt": 1794675761,
     "title": {
       "romaji": "Zhe Tian Movie: Bei Guan Zhan Wang Teng",
       "english": null,
@@ -19978,7 +20574,7 @@
       "Shrouding the Heavens: The Imperial Path"
     ],
     "averageScore": null,
-    "popularity": 175,
+    "popularity": 180,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "CN",

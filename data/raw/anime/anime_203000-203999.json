@@ -161,7 +161,7 @@
   "203651": {
     "id": 203651,
     "idMal": 63066,
-    "updatedAt": 1793092649,
+    "updatedAt": 1794679370,
     "title": {
       "romaji": "Code Geass: Hoshi Oi no Aspal",
       "english": null,
@@ -186,10 +186,10 @@
       "day": null
     },
     "coverImage": {
-      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx203651-m8vqNWvwhBGZ.jpg",
-      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx203651-m8vqNWvwhBGZ.jpg",
-      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx203651-m8vqNWvwhBGZ.jpg",
-      "color": "#50aef1"
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx203651-FhjuDfAm2Ziw.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx203651-FhjuDfAm2Ziw.jpg",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx203651-FhjuDfAm2Ziw.jpg",
+      "color": "#d6431a"
     },
     "bannerImage": null,
     "genres": [],
@@ -197,7 +197,7 @@
       "CODE GEASS Star Chaser Aspal"
     ],
     "averageScore": null,
-    "popularity": 3766,
+    "popularity": 3995,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -233,14 +233,75 @@
       ]
     },
     "characters": {
-      "edges": []
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 412193,
+            "name": {
+              "full": "Aspal",
+              "native": "アスパル",
+              "userPreferred": "Aspal"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 279128,
+              "name": {
+                "full": "Ivan Shibata",
+                "native": "柴田あいばん",
+                "userPreferred": "Ivan Shibata"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n279128-iwCXkfeWuqc2.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n279128-iwCXkfeWuqc2.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 412194,
+            "name": {
+              "full": "Zoe",
+              "native": "ゾエ",
+              "userPreferred": "Zoe"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 107750,
+              "name": {
+                "full": "Hibiku Yamamura",
+                "native": "山村響",
+                "userPreferred": "Hibiku Yamamura"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n107750-ncaOycwTveFP.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n107750-ncaOycwTveFP.png"
+              }
+            }
+          ]
+        }
+      ]
     },
     "streamingEpisodes": []
   },
   "203855": {
     "id": 203855,
     "idMal": 63078,
-    "updatedAt": 1793098831,
+    "updatedAt": 1794690144,
     "title": {
       "romaji": "Saijaku Tamer wa Gomi Hiroi no Tabi wo Hajimemashita. 2nd Season",
       "english": null,
@@ -279,24 +340,24 @@
       "The Weakest Tamer Began a Journey to Pick Up Trash Season 2"
     ],
     "averageScore": null,
-    "popularity": 6292,
+    "popularity": 6422,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
     "tags": [
       {
         "name": "Female Protagonist",
-        "rank": 70,
-        "isMediaSpoiler": false
-      },
-      {
-        "name": "Homeless",
-        "rank": 60,
+        "rank": 72,
         "isMediaSpoiler": false
       },
       {
         "name": "Crossdressing",
         "rank": 60,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Homeless",
+        "rank": 56,
         "isMediaSpoiler": false
       }
     ],
@@ -378,7 +439,7 @@
   "203490": {
     "id": 203490,
     "idMal": 63061,
-    "updatedAt": 1793098852,
+    "updatedAt": 1794693614,
     "title": {
       "romaji": "Uchi no Otouto-domo ga Sumimasen",
       "english": "Please Excuse My Younger Brothers",
@@ -420,7 +481,7 @@
       "うち弟"
     ],
     "averageScore": 69,
-    "popularity": 12783,
+    "popularity": 13639,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -431,34 +492,49 @@
         "isMediaSpoiler": false
       },
       {
-        "name": "Family Life",
-        "rank": 82,
+        "name": "Heterosexual",
+        "rank": 84,
         "isMediaSpoiler": false
       },
       {
-        "name": "Heterosexual",
-        "rank": 80,
+        "name": "Family Life",
+        "rank": 84,
         "isMediaSpoiler": false
       },
       {
         "name": "Female Protagonist",
-        "rank": 76,
+        "rank": 77,
         "isMediaSpoiler": false
       },
       {
         "name": "Inseki",
-        "rank": 75,
+        "rank": 77,
         "isMediaSpoiler": false
       },
       {
         "name": "Male Harem",
-        "rank": 48,
+        "rank": 57,
         "isMediaSpoiler": false
       },
       {
         "name": "School",
-        "rank": 40,
+        "rank": 55,
         "isMediaSpoiler": false
+      },
+      {
+        "name": "Urban",
+        "rank": 53,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Love Triangle",
+        "rank": 53,
+        "isMediaSpoiler": true
+      },
+      {
+        "name": "Video Games",
+        "rank": 40,
+        "isMediaSpoiler": true
       },
       {
         "name": "Age Gap",
@@ -467,12 +543,7 @@
       },
       {
         "name": "Crossdressing",
-        "rank": 26,
-        "isMediaSpoiler": false
-      },
-      {
-        "name": "Urban",
-        "rank": 20,
+        "rank": 30,
         "isMediaSpoiler": false
       }
     ],
@@ -488,9 +559,9 @@
       "site": "youtube"
     },
     "nextAiringEpisode": {
-      "airingAt": 1793372400,
-      "timeUntilAiring": 271270,
-      "episode": 17
+      "airingAt": 1795186800,
+      "timeUntilAiring": 493109,
+      "episode": 20
     },
     "relations": {
       "edges": [
@@ -999,7 +1070,7 @@
   "203473": {
     "id": 203473,
     "idMal": 63053,
-    "updatedAt": 1793098848,
+    "updatedAt": 1794693610,
     "title": {
       "romaji": "Kyoufu Collector",
       "english": "HORROR COLLECTOR",
@@ -1039,7 +1110,7 @@
       "Horror Collector"
     ],
     "averageScore": 51,
-    "popularity": 6512,
+    "popularity": 7237,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -1050,23 +1121,28 @@
         "isMediaSpoiler": false
       },
       {
-        "name": "Urban Fantasy",
+        "name": "Exorcism",
         "rank": 60,
         "isMediaSpoiler": false
       },
       {
-        "name": "Ghost",
-        "rank": 20,
-        "isMediaSpoiler": false
-      },
-      {
-        "name": "Exorcism",
-        "rank": 20,
-        "isMediaSpoiler": false
-      },
-      {
         "name": "Curses",
+        "rank": 60,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Urban Fantasy",
+        "rank": 40,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Kids",
         "rank": 20,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Ghost",
+        "rank": 10,
         "isMediaSpoiler": false
       }
     ],
@@ -1079,9 +1155,9 @@
     },
     "trailer": null,
     "nextAiringEpisode": {
-      "airingAt": 1793457900,
-      "timeUntilAiring": 356770,
-      "episode": 4
+      "airingAt": 1795272300,
+      "timeUntilAiring": 578609,
+      "episode": 7
     },
     "relations": {
       "edges": [
@@ -1320,7 +1396,7 @@
   "203880": {
     "id": 203880,
     "idMal": 63082,
-    "updatedAt": 1793098850,
+    "updatedAt": 1794686551,
     "title": {
       "romaji": "Reiwa no Dara-san",
       "english": "Dara-san of the Reiwa Era",
@@ -1357,8 +1433,8 @@
       "Supernatural"
     ],
     "synonyms": [],
-    "averageScore": 72,
-    "popularity": 16247,
+    "averageScore": 73,
+    "popularity": 16721,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -1379,17 +1455,17 @@
         "isMediaSpoiler": false
       },
       {
-        "name": "Crossdressing",
-        "rank": 84,
+        "name": "Femboy",
+        "rank": 86,
         "isMediaSpoiler": false
       },
       {
         "name": "Tomboy",
-        "rank": 84,
+        "rank": 85,
         "isMediaSpoiler": false
       },
       {
-        "name": "Femboy",
+        "name": "Crossdressing",
         "rank": 84,
         "isMediaSpoiler": false
       },
@@ -2468,7 +2544,7 @@
   "203710": {
     "id": 203710,
     "idMal": 60591,
-    "updatedAt": 1793098983,
+    "updatedAt": 1794686583,
     "title": {
       "romaji": "Wei Miao Rensheng",
       "english": "Reborn as a Cat",
@@ -2509,7 +2585,7 @@
       "묘한 인생"
     ],
     "averageScore": 65,
-    "popularity": 1941,
+    "popularity": 1962,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "CN",
@@ -2661,15 +2737,15 @@
   "203275": {
     "id": 203275,
     "idMal": 63045,
-    "updatedAt": 1793095373,
+    "updatedAt": 1794693611,
     "title": {
       "romaji": "Demons' Crest",
       "english": "Devils' Crest",
       "native": "デモンズ・クレスト"
     },
     "type": "ANIME",
-    "format": "TV",
-    "status": "NOT_YET_RELEASED",
+    "format": "ONA",
+    "status": "RELEASING",
     "description": "Sixth-grader Yuuma Ashihara and his twin sister, Sawa, are playing Actual Magic, a brand-new virtual reality MMORPG, when it suddenly begins fusing with the real world. Amid all the chaos and confusion, it becomes clear that death is lurking around every corner, including when Yuuma runs into his classmate Sumika. Before, she was one of the cutest girls in his class, but she’s since undergone a terrible metamorphosis—into one of the game’s horrifying monsters! From the author of Sword Art Online and Accel World comes a story beyond VR and AR, where gaming and reality are one and the same…and staying alive is just the beginning!\n<br><br>\n(Source: Yen Press)",
     "episodes": null,
     "duration": null,
@@ -2691,7 +2767,7 @@
       "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/b203275-YyNHygkzIjMC.jpg",
       "color": "#0da1e4"
     },
-    "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/203275-g8zkD7HCkJCn.jpg",
+    "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/203275-4qPKsW5SXLzC.jpg",
     "genres": [
       "Action",
       "Adventure",
@@ -2699,22 +2775,43 @@
     ],
     "synonyms": [
       "デモクレ",
-      "DemoKure"
+      "DemoKure",
+      "Diabelska pieczęć"
     ],
-    "averageScore": null,
-    "popularity": 5857,
+    "averageScore": 55,
+    "popularity": 11373,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
     "tags": [
       {
+        "name": "Virtual World",
+        "rank": 79,
+        "isMediaSpoiler": false
+      },
+      {
         "name": "Video Games",
-        "rank": 60,
+        "rank": 70,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Female Protagonist",
+        "rank": 66,
         "isMediaSpoiler": false
       },
       {
         "name": "Male Protagonist",
-        "rank": 53,
+        "rank": 65,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Urban Fantasy",
+        "rank": 60,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "CGI",
+        "rank": 60,
         "isMediaSpoiler": false
       },
       {
@@ -2723,14 +2820,9 @@
         "isMediaSpoiler": false
       },
       {
-        "name": "Female Protagonist",
-        "rank": 50,
-        "isMediaSpoiler": false
-      },
-      {
-        "name": "Urban Fantasy",
+        "name": "Gore",
         "rank": 20,
-        "isMediaSpoiler": false
+        "isMediaSpoiler": true
       }
     ],
     "studios": {
@@ -2745,9 +2837,9 @@
       "site": "youtube"
     },
     "nextAiringEpisode": {
-      "airingAt": 1793930400,
-      "timeUntilAiring": 829268,
-      "episode": 1
+      "airingAt": 1795176000,
+      "timeUntilAiring": 482309,
+      "episode": 4
     },
     "relations": {
       "edges": [
@@ -2760,7 +2852,7 @@
             "status": "RELEASING",
             "title": {
               "romaji": "Demons' Crest",
-              "english": null,
+              "english": "Devils' Crest",
               "native": "デモンズ・クレスト"
             }
           }
@@ -3595,7 +3687,7 @@
   "203116": {
     "id": 203116,
     "idMal": null,
-    "updatedAt": 1793092682,
+    "updatedAt": 1794690049,
     "title": {
       "romaji": "Charisma",
       "english": null,
@@ -3612,7 +3704,7 @@
     "startDate": {
       "year": 2027,
       "month": 1,
-      "day": null
+      "day": 7
     },
     "endDate": {
       "year": null,
@@ -3632,7 +3724,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 829,
+    "popularity": 1029,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -3656,10 +3748,14 @@
       ]
     },
     "trailer": {
-      "id": "BIN5GFgnMTE",
+      "id": "5JO4G4NRRx0",
       "site": "youtube"
     },
-    "nextAiringEpisode": null,
+    "nextAiringEpisode": {
+      "airingAt": 1799333760,
+      "timeUntilAiring": 4640069,
+      "episode": 1
+    },
     "relations": {
       "edges": [
         {
@@ -4262,7 +4358,7 @@
   "203296": {
     "id": 203296,
     "idMal": 62649,
-    "updatedAt": 1793092670,
+    "updatedAt": 1794682986,
     "title": {
       "romaji": "Cardfight!! Vanguard: Divinez - Genma Seisen-hen",
       "english": "CARDFIGHT!! VANGUARD Divinez Parallactic Clash",
@@ -4302,7 +4398,7 @@
       "CARDFIGHT!! VANGUARD Divinez Parallactic Clash"
     ],
     "averageScore": 63,
-    "popularity": 1066,
+    "popularity": 1091,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -4369,7 +4465,7 @@
             "id": 214536,
             "type": "ANIME",
             "format": "TV",
-            "status": "NOT_YET_RELEASED",
+            "status": "RELEASING",
             "title": {
               "romaji": "Cardfight!! Vanguard Divinez Unmei Seisen-hen",
               "english": "CARDFIGHT!! VANGUARD Divinez: Parallactic Fate",
@@ -5169,7 +5265,7 @@
   "203448": {
     "id": 203448,
     "idMal": 63048,
-    "updatedAt": 1793098917,
+    "updatedAt": 1794690195,
     "title": {
       "romaji": "World Trigger REBOOT Project (Provisional Title)",
       "english": null,
@@ -5209,7 +5305,7 @@
       "ワートリREBOOT"
     ],
     "averageScore": null,
-    "popularity": 4843,
+    "popularity": 4915,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -6537,6 +6633,516 @@
               "image": {
                 "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n114946-P0yRoqSm5swu.png",
                 "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n114946-P0yRoqSm5swu.png"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "streamingEpisodes": []
+  },
+  "203148": {
+    "id": 203148,
+    "idMal": 63106,
+    "updatedAt": 1794682986,
+    "title": {
+      "romaji": "Hoppe-chan: Sun Oukoku to Kuro Hoppe-dan no Himitsu",
+      "english": null,
+      "native": "ほっぺちゃん ～サン王国と黒ほっぺ団の秘密～"
+    },
+    "type": "ANIME",
+    "format": "TV",
+    "status": "FINISHED",
+    "description": "The anime's story is set in a world made of \"cuteness\" called Sun Kingdom. Ganso Hoppe-chan, who lost her memory, appears in the kingdom. Meanwhile, in the real world, an office worker named Hoho is slowly losing her self-esteem in her work and life, sending her on the verge of becoming lost in life. Somewhere between Ganso Hoppe-chan and Hoho's worlds, their paths cross. Back in Sun Kingdom, toxic Hoppe-chan creatures are creating an \"uncute place,\" and Ganso Hoppe-chan joins the \"Guardians\" to protect the kingdom.\n<br><br>\n(Source: ANN)",
+    "episodes": 12,
+    "duration": 24,
+    "season": "WINTER",
+    "seasonYear": 2026,
+    "startDate": {
+      "year": 2026,
+      "month": 1,
+      "day": 10
+    },
+    "endDate": {
+      "year": 2026,
+      "month": 3,
+      "day": 28
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx203148-fMhz9uyA6HEK.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx203148-fMhz9uyA6HEK.jpg",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx203148-fMhz9uyA6HEK.jpg",
+      "color": "#1a93d6"
+    },
+    "bannerImage": null,
+    "genres": [
+      "Adventure",
+      "Fantasy"
+    ],
+    "synonyms": [
+      "HOPPECHAN - Mystery of the Sun Kingdom and the Black-Cheek Team -"
+    ],
+    "averageScore": null,
+    "popularity": 297,
+    "isAdult": false,
+    "source": "OTHER",
+    "countryOfOrigin": "JP",
+    "tags": [
+      {
+        "name": "Female Protagonist",
+        "rank": 60,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Full CGI",
+        "rank": 60,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Office Lady",
+        "rank": 60,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Advertisement",
+        "rank": 50,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Kids",
+        "rank": 20,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Idol",
+        "rank": 20,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Ensemble Cast",
+        "rank": 20,
+        "isMediaSpoiler": false
+      }
+    ],
+    "studios": {
+      "nodes": [
+        {
+          "name": "Toon Harbor Works"
+        }
+      ]
+    },
+    "trailer": {
+      "id": "knIpSRsTyGY",
+      "site": "youtube"
+    },
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": []
+    },
+    "characters": {
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 380937,
+            "name": {
+              "full": "Ganso Hoppe-chan",
+              "native": "がんそほっぺちゃん",
+              "userPreferred": "Ganso Hoppe-chan"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 245301,
+              "name": {
+                "full": "Rin Kusumi",
+                "native": "久住琳",
+                "userPreferred": "Rin Kusumi"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n245301-AXzBRil5Bs6d.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n245301-AXzBRil5Bs6d.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 380938,
+            "name": {
+              "full": "Ohana Hoppe-chan",
+              "native": "おはなほっぺちゃん",
+              "userPreferred": "Ohana Hoppe-chan"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 319821,
+              "name": {
+                "full": "Kyouko Kuramochi",
+                "native": "倉持京子",
+                "userPreferred": "Kyouko Kuramochi"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n319821-pXvm3Vy4dt2K.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n319821-pXvm3Vy4dt2K.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 380939,
+            "name": {
+              "full": "Star Hoppe-chan",
+              "native": "スターほっぺちゃん",
+              "userPreferred": "Star Hoppe-chan"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 204409,
+              "name": {
+                "full": "Ayaka Takamura",
+                "native": "鷹村彩花",
+                "userPreferred": "Ayaka Takamura"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n204409-uXiNIFhJyddI.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n204409-uXiNIFhJyddI.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 380944,
+            "name": {
+              "full": "Megane Hoppe-chan",
+              "native": "メガネほっぺちゃん",
+              "userPreferred": "Megane Hoppe-chan"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 380950,
+              "name": {
+                "full": "Ran Misato",
+                "native": "みさとらん",
+                "userPreferred": "Ran Misato"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n380950-1yURhBFepvta.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n380950-1yURhBFepvta.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 380940,
+            "name": {
+              "full": "Heart Hoppe-chan",
+              "native": "ハートほっぺちゃん",
+              "userPreferred": "Heart Hoppe-chan"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 118799,
+              "name": {
+                "full": "Ayasa Itou",
+                "native": "伊藤彩沙",
+                "userPreferred": "Ayasa Itou"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n118799-DWknGwlGYqRT.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n118799-DWknGwlGYqRT.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 380941,
+            "name": {
+              "full": "Hoho Satou",
+              "native": "佐藤歩々",
+              "userPreferred": "Hoho Satou"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": []
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 380942,
+            "name": {
+              "full": "Kuro Hoppe-chan",
+              "native": "黒ほっぺちゃん",
+              "userPreferred": "Kuro Hoppe-chan"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 127127,
+              "name": {
+                "full": "Yurie Kozakai",
+                "native": "小坂井祐莉絵",
+                "userPreferred": "Yurie Kozakai"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n127127-9PscYdruJd4S.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n127127-9PscYdruJd4S.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 380943,
+            "name": {
+              "full": "Ousama Hoppe-chan",
+              "native": "王様ほっぺちゃん",
+              "userPreferred": "Ousama Hoppe-chan"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 198116,
+              "name": {
+                "full": "Yusuke Kondo",
+                "native": "近藤雄介",
+                "userPreferred": "Yusuke Kondo"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n198116-qyJBIsTWzH38.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n198116-qyJBIsTWzH38.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 380945,
+            "name": {
+              "full": "Doku Hoppe-chan",
+              "native": "毒ほっぺちゃん",
+              "userPreferred": "Doku Hoppe-chan"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 380951,
+              "name": {
+                "full": "Kokona Ooishi",
+                "native": "大石恋々菜",
+                "userPreferred": "Kokona Ooishi"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n380951-AS2gfFQbSOui.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n380951-AS2gfFQbSOui.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 380946,
+            "name": {
+              "full": "Shitsuji Hoppe-chan",
+              "native": "執事ほっぺちゃん",
+              "userPreferred": "Shitsuji Hoppe-chan"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 380952,
+              "name": {
+                "full": "Takurou Hijioka",
+                "native": "肘岡拓朗",
+                "userPreferred": "Takurou Hijioka"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n380952-4bumzhlrNl7M.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n380952-4bumzhlrNl7M.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 380947,
+            "name": {
+              "full": "Nene Satou",
+              "native": "佐藤音々",
+              "userPreferred": "Nene Satou"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 380953,
+              "name": {
+                "full": "Yuzuha Shibata",
+                "native": "柴田柚巴",
+                "userPreferred": "Yuzuha Shibata"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n380953-cZZXBG6bfp9s.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n380953-cZZXBG6bfp9s.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 380948,
+            "name": {
+              "full": "Tiara Hoppe-chan",
+              "native": "ティアラほっぺちゃん",
+              "userPreferred": "Tiara Hoppe-chan"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 380954,
+              "name": {
+                "full": "Neo Tanaka",
+                "native": "田中音緒",
+                "userPreferred": "Neo Tanaka"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n380954-jdZnv5kkzogR.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n380954-jdZnv5kkzogR.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 380949,
+            "name": {
+              "full": "Yami Hoppe-chan",
+              "native": "闇ほっぺちゃん",
+              "userPreferred": "Yami Hoppe-chan"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 380955,
+              "name": {
+                "full": "Rio Ooki",
+                "native": "大葵梨央",
+                "userPreferred": "Rio Ooki"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n380955-u5v9VxnqzGM3.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n380955-u5v9VxnqzGM3.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 412516,
+            "name": {
+              "full": "Sister Hoppe-chan",
+              "native": "シ・スターほっぺちゃん",
+              "userPreferred": "Sister Hoppe-chan"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 199742,
+              "name": {
+                "full": "Nagisa Aoyama",
+                "native": "青山なぎさ",
+                "userPreferred": "Nagisa Aoyama"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n199742-GpILVcaXZ3Jk.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n199742-GpILVcaXZ3Jk.png"
               }
             }
           ]
