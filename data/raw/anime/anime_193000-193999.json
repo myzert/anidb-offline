@@ -2,7 +2,7 @@
   "193699": {
     "id": 193699,
     "idMal": 61758,
-    "updatedAt": 1794740587,
+    "updatedAt": 1794780156,
     "title": {
       "romaji": "Akuyaku Reijou no Naka no Hito",
       "english": null,
@@ -230,7 +230,7 @@
   "193968": {
     "id": 193968,
     "idMal": 61773,
-    "updatedAt": 1794740587,
+    "updatedAt": 1794773012,
     "title": {
       "romaji": "Let’s Play: Quest Darake no My Life",
       "english": "Let’s Play",
@@ -815,7 +815,7 @@
   "193348": {
     "id": 193348,
     "idMal": 61788,
-    "updatedAt": 1794747498,
+    "updatedAt": 1794758546,
     "title": {
       "romaji": "Netorareta Bakunyuu Tsuma-tachi",
       "english": null,
@@ -1290,7 +1290,7 @@
   "193296": {
     "id": 193296,
     "idMal": 61461,
-    "updatedAt": 1794735091,
+    "updatedAt": 1794780247,
     "title": {
       "romaji": "Tenkaichi: Nihon Saikyou Bugeisha Ketteisen",
       "english": null,
@@ -2148,7 +2148,7 @@
   "193607": {
     "id": 193607,
     "idMal": 61742,
-    "updatedAt": 1794737004,
+    "updatedAt": 1794773012,
     "title": {
       "romaji": "Dekichau made Kon",
       "english": "Marry Me, Let's Have a Baby!",
@@ -2424,7 +2424,7 @@
   "193623": {
     "id": 193623,
     "idMal": 61367,
-    "updatedAt": 1793093350,
+    "updatedAt": 1794773012,
     "title": {
       "romaji": "Tooi-san wa Seishun Shitai! \"Baka to SmaPho to Romance to\"",
       "english": null,
@@ -2463,7 +2463,7 @@
       "Tooi-san"
     ],
     "averageScore": null,
-    "popularity": 1811,
+    "popularity": 1814,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -2806,7 +2806,7 @@
   "193883": {
     "id": 193883,
     "idMal": 61765,
-    "updatedAt": 1794735052,
+    "updatedAt": 1794762166,
     "title": {
       "romaji": "Chibi Godzilla no Gyakushuu Season 3",
       "english": "Chibi Godzilla Raids Again Season 3",
@@ -3983,7 +3983,7 @@
   "193414": {
     "id": 193414,
     "idMal": 56903,
-    "updatedAt": 1794740587,
+    "updatedAt": 1794765797,
     "title": {
       "romaji": "MyGO!!!!! Member no Nichijou",
       "english": null,
@@ -4848,6 +4848,125 @@
     },
     "characters": {
       "edges": []
+    },
+    "streamingEpisodes": []
+  },
+  "193831": {
+    "id": 193831,
+    "idMal": 60328,
+    "updatedAt": 1794754857,
+    "title": {
+      "romaji": "Fudanshi Shoukan: Isekai de Shinjuu ni Hameraremashita 7th Season",
+      "english": null,
+      "native": "腐男子召喚～異世界で神獣にハメられました～ 7th."
+    },
+    "type": "ANIME",
+    "format": "ONA",
+    "status": "FINISHED",
+    "description": "Seventh season of Fudanshi Shoukan: Isekai de Shinjuu ni Hameraremashita.\n\n",
+    "episodes": 3,
+    "duration": 2,
+    "season": null,
+    "seasonYear": null,
+    "startDate": {
+      "year": 2024,
+      "month": 6,
+      "day": 10
+    },
+    "endDate": {
+      "year": 2024,
+      "month": 6,
+      "day": 24
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b193831-2cm1wRkjPGmf.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b193831-2cm1wRkjPGmf.png",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/b193831-2cm1wRkjPGmf.png",
+      "color": "#e4bb93"
+    },
+    "bannerImage": null,
+    "genres": [
+      "Comedy"
+    ],
+    "synonyms": [],
+    "averageScore": null,
+    "popularity": 94,
+    "isAdult": false,
+    "source": "MANGA",
+    "countryOfOrigin": "JP",
+    "tags": [],
+    "studios": {
+      "nodes": []
+    },
+    "trailer": null,
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": [
+        {
+          "relationType": "PREQUEL",
+          "node": {
+            "id": 171130,
+            "type": "ANIME",
+            "format": "ONA",
+            "status": "FINISHED",
+            "title": {
+              "romaji": "Fudanshi Shoukan: Isekai de Shinjuu ni Hameraremashita Mini Anime 6th Season",
+              "english": null,
+              "native": "【腐男子召喚〜異世界で神獣にハメられました〜】ミニアニメ 6th"
+            }
+          }
+        },
+        {
+          "relationType": "PARENT",
+          "node": {
+            "id": 123902,
+            "type": "MANGA",
+            "format": "MANGA",
+            "status": "RELEASING",
+            "title": {
+              "romaji": "Fudanshi Shoukan: Isekai de Shinjuu ni Hameraremashita",
+              "english": "Summoning a BL Fan to Another World",
+              "native": "腐男子召喚〜異世界で神獣にハメられました〜"
+            }
+          }
+        }
+      ]
+    },
+    "characters": {
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 265606,
+            "name": {
+              "full": "Shiina Keitora",
+              "native": "椎名景虎",
+              "userPreferred": "Shiina Keitora"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": []
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 265607,
+            "name": {
+              "full": "Uu",
+              "native": "呉",
+              "userPreferred": "Uu"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": []
+        }
+      ]
     },
     "streamingEpisodes": []
   }
