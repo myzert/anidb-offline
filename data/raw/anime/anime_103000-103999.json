@@ -2,7 +2,7 @@
   "103222": {
     "id": 103222,
     "idMal": 37979,
-    "updatedAt": 1794690175,
+    "updatedAt": 1794715310,
     "title": {
       "romaji": "Mahou Shoujo Tokushusen Asuka",
       "english": "Magical Girl Spec-Ops Asuka",
@@ -730,7 +730,7 @@
   "103249": {
     "id": 103249,
     "idMal": null,
-    "updatedAt": 1792669411,
+    "updatedAt": 1794697400,
     "title": {
       "romaji": "Love! Snow! Really Magic",
       "english": "Love! Snow! Really Magic",
@@ -770,12 +770,22 @@
     "countryOfOrigin": "JP",
     "tags": [
       {
+        "name": "Snowscape",
+        "rank": 79,
+        "isMediaSpoiler": false
+      },
+      {
         "name": "Vocal Synth",
         "rank": 70,
         "isMediaSpoiler": false
       },
       {
         "name": "Chibi",
+        "rank": 20,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Animals",
         "rank": 20,
         "isMediaSpoiler": false
       }
@@ -790,12 +800,47 @@
     "nextAiringEpisode": null,
     "relations": {
       "edges": []
-    }
+    },
+    "characters": {
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 7156,
+            "name": {
+              "full": "Miku Hatsune",
+              "native": "初音ミク",
+              "userPreferred": "Miku Hatsune"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b7156-DUwViOmpWw2B.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b7156-DUwViOmpWw2B.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 110205,
+              "name": {
+                "full": "Miku Hatsune",
+                "native": "初音ミク",
+                "userPreferred": "Miku Hatsune"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n110205-oY9LZ5Zw80zl.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n110205-oY9LZ5Zw80zl.png"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "streamingEpisodes": []
   },
   "103638": {
     "id": 103638,
     "idMal": 38161,
-    "updatedAt": 1794686583,
+    "updatedAt": 1794715388,
     "title": {
       "romaji": "Kabukichou Sherlock",
       "english": "Case File nº221: Kabukicho",
@@ -1621,7 +1666,7 @@
   "103871": {
     "id": 103871,
     "idMal": 37976,
-    "updatedAt": 1794682876,
+    "updatedAt": 1794708199,
     "title": {
       "romaji": "Zombie Land Saga",
       "english": "ZOMBIE LAND SAGA",
@@ -2504,7 +2549,7 @@
   "103900": {
     "id": 103900,
     "idMal": 38186,
-    "updatedAt": 1794690036,
+    "updatedAt": 1794715388,
     "title": {
       "romaji": "Bokutachi wa Benkyou ga Dekinai",
       "english": "We Never Learn: BOKUBEN",
@@ -3288,7 +3333,7 @@
   "103632": {
     "id": 103632,
     "idMal": 37984,
-    "updatedAt": 1794690037,
+    "updatedAt": 1794706395,
     "title": {
       "romaji": "Kumo desu ga, Nani ka?",
       "english": "So I'm a Spider, So What?",
@@ -4708,7 +4753,7 @@
   "103139": {
     "id": 103139,
     "idMal": 37982,
-    "updatedAt": 1794690056,
+    "updatedAt": 1794715324,
     "title": {
       "romaji": "Domestic na Kanojo",
       "english": "Domestic Girlfriend",
@@ -5731,7 +5776,7 @@
   "103223": {
     "id": 103223,
     "idMal": 38003,
-    "updatedAt": 1794690022,
+    "updatedAt": 1794715388,
     "title": {
       "romaji": "Bungou Stray Dogs 3rd Season",
       "english": "Bungo Stray Dogs 3",
@@ -6839,7 +6884,7 @@
   "103572": {
     "id": 103572,
     "idMal": 38101,
-    "updatedAt": 1794690040,
+    "updatedAt": 1794708013,
     "title": {
       "romaji": "Go-toubun no Hanayome",
       "english": "The Quintessential Quintuplets",
@@ -7903,7 +7948,7 @@
   "103302": {
     "id": 103302,
     "idMal": 38080,
-    "updatedAt": 1794686574,
+    "updatedAt": 1794715388,
     "title": {
       "romaji": "Kono Oto Tomare!",
       "english": "Kono Oto Tomare!: Sounds of Life",
@@ -8663,7 +8708,7 @@
   "103303": {
     "id": 103303,
     "idMal": 62856,
-    "updatedAt": 1794690035,
+    "updatedAt": 1794715243,
     "title": {
       "romaji": "Nijusseiki Denki Mokuroku: Eureka Evrika",
       "english": "Sparks of Tomorrow",
@@ -9651,7 +9696,7 @@
   "103275": {
     "id": 103275,
     "idMal": 38084,
-    "updatedAt": 1794690003,
+    "updatedAt": 1794706463,
     "title": {
       "romaji": "Fate/Grand Order: Zettai Majuu Sensen Babylonia",
       "english": "Fate/Grand Order Absolute Demonic Front: Babylonia",
@@ -10795,7 +10840,7 @@
   "103441": {
     "id": 103441,
     "idMal": 35776,
-    "updatedAt": 1792755998,
+    "updatedAt": 1794715388,
     "title": {
       "romaji": "Kingdom Hearts χ Back Cover",
       "english": "Kingdom Hearts χ Back Cover",
@@ -10835,8 +10880,8 @@
       "Kingdom Hearts Unchained Key Backcover",
       "Kingdom Hearts Unchained X Backcover"
     ],
-    "averageScore": 66,
-    "popularity": 2197,
+    "averageScore": 67,
+    "popularity": 2214,
     "isAdult": false,
     "source": "VIDEO_GAME",
     "countryOfOrigin": "JP",
@@ -10907,12 +10952,287 @@
           }
         }
       ]
-    }
+    },
+    "characters": {
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 177512,
+            "name": {
+              "full": "Aced",
+              "native": "セッド",
+              "userPreferred": "Aced"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b177512-UP0DdPXVI5HE.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b177512-UP0DdPXVI5HE.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 107480,
+              "name": {
+                "full": "Subaru Kimura",
+                "native": "木村昴",
+                "userPreferred": "Subaru Kimura"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n107480-h2RgLXNP7hcj.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n107480-h2RgLXNP7hcj.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 177513,
+            "name": {
+              "full": "Ava",
+              "native": "アヴァ",
+              "userPreferred": "Ava"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b177513-dFt7yM5ypR9s.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b177513-dFt7yM5ypR9s.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 104510,
+              "name": {
+                "full": "Yume Miyamoto",
+                "native": "宮本侑芽",
+                "userPreferred": "Yume Miyamoto"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n104510-hB8YLsPRLNKq.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n104510-hB8YLsPRLNKq.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 177514,
+            "name": {
+              "full": "Gula",
+              "native": "グウラ",
+              "userPreferred": "Gula"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b177514-U8KhHaKyMQQa.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b177514-U8KhHaKyMQQa.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 115156,
+              "name": {
+                "full": "Kaito Ishikawa",
+                "native": "石川界人",
+                "userPreferred": "Kaito Ishikawa"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n115156-ngYfqBazlxYQ.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n115156-ngYfqBazlxYQ.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 177515,
+            "name": {
+              "full": "Invi",
+              "native": "インヴィ",
+              "userPreferred": "Invi"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b177515-B5RLad5q9ifq.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b177515-B5RLad5q9ifq.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95185,
+              "name": {
+                "full": "Kana Hanazawa",
+                "native": "花澤香菜",
+                "userPreferred": "Kana Hanazawa"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95185-x8ZYvtN7SegC.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95185-x8ZYvtN7SegC.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 177516,
+            "name": {
+              "full": "Ira",
+              "native": "イラ",
+              "userPreferred": "Ira"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b177516-ZDYgDOIxwrUl.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b177516-ZDYgDOIxwrUl.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 118908,
+              "name": {
+                "full": "Yuuichirou Umehara",
+                "native": "梅原裕一郎",
+                "userPreferred": "Yuuichirou Umehara"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n118908-a6LPeZI87Pf9.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n118908-a6LPeZI87Pf9.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 177517,
+            "name": {
+              "full": "Luxu",
+              "native": "ルシュ",
+              "userPreferred": "Luxu"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b177517-SUtqCKKr9J3i.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b177517-SUtqCKKr9J3i.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95591,
+              "name": {
+                "full": "Kenjirou Tsuda",
+                "native": "津田健次郎",
+                "userPreferred": "Kenjirou Tsuda"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95591-WQGdD3ubbeoq.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95591-WQGdD3ubbeoq.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 177518,
+            "name": {
+              "full": "The Master of Masters",
+              "native": "マスター・オブ・マスター",
+              "userPreferred": "The Master of Masters"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b177518-atcQxL1jHGFF.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b177518-atcQxL1jHGFF.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95002,
+              "name": {
+                "full": "Tomokazu Sugita",
+                "native": "杉田智和",
+                "userPreferred": "Tomokazu Sugita"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95002-nDIvHaynicEg.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95002-nDIvHaynicEg.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 177519,
+            "name": {
+              "full": "Ephemer",
+              "native": "エフェメラ",
+              "userPreferred": "Ephemer"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b177519-NpjjqE2SU9WS.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b177519-NpjjqE2SU9WS.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 118498,
+              "name": {
+                "full": "Yuuto Uemura",
+                "native": "上村祐翔",
+                "userPreferred": "Yuuto Uemura"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n118498-6YvZZS0HM2qD.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n118498-6YvZZS0HM2qD.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 177520,
+            "name": {
+              "full": "Chirithy",
+              "native": "チリシィ",
+              "userPreferred": "Chirithy"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b177520-TyB5NIka1TTN.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b177520-TyB5NIka1TTN.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95272,
+              "name": {
+                "full": "Tomoko Kaneda",
+                "native": "金田朋子",
+                "userPreferred": "Tomoko Kaneda"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95272-qfGnqI0gkKK5.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95272-qfGnqI0gkKK5.png"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "streamingEpisodes": []
   },
   "103874": {
     "id": 103874,
     "idMal": 38145,
-    "updatedAt": 1794690195,
+    "updatedAt": 1794715324,
     "title": {
       "romaji": "Doukyonin wa Hiza, Tokidoki, Atama no Ue.",
       "english": "My Roommate is a Cat",
@@ -12044,7 +12364,7 @@
   "103047": {
     "id": 103047,
     "idMal": 37987,
-    "updatedAt": 1794690101,
+    "updatedAt": 1794715342,
     "title": {
       "romaji": "Violet Evergarden Movie",
       "english": "Violet Evergarden: the Movie",
@@ -12968,7 +13288,7 @@
   "103237": {
     "id": 103237,
     "idMal": 37916,
-    "updatedAt": 1794686547,
+    "updatedAt": 1794693787,
     "title": {
       "romaji": "Uma Musume: BNW no Chikai",
       "english": null,
@@ -13846,7 +14166,7 @@
   "103277": {
     "id": 103277,
     "idMal": 38086,
-    "updatedAt": 1794686583,
+    "updatedAt": 1794715253,
     "title": {
       "romaji": "Fate/Grand Order: Shinsei Entaku Ryouiki Camelot - Paladin; Agateram",
       "english": "Fate/Grand Order Divine Realm of the Round Table: Camelot - Paladin; Agateram",
@@ -14958,7 +15278,7 @@
   "103276": {
     "id": 103276,
     "idMal": 38085,
-    "updatedAt": 1794686583,
+    "updatedAt": 1794715388,
     "title": {
       "romaji": "Fate/Grand Order: Shinsei Entaku Ryouiki Camelot - Wandering; Agateram",
       "english": "Fate/Grand Order Divine Realm of the Round Table: Camelot - Wandering; Agateram",
@@ -15827,7 +16147,7 @@
   "103301": {
     "id": 103301,
     "idMal": 38062,
-    "updatedAt": 1794690047,
+    "updatedAt": 1794693787,
     "title": {
       "romaji": "Endro~!",
       "english": "ENDRO!",
@@ -16713,7 +17033,7 @@
   "103000": {
     "id": 103000,
     "idMal": 37992,
-    "updatedAt": 1794682986,
+    "updatedAt": 1794715387,
     "title": {
       "romaji": "Jingai-san no Yome",
       "english": null,
@@ -17657,7 +17977,7 @@
   "103221": {
     "id": 103221,
     "idMal": 37981,
-    "updatedAt": 1794690037,
+    "updatedAt": 1794706467,
     "title": {
       "romaji": "Kaijuu no Kodomo",
       "english": "Children of the Sea",
@@ -19171,7 +19491,7 @@
   "103717": {
     "id": 103717,
     "idMal": 37172,
-    "updatedAt": 1793014892,
+    "updatedAt": 1794715295,
     "title": {
       "romaji": "Nanatsu no Bitoku Specials",
       "english": "The Seven Heavenly Virtues Specials",
@@ -19208,7 +19528,7 @@
     ],
     "synonyms": [],
     "averageScore": 50,
-    "popularity": 4103,
+    "popularity": 4129,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -19224,7 +19544,7 @@
         "isMediaSpoiler": false
       },
       {
-        "name": "Isekai",
+        "name": "Female Protagonist",
         "rank": 60,
         "isMediaSpoiler": false
       },
@@ -19234,7 +19554,7 @@
         "isMediaSpoiler": false
       },
       {
-        "name": "Female Protagonist",
+        "name": "Isekai",
         "rank": 60,
         "isMediaSpoiler": false
       }
@@ -19879,7 +20199,7 @@
   "103110": {
     "id": 103110,
     "idMal": 37962,
-    "updatedAt": 1794682986,
+    "updatedAt": 1794700999,
     "title": {
       "romaji": "IDOLiSH7: Second BEAT!",
       "english": "IDOLiSH7 Second BEAT!",
@@ -22219,7 +22539,7 @@
   "103049": {
     "id": 103049,
     "idMal": 37975,
-    "updatedAt": 1794686583,
+    "updatedAt": 1794700999,
     "title": {
       "romaji": "Piano no Mori 2 (TV)",
       "english": "Forest of Piano Season 2",
@@ -22542,7 +22862,7 @@
   "103209": {
     "id": 103209,
     "idMal": 37781,
-    "updatedAt": 1794668462,
+    "updatedAt": 1794701000,
     "title": {
       "romaji": "Overlord: Ple Ple Pleiades 3",
       "english": null,
@@ -23629,7 +23949,7 @@
   "103048": {
     "id": 103048,
     "idMal": 38009,
-    "updatedAt": 1794690164,
+    "updatedAt": 1794708224,
     "title": {
       "romaji": "Re:Stage! Dream Days♪",
       "english": "Re:Stage! Dream Days",
@@ -25126,7 +25446,7 @@
   "103136": {
     "id": 103136,
     "idMal": 38030,
-    "updatedAt": 1793098983,
+    "updatedAt": 1794701000,
     "title": {
       "romaji": "Muchi♥Muchi Kyousei Seichouchuu!!!",
       "english": "Dumb Girls In Puberty!!!",
@@ -25165,7 +25485,7 @@
       "Plump. innocent and forcibly grown up!"
     ],
     "averageScore": 65,
-    "popularity": 3630,
+    "popularity": 3658,
     "isAdult": true,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -25366,7 +25686,7 @@
   "103735": {
     "id": 103735,
     "idMal": 37154,
-    "updatedAt": 1793095373,
+    "updatedAt": 1794708224,
     "title": {
       "romaji": "Grimms Notes The Animation",
       "english": "Grimm's Notes The Animation",
@@ -25403,8 +25723,8 @@
       "Fantasy"
     ],
     "synonyms": [],
-    "averageScore": 54,
-    "popularity": 13442,
+    "averageScore": 53,
+    "popularity": 13489,
     "isAdult": false,
     "source": "VIDEO_GAME",
     "countryOfOrigin": "JP",
@@ -26548,7 +26868,7 @@
   "103369": {
     "id": 103369,
     "idMal": 31685,
-    "updatedAt": 1792756002,
+    "updatedAt": 1794697400,
     "title": {
       "romaji": "Okaa-san ni Naisho",
       "english": "Don't tell Mom",
@@ -26586,7 +26906,7 @@
     ],
     "synonyms": [],
     "averageScore": 35,
-    "popularity": 733,
+    "popularity": 735,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -26627,7 +26947,11 @@
     "nextAiringEpisode": null,
     "relations": {
       "edges": []
-    }
+    },
+    "characters": {
+      "edges": []
+    },
+    "streamingEpisodes": []
   },
   "103370": {
     "id": 103370,
@@ -26766,7 +27090,7 @@
   "103712": {
     "id": 103712,
     "idMal": 40429,
-    "updatedAt": 1794672134,
+    "updatedAt": 1794697400,
     "title": {
       "romaji": "Bishoujo Senshi Sailor Moon: Eternal - Kouhen",
       "english": "Pretty Guardian Sailor Moon Eternal The Movie Part 2",
@@ -27670,7 +27994,7 @@
   "103713": {
     "id": 103713,
     "idMal": 40024,
-    "updatedAt": 1794672134,
+    "updatedAt": 1794697400,
     "title": {
       "romaji": "Bishoujo Senshi Sailor Moon: Eternal - Zenpen",
       "english": "Pretty Guardian Sailor Moon Eternal The Movie Part 1",
@@ -28702,7 +29026,7 @@
   "103555": {
     "id": 103555,
     "idMal": 38098,
-    "updatedAt": 1794686583,
+    "updatedAt": 1794701002,
     "title": {
       "romaji": "MIX: MEISEI STORY",
       "english": "MIX",
@@ -30513,7 +30837,7 @@
   "103256": {
     "id": 103256,
     "idMal": 37983,
-    "updatedAt": 1794690078,
+    "updatedAt": 1794693787,
     "title": {
       "romaji": "Nekopara EXTRA Koneko no Hi no Yakusoku",
       "english": "Nekopara OVA Extra",
@@ -33192,7 +33516,7 @@
   "103054": {
     "id": 103054,
     "idMal": 38034,
-    "updatedAt": 1793084522,
+    "updatedAt": 1794706518,
     "title": {
       "romaji": "Tiny Evil",
       "english": null,
@@ -33228,7 +33552,7 @@
     ],
     "synonyms": [],
     "averageScore": 67,
-    "popularity": 6556,
+    "popularity": 6616,
     "isAdult": true,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -35065,7 +35389,7 @@
   "103727": {
     "id": 103727,
     "idMal": 31263,
-    "updatedAt": 1792669365,
+    "updatedAt": 1794708224,
     "title": {
       "romaji": "GRIM",
       "english": null,
@@ -35098,8 +35422,8 @@
     "bannerImage": null,
     "genres": [],
     "synonyms": [],
-    "averageScore": 53,
-    "popularity": 543,
+    "averageScore": 56,
+    "popularity": 547,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -35122,7 +35446,11 @@
     "nextAiringEpisode": null,
     "relations": {
       "edges": []
-    }
+    },
+    "characters": {
+      "edges": []
+    },
+    "streamingEpisodes": []
   },
   "103775": {
     "id": 103775,
@@ -35644,7 +35972,7 @@
   "103023": {
     "id": 103023,
     "idMal": 37181,
-    "updatedAt": 1793014961,
+    "updatedAt": 1794697400,
     "title": {
       "romaji": "Guomin Laogong Dai Huijia 3",
       "english": null,
@@ -35685,7 +36013,7 @@
       "Bringing Back Home Mr. Perfect 3"
     ],
     "averageScore": 57,
-    "popularity": 1322,
+    "popularity": 1323,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "CN",
@@ -36091,7 +36419,7 @@
   "103138": {
     "id": 103138,
     "idMal": null,
-    "updatedAt": 1792778571,
+    "updatedAt": 1794701000,
     "title": {
       "romaji": "Shoujo Kou",
       "english": "About the Girl",
@@ -36127,8 +36455,8 @@
       "Sci-Fi"
     ],
     "synonyms": [],
-    "averageScore": 46,
-    "popularity": 305,
+    "averageScore": 49,
+    "popularity": 307,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -36143,7 +36471,11 @@
     "nextAiringEpisode": null,
     "relations": {
       "edges": []
-    }
+    },
+    "characters": {
+      "edges": []
+    },
+    "streamingEpisodes": []
   },
   "103323": {
     "id": 103323,
@@ -36829,7 +37161,7 @@
   "103148": {
     "id": 103148,
     "idMal": 38031,
-    "updatedAt": 1794690102,
+    "updatedAt": 1794693787,
     "title": {
       "romaji": "Kansen Sodom",
       "english": null,

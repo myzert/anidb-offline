@@ -2,7 +2,7 @@
   "147103": {
     "id": 147103,
     "idMal": 51552,
-    "updatedAt": 1794690015,
+    "updatedAt": 1794715317,
     "title": {
       "romaji": "Watashi no Shiawase na Kekkon",
       "english": "My Happy Marriage",
@@ -829,7 +829,7 @@
   "147864": {
     "id": 147864,
     "idMal": 51678,
-    "updatedAt": 1794693627,
+    "updatedAt": 1794715209,
     "title": {
       "romaji": "Onii-chan wa Oshimai!",
       "english": "ONIMAI: I'm Now Your Sister!",
@@ -1815,7 +1815,7 @@
   "147369": {
     "id": 147369,
     "idMal": 51614,
-    "updatedAt": 1794682825,
+    "updatedAt": 1794708159,
     "title": {
       "romaji": "Ao no Orchestra",
       "english": "Blue Orchestra",
@@ -2637,7 +2637,7 @@
   "147105": {
     "id": 147105,
     "idMal": 51553,
-    "updatedAt": 1794693615,
+    "updatedAt": 1794715213,
     "title": {
       "romaji": "Tongari Boushi no Atelier",
       "english": "Witch Hat Atelier",
@@ -3641,7 +3641,7 @@
   "147642": {
     "id": 147642,
     "idMal": 51648,
-    "updatedAt": 1794690064,
+    "updatedAt": 1794715309,
     "title": {
       "romaji": "Nozomanu Fushi no Boukensha",
       "english": "The Unwanted Undead Adventurer",
@@ -4265,7 +4265,7 @@
   "147885": {
     "id": 147885,
     "idMal": 51680,
-    "updatedAt": 1794682986,
+    "updatedAt": 1794715312,
     "title": {
       "romaji": "Cool Doji Danshi",
       "english": "Play It Cool, Guys",
@@ -5719,7 +5719,7 @@
   "147571": {
     "id": 147571,
     "idMal": 51632,
-    "updatedAt": 1794690022,
+    "updatedAt": 1794706472,
     "title": {
       "romaji": "Isekai wa Smartphone to Tomo ni. 2",
       "english": "In Another World With My Smartphone 2",
@@ -8769,7 +8769,7 @@
   "147622": {
     "id": 147622,
     "idMal": 54629,
-    "updatedAt": 1794672134,
+    "updatedAt": 1794701077,
     "title": {
       "romaji": "Maid Kyouiku.: Botsuraku Kizoku Rurikawa Tsubaki - THE ANIMATION",
       "english": null,
@@ -8964,7 +8964,7 @@
   "147850": {
     "id": 147850,
     "idMal": 51673,
-    "updatedAt": 1793098918,
+    "updatedAt": 1794715388,
     "title": {
       "romaji": "SHAMAN KING: FLOWERS",
       "english": "SHAMAN KING FLOWERS",
@@ -9005,8 +9005,8 @@
       "シャーマンキング フラワーズ",
       "SHAMAN KING NEXT GENERATIONS"
     ],
-    "averageScore": 65,
-    "popularity": 11502,
+    "averageScore": 64,
+    "popularity": 11558,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -13206,6 +13206,86 @@
     "nextAiringEpisode": null,
     "relations": {
       "edges": []
+    },
+    "characters": {
+      "edges": []
+    },
+    "streamingEpisodes": []
+  },
+  "147764": {
+    "id": 147764,
+    "idMal": 42885,
+    "updatedAt": 1794708224,
+    "title": {
+      "romaji": "Zoids Wild Senki",
+      "english": null,
+      "native": "ゾイドワイルド戦記"
+    },
+    "type": "ANIME",
+    "format": "ONA",
+    "status": "FINISHED",
+    "description": "Battle CG anime based on the Zoids Wild franchise.\n<br><br>\n(Source: Anime News Network)",
+    "episodes": 4,
+    "duration": 6,
+    "season": "FALL",
+    "seasonYear": 2020,
+    "startDate": {
+      "year": 2020,
+      "month": 10,
+      "day": 17
+    },
+    "endDate": {
+      "year": 2021,
+      "month": 3,
+      "day": 12
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b147764-zFU2zVAoPkRZ.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b147764-zFU2zVAoPkRZ.jpg",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/b147764-zFU2zVAoPkRZ.jpg",
+      "color": "#f1d65d"
+    },
+    "bannerImage": null,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Mecha",
+      "Sci-Fi"
+    ],
+    "synonyms": [],
+    "averageScore": null,
+    "popularity": 269,
+    "isAdult": false,
+    "source": "OTHER",
+    "countryOfOrigin": "JP",
+    "tags": [],
+    "studios": {
+      "nodes": [
+        {
+          "name": "OLM"
+        }
+      ]
+    },
+    "trailer": null,
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": [
+        {
+          "relationType": "PREQUEL",
+          "node": {
+            "id": 110788,
+            "type": "ANIME",
+            "format": "TV",
+            "status": "FINISHED",
+            "title": {
+              "romaji": "Zoids Wild ZERO",
+              "english": null,
+              "native": "ゾイドワイルド ZERO"
+            }
+          }
+        }
+      ]
     },
     "characters": {
       "edges": []

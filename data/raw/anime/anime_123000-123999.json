@@ -2,7 +2,7 @@
   "123899": {
     "id": 123899,
     "idMal": 42847,
-    "updatedAt": 1794686487,
+    "updatedAt": 1794715337,
     "title": {
       "romaji": "Ai no Utagoe wo Kikasete",
       "english": "Sing a Bit of Harmony",
@@ -499,7 +499,7 @@
   "123802": {
     "id": 123802,
     "idMal": 42826,
-    "updatedAt": 1794690014,
+    "updatedAt": 1794715325,
     "title": {
       "romaji": "Seijo no Maryoku wa Bannou desu",
       "english": "The Saint's Magic Power is Omnipotent",
@@ -1600,7 +1600,7 @@
   "123330": {
     "id": 123330,
     "idMal": 42745,
-    "updatedAt": 1794690139,
+    "updatedAt": 1794708224,
     "title": {
       "romaji": "Machikado Mazoku: 2-Choume",
       "english": "The Demon Girl Next Door Season 2",
@@ -2636,7 +2636,7 @@
   "123779": {
     "id": 123779,
     "idMal": 42822,
-    "updatedAt": 1794682986,
+    "updatedAt": 1794701040,
     "title": {
       "romaji": "Kai Byoui Ramune",
       "english": "Dr. Ramune -Mysterious Disease Specialist-",
@@ -6358,7 +6358,7 @@
   "123785": {
     "id": 123785,
     "idMal": 42825,
-    "updatedAt": 1794675761,
+    "updatedAt": 1794715382,
     "title": {
       "romaji": "Praeter no Kizu",
       "english": "Scar on the Praeter",
@@ -8039,7 +8039,7 @@
   "123476": {
     "id": 123476,
     "idMal": 41842,
-    "updatedAt": 1794690180,
+    "updatedAt": 1794693787,
     "title": {
       "romaji": "Shin Tennis no Ouji-sama: Hyoutei vs Rikkai - Game of Future",
       "english": "The Prince of Tennis II Hyotei vs. Rikkai Game of Future",
@@ -8919,7 +8919,7 @@
   "123078": {
     "id": 123078,
     "idMal": null,
-    "updatedAt": 1792828933,
+    "updatedAt": 1794704581,
     "title": {
       "romaji": "Animegatari × Shingeki no Kyojin Collab Eizou",
       "english": null,
@@ -8955,8 +8955,8 @@
       "Slice of Life"
     ],
     "synonyms": [],
-    "averageScore": 48,
-    "popularity": 784,
+    "averageScore": 51,
+    "popularity": 788,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -9001,7 +9001,132 @@
           }
         }
       ]
-    }
+    },
+    "characters": {
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 123598,
+            "name": {
+              "full": "Erika Aoyama",
+              "native": "青山絵里香",
+              "userPreferred": "Erika Aoyama"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/123598-lXehMKMOqvBj.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/123598-lXehMKMOqvBj.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 118577,
+              "name": {
+                "full": "Anju Inami",
+                "native": "伊波杏樹",
+                "userPreferred": "Anju Inami"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n118577-e6foJC8Qzlmf.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n118577-e6foJC8Qzlmf.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 123856,
+            "name": {
+              "full": "Maya Asagaya",
+              "native": "阿佐ヶ谷麻耶",
+              "userPreferred": "Maya Asagaya"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/123856-wIFC4xRDm8kz.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/123856-wIFC4xRDm8kz.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 106297,
+              "name": {
+                "full": "Inori Minase",
+                "native": "水瀬いのり",
+                "userPreferred": "Inori Minase"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n106297-DUyxkSjS9pEK.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n106297-DUyxkSjS9pEK.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 123898,
+            "name": {
+              "full": "Neko-senpai",
+              "native": "ネコ先輩",
+              "userPreferred": "Neko-senpai"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/123898-YVuds7353vaP.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/123898-YVuds7353vaP.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 106840,
+              "name": {
+                "full": "Hironori Kondou",
+                "native": "近藤浩徳",
+                "userPreferred": "Hironori Kondou"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n106840-AC03w0OTFovU.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n106840-AC03w0OTFovU.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 177401,
+            "name": {
+              "full": "Nishiazabu",
+              "native": "西麻布",
+              "userPreferred": "Nishiazabu"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b177401-RIuhjw0PE07Q.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b177401-RIuhjw0PE07Q.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95186,
+              "name": {
+                "full": "Shintarou Asanuma",
+                "native": "浅沼晋太郎",
+                "userPreferred": "Shintarou Asanuma"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95186-XMdPPqYhMrwN.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95186-XMdPPqYhMrwN.jpg"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "streamingEpisodes": []
   },
   "123284": {
     "id": 123284,
