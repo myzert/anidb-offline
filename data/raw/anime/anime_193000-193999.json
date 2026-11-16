@@ -2,7 +2,7 @@
   "193699": {
     "id": 193699,
     "idMal": 61758,
-    "updatedAt": 1794780156,
+    "updatedAt": 1794801809,
     "title": {
       "romaji": "Akuyaku Reijou no Naka no Hito",
       "english": null,
@@ -230,7 +230,7 @@
   "193968": {
     "id": 193968,
     "idMal": 61773,
-    "updatedAt": 1794773012,
+    "updatedAt": 1794801809,
     "title": {
       "romaji": "Let’s Play: Quest Darake no My Life",
       "english": "Let’s Play",
@@ -815,7 +815,7 @@
   "193348": {
     "id": 193348,
     "idMal": 61788,
-    "updatedAt": 1794758546,
+    "updatedAt": 1794787510,
     "title": {
       "romaji": "Netorareta Bakunyuu Tsuma-tachi",
       "english": null,
@@ -4406,7 +4406,7 @@
   "193617": {
     "id": 193617,
     "idMal": 59930,
-    "updatedAt": 1793006963,
+    "updatedAt": 1794801809,
     "title": {
       "romaji": "Kaguya-hime",
       "english": null,
@@ -4444,7 +4444,7 @@
       "Princess Kaguya"
     ],
     "averageScore": null,
-    "popularity": 128,
+    "popularity": 131,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -4967,6 +4967,149 @@
           "voiceActors": []
         }
       ]
+    },
+    "streamingEpisodes": []
+  },
+  "193468": {
+    "id": 193468,
+    "idMal": 58933,
+    "updatedAt": 1794801809,
+    "title": {
+      "romaji": "Dinoster: Gonglyongsuhodae 2",
+      "english": "Quantum Heroes Dinoster 2nd Season",
+      "native": "다이노스터: 공룡수호대 2기"
+    },
+    "type": "ANIME",
+    "format": "TV_SHORT",
+    "status": "FINISHED",
+    "description": "Second season of <i>Dinoster: Gonglyongsuhodae</i>.",
+    "episodes": 26,
+    "duration": 12,
+    "season": null,
+    "seasonYear": null,
+    "startDate": {
+      "year": 2024,
+      "month": 2,
+      "day": 26
+    },
+    "endDate": {
+      "year": 2024,
+      "month": 5,
+      "day": 21
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b193468-W4omLbJ4MTTs.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b193468-W4omLbJ4MTTs.png",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/b193468-W4omLbJ4MTTs.png",
+      "color": "#43bbe4"
+    },
+    "bannerImage": null,
+    "genres": [
+      "Action",
+      "Comedy",
+      "Mecha",
+      "Sci-Fi"
+    ],
+    "synonyms": [],
+    "averageScore": null,
+    "popularity": 31,
+    "isAdult": false,
+    "source": "ORIGINAL",
+    "countryOfOrigin": "KR",
+    "tags": [],
+    "studios": {
+      "nodes": [
+        {
+          "name": "Fun Flux Entertainment"
+        },
+        {
+          "name": "Alpha Animation"
+        }
+      ]
+    },
+    "trailer": null,
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": [
+        {
+          "relationType": "PREQUEL",
+          "node": {
+            "id": 193467,
+            "type": "ANIME",
+            "format": "TV_SHORT",
+            "status": "FINISHED",
+            "title": {
+              "romaji": "Dinoster: Gongnyongsuhodae",
+              "english": "Quantum Heroes Dinoster",
+              "native": "다이노스터: 공룡수호대"
+            }
+          }
+        }
+      ]
+    },
+    "characters": {
+      "edges": []
+    },
+    "streamingEpisodes": []
+  },
+  "193472": {
+    "id": 193472,
+    "idMal": 46156,
+    "updatedAt": 1794801809,
+    "title": {
+      "romaji": "Tian Jiang Xiaozi",
+      "english": null,
+      "native": "天降小子"
+    },
+    "type": "ANIME",
+    "format": "TV_SHORT",
+    "status": "FINISHED",
+    "description": null,
+    "episodes": 52,
+    "duration": 14,
+    "season": null,
+    "seasonYear": null,
+    "startDate": {
+      "year": 2005,
+      "month": 11,
+      "day": 12
+    },
+    "endDate": {
+      "year": 2006,
+      "month": null,
+      "day": null
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b193472-IKgZumiYMdkS.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b193472-IKgZumiYMdkS.jpg",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/b193472-IKgZumiYMdkS.jpg",
+      "color": "#f1a143"
+    },
+    "bannerImage": null,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "synonyms": [
+      "Sky Kids"
+    ],
+    "averageScore": null,
+    "popularity": 24,
+    "isAdult": false,
+    "source": "ORIGINAL",
+    "countryOfOrigin": "CN",
+    "tags": [],
+    "studios": {
+      "nodes": []
+    },
+    "trailer": null,
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": []
+    },
+    "characters": {
+      "edges": []
     },
     "streamingEpisodes": []
   }
