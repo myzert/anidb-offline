@@ -2,7 +2,7 @@
   "12175": {
     "id": 12175,
     "idMal": 12175,
-    "updatedAt": 1794873716,
+    "updatedAt": 1794927627,
     "title": {
       "romaji": "Koi to Senkyo to Chocolate",
       "english": "Love, Election and Chocolate",
@@ -41,7 +41,7 @@
       "Koichoco"
     ],
     "averageScore": 66,
-    "popularity": 57623,
+    "popularity": 57630,
     "isAdult": false,
     "source": "VISUAL_NOVEL",
     "countryOfOrigin": "JP",
@@ -880,7 +880,7 @@
   "12461": {
     "id": 12461,
     "idMal": 12461,
-    "updatedAt": 1794862987,
+    "updatedAt": 1794920582,
     "title": {
       "romaji": "Hiiro no Kakera",
       "english": "Hiiro no Kakera: The Tamayori Princess Saga",
@@ -920,7 +920,7 @@
       "Scarlet Fragment"
     ],
     "averageScore": 62,
-    "popularity": 18631,
+    "popularity": 18637,
     "isAdult": false,
     "source": "VISUAL_NOVEL",
     "countryOfOrigin": "JP",
@@ -1594,7 +1594,7 @@
   "12549": {
     "id": 12549,
     "idMal": 12549,
-    "updatedAt": 1794879081,
+    "updatedAt": 1794927653,
     "title": {
       "romaji": "Dakara Boku wa, H ga Dekinai.",
       "english": "So, I Can't Play H!",
@@ -1635,7 +1635,7 @@
       "Dakara boku-ha H ga Dekinai."
     ],
     "averageScore": 60,
-    "popularity": 88306,
+    "popularity": 88326,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -2123,7 +2123,7 @@
   "12685": {
     "id": 12685,
     "idMal": 12685,
-    "updatedAt": 1794873717,
+    "updatedAt": 1794927651,
     "title": {
       "romaji": "Code Geass: Nunnally in Wonderland",
       "english": "Code Geass: Nunnally in Wonderland",
@@ -2160,7 +2160,7 @@
     ],
     "synonyms": [],
     "averageScore": 61,
-    "popularity": 17569,
+    "popularity": 17573,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -4634,7 +4634,7 @@
   "12921": {
     "id": 12921,
     "idMal": 12921,
-    "updatedAt": 1792792969,
+    "updatedAt": 1794920564,
     "title": {
       "romaji": "Morita-san wa Mukuchi. Specials",
       "english": null,
@@ -4672,8 +4672,8 @@
     "synonyms": [
       "Miss Morita is Taciturn (TV) Specials"
     ],
-    "averageScore": 60,
-    "popularity": 1435,
+    "averageScore": 61,
+    "popularity": 1441,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -4725,12 +4725,137 @@
           }
         }
       ]
-    }
+    },
+    "characters": {
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 41610,
+            "name": {
+              "full": "Mayu Morita",
+              "native": "森田真由",
+              "userPreferred": "Mayu Morita"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/41610.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/41610.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95185,
+              "name": {
+                "full": "Kana Hanazawa",
+                "native": "花澤香菜",
+                "userPreferred": "Kana Hanazawa"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95185-x8ZYvtN7SegC.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95185-x8ZYvtN7SegC.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 41737,
+            "name": {
+              "full": "Miki Murakoshi",
+              "native": "村越美樹",
+              "userPreferred": "Miki Murakoshi"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/41737.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/41737.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95890,
+              "name": {
+                "full": "Haruka Tomatsu",
+                "native": "戸松遥",
+                "userPreferred": "Haruka Tomatsu"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95890-pDWHkOm4ncq0.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95890-pDWHkOm4ncq0.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 41738,
+            "name": {
+              "full": "Chihiro Miura",
+              "native": "三浦千尋",
+              "userPreferred": "Chihiro Miura"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/41738.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/41738.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95869,
+              "name": {
+                "full": "Saori Hayami",
+                "native": "早見沙織",
+                "userPreferred": "Saori Hayami"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95869-qCQ0EaWpq1QT.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95869-qCQ0EaWpq1QT.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 41739,
+            "name": {
+              "full": "Hana Matsuzaka",
+              "native": "松坂花",
+              "userPreferred": "Hana Matsuzaka"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/41739.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/41739.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 96592,
+              "name": {
+                "full": "Yoshino Nanjou",
+                "native": "南條愛乃",
+                "userPreferred": "Yoshino Nanjou"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n96592-tiVdVcVi4UkD.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n96592-tiVdVcVi4UkD.jpg"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "streamingEpisodes": []
   },
   "12293": {
     "id": 12293,
     "idMal": 12293,
-    "updatedAt": 1794879000,
+    "updatedAt": 1794927660,
     "title": {
       "romaji": "Campione!: Matsurowanu Kamigami to Kamigoroshi no Maou",
       "english": "Campione!",
@@ -4769,7 +4894,7 @@
     ],
     "synonyms": [],
     "averageScore": 64,
-    "popularity": 77724,
+    "popularity": 77738,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -5627,7 +5752,7 @@
   "12863": {
     "id": 12863,
     "idMal": 12863,
-    "updatedAt": 1794855766,
+    "updatedAt": 1794920567,
     "title": {
       "romaji": "Pretty Rhythm: Dear My Future",
       "english": null,
@@ -6586,7 +6711,7 @@
   "12113": {
     "id": 12113,
     "idMal": 12113,
-    "updatedAt": 1794879044,
+    "updatedAt": 1794927660,
     "title": {
       "romaji": "Berserk: Ougon Jidai-hen II - Doldrey Kouryaku",
       "english": "Berserk: The Golden Age Arc II - The Battle for Doldrey",
@@ -6631,7 +6756,7 @@
       "Berserk: La Edad de Oro II - La Batalla por Doldrey"
     ],
     "averageScore": 75,
-    "popularity": 50937,
+    "popularity": 50950,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -7217,7 +7342,7 @@
   "12413": {
     "id": 12413,
     "idMal": 12413,
-    "updatedAt": 1794878952,
+    "updatedAt": 1794927660,
     "title": {
       "romaji": "Jormungand",
       "english": "Jormungand",
@@ -7254,7 +7379,7 @@
     ],
     "synonyms": [],
     "averageScore": 75,
-    "popularity": 91317,
+    "popularity": 91360,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -8178,7 +8303,7 @@
   "12431": {
     "id": 12431,
     "idMal": 12431,
-    "updatedAt": 1794877366,
+    "updatedAt": 1794920585,
     "title": {
       "romaji": "Uchuu Kyoudai",
       "english": "Space Brothers",
@@ -8219,7 +8344,7 @@
       "Space Bros"
     ],
     "averageScore": 83,
-    "popularity": 49884,
+    "popularity": 49897,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -9736,7 +9861,7 @@
   "12355": {
     "id": 12355,
     "idMal": 12355,
-    "updatedAt": 1794877290,
+    "updatedAt": 1794927660,
     "title": {
       "romaji": "Ookami Kodomo no Ame to Yuki",
       "english": "Wolf Children",
@@ -9784,7 +9909,7 @@
       "Вовченята Аме та Юкі"
     ],
     "averageScore": 83,
-    "popularity": 196896,
+    "popularity": 196945,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -10277,7 +10402,7 @@
   "12531": {
     "id": 12531,
     "idMal": 12531,
-    "updatedAt": 1794877306,
+    "updatedAt": 1794920578,
     "title": {
       "romaji": "Sakamichi no Apollon",
       "english": "Kids on the Slope",
@@ -10319,7 +10444,7 @@
       "Apollo on the Slope"
     ],
     "averageScore": 80,
-    "popularity": 97700,
+    "popularity": 97725,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -11206,7 +11331,7 @@
   "12679": {
     "id": 12679,
     "idMal": 12679,
-    "updatedAt": 1794879081,
+    "updatedAt": 1794924223,
     "title": {
       "romaji": "Joshiraku",
       "english": "Joshiraku",
@@ -11243,7 +11368,7 @@
     ],
     "synonyms": [],
     "averageScore": 73,
-    "popularity": 60845,
+    "popularity": 60858,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -11597,7 +11722,7 @@
   "12069": {
     "id": 12069,
     "idMal": 12069,
-    "updatedAt": 1794879028,
+    "updatedAt": 1794920610,
     "title": {
       "romaji": "Hajime no Ippo: THE FIGHTING! Boxer no Kobushi",
       "english": "Hajime no Ippo: The Fighting! - Boxer's Fist",
@@ -11640,7 +11765,7 @@
       "Hajime no Ippo: Boxer no Kobushi"
     ],
     "averageScore": 79,
-    "popularity": 16281,
+    "popularity": 16288,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -11862,7 +11987,7 @@
   "12403": {
     "id": 12403,
     "idMal": 12403,
-    "updatedAt": 1794877366,
+    "updatedAt": 1794920593,
     "title": {
       "romaji": "Yuru Yuri♪♪",
       "english": "YuruYuri Season 2",
@@ -11902,7 +12027,7 @@
       "ゆるゆり 第２期"
     ],
     "averageScore": 77,
-    "popularity": 47459,
+    "popularity": 47467,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -12728,7 +12853,7 @@
   "12375": {
     "id": 12375,
     "idMal": 12375,
-    "updatedAt": 1794877366,
+    "updatedAt": 1794920593,
     "title": {
       "romaji": "Maki-chan to Nau.",
       "english": "With Maki-chan",
@@ -12766,7 +12891,7 @@
       "Maki-chan to Now."
     ],
     "averageScore": 69,
-    "popularity": 6339,
+    "popularity": 6342,
     "isAdult": true,
     "source": "VISUAL_NOVEL",
     "countryOfOrigin": "JP",
@@ -12999,7 +13124,7 @@
   "12673": {
     "id": 12673,
     "idMal": 12673,
-    "updatedAt": 1794834328,
+    "updatedAt": 1794924223,
     "title": {
       "romaji": "Papa no Iukoto wo Kikinasai!: Pokkapoka",
       "english": null,
@@ -13043,7 +13168,7 @@
       "Papa no Iu Koto o Kikinasai! Special"
     ],
     "averageScore": 68,
-    "popularity": 10433,
+    "popularity": 10434,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -13320,7 +13445,7 @@
   "12031": {
     "id": 12031,
     "idMal": 12031,
-    "updatedAt": 1794878965,
+    "updatedAt": 1794924223,
     "title": {
       "romaji": "Kingdom",
       "english": "Kingdom",
@@ -13359,7 +13484,7 @@
       "Царство"
     ],
     "averageScore": 74,
-    "popularity": 61870,
+    "popularity": 61894,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -14317,7 +14442,7 @@
   "12467": {
     "id": 12467,
     "idMal": 12467,
-    "updatedAt": 1794879060,
+    "updatedAt": 1794924210,
     "title": {
       "romaji": "Nazo no Kanojo X",
       "english": "Mysterious Girlfriend X",
@@ -14358,7 +14483,7 @@
       "NazoKanoX"
     ],
     "averageScore": 69,
-    "popularity": 85696,
+    "popularity": 85724,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -15008,7 +15133,7 @@
   "12189": {
     "id": 12189,
     "idMal": 12189,
-    "updatedAt": 1794878910,
+    "updatedAt": 1794924157,
     "title": {
       "romaji": "Hyouka",
       "english": "Hyouka",
@@ -15052,7 +15177,7 @@
       "冰菓"
     ],
     "averageScore": 78,
-    "popularity": 358176,
+    "popularity": 358272,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -16140,7 +16265,7 @@
   "12029": {
     "id": 12029,
     "idMal": 12029,
-    "updatedAt": 1794878956,
+    "updatedAt": 1794927660,
     "title": {
       "romaji": "Uchuu Senkan Yamato 2199",
       "english": "Star Blazers: Space Battleship Yamato 2199",
@@ -16178,7 +16303,7 @@
     ],
     "synonyms": [],
     "averageScore": 80,
-    "popularity": 31631,
+    "popularity": 31640,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -17217,7 +17342,7 @@
   "12477": {
     "id": 12477,
     "idMal": 12477,
-    "updatedAt": 1794877360,
+    "updatedAt": 1794927658,
     "title": {
       "romaji": "Sakasama no Patema",
       "english": "Patema Inverted",
@@ -17255,7 +17380,7 @@
     ],
     "synonyms": [],
     "averageScore": 77,
-    "popularity": 83586,
+    "popularity": 83606,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -17665,7 +17790,7 @@
   "12729": {
     "id": 12729,
     "idMal": 12729,
-    "updatedAt": 1794877366,
+    "updatedAt": 1794927642,
     "title": {
       "romaji": "High School DxD OVA",
       "english": null,
@@ -17707,7 +17832,7 @@
       "Highschool DxD OVA"
     ],
     "averageScore": 68,
-    "popularity": 65254,
+    "popularity": 65273,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -18159,7 +18284,7 @@
   "12893": {
     "id": 12893,
     "idMal": 12893,
-    "updatedAt": 1794873718,
+    "updatedAt": 1794920565,
     "title": {
       "romaji": "Danshi Koukousei no Nichijou Specials",
       "english": "Daily Lives of High School Boys Specials",
@@ -18196,7 +18321,7 @@
     ],
     "synonyms": [],
     "averageScore": 76,
-    "popularity": 33665,
+    "popularity": 33671,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -18624,7 +18749,7 @@
   "12445": {
     "id": 12445,
     "idMal": 12445,
-    "updatedAt": 1794878933,
+    "updatedAt": 1794920585,
     "title": {
       "romaji": "Tasogare Otome × Amnesia",
       "english": "Dusk Maiden of Amnesia",
@@ -18663,7 +18788,7 @@
     ],
     "synonyms": [],
     "averageScore": 75,
-    "popularity": 95193,
+    "popularity": 95224,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -19200,7 +19325,7 @@
   "12859": {
     "id": 12859,
     "idMal": 12859,
-    "updatedAt": 1794879032,
+    "updatedAt": 1794927649,
     "title": {
       "romaji": "ONE PIECE FILM: Z",
       "english": "One Piece Film: Z",
@@ -19243,7 +19368,7 @@
       "One Piece Gold - Il film"
     ],
     "averageScore": 79,
-    "popularity": 65628,
+    "popularity": 65656,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -19963,7 +20088,7 @@
   "12231": {
     "id": 12231,
     "idMal": 12231,
-    "updatedAt": 1794877366,
+    "updatedAt": 1794922292,
     "title": {
       "romaji": "Dragon Ball: Episode of Bardock",
       "english": "Dragon Ball: Episode of Bardock",
@@ -20004,7 +20129,7 @@
       "Драконий жемчуг: Эпизод Бардока"
     ],
     "averageScore": 68,
-    "popularity": 32916,
+    "popularity": 32926,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -20340,7 +20465,7 @@
   "12565": {
     "id": 12565,
     "idMal": 12565,
-    "updatedAt": 1794879081,
+    "updatedAt": 1794927660,
     "title": {
       "romaji": "Fate/Prototype",
       "english": null,
@@ -20381,7 +20506,7 @@
       "Судьба/Прототип"
     ],
     "averageScore": 63,
-    "popularity": 34140,
+    "popularity": 34142,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -20883,7 +21008,7 @@
   "12191": {
     "id": 12191,
     "idMal": 12191,
-    "updatedAt": 1794877366,
+    "updatedAt": 1794927644,
     "title": {
       "romaji": "Smile Precure!",
       "english": "Glitter Force",
@@ -20924,7 +21049,7 @@
       "Smile Pretty Cure!"
     ],
     "averageScore": 70,
-    "popularity": 18916,
+    "popularity": 18920,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -22303,7 +22428,7 @@
   "12291": {
     "id": 12291,
     "idMal": 12291,
-    "updatedAt": 1794877357,
+    "updatedAt": 1794927646,
     "title": {
       "romaji": "Acchi Kocchi",
       "english": "Place to Place",
@@ -22341,7 +22466,7 @@
     ],
     "synonyms": [],
     "averageScore": 72,
-    "popularity": 75823,
+    "popularity": 75838,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -22796,7 +22921,7 @@
   "12115": {
     "id": 12115,
     "idMal": 12115,
-    "updatedAt": 1794879046,
+    "updatedAt": 1794922302,
     "title": {
       "romaji": "Berserk: Ougon Jidai-hen III - Kourin",
       "english": "Berserk: The Golden Age Arc III - The Advent",
@@ -22842,7 +22967,7 @@
       "Berserk: La Edad de Oro III - El Advenimiento"
     ],
     "averageScore": 79,
-    "popularity": 52696,
+    "popularity": 52715,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -23611,7 +23736,7 @@
   "12117": {
     "id": 12117,
     "idMal": 12117,
-    "updatedAt": 1794866596,
+    "updatedAt": 1794920608,
     "title": {
       "romaji": "Meitantei Conan: Juuichininme no Striker",
       "english": "Detective Conan: The Eleventh Striker",
@@ -23657,7 +23782,7 @@
       "Meitantei Conan: 11-ninme no Striker"
     ],
     "averageScore": 75,
-    "popularity": 11460,
+    "popularity": 11464,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -24511,7 +24636,7 @@
   "12471": {
     "id": 12471,
     "idMal": 12471,
-    "updatedAt": 1794873717,
+    "updatedAt": 1794920581,
     "title": {
       "romaji": "Eureka Seven AO",
       "english": "Eureka Seven AO",
@@ -24554,7 +24679,7 @@
       "E7 AO"
     ],
     "averageScore": 62,
-    "popularity": 19652,
+    "popularity": 19655,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -25663,7 +25788,7 @@
   "12883": {
     "id": 12883,
     "idMal": 12883,
-    "updatedAt": 1794879047,
+    "updatedAt": 1794920566,
     "title": {
       "romaji": "Tsuritama",
       "english": "Tsuritama",
@@ -25702,7 +25827,7 @@
     ],
     "synonyms": [],
     "averageScore": 73,
-    "popularity": 39341,
+    "popularity": 39346,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -26454,7 +26579,7 @@
   "12979": {
     "id": 12979,
     "idMal": 12979,
-    "updatedAt": 1794877366,
+    "updatedAt": 1794922335,
     "title": {
       "romaji": "NARUTO SD Rock Lee no Seishun Full-Power Ninden",
       "english": "NARUTO Spin-Off: Rock Lee & His Ninja Pals",
@@ -26493,7 +26618,7 @@
       "Naruto SD-Rock Lee:Les Péripéties d'un ninja en herbe"
     ],
     "averageScore": 67,
-    "popularity": 20302,
+    "popularity": 20304,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -27630,7 +27755,7 @@
   "12067": {
     "id": 12067,
     "idMal": 12067,
-    "updatedAt": 1794877366,
+    "updatedAt": 1794920610,
     "title": {
       "romaji": "Rurouni Kenshin: Meiji Kenkaku Romantan - Rurou no Saihate - Hi to Ruri no Kizuna wa Shiosai no Uchi ni",
       "english": "Samurai X Special",
@@ -27671,7 +27796,7 @@
       "Rurouni Kenshin: End of Wanderings"
     ],
     "averageScore": 68,
-    "popularity": 5406,
+    "popularity": 5407,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -27993,7 +28118,7 @@
   "12049": {
     "id": 12049,
     "idMal": 12049,
-    "updatedAt": 1794878988,
+    "updatedAt": 1794927627,
     "title": {
       "romaji": "FAIRY TAIL: Houou no Miko",
       "english": "Fairy Tail: Phoenix Priestess",
@@ -28034,7 +28159,7 @@
       "Fairy Tail - 1er Film - La prêtresse du Phoenix"
     ],
     "averageScore": 70,
-    "popularity": 45903,
+    "popularity": 45918,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -28878,7 +29003,7 @@
   "12365": {
     "id": 12365,
     "idMal": 12365,
-    "updatedAt": 1794877366,
+    "updatedAt": 1794927660,
     "title": {
       "romaji": "Bakuman. 3",
       "english": null,
@@ -28920,7 +29045,7 @@
       "Bakuman. 3rd Series"
     ],
     "averageScore": 83,
-    "popularity": 59403,
+    "popularity": 59413,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -29790,7 +29915,7 @@
   "12499": {
     "id": 12499,
     "idMal": 12499,
-    "updatedAt": 1794834334,
+    "updatedAt": 1794920579,
     "title": {
       "romaji": "Crayon Shin-chan: Arashi wo Yobu! Ora to Uchuu no Princess",
       "english": null,
@@ -29830,7 +29955,7 @@
       "Shin-chan y la princesa del espacio"
     ],
     "averageScore": 67,
-    "popularity": 2646,
+    "popularity": 2647,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -30061,7 +30186,7 @@
   "12669": {
     "id": 12669,
     "idMal": 12669,
-    "updatedAt": 1794834328,
+    "updatedAt": 1794927660,
     "title": {
       "romaji": "Amagami SS+ plus Specials",
       "english": null,
@@ -30385,7 +30510,7 @@
   "12119": {
     "id": 12119,
     "idMal": 12119,
-    "updatedAt": 1794834366,
+    "updatedAt": 1794920608,
     "title": {
       "romaji": "Natsuiro Kiseki",
       "english": null,
@@ -30427,7 +30552,7 @@
       "A Summer-Colored Miracle"
     ],
     "averageScore": 66,
-    "popularity": 12435,
+    "popularity": 12433,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -31328,7 +31453,7 @@
   "12611": {
     "id": 12611,
     "idMal": 12611,
-    "updatedAt": 1794834329,
+    "updatedAt": 1794920575,
     "title": {
       "romaji": "Sengoku Collection",
       "english": "Sengoku Collection",
@@ -31366,7 +31491,7 @@
       "Parallel World Samurai"
     ],
     "averageScore": 59,
-    "popularity": 6475,
+    "popularity": 6474,
     "isAdult": false,
     "source": "VIDEO_GAME",
     "countryOfOrigin": "JP",
@@ -32345,7 +32470,7 @@
   "12857": {
     "id": 12857,
     "idMal": 12857,
-    "updatedAt": 1794879081,
+    "updatedAt": 1794920568,
     "title": {
       "romaji": "Star Driver THE MOVIE",
       "english": null,
@@ -32382,7 +32507,7 @@
     ],
     "synonyms": [],
     "averageScore": 64,
-    "popularity": 3839,
+    "popularity": 3840,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -32842,7 +32967,7 @@
   "12815": {
     "id": 12815,
     "idMal": 12815,
-    "updatedAt": 1794877366,
+    "updatedAt": 1794927651,
     "title": {
       "romaji": "Shirokuma Cafe",
       "english": "Polar Bear's Café",
@@ -32882,7 +33007,7 @@
       "Shirokuma Café"
     ],
     "averageScore": 73,
-    "popularity": 22408,
+    "popularity": 22414,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -34035,7 +34160,7 @@
   "12879": {
     "id": 12879,
     "idMal": 12879,
-    "updatedAt": 1794877366,
+    "updatedAt": 1794920566,
     "title": {
       "romaji": "Dantalian no Shoka: Ibarahime",
       "english": "The Mystic Archives of Dantalian: Ibarahime",
@@ -34075,7 +34200,7 @@
       "Dantalian's Bookshelf: Ibarahime"
     ],
     "averageScore": 68,
-    "popularity": 5234,
+    "popularity": 5237,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -34192,7 +34317,7 @@
   "12149": {
     "id": 12149,
     "idMal": 12149,
-    "updatedAt": 1794834365,
+    "updatedAt": 1794920607,
     "title": {
       "romaji": "AKB0048",
       "english": "AKB0048",
@@ -34232,7 +34357,7 @@
       "AKB0048 First Stage"
     ],
     "averageScore": 70,
-    "popularity": 14639,
+    "popularity": 14642,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -35517,7 +35642,7 @@
   "12015": {
     "id": 12015,
     "idMal": 12015,
-    "updatedAt": 1794834371,
+    "updatedAt": 1794920613,
     "title": {
       "romaji": "TIGER & BUNNY: The Beginning",
       "english": "Tiger & Bunny: The Movie - The Beginning",
@@ -35558,7 +35683,7 @@
       "Taibani Movie 1"
     ],
     "averageScore": 72,
-    "popularity": 6078,
+    "popularity": 6079,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -36215,7 +36340,7 @@
   "12017": {
     "id": 12017,
     "idMal": 12017,
-    "updatedAt": 1794834371,
+    "updatedAt": 1794920613,
     "title": {
       "romaji": "TIGER & BUNNY: The Rising",
       "english": "Tiger & Bunny: The Movie - The Rising",
@@ -36256,7 +36381,7 @@
       "Taibani Movie 2"
     ],
     "averageScore": 74,
-    "popularity": 8510,
+    "popularity": 8511,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -36962,7 +37087,7 @@
   "12783": {
     "id": 12783,
     "idMal": 12783,
-    "updatedAt": 1794834324,
+    "updatedAt": 1794927641,
     "title": {
       "romaji": "Sora no Otoshimono Final: Eien no Watashi no Torikago",
       "english": "Heaven's Lost Property Final – The Movie: Eternally My Master",
@@ -37006,7 +37131,7 @@
       "Heaven's Lost Property 3"
     ],
     "averageScore": 63,
-    "popularity": 20954,
+    "popularity": 20953,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -37512,7 +37637,7 @@
   "12021": {
     "id": 12021,
     "idMal": 12021,
-    "updatedAt": 1794834370,
+    "updatedAt": 1794920613,
     "title": {
       "romaji": "Poyopoyo Kansatsu Nikki",
       "english": "Poyopoyo",
@@ -37555,7 +37680,7 @@
       "โลกบ้องแบ๊วของแมวตัวกลม"
     ],
     "averageScore": 71,
-    "popularity": 4923,
+    "popularity": 4924,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -38261,7 +38386,7 @@
   "12053": {
     "id": 12053,
     "idMal": 12053,
-    "updatedAt": 1794834368,
+    "updatedAt": 1794927649,
     "title": {
       "romaji": "Mardock Scramble: The Third Exhaust",
       "english": null,
@@ -38555,7 +38680,7 @@
   "12581": {
     "id": 12581,
     "idMal": 12581,
-    "updatedAt": 1794873717,
+    "updatedAt": 1794920575,
     "title": {
       "romaji": "Asa Made Jugyou Chu!",
       "english": null,
@@ -38595,7 +38720,7 @@
       "See Me After Class"
     ],
     "averageScore": 54,
-    "popularity": 14167,
+    "popularity": 14169,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -38817,7 +38942,7 @@
   "12221": {
     "id": 12221,
     "idMal": 12221,
-    "updatedAt": 1794866596,
+    "updatedAt": 1794920601,
     "title": {
       "romaji": "Precure All Stars New Stage: Mirai no Tomodachi",
       "english": null,
@@ -38859,7 +38984,7 @@
       "Precure All Stars New Stage Future Friends"
     ],
     "averageScore": 70,
-    "popularity": 2938,
+    "popularity": 2941,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -39839,7 +39964,7 @@
   "12187": {
     "id": 12187,
     "idMal": 12187,
-    "updatedAt": 1794879044,
+    "updatedAt": 1794920605,
     "title": {
       "romaji": "Carnival Phantasm EX Season",
       "english": null,
@@ -39879,7 +40004,7 @@
       "Карнавальный фантазм: Прошлый сезон"
     ],
     "averageScore": 73,
-    "popularity": 14849,
+    "popularity": 14850,
     "isAdult": false,
     "source": null,
     "countryOfOrigin": "JP",
@@ -40713,7 +40838,7 @@
   "12057": {
     "id": 12057,
     "idMal": 12057,
-    "updatedAt": 1794834368,
+    "updatedAt": 1794920610,
     "title": {
       "romaji": "My Imouto: Koakuma na A Cup",
       "english": null,
@@ -40751,7 +40876,7 @@
       "My Mai: Koakuma na A Cup"
     ],
     "averageScore": 62,
-    "popularity": 2868,
+    "popularity": 2869,
     "isAdult": true,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -40944,7 +41069,7 @@
   "12059": {
     "id": 12059,
     "idMal": 12059,
-    "updatedAt": 1794780247,
+    "updatedAt": 1794920610,
     "title": {
       "romaji": "Otomedori",
       "english": null,
@@ -40982,7 +41107,7 @@
       "Otome Dori"
     ],
     "averageScore": 52,
-    "popularity": 5718,
+    "popularity": 5720,
     "isAdult": true,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -41288,7 +41413,7 @@
   "12505": {
     "id": 12505,
     "idMal": 12505,
-    "updatedAt": 1794834333,
+    "updatedAt": 1794920579,
     "title": {
       "romaji": "C³ Special",
       "english": "C3: Outdoor School Confusion",
@@ -41334,7 +41459,7 @@
       "C3 Anime Episode 13"
     ],
     "averageScore": 62,
-    "popularity": 6616,
+    "popularity": 6617,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -41786,7 +41911,7 @@
   "12959": {
     "id": 12959,
     "idMal": 12959,
-    "updatedAt": 1794834318,
+    "updatedAt": 1794920563,
     "title": {
       "romaji": "Ojousama☆Yomeiri Kousou!",
       "english": null,
@@ -41824,7 +41949,7 @@
       "Ojou-sama Yomeiri Kousou!"
     ],
     "averageScore": 64,
-    "popularity": 2613,
+    "popularity": 2616,
     "isAdult": true,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -41934,7 +42059,7 @@
   "12281": {
     "id": 12281,
     "idMal": 12281,
-    "updatedAt": 1794834356,
+    "updatedAt": 1794920600,
     "title": {
       "romaji": "Rinne no Lagrange season 2",
       "english": "Lagrange: The Flower of Rin-ne Season 2",
@@ -42935,7 +43060,7 @@
   "12373": {
     "id": 12373,
     "idMal": 12373,
-    "updatedAt": 1794834349,
+    "updatedAt": 1794920593,
     "title": {
       "romaji": "STAR☆jewel",
       "english": null,
@@ -42973,7 +43098,7 @@
     ],
     "synonyms": [],
     "averageScore": 58,
-    "popularity": 1732,
+    "popularity": 1733,
     "isAdult": true,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -43105,7 +43230,7 @@
   "12449": {
     "id": 12449,
     "idMal": 12449,
-    "updatedAt": 1794834337,
+    "updatedAt": 1794927657,
     "title": {
       "romaji": "Maken-ki!: Doki Doki! Maken-ki! Himitsu no Kunren",
       "english": null,
@@ -43143,7 +43268,7 @@
       "Maken-Ki! Specials"
     ],
     "averageScore": 58,
-    "popularity": 8704,
+    "popularity": 8705,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -43386,7 +43511,7 @@
   "12671": {
     "id": 12671,
     "idMal": 12671,
-    "updatedAt": 1794852150,
+    "updatedAt": 1794927657,
     "title": {
       "romaji": "Pocket Monsters Best Wishes: Kyurem VS Seikenshi",
       "english": "Pokémon the Movie: Kyurem VS. The Sword of Justice",
@@ -44127,7 +44252,7 @@
   "12929": {
     "id": 12929,
     "idMal": 12929,
-    "updatedAt": 1794877366,
+    "updatedAt": 1794920564,
     "title": {
       "romaji": "Saint Seiya Ω",
       "english": "Saint Seiya Omega",
@@ -44167,7 +44292,7 @@
       "Os Cavaleiros do Zodíaco - Ômega"
     ],
     "averageScore": 59,
-    "popularity": 10458,
+    "popularity": 10461,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -45585,7 +45710,7 @@
   "12967": {
     "id": 12967,
     "idMal": 12967,
-    "updatedAt": 1794873718,
+    "updatedAt": 1794920563,
     "title": {
       "romaji": "Arcana Famiglia: La storia della Arcana Famiglia",
       "english": "La Storia Della Arcana Famiglia",
@@ -45623,7 +45748,7 @@
     ],
     "synonyms": [],
     "averageScore": 57,
-    "popularity": 34255,
+    "popularity": 34258,
     "isAdult": false,
     "source": "VISUAL_NOVEL",
     "countryOfOrigin": "JP",
@@ -46625,7 +46750,7 @@
   "12065": {
     "id": 12065,
     "idMal": 12065,
-    "updatedAt": 1794834368,
+    "updatedAt": 1794920610,
     "title": {
       "romaji": "Queen's Blade OVA Specials",
       "english": null,
@@ -46665,7 +46790,7 @@
       "クイーンズブレイド リベリオン プレミアムビジュアルブック"
     ],
     "averageScore": 54,
-    "popularity": 3013,
+    "popularity": 3014,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -47460,7 +47585,7 @@
   "12239": {
     "id": 12239,
     "idMal": 12239,
-    "updatedAt": 1794665070,
+    "updatedAt": 1794920600,
     "title": {
       "romaji": "Manyuu Hikenchou Picture Drama",
       "english": null,
@@ -47498,7 +47623,7 @@
       "Manyuu Hikenchou: Kaede no Chifusa-sama Oppai Seichou Kiroku"
     ],
     "averageScore": 52,
-    "popularity": 2170,
+    "popularity": 2171,
     "isAdult": false,
     "source": null,
     "countryOfOrigin": "JP",
@@ -47680,7 +47805,7 @@
   "12579": {
     "id": 12579,
     "idMal": 12579,
-    "updatedAt": 1792761657,
+    "updatedAt": 1794920576,
     "title": {
       "romaji": "Itsuka Tenma no Kuro Usagi Picture Drama",
       "english": "A Dark Rabbit has Seven Lives Picture Drama",
@@ -47722,8 +47847,8 @@
       "Itsuten Picture Drama",
       "Itsu-ten Picture Drama"
     ],
-    "averageScore": 54,
-    "popularity": 1809,
+    "averageScore": 55,
+    "popularity": 1815,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -47756,12 +47881,257 @@
           }
         }
       ]
-    }
+    },
+    "characters": {
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 30287,
+            "name": {
+              "full": "Himea Saito",
+              "native": "沙糸ヒメア",
+              "userPreferred": "Himea Saito"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/30287.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/30287.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95046,
+              "name": {
+                "full": "Megumi Takamoto",
+                "native": "高本めぐみ",
+                "userPreferred": "Megumi Takamoto"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95046-3vW0I3zKOpfW.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95046-3vW0I3zKOpfW.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 35620,
+            "name": {
+              "full": "Taito Kurogane",
+              "native": "鉄大兎",
+              "userPreferred": "Taito Kurogane"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b35620-ZYaWFA460gzm.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b35620-ZYaWFA460gzm.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95792,
+              "name": {
+                "full": "Shinnosuke Tachibana",
+                "native": "立花慎之介",
+                "userPreferred": "Shinnosuke Tachibana"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95792-5413Ip70mSdV.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95792-5413Ip70mSdV.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 35621,
+            "name": {
+              "full": "Mirai Andou",
+              "native": "安藤美雷",
+              "userPreferred": "Mirai Andou"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b35621-RMvhxKteYEPm.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b35621-RMvhxKteYEPm.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 103956,
+              "name": {
+                "full": "Iori Nomizu",
+                "native": "野水伊織",
+                "userPreferred": "Iori Nomizu"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n103956-SBfEe7v8hV4r.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n103956-SBfEe7v8hV4r.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 35622,
+            "name": {
+              "full": "Gekkou Kurenai",
+              "native": "紅月光",
+              "userPreferred": "Gekkou Kurenai"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b35622-LrveXRIj6xcl.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b35622-LrveXRIj6xcl.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95513,
+              "name": {
+                "full": "Yuuichi Nakamura",
+                "native": "中村悠一",
+                "userPreferred": "Yuuichi Nakamura"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95513-up9ZDuocHgRs.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95513-up9ZDuocHgRs.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 35623,
+            "name": {
+              "full": "Haruka Shigure",
+              "native": "時雨遥",
+              "userPreferred": "Haruka Shigure"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b35623-AckiBla5a4HY.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b35623-AckiBla5a4HY.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 103930,
+              "name": {
+                "full": "Mina  Kasai",
+                "native": "葛西美名",
+                "userPreferred": "Mina  Kasai"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/8930.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/8930.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 35624,
+            "name": {
+              "full": "Hinata Kurenai",
+              "native": "紅日向",
+              "userPreferred": "Hinata Kurenai"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/35624.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/35624.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95086,
+              "name": {
+                "full": "Jun Fukuyama",
+                "native": "福山潤",
+                "userPreferred": "Jun Fukuyama"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95086-cwKYmhOFNtH5.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95086-cwKYmhOFNtH5.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 44521,
+            "name": {
+              "full": "Izumi Aomi",
+              "native": "碧水泉",
+              "userPreferred": "Izumi Aomi"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b44521-rfvyAWFxneDl.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b44521-rfvyAWFxneDl.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 104149,
+              "name": {
+                "full": "Chika Horikawa",
+                "native": "堀川千華",
+                "userPreferred": "Chika Horikawa"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/9149.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/9149.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 45537,
+            "name": {
+              "full": "Yuica Kurogane",
+              "native": "鉄ユイカ",
+              "userPreferred": "Yuica Kurogane"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/45537.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/45537.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 106659,
+              "name": {
+                "full": "Natsumi Takamori",
+                "native": "高森奈津美",
+                "userPreferred": "Natsumi Takamori"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n106659-3LfNtHDY3P0Z.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n106659-3LfNtHDY3P0Z.png"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "streamingEpisodes": []
   },
   "12995": {
     "id": 12995,
     "idMal": 12995,
-    "updatedAt": 1794834317,
+    "updatedAt": 1794920562,
     "title": {
       "romaji": "Dark Blue",
       "english": null,
@@ -48086,7 +48456,7 @@
   "12079": {
     "id": 12079,
     "idMal": 12079,
-    "updatedAt": 1794866596,
+    "updatedAt": 1794920610,
     "title": {
       "romaji": "Black★Rock Shooter",
       "english": null,
@@ -48126,7 +48496,7 @@
       "Hatsune Miku's Black★Rock Shooter"
     ],
     "averageScore": 65,
-    "popularity": 15167,
+    "popularity": 15175,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -48243,7 +48613,7 @@
   "12957": {
     "id": 12957,
     "idMal": 12957,
-    "updatedAt": 1794834318,
+    "updatedAt": 1794920564,
     "title": {
       "romaji": "First Love",
       "english": "First Love",
@@ -48280,7 +48650,7 @@
     ],
     "synonyms": [],
     "averageScore": 64,
-    "popularity": 2210,
+    "popularity": 2211,
     "isAdult": true,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -48378,7 +48748,7 @@
   "12321": {
     "id": 12321,
     "idMal": 12321,
-    "updatedAt": 1794834353,
+    "updatedAt": 1794927660,
     "title": {
       "romaji": "Thermae Romae",
       "english": "Thermae Romae",
@@ -48418,7 +48788,7 @@
       "Thermæ Romæ"
     ],
     "averageScore": 66,
-    "popularity": 8041,
+    "popularity": 8042,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -48983,7 +49353,7 @@
   "12711": {
     "id": 12711,
     "idMal": 12711,
-    "updatedAt": 1794870200,
+    "updatedAt": 1794920571,
     "title": {
       "romaji": "Uta no☆Prince-sama♪ Maji LOVE 2000%",
       "english": "Uta no Prince Sama 2",
@@ -49024,7 +49394,7 @@
       "UtaPri 2"
     ],
     "averageScore": 67,
-    "popularity": 17072,
+    "popularity": 17075,
     "isAdult": false,
     "source": "VISUAL_NOVEL",
     "countryOfOrigin": "JP",
@@ -50741,7 +51111,7 @@
   "12997": {
     "id": 12997,
     "idMal": 12997,
-    "updatedAt": 1794866596,
+    "updatedAt": 1794920562,
     "title": {
       "romaji": "Please R○pe Me!",
       "english": null,
@@ -50779,7 +51149,7 @@
       "Please Rape Me!"
     ],
     "averageScore": 62,
-    "popularity": 4763,
+    "popularity": 4765,
     "isAdult": true,
     "source": "VISUAL_NOVEL",
     "countryOfOrigin": "JP",
@@ -51028,7 +51398,7 @@
   "12317": {
     "id": 12317,
     "idMal": 12317,
-    "updatedAt": 1794877366,
+    "updatedAt": 1794927660,
     "title": {
       "romaji": "Upotte!!",
       "english": "Upotte!!",
@@ -51065,7 +51435,7 @@
     ],
     "synonyms": [],
     "averageScore": 60,
-    "popularity": 17225,
+    "popularity": 17230,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -51975,7 +52345,7 @@
   "12481": {
     "id": 12481,
     "idMal": 12481,
-    "updatedAt": 1794873717,
+    "updatedAt": 1794920580,
     "title": {
       "romaji": "Gregory Horror Show: The Second Guest",
       "english": null,
@@ -52013,7 +52383,7 @@
       "Supernatural"
     ],
     "synonyms": [],
-    "averageScore": 61,
+    "averageScore": 60,
     "popularity": 768,
     "isAdult": false,
     "source": "ORIGINAL",
@@ -52236,7 +52606,7 @@
   "12665": {
     "id": 12665,
     "idMal": 12665,
-    "updatedAt": 1793059315,
+    "updatedAt": 1794920574,
     "title": {
       "romaji": "Yuru Yuri: Doushite☆Tomaranai☆Tokimeki☆Doki Doki☆Paradox☆Eternal",
       "english": null,
@@ -52274,7 +52644,7 @@
       "Yuru Yuri Special"
     ],
     "averageScore": 61,
-    "popularity": 8553,
+    "popularity": 8581,
     "isAdult": false,
     "source": null,
     "countryOfOrigin": "JP",
@@ -53247,7 +53617,7 @@
   "12001": {
     "id": 12001,
     "idMal": 12001,
-    "updatedAt": 1794877319,
+    "updatedAt": 1794920613,
     "title": {
       "romaji": "ONE PIECE 3D: Gekisou! Trap Coaster",
       "english": null,
@@ -53285,7 +53655,7 @@
     ],
     "synonyms": [],
     "averageScore": 61,
-    "popularity": 6476,
+    "popularity": 6478,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -53715,7 +54085,7 @@
   "12143": {
     "id": 12143,
     "idMal": 12143,
-    "updatedAt": 1794834365,
+    "updatedAt": 1794920607,
     "title": {
       "romaji": "Swing Out Sisters",
       "english": null,
@@ -53751,7 +54121,7 @@
     ],
     "synonyms": [],
     "averageScore": 68,
-    "popularity": 3859,
+    "popularity": 3860,
     "isAdult": true,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -53973,7 +54343,7 @@
   "12225": {
     "id": 12225,
     "idMal": 12225,
-    "updatedAt": 1792675147,
+    "updatedAt": 1794920601,
     "title": {
       "romaji": "Galaxy Angel S",
       "english": "Galaxy Angel S",
@@ -54009,8 +54379,8 @@
       "Sci-Fi"
     ],
     "synonyms": [],
-    "averageScore": 63,
-    "popularity": 1052,
+    "averageScore": 64,
+    "popularity": 1058,
     "isAdult": false,
     "source": null,
     "countryOfOrigin": "JP",
@@ -54073,7 +54443,222 @@
           }
         }
       ]
-    }
+    },
+    "characters": {
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 3171,
+            "name": {
+              "full": "Milfeulle Sakuraba",
+              "native": "ミルフィーユ・桜葉",
+              "userPreferred": "Milfeulle Sakuraba"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b3171-SqEaidcFGjSv.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b3171-SqEaidcFGjSv.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95315,
+              "name": {
+                "full": "Ryouko Shintani",
+                "native": "新谷良子",
+                "userPreferred": "Ryouko Shintani"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95315-6lzPWFB0mhh8.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95315-6lzPWFB0mhh8.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 3172,
+            "name": {
+              "full": "Mint Blancmanche",
+              "native": "ミント・ブラマンシュ",
+              "userPreferred": "Mint Blancmanche"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/3172.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/3172.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95099,
+              "name": {
+                "full": "Miyuki Sawashiro",
+                "native": "沢城みゆき",
+                "userPreferred": "Miyuki Sawashiro"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95099-jKP4LfPWqetk.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95099-jKP4LfPWqetk.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 3173,
+            "name": {
+              "full": "Ranpha Franboise",
+              "native": "蘭花・フランボワーズ",
+              "userPreferred": "Ranpha Franboise"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/3173.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/3173.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95027,
+              "name": {
+                "full": "Yukari Tamura",
+                "native": "田村ゆかり",
+                "userPreferred": "Yukari Tamura"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95027-Zm9onZDUN7ih.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95027-Zm9onZDUN7ih.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 3174,
+            "name": {
+              "full": "Forte Stollen",
+              "native": "フォルテ・シュトーレン",
+              "userPreferred": "Forte Stollen"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b3174-4zzcwacdAAvT.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b3174-4zzcwacdAAvT.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95316,
+              "name": {
+                "full": "Mayumi Yamaguchi",
+                "native": "山口眞弓",
+                "userPreferred": "Mayumi Yamaguchi"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95316-sp5oQEI6tURH.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95316-sp5oQEI6tURH.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 3186,
+            "name": {
+              "full": "Vanilla H",
+              "native": "ヴァニラ・H",
+              "userPreferred": "Vanilla H"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/3186.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/3186.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95029,
+              "name": {
+                "full": "Mika Kanai",
+                "native": "かないみか",
+                "userPreferred": "Mika Kanai"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95029-XUWWmrBWrwYm.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95029-XUWWmrBWrwYm.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 10679,
+            "name": {
+              "full": "Normad",
+              "native": "ノーマッド",
+              "userPreferred": "Normad"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/10679.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/10679.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95029,
+              "name": {
+                "full": "Mika Kanai",
+                "native": "かないみか",
+                "userPreferred": "Mika Kanai"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95029-XUWWmrBWrwYm.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95029-XUWWmrBWrwYm.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 15862,
+            "name": {
+              "full": "Volcott O'Huey",
+              "native": "ウォルコット・O・ヒューイ",
+              "userPreferred": "Volcott O'Huey"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/15862.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/15862.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95063,
+              "name": {
+                "full": "Keiji Fujiwara",
+                "native": "藤原啓治",
+                "userPreferred": "Keiji Fujiwara"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95063-xAsEUzspuLMG.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95063-xAsEUzspuLMG.jpg"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "streamingEpisodes": []
   },
   "12267": {
     "id": 12267,
@@ -55914,7 +56499,7 @@
   "12367": {
     "id": 12367,
     "idMal": 12367,
-    "updatedAt": 1794855766,
+    "updatedAt": 1794924180,
     "title": {
       "romaji": "Shining Hearts: Shiawase no Pan",
       "english": "Shining Hearts",
@@ -55953,7 +56538,7 @@
       "Shining Hearts: Bread of Happiness"
     ],
     "averageScore": 57,
-    "popularity": 9191,
+    "popularity": 9196,
     "isAdult": false,
     "source": "VIDEO_GAME",
     "countryOfOrigin": "JP",
@@ -56541,7 +57126,7 @@
   "12393": {
     "id": 12393,
     "idMal": 12393,
-    "updatedAt": 1794748246,
+    "updatedAt": 1794920593,
     "title": {
       "romaji": "Oyako Club",
       "english": null,
@@ -56603,7 +57188,7 @@
   "12437": {
     "id": 12437,
     "idMal": 12437,
-    "updatedAt": 1794852150,
+    "updatedAt": 1794920585,
     "title": {
       "romaji": "Yuri Seijin Naoko-san (2012)",
       "english": null,
@@ -56642,7 +57227,7 @@
       "Yurian Naoko-san"
     ],
     "averageScore": 62,
-    "popularity": 5691,
+    "popularity": 5694,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -56858,7 +57443,7 @@
   "12447": {
     "id": 12447,
     "idMal": 12447,
-    "updatedAt": 1794834337,
+    "updatedAt": 1794920583,
     "title": {
       "romaji": "Ben-To Picture Drama",
       "english": null,
@@ -57206,7 +57791,7 @@
   "12455": {
     "id": 12455,
     "idMal": 12455,
-    "updatedAt": 1794834337,
+    "updatedAt": 1794920583,
     "title": {
       "romaji": "Yuu☆Yuu☆Hakusho: Mu Mu Hakusho",
       "english": "Yu Yu Hakusho: Nightmare Hakusho",
@@ -57242,7 +57827,7 @@
     ],
     "synonyms": [],
     "averageScore": 62,
-    "popularity": 3726,
+    "popularity": 3727,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -57543,7 +58128,7 @@
   "12487": {
     "id": 12487,
     "idMal": 12487,
-    "updatedAt": 1794870200,
+    "updatedAt": 1794920579,
     "title": {
       "romaji": "Kyoukaisenjou no Horizon II",
       "english": "Horizon in the Middle of Nowhere II",
@@ -57583,7 +58168,7 @@
       "Kyoukai Senjou no Horizon 2"
     ],
     "averageScore": 72,
-    "popularity": 17414,
+    "popularity": 17417,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -58453,7 +59038,7 @@
   "12503": {
     "id": 12503,
     "idMal": 12503,
-    "updatedAt": 1794877341,
+    "updatedAt": 1794920579,
     "title": {
       "romaji": "Mirai Nikki: Ura Mirai Nikki",
       "english": "The Future Diary: Ura Mirai Nikki",
@@ -58496,7 +59081,7 @@
       "Mirai Nikki Specials"
     ],
     "averageScore": 58,
-    "popularity": 11919,
+    "popularity": 11922,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -60309,7 +60894,7 @@
   "12955": {
     "id": 12955,
     "idMal": 12955,
-    "updatedAt": 1794834318,
+    "updatedAt": 1794920564,
     "title": {
       "romaji": "Cele Kano",
       "english": null,
@@ -60345,7 +60930,7 @@
     ],
     "synonyms": [],
     "averageScore": 60,
-    "popularity": 1277,
+    "popularity": 1278,
     "isAdult": true,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -60397,7 +60982,7 @@
   "12961": {
     "id": 12961,
     "idMal": 12961,
-    "updatedAt": 1794834318,
+    "updatedAt": 1794920563,
     "title": {
       "romaji": "Kansen 5: THE Daybreak",
       "english": null,
@@ -60434,7 +61019,7 @@
     ],
     "synonyms": [],
     "averageScore": 60,
-    "popularity": 1906,
+    "popularity": 1907,
     "isAdult": true,
     "source": "VISUAL_NOVEL",
     "countryOfOrigin": "JP",
@@ -61418,7 +62003,7 @@
   "12695": {
     "id": 12695,
     "idMal": 12695,
-    "updatedAt": 1794859379,
+    "updatedAt": 1794920572,
     "title": {
       "romaji": "Tight-rope",
       "english": null,
@@ -61457,7 +62042,7 @@
       "Tightrope"
     ],
     "averageScore": 64,
-    "popularity": 8808,
+    "popularity": 8813,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -64013,7 +64598,7 @@
   "12055": {
     "id": 12055,
     "idMal": 12055,
-    "updatedAt": 1794870200,
+    "updatedAt": 1794920611,
     "title": {
       "romaji": "Brandish",
       "english": null,
@@ -64051,7 +64636,7 @@
     ],
     "synonyms": [],
     "averageScore": 63,
-    "popularity": 3678,
+    "popularity": 3680,
     "isAdult": true,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -64248,7 +64833,7 @@
   "12061": {
     "id": 12061,
     "idMal": 12061,
-    "updatedAt": 1794748263,
+    "updatedAt": 1794920610,
     "title": {
       "romaji": "Injuu Seisen XX",
       "english": "Twin Angels (2)",
@@ -64286,7 +64871,7 @@
     ],
     "synonyms": [],
     "averageScore": 46,
-    "popularity": 397,
+    "popularity": 398,
     "isAdult": true,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -64542,7 +65127,7 @@
   "12141": {
     "id": 12141,
     "idMal": 12141,
-    "updatedAt": 1794834365,
+    "updatedAt": 1794920607,
     "title": {
       "romaji": "Kaze no Matasaburou",
       "english": null,
@@ -64581,7 +65166,7 @@
       "Matasaburo the Wind Boy"
     ],
     "averageScore": 59,
-    "popularity": 933,
+    "popularity": 934,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -64645,7 +65230,7 @@
   "12483": {
     "id": 12483,
     "idMal": 12483,
-    "updatedAt": 1794834334,
+    "updatedAt": 1794920579,
     "title": {
       "romaji": "Gregory Horror Show: The Last Train",
       "english": null,
@@ -64899,7 +65484,7 @@
   "12551": {
     "id": 12551,
     "idMal": 12551,
-    "updatedAt": 1794748234,
+    "updatedAt": 1794920576,
     "title": {
       "romaji": "Jisshuusei",
       "english": null,
@@ -64937,7 +65522,7 @@
       "Jisshusei"
     ],
     "averageScore": 38,
-    "popularity": 227,
+    "popularity": 228,
     "isAdult": true,
     "source": "VISUAL_NOVEL",
     "countryOfOrigin": "JP",
@@ -64958,7 +65543,7 @@
   "12563": {
     "id": 12563,
     "idMal": 12563,
-    "updatedAt": 1794748234,
+    "updatedAt": 1794920576,
     "title": {
       "romaji": "Punky Funky Baby",
       "english": "Punky Funky Baby",
@@ -64994,7 +65579,7 @@
     ],
     "synonyms": [],
     "averageScore": 37,
-    "popularity": 303,
+    "popularity": 304,
     "isAdult": true,
     "source": null,
     "countryOfOrigin": "JP",
@@ -65061,7 +65646,7 @@
   "12591": {
     "id": 12591,
     "idMal": 12591,
-    "updatedAt": 1794748233,
+    "updatedAt": 1794920575,
     "title": {
       "romaji": "Ojamajo Doremi OVA",
       "english": null,
@@ -65527,7 +66112,7 @@
   "12651": {
     "id": 12651,
     "idMal": 12651,
-    "updatedAt": 1792972915,
+    "updatedAt": 1794927644,
     "title": {
       "romaji": "Danball Senki W",
       "english": null,
@@ -65565,8 +66150,8 @@
     "synonyms": [
       "Danbooru Senki W"
     ],
-    "averageScore": 69,
-    "popularity": 2095,
+    "averageScore": 68,
+    "popularity": 2106,
     "isAdult": false,
     "source": "VIDEO_GAME",
     "countryOfOrigin": "JP",
@@ -66506,7 +67091,7 @@
   "12663": {
     "id": 12663,
     "idMal": 12663,
-    "updatedAt": 1794748232,
+    "updatedAt": 1794920574,
     "title": {
       "romaji": "Patalliro! Stardust Keikaku",
       "english": null,
@@ -66546,7 +67131,7 @@
       "Pataliro! Stardust Program"
     ],
     "averageScore": 63,
-    "popularity": 959,
+    "popularity": 960,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -67937,7 +68522,7 @@
   "12993": {
     "id": 12993,
     "idMal": 12993,
-    "updatedAt": 1794836119,
+    "updatedAt": 1794920562,
     "title": {
       "romaji": "Sono Mukou no Mukougawa",
       "english": null,
@@ -67971,7 +68556,7 @@
     "genres": [],
     "synonyms": [],
     "averageScore": 52,
-    "popularity": 224,
+    "popularity": 225,
     "isAdult": false,
     "source": null,
     "countryOfOrigin": "JP",
@@ -68225,7 +68810,7 @@
   "12769": {
     "id": 12769,
     "idMal": 12769,
-    "updatedAt": 1794834324,
+    "updatedAt": 1794920569,
     "title": {
       "romaji": "Yumemakura Baku Twilight Gekijou",
       "english": null,
@@ -68272,7 +68857,7 @@
       "Yojouhan Hyouryuuki"
     ],
     "averageScore": 62,
-    "popularity": 1053,
+    "popularity": 1054,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -70054,7 +70639,7 @@
   "12139": {
     "id": 12139,
     "idMal": 12139,
-    "updatedAt": 1794834365,
+    "updatedAt": 1794920607,
     "title": {
       "romaji": "Wanpaku Tanteidan",
       "english": null,
@@ -70093,7 +70678,7 @@
       "Boy's Detective Team"
     ],
     "averageScore": 57,
-    "popularity": 467,
+    "popularity": 468,
     "isAdult": false,
     "source": null,
     "countryOfOrigin": "JP",
@@ -71790,7 +72375,7 @@
   "12397": {
     "id": 12397,
     "idMal": 12397,
-    "updatedAt": 1794748246,
+    "updatedAt": 1794920593,
     "title": {
       "romaji": "Original Video Romance Animation",
       "english": null,
@@ -71832,7 +72417,7 @@
       "Office Lady Akina-chan"
     ],
     "averageScore": 37,
-    "popularity": 267,
+    "popularity": 268,
     "isAdult": true,
     "source": null,
     "countryOfOrigin": "JP",
@@ -72511,7 +73096,7 @@
   "12411": {
     "id": 12411,
     "idMal": 12411,
-    "updatedAt": 1794748245,
+    "updatedAt": 1794920592,
     "title": {
       "romaji": "UN-GO: Inga Nikki",
       "english": null,
@@ -72920,7 +73505,7 @@
   "12485": {
     "id": 12485,
     "idMal": 12485,
-    "updatedAt": 1794834334,
+    "updatedAt": 1794920579,
     "title": {
       "romaji": "Gregory Horror Show: The Bloody Karte",
       "english": null,
@@ -74621,7 +75206,7 @@
   "12689": {
     "id": 12689,
     "idMal": 12689,
-    "updatedAt": 1794834327,
+    "updatedAt": 1794920572,
     "title": {
       "romaji": "Kiss Dum R: Meguriahi",
       "english": null,
@@ -74660,7 +75245,7 @@
       "Kiss Dum R Episode 26"
     ],
     "averageScore": 54,
-    "popularity": 486,
+    "popularity": 487,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -74702,7 +75287,7 @@
   "12723": {
     "id": 12723,
     "idMal": 12723,
-    "updatedAt": 1794748229,
+    "updatedAt": 1794920571,
     "title": {
       "romaji": "Loups=Garous Pilot",
       "english": null,
@@ -74742,7 +75327,7 @@
       "Loups-Garous"
     ],
     "averageScore": null,
-    "popularity": 244,
+    "popularity": 245,
     "isAdult": false,
     "source": null,
     "countryOfOrigin": "JP",
@@ -75831,7 +76416,7 @@
   "12791": {
     "id": 12791,
     "idMal": 12791,
-    "updatedAt": 1794748227,
+    "updatedAt": 1794920569,
     "title": {
       "romaji": "Yankee Reppuu Tai",
       "english": null,
@@ -75870,7 +76455,7 @@
       "Yankee Gale Squad"
     ],
     "averageScore": 58,
-    "popularity": 504,
+    "popularity": 505,
     "isAdult": false,
     "source": null,
     "countryOfOrigin": "JP",
@@ -75972,7 +76557,7 @@
   "12795": {
     "id": 12795,
     "idMal": 12795,
-    "updatedAt": 1794748226,
+    "updatedAt": 1794920569,
     "title": {
       "romaji": "Yajikita Gakuen Douchuuki",
       "english": null,
@@ -78117,7 +78702,7 @@
   "12637": {
     "id": 12637,
     "idMal": 12637,
-    "updatedAt": 1794852150,
+    "updatedAt": 1794920574,
     "title": {
       "romaji": "Mo Gyutto \"love\" de Sekkinchuu!",
       "english": null,
@@ -78155,7 +78740,7 @@
       "Love Live! School Idol Project: Mo Gyutto Love de Sekkinchuu!"
     ],
     "averageScore": 69,
-    "popularity": 5253,
+    "popularity": 5254,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
