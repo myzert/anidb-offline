@@ -2,7 +2,7 @@
   "121176": {
     "id": 121176,
     "idMal": 42429,
-    "updatedAt": 1794837836,
+    "updatedAt": 1794877241,
     "title": {
       "romaji": "Honzuki no Gekokujou: Shisho ni Naru Tame ni wa Shudan wo Erandeiraremasen 3rd Season",
       "english": "Ascendance of a Bookworm Season 3",
@@ -1234,7 +1234,7 @@
   "121467": {
     "id": 121467,
     "idMal": 40434,
-    "updatedAt": 1794836183,
+    "updatedAt": 1794879011,
     "title": {
       "romaji": "Modao Zushi 3",
       "english": "The Founder of Diabolism: Final Season",
@@ -3835,7 +3835,7 @@
   "121034": {
     "id": 121034,
     "idMal": 42423,
-    "updatedAt": 1794827380,
+    "updatedAt": 1794877366,
     "title": {
       "romaji": "Date A Bullet: Nightmare or Queen",
       "english": "Date A Bullet: Dead or Bullet & Nightmare or Queen",
@@ -4658,7 +4658,7 @@
   "121514": {
     "id": 121514,
     "idMal": 50240,
-    "updatedAt": 1794837825,
+    "updatedAt": 1794877366,
     "title": {
       "romaji": "Dali Si Rizhi 2",
       "english": null,
@@ -6498,7 +6498,7 @@
   "121799": {
     "id": 121799,
     "idMal": 42514,
-    "updatedAt": 1794693787,
+    "updatedAt": 1794879011,
     "title": {
       "romaji": "Anime Kapibara-san",
       "english": "Anime KAPIBARASAN",
@@ -7286,7 +7286,7 @@
   "121962": {
     "id": 121962,
     "idMal": 42516,
-    "updatedAt": 1794827314,
+    "updatedAt": 1794877320,
     "title": {
       "romaji": "Cardfight!! Vanguard: overDress",
       "english": "Cardfight!! Vanguard overDress",
@@ -8376,7 +8376,7 @@
   "121664": {
     "id": 121664,
     "idMal": null,
-    "updatedAt": 1794787424,
+    "updatedAt": 1794873828,
     "title": {
       "romaji": "DAICON IV Opening Animation",
       "english": null,
@@ -24583,6 +24583,341 @@
     },
     "characters": {
       "edges": []
+    },
+    "streamingEpisodes": []
+  },
+  "121035": {
+    "id": 121035,
+    "idMal": 40630,
+    "updatedAt": 1794877366,
+    "title": {
+      "romaji": "Saga Jihen",
+      "english": null,
+      "native": "佐賀事変"
+    },
+    "type": "ANIME",
+    "format": "MUSIC",
+    "status": "FINISHED",
+    "description": "Full music video for the track <i>Saga Jihen</i> from the Zombieland Saga Best album.",
+    "episodes": 1,
+    "duration": 6,
+    "season": null,
+    "seasonYear": null,
+    "startDate": {
+      "year": 2019,
+      "month": 11,
+      "day": 27
+    },
+    "endDate": {
+      "year": 2019,
+      "month": 11,
+      "day": 27
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx121035-77LR5DuKNRFO.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx121035-77LR5DuKNRFO.png",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx121035-77LR5DuKNRFO.png",
+      "color": "#d6c978"
+    },
+    "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/121035-t1LHcvZ1htaM.jpg",
+    "genres": [],
+    "synonyms": [
+      "Saga Incident"
+    ],
+    "averageScore": 68,
+    "popularity": 2083,
+    "isAdult": false,
+    "source": "OTHER",
+    "countryOfOrigin": "JP",
+    "tags": [
+      {
+        "name": "Zombie",
+        "rank": 100,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Primarily Female Cast",
+        "rank": 79,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Female Protagonist",
+        "rank": 79,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Idol",
+        "rank": 79,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Full CGI",
+        "rank": 77,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Transgender",
+        "rank": 20,
+        "isMediaSpoiler": false
+      }
+    ],
+    "studios": {
+      "nodes": [
+        {
+          "name": "MAPPA"
+        }
+      ]
+    },
+    "trailer": {
+      "id": "VRt_i5FI9-o",
+      "site": "youtube"
+    },
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": [
+        {
+          "relationType": "PARENT",
+          "node": {
+            "id": 103871,
+            "type": "ANIME",
+            "format": "TV",
+            "status": "FINISHED",
+            "title": {
+              "romaji": "Zombie Land Saga",
+              "english": "ZOMBIE LAND SAGA",
+              "native": "ゾンビランドサガ"
+            }
+          }
+        },
+        {
+          "relationType": "CHARACTER",
+          "node": {
+            "id": 185189,
+            "type": "ANIME",
+            "format": "MUSIC",
+            "status": "FINISHED",
+            "title": {
+              "romaji": "Sukicchan! Karachu",
+              "english": null,
+              "native": "すきっちゃん！からチュッ"
+            }
+          }
+        }
+      ]
+    },
+    "characters": {
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 127538,
+            "name": {
+              "full": "Saki Nikaidou",
+              "native": "二階堂サキ",
+              "userPreferred": "Saki Nikaidou"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/n127538-z0mYekgT8d5P.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/n127538-z0mYekgT8d5P.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 107666,
+              "name": {
+                "full": "Asami Tano",
+                "native": "田野アサミ",
+                "userPreferred": "Asami Tano"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n107666-v5gYRilAjdt3.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n107666-v5gYRilAjdt3.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 127539,
+            "name": {
+              "full": "Ai Mizuno",
+              "native": "水野愛",
+              "userPreferred": "Ai Mizuno"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b127539-u9SPsvkHmgCf.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b127539-u9SPsvkHmgCf.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 111135,
+              "name": {
+                "full": "Risa Taneda",
+                "native": "種田梨沙",
+                "userPreferred": "Risa Taneda"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n111135-YDoccfWAq2ky.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n111135-YDoccfWAq2ky.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 127540,
+            "name": {
+              "full": "Sakura Minamoto",
+              "native": "源さくら",
+              "userPreferred": "Sakura Minamoto"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b127540-H1wiC6lu34WT.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b127540-H1wiC6lu34WT.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 119416,
+              "name": {
+                "full": "Kaede Hondo",
+                "native": "本渡楓",
+                "userPreferred": "Kaede Hondo"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n119416-7RC2mPKDKydB.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n119416-7RC2mPKDKydB.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 127541,
+            "name": {
+              "full": "Junko Konno",
+              "native": "紺野純子",
+              "userPreferred": "Junko Konno"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b127541-NcdZV2sbKlDv.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b127541-NcdZV2sbKlDv.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 127542,
+              "name": {
+                "full": "Maki Kawase",
+                "native": "河瀬茉希",
+                "userPreferred": "Maki Kawase"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n127542-rHFIx0NCHfsU.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n127542-rHFIx0NCHfsU.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 127650,
+            "name": {
+              "full": "Tae Yamada",
+              "native": "山田たえ",
+              "userPreferred": "Tae Yamada"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/n127650-sJrUSwE4taUC.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/n127650-sJrUSwE4taUC.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95009,
+              "name": {
+                "full": "Kotono Mitsuishi",
+                "native": "三石琴乃",
+                "userPreferred": "Kotono Mitsuishi"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95009-d01Dg8mMwcg6.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95009-d01Dg8mMwcg6.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 127651,
+            "name": {
+              "full": "Yuugiri",
+              "native": "ゆうぎり",
+              "userPreferred": "Yuugiri"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b127651-ncX3HZo03BWA.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b127651-ncX3HZo03BWA.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 119821,
+              "name": {
+                "full": "Rika Kinugawa",
+                "native": "衣川里佳",
+                "userPreferred": "Rika Kinugawa"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n119821-q3681hu03ayO.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n119821-q3681hu03ayO.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 127652,
+            "name": {
+              "full": "Lily Hoshikawa",
+              "native": "星川リリィ",
+              "userPreferred": "Lily Hoshikawa"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b127652-DVP9Nobu7j8K.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b127652-DVP9Nobu7j8K.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 118473,
+              "name": {
+                "full": "Minami Tanaka",
+                "native": "田中美海",
+                "userPreferred": "Minami Tanaka"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n118473-Zc8ufQpELoU3.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n118473-Zc8ufQpELoU3.jpg"
+              }
+            }
+          ]
+        }
+      ]
     },
     "streamingEpisodes": []
   }

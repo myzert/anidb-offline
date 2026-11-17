@@ -116,7 +116,7 @@
   "201903": {
     "id": 201903,
     "idMal": 62896,
-    "updatedAt": 1794837690,
+    "updatedAt": 1794878962,
     "title": {
       "romaji": "Chou Kaguya-hime!",
       "english": "Cosmic Princess Kaguya!",
@@ -1223,7 +1223,7 @@
   "201817": {
     "id": 201817,
     "idMal": 62893,
-    "updatedAt": 1794830544,
+    "updatedAt": 1794877366,
     "title": {
       "romaji": "Nigashita Sakana wa Ookikatta ga Tsuriageta Sakana ga Ookisugita Ken",
       "english": "Always a Catch!",
@@ -1794,7 +1794,7 @@
   "201514": {
     "id": 201514,
     "idMal": 62876,
-    "updatedAt": 1794837678,
+    "updatedAt": 1794878897,
     "title": {
       "romaji": "Saijo no Osewa: Takane no Hanadarake na Meimonkou de, Gakuin Ichi no Ojou-sama (Seikatsu Nouryoku Kaimu) wo Kagenagara Osewa suru Koto ni Narimashita",
       "english": "Rich Girl Caretaker: I'm Secretly the Caregiver of the Most Popular Girl in This Rich Kid School",
@@ -2229,7 +2229,7 @@
   "201667": {
     "id": 201667,
     "idMal": 62883,
-    "updatedAt": 1794837731,
+    "updatedAt": 1794877309,
     "title": {
       "romaji": "Bungou Stray Dogs Wan! 2",
       "english": "Bungo Stray Dogs WAN! 2",
@@ -3082,7 +3082,7 @@
   "201388": {
     "id": 201388,
     "idMal": 62865,
-    "updatedAt": 1794836183,
+    "updatedAt": 1794879056,
     "title": {
       "romaji": "Dark Gathering 2nd Season",
       "english": null,
@@ -3902,7 +3902,7 @@
   "201140": {
     "id": 201140,
     "idMal": 62857,
-    "updatedAt": 1794832921,
+    "updatedAt": 1794859379,
     "title": {
       "romaji": "Ousama no Propose",
       "english": null,
@@ -4565,7 +4565,7 @@
   "201974": {
     "id": 201974,
     "idMal": null,
-    "updatedAt": 1794820843,
+    "updatedAt": 1794870200,
     "title": {
       "romaji": "Kegareboshi Ao",
       "english": null,
@@ -4675,7 +4675,7 @@
   "201975": {
     "id": 201975,
     "idMal": null,
-    "updatedAt": 1794820843,
+    "updatedAt": 1794870200,
     "title": {
       "romaji": "Kegareboshi Aka",
       "english": null,
@@ -5018,6 +5018,186 @@
     },
     "characters": {
       "edges": []
+    },
+    "streamingEpisodes": []
+  },
+  "201910": {
+    "id": 201910,
+    "idMal": null,
+    "updatedAt": 1794859379,
+    "title": {
+      "romaji": "Oshiri Dandy the Young",
+      "english": null,
+      "native": "おしりダンディ ザ・ヤング"
+    },
+    "type": "ANIME",
+    "format": "TV",
+    "status": "RELEASING",
+    "description": null,
+    "episodes": null,
+    "duration": null,
+    "season": "SPRING",
+    "seasonYear": 2026,
+    "startDate": {
+      "year": 2026,
+      "month": 4,
+      "day": 4
+    },
+    "endDate": {
+      "year": null,
+      "month": null,
+      "day": null
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx201910-yulAeyMQbbvw.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx201910-yulAeyMQbbvw.png",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx201910-yulAeyMQbbvw.png",
+      "color": "#50d6fe"
+    },
+    "bannerImage": null,
+    "genres": [],
+    "synonyms": [],
+    "averageScore": null,
+    "popularity": 127,
+    "isAdult": false,
+    "source": "OTHER",
+    "countryOfOrigin": "JP",
+    "tags": [],
+    "studios": {
+      "nodes": []
+    },
+    "trailer": {
+      "id": "ClHFIN462aw",
+      "site": "youtube"
+    },
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": [
+        {
+          "relationType": "SOURCE",
+          "node": {
+            "id": 115081,
+            "type": "MANGA",
+            "format": "MANGA",
+            "status": "RELEASING",
+            "title": {
+              "romaji": "Oshiri Dandy The Young",
+              "english": null,
+              "native": "おしりダンディ ザ・ヤング"
+            }
+          }
+        },
+        {
+          "relationType": "SEQUEL",
+          "node": {
+            "id": 100790,
+            "type": "ANIME",
+            "format": "TV",
+            "status": "FINISHED",
+            "title": {
+              "romaji": "Oshiri Tantei",
+              "english": null,
+              "native": "おしりたんてい"
+            }
+          }
+        }
+      ]
+    },
+    "characters": {
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 159279,
+            "name": {
+              "full": "Dandy Oshiri ",
+              "native": "おしりダンディ",
+              "userPreferred": "Dandy Oshiri "
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b159279-GJS1Euq63eBN.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b159279-GJS1Euq63eBN.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95245,
+              "name": {
+                "full": "Satoshi Hino",
+                "native": "日野聡",
+                "userPreferred": "Satoshi Hino"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95245-prBoWpg0HaGX.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95245-prBoWpg0HaGX.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 358431,
+            "name": {
+              "full": "Oshiri Tantei",
+              "native": "おしりたんてい",
+              "userPreferred": "Oshiri Tantei"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b358431-p29Wr86sZKuc.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b358431-p29Wr86sZKuc.png"
+            }
+          },
+          "voiceActors": []
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 358764,
+            "name": {
+              "full": "Brown",
+              "native": "ブラウン",
+              "userPreferred": "Brown"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b358764-XjdmTSOrLENs.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b358764-XjdmTSOrLENs.png"
+            }
+          },
+          "voiceActors": []
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 394293,
+            "name": {
+              "full": "Hehe",
+              "native": "へーへー",
+              "userPreferred": "Hehe"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b394293-mQhmRMHLC41p.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b394293-mQhmRMHLC41p.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 105071,
+              "name": {
+                "full": "Mikako Komatsu",
+                "native": "小松未可子",
+                "userPreferred": "Mikako Komatsu"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n105071-Hcj0X2gcliPq.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n105071-Hcj0X2gcliPq.png"
+              }
+            }
+          ]
+        }
+      ]
     },
     "streamingEpisodes": []
   }
