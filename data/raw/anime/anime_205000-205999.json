@@ -393,7 +393,7 @@
   "205068": {
     "id": 205068,
     "idMal": 64683,
-    "updatedAt": 1794924143,
+    "updatedAt": 1794960308,
     "title": {
       "romaji": "Wollum Jogyonim",
       "english": "One-Room TA",
@@ -614,7 +614,7 @@
   "205081": {
     "id": 205081,
     "idMal": 63212,
-    "updatedAt": 1794924223,
+    "updatedAt": 1794949383,
     "title": {
       "romaji": "Kaguya-sama wa Kokurasetai: Kanketsu-hen",
       "english": null,
@@ -734,7 +734,7 @@
   "205130": {
     "id": 205130,
     "idMal": 63215,
-    "updatedAt": 1794927646,
+    "updatedAt": 1794945672,
     "title": {
       "romaji": "Historié",
       "english": null,
@@ -1187,7 +1187,7 @@
   "205432": {
     "id": 205432,
     "idMal": 63254,
-    "updatedAt": 1794924223,
+    "updatedAt": 1794956532,
     "title": {
       "romaji": "Isshun de Chiryou Shiteita no ni Yakutatazu to Tsuihou Sareta Tensai Chiyushi, Yami Healer Toshite Tanoshiku Ikiru 2nd Season",
       "english": null,
@@ -1801,7 +1801,7 @@
   "205896": {
     "id": 205896,
     "idMal": 63292,
-    "updatedAt": 1794927627,
+    "updatedAt": 1794960308,
     "title": {
       "romaji": "Shinja Zero no Megami-sama to Hajimeru Isekai Kouryaku",
       "english": "Full Clearing Another World under a Goddess with Zero Believers",
@@ -1894,7 +1894,7 @@
     },
     "nextAiringEpisode": {
       "airingAt": 1795357800,
-      "timeUntilAiring": 428036,
+      "timeUntilAiring": 395828,
       "episode": 7
     },
     "relations": {
@@ -2208,7 +2208,7 @@
   "205909": {
     "id": 205909,
     "idMal": 63293,
-    "updatedAt": 1794927630,
+    "updatedAt": 1794960308,
     "title": {
       "romaji": "Hotaru no Yomeiri",
       "english": "Firefly Wedding",
@@ -2334,7 +2334,7 @@
     },
     "nextAiringEpisode": {
       "airingAt": 1795185000,
-      "timeUntilAiring": 255236,
+      "timeUntilAiring": 223028,
       "episode": 7
     },
     "relations": {
@@ -2828,7 +2828,7 @@
   "205794": {
     "id": 205794,
     "idMal": null,
-    "updatedAt": 1792660511,
+    "updatedAt": 1794938544,
     "title": {
       "romaji": "BREACH",
       "english": "BREACH",
@@ -2865,7 +2865,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 140,
+    "popularity": 144,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -2905,12 +2905,97 @@
           }
         }
       ]
-    }
+    },
+    "characters": {
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 333591,
+            "name": {
+              "full": "Shiori Novella",
+              "native": "シオリ・ノヴェラ",
+              "userPreferred": "Shiori Novella"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b333591-KATgUBIO78MM.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b333591-KATgUBIO78MM.png"
+            }
+          },
+          "voiceActors": []
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 333592,
+            "name": {
+              "full": "Bijou Koseki",
+              "native": "古石ビジュー",
+              "userPreferred": "Bijou Koseki"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b333592-vkgBZLYevnj7.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b333592-vkgBZLYevnj7.png"
+            }
+          },
+          "voiceActors": []
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 333596,
+            "name": {
+              "full": "Mococo Abyssgard",
+              "native": "モココ・アビスガード",
+              "userPreferred": "Mococo Abyssgard"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b333596-Sj1sqf1x2U9i.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b333596-Sj1sqf1x2U9i.png"
+            }
+          },
+          "voiceActors": []
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 333597,
+            "name": {
+              "full": "Fuwawa Abyssgard",
+              "native": "フワワ・アビスガード",
+              "userPreferred": "Fuwawa Abyssgard"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b333597-AOoENZGVzz21.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b333597-AOoENZGVzz21.png"
+            }
+          },
+          "voiceActors": []
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 333599,
+            "name": {
+              "full": "Nerissa Ravencroft",
+              "native": "ネリッサ・レイヴンクロフト",
+              "userPreferred": "Nerissa Ravencroft"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b333599-ymp4vaOwze4T.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b333599-ymp4vaOwze4T.png"
+            }
+          },
+          "voiceActors": []
+        }
+      ]
+    },
+    "streamingEpisodes": []
   },
   "205430": {
     "id": 205430,
     "idMal": 63256,
-    "updatedAt": 1794913366,
+    "updatedAt": 1794956591,
     "title": {
       "romaji": "Boukensha License wo Hakudatsu Sareta Ossan Dakedo, Manamusume ga Dekita no de Nonbiri Jinsei wo Ouka Suru",
       "english": null,
@@ -3084,7 +3169,7 @@
   "205444": {
     "id": 205444,
     "idMal": 63253,
-    "updatedAt": 1794927651,
+    "updatedAt": 1794945771,
     "title": {
       "romaji": "Majo no Tabitabi Movie",
       "english": null,
@@ -3279,7 +3364,7 @@
   "205289": {
     "id": 205289,
     "idMal": 63221,
-    "updatedAt": 1794820608,
+    "updatedAt": 1794942158,
     "title": {
       "romaji": "Norman the Snowman: Kodomo-tachi no Hitotsuboshi",
       "english": null,
@@ -3515,7 +3600,7 @@
   "205375": {
     "id": 205375,
     "idMal": 63235,
-    "updatedAt": 1794906995,
+    "updatedAt": 1794960308,
     "title": {
       "romaji": "Long Zu 3",
       "english": null,
@@ -3850,7 +3935,7 @@
   "205905": {
     "id": 205905,
     "idMal": 62340,
-    "updatedAt": 1794906959,
+    "updatedAt": 1794949363,
     "title": {
       "romaji": "Guangyin Zhi Wai",
       "english": "Beyond Time's Gaze",
@@ -4451,7 +4536,7 @@
   "205374": {
     "id": 205374,
     "idMal": 62702,
-    "updatedAt": 1794780247,
+    "updatedAt": 1794934943,
     "title": {
       "romaji": "Chu Wu",
       "english": "The Crow",
@@ -6819,7 +6904,7 @@
   "205907": {
     "id": 205907,
     "idMal": 59637,
-    "updatedAt": 1794820566,
+    "updatedAt": 1794952989,
     "title": {
       "romaji": "Huo Wang",
       "english": null,
