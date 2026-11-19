@@ -2,7 +2,7 @@
   "220004": {
     "id": 220004,
     "idMal": null,
-    "updatedAt": 1795064566,
+    "updatedAt": 1795078808,
     "title": {
       "romaji": "Josemaru",
       "english": null,
@@ -40,7 +40,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 6,
+    "popularity": 14,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -58,7 +58,7 @@
     },
     "nextAiringEpisode": {
       "airingAt": 1799542800,
-      "timeUntilAiring": 4475409,
+      "timeUntilAiring": 4441169,
       "episode": 1
     },
     "relations": {
@@ -187,6 +187,101 @@
           ]
         }
       ]
+    },
+    "streamingEpisodes": []
+  },
+  "220078": {
+    "id": 220078,
+    "idMal": 65488,
+    "updatedAt": 1795100720,
+    "title": {
+      "romaji": "Mamahaha Dakedo Musume ga Kawaisugiru",
+      "english": null,
+      "native": "継母だけど娘が可愛すぎる"
+    },
+    "type": "ANIME",
+    "format": "TV",
+    "status": "NOT_YET_RELEASED",
+    "description": "Fairytale stepmothers are notoriously wicked. But after a children’s clothing designer is reborn as young Princess Blanche’s stepmom, she’s determined to break the mold and shower her daughter with love. Now she just has to convince the girl’s cold-hearted father to do the same. In her quest to make a happier home for Blanche, Abigail begins to uncover secrets and schemes within the palace. Will devious forces tear the Freidkins apart, or can Abigail stitch them back into a family?<br><br>(Source: Tapas)",
+    "episodes": null,
+    "duration": null,
+    "season": null,
+    "seasonYear": null,
+    "startDate": {
+      "year": null,
+      "month": null,
+      "day": null
+    },
+    "endDate": {
+      "year": null,
+      "month": null,
+      "day": null
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx220078-TI0JU1zqwbVH.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx220078-TI0JU1zqwbVH.jpg",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx220078-TI0JU1zqwbVH.jpg",
+      "color": "#28d6e4"
+    },
+    "bannerImage": null,
+    "genres": [
+      "Fantasy"
+    ],
+    "synonyms": [
+      "Not-Sew-Wicked Stepmom",
+      "계모인데, 딸이 너무 귀여워"
+    ],
+    "averageScore": null,
+    "popularity": 0,
+    "isAdult": false,
+    "source": "MANGA",
+    "countryOfOrigin": "JP",
+    "tags": [
+      {
+        "name": "Female Protagonist",
+        "rank": 20,
+        "isMediaSpoiler": false
+      }
+    ],
+    "studios": {
+      "nodes": []
+    },
+    "trailer": null,
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": [
+        {
+          "relationType": "ALTERNATIVE",
+          "node": {
+            "id": 123107,
+            "type": "MANGA",
+            "format": "ONE_SHOT",
+            "status": "FINISHED",
+            "title": {
+              "romaji": "Gyemoinde, Ttari Neomu Gwiyeowo",
+              "english": null,
+              "native": "계모인데, 딸이 너무 귀여워"
+            }
+          }
+        },
+        {
+          "relationType": "SOURCE",
+          "node": {
+            "id": 132359,
+            "type": "MANGA",
+            "format": "MANGA",
+            "status": "RELEASING",
+            "title": {
+              "romaji": "Gyemoinde, Ttari Neomu Gwiyeowo",
+              "english": "Not-Sew-Wicked Stepmom",
+              "native": "계모인데, 딸이 너무 귀여워"
+            }
+          }
+        }
+      ]
+    },
+    "characters": {
+      "edges": []
     },
     "streamingEpisodes": []
   }
