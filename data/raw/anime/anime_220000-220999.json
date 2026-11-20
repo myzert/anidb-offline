@@ -2,7 +2,7 @@
   "220004": {
     "id": 220004,
     "idMal": null,
-    "updatedAt": 1795129388,
+    "updatedAt": 1795179200,
     "title": {
       "romaji": "Josemaru",
       "english": null,
@@ -40,7 +40,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 14,
+    "popularity": 17,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -58,7 +58,7 @@
     },
     "nextAiringEpisode": {
       "airingAt": 1799542800,
-      "timeUntilAiring": 4408713,
+      "timeUntilAiring": 4355982,
       "episode": 1
     },
     "relations": {
@@ -193,7 +193,7 @@
   "220078": {
     "id": 220078,
     "idMal": 65488,
-    "updatedAt": 1795129217,
+    "updatedAt": 1795186809,
     "title": {
       "romaji": "Mamahaha Dakedo Musume ga Kawaisugiru",
       "english": null,
@@ -232,7 +232,7 @@
       "계모인데, 딸이 너무 귀여워"
     ],
     "averageScore": null,
-    "popularity": 0,
+    "popularity": 320,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -288,7 +288,7 @@
   "220079": {
     "id": 220079,
     "idMal": null,
-    "updatedAt": 1795114817,
+    "updatedAt": 1795183455,
     "title": {
       "romaji": "Shixiong A Shixiong Final",
       "english": null,
@@ -329,7 +329,7 @@
       "Shixiong A Shixion 5"
     ],
     "averageScore": null,
-    "popularity": 0,
+    "popularity": 24,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "CN",
@@ -344,7 +344,7 @@
     "trailer": null,
     "nextAiringEpisode": {
       "airingAt": 1795658400,
-      "timeUntilAiring": 524313,
+      "timeUntilAiring": 471582,
       "episode": 26
     },
     "relations": {
@@ -367,6 +367,319 @@
     },
     "characters": {
       "edges": []
+    },
+    "streamingEpisodes": []
+  },
+  "220101": {
+    "id": 220101,
+    "idMal": null,
+    "updatedAt": 1795186806,
+    "title": {
+      "romaji": "Soukou Kihei Votoms: Haiiro no Hexe 2",
+      "english": null,
+      "native": "装甲騎兵ボトムズ 灰色の魔女 第2作"
+    },
+    "type": "ANIME",
+    "format": "MOVIE",
+    "status": "NOT_YET_RELEASED",
+    "description": null,
+    "episodes": null,
+    "duration": null,
+    "season": null,
+    "seasonYear": null,
+    "startDate": {
+      "year": 2027,
+      "month": null,
+      "day": null
+    },
+    "endDate": {
+      "year": null,
+      "month": null,
+      "day": null
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx220101-hJc3K0VNp6N2.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx220101-hJc3K0VNp6N2.jpg",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx220101-hJc3K0VNp6N2.jpg",
+      "color": null
+    },
+    "bannerImage": null,
+    "genres": [
+      "Mecha",
+      "Sci-Fi"
+    ],
+    "synonyms": [],
+    "averageScore": null,
+    "popularity": 0,
+    "isAdult": false,
+    "source": "ORIGINAL",
+    "countryOfOrigin": "JP",
+    "tags": [],
+    "studios": {
+      "nodes": [
+        {
+          "name": "Production I.G"
+        },
+        {
+          "name": "Sunrise"
+        }
+      ]
+    },
+    "trailer": null,
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": [
+        {
+          "relationType": "PREQUEL",
+          "node": {
+            "id": 206163,
+            "type": "ANIME",
+            "format": "MOVIE",
+            "status": "FINISHED",
+            "title": {
+              "romaji": "Soukou Kihei Votoms: Haiiro no Hexe",
+              "english": null,
+              "native": "装甲騎兵ボトムズ 灰色の魔女"
+            }
+          }
+        }
+      ]
+    },
+    "characters": {
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 406997,
+            "name": {
+              "full": "Ash Vamps",
+              "native": "アッシュ・ヴァンプス",
+              "userPreferred": "Ash Vamps"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95099,
+              "name": {
+                "full": "Miyuki Sawashiro",
+                "native": "沢城みゆき",
+                "userPreferred": "Miyuki Sawashiro"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95099-jKP4LfPWqetk.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95099-jKP4LfPWqetk.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 406998,
+            "name": {
+              "full": "Maki Stauffenberg",
+              "native": "マキ・シュタウフェンベルク",
+              "userPreferred": "Maki Stauffenberg"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95697,
+              "name": {
+                "full": "Mabuki Andou",
+                "native": "安藤麻吹",
+                "userPreferred": "Mabuki Andou"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/697.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/697.jpg"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "streamingEpisodes": []
+  },
+  "220106": {
+    "id": 220106,
+    "idMal": 65494,
+    "updatedAt": 1795186806,
+    "title": {
+      "romaji": "Jimoto no Ijimekkotachi ni Shikaeshi Shiyou to Shitara, Betsu no Tatakai ga Hajimatta.",
+      "english": null,
+      "native": "地元のいじめっ子達に仕返ししようとしたら、別の戦いが始まった。"
+    },
+    "type": "ANIME",
+    "format": "TV",
+    "status": "NOT_YET_RELEASED",
+    "description": "As a child, Kotaro was humiliated by a group of bullies, Akira, a wrestling prodigy, Kanae, a basketball prodigy, and Sigure, a gamer prodigy, who would beat him at anything they tried. Now in high school, Kotaro is reunited with those three bullies, and he swears he will get back at them this time…!? It's a romantic comedy about taking revenge on bullies!\n<BR><BR>\n(Source: Kodansha, translated)",
+    "episodes": null,
+    "duration": null,
+    "season": null,
+    "seasonYear": null,
+    "startDate": {
+      "year": 2027,
+      "month": null,
+      "day": null
+    },
+    "endDate": {
+      "year": null,
+      "month": null,
+      "day": null
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx220106-SDM1SbDB6p6C.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx220106-SDM1SbDB6p6C.jpg",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx220106-SDM1SbDB6p6C.jpg",
+      "color": "#e45d35"
+    },
+    "bannerImage": null,
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "synonyms": [],
+    "averageScore": null,
+    "popularity": 0,
+    "isAdult": false,
+    "source": "MANGA",
+    "countryOfOrigin": "JP",
+    "tags": [
+      {
+        "name": "Female Harem",
+        "rank": 20,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Male Protagonist",
+        "rank": 20,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Primarily Teen Cast",
+        "rank": 20,
+        "isMediaSpoiler": false
+      }
+    ],
+    "studios": {
+      "nodes": [
+        {
+          "name": "Gekkou"
+        }
+      ]
+    },
+    "trailer": null,
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": [
+        {
+          "relationType": "ALTERNATIVE",
+          "node": {
+            "id": 155259,
+            "type": "MANGA",
+            "format": "MANGA",
+            "status": "FINISHED",
+            "title": {
+              "romaji": "Jimoto no Ijimekkotachi ni Shikaeshi Shiyou to Shitara, Betsu no Tatakai ga Hajimatta.",
+              "english": null,
+              "native": "地元のいじめっ子達に仕返ししようとしたら、別の戦いが始まった。"
+            }
+          }
+        },
+        {
+          "relationType": "SOURCE",
+          "node": {
+            "id": 162509,
+            "type": "MANGA",
+            "format": "MANGA",
+            "status": "RELEASING",
+            "title": {
+              "romaji": "Jimoto no Ijimekkotachi ni Shikaeshi Shiyou to Shitara, Betsu no Tatakai ga Hajimatta.",
+              "english": null,
+              "native": "地元のいじめっ子達に仕返ししようとしたら、別の戦いが始まった。"
+            }
+          }
+        }
+      ]
+    },
+    "characters": {
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 370523,
+            "name": {
+              "full": "Shigure Mangetsu",
+              "native": "満月シグレ",
+              "userPreferred": "Shigure Mangetsu"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b370523-skzHDWRuA2KG.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b370523-skzHDWRuA2KG.jpg"
+            }
+          },
+          "voiceActors": []
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 375638,
+            "name": {
+              "full": "Kotarou Hinode",
+              "native": "日出小太郎",
+              "userPreferred": "Kotarou Hinode"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b375638-itf5KtFqtrI1.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b375638-itf5KtFqtrI1.png"
+            }
+          },
+          "voiceActors": []
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 375639,
+            "name": {
+              "full": "Akira Mikazuki",
+              "native": "三日月アキラ",
+              "userPreferred": "Akira Mikazuki"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b375639-FkLlPzWqHtPf.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b375639-FkLlPzWqHtPf.png"
+            }
+          },
+          "voiceActors": []
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 375640,
+            "name": {
+              "full": "Kanae Oborozuki",
+              "native": "朧月カナエ",
+              "userPreferred": "Kanae Oborozuki"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b375640-zWdnNDnAAUdT.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b375640-zWdnNDnAAUdT.png"
+            }
+          },
+          "voiceActors": []
+        }
+      ]
     },
     "streamingEpisodes": []
   }
