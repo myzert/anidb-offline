@@ -2,7 +2,7 @@
   "220004": {
     "id": 220004,
     "idMal": null,
-    "updatedAt": 1795078808,
+    "updatedAt": 1795129388,
     "title": {
       "romaji": "Josemaru",
       "english": null,
@@ -58,7 +58,7 @@
     },
     "nextAiringEpisode": {
       "airingAt": 1799542800,
-      "timeUntilAiring": 4441169,
+      "timeUntilAiring": 4408713,
       "episode": 1
     },
     "relations": {
@@ -193,7 +193,7 @@
   "220078": {
     "id": 220078,
     "idMal": 65488,
-    "updatedAt": 1795100720,
+    "updatedAt": 1795129217,
     "title": {
       "romaji": "Mamahaha Dakedo Musume ga Kawaisugiru",
       "english": null,
@@ -275,6 +275,91 @@
               "romaji": "Gyemoinde, Ttari Neomu Gwiyeowo",
               "english": "Not-Sew-Wicked Stepmom",
               "native": "계모인데, 딸이 너무 귀여워"
+            }
+          }
+        }
+      ]
+    },
+    "characters": {
+      "edges": []
+    },
+    "streamingEpisodes": []
+  },
+  "220079": {
+    "id": 220079,
+    "idMal": null,
+    "updatedAt": 1795114817,
+    "title": {
+      "romaji": "Shixiong A Shixiong Final",
+      "english": null,
+      "native": "师兄啊师兄 最终季"
+    },
+    "type": "ANIME",
+    "format": "ONA",
+    "status": "RELEASING",
+    "description": "Final season of <i>Shixiong A Shixiong.</i>",
+    "episodes": 26,
+    "duration": 21,
+    "season": null,
+    "seasonYear": null,
+    "startDate": {
+      "year": 2026,
+      "month": 6,
+      "day": 4
+    },
+    "endDate": {
+      "year": 2026,
+      "month": 11,
+      "day": 26
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx220079-7TiLWUTeqmW8.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx220079-7TiLWUTeqmW8.jpg",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx220079-7TiLWUTeqmW8.jpg",
+      "color": "#5daef1"
+    },
+    "bannerImage": null,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "synonyms": [
+      "My Senior Brother Is Too Steady Final Season",
+      "Shixiong A Shixion 5"
+    ],
+    "averageScore": null,
+    "popularity": 0,
+    "isAdult": false,
+    "source": "OTHER",
+    "countryOfOrigin": "CN",
+    "tags": [],
+    "studios": {
+      "nodes": [
+        {
+          "name": "Sparkly Key Animation"
+        }
+      ]
+    },
+    "trailer": null,
+    "nextAiringEpisode": {
+      "airingAt": 1795658400,
+      "timeUntilAiring": 524313,
+      "episode": 26
+    },
+    "relations": {
+      "edges": [
+        {
+          "relationType": "PREQUEL",
+          "node": {
+            "id": 195885,
+            "type": "ANIME",
+            "format": "ONA",
+            "status": "FINISHED",
+            "title": {
+              "romaji": "Shixiong A Shixiong Nian Fan 2",
+              "english": null,
+              "native": "师兄啊师兄 年番2"
             }
           }
         }
