@@ -2,7 +2,7 @@
   "220004": {
     "id": 220004,
     "idMal": null,
-    "updatedAt": 1795267800,
+    "updatedAt": 1795273255,
     "title": {
       "romaji": "Josemaru",
       "english": null,
@@ -58,7 +58,7 @@
     },
     "nextAiringEpisode": {
       "airingAt": 1799542800,
-      "timeUntilAiring": 4272044,
+      "timeUntilAiring": 4241392,
       "episode": 1
     },
     "relations": {
@@ -193,7 +193,7 @@
   "220078": {
     "id": 220078,
     "idMal": 65488,
-    "updatedAt": 1795267831,
+    "updatedAt": 1795298417,
     "title": {
       "romaji": "Mamahaha Dakedo Musume ga Kawaisugiru",
       "english": null,
@@ -288,7 +288,7 @@
   "220079": {
     "id": 220079,
     "idMal": null,
-    "updatedAt": 1795251607,
+    "updatedAt": 1795276922,
     "title": {
       "romaji": "Shixiong A Shixiong Final",
       "english": null,
@@ -344,7 +344,7 @@
     "trailer": null,
     "nextAiringEpisode": {
       "airingAt": 1795658400,
-      "timeUntilAiring": 387644,
+      "timeUntilAiring": 356992,
       "episode": 26
     },
     "relations": {
@@ -373,7 +373,7 @@
   "220101": {
     "id": 220101,
     "idMal": null,
-    "updatedAt": 1795269770,
+    "updatedAt": 1795294857,
     "title": {
       "romaji": "Soukou Kihei Votoms: Haiiro no Hexe 2",
       "english": null,
@@ -514,7 +514,7 @@
   "220106": {
     "id": 220106,
     "idMal": 65494,
-    "updatedAt": 1795269720,
+    "updatedAt": 1795294851,
     "title": {
       "romaji": "Jimoto no Ijimekkotachi ni Shikaeshi Shiyou to Shitara, Betsu no Tatakai ga Hajimatta.",
       "english": null,
@@ -557,23 +557,43 @@
     "countryOfOrigin": "JP",
     "tags": [
       {
+        "name": "Episodic",
+        "rank": 79,
+        "isMediaSpoiler": false
+      },
+      {
         "name": "Heterosexual",
         "rank": 79,
         "isMediaSpoiler": false
       },
       {
-        "name": "Female Harem",
-        "rank": 20,
+        "name": "School",
+        "rank": 79,
         "isMediaSpoiler": false
       },
       {
-        "name": "Male Protagonist",
-        "rank": 20,
+        "name": "Crossdressing",
+        "rank": 79,
+        "isMediaSpoiler": true
+      },
+      {
+        "name": "VTuber",
+        "rank": 79,
+        "isMediaSpoiler": true
+      },
+      {
+        "name": "Female Harem",
+        "rank": 60,
         "isMediaSpoiler": false
       },
       {
         "name": "Primarily Teen Cast",
-        "rank": 20,
+        "rank": 50,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Male Protagonist",
+        "rank": 50,
         "isMediaSpoiler": false
       }
     ],
@@ -705,7 +725,7 @@
   "220125": {
     "id": 220125,
     "idMal": 65496,
-    "updatedAt": 1795269665,
+    "updatedAt": 1795298432,
     "title": {
       "romaji": "BanG Dream! Yume∞Mita (Shinsaku Animation)",
       "english": null,
@@ -776,15 +796,15 @@
   },
   "220127": {
     "id": 220127,
-    "idMal": null,
-    "updatedAt": 1795269658,
+    "idMal": 65508,
+    "updatedAt": 1795298404,
     "title": {
       "romaji": "Tamon-kun Ima Docchi!? 2nd Season",
       "english": null,
       "native": "多聞くん今どっち！？  第2期"
     },
     "type": "ANIME",
-    "format": null,
+    "format": "TV",
     "status": "NOT_YET_RELEASED",
     "description": "The second season of <i>Tamon-kun Ima Docchi!?</i>",
     "episodes": null,
@@ -823,37 +843,47 @@
     "countryOfOrigin": "JP",
     "tags": [
       {
+        "name": "Idol",
+        "rank": 60,
+        "isMediaSpoiler": false
+      },
+      {
         "name": "Otaku Culture",
-        "rank": 20,
+        "rank": 60,
         "isMediaSpoiler": false
       },
       {
         "name": "Female Protagonist",
-        "rank": 20,
+        "rank": 50,
         "isMediaSpoiler": false
       },
       {
         "name": "Shoujo",
-        "rank": 20,
-        "isMediaSpoiler": false
-      },
-      {
-        "name": "Idol",
-        "rank": 20,
+        "rank": 50,
         "isMediaSpoiler": false
       },
       {
         "name": "Heterosexual",
-        "rank": 20,
+        "rank": 40,
         "isMediaSpoiler": false
       },
       {
         "name": "Surreal Comedy",
-        "rank": 20,
+        "rank": 40,
         "isMediaSpoiler": false
       },
       {
         "name": "Work",
+        "rank": 40,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Male Protagonist",
+        "rank": 20,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Disability",
         "rank": 20,
         "isMediaSpoiler": false
       }
@@ -900,22 +930,6 @@
         {
           "role": "MAIN",
           "node": {
-            "id": 318692,
-            "name": {
-              "full": "Tamon Fukuhara",
-              "native": "福原多聞",
-              "userPreferred": "Tamon Fukuhara"
-            },
-            "image": {
-              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b318692-CzhHnEaIgU9Y.png",
-              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b318692-CzhHnEaIgU9Y.png"
-            }
-          },
-          "voiceActors": []
-        },
-        {
-          "role": "MAIN",
-          "node": {
             "id": 318789,
             "name": {
               "full": "Utage Kinoshita",
@@ -928,6 +942,22 @@
             }
           },
           "voiceActors": []
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 318692,
+            "name": {
+              "full": "Tamon Fukuhara",
+              "native": "福原多聞",
+              "userPreferred": "Tamon Fukuhara"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b318692-CzhHnEaIgU9Y.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b318692-CzhHnEaIgU9Y.png"
+            }
+          },
+          "voiceActors": []
         }
       ]
     },
@@ -936,7 +966,7 @@
   "220124": {
     "id": 220124,
     "idMal": 65464,
-    "updatedAt": 1795266091,
+    "updatedAt": 1795298454,
     "title": {
       "romaji": "Metamorphose",
       "english": null,
@@ -1040,7 +1070,7 @@
   "220126": {
     "id": 220126,
     "idMal": null,
-    "updatedAt": 1795262334,
+    "updatedAt": 1795298590,
     "title": {
       "romaji": "Azur Promilia Anime PVs",
       "english": null,
