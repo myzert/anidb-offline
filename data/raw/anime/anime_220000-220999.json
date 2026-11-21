@@ -2,7 +2,7 @@
   "220004": {
     "id": 220004,
     "idMal": null,
-    "updatedAt": 1795179200,
+    "updatedAt": 1795267800,
     "title": {
       "romaji": "Josemaru",
       "english": null,
@@ -40,7 +40,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 17,
+    "popularity": 21,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -58,7 +58,7 @@
     },
     "nextAiringEpisode": {
       "airingAt": 1799542800,
-      "timeUntilAiring": 4355982,
+      "timeUntilAiring": 4272044,
       "episode": 1
     },
     "relations": {
@@ -193,7 +193,7 @@
   "220078": {
     "id": 220078,
     "idMal": 65488,
-    "updatedAt": 1795237239,
+    "updatedAt": 1795267831,
     "title": {
       "romaji": "Mamahaha Dakedo Musume ga Kawaisugiru",
       "english": null,
@@ -232,7 +232,7 @@
       "계모인데, 딸이 너무 귀여워"
     ],
     "averageScore": null,
-    "popularity": 320,
+    "popularity": 419,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -288,7 +288,7 @@
   "220079": {
     "id": 220079,
     "idMal": null,
-    "updatedAt": 1795219510,
+    "updatedAt": 1795251607,
     "title": {
       "romaji": "Shixiong A Shixiong Final",
       "english": null,
@@ -329,7 +329,7 @@
       "Shixiong A Shixion 5"
     ],
     "averageScore": null,
-    "popularity": 24,
+    "popularity": 33,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "CN",
@@ -344,7 +344,7 @@
     "trailer": null,
     "nextAiringEpisode": {
       "airingAt": 1795658400,
-      "timeUntilAiring": 419224,
+      "timeUntilAiring": 387644,
       "episode": 26
     },
     "relations": {
@@ -373,7 +373,7 @@
   "220101": {
     "id": 220101,
     "idMal": null,
-    "updatedAt": 1795233721,
+    "updatedAt": 1795269770,
     "title": {
       "romaji": "Soukou Kihei Votoms: Haiiro no Hexe 2",
       "english": null,
@@ -410,7 +410,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 0,
+    "popularity": 97,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -514,7 +514,7 @@
   "220106": {
     "id": 220106,
     "idMal": 65494,
-    "updatedAt": 1795237250,
+    "updatedAt": 1795269720,
     "title": {
       "romaji": "Jimoto no Ijimekkotachi ni Shikaeshi Shiyou to Shitara, Betsu no Tatakai ga Hajimatta.",
       "english": null,
@@ -523,7 +523,7 @@
     "type": "ANIME",
     "format": "TV",
     "status": "NOT_YET_RELEASED",
-    "description": "As a child, Kotaro was humiliated by a group of bullies, Akira, a wrestling prodigy, Kanae, a basketball prodigy, and Sigure, a gamer prodigy, who would beat him at anything they tried. Now in high school, Kotaro is reunited with those three bullies, and he swears he will get back at them this time…!? It's a romantic comedy about taking revenge on bullies!\n<BR><BR>\n(Source: Kodansha, translated)",
+    "description": "As a child, Kotarou was humiliated by a group of bullies, Akira, a wrestling prodigy, Kanae, a basketball prodigy, and Sigure, a gamer prodigy, who would beat him at anything they tried. Now in high school, Kotarou is reunited with those three bullies, and he swears he will get back at them this time…!? It's a romantic comedy about taking revenge on bullies!\n<BR><BR>\n(Source: Kodansha, translated)",
     "episodes": null,
     "duration": null,
     "season": null,
@@ -551,11 +551,16 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 0,
+    "popularity": 576,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
     "tags": [
+      {
+        "name": "Heterosexual",
+        "rank": 79,
+        "isMediaSpoiler": false
+      },
       {
         "name": "Female Harem",
         "rank": 20,
@@ -661,7 +666,21 @@
               "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b375639-FkLlPzWqHtPf.png"
             }
           },
-          "voiceActors": []
+          "voiceActors": [
+            {
+              "id": 126863,
+              "name": {
+                "full": "Kaori Maeda",
+                "native": "前田佳織里",
+                "userPreferred": "Kaori Maeda"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n126863-UhefvoqVWVbB.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n126863-UhefvoqVWVbB.jpg"
+              }
+            }
+          ]
         },
         {
           "role": "MAIN",
@@ -680,6 +699,405 @@
           "voiceActors": []
         }
       ]
+    },
+    "streamingEpisodes": []
+  },
+  "220125": {
+    "id": 220125,
+    "idMal": 65496,
+    "updatedAt": 1795269665,
+    "title": {
+      "romaji": "BanG Dream! Yume∞Mita (Shinsaku Animation)",
+      "english": null,
+      "native": "バンドリ！ ゆめ∞みた (新作アニメーション)"
+    },
+    "type": "ANIME",
+    "format": null,
+    "status": "NOT_YET_RELEASED",
+    "description": "<i>BanG Dream! Yume∞Mita</i> new anime project.<br><br>\n\n<i>Note: Title and Relations are provisional and will be updated when more info is announced.</i>",
+    "episodes": null,
+    "duration": null,
+    "season": null,
+    "seasonYear": null,
+    "startDate": {
+      "year": null,
+      "month": null,
+      "day": null
+    },
+    "endDate": {
+      "year": null,
+      "month": null,
+      "day": null
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx220125-BhdCxzeiQC6G.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx220125-BhdCxzeiQC6G.png",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx220125-BhdCxzeiQC6G.png",
+      "color": "#3593e4"
+    },
+    "bannerImage": null,
+    "genres": [],
+    "synonyms": [
+      "BanG Dream! YUME∞MITA (New Animation)"
+    ],
+    "averageScore": null,
+    "popularity": 63,
+    "isAdult": false,
+    "source": "OTHER",
+    "countryOfOrigin": "JP",
+    "tags": [],
+    "studios": {
+      "nodes": []
+    },
+    "trailer": null,
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": [
+        {
+          "relationType": "OTHER",
+          "node": {
+            "id": 198376,
+            "type": "ANIME",
+            "format": "TV",
+            "status": "FINISHED",
+            "title": {
+              "romaji": "BanG Dream! Yume∞Mita",
+              "english": "BanG Dream! YUME∞MITA",
+              "native": "バンドリ！ ゆめ∞みた"
+            }
+          }
+        }
+      ]
+    },
+    "characters": {
+      "edges": []
+    },
+    "streamingEpisodes": []
+  },
+  "220127": {
+    "id": 220127,
+    "idMal": null,
+    "updatedAt": 1795269658,
+    "title": {
+      "romaji": "Tamon-kun Ima Docchi!? 2nd Season",
+      "english": null,
+      "native": "多聞くん今どっち！？  第2期"
+    },
+    "type": "ANIME",
+    "format": null,
+    "status": "NOT_YET_RELEASED",
+    "description": "The second season of <i>Tamon-kun Ima Docchi!?</i>",
+    "episodes": null,
+    "duration": null,
+    "season": null,
+    "seasonYear": null,
+    "startDate": {
+      "year": null,
+      "month": null,
+      "day": null
+    },
+    "endDate": {
+      "year": null,
+      "month": null,
+      "day": null
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx220127-HRnFJ2Mqw6QA.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx220127-HRnFJ2Mqw6QA.jpg",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx220127-HRnFJ2Mqw6QA.jpg",
+      "color": "#f143bb"
+    },
+    "bannerImage": null,
+    "genres": [
+      "Comedy",
+      "Music",
+      "Romance"
+    ],
+    "synonyms": [
+      "Tamon's B-Side Season 2"
+    ],
+    "averageScore": null,
+    "popularity": 0,
+    "isAdult": false,
+    "source": "MANGA",
+    "countryOfOrigin": "JP",
+    "tags": [
+      {
+        "name": "Otaku Culture",
+        "rank": 20,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Female Protagonist",
+        "rank": 20,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Shoujo",
+        "rank": 20,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Idol",
+        "rank": 20,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Heterosexual",
+        "rank": 20,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Surreal Comedy",
+        "rank": 20,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Work",
+        "rank": 20,
+        "isMediaSpoiler": false
+      }
+    ],
+    "studios": {
+      "nodes": []
+    },
+    "trailer": null,
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": [
+        {
+          "relationType": "PREQUEL",
+          "node": {
+            "id": 178005,
+            "type": "ANIME",
+            "format": "ONA",
+            "status": "FINISHED",
+            "title": {
+              "romaji": "Tamon-kun Ima Docchi!?",
+              "english": "Tamon's B-Side",
+              "native": "多聞くん今どっち！？"
+            }
+          }
+        },
+        {
+          "relationType": "SOURCE",
+          "node": {
+            "id": 140495,
+            "type": "MANGA",
+            "format": "MANGA",
+            "status": "RELEASING",
+            "title": {
+              "romaji": "Tamon-kun Ima Docchi!?",
+              "english": "Tamon’s B-Side",
+              "native": "多聞くん今どっち!?"
+            }
+          }
+        }
+      ]
+    },
+    "characters": {
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 318692,
+            "name": {
+              "full": "Tamon Fukuhara",
+              "native": "福原多聞",
+              "userPreferred": "Tamon Fukuhara"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b318692-CzhHnEaIgU9Y.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b318692-CzhHnEaIgU9Y.png"
+            }
+          },
+          "voiceActors": []
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 318789,
+            "name": {
+              "full": "Utage Kinoshita",
+              "native": "木下うたげ",
+              "userPreferred": "Utage Kinoshita"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b318789-9QIrcT9SSsAn.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b318789-9QIrcT9SSsAn.png"
+            }
+          },
+          "voiceActors": []
+        }
+      ]
+    },
+    "streamingEpisodes": []
+  },
+  "220124": {
+    "id": 220124,
+    "idMal": 65464,
+    "updatedAt": 1795266091,
+    "title": {
+      "romaji": "Metamorphose",
+      "english": null,
+      "native": "メタモルフォーゼ"
+    },
+    "type": "ANIME",
+    "format": "MUSIC",
+    "status": "FINISHED",
+    "description": "Music video directed by coalowl for the song <i>Metamorphose</i> by Hatsuboshi Gakuen's Kanae Hiwatari (Sayaka Abe).",
+    "episodes": 1,
+    "duration": 3,
+    "season": null,
+    "seasonYear": null,
+    "startDate": {
+      "year": 2026,
+      "month": 11,
+      "day": 16
+    },
+    "endDate": {
+      "year": 2026,
+      "month": 11,
+      "day": 16
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx220124-ZxxkMqVq5bDE.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx220124-ZxxkMqVq5bDE.png",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx220124-ZxxkMqVq5bDE.png",
+      "color": "#e44343"
+    },
+    "bannerImage": null,
+    "genres": [],
+    "synonyms": [],
+    "averageScore": null,
+    "popularity": 14,
+    "isAdult": false,
+    "source": "ORIGINAL",
+    "countryOfOrigin": "JP",
+    "tags": [],
+    "studios": {
+      "nodes": []
+    },
+    "trailer": {
+      "id": "Y_I_NOHVwzI",
+      "site": "youtube"
+    },
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": [
+        {
+          "relationType": "CHARACTER",
+          "node": {
+            "id": 189833,
+            "type": "MANGA",
+            "format": "MANGA",
+            "status": "FINISHED",
+            "title": {
+              "romaji": "Gakuen iDOLM@STER Comic Anthology",
+              "english": null,
+              "native": "学園アイドルマスター コミックアンソロジー"
+            }
+          }
+        }
+      ]
+    },
+    "characters": {
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 412963,
+            "name": {
+              "full": "Kanae Hiwatari",
+              "native": "氷渡香名江",
+              "userPreferred": "Kanae Hiwatari"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b412963-kWK0ZpHcjq1x.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b412963-kWK0ZpHcjq1x.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 412964,
+              "name": {
+                "full": "Sayaka Abe",
+                "native": "安倍彩野夏",
+                "userPreferred": "Sayaka Abe"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n412964-Wpf2c7n4MNfl.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n412964-Wpf2c7n4MNfl.jpg"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "streamingEpisodes": []
+  },
+  "220126": {
+    "id": 220126,
+    "idMal": null,
+    "updatedAt": 1795262334,
+    "title": {
+      "romaji": "Azur Promilia Anime PVs",
+      "english": null,
+      "native": "アズールプロミリア アニメPVs"
+    },
+    "type": "ANIME",
+    "format": "SPECIAL",
+    "status": "RELEASING",
+    "description": "Animated promotional videos for the video game Azur Promilia.\n<br><br>\n1) リリース記念アニメPV (11 November 2026)<br>",
+    "episodes": null,
+    "duration": 1,
+    "season": null,
+    "seasonYear": null,
+    "startDate": {
+      "year": 2026,
+      "month": 11,
+      "day": 20
+    },
+    "endDate": {
+      "year": null,
+      "month": null,
+      "day": null
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b220126-BeN8Od5LNtN7.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b220126-BeN8Od5LNtN7.jpg",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/b220126-BeN8Od5LNtN7.jpg",
+      "color": "#e4a15d"
+    },
+    "bannerImage": null,
+    "genres": [
+      "Fantasy"
+    ],
+    "synonyms": [],
+    "averageScore": null,
+    "popularity": 0,
+    "isAdult": false,
+    "source": "VIDEO_GAME",
+    "countryOfOrigin": "JP",
+    "tags": [],
+    "studios": {
+      "nodes": [
+        {
+          "name": "Yostar Pictures"
+        }
+      ]
+    },
+    "trailer": {
+      "id": "0ykvUJO9s4k",
+      "site": "youtube"
+    },
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": []
+    },
+    "characters": {
+      "edges": []
     },
     "streamingEpisodes": []
   }
