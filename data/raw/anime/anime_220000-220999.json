@@ -2,7 +2,7 @@
   "220004": {
     "id": 220004,
     "idMal": null,
-    "updatedAt": 1795273255,
+    "updatedAt": 1795312985,
     "title": {
       "romaji": "Josemaru",
       "english": null,
@@ -58,7 +58,7 @@
     },
     "nextAiringEpisode": {
       "airingAt": 1799542800,
-      "timeUntilAiring": 4241392,
+      "timeUntilAiring": 4219371,
       "episode": 1
     },
     "relations": {
@@ -193,7 +193,7 @@
   "220078": {
     "id": 220078,
     "idMal": 65488,
-    "updatedAt": 1795298417,
+    "updatedAt": 1795320190,
     "title": {
       "romaji": "Mamahaha Dakedo Musume ga Kawaisugiru",
       "english": null,
@@ -373,7 +373,7 @@
   "220101": {
     "id": 220101,
     "idMal": null,
-    "updatedAt": 1795294857,
+    "updatedAt": 1795320160,
     "title": {
       "romaji": "Soukou Kihei Votoms: Haiiro no Hexe 2",
       "english": null,
@@ -514,7 +514,7 @@
   "220106": {
     "id": 220106,
     "idMal": 65494,
-    "updatedAt": 1795294851,
+    "updatedAt": 1795320016,
     "title": {
       "romaji": "Jimoto no Ijimekkotachi ni Shikaeshi Shiyou to Shitara, Betsu no Tatakai ga Hajimatta.",
       "english": null,
@@ -725,7 +725,7 @@
   "220125": {
     "id": 220125,
     "idMal": 65496,
-    "updatedAt": 1795298432,
+    "updatedAt": 1795320005,
     "title": {
       "romaji": "BanG Dream! Yume∞Mita (Shinsaku Animation)",
       "english": null,
@@ -797,7 +797,7 @@
   "220127": {
     "id": 220127,
     "idMal": 65508,
-    "updatedAt": 1795298404,
+    "updatedAt": 1795320022,
     "title": {
       "romaji": "Tamon-kun Ima Docchi!? 2nd Season",
       "english": null,
@@ -966,7 +966,7 @@
   "220124": {
     "id": 220124,
     "idMal": 65464,
-    "updatedAt": 1795298454,
+    "updatedAt": 1795320103,
     "title": {
       "romaji": "Metamorphose",
       "english": null,
@@ -1070,7 +1070,7 @@
   "220126": {
     "id": 220126,
     "idMal": null,
-    "updatedAt": 1795298590,
+    "updatedAt": 1795320190,
     "title": {
       "romaji": "Azur Promilia Anime PVs",
       "english": null,
@@ -1128,6 +1128,128 @@
     },
     "characters": {
       "edges": []
+    },
+    "streamingEpisodes": []
+  },
+  "220161": {
+    "id": 220161,
+    "idMal": null,
+    "updatedAt": 1795322842,
+    "title": {
+      "romaji": "Shibou Yuugi de Meshi wo Kuu. (Zoku-hen)",
+      "english": null,
+      "native": "死亡遊戯で飯を食う。(続編)"
+    },
+    "type": "ANIME",
+    "format": null,
+    "status": "NOT_YET_RELEASED",
+    "description": "Sequel to <i>Shibou Yuugi de Meshi wo Kuu. 44: CLOUDY BEACH</i>.\n<br><br>\n<i>Note: Title is provisional and will be updated when more info is announced.</i>",
+    "episodes": null,
+    "duration": null,
+    "season": null,
+    "seasonYear": null,
+    "startDate": {
+      "year": null,
+      "month": null,
+      "day": null
+    },
+    "endDate": {
+      "year": null,
+      "month": null,
+      "day": null
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx220161-CZTZ45AsDqG4.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx220161-CZTZ45AsDqG4.jpg",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx220161-CZTZ45AsDqG4.jpg",
+      "color": "#bbc9f1"
+    },
+    "bannerImage": null,
+    "genres": [
+      "Action",
+      "Drama",
+      "Mystery",
+      "Thriller"
+    ],
+    "synonyms": [
+      "SHIBOYUGI: Playing Death Games to Put Food on the Table (Sequel)"
+    ],
+    "averageScore": null,
+    "popularity": 0,
+    "isAdult": false,
+    "source": "LIGHT_NOVEL",
+    "countryOfOrigin": "JP",
+    "tags": [],
+    "studios": {
+      "nodes": []
+    },
+    "trailer": null,
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": [
+        {
+          "relationType": "SOURCE",
+          "node": {
+            "id": 154060,
+            "type": "MANGA",
+            "format": "NOVEL",
+            "status": "RELEASING",
+            "title": {
+              "romaji": "Shibou Yuugi de Meshi wo Kuu.",
+              "english": "Playing Death Games to Put Food on the Table",
+              "native": "死亡遊戯で飯を食う。"
+            }
+          }
+        },
+        {
+          "relationType": "PREQUEL",
+          "node": {
+            "id": 209961,
+            "type": "ANIME",
+            "format": "MOVIE",
+            "status": "FINISHED",
+            "title": {
+              "romaji": "Shibou Yuugi de Meshi wo Kuu. 44: CLOUDY BEACH",
+              "english": "SHIBOYUGI: Playing Death Games to Put Food on the Table 44: CLOUDY BEACH",
+              "native": "死亡遊戯で飯を食う。44:CLOUDY BEACH"
+            }
+          }
+        },
+        {
+          "relationType": "ALTERNATIVE",
+          "node": {
+            "id": 163222,
+            "type": "MANGA",
+            "format": "MANGA",
+            "status": "RELEASING",
+            "title": {
+              "romaji": "Shibou Yuugi de Meshi wo Kuu.",
+              "english": "Playing Death Games to Put Food on the Table",
+              "native": "死亡遊戯で飯を食う。"
+            }
+          }
+        }
+      ]
+    },
+    "characters": {
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 305754,
+            "name": {
+              "full": "Yuki Sorimachi",
+              "native": "反町友樹",
+              "userPreferred": "Yuki Sorimachi"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b305754-Tda5WcsoqiZL.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b305754-Tda5WcsoqiZL.png"
+            }
+          },
+          "voiceActors": []
+        }
+      ]
     },
     "streamingEpisodes": []
   }
