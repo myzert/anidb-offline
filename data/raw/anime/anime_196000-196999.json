@@ -2,7 +2,7 @@
   "196333": {
     "id": 196333,
     "idMal": 62100,
-    "updatedAt": 1795410084,
+    "updatedAt": 1795449710,
     "title": {
       "romaji": "Hirayasumi",
       "english": "Hirayasumi",
@@ -40,7 +40,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 8239,
+    "popularity": 8272,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -355,7 +355,7 @@
   "196613": {
     "id": 196613,
     "idMal": 51039,
-    "updatedAt": 1795410043,
+    "updatedAt": 1795453337,
     "title": {
       "romaji": "Dou Po Cangqiong: Nian Fan 4",
       "english": null,
@@ -367,8 +367,8 @@
     "description": "The eighth season of Dou Po Cangqiong.<br><br>\n<i>Note: Episodes 158 to 219.</i>",
     "episodes": 62,
     "duration": 24,
-    "season": null,
-    "seasonYear": null,
+    "season": "SUMMER",
+    "seasonYear": 2025,
     "startDate": {
       "year": 2025,
       "month": 8,
@@ -399,7 +399,7 @@
       "Dou Po Cangqiong 8"
     ],
     "averageScore": 77,
-    "popularity": 953,
+    "popularity": 954,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "CN",
@@ -491,7 +491,7 @@
   "196750": {
     "id": 196750,
     "idMal": 62328,
-    "updatedAt": 1795410163,
+    "updatedAt": 1795431637,
     "title": {
       "romaji": "Sister Breeder",
       "english": null,
@@ -527,7 +527,7 @@
     ],
     "synonyms": [],
     "averageScore": 72,
-    "popularity": 2257,
+    "popularity": 2262,
     "isAdult": true,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -760,7 +760,7 @@
   "196029": {
     "id": 196029,
     "idMal": 62050,
-    "updatedAt": 1795410059,
+    "updatedAt": 1795453337,
     "title": {
       "romaji": "Kami no Niwatsuki Kusunoki-tei",
       "english": "Kusunoki's Garden of Gods",
@@ -801,7 +801,7 @@
       "Божественный сад у поместья Кусуноки"
     ],
     "averageScore": 71,
-    "popularity": 20233,
+    "popularity": 20250,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -1686,7 +1686,7 @@
   "196356": {
     "id": 196356,
     "idMal": 62102,
-    "updatedAt": 1795406608,
+    "updatedAt": 1795453326,
     "title": {
       "romaji": "Ibitte Konai Gibo to Gishi",
       "english": "My Stepmother and Stepsisters Aren’t Wicked",
@@ -1729,7 +1729,7 @@
       "IbiKona: Mi Madrastra y Mis Hermanastras No Son Malvadas"
     ],
     "averageScore": 70,
-    "popularity": 14044,
+    "popularity": 14058,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -2489,7 +2489,7 @@
   "196974": {
     "id": 196974,
     "idMal": 62171,
-    "updatedAt": 1795410112,
+    "updatedAt": 1795449609,
     "title": {
       "romaji": "Kuroneko to Majo no Kyoushitsu",
       "english": "The Classroom of the Black Cat and a Witch",
@@ -2530,7 +2530,7 @@
       "Чёрная кошка и класс ведьм"
     ],
     "averageScore": 69,
-    "popularity": 26885,
+    "popularity": 26934,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -3322,7 +3322,7 @@
   "196935": {
     "id": 196935,
     "idMal": 62164,
-    "updatedAt": 1795410060,
+    "updatedAt": 1795453337,
     "title": {
       "romaji": "Akane-banashi",
       "english": "Akane-banashi",
@@ -3363,7 +3363,7 @@
       "朱音落語"
     ],
     "averageScore": 79,
-    "popularity": 41871,
+    "popularity": 41892,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -4260,7 +4260,7 @@
   "196219": {
     "id": 196219,
     "idMal": 62080,
-    "updatedAt": 1795406591,
+    "updatedAt": 1795453247,
     "title": {
       "romaji": "Mujikaku Seijo wa Kyou mo Muishiki ni Chikara wo Tare Nagasu",
       "english": "The Oblivious Saint Can't Contain Her Power",
@@ -4300,23 +4300,28 @@
       "The Oblivious Saint Can't Contain Her Power Glossary"
     ],
     "averageScore": 63,
-    "popularity": 23149,
+    "popularity": 23167,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
     "tags": [
+      {
+        "name": "Arranged Marriage",
+        "rank": 80,
+        "isMediaSpoiler": false
+      },
       {
         "name": "Religion",
         "rank": 79,
         "isMediaSpoiler": true
       },
       {
-        "name": "Female Protagonist",
-        "rank": 73,
+        "name": "Shoujo",
+        "rank": 79,
         "isMediaSpoiler": false
       },
       {
-        "name": "Arranged Marriage",
+        "name": "Female Protagonist",
         "rank": 73,
         "isMediaSpoiler": false
       },
@@ -4347,6 +4352,11 @@
       },
       {
         "name": "Politics",
+        "rank": 20,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Historical",
         "rank": 20,
         "isMediaSpoiler": false
       }
@@ -4767,7 +4777,7 @@
   "196017": {
     "id": 196017,
     "idMal": 62051,
-    "updatedAt": 1795410073,
+    "updatedAt": 1795453308,
     "title": {
       "romaji": "Grow Up Show: Himawari no Circus-dan",
       "english": "Grow Up Show",
@@ -4808,7 +4818,7 @@
       "GROW UP SHOW ~Sunflower Circus~"
     ],
     "averageScore": 73,
-    "popularity": 11026,
+    "popularity": 11035,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -5661,7 +5671,7 @@
   "196012": {
     "id": 196012,
     "idMal": 62048,
-    "updatedAt": 1795410139,
+    "updatedAt": 1795453243,
     "title": {
       "romaji": "MAO",
       "english": "MAO",
@@ -5703,7 +5713,7 @@
       "MAO หาญสู้พลิกชะตาอาถรรพณ์"
     ],
     "averageScore": 66,
-    "popularity": 20894,
+    "popularity": 20908,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -6576,7 +6586,7 @@
   "196187": {
     "id": 196187,
     "idMal": 62076,
-    "updatedAt": 1795410025,
+    "updatedAt": 1795453210,
     "title": {
       "romaji": "Super no Ura de Yani Suu Futari",
       "english": "Smoking Behind the Supermarket with You",
@@ -6620,7 +6630,7 @@
       "สองสิงห์อมควันหลังซูเปอร์มาร์เก็ต"
     ],
     "averageScore": 81,
-    "popularity": 139897,
+    "popularity": 140070,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -6949,7 +6959,7 @@
   "196218": {
     "id": 196218,
     "idMal": 62078,
-    "updatedAt": 1795410125,
+    "updatedAt": 1795449644,
     "title": {
       "romaji": "Ryoumin 0-Nin Start no Henkyou Ryoushu-sama",
       "english": "The Frontier Lord Begins with Zero Subjects",
@@ -6995,7 +7005,7 @@
       "ได้เป็นถึงท่านเจ้าครอบครองดินแดน แต่ดันมีพลเมืองเริ่มต้นจากศูนย์ซะงั้น"
     ],
     "averageScore": 68,
-    "popularity": 36562,
+    "popularity": 36604,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -7866,8 +7876,8 @@
               },
               "language": "JAPANESE",
               "image": {
-                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n119871-Tz1rIT1YahPu.png",
-                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n119871-Tz1rIT1YahPu.png"
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n119871-5vrVNbNVscp6.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n119871-5vrVNbNVscp6.jpg"
               }
             }
           ]
@@ -7879,7 +7889,7 @@
   "196144": {
     "id": 196144,
     "idMal": 62068,
-    "updatedAt": 1795410049,
+    "updatedAt": 1795449684,
     "title": {
       "romaji": "Snowball Earth",
       "english": "SNOWBALL EARTH",
@@ -7920,7 +7930,7 @@
       "Земля-снежок"
     ],
     "averageScore": 68,
-    "popularity": 15901,
+    "popularity": 15918,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -8774,7 +8784,7 @@
   "196881": {
     "id": 196881,
     "idMal": null,
-    "updatedAt": 1795395814,
+    "updatedAt": 1795426018,
     "title": {
       "romaji": "Fate/Grand Order - 10th Anniversary Movie",
       "english": null,
@@ -8808,7 +8818,7 @@
     "genres": [],
     "synonyms": [],
     "averageScore": 67,
-    "popularity": 607,
+    "popularity": 608,
     "isAdult": false,
     "source": "VIDEO_GAME",
     "countryOfOrigin": "JP",
@@ -9358,7 +9368,7 @@
   "196116": {
     "id": 196116,
     "idMal": 62353,
-    "updatedAt": 1795341780,
+    "updatedAt": 1795426070,
     "title": {
       "romaji": "Nagachichi Nagai-san THE ANIMATION",
       "english": null,
@@ -9396,7 +9406,7 @@
       "Nagachichi Nagai-san Diet Struggle Day"
     ],
     "averageScore": 59,
-    "popularity": 911,
+    "popularity": 910,
     "isAdult": true,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -9498,7 +9508,7 @@
   "196230": {
     "id": 196230,
     "idMal": 62066,
-    "updatedAt": 1795370578,
+    "updatedAt": 1795426059,
     "title": {
       "romaji": "Monster Strike: Deadverse Reloaded",
       "english": "Strike World: Deadverse Reloaded the Anime",
@@ -9699,7 +9709,7 @@
   "196840": {
     "id": 196840,
     "idMal": 62155,
-    "updatedAt": 1795410099,
+    "updatedAt": 1795453312,
     "title": {
       "romaji": "Iya na Kao sare nagara Opantsu Misete Moraitai Returns",
       "english": "I Want You To Show Me Your Panties With a Disgusted Face Returns",
@@ -9738,7 +9748,7 @@
       "Iyapan 4"
     ],
     "averageScore": 56,
-    "popularity": 9420,
+    "popularity": 9427,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -10038,7 +10048,7 @@
   "196063": {
     "id": 196063,
     "idMal": 62035,
-    "updatedAt": 1795166865,
+    "updatedAt": 1795426073,
     "title": {
       "romaji": "Obusu ni Hanataba wo",
       "english": null,
@@ -10077,8 +10087,8 @@
       "Busu ni Hanataba wo. Mini Anime",
       "ブスに花束を。ミニアニメ"
     ],
-    "averageScore": 55,
-    "popularity": 247,
+    "averageScore": 54,
+    "popularity": 246,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -10188,7 +10198,7 @@
   "196064": {
     "id": 196064,
     "idMal": 62037,
-    "updatedAt": 1794907641,
+    "updatedAt": 1795426073,
     "title": {
       "romaji": "Tsuihou Shiro Madoushi Mini Anime",
       "english": null,
@@ -10225,7 +10235,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 266,
+    "popularity": 265,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -10329,7 +10339,7 @@
   "196115": {
     "id": 196115,
     "idMal": 62067,
-    "updatedAt": 1795377794,
+    "updatedAt": 1795426070,
     "title": {
       "romaji": "Golden Kamuy: Sapporo Beer Koujou-hen",
       "english": null,
@@ -10367,7 +10377,7 @@
     ],
     "synonyms": [],
     "averageScore": 70,
-    "popularity": 3263,
+    "popularity": 3265,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -10881,7 +10891,7 @@
   "196222": {
     "id": 196222,
     "idMal": 62081,
-    "updatedAt": 1795395814,
+    "updatedAt": 1795453229,
     "title": {
       "romaji": "Ore wa Subete wo [Parry] Suru: Gyaku Kanchigai no Sekai Saikyou wa Boukensha ni Naritai 2nd Season",
       "english": null,
@@ -10921,7 +10931,7 @@
       "I Parry Everything Season 2"
     ],
     "averageScore": null,
-    "popularity": 9953,
+    "popularity": 9961,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -11122,7 +11132,7 @@
   "196223": {
     "id": 196223,
     "idMal": 62079,
-    "updatedAt": 1795339671,
+    "updatedAt": 1795426060,
     "title": {
       "romaji": "Cyborg 009: Nemesis",
       "english": null,
@@ -11160,7 +11170,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 987,
+    "popularity": 985,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -11800,7 +11810,7 @@
   "196227": {
     "id": 196227,
     "idMal": 62083,
-    "updatedAt": 1795166853,
+    "updatedAt": 1795426059,
     "title": {
       "romaji": "TOMICA & TOM",
       "english": null,
@@ -11839,7 +11849,7 @@
       "Tomica and Tom"
     ],
     "averageScore": null,
-    "popularity": 90,
+    "popularity": 89,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -12097,7 +12107,7 @@
   "196229": {
     "id": 196229,
     "idMal": 62046,
-    "updatedAt": 1792920581,
+    "updatedAt": 1795426059,
     "title": {
       "romaji": "Tomica Heroes Jobraver: Tokusou Gattai Robo (TV)",
       "english": null,
@@ -12136,7 +12146,7 @@
       "JOBRAVER Animation (TV)"
     ],
     "averageScore": null,
-    "popularity": 94,
+    "popularity": 96,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -12243,7 +12253,7 @@
   "196482": {
     "id": 196482,
     "idMal": 62120,
-    "updatedAt": 1795258971,
+    "updatedAt": 1795426043,
     "title": {
       "romaji": "Shin Kidou Senki Gundam Wing: operation 30th",
       "english": "Mobile Suit Gundam Wing 30th Anniversary Video -Operation 30th-",
@@ -12281,7 +12291,7 @@
     ],
     "synonyms": [],
     "averageScore": 72,
-    "popularity": 1085,
+    "popularity": 1086,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -12607,7 +12617,7 @@
   "196540": {
     "id": 196540,
     "idMal": 62314,
-    "updatedAt": 1795388660,
+    "updatedAt": 1795453337,
     "title": {
       "romaji": "Seikon no Aria",
       "english": null,
@@ -12681,7 +12691,7 @@
   "196547": {
     "id": 196547,
     "idMal": 62145,
-    "updatedAt": 1795399421,
+    "updatedAt": 1795426039,
     "title": {
       "romaji": "H na Gishi Series The Animation",
       "english": null,
@@ -12717,7 +12727,7 @@
     ],
     "synonyms": [],
     "averageScore": 64,
-    "popularity": 887,
+    "popularity": 888,
     "isAdult": true,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -12773,7 +12783,7 @@
   "196553": {
     "id": 196553,
     "idMal": 62126,
-    "updatedAt": 1795339650,
+    "updatedAt": 1795426038,
     "title": {
       "romaji": "SI-VIS: The Sound of Heroes",
       "english": "SI-VIS: The Sound of Heroes",
@@ -13230,7 +13240,7 @@
   "196722": {
     "id": 196722,
     "idMal": 62315,
-    "updatedAt": 1795406608,
+    "updatedAt": 1795426028,
     "title": {
       "romaji": "Reika wa Karei na Boku no Joou THE ANIMATION",
       "english": null,
@@ -13265,8 +13275,8 @@
       "Hentai"
     ],
     "synonyms": [],
-    "averageScore": 74,
-    "popularity": 1784,
+    "averageScore": 73,
+    "popularity": 1790,
     "isAdult": true,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -13433,7 +13443,7 @@
   "196193": {
     "id": 196193,
     "idMal": 60447,
-    "updatedAt": 1795351181,
+    "updatedAt": 1795426063,
     "title": {
       "romaji": "MONOCHROME",
       "english": null,
@@ -13525,7 +13535,7 @@
   "196224": {
     "id": 196224,
     "idMal": 62063,
-    "updatedAt": 1795339671,
+    "updatedAt": 1795426059,
     "title": {
       "romaji": "Tomoshibi",
       "english": null,
@@ -13559,7 +13569,7 @@
     "genres": [],
     "synonyms": [],
     "averageScore": 62,
-    "popularity": 1039,
+    "popularity": 1038,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -13598,7 +13608,7 @@
   "196279": {
     "id": 196279,
     "idMal": 60490,
-    "updatedAt": 1795253273,
+    "updatedAt": 1795426056,
     "title": {
       "romaji": "Moana to Densetsu no Umi 2 3D Short Anime",
       "english": null,
@@ -13636,7 +13646,7 @@
       "Moana 2 PVs"
     ],
     "averageScore": null,
-    "popularity": 296,
+    "popularity": 297,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -13763,7 +13773,7 @@
   "196283": {
     "id": 196283,
     "idMal": 62041,
-    "updatedAt": 1795253272,
+    "updatedAt": 1795426055,
     "title": {
       "romaji": "Hihifoo",
       "english": null,
@@ -13797,7 +13807,7 @@
     "genres": [],
     "synonyms": [],
     "averageScore": 61,
-    "popularity": 389,
+    "popularity": 388,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -14053,7 +14063,7 @@
   "196694": {
     "id": 196694,
     "idMal": 62136,
-    "updatedAt": 1795253245,
+    "updatedAt": 1795426030,
     "title": {
       "romaji": "Suki-Suki Diesuki Chou Ayeshiteru",
       "english": null,
@@ -14088,8 +14098,8 @@
       "Supernatural"
     ],
     "synonyms": [],
-    "averageScore": 71,
-    "popularity": 738,
+    "averageScore": 70,
+    "popularity": 737,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -14194,7 +14204,7 @@
   "196893": {
     "id": 196893,
     "idMal": 62206,
-    "updatedAt": 1795080386,
+    "updatedAt": 1795426017,
     "title": {
       "romaji": "Kinnikuman: Kanpeki Choujin Shiso-hen Season 3",
       "english": null,
@@ -14232,7 +14242,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 291,
+    "popularity": 290,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -14924,7 +14934,7 @@
   "196238": {
     "id": 196238,
     "idMal": 26089,
-    "updatedAt": 1794821244,
+    "updatedAt": 1795426058,
     "title": {
       "romaji": "Gutchonpa Omoshiro Hanashi",
       "english": null,
@@ -14960,7 +14970,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 32,
+    "popularity": 31,
     "isAdult": false,
     "source": null,
     "countryOfOrigin": "JP",
@@ -14996,7 +15006,7 @@
   "196240": {
     "id": 196240,
     "idMal": 25059,
-    "updatedAt": 1794821243,
+    "updatedAt": 1795426058,
     "title": {
       "romaji": "Nikoniko, Pun",
       "english": null,
@@ -15037,7 +15047,7 @@
       "Nico Nico Pun"
     ],
     "averageScore": null,
-    "popularity": 31,
+    "popularity": 30,
     "isAdult": false,
     "source": null,
     "countryOfOrigin": "JP",
@@ -15077,7 +15087,7 @@
   "196241": {
     "id": 196241,
     "idMal": 60363,
-    "updatedAt": 1795339670,
+    "updatedAt": 1795426058,
     "title": {
       "romaji": "Onaka ga Guuguu Island",
       "english": null,
@@ -15113,7 +15123,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 41,
+    "popularity": 40,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -15167,7 +15177,7 @@
   "196245": {
     "id": 196245,
     "idMal": 60708,
-    "updatedAt": 1795397611,
+    "updatedAt": 1795426058,
     "title": {
       "romaji": "Xi Yangyang Yu Hui Tailang: Yong Chuang Siji Cheng",
       "english": "Pleasant Goat and Big Big Wolf: The Season Towns",
@@ -15254,7 +15264,7 @@
   "196246": {
     "id": 196246,
     "idMal": 60709,
-    "updatedAt": 1795397611,
+    "updatedAt": 1795426058,
     "title": {
       "romaji": "Xi Yangyang Yu Hui Tailang: Aoyou Shenmi Yang",
       "english": "Pleasant Goat and Big Big Wolf: Mysterious Ocean Adventure",
@@ -15341,7 +15351,7 @@
   "196247": {
     "id": 196247,
     "idMal": 60710,
-    "updatedAt": 1795397611,
+    "updatedAt": 1795426058,
     "title": {
       "romaji": "Xi Yangyang Yu Hui Tailang: Xin Shijie Qiyu",
       "english": "Pleasant Goat and Big Big Wolf: Explore Wolffy's Mind",
@@ -15428,7 +15438,7 @@
   "196248": {
     "id": 196248,
     "idMal": 60711,
-    "updatedAt": 1795397611,
+    "updatedAt": 1795426058,
     "title": {
       "romaji": "Xi Yangyang Yu Hui Tailang: Fengkuang Chao Neng Ying",
       "english": "Pleasant Goat and Big Big Wolf: Crazy Hubs",
@@ -15515,7 +15525,7 @@
   "196249": {
     "id": 196249,
     "idMal": 60712,
-    "updatedAt": 1795397611,
+    "updatedAt": 1795436087,
     "title": {
       "romaji": "Xi Yangyang Yu Hui Tailang: Qi Xia da Yingjiu",
       "english": "Pleasant Goat and Big Big Wolf: Martial World Rescue",
@@ -15527,8 +15537,8 @@
     "description": "The thirtieth season of <i>Xi Yangyang Yu Hui Tailang</i>.",
     "episodes": 60,
     "duration": 15,
-    "season": null,
-    "seasonYear": null,
+    "season": "WINTER",
+    "seasonYear": 2025,
     "startDate": {
       "year": 2025,
       "month": 1,
@@ -15616,7 +15626,7 @@
   "196250": {
     "id": 196250,
     "idMal": 61954,
-    "updatedAt": 1795397611,
+    "updatedAt": 1795436078,
     "title": {
       "romaji": "Xi Yangyang Yu Hui Tailang: Kuang Ye Xin Yuzhou",
       "english": "Pleasant Goat and Big Big Wolf: New Wild Cosmos",
@@ -15628,8 +15638,8 @@
     "description": "The thirty-first season of <i>Xi Yangyang Yu Hui Tailang</i>.",
     "episodes": 60,
     "duration": 15,
-    "season": null,
-    "seasonYear": null,
+    "season": "SUMMER",
+    "seasonYear": 2025,
     "startDate": {
       "year": 2025,
       "month": 7,
@@ -15690,6 +15700,231 @@
               "romaji": "Xi Yangyang Yu Hui Tailang: Gu Guguai Jie You Guguai",
               "english": null,
               "native": "喜羊羊与灰太狼之古古怪界有古怪"
+            }
+          }
+        }
+      ]
+    },
+    "characters": {
+      "edges": []
+    },
+    "streamingEpisodes": []
+  },
+  "196062": {
+    "id": 196062,
+    "idMal": 28089,
+    "updatedAt": 1795426073,
+    "title": {
+      "romaji": "Oyo Neko Bunyan",
+      "english": null,
+      "native": "オヨネコぶーにゃん"
+    },
+    "type": "ANIME",
+    "format": "TV",
+    "status": "FINISHED",
+    "description": "Bad-tempered fat cat Oyoyo charms his idiot human family but fights an ongoing battle with other neighborhood pets.\n<br><br>\n(Source: The Anime Encyclopedia)",
+    "episodes": 31,
+    "duration": 27,
+    "season": "SPRING",
+    "seasonYear": 1984,
+    "startDate": {
+      "year": 1984,
+      "month": 4,
+      "day": 3
+    },
+    "endDate": {
+      "year": 1985,
+      "month": 3,
+      "day": 19
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx196062-Mbisnf1ybdc9.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx196062-Mbisnf1ybdc9.png",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx196062-Mbisnf1ybdc9.png",
+      "color": "#f1c928"
+    },
+    "bannerImage": null,
+    "genres": [
+      "Comedy"
+    ],
+    "synonyms": [
+      "Oyoneko Boonyan"
+    ],
+    "averageScore": null,
+    "popularity": 53,
+    "isAdult": false,
+    "source": "MANGA",
+    "countryOfOrigin": "JP",
+    "tags": [],
+    "studios": {
+      "nodes": [
+        {
+          "name": "Shin-Ei Animation"
+        }
+      ]
+    },
+    "trailer": null,
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": []
+    },
+    "characters": {
+      "edges": []
+    },
+    "streamingEpisodes": []
+  },
+  "196239": {
+    "id": 196239,
+    "idMal": 26087,
+    "updatedAt": 1795426058,
+    "title": {
+      "romaji": "Mama Ohanashi Kikasete",
+      "english": null,
+      "native": "ママお話きかせて"
+    },
+    "type": "ANIME",
+    "format": "TV_SHORT",
+    "status": "FINISHED",
+    "description": "Short animated films of well-known Japanese folk tales, including the stories of Taro Maegami, The Riceball Family, The Master of Catching Stars, Thunder is the Bridegroom, and The Elephant's Sneeze. Shown as part of the children's variety\nprogram, Tondeke Gutchonpa.\n<br><br>\n(Source: The Anime Encyclopedia)",
+    "episodes": 15,
+    "duration": 8,
+    "season": "SPRING",
+    "seasonYear": 1987,
+    "startDate": {
+      "year": 1987,
+      "month": 5,
+      "day": 9
+    },
+    "endDate": {
+      "year": 1988,
+      "month": 9,
+      "day": 19
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b196239-IZAo9Emsz0Vo.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b196239-IZAo9Emsz0Vo.png",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/b196239-IZAo9Emsz0Vo.png",
+      "color": "#e46b28"
+    },
+    "bannerImage": null,
+    "genres": [
+      "Fantasy"
+    ],
+    "synonyms": [
+      "Mama Ohanashi wo Shikikasete",
+      "Watch with Mother"
+    ],
+    "averageScore": null,
+    "popularity": 35,
+    "isAdult": false,
+    "source": null,
+    "countryOfOrigin": "JP",
+    "tags": [],
+    "studios": {
+      "nodes": []
+    },
+    "trailer": null,
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": [
+        {
+          "relationType": "OTHER",
+          "node": {
+            "id": 196238,
+            "type": "ANIME",
+            "format": "TV_SHORT",
+            "status": "FINISHED",
+            "title": {
+              "romaji": "Gutchonpa Omoshiro Hanashi",
+              "english": null,
+              "native": "グッチョンパおもしろ話"
+            }
+          }
+        }
+      ]
+    },
+    "characters": {
+      "edges": []
+    },
+    "streamingEpisodes": []
+  },
+  "196244": {
+    "id": 196244,
+    "idMal": 60707,
+    "updatedAt": 1795426058,
+    "title": {
+      "romaji": "Xi Yangyang Yu Hui Tailang: Qimiao da Yingjiu",
+      "english": "Pleasant Goat and Big Big Wolf: The Great Rescue",
+      "native": "喜羊羊与灰太狼之奇妙大营救"
+    },
+    "type": "ANIME",
+    "format": "TV",
+    "status": "FINISHED",
+    "description": "The twenty-fifth season of <i>Xi Yangyang Yu Hui Tailang</i>.",
+    "episodes": 60,
+    "duration": 15,
+    "season": null,
+    "seasonYear": null,
+    "startDate": {
+      "year": 2022,
+      "month": 7,
+      "day": 15
+    },
+    "endDate": {
+      "year": 2022,
+      "month": 7,
+      "day": 29
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b196244-rl26BR87SS9L.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b196244-rl26BR87SS9L.png",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/b196244-rl26BR87SS9L.png",
+      "color": "#e4c95d"
+    },
+    "bannerImage": null,
+    "genres": [
+      "Action",
+      "Comedy"
+    ],
+    "synonyms": [],
+    "averageScore": null,
+    "popularity": 32,
+    "isAdult": false,
+    "source": "ORIGINAL",
+    "countryOfOrigin": "CN",
+    "tags": [],
+    "studios": {
+      "nodes": []
+    },
+    "trailer": null,
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": [
+        {
+          "relationType": "PREQUEL",
+          "node": {
+            "id": 131783,
+            "type": "ANIME",
+            "format": "TV_SHORT",
+            "status": "FINISHED",
+            "title": {
+              "romaji": "Xi Yangyang Yu Hui Tailang: Juezhan Ci Shidai",
+              "english": "Pleasant Goat and Big Big Wolf: Decisive Battle Times",
+              "native": "喜羊羊与灰太狼之决战次时代"
+            }
+          }
+        },
+        {
+          "relationType": "SEQUEL",
+          "node": {
+            "id": 196245,
+            "type": "ANIME",
+            "format": "TV",
+            "status": "FINISHED",
+            "title": {
+              "romaji": "Xi Yangyang Yu Hui Tailang: Yong Chuang Siji Cheng",
+              "english": "Pleasant Goat and Big Big Wolf: The Season Towns",
+              "native": "喜羊羊与灰太狼之勇闯四季城"
             }
           }
         }

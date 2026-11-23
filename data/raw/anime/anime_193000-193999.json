@@ -2,7 +2,7 @@
   "193699": {
     "id": 193699,
     "idMal": 61758,
-    "updatedAt": 1795410051,
+    "updatedAt": 1795453296,
     "title": {
       "romaji": "Akuyaku Reijou no Naka no Hito",
       "english": null,
@@ -41,7 +41,7 @@
       "The One Within the Villainess"
     ],
     "averageScore": null,
-    "popularity": 6363,
+    "popularity": 6368,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -225,7 +225,7 @@
   "193968": {
     "id": 193968,
     "idMal": 61773,
-    "updatedAt": 1795410189,
+    "updatedAt": 1795449710,
     "title": {
       "romaji": "Let’s Play: Quest Darake no My Life",
       "english": "Let’s Play",
@@ -265,7 +265,7 @@
       "レップレ"
     ],
     "averageScore": 65,
-    "popularity": 15993,
+    "popularity": 16002,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -810,7 +810,7 @@
   "193348": {
     "id": 193348,
     "idMal": 61788,
-    "updatedAt": 1795339884,
+    "updatedAt": 1795426268,
     "title": {
       "romaji": "Netorareta Bakunyuu Tsuma-tachi",
       "english": null,
@@ -846,7 +846,7 @@
     ],
     "synonyms": [],
     "averageScore": 63,
-    "popularity": 1073,
+    "popularity": 1072,
     "isAdult": true,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -970,7 +970,7 @@
   "193923": {
     "id": 193923,
     "idMal": 61770,
-    "updatedAt": 1795395814,
+    "updatedAt": 1795426231,
     "title": {
       "romaji": "Kono Hon wo Nusumu Mono wa",
       "english": null,
@@ -1009,8 +1009,8 @@
     "synonyms": [
       "Whoever Steals This Book"
     ],
-    "averageScore": 60,
-    "popularity": 2705,
+    "averageScore": 59,
+    "popularity": 2706,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -1285,7 +1285,7 @@
   "193296": {
     "id": 193296,
     "idMal": 61461,
-    "updatedAt": 1795377794,
+    "updatedAt": 1795426272,
     "title": {
       "romaji": "Tenkaichi: Nihon Saikyou Bugeisha Ketteisen",
       "english": null,
@@ -1322,7 +1322,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 1477,
+    "popularity": 1478,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -1483,7 +1483,7 @@
   "193238": {
     "id": 193238,
     "idMal": 61731,
-    "updatedAt": 1792575476,
+    "updatedAt": 1795426276,
     "title": {
       "romaji": "Gakkou de wa Oshiete Kurenai Taisetsu na Koto",
       "english": null,
@@ -1520,7 +1520,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 127,
+    "popularity": 128,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -1553,12 +1553,167 @@
     "nextAiringEpisode": null,
     "relations": {
       "edges": []
-    }
+    },
+    "characters": {
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 365070,
+            "name": {
+              "full": "Seita Katatsu",
+              "native": "片津整太",
+              "userPreferred": "Seita Katatsu"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b365070-VVdGQtjLPMnq.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b365070-VVdGQtjLPMnq.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 115795,
+              "name": {
+                "full": "Haruka Chisuga",
+                "native": "千菅春香",
+                "userPreferred": "Haruka Chisuga"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n115795-PWCVeGruHain.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n115795-PWCVeGruHain.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 365068,
+            "name": {
+              "full": "Kattan",
+              "native": "かったん",
+              "userPreferred": "Kattan"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b365068-WmRTvzsFMfGX.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b365068-WmRTvzsFMfGX.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 253951,
+              "name": {
+                "full": "Kouki Oosuzu",
+                "native": "大鈴功起",
+                "userPreferred": "Kouki Oosuzu"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n253951-umoJLgzeroK2.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n253951-umoJLgzeroK2.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 365069,
+            "name": {
+              "full": "Rika Katatsu",
+              "native": "片津理香",
+              "userPreferred": "Rika Katatsu"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b365069-0LjRqqXesLts.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b365069-0LjRqqXesLts.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 116543,
+              "name": {
+                "full": "Yumiri Hanamori",
+                "native": "花守ゆみり",
+                "userPreferred": "Yumiri Hanamori"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n116543-ugu1HZWiQkqi.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n116543-ugu1HZWiQkqi.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 365071,
+            "name": {
+              "full": "Seiton-sensei",
+              "native": "セートン先生",
+              "userPreferred": "Seiton-sensei"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b365071-u9d7mApoCFQ7.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b365071-u9d7mApoCFQ7.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 119506,
+              "name": {
+                "full": "Fukushi Ochiai",
+                "native": "落合福嗣",
+                "userPreferred": "Fukushi Ochiai"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n119506-kCsXHHjcQca6.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n119506-kCsXHHjcQca6.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 365067,
+            "name": {
+              "full": "Seita no Haha",
+              "native": "整太の母",
+              "userPreferred": "Seita no Haha"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 129325,
+              "name": {
+                "full": "Makoto Koichi",
+                "native": "小市眞琴",
+                "userPreferred": "Makoto Koichi"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n129325-RhR0e5aA6Yj5.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n129325-RhR0e5aA6Yj5.png"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "streamingEpisodes": []
   },
   "193242": {
     "id": 193242,
     "idMal": 61491,
-    "updatedAt": 1795385015,
+    "updatedAt": 1795426276,
     "title": {
       "romaji": "Chibizenji-sensei Inokori Kougiroku",
       "english": null,
@@ -1808,7 +1963,7 @@
   "193347": {
     "id": 193347,
     "idMal": 61789,
-    "updatedAt": 1795388660,
+    "updatedAt": 1795453337,
     "title": {
       "romaji": "Shachiku Cinderella",
       "english": null,
@@ -1869,7 +2024,7 @@
   "193413": {
     "id": 193413,
     "idMal": 61273,
-    "updatedAt": 1795410171,
+    "updatedAt": 1795431760,
     "title": {
       "romaji": "Tsurezure PoPiPa",
       "english": null,
@@ -1908,7 +2063,7 @@
       "Poppin'Party's Ordinary Days"
     ],
     "averageScore": 58,
-    "popularity": 555,
+    "popularity": 556,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -2143,7 +2298,7 @@
   "193607": {
     "id": 193607,
     "idMal": 61742,
-    "updatedAt": 1795385015,
+    "updatedAt": 1795453293,
     "title": {
       "romaji": "Dekichau made Kon",
       "english": "Marry Me, Let's Have a Baby!",
@@ -2183,7 +2338,7 @@
       "Marry Me, I'll Fuck You Until You're Pregnant!"
     ],
     "averageScore": 53,
-    "popularity": 1527,
+    "popularity": 1531,
     "isAdult": true,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -2323,7 +2478,7 @@
   "193613": {
     "id": 193613,
     "idMal": 62108,
-    "updatedAt": 1792575449,
+    "updatedAt": 1795426251,
     "title": {
       "romaji": "Synapusyu THE MOVIE: Pushu Hoppe Dancing PARTY",
       "english": null,
@@ -2363,7 +2518,7 @@
       "Synapusu The Movie 2"
     ],
     "averageScore": null,
-    "popularity": 73,
+    "popularity": 74,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -2414,12 +2569,167 @@
           }
         }
       ]
-    }
+    },
+    "characters": {
+      "edges": [
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 365456,
+            "name": {
+              "full": "Nyuu",
+              "native": "にゅう",
+              "userPreferred": "Nyuu"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b365456-QOEk22gd935T.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b365456-QOEk22gd935T.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 365458,
+              "name": {
+                "full": "Hiroshi Tamaki",
+                "native": "玉木宏",
+                "userPreferred": "Hiroshi Tamaki"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n365458-tRpPvlViIzup.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n365458-tRpPvlViIzup.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 365457,
+            "name": {
+              "full": "Pushu Pushu",
+              "native": "ぷしゅぷしゅ",
+              "userPreferred": "Pushu Pushu"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b365457-GWACc5Y8TLU7.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b365457-GWACc5Y8TLU7.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 365534,
+              "name": {
+                "full": "Sousuke Hanatani",
+                "native": "花谷聡亮",
+                "userPreferred": "Sousuke Hanatani"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n365534-fBDPXQPoF6vJ.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n365534-fBDPXQPoF6vJ.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 365535,
+            "name": {
+              "full": "Party",
+              "native": "ぱるてぃ",
+              "userPreferred": "Party"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b365535-aWZ0scBANM2r.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b365535-aWZ0scBANM2r.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 96010,
+              "name": {
+                "full": "Kazunari Ninomiya",
+                "native": "二宮和也",
+                "userPreferred": "Kazunari Ninomiya"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/1010.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/1010.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 406986,
+            "name": {
+              "full": "Hiitan",
+              "native": "ひーたん",
+              "userPreferred": "Hiitan"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b406986-JrvtoCed5hrT.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b406986-JrvtoCed5hrT.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 406987,
+              "name": {
+                "full": "Yuuichirou Yanai",
+                "native": "矢内雄一郎",
+                "userPreferred": "Yuuichirou Yanai"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n406987-9ZmVgUoqTMw8.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n406987-9ZmVgUoqTMw8.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 406988,
+            "name": {
+              "full": "Miitan",
+              "native": "みーたん",
+              "userPreferred": "Miitan"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b406988-H7LBgXSUSo5T.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b406988-H7LBgXSUSo5T.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 406989,
+              "name": {
+                "full": "Yui Fujii",
+                "native": "藤井由依",
+                "userPreferred": "Yui Fujii"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n406989-OsM3ADR4rvln.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n406989-OsM3ADR4rvln.png"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "streamingEpisodes": []
   },
   "193623": {
     "id": 193623,
     "idMal": 61367,
-    "updatedAt": 1795395814,
+    "updatedAt": 1795426251,
     "title": {
       "romaji": "Tooi-san wa Seishun Shitai! \"Baka to SmaPho to Romance to\"",
       "english": null,
@@ -2568,7 +2878,7 @@
   "193707": {
     "id": 193707,
     "idMal": 61910,
-    "updatedAt": 1795388660,
+    "updatedAt": 1795453337,
     "title": {
       "romaji": "Mujin Eki The Animation",
       "english": null,
@@ -2607,7 +2917,7 @@
       "Unmanned station The Animation"
     ],
     "averageScore": 60,
-    "popularity": 783,
+    "popularity": 784,
     "isAdult": true,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -2663,7 +2973,7 @@
   "193730": {
     "id": 193730,
     "idMal": 61768,
-    "updatedAt": 1795253462,
+    "updatedAt": 1795426243,
     "title": {
       "romaji": "Uikousen",
       "english": null,
@@ -2697,7 +3007,7 @@
     "genres": [],
     "synonyms": [],
     "averageScore": 63,
-    "popularity": 313,
+    "popularity": 312,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -2801,7 +3111,7 @@
   "193883": {
     "id": 193883,
     "idMal": 61765,
-    "updatedAt": 1795339847,
+    "updatedAt": 1795426233,
     "title": {
       "romaji": "Chibi Godzilla no Gyakushuu Season 3",
       "english": "Chibi Godzilla Raids Again Season 3",
@@ -3420,7 +3730,7 @@
   "193240": {
     "id": 193240,
     "idMal": 61704,
-    "updatedAt": 1795253494,
+    "updatedAt": 1795435235,
     "title": {
       "romaji": "Tun Tian Ji",
       "english": null,
@@ -3432,8 +3742,8 @@
     "description": "Adapted from the novel of the same name by Feng Qingyang, it chronicles the legendary metamorphosis of Wu Yu - from an ordinary mortal to an immortal Buddha.",
     "episodes": 40,
     "duration": 10,
-    "season": null,
-    "seasonYear": null,
+    "season": "SPRING",
+    "seasonYear": 2025,
     "startDate": {
       "year": 2025,
       "month": 5,
@@ -3461,7 +3771,7 @@
       "ศึกพิชิตสวรรค์"
     ],
     "averageScore": null,
-    "popularity": 196,
+    "popularity": 195,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "CN",
@@ -3492,7 +3802,7 @@
   "193705": {
     "id": 193705,
     "idMal": 61745,
-    "updatedAt": 1795253464,
+    "updatedAt": 1795426245,
     "title": {
       "romaji": "Ai♡Scream!",
       "english": null,
@@ -3526,7 +3836,7 @@
     "genres": [],
     "synonyms": [],
     "averageScore": 73,
-    "popularity": 1052,
+    "popularity": 1051,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -3705,7 +4015,7 @@
   "193294": {
     "id": 193294,
     "idMal": 61736,
-    "updatedAt": 1795395814,
+    "updatedAt": 1795453304,
     "title": {
       "romaji": "Toritsukare Otoko",
       "english": null,
@@ -3743,7 +4053,7 @@
       "The Obsessed"
     ],
     "averageScore": null,
-    "popularity": 896,
+    "popularity": 899,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -3863,7 +4173,7 @@
   "193676": {
     "id": 193676,
     "idMal": 61754,
-    "updatedAt": 1795410116,
+    "updatedAt": 1795426247,
     "title": {
       "romaji": "S-Rank Party Kara Kaikosareta [Jugushi]",
       "english": null,
@@ -3904,7 +4214,7 @@
       "I'm a Curse Crafter, and I Don't Need an S-Rank Party!"
     ],
     "averageScore": null,
-    "popularity": 1320,
+    "popularity": 1324,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -3997,7 +4307,7 @@
   "193414": {
     "id": 193414,
     "idMal": 56903,
-    "updatedAt": 1795339879,
+    "updatedAt": 1795426264,
     "title": {
       "romaji": "MyGO!!!!! Member no Nichijou",
       "english": null,
@@ -4035,8 +4345,8 @@
     "synonyms": [
       "MyGO!!!!! Members' Daily Life"
     ],
-    "averageScore": 66,
-    "popularity": 646,
+    "averageScore": 65,
+    "popularity": 645,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -4261,7 +4571,7 @@
   "193372": {
     "id": 193372,
     "idMal": 61737,
-    "updatedAt": 1795253485,
+    "updatedAt": 1795426267,
     "title": {
       "romaji": "feel like",
       "english": null,
@@ -4295,7 +4605,7 @@
     "genres": [],
     "synonyms": [],
     "averageScore": 63,
-    "popularity": 339,
+    "popularity": 338,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -4420,7 +4730,7 @@
   "193617": {
     "id": 193617,
     "idMal": 59930,
-    "updatedAt": 1795080619,
+    "updatedAt": 1795426251,
     "title": {
       "romaji": "Kaguya-hime",
       "english": null,
@@ -4522,7 +4832,7 @@
   "193907": {
     "id": 193907,
     "idMal": null,
-    "updatedAt": 1795395814,
+    "updatedAt": 1795426232,
     "title": {
       "romaji": "Azur Lane: 3 Shuunen Kinen Anime PV",
       "english": null,
@@ -4558,7 +4868,7 @@
       "Azur Lane: 3rd Anniversary Anime PV"
     ],
     "averageScore": null,
-    "popularity": 209,
+    "popularity": 210,
     "isAdult": false,
     "source": "VIDEO_GAME",
     "countryOfOrigin": "JP",
@@ -4607,7 +4917,7 @@
   "193809": {
     "id": 193809,
     "idMal": null,
-    "updatedAt": 1795395814,
+    "updatedAt": 1795426238,
     "title": {
       "romaji": "Azur Lane: 6 Shuunen Kinen Anime PV",
       "english": null,
@@ -4643,7 +4953,7 @@
       "Azur Lane: 6th Anniversary Anime PV"
     ],
     "averageScore": null,
-    "popularity": 184,
+    "popularity": 185,
     "isAdult": false,
     "source": "VIDEO_GAME",
     "countryOfOrigin": "JP",
@@ -4692,7 +5002,7 @@
   "193812": {
     "id": 193812,
     "idMal": null,
-    "updatedAt": 1795395814,
+    "updatedAt": 1795426238,
     "title": {
       "romaji": "Azur Lane: 5 Shuunen Kinen Anime PV",
       "english": null,
@@ -4728,7 +5038,7 @@
       "Azur Lane: 5th Anniversary Anime PV"
     ],
     "averageScore": null,
-    "popularity": 185,
+    "popularity": 186,
     "isAdult": false,
     "source": "VIDEO_GAME",
     "countryOfOrigin": "JP",
@@ -4780,7 +5090,7 @@
   "193906": {
     "id": 193906,
     "idMal": null,
-    "updatedAt": 1795395814,
+    "updatedAt": 1795426232,
     "title": {
       "romaji": "Azur Lane: 4 Shuunen Kinen Anime PV",
       "english": null,
@@ -4816,7 +5126,7 @@
       "Azur Lane: 4th Anniversary Anime PV"
     ],
     "averageScore": null,
-    "popularity": 193,
+    "popularity": 194,
     "isAdult": false,
     "source": "VIDEO_GAME",
     "countryOfOrigin": "JP",
@@ -4868,7 +5178,7 @@
   "193831": {
     "id": 193831,
     "idMal": 60328,
-    "updatedAt": 1795253456,
+    "updatedAt": 1795426237,
     "title": {
       "romaji": "Fudanshi Shoukan: Isekai de Shinjuu ni Hameraremashita 7th Season",
       "english": null,
@@ -4904,7 +5214,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 97,
+    "popularity": 96,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -4987,7 +5297,7 @@
   "193468": {
     "id": 193468,
     "idMal": 58933,
-    "updatedAt": 1794821458,
+    "updatedAt": 1795436273,
     "title": {
       "romaji": "Dinoster: Gonglyongsuhodae 2",
       "english": "Quantum Heroes Dinoster 2nd Season",
@@ -4999,8 +5309,8 @@
     "description": "Second season of <i>Dinoster: Gonglyongsuhodae</i>.",
     "episodes": 26,
     "duration": 12,
-    "season": null,
-    "seasonYear": null,
+    "season": "WINTER",
+    "seasonYear": 2024,
     "startDate": {
       "year": 2024,
       "month": 2,
@@ -5026,7 +5336,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 32,
+    "popularity": 31,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "KR",
@@ -5069,7 +5379,7 @@
   "193472": {
     "id": 193472,
     "idMal": 46156,
-    "updatedAt": 1794821458,
+    "updatedAt": 1795426260,
     "title": {
       "romaji": "Tian Jiang Xiaozi",
       "english": null,
@@ -5109,7 +5419,7 @@
       "Sky Kids"
     ],
     "averageScore": null,
-    "popularity": 25,
+    "popularity": 24,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "CN",
@@ -5130,7 +5440,7 @@
   "193295": {
     "id": 193295,
     "idMal": 61261,
-    "updatedAt": 1795253490,
+    "updatedAt": 1795426272,
     "title": {
       "romaji": "Okaimono Panda! (ONA)",
       "english": null,
@@ -5170,7 +5480,7 @@
       "Shopping Panda"
     ],
     "averageScore": null,
-    "popularity": 87,
+    "popularity": 86,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -5327,7 +5637,7 @@
   "193469": {
     "id": 193469,
     "idMal": 59998,
-    "updatedAt": 1795253479,
+    "updatedAt": 1795426260,
     "title": {
       "romaji": "Shushan Qi Xian Lu Part 2",
       "english": null,
@@ -5367,7 +5677,7 @@
       "Legend of Shou Part 2"
     ],
     "averageScore": null,
-    "popularity": 63,
+    "popularity": 62,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "CN",
@@ -5412,6 +5722,326 @@
           }
         }
       ]
+    },
+    "characters": {
+      "edges": []
+    },
+    "streamingEpisodes": []
+  },
+  "193467": {
+    "id": 193467,
+    "idMal": 57117,
+    "updatedAt": 1795451502,
+    "title": {
+      "romaji": "Dinoster: Gongnyongsuhodae",
+      "english": "Quantum Heroes Dinoster",
+      "native": "다이노스터: 공룡수호대"
+    },
+    "type": "ANIME",
+    "format": "TV_SHORT",
+    "status": "FINISHED",
+    "description": null,
+    "episodes": 26,
+    "duration": 12,
+    "season": "SUMMER",
+    "seasonYear": 2023,
+    "startDate": {
+      "year": 2023,
+      "month": 8,
+      "day": 28
+    },
+    "endDate": {
+      "year": 2023,
+      "month": 11,
+      "day": 20
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx193467-AV1XEy5Dh8iw.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx193467-AV1XEy5Dh8iw.png",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx193467-AV1XEy5Dh8iw.png",
+      "color": "#43bbe4"
+    },
+    "bannerImage": null,
+    "genres": [
+      "Action",
+      "Comedy",
+      "Mecha",
+      "Sci-Fi"
+    ],
+    "synonyms": [],
+    "averageScore": null,
+    "popularity": 41,
+    "isAdult": false,
+    "source": "ORIGINAL",
+    "countryOfOrigin": "KR",
+    "tags": [
+      {
+        "name": "Tokusatsu",
+        "rank": 20,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Kids",
+        "rank": 20,
+        "isMediaSpoiler": false
+      }
+    ],
+    "studios": {
+      "nodes": [
+        {
+          "name": "Alpha Animation"
+        },
+        {
+          "name": "Fun Flux Entertainment"
+        }
+      ]
+    },
+    "trailer": {
+      "id": "xdAuBPRrIbE",
+      "site": "youtube"
+    },
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": [
+        {
+          "relationType": "SEQUEL",
+          "node": {
+            "id": 193468,
+            "type": "ANIME",
+            "format": "TV_SHORT",
+            "status": "FINISHED",
+            "title": {
+              "romaji": "Dinoster: Gonglyongsuhodae 2",
+              "english": "Quantum Heroes Dinoster 2nd Season",
+              "native": "다이노스터: 공룡수호대 2기"
+            }
+          }
+        }
+      ]
+    },
+    "characters": {
+      "edges": []
+    },
+    "streamingEpisodes": []
+  },
+  "193470": {
+    "id": 193470,
+    "idMal": 44020,
+    "updatedAt": 1795426260,
+    "title": {
+      "romaji": "Dianji Xiaozi 2",
+      "english": "Electro Boy 2",
+      "native": "电击小子2"
+    },
+    "type": "ANIME",
+    "format": "TV",
+    "status": "FINISHED",
+    "description": null,
+    "episodes": 26,
+    "duration": 23,
+    "season": null,
+    "seasonYear": null,
+    "startDate": {
+      "year": 2009,
+      "month": null,
+      "day": null
+    },
+    "endDate": {
+      "year": 2009,
+      "month": null,
+      "day": null
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx193470-w3A01iUp0Q2c.png",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx193470-w3A01iUp0Q2c.png",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx193470-w3A01iUp0Q2c.png",
+      "color": "#f1a143"
+    },
+    "bannerImage": null,
+    "genres": [
+      "Action",
+      "Comedy"
+    ],
+    "synonyms": [
+      "电击小子第二部",
+      "电击小子第二季",
+      "Electro Boy 2nd Season"
+    ],
+    "averageScore": null,
+    "popularity": 31,
+    "isAdult": false,
+    "source": "ORIGINAL",
+    "countryOfOrigin": "CN",
+    "tags": [],
+    "studios": {
+      "nodes": []
+    },
+    "trailer": null,
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": [
+        {
+          "relationType": "PREQUEL",
+          "node": {
+            "id": 187510,
+            "type": "ANIME",
+            "format": "TV",
+            "status": "FINISHED",
+            "title": {
+              "romaji": "Dianji Xiaozi",
+              "english": "Electro Boy",
+              "native": "电击小子"
+            }
+          }
+        },
+        {
+          "relationType": "SEQUEL",
+          "node": {
+            "id": 193471,
+            "type": "ANIME",
+            "format": "TV",
+            "status": "FINISHED",
+            "title": {
+              "romaji": "Dianji Xiaozi 3",
+              "english": "Electro Boy 3",
+              "native": "电击小子3"
+            }
+          }
+        }
+      ]
+    },
+    "characters": {
+      "edges": []
+    },
+    "streamingEpisodes": []
+  },
+  "193471": {
+    "id": 193471,
+    "idMal": 44021,
+    "updatedAt": 1795426260,
+    "title": {
+      "romaji": "Dianji Xiaozi 3",
+      "english": "Electro Boy 3",
+      "native": "电击小子3"
+    },
+    "type": "ANIME",
+    "format": "TV",
+    "status": "FINISHED",
+    "description": null,
+    "episodes": 26,
+    "duration": 23,
+    "season": null,
+    "seasonYear": null,
+    "startDate": {
+      "year": 2013,
+      "month": 2,
+      "day": 1
+    },
+    "endDate": {
+      "year": null,
+      "month": null,
+      "day": null
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b193471-wZdaD0NpJidT.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b193471-wZdaD0NpJidT.jpg",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/b193471-wZdaD0NpJidT.jpg",
+      "color": "#e4ae28"
+    },
+    "bannerImage": null,
+    "genres": [
+      "Action",
+      "Comedy"
+    ],
+    "synonyms": [
+      "电击小子第三部",
+      "电击小子3之四圣团"
+    ],
+    "averageScore": null,
+    "popularity": 34,
+    "isAdult": false,
+    "source": "ORIGINAL",
+    "countryOfOrigin": "CN",
+    "tags": [],
+    "studios": {
+      "nodes": []
+    },
+    "trailer": null,
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": [
+        {
+          "relationType": "PREQUEL",
+          "node": {
+            "id": 193470,
+            "type": "ANIME",
+            "format": "TV",
+            "status": "FINISHED",
+            "title": {
+              "romaji": "Dianji Xiaozi 2",
+              "english": "Electro Boy 2",
+              "native": "电击小子2"
+            }
+          }
+        }
+      ]
+    },
+    "characters": {
+      "edges": []
+    },
+    "streamingEpisodes": []
+  },
+  "193615": {
+    "id": 193615,
+    "idMal": 24923,
+    "updatedAt": 1795426251,
+    "title": {
+      "romaji": "Chibikko Kamu no Bouken",
+      "english": null,
+      "native": "ちびっこカムのぼうけん"
+    },
+    "type": "ANIME",
+    "format": "MOVIE",
+    "status": "FINISHED",
+    "description": "Based on the childrens' book by Kanzawa Toshiko.",
+    "episodes": 1,
+    "duration": 65,
+    "season": null,
+    "seasonYear": null,
+    "startDate": {
+      "year": 1976,
+      "month": 9,
+      "day": 15
+    },
+    "endDate": {
+      "year": 1976,
+      "month": 9,
+      "day": 15
+    },
+    "coverImage": {
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b193615-9Gto6UOP8F9w.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b193615-9Gto6UOP8F9w.jpg",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/b193615-9Gto6UOP8F9w.jpg",
+      "color": "#78aed6"
+    },
+    "bannerImage": null,
+    "genres": [
+      "Adventure"
+    ],
+    "synonyms": [],
+    "averageScore": null,
+    "popularity": 42,
+    "isAdult": false,
+    "source": null,
+    "countryOfOrigin": "JP",
+    "tags": [],
+    "studios": {
+      "nodes": []
+    },
+    "trailer": null,
+    "nextAiringEpisode": null,
+    "relations": {
+      "edges": []
     },
     "characters": {
       "edges": []
