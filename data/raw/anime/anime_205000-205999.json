@@ -2,7 +2,7 @@
   "205054": {
     "id": 205054,
     "idMal": 63266,
-    "updatedAt": 1795511822,
+    "updatedAt": 1795622514,
     "title": {
       "romaji": "Tensei Akujo no Kuro Rekishi OVA",
       "english": "The Dark History of the Reincarnated Villainess: Yomi, Jealousy, and a Birthday / Iana and Sol's Feverish Day",
@@ -44,7 +44,7 @@
       "The Dark History of the Reincarnated Villainess Episode 13"
     ],
     "averageScore": 70,
-    "popularity": 2655,
+    "popularity": 2657,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -393,7 +393,7 @@
   "205068": {
     "id": 205068,
     "idMal": 64683,
-    "updatedAt": 1795568562,
+    "updatedAt": 1795618825,
     "title": {
       "romaji": "Wollum Jogyonim",
       "english": "One-Room TA",
@@ -433,7 +433,7 @@
       "ワンルームTAさん"
     ],
     "averageScore": 78,
-    "popularity": 4693,
+    "popularity": 4701,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "KR",
@@ -614,7 +614,7 @@
   "205081": {
     "id": 205081,
     "idMal": 63212,
-    "updatedAt": 1795568578,
+    "updatedAt": 1795622514,
     "title": {
       "romaji": "Kaguya-sama wa Kokurasetai: Kanketsu-hen",
       "english": null,
@@ -655,7 +655,7 @@
       "Kaguya-sama: Love is War - Final Chapter"
     ],
     "averageScore": null,
-    "popularity": 19178,
+    "popularity": 19194,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -734,7 +734,7 @@
   "205130": {
     "id": 205130,
     "idMal": 63215,
-    "updatedAt": 1795561338,
+    "updatedAt": 1795622341,
     "title": {
       "romaji": "Historié",
       "english": null,
@@ -751,7 +751,7 @@
     "startDate": {
       "year": 2027,
       "month": 1,
-      "day": null
+      "day": 8
     },
     "endDate": {
       "year": null,
@@ -759,10 +759,10 @@
       "day": null
     },
     "coverImage": {
-      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx205130-dC5WuIvGMMgr.png",
-      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx205130-dC5WuIvGMMgr.png",
-      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx205130-dC5WuIvGMMgr.png",
-      "color": "#e4ae5d"
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx205130-oasZ91IQMhMN.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx205130-oasZ91IQMhMN.jpg",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx205130-oasZ91IQMhMN.jpg",
+      "color": "#865000"
     },
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/205130-BDtd2yGv1a7O.jpg",
     "genres": [
@@ -772,7 +772,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 6966,
+    "popularity": 7016,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -829,7 +829,11 @@
       "id": "GM1Y206Unwg",
       "site": "youtube"
     },
-    "nextAiringEpisode": null,
+    "nextAiringEpisode": {
+      "airingAt": 1799425380,
+      "timeUntilAiring": 3799834,
+      "episode": 1
+    },
     "relations": {
       "edges": [
         {
@@ -876,6 +880,36 @@
               "image": {
                 "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n105989-96etzH1dLNug.jpg",
                 "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n105989-96etzH1dLNug.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "MAIN",
+          "node": {
+            "id": 41751,
+            "name": {
+              "full": "Philip 2-sei",
+              "native": "フィリッポス2世",
+              "userPreferred": "Philip 2-sei"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b41751-hlQKHvIHZb55.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b41751-hlQKHvIHZb55.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95284,
+              "name": {
+                "full": "Fumihiko Tachiki",
+                "native": "立木文彦",
+                "userPreferred": "Fumihiko Tachiki"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95284-k97k9dULn4vr.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95284-k97k9dULn4vr.png"
               }
             }
           ]
@@ -1179,6 +1213,156 @@
               }
             }
           ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 413304,
+            "name": {
+              "full": "Satura",
+              "native": "サテュラ",
+              "userPreferred": "Satura"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 119155,
+              "name": {
+                "full": "Akira Sekine",
+                "native": "関根明良",
+                "userPreferred": "Akira Sekine"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n119155-uMmkwn0L33Im.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n119155-uMmkwn0L33Im.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 413305,
+            "name": {
+              "full": "Bato",
+              "native": "バト",
+              "userPreferred": "Bato"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 107017,
+              "name": {
+                "full": "Toshiki Masuda",
+                "native": "増田俊樹",
+                "userPreferred": "Toshiki Masuda"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n107017-Jv96B9DBJOy9.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n107017-Jv96B9DBJOy9.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 413306,
+            "name": {
+              "full": "Dimakos",
+              "native": "ダイマコス",
+              "userPreferred": "Dimakos"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 107615,
+              "name": {
+                "full": "Ryouta Takeuchi",
+                "native": "竹内良太",
+                "userPreferred": "Ryouta Takeuchi"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n107615-e4FrG8jtyQKY.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n107615-e4FrG8jtyQKY.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 413307,
+            "name": {
+              "full": "Telemakos",
+              "native": "テレマコス",
+              "userPreferred": "Telemakos"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 118249,
+              "name": {
+                "full": "Seiichirou Yamashita",
+                "native": "山下誠一郎",
+                "userPreferred": "Seiichirou Yamashita"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n118249-aws1DsuN7cUW.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n118249-aws1DsuN7cUW.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "BACKGROUND",
+          "node": {
+            "id": 36309,
+            "name": {
+              "full": "Narrator",
+              "native": "ナレーター",
+              "userPreferred": "Narrator"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b36309-6KM0riV4lqfN.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b36309-6KM0riV4lqfN.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 115204,
+              "name": {
+                "full": "Mirai Moriyama",
+                "native": "森山未來",
+                "userPreferred": "Mirai Moriyama"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/20204.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/20204.jpg"
+              }
+            }
+          ]
         }
       ]
     },
@@ -1187,7 +1371,7 @@
   "205432": {
     "id": 205432,
     "idMal": 63254,
-    "updatedAt": 1795568578,
+    "updatedAt": 1795622514,
     "title": {
       "romaji": "Isshun de Chiryou Shiteita no ni Yakutatazu to Tsuihou Sareta Tensai Chiyushi, Yami Healer Toshite Tanoshiku Ikiru 2nd Season",
       "english": null,
@@ -1231,7 +1415,7 @@
       "Yami Healer"
     ],
     "averageScore": null,
-    "popularity": 10608,
+    "popularity": 10621,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -1430,7 +1614,7 @@
   "205772": {
     "id": 205772,
     "idMal": 63276,
-    "updatedAt": 1795557809,
+    "updatedAt": 1795622486,
     "title": {
       "romaji": "Candy Caries",
       "english": null,
@@ -1801,7 +1985,7 @@
   "205896": {
     "id": 205896,
     "idMal": 63292,
-    "updatedAt": 1795570075,
+    "updatedAt": 1795622414,
     "title": {
       "romaji": "Shinja Zero no Megami-sama to Hajimeru Isekai Kouryaku",
       "english": "Full Clearing Another World under a Goddess with Zero Believers",
@@ -1840,7 +2024,7 @@
       "Clear the World Like a Game with the Zero Believer Goddess"
     ],
     "averageScore": 65,
-    "popularity": 25826,
+    "popularity": 26036,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -1894,7 +2078,7 @@
     },
     "nextAiringEpisode": {
       "airingAt": 1795962600,
-      "timeUntilAiring": 390637,
+      "timeUntilAiring": 337055,
       "episode": 8
     },
     "relations": {
@@ -2208,7 +2392,7 @@
   "205909": {
     "id": 205909,
     "idMal": 63293,
-    "updatedAt": 1795570077,
+    "updatedAt": 1795622404,
     "title": {
       "romaji": "Hotaru no Yomeiri",
       "english": "Firefly Wedding",
@@ -2245,7 +2429,7 @@
     ],
     "synonyms": [],
     "averageScore": 76,
-    "popularity": 59342,
+    "popularity": 59728,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -2339,7 +2523,7 @@
     },
     "nextAiringEpisode": {
       "airingAt": 1795789800,
-      "timeUntilAiring": 217837,
+      "timeUntilAiring": 164254,
       "episode": 8
     },
     "relations": {
@@ -3000,7 +3184,7 @@
   "205430": {
     "id": 205430,
     "idMal": 63256,
-    "updatedAt": 1795570204,
+    "updatedAt": 1795618844,
     "title": {
       "romaji": "Boukensha License wo Hakudatsu Sareta Ossan Dakedo, Manamusume ga Dekita no de Nonbiri Jinsei wo Ouka Suru",
       "english": null,
@@ -3040,7 +3224,7 @@
       "I Lost My Adventurer's License, but It's Fine Because I Have an Adorable Daughter Now"
     ],
     "averageScore": null,
-    "popularity": 2182,
+    "popularity": 2196,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -3074,7 +3258,7 @@
     },
     "nextAiringEpisode": {
       "airingAt": 1799334000,
-      "timeUntilAiring": 3762037,
+      "timeUntilAiring": 3708454,
       "episode": 1
     },
     "relations": {
@@ -3178,7 +3362,7 @@
   "205444": {
     "id": 205444,
     "idMal": 63253,
-    "updatedAt": 1795570259,
+    "updatedAt": 1795622514,
     "title": {
       "romaji": "Majo no Tabitabi Movie",
       "english": null,
@@ -3224,7 +3408,7 @@
       "Странствующая ведьма"
     ],
     "averageScore": null,
-    "popularity": 5749,
+    "popularity": 5753,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -3516,7 +3700,7 @@
   "205290": {
     "id": 205290,
     "idMal": 62728,
-    "updatedAt": 1795554176,
+    "updatedAt": 1795618844,
     "title": {
       "romaji": "Jian Lai 2",
       "english": "Sword of Coming 2nd Season",
@@ -3558,7 +3742,7 @@
       "Sword of Coming 2nd Season "
     ],
     "averageScore": 74,
-    "popularity": 593,
+    "popularity": 595,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "CN",
@@ -3609,7 +3793,7 @@
   "205375": {
     "id": 205375,
     "idMal": 63235,
-    "updatedAt": 1795511800,
+    "updatedAt": 1795598197,
     "title": {
       "romaji": "Long Zu 3",
       "english": null,
@@ -3654,7 +3838,7 @@
       "Dragon Raja III: The Tide of Dark Moon"
     ],
     "averageScore": null,
-    "popularity": 2152,
+    "popularity": 2154,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "CN",
@@ -3757,7 +3941,7 @@
   "205601": {
     "id": 205601,
     "idMal": 61162,
-    "updatedAt": 1795425413,
+    "updatedAt": 1795598182,
     "title": {
       "romaji": "Chinpui: Eri-sama no Good Luck",
       "english": null,
@@ -3797,7 +3981,7 @@
       "Chimpui Eri-sama's Good Luck"
     ],
     "averageScore": null,
-    "popularity": 82,
+    "popularity": 83,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -4039,7 +4223,7 @@
   "205905": {
     "id": 205905,
     "idMal": 62340,
-    "updatedAt": 1795550570,
+    "updatedAt": 1795622514,
     "title": {
       "romaji": "Guangyin Zhi Wai",
       "english": "Beyond Time's Gaze",
@@ -4081,7 +4265,7 @@
       "Beyond the Timescape"
     ],
     "averageScore": 79,
-    "popularity": 1324,
+    "popularity": 1329,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "CN",
@@ -5095,7 +5279,7 @@
   "205372": {
     "id": 205372,
     "idMal": 62685,
-    "updatedAt": 1795425428,
+    "updatedAt": 1795598197,
     "title": {
       "romaji": "Mang Huang Ji (2026)",
       "english": "Mang Wasteland Period",
@@ -5134,7 +5318,7 @@
       "The Desolate Era"
     ],
     "averageScore": null,
-    "popularity": 170,
+    "popularity": 171,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "CN",
@@ -5392,7 +5576,7 @@
   "205307": {
     "id": 205307,
     "idMal": 63245,
-    "updatedAt": 1795511804,
+    "updatedAt": 1795604566,
     "title": {
       "romaji": "Shirube",
       "english": null,
