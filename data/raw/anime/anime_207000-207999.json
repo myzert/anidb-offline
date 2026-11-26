@@ -2,7 +2,7 @@
   "207084": {
     "id": 207084,
     "idMal": 63396,
-    "updatedAt": 1795644180,
+    "updatedAt": 1795684484,
     "title": {
       "romaji": "Onee-chan Gokko",
       "english": "Playing Sister",
@@ -44,7 +44,7 @@
       "Playing Sister"
     ],
     "averageScore": 70,
-    "popularity": 1964,
+    "popularity": 1968,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -326,7 +326,7 @@
   "207385": {
     "id": 207385,
     "idMal": 63442,
-    "updatedAt": 1795656540,
+    "updatedAt": 1795708912,
     "title": {
       "romaji": "Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka VI",
       "english": null,
@@ -370,7 +370,7 @@
       "ダンまちⅥ"
     ],
     "averageScore": null,
-    "popularity": 14695,
+    "popularity": 14704,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -492,7 +492,7 @@
   "207594": {
     "id": 207594,
     "idMal": 61511,
-    "updatedAt": 1795654954,
+    "updatedAt": 1795708912,
     "title": {
       "romaji": "Given: Hiiragi mix Specials",
       "english": null,
@@ -535,8 +535,8 @@
       "文化祭",
       "Given: Hiiragi mix Tokuten Eizou"
     ],
-    "averageScore": 74,
-    "popularity": 1570,
+    "averageScore": 75,
+    "popularity": 1572,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -582,7 +582,7 @@
   "207674": {
     "id": 207674,
     "idMal": 63468,
-    "updatedAt": 1795656478,
+    "updatedAt": 1795708825,
     "title": {
       "romaji": "Ushiro no Shoumen Kamui-san",
       "english": "KAMUI ---He's behind you",
@@ -624,7 +624,7 @@
       "คุณคามุยลุยหลังผี"
     ],
     "averageScore": 59,
-    "popularity": 23174,
+    "popularity": 23215,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -1019,7 +1019,7 @@
   "207782": {
     "id": 207782,
     "idMal": 63476,
-    "updatedAt": 1795654954,
+    "updatedAt": 1795705238,
     "title": {
       "romaji": "Odebu Akujo ni Tensei Shitara, Naze ka Last Boss Ouji-sama ni Shuuchaku Sareteimasu",
       "english": null,
@@ -1036,7 +1036,7 @@
     "startDate": {
       "year": 2027,
       "month": 1,
-      "day": null
+      "day": 1
     },
     "endDate": {
       "year": null,
@@ -1044,10 +1044,10 @@
       "day": null
     },
     "coverImage": {
-      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx207782-wKac51K7adn3.jpg",
-      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx207782-wKac51K7adn3.jpg",
-      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx207782-wKac51K7adn3.jpg",
-      "color": "#43aef1"
+      "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx207782-jmxrbTF1tLob.jpg",
+      "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx207782-jmxrbTF1tLob.jpg",
+      "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx207782-jmxrbTF1tLob.jpg",
+      "color": "#e4d6a1"
     },
     "bannerImage": null,
     "genres": [
@@ -1060,7 +1060,7 @@
       "Odebu Akujo"
     ],
     "averageScore": null,
-    "popularity": 3764,
+    "popularity": 3779,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -1114,10 +1114,14 @@
       ]
     },
     "trailer": {
-      "id": "OL9U8xq13Jo",
+      "id": "FTug94f5v68",
       "site": "youtube"
     },
-    "nextAiringEpisode": null,
+    "nextAiringEpisode": {
+      "airingAt": 1798810200,
+      "timeUntilAiring": 3099758,
+      "episode": 1
+    },
     "relations": {
       "edges": [
         {
@@ -1257,6 +1261,36 @@
               }
             }
           ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 413348,
+            "name": {
+              "full": "Richard",
+              "native": "リチャード",
+              "userPreferred": "Richard"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 106817,
+              "name": {
+                "full": "Yoshitsugu Matsuoka",
+                "native": "松岡禎丞",
+                "userPreferred": "Yoshitsugu Matsuoka"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n106817-mioGQjbTWWQ6.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n106817-mioGQjbTWWQ6.png"
+              }
+            }
+          ]
         }
       ]
     },
@@ -1265,7 +1299,7 @@
   "207254": {
     "id": 207254,
     "idMal": 63418,
-    "updatedAt": 1795654943,
+    "updatedAt": 1795684470,
     "title": {
       "romaji": "Thunder 3",
       "english": "Thunder 3",
@@ -1303,7 +1337,7 @@
     ],
     "synonyms": [],
     "averageScore": 53,
-    "popularity": 2294,
+    "popularity": 2295,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -1812,7 +1846,7 @@
   "207251": {
     "id": 207251,
     "idMal": 63419,
-    "updatedAt": 1795656424,
+    "updatedAt": 1795708903,
     "title": {
       "romaji": "Mairimashita! Iruma-kun: If Episode of Mafia",
       "english": null,
@@ -1851,7 +1885,7 @@
       "Welcome to Demon School! Iruma-kun: IruMafia Edition"
     ],
     "averageScore": null,
-    "popularity": 6064,
+    "popularity": 6087,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -1897,7 +1931,7 @@
     "trailer": null,
     "nextAiringEpisode": {
       "airingAt": 1799071200,
-      "timeUntilAiring": 3414233,
+      "timeUntilAiring": 3360759,
       "episode": 1
     },
     "relations": {
@@ -2151,7 +2185,7 @@
   "207809": {
     "id": 207809,
     "idMal": 63489,
-    "updatedAt": 1795656409,
+    "updatedAt": 1795708809,
     "title": {
       "romaji": "Sora wa Akai Kawa no Hotori",
       "english": "Red River",
@@ -2192,8 +2226,8 @@
     "synonyms": [
       "Anatolia Story"
     ],
-    "averageScore": 62,
-    "popularity": 12312,
+    "averageScore": 61,
+    "popularity": 12343,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -2312,7 +2346,7 @@
     },
     "nextAiringEpisode": {
       "airingAt": 1796142900,
-      "timeUntilAiring": 485933,
+      "timeUntilAiring": 432458,
       "episode": 22
     },
     "relations": {
@@ -2972,7 +3006,7 @@
   "207141": {
     "id": 207141,
     "idMal": 63403,
-    "updatedAt": 1795654837,
+    "updatedAt": 1795708823,
     "title": {
       "romaji": "Yani Neko",
       "english": "Chainsmoker Cat",
@@ -3013,7 +3047,7 @@
       "尼古喵喵"
     ],
     "averageScore": 71,
-    "popularity": 86292,
+    "popularity": 86375,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -3960,7 +3994,7 @@
   "207329": {
     "id": 207329,
     "idMal": 63431,
-    "updatedAt": 1795656396,
+    "updatedAt": 1795708807,
     "title": {
       "romaji": "Tsuihou Sareta Cheat Fuyo Majutsushi wa Kimama na Second Life wo Ouka Suru.: Ore wa Buki dake ja Naku, Arayuru Mono ni \"Kyouka Point\" wo Fuyo Dekiru shi, Ore no Ishi de Itsudemo Kouka wo Kaijo Dekiru kedo, Nokotta Hitotachi Daijoubu?",
       "english": "The Laid-Off Cheat-Granting Mage Enjoys a Second Lease on Life",
@@ -4004,7 +4038,7 @@
       "The Laid-Off Cheat-Granting Mage Enjoys a New Life"
     ],
     "averageScore": 74,
-    "popularity": 55514,
+    "popularity": 56046,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -4128,7 +4162,7 @@
     },
     "nextAiringEpisode": {
       "airingAt": 1796137200,
-      "timeUntilAiring": 480232,
+      "timeUntilAiring": 426758,
       "episode": 9
     },
     "relations": {
@@ -4532,7 +4566,7 @@
   "207191": {
     "id": 207191,
     "idMal": 63409,
-    "updatedAt": 1795656404,
+    "updatedAt": 1795708811,
     "title": {
       "romaji": "Doumo, Suki na Hito ni Horegusuri wo Irai Sareta Majo desu.",
       "english": "Hello, I am a Witch and my Crush Wants me to Make a Love Potion!",
@@ -4575,7 +4609,7 @@
       "Love Potion, la sorcière mal-aimée"
     ],
     "averageScore": 75,
-    "popularity": 35659,
+    "popularity": 35885,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -4659,7 +4693,7 @@
     },
     "nextAiringEpisode": {
       "airingAt": 1796041800,
-      "timeUntilAiring": 384833,
+      "timeUntilAiring": 331358,
       "episode": 9
     },
     "relations": {
@@ -4853,7 +4887,7 @@
   "207327": {
     "id": 207327,
     "idMal": 63423,
-    "updatedAt": 1795654954,
+    "updatedAt": 1795708912,
     "title": {
       "romaji": "Doko yori mo Tooi Basho ni Iru Kimi e",
       "english": "To You in the Beyond",
@@ -4894,7 +4928,7 @@
       "แด่เธอสุดปลายฟ้า"
     ],
     "averageScore": 70,
-    "popularity": 14035,
+    "popularity": 14054,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -5258,7 +5292,7 @@
   "207886": {
     "id": 207886,
     "idMal": 62843,
-    "updatedAt": 1795622501,
+    "updatedAt": 1795684424,
     "title": {
       "romaji": "Run Run Lantern",
       "english": null,
@@ -6398,7 +6432,7 @@
   "207081": {
     "id": 207081,
     "idMal": 63088,
-    "updatedAt": 1795598082,
+    "updatedAt": 1795684484,
     "title": {
       "romaji": "Watashi wa, Watashi no Koto ga Suki.",
       "english": null,
@@ -6432,7 +6466,7 @@
     "genres": [],
     "synonyms": [],
     "averageScore": 70,
-    "popularity": 850,
+    "popularity": 849,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -6508,7 +6542,7 @@
   "207083": {
     "id": 207083,
     "idMal": 63398,
-    "updatedAt": 1795629752,
+    "updatedAt": 1795708852,
     "title": {
       "romaji": "ray Chou Kaguya-hime! Version",
       "english": "ray (Cosmic Princess Kaguya! Version)",
@@ -6547,7 +6581,7 @@
       "ray CPK Ver."
     ],
     "averageScore": 82,
-    "popularity": 2448,
+    "popularity": 2449,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -6907,7 +6941,7 @@
   "207217": {
     "id": 207217,
     "idMal": 65079,
-    "updatedAt": 1795598070,
+    "updatedAt": 1795684473,
     "title": {
       "romaji": "Koneko no Haitatsuin Uunyan (2026)",
       "english": "Delivery Kitten Unyan (2026)",
@@ -6943,7 +6977,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 184,
+    "popularity": 185,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -7178,7 +7212,7 @@
   "207324": {
     "id": 207324,
     "idMal": 63349,
-    "updatedAt": 1795651508,
+    "updatedAt": 1795684466,
     "title": {
       "romaji": "Serenade (2026)",
       "english": "Serenade (2026)",
@@ -7216,7 +7250,7 @@
     ],
     "synonyms": [],
     "averageScore": 75,
-    "popularity": 1384,
+    "popularity": 1386,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -7255,7 +7289,7 @@
   "207328": {
     "id": 207328,
     "idMal": 63424,
-    "updatedAt": 1795654954,
+    "updatedAt": 1795708898,
     "title": {
       "romaji": "Yuukyuu no Gusha Asley no, Kenja no Susume",
       "english": "The Eternal Fool's Words of Wisdom: A Pawsitively Fantastic Adventure",
@@ -7294,7 +7328,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 1460,
+    "popularity": 1474,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -7572,7 +7606,7 @@
   "207415": {
     "id": 207415,
     "idMal": null,
-    "updatedAt": 1795598054,
+    "updatedAt": 1795684455,
     "title": {
       "romaji": "Kaiba Seichoutsuu × Mass Destruction -Reload- Mashup",
       "english": "Hippocampal Pain × Mass Destruction -Reload- Mashup",
@@ -7614,7 +7648,7 @@
       "ZUTOMAYO x Persona 3 Reload",
       "ZTMY x P3R"
     ],
-    "averageScore": 75,
+    "averageScore": 74,
     "popularity": 966,
     "isAdult": false,
     "source": "OTHER",
@@ -7793,7 +7827,7 @@
   "207675": {
     "id": 207675,
     "idMal": 63469,
-    "updatedAt": 1795600961,
+    "updatedAt": 1795684438,
     "title": {
       "romaji": "Hyakki Yakou Shou",
       "english": "Hyakki Yakoushou",
@@ -7839,7 +7873,7 @@
       "บันทึกขบวนร้อยอสูรแห่งรัตติกาล"
     ],
     "averageScore": 49,
-    "popularity": 1407,
+    "popularity": 1408,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -8062,7 +8096,7 @@
   "207692": {
     "id": 207692,
     "idMal": 63472,
-    "updatedAt": 1795647787,
+    "updatedAt": 1795708912,
     "title": {
       "romaji": "Namida Ame to Serenade",
       "english": null,
@@ -8103,7 +8137,7 @@
       "Rainy Day Serenade"
     ],
     "averageScore": null,
-    "popularity": 2283,
+    "popularity": 2291,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -8223,7 +8257,7 @@
   "207475": {
     "id": 207475,
     "idMal": 62640,
-    "updatedAt": 1795598050,
+    "updatedAt": 1795687354,
     "title": {
       "romaji": "Jongtama × Gintama Collab Kettei Promotion Anime",
       "english": "Mahjong Soul X Gintama Collab - Anime Preview",
@@ -8257,7 +8291,7 @@
     "genres": [],
     "synonyms": [],
     "averageScore": 59,
-    "popularity": 255,
+    "popularity": 256,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -8620,7 +8654,7 @@
   "207853": {
     "id": 207853,
     "idMal": 63493,
-    "updatedAt": 1795252448,
+    "updatedAt": 1795684426,
     "title": {
       "romaji": "Dou-Da? DOING!",
       "english": null,
@@ -9310,7 +9344,7 @@
   "207033": {
     "id": 207033,
     "idMal": null,
-    "updatedAt": 1795629752,
+    "updatedAt": 1795684487,
     "title": {
       "romaji": "Sheng Shi Chuanshuo",
       "english": "The Legend of The Sacred Stone",
@@ -9353,7 +9387,7 @@
       "圣石传说"
     ],
     "averageScore": null,
-    "popularity": 50,
+    "popularity": 51,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "TW",
@@ -9480,7 +9514,7 @@
   "207082": {
     "id": 207082,
     "idMal": 63336,
-    "updatedAt": 1795252506,
+    "updatedAt": 1795687354,
     "title": {
       "romaji": "Cardfight!! Vanguard 15 Shuunen Kinen PV",
       "english": null,
@@ -9519,7 +9553,7 @@
       "Cardfight!! Vanguard 15th Anniversary"
     ],
     "averageScore": 61,
-    "popularity": 268,
+    "popularity": 269,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -9726,7 +9760,7 @@
   "207331": {
     "id": 207331,
     "idMal": null,
-    "updatedAt": 1795166066,
+    "updatedAt": 1795684461,
     "title": {
       "romaji": "Manga Arabia PV",
       "english": null,
@@ -9764,7 +9798,7 @@
       "تحديث_يفهمك#​"
     ],
     "averageScore": null,
-    "popularity": 113,
+    "popularity": 112,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -10755,7 +10789,7 @@
   "207031": {
     "id": 207031,
     "idMal": null,
-    "updatedAt": 1795338909,
+    "updatedAt": 1795687354,
     "title": {
       "romaji": "Sayonara End Roll (Short Douga)",
       "english": null,
@@ -10795,7 +10829,7 @@
       "Sayonara End Roll Short Animation"
     ],
     "averageScore": null,
-    "popularity": 133,
+    "popularity": 134,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -10990,7 +11024,7 @@
   "207534": {
     "id": 207534,
     "idMal": 63439,
-    "updatedAt": 1795640569,
+    "updatedAt": 1795684447,
     "title": {
       "romaji": "Dao Yao Xing",
       "english": null,
@@ -11030,7 +11064,7 @@
       "Aliens Among Immortals"
     ],
     "averageScore": null,
-    "popularity": 294,
+    "popularity": 295,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "CN",
