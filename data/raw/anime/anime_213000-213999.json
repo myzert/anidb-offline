@@ -2,7 +2,7 @@
   "213052": {
     "id": 213052,
     "idMal": 64374,
-    "updatedAt": 1795708890,
+    "updatedAt": 1795741355,
     "title": {
       "romaji": "Dengeki Daisy",
       "english": null,
@@ -315,7 +315,7 @@
   "213298": {
     "id": 213298,
     "idMal": 64430,
-    "updatedAt": 1795684058,
+    "updatedAt": 1795734186,
     "title": {
       "romaji": "Yuruyuru Zukan",
       "english": null,
@@ -391,7 +391,7 @@
     },
     "nextAiringEpisode": {
       "airingAt": 1795903200,
-      "timeUntilAiring": 192748,
+      "timeUntilAiring": 159999,
       "episode": 9
     },
     "relations": {
@@ -436,7 +436,7 @@
   "213457": {
     "id": 213457,
     "idMal": 64459,
-    "updatedAt": 1795708804,
+    "updatedAt": 1795742864,
     "title": {
       "romaji": "Fool Night",
       "english": "Fool Night",
@@ -481,37 +481,42 @@
     "countryOfOrigin": "JP",
     "tags": [
       {
-        "name": "Class Struggle",
-        "rank": 86,
-        "isMediaSpoiler": false
-      },
-      {
-        "name": "Eco-Horror",
-        "rank": 84,
-        "isMediaSpoiler": false
-      },
-      {
         "name": "Seinen",
-        "rank": 79,
+        "rank": 100,
         "isMediaSpoiler": false
       },
       {
         "name": "Human Experimentation",
-        "rank": 79,
+        "rank": 95,
         "isMediaSpoiler": true
       },
       {
-        "name": "Urban Fantasy",
-        "rank": 73,
+        "name": "Class Struggle",
+        "rank": 91,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Eco-Horror",
+        "rank": 88,
         "isMediaSpoiler": false
       },
       {
         "name": "Dystopian",
-        "rank": 66,
+        "rank": 76,
         "isMediaSpoiler": false
       },
       {
         "name": "Post-Apocalyptic",
+        "rank": 75,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Cyberpunk",
+        "rank": 65,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Urban Fantasy",
         "rank": 60,
         "isMediaSpoiler": false
       },
@@ -521,44 +526,44 @@
         "isMediaSpoiler": false
       },
       {
+        "name": "Tragedy",
+        "rank": 60,
+        "isMediaSpoiler": true
+      },
+      {
+        "name": "Crime",
+        "rank": 60,
+        "isMediaSpoiler": false
+      },
+      {
         "name": "Body Horror",
-        "rank": 44,
-        "isMediaSpoiler": false
-      },
-      {
-        "name": "Suicide",
-        "rank": 20,
-        "isMediaSpoiler": false
-      },
-      {
-        "name": "Urban",
-        "rank": 20,
+        "rank": 57,
         "isMediaSpoiler": false
       },
       {
         "name": "Work",
-        "rank": 20,
+        "rank": 46,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Suicide",
+        "rank": 40,
+        "isMediaSpoiler": false
+      },
+      {
+        "name": "Urban",
+        "rank": 40,
         "isMediaSpoiler": false
       },
       {
         "name": "CGI",
-        "rank": 20,
+        "rank": 33,
         "isMediaSpoiler": false
       },
       {
-        "name": "Tragedy",
+        "name": "Gore",
         "rank": 20,
         "isMediaSpoiler": true
-      },
-      {
-        "name": "Cyberpunk",
-        "rank": 20,
-        "isMediaSpoiler": false
-      },
-      {
-        "name": "Crime",
-        "rank": 20,
-        "isMediaSpoiler": false
       }
     ],
     "studios": {
@@ -839,6 +844,36 @@
         {
           "role": "SUPPORTING",
           "node": {
+            "id": 402333,
+            "name": {
+              "full": "Outarou Kuudai",
+              "native": "九大旺太郎",
+              "userPreferred": "Outarou Kuudai"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b402333-y0DAettiUT8t.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b402333-y0DAettiUT8t.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95157,
+              "name": {
+                "full": "Nobuo Tobita",
+                "native": "飛田展男",
+                "userPreferred": "Nobuo Tobita"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95157-td6WhlGehuDJ.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95157-td6WhlGehuDJ.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
             "id": 402334,
             "name": {
               "full": "Mei Okumura",
@@ -869,6 +904,70 @@
         {
           "role": "SUPPORTING",
           "node": {
+            "id": 402335,
+            "name": {
+              "full": "Naoto Okumura",
+              "native": "奥村ナオト",
+              "userPreferred": "Naoto Okumura"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b402335-0CQvRL1fggzd.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b402335-0CQvRL1fggzd.png"
+            }
+          },
+          "voiceActors": []
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 402336,
+            "name": {
+              "full": "You Kunibe",
+              "native": "国部楊",
+              "userPreferred": "You Kunibe"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b402336-U7cVHceHtGZ9.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b402336-U7cVHceHtGZ9.png"
+            }
+          },
+          "voiceActors": []
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 403768,
+            "name": {
+              "full": "Mine Yatsuka",
+              "native": "八束ミネ",
+              "userPreferred": "Mine Yatsuka"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b403768-VlvzN1dC85BP.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b403768-VlvzN1dC85BP.png"
+            }
+          },
+          "voiceActors": []
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 403770,
+            "name": {
+              "full": "Himejima",
+              "native": "姫嶋",
+              "userPreferred": "Himejima"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b403770-F1ogmLytxOla.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b403770-F1ogmLytxOla.png"
+            }
+          },
+          "voiceActors": []
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
             "id": 412191,
             "name": {
               "full": "Sumi Matsuno",
@@ -895,6 +994,66 @@
               }
             }
           ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 413361,
+            "name": {
+              "full": "Shiika Izumi",
+              "native": "泉シイカ",
+              "userPreferred": "Shiika Izumi"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95148,
+              "name": {
+                "full": "Akiko Yajima",
+                "native": "矢島晶子",
+                "userPreferred": "Akiko Yajima"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95148-JiNi79wg9ScS.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95148-JiNi79wg9ScS.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
+            "id": 413362,
+            "name": {
+              "full": "Mukuru Izumi",
+              "native": "泉ムクル",
+              "userPreferred": "Mukuru Izumi"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/default.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/default.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95539,
+              "name": {
+                "full": "Yumiko Kobayashi",
+                "native": "小林由美子",
+                "userPreferred": "Yumiko Kobayashi"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95539-vFLypMio70hC.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95539-vFLypMio70hC.png"
+              }
+            }
+          ]
         }
       ]
     },
@@ -903,7 +1062,7 @@
   "213628": {
     "id": 213628,
     "idMal": 64495,
-    "updatedAt": 1795705258,
+    "updatedAt": 1795743030,
     "title": {
       "romaji": "Kill Ao 2nd Season",
       "english": null,
@@ -1080,7 +1239,7 @@
   "213656": {
     "id": 213656,
     "idMal": 64500,
-    "updatedAt": 1795708867,
+    "updatedAt": 1795743030,
     "title": {
       "romaji": "Tsue to Tsurugi no Wistoria Season 3",
       "english": null,
@@ -1412,7 +1571,7 @@
   "213702": {
     "id": 213702,
     "idMal": 64516,
-    "updatedAt": 1795708808,
+    "updatedAt": 1795741355,
     "title": {
       "romaji": "Tongari Boushi no Atelier 2nd Season",
       "english": "Witch Hat Atelier Season 2",
@@ -1467,7 +1626,7 @@
       },
       {
         "name": "Female Protagonist",
-        "rank": 89,
+        "rank": 90,
         "isMediaSpoiler": false
       },
       {
@@ -1492,7 +1651,7 @@
       },
       {
         "name": "Primarily Child Cast",
-        "rank": 78,
+        "rank": 80,
         "isMediaSpoiler": false
       },
       {
@@ -1517,7 +1676,7 @@
       },
       {
         "name": "Male Protagonist",
-        "rank": 50,
+        "rank": 33,
         "isMediaSpoiler": false
       }
     ],
@@ -1846,7 +2005,7 @@
   "213740": {
     "id": 213740,
     "idMal": 64520,
-    "updatedAt": 1795684022,
+    "updatedAt": 1795726972,
     "title": {
       "romaji": "Sensou Kyoushitsu",
       "english": "The Bugle Call: Song of War",
@@ -1991,7 +2150,7 @@
   "213782": {
     "id": 213782,
     "idMal": 64527,
-    "updatedAt": 1795708912,
+    "updatedAt": 1795743030,
     "title": {
       "romaji": "Soara to Mamono no Ie",
       "english": null,
@@ -2221,7 +2380,7 @@
   "213847": {
     "id": 213847,
     "idMal": 61546,
-    "updatedAt": 1795708836,
+    "updatedAt": 1795741272,
     "title": {
       "romaji": "Star Wars: Visions - Kyuuninme no Jedi",
       "english": "Star Wars: Visions Presents - The Ninth Jedi",
@@ -2739,7 +2898,7 @@
   "213987": {
     "id": 213987,
     "idMal": 64584,
-    "updatedAt": 1795708912,
+    "updatedAt": 1795743016,
     "title": {
       "romaji": "Hei Bai",
       "english": null,
@@ -2864,7 +3023,7 @@
   "213477": {
     "id": 213477,
     "idMal": 64463,
-    "updatedAt": 1795705247,
+    "updatedAt": 1795742896,
     "title": {
       "romaji": "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e 5th Season 2-nensei-hen Ni Gakki - Zenhan",
       "english": null,
@@ -3366,7 +3525,7 @@
   "213581": {
     "id": 213581,
     "idMal": 64484,
-    "updatedAt": 1795708854,
+    "updatedAt": 1795730580,
     "title": {
       "romaji": "Kanojo, Okarishimasu 6th Season",
       "english": null,
@@ -3569,7 +3728,7 @@
   "213655": {
     "id": 213655,
     "idMal": 64501,
-    "updatedAt": 1795705258,
+    "updatedAt": 1795734186,
     "title": {
       "romaji": "LONA",
       "english": null,
@@ -3737,7 +3896,7 @@
   "213796": {
     "id": 213796,
     "idMal": 64528,
-    "updatedAt": 1795701619,
+    "updatedAt": 1795743030,
     "title": {
       "romaji": "Majo to Ryouken",
       "english": null,
@@ -3877,7 +4036,7 @@
   "213872": {
     "id": 213872,
     "idMal": 64551,
-    "updatedAt": 1795708882,
+    "updatedAt": 1795730580,
     "title": {
       "romaji": "Hitoribocchi no Isekai Kouryaku 2nd Season",
       "english": null,
@@ -4103,7 +4262,7 @@
   "213877": {
     "id": 213877,
     "idMal": 64555,
-    "updatedAt": 1795708838,
+    "updatedAt": 1795734186,
     "title": {
       "romaji": "MURCIÉLAGO",
       "english": null,
@@ -4339,7 +4498,7 @@
   "213484": {
     "id": 213484,
     "idMal": 62957,
-    "updatedAt": 1795708912,
+    "updatedAt": 1795737918,
     "title": {
       "romaji": "Bai Ri Cheng Wang",
       "english": "Crowned in a Hundred Days",
@@ -4774,7 +4933,7 @@
   "213657": {
     "id": 213657,
     "idMal": 64503,
-    "updatedAt": 1795708872,
+    "updatedAt": 1795742876,
     "title": {
       "romaji": "Yozakura-san Chi no Daisakusen 2nd Season Part 2",
       "english": "Mission: Yozakura Family Season 2 Part 2",
@@ -4861,7 +5020,7 @@
     },
     "nextAiringEpisode": {
       "airingAt": 1795939200,
-      "timeUntilAiring": 228753,
+      "timeUntilAiring": 196000,
       "episode": 8
     },
     "relations": {
@@ -5235,7 +5394,7 @@
   "213316": {
     "id": 213316,
     "idMal": 64419,
-    "updatedAt": 1795708888,
+    "updatedAt": 1795743015,
     "title": {
       "romaji": "Nisemono no Renkinjutsushi",
       "english": null,
@@ -5401,7 +5560,7 @@
   "213846": {
     "id": 213846,
     "idMal": 64546,
-    "updatedAt": 1795708874,
+    "updatedAt": 1795742912,
     "title": {
       "romaji": "Ore dake Level Up na Ken: Beyond the System",
       "english": "Solo Leveling: Beyond the System",
@@ -5532,7 +5691,7 @@
   "213805": {
     "id": 213805,
     "idMal": 64534,
-    "updatedAt": 1795708806,
+    "updatedAt": 1795742864,
     "title": {
       "romaji": "Koori no Jouheki 2nd Season",
       "english": "The Ramparts of Ice Season 2",
@@ -5640,7 +5799,7 @@
     },
     "nextAiringEpisode": {
       "airingAt": 1796309760,
-      "timeUntilAiring": 599312,
+      "timeUntilAiring": 566560,
       "episode": 10
     },
     "relations": {
@@ -6078,7 +6237,7 @@
   "213658": {
     "id": 213658,
     "idMal": 64505,
-    "updatedAt": 1795708806,
+    "updatedAt": 1795743006,
     "title": {
       "romaji": "Diamond no Ace act II: Second Season Part 2",
       "english": "Ace of the Diamond act II -Second Season-",
@@ -6163,7 +6322,7 @@
     },
     "nextAiringEpisode": {
       "airingAt": 1795941000,
-      "timeUntilAiring": 230552,
+      "timeUntilAiring": 197800,
       "episode": 8
     },
     "relations": {
@@ -6447,7 +6606,7 @@
   "213068": {
     "id": 213068,
     "idMal": 64344,
-    "updatedAt": 1795708815,
+    "updatedAt": 1795741245,
     "title": {
       "romaji": "Juuou Mujin Dandivine",
       "english": "Dandivine",
@@ -6561,7 +6720,7 @@
     },
     "nextAiringEpisode": {
       "airingAt": 1796225400,
-      "timeUntilAiring": 514952,
+      "timeUntilAiring": 482199,
       "episode": 9
     },
     "relations": {
@@ -6951,7 +7110,7 @@
   "213356": {
     "id": 213356,
     "idMal": 64398,
-    "updatedAt": 1795705247,
+    "updatedAt": 1795741355,
     "title": {
       "romaji": "Guangyin Zhi Wai 2",
       "english": "Beyond Time's Gaze 2",
@@ -7060,7 +7219,7 @@
     "trailer": null,
     "nextAiringEpisode": {
       "airingAt": 1795917600,
-      "timeUntilAiring": 207151,
+      "timeUntilAiring": 174400,
       "episode": 24
     },
     "relations": {
@@ -7106,7 +7265,7 @@
   "213845": {
     "id": 213845,
     "idMal": null,
-    "updatedAt": 1795687354,
+    "updatedAt": 1795723361,
     "title": {
       "romaji": "Here U Are",
       "english": null,
@@ -7279,7 +7438,7 @@
   "213752": {
     "id": 213752,
     "idMal": 64524,
-    "updatedAt": 1795708872,
+    "updatedAt": 1795741307,
     "title": {
       "romaji": "MARRIAGETOXIN 2nd Season",
       "english": null,
@@ -7472,7 +7631,7 @@
   "213497": {
     "id": 213497,
     "idMal": 64467,
-    "updatedAt": 1795705258,
+    "updatedAt": 1795730580,
     "title": {
       "romaji": "Sudachi no Maoujou",
       "english": null,
@@ -7653,7 +7812,7 @@
   "213860": {
     "id": 213860,
     "idMal": 64553,
-    "updatedAt": 1795694572,
+    "updatedAt": 1795741355,
     "title": {
       "romaji": "Lv2 Kara Cheat datta Moto Yuusha Kouho no Mattari Isekai Life 2nd Season",
       "english": null,
@@ -7803,7 +7962,7 @@
   "213067": {
     "id": 213067,
     "idMal": 64405,
-    "updatedAt": 1795708912,
+    "updatedAt": 1795742976,
     "title": {
       "romaji": "Netorareta Bakunyuu Tsuma-tachi 2",
       "english": null,
@@ -7944,7 +8103,7 @@
   "213131": {
     "id": 213131,
     "idMal": 64380,
-    "updatedAt": 1795708842,
+    "updatedAt": 1795742900,
     "title": {
       "romaji": "Koiseyo Mayakashi Tenshi-domo",
       "english": null,
@@ -8115,7 +8274,7 @@
   "213665": {
     "id": 213665,
     "idMal": 63878,
-    "updatedAt": 1795684029,
+    "updatedAt": 1795730580,
     "title": {
       "romaji": "Migawari Reijou wo Sukutta no wa Reikoku Mujihi na Koori no Ouji no Ai deshita",
       "english": "Saved By the Ice Cold Prince's Embrace",
@@ -8413,7 +8572,7 @@
   "213106": {
     "id": 213106,
     "idMal": 64379,
-    "updatedAt": 1795687354,
+    "updatedAt": 1795741355,
     "title": {
       "romaji": "Saikyou Mahoushi no Inton Keikaku",
       "english": null,
@@ -8621,7 +8780,7 @@
   "213338": {
     "id": 213338,
     "idMal": 64428,
-    "updatedAt": 1795684055,
+    "updatedAt": 1795743030,
     "title": {
       "romaji": "Jimoto Saikou!",
       "english": null,
@@ -8798,7 +8957,7 @@
   "213353": {
     "id": 213353,
     "idMal": 62634,
-    "updatedAt": 1795684054,
+    "updatedAt": 1795741324,
     "title": {
       "romaji": "Given: 10th Mix",
       "english": "Given: Moments in Life",
@@ -9210,7 +9369,7 @@
   "213360": {
     "id": 213360,
     "idMal": 64439,
-    "updatedAt": 1795708824,
+    "updatedAt": 1795734186,
     "title": {
       "romaji": "Akane-banashi 2nd Season",
       "english": null,
@@ -9307,7 +9466,7 @@
     },
     "nextAiringEpisode": {
       "airingAt": 1799505000,
-      "timeUntilAiring": 3794553,
+      "timeUntilAiring": 3761799,
       "episode": 1
     },
     "relations": {
@@ -9801,7 +9960,7 @@
   "213396": {
     "id": 213396,
     "idMal": 64449,
-    "updatedAt": 1795698199,
+    "updatedAt": 1795723361,
     "title": {
       "romaji": "Higurashi no Naku Koro ni (Shin Anime)",
       "english": null,
@@ -10175,7 +10334,7 @@
   "213961": {
     "id": 213961,
     "idMal": 64577,
-    "updatedAt": 1795694572,
+    "updatedAt": 1795734186,
     "title": {
       "romaji": "Youjo Shenki 2",
       "english": null,
@@ -10426,7 +10585,7 @@
   "213891": {
     "id": 213891,
     "idMal": 64562,
-    "updatedAt": 1795684008,
+    "updatedAt": 1795719762,
     "title": {
       "romaji": "Mononoke (Shin Project)",
       "english": null,
@@ -10703,7 +10862,7 @@
   "213094": {
     "id": 213094,
     "idMal": 62540,
-    "updatedAt": 1795708912,
+    "updatedAt": 1795726972,
     "title": {
       "romaji": "Yonghansonyeo",
       "english": "Dragon Girl Problem",
@@ -11076,7 +11235,7 @@
   "213363": {
     "id": 213363,
     "idMal": 64441,
-    "updatedAt": 1795705258,
+    "updatedAt": 1795742987,
     "title": {
       "romaji": "Kanan-sama wa Akumade Choroi 2 EASY",
       "english": null,
@@ -11758,7 +11917,7 @@
   "213020": {
     "id": 213020,
     "idMal": 64354,
-    "updatedAt": 1795701813,
+    "updatedAt": 1795741355,
     "title": {
       "romaji": "Juuheisou-gata Joshikousei",
       "english": null,
@@ -12050,7 +12209,7 @@
   "213362": {
     "id": 213362,
     "idMal": 62727,
-    "updatedAt": 1795684052,
+    "updatedAt": 1795730580,
     "title": {
       "romaji": "Zhan Shen: Fanchen Shen Yu Movie - Cangnan Zhi Shang",
       "english": null,
@@ -12147,7 +12306,7 @@
   "213422": {
     "id": 213422,
     "idMal": 64452,
-    "updatedAt": 1795687354,
+    "updatedAt": 1795737918,
     "title": {
       "romaji": "Koisuru (Otome) no Tsukurikata",
       "english": null,
@@ -12780,7 +12939,7 @@
   "213469": {
     "id": 213469,
     "idMal": null,
-    "updatedAt": 1795511243,
+    "updatedAt": 1795726972,
     "title": {
       "romaji": "RE:BEL ROBOTICA",
       "english": null,
@@ -13410,7 +13569,7 @@
   "213498": {
     "id": 213498,
     "idMal": 64466,
-    "updatedAt": 1795687354,
+    "updatedAt": 1795726972,
     "title": {
       "romaji": "Nabe ni Dangan wo Ukenagara",
       "english": null,
@@ -14199,7 +14358,7 @@
   "213579": {
     "id": 213579,
     "idMal": 64482,
-    "updatedAt": 1795708837,
+    "updatedAt": 1795726972,
     "title": {
       "romaji": "Snowball Earth 2nd Season",
       "english": null,
@@ -14325,7 +14484,7 @@
   "213580": {
     "id": 213580,
     "idMal": 64481,
-    "updatedAt": 1795698199,
+    "updatedAt": 1795726972,
     "title": {
       "romaji": "Shuumatsu no Valkyrie IV",
       "english": null,
@@ -14614,7 +14773,7 @@
   "213642": {
     "id": 213642,
     "idMal": null,
-    "updatedAt": 1795684032,
+    "updatedAt": 1795730580,
     "title": {
       "romaji": "Juequling: Ruo Neng Huazuo Guangmang",
       "english": "Zenless Zone Zero: If I Could Become Light",
@@ -14804,7 +14963,7 @@
   "213648": {
     "id": 213648,
     "idMal": 61972,
-    "updatedAt": 1795684031,
+    "updatedAt": 1795723361,
     "title": {
       "romaji": "Ginga Tokkyuu Milky☆Subway: PARCO Original Animation",
       "english": null,
@@ -15243,7 +15402,7 @@
   "213686": {
     "id": 213686,
     "idMal": 64529,
-    "updatedAt": 1795708912,
+    "updatedAt": 1795741355,
     "title": {
       "romaji": "NTR Kishi",
       "english": null,
@@ -15347,7 +15506,7 @@
   "213732": {
     "id": 213732,
     "idMal": 64530,
-    "updatedAt": 1795684022,
+    "updatedAt": 1795737918,
     "title": {
       "romaji": "Mujikaku na Osananajimi to Kyoumi Honi de Yatte Mitara THE ANIMATION",
       "english": null,
@@ -15423,7 +15582,7 @@
   "213733": {
     "id": 213733,
     "idMal": 64531,
-    "updatedAt": 1795708912,
+    "updatedAt": 1795730580,
     "title": {
       "romaji": "Kanojo Saimin",
       "english": null,
@@ -16475,7 +16634,7 @@
   "213831": {
     "id": 213831,
     "idMal": 64543,
-    "updatedAt": 1795684014,
+    "updatedAt": 1795719762,
     "title": {
       "romaji": "Snack HAZAMA",
       "english": "Snack Hazama",
@@ -17466,7 +17625,7 @@
   "213929": {
     "id": 213929,
     "idMal": 64569,
-    "updatedAt": 1795699190,
+    "updatedAt": 1795734186,
     "title": {
       "romaji": "7-nin no Nemuri Hime",
       "english": null,
@@ -19243,7 +19402,7 @@
   "213663": {
     "id": 213663,
     "idMal": 63595,
-    "updatedAt": 1795696556,
+    "updatedAt": 1795730580,
     "title": {
       "romaji": "Cang Yuan Tu Qianzhuan: Dongning Fu de Xiatian",
       "english": null,
