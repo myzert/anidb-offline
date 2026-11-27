@@ -2,7 +2,7 @@
   "210945": {
     "id": 210945,
     "idMal": 63958,
-    "updatedAt": 1795743030,
+    "updatedAt": 1795795275,
     "title": {
       "romaji": "Majo to Youhei",
       "english": null,
@@ -41,7 +41,7 @@
       "Witch and Mercenary"
     ],
     "averageScore": null,
-    "popularity": 4926,
+    "popularity": 4937,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -265,7 +265,7 @@
   "210073": {
     "id": 210073,
     "idMal": 63850,
-    "updatedAt": 1795741355,
+    "updatedAt": 1795788236,
     "title": {
       "romaji": "Golden Kamuy: Saishuushou - Bousou Ressha-hen",
       "english": null,
@@ -305,7 +305,7 @@
       "Golden Kamuy Final Season - Runaway Train Arc"
     ],
     "averageScore": null,
-    "popularity": 5738,
+    "popularity": 5745,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -429,7 +429,7 @@
   "210687": {
     "id": 210687,
     "idMal": 63830,
-    "updatedAt": 1795743030,
+    "updatedAt": 1795795303,
     "title": {
       "romaji": "Re:Zero kara Hajimeru Kyuukei Jikan (Break Time) 4th Season",
       "english": null,
@@ -469,7 +469,7 @@
       "Re:ZERO ~Starting Break Time From Zero~ Season 4"
     ],
     "averageScore": 73,
-    "popularity": 3354,
+    "popularity": 3361,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -956,7 +956,7 @@
   "210482": {
     "id": 210482,
     "idMal": 61469,
-    "updatedAt": 1795742879,
+    "updatedAt": 1795795206,
     "title": {
       "romaji": "JoJo no Kimyou na Bouken: Steel Ball Run - 2nd & 3rd STAGE",
       "english": "STEEL BALL RUN JoJo's Bizarre Adventure 2nd - 3rd STAGE",
@@ -999,7 +999,7 @@
       "SBR"
     ],
     "averageScore": 86,
-    "popularity": 54183,
+    "popularity": 54306,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -1092,9 +1092,9 @@
       "site": "youtube"
     },
     "nextAiringEpisode": {
-      "airingAt": 1795766400,
-      "timeUntilAiring": 23200,
-      "episode": 10
+      "airingAt": 1796371200,
+      "timeUntilAiring": 575278,
+      "episode": 11
     },
     "relations": {
       "edges": [
@@ -1463,6 +1463,36 @@
         {
           "role": "SUPPORTING",
           "node": {
+            "id": 130205,
+            "name": {
+              "full": "Ferdinand Hakase",
+              "native": "フェルディナンド博士",
+              "userPreferred": "Ferdinand Hakase"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/n130205-qNFmq4go1WiX.png",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/n130205-qNFmq4go1WiX.png"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95792,
+              "name": {
+                "full": "Shinnosuke Tachibana",
+                "native": "立花慎之介",
+                "userPreferred": "Shinnosuke Tachibana"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95792-5413Ip70mSdV.jpg",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95792-5413Ip70mSdV.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
             "id": 139789,
             "name": {
               "full": "Gregorio Zeppeli",
@@ -1703,6 +1733,36 @@
         {
           "role": "SUPPORTING",
           "node": {
+            "id": 172179,
+            "name": {
+              "full": "Diego no Haha",
+              "native": "ディオの母",
+              "userPreferred": "Diego no Haha"
+            },
+            "image": {
+              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b172179-jr0WaQQe3jrU.jpg",
+              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b172179-jr0WaQQe3jrU.jpg"
+            }
+          },
+          "voiceActors": [
+            {
+              "id": 95671,
+              "name": {
+                "full": "Yuka Terasaki",
+                "native": "寺崎裕香",
+                "userPreferred": "Yuka Terasaki"
+              },
+              "language": "JAPANESE",
+              "image": {
+                "large": "https://s4.anilist.co/file/anilistcdn/staff/large/n95671-iXGq2oxE1DlW.png",
+                "medium": "https://s4.anilist.co/file/anilistcdn/staff/medium/n95671-iXGq2oxE1DlW.png"
+              }
+            }
+          ]
+        },
+        {
+          "role": "SUPPORTING",
+          "node": {
             "id": 172180,
             "name": {
               "full": "Neapolitan no Kizoku",
@@ -1805,22 +1865,6 @@
             }
           },
           "voiceActors": []
-        },
-        {
-          "role": "BACKGROUND",
-          "node": {
-            "id": 172177,
-            "name": {
-              "full": "Joseph of Arimathea",
-              "native": null,
-              "userPreferred": "Joseph of Arimathea"
-            },
-            "image": {
-              "large": "https://s4.anilist.co/file/anilistcdn/character/large/b172177-RSHUeJhBMnYR.png",
-              "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b172177-RSHUeJhBMnYR.png"
-            }
-          },
-          "voiceActors": []
         }
       ]
     },
@@ -1829,7 +1873,7 @@
   "210031": {
     "id": 210031,
     "idMal": 63832,
-    "updatedAt": 1795742869,
+    "updatedAt": 1795795223,
     "title": {
       "romaji": "Seihantai na Kimi to Boku 2nd Season",
       "english": "You and I Are Polar Opposites Season 2",
@@ -1870,7 +1914,7 @@
       "ลุ้นรักฉบับคู่ต่างขั้ว ซีซัน 2"
     ],
     "averageScore": 84,
-    "popularity": 73282,
+    "popularity": 73407,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -2744,7 +2788,7 @@
   "210483": {
     "id": 210483,
     "idMal": 63912,
-    "updatedAt": 1795741303,
+    "updatedAt": 1795788236,
     "title": {
       "romaji": "Isekai Maou to Shoukan Shoujo no Dorei Majutsu ULT",
       "english": null,
@@ -2786,7 +2830,7 @@
       "How NOT To Summon A Demon Lord 3"
     ],
     "averageScore": null,
-    "popularity": 9278,
+    "popularity": 9288,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -2986,7 +3030,7 @@
   "210234": {
     "id": 210234,
     "idMal": 63304,
-    "updatedAt": 1795741355,
+    "updatedAt": 1795795255,
     "title": {
       "romaji": "Mamonogurai no Boukensha: Ore Dake Mamono wo Kuratte Tsuyoku Naru",
       "english": "Monster Eater",
@@ -3024,7 +3068,7 @@
     ],
     "synonyms": [],
     "averageScore": 49,
-    "popularity": 9702,
+    "popularity": 9713,
     "isAdult": false,
     "source": "LIGHT_NOVEL",
     "countryOfOrigin": "JP",
@@ -3442,7 +3486,7 @@
   "210032": {
     "id": 210032,
     "idMal": 63833,
-    "updatedAt": 1795743004,
+    "updatedAt": 1795783815,
     "title": {
       "romaji": "BAKI-DOU Part 2",
       "english": "BAKI-DOU: The Invincible Samurai Part 2",
@@ -3482,7 +3526,7 @@
       "BAKI-DOU: O Samurai Invencível Parte 2"
     ],
     "averageScore": 74,
-    "popularity": 9180,
+    "popularity": 9201,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -3902,7 +3946,7 @@
   "210199": {
     "id": 210199,
     "idMal": 63885,
-    "updatedAt": 1795708856,
+    "updatedAt": 1795795267,
     "title": {
       "romaji": "The Fable 2nd Season",
       "english": null,
@@ -3944,7 +3988,7 @@
       "The Fable Season 2"
     ],
     "averageScore": null,
-    "popularity": 4976,
+    "popularity": 4994,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -4010,7 +4054,7 @@
     "trailer": null,
     "nextAiringEpisode": {
       "airingAt": 1799510160,
-      "timeUntilAiring": 3799713,
+      "timeUntilAiring": 3714239,
       "episode": 1
     },
     "relations": {
@@ -4070,7 +4114,7 @@
   "210932": {
     "id": 210932,
     "idMal": 63957,
-    "updatedAt": 1795696556,
+    "updatedAt": 1795770634,
     "title": {
       "romaji": "Shiguang Dailiren: Xiao Juchang 2",
       "english": null,
@@ -4117,7 +4161,7 @@
       "Shiguang Xiao Juchang 2"
     ],
     "averageScore": 70,
-    "popularity": 1193,
+    "popularity": 1194,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "CN",
@@ -4452,7 +4496,7 @@
   "210375": {
     "id": 210375,
     "idMal": 63433,
-    "updatedAt": 1795741355,
+    "updatedAt": 1795795249,
     "title": {
       "romaji": "Daikenja Riddle no Jikan Gyakko",
       "english": null,
@@ -4492,7 +4536,7 @@
       "การย้อนเวลาของมหาปราชญ์ริดเดิล"
     ],
     "averageScore": 45,
-    "popularity": 4749,
+    "popularity": 4750,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "JP",
@@ -4711,7 +4755,7 @@
   "210116": {
     "id": 210116,
     "idMal": 64146,
-    "updatedAt": 1795684268,
+    "updatedAt": 1795770687,
     "title": {
       "romaji": "Kare no Shiranai Himitsu wo Irete. The Animation",
       "english": null,
@@ -4747,7 +4791,7 @@
     ],
     "synonyms": [],
     "averageScore": 56,
-    "popularity": 560,
+    "popularity": 563,
     "isAdult": true,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -4813,7 +4857,7 @@
   "210157": {
     "id": 210157,
     "idMal": 63851,
-    "updatedAt": 1795726972,
+    "updatedAt": 1795770685,
     "title": {
       "romaji": "Love Live! Hasunosora Jogakuin School Idol Club",
       "english": null,
@@ -4850,7 +4894,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 1409,
+    "popularity": 1415,
     "isAdult": false,
     "source": "OTHER",
     "countryOfOrigin": "JP",
@@ -4889,7 +4933,7 @@
     },
     "nextAiringEpisode": {
       "airingAt": 1799587800,
-      "timeUntilAiring": 3844598,
+      "timeUntilAiring": 3791876,
       "episode": 1
     },
     "relations": {
@@ -5159,7 +5203,7 @@
   "210309": {
     "id": 210309,
     "idMal": 48832,
-    "updatedAt": 1795741355,
+    "updatedAt": 1795791646,
     "title": {
       "romaji": "CHERRY AND VIRGIN",
       "english": null,
@@ -5196,7 +5240,7 @@
     ],
     "synonyms": [],
     "averageScore": null,
-    "popularity": 3040,
+    "popularity": 3045,
     "isAdult": false,
     "source": "ORIGINAL",
     "countryOfOrigin": "JP",
@@ -5304,7 +5348,7 @@
   "210376": {
     "id": 210376,
     "idMal": 63533,
-    "updatedAt": 1795694572,
+    "updatedAt": 1795770671,
     "title": {
       "romaji": "Huhuan Shaonü Special: Xiang Zuo de Shi Daodi Shi Shenme",
       "english": null,
@@ -5343,7 +5387,7 @@
       "Call Up Girls Special Episode"
     ],
     "averageScore": 63,
-    "popularity": 452,
+    "popularity": 453,
     "isAdult": false,
     "source": "MANGA",
     "countryOfOrigin": "CN",
